@@ -5,7 +5,7 @@ create plots and charts using matplotlib (and other libraries).  Here, we
 will show you the basics of generating plots using Python3 and matplotlib.
 
 In order to use matplotlib, the first thing you have to do is
-[install the package](site/docs/repls/packages).  Matplotlib is often shortened
+[install the package](repls/packages).  Matplotlib is often shortened
 using `as` but it does not have to be.
 
 ```python
@@ -37,7 +37,7 @@ plt.savefig('plot.png')
 
 Running the code should then generate a new pane with your generated plot!
 The plot has also been saved to an image `plot.png`.  This will work regardless
-of whether you are in [Project Mode](site/docs/repls/files) or not.  The preview pane
+of whether you are in [Project Mode](repls/files) or not.  The preview pane
 will appear whenever the file has been changed.
 
 You can see the above example here.  Make sure you drag out the file tree from

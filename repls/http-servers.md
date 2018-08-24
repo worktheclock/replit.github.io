@@ -25,10 +25,10 @@ fork it or play around with it.
 
 We highly recommend using a `requirements.txt` file, `package.json` file, or
 `Gemfile` for Python, Node/Express, and Ruby web apps respectively.  See our
-documentation on [libraries](site/docs/repls/packages).
+documentation on [libraries](repls/packages).
 
 Private keys to external services or APIs can be kept in an `.env` file.
-See our documentation on [secret keys](site/docs/repls/secret-keys).
+See our documentation on [secret keys](repls/secret-keys).
 
 If you are using Django and you need access to specific bash commands to
 configure the server, please se

@@ -57,8 +57,8 @@ Free accounts are limited to 200 unique active students across *all* classrooms.
 You can create as many classrooms as you like under a free account, and in any language.  Within classrooms there is no limit on how many assignments you can create, nor is there any limitation on what kind of testing you can utilize.
 
 Here are some resources on:
-* [Unit Testing](site/docs/classroom/autograding?id=unit-tests)
-* [Input/Output Matching](site/docs/classroom/autograding?id=inputoutput-matching)
+* [Unit Testing](classroom/autograding?id=unit-tests)
+* [Input/Output Matching](classroom/autograding?id=inputoutput-matching)
 
 ## Questions?
 
