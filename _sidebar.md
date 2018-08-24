@@ -1,3 +1,6 @@
+* Repl.it
+  * [About Repl.it](/)
+
 * Repls
   * [Introduction to Repls](site/docs/repls/repls.md)
   * [Repls Dashboard](site/docs/repls/repls-dashboard.md)
