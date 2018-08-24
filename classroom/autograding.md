@@ -16,7 +16,7 @@ following ways:
 One of the first things to learn about programming computers is how to provide programs
 with input. Command-line programs typically read text from the standard
 input interface (stdin) and display text on the standard output interface (stdout) -- both are
-part of the [standard streams](https://en.wikipedia.org/wiki/Standard_streams).[](preview end)
+part of the [standard streams](https://en.wikipedia.org/wiki/Standard_streams).
 
 Nearly every programming language has a way for interacting with standard
 streams. You can find documentation for this by simply googling the language

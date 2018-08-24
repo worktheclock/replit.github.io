@@ -9,7 +9,7 @@ In the case of either of the following:
 * You hold a copyright to content contained within a public/private repl, or a public/private classroom assignment
 * Personal/private information is contained within a public/private repl, or a public/private classroom assignment
 
-Please [contact us](mailto:contact@repl.it) immediately and we will remove it.  It is against our [Terms and Conditions](/site/terms) for users to publish any content that violates privacy rights, publicity rights, copyrights, or contract rights.
+Please [contact us](mailto:contact@repl.it) immediately and we will remove it.  It is against our [Terms and Conditions](https://repl.it/site/terms) for users to publish any content that violates privacy rights, publicity rights, copyrights, or contract rights.
 
 ## Public Repls and Classrooms
 
