@@ -10,16 +10,16 @@
   * [Embedding Repls](site/docs/repls/embed-repls.md)
 
 * Classrooms
-  * [Introduction to Classrooms](classroom/classrooms.md)
-  * [Assignment-Submission Workflow](classroom/assignment-submission.md)
-  * [Automatic Grading](classroom/autograding.md)
-  * [Managing Classrooms](classroom/management.md)
-  * [Assignments in Markdown](classroom/markdown.md)
-  * [Sharing Classrooms](classroom/sharing.md)
-  * [Classroom Community](classroom/community.md)
-  * [Embedding Classrooms](classroom/sharing.md)
-  * [Pricing FAQ](classroom/pricing-faq.md)
+  * [Introduction to Classrooms](site/docs/classroom/classrooms.md)
+  * [Assignment-Submission Workflow](site/docs/classroom/assignment-submission.md)
+  * [Automatic Grading](site/docs/classroom/autograding.md)
+  * [Managing Classrooms](site/docs/classroom/management.md)
+  * [Assignments in Markdown](site/docs/classroom/markdown.md)
+  * [Sharing Classrooms](site/docs/classroom/sharing.md)
+  * [Classroom Community](site/docs/classroom/community.md)
+  * [Embedding Classrooms](site/docs/classroom/sharing.md)
+  * [Pricing FAQ](site/docs/classroom/pricing-faq.md)
 
 * Miscellaneous
-  * [Using Repl.it for Free](misc/free-features.md)
-  * [Licensing Info / Takedown Requests](misc/licensing.md)
+  * [Using Repl.it for Free](site/docs/misc/free-features.md)
+  * [Licensing Info / Takedown Requests](site/docs/misc/licensing.md)
