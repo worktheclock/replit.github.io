@@ -1,13 +1,13 @@
 * Repls
-  * [Introduction to Repls](repls/repls.md)
-  * [Repls Dashboard](repls/repls-dashboard.md)
-  * [Eval Mode / Project Mode](repls/files.md)
-  * [Installing Packages](repls/packages.md)
-  * [Web Hosting](repls/web-hosting.md)
-  * [Deploying HTTP Servers](repls/http-servers.md)
-  * [Using Secret Keys](repls/secret-keys.md)
-  * [Interactive Python Plots](repls/python-plots.md)
-  * [Embedding Repls](repls/embed-repls.md)
+  * [Introduction to Repls](site/docs/repls/repls.md)
+  * [Repls Dashboard](site/docs/repls/repls-dashboard.md)
+  * [Eval Mode / Project Mode](site/docs/repls/files.md)
+  * [Installing Packages](site/docs/repls/packages.md)
+  * [Web Hosting](site/docs/repls/web-hosting.md)
+  * [Deploying HTTP Servers](site/docs/repls/http-servers.md)
+  * [Using Secret Keys](site/docs/repls/secret-keys.md)
+  * [Interactive Python Plots](site/docs/repls/python-plots.md)
+  * [Embedding Repls](site/docs/repls/embed-repls.md)
 
 * Classrooms
   * [Introduction to Classrooms](classroom/classrooms.md)
