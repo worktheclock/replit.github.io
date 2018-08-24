@@ -1,5 +1,5 @@
 * Repl.it
-  * [About Repl.it](/)
+  * [About Repl.it](site/docs/about.md)
 
 * Repls
   * [Introduction to Repls](site/docs/repls/repls.md)
