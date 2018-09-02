@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Repls",
+    "path": "/repls",
+    "contents": [
+      {
+        "name": "Introduction to Repls",
+        "slug": "intro"
+      },
+      {
+        "name": "Repls Dashboard",
+        "path": "dashboard"
+      },
+      {
+        "name": "Eval Mode / Project Mode",
+        "path": "files"
+      },
+      {
+        "name": "Installing Packages",
+        "path": "packages"
+      },
+      {
+        "name": "Web Hosting",
+        "path": "web-hosting"
+      },
+      {
+        "name": "Deploying HTTP Servers",
+        "path": "http-servers"
+      },
+      {
+        "name": "Using Secret Keys",
+        "path": "secret-keys"
+      },
+      {
+        "name": "Interactive Python Plots",
+        "path": "python-plots"
+      },
+      {
+        "name": "Embedding Repls",
+        "path": "embed"
+      }
+    ]
+  },
+  {
+    "name": "Repl.it Classrooms",
+    "path": "/classrooms",
+    "contents": [
+      {
+        "name": "Introduction to Classrooms",
+        "slug": "intro"
+      },
+      {
+        "name": "Assignment-Submission Workflow",
+        "path": "assignment-submission"
+      },
+      {
+        "name": "Automatic Grading",
+        "path": "autograding"
+      },
+      {
+        "name": "Managing Classrooms",
+        "path": "management"
+      },
+      {
+        "name": "Assignments in Markdown",
+        "path": "markdown"
+      },
+      {
+        "name": "Sharing Classrooms",
+        "path": "sharing"
+      },
+      {
+        "name": "Classroom Community",
+        "path": "community"
+      },
+      {
+        "name": "Embedding Classrooms",
+        "path": "embed"
+      },
+      {
+        "name": "Pricing FAQ",
+        "path": "pricing-faq"
+      }
+    ]
+  },
+  {
+    "name": "Miscellaneous",
+    "path": "/misc",
+    "contents": [
+      {
+        "name": "Using Repl.it for Free",
+        "slug": "free-features"
+      },
+      {
+        "name": "Licensing Info / Takedown Requests",
+        "slug": "licensing"
+      }
+    ]
+  }
+]
