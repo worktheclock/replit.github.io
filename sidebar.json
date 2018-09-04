@@ -1,7 +1,7 @@
 [
   {
     "name": "Repls",
-    "path": "/repls",
+    "slug": "repls",
     "contents": [
       {
         "name": "Introduction to Repls",
@@ -9,41 +9,41 @@
       },
       {
         "name": "Repls Dashboard",
-        "path": "dashboard"
+        "slug": "dashboard"
       },
       {
         "name": "Eval Mode / Project Mode",
-        "path": "files"
+        "slug": "files"
       },
       {
         "name": "Installing Packages",
-        "path": "packages"
+        "slug": "packages"
       },
       {
         "name": "Web Hosting",
-        "path": "web-hosting"
+        "slug": "web-hosting"
       },
       {
         "name": "Deploying HTTP Servers",
-        "path": "http-servers"
+        "slug": "http-servers"
       },
       {
         "name": "Using Secret Keys",
-        "path": "secret-keys"
+        "slug": "secret-keys"
       },
       {
         "name": "Interactive Python Plots",
-        "path": "python-plots"
+        "slug": "python-plots"
       },
       {
         "name": "Embedding Repls",
-        "path": "embed"
+        "slug": "embed"
       }
     ]
   },
   {
     "name": "Repl.it Classrooms",
-    "path": "/classrooms",
+    "slug": "classrooms",
     "contents": [
       {
         "name": "Introduction to Classrooms",
@@ -51,41 +51,41 @@
       },
       {
         "name": "Assignment-Submission Workflow",
-        "path": "assignment-submission"
+        "slug": "assignment-submission"
       },
       {
         "name": "Automatic Grading",
-        "path": "autograding"
+        "slug": "autograding"
       },
       {
         "name": "Managing Classrooms",
-        "path": "management"
+        "slug": "management"
       },
       {
         "name": "Assignments in Markdown",
-        "path": "markdown"
+        "slug": "markdown"
       },
       {
         "name": "Sharing Classrooms",
-        "path": "sharing"
+        "slug": "sharing"
       },
       {
         "name": "Classroom Community",
-        "path": "community"
+        "slug": "community"
       },
       {
         "name": "Embedding Classrooms",
-        "path": "embed"
+        "slug": "embed"
       },
       {
         "name": "Pricing FAQ",
-        "path": "pricing-faq"
+        "slug": "pricing-faq"
       }
     ]
   },
   {
     "name": "Miscellaneous",
-    "path": "/misc",
+    "slug": "misc",
     "contents": [
       {
         "name": "Using Repl.it for Free",
