@@ -68,7 +68,7 @@ then please let us know and we'll try to fix it.
 ## Anything else?
 
 We love what we do, we love our users, and hope to continue to do it for the
-foreseeable future. Please [support](https://repl.it/site/pricing) us in our endeavors.
+foreseeable future. Please [support](/site/pricing) us in our endeavors.
 
 ## Are these questions really frequently asked?
 

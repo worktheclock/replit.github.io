@@ -1,6 +1,6 @@
 # Assignment-Submission Workflow
 
-[Repl.it Classroom](https://repl.it/site/classroom)'s assignment and submission workflow is
+[Repl.it Classroom](/site/classroom)'s assignment and submission workflow is
 designed to make running your classroom as easy and effective as possible
 with a gentle learning curve (things should be intuitive). Similarly, the
 student workflow resembles real-world teacher/student interaction so that
@@ -8,7 +8,7 @@ students can be productive from day 0.
 
 ![student overview](https://i.imgur.com/5N4gMNj.jpg)
 
-_The [student overview](https://repl.it/site/blog/classroomoverview) page
+_The [student overview](/site/blog/classroomoverview) page
 showing the different states student submissions can be in_
 
 First, there are a couple of concepts to define:
@@ -21,7 +21,7 @@ The submission workflow differ depending on the assignment "correction" type --
 whether it's manual or automatic. We currently support two automated correction
 mechanisms and one manual.
 
-![correction](https://repl.it/public/images/blog/correction.png)
+![correction](/public/images/blog/correction.png)
 
 ## Manual correction workflow
 
@@ -50,7 +50,7 @@ state and your student will then get a notification informing them.
 So to sum up here is a diagram showing the lifecycle of a submission:
 
 ![manual submission
- lifecycle](https://repl.it/public/images/blog/manual_submission_lifecycle.png)
+ lifecycle](/public/images/blog/manual_submission_lifecycle.png)
 
 ## Automatic correction workflow
 
@@ -63,7 +63,7 @@ their submission in an _awaiting help_ state.
 Here is the updated diagram:
 
 ![automatic submission
- lifecycle](https://repl.it/public/images/blog/automatic_submission_lifecycle.png)
+ lifecycle](/public/images/blog/automatic_submission_lifecycle.png)
 
 Note that at any point teachers can override the automatic behavior. For
 example, if a submission was automatically marked correct but you see something you

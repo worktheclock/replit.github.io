@@ -15,7 +15,7 @@ the same technology that powers Visual Studio Code.  On mobile, the editor is
 
 The console is where the standard output will appear, and where you will be prompted to
 enter standard input.  In most languages, the console doubles as a repl - you can evaluate
-snippets of code interactively, and in [some cases](site/docs/repls/files), you can interact with
+snippets of code interactively, and in [some cases](/site/docs/repls/files), you can interact with
 variables that have been defined in your main body of code.
 
 Read on to see what Repls are capable of.

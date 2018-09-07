@@ -83,7 +83,7 @@ It will install `Framework` at exactly version 0.9.4, while installing `Library`
 Note that `package.json` files are only for Nodejs/Express repls (they do not work in HTML/CSS/JS
 repls).  A package.json contains more information about the project, but also lists the
 dependencies.  As an example, here is the `package.json` file included in our
-[express template](https://repl.it/@timmy_i_chen/express-template).
+[express template](/languages/express).
 
 ```json
 {

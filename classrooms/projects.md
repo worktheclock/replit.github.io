@@ -12,7 +12,7 @@ The Projects section is under the Assignments section in a classroom page.  You 
 
 ## Creating a Template
 
-Creating a project requires a Repl to serve as its template.  You can create a repl by either creating one from your [repls dashboard](https://repl.it/repls) or by clicking on the [???].  You can use any repl as a template.
+Creating a project requires a Repl to serve as its template.  You can create a repl by either creating one from your [repls dashboard](/repls) or by clicking on the [???].  You can use any repl as a template.
 
 ![](https://repl.it/public/images/blog/classroom-projects-no-template.png)
 

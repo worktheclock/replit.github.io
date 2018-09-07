@@ -4,7 +4,7 @@ Repl.it offers a number of features that every user can access and utilize for f
 
 ## Repls
 
-Repls are the core of the Repl.it service, and they will always be available for all users.  You can as many repls as you like, and in any language.  Start by logging into your account (or [signing up for a free account](https://repl.it/signup)).
+Repls are the core of the Repl.it service, and they will always be available for all users.  You can as many repls as you like, and in any language.  Start by logging into your account (or [signing up for a free account](/signup)).
 
 You can access your repls and create new ones in the "my repls" view, found at the top of your page once logged in.
 
@@ -12,7 +12,7 @@ You can create a new repl on this page by clicking on the big green button.  You
 
 Once you've selected a language, you'll be greeted with your IDE - Integrated Development Environment.  Click on the pencil icon[0] next to the repl name to edit the name and description of the repl.  Repls belonging to free accounts are public.
 
-![view of repl with numbered tags](https://repl.it/public/images/blog/repl-walkthrough-labels.png)
+![view of repl with numbered tags](/public/images/blog/repl-walkthrough-labels.png)
 
 Write some code, then click on the "Run" button [1] to **execute your code**.  The output will be on the right.
 
@@ -36,11 +36,11 @@ When viewing other people's repls, you can "Fork" the repl to clone it into your
 
 Public classrooms show up under the Community tab at the top of the page.  These are classrooms created by other Repl.it users.
 
-![screenshot of community classrooms](https://repl.it/public/images/blog/community-classrooms.png)
+![screenshot of community classrooms](/public/images/blog/community-classrooms.png)
 
 By clicking on a classroom, you can either "Take and Learn", or "Import and Teach".  Clicking on "Take and Learn" will add you as a student to that classroom, where you can work through their exercises.  The original creator will not be able to see your submissions, although these classrooms are typically auto-graded through input/output or unit testing.
 
-Clicking on "Import and Teach" will clone the classroom into your account, which you can then edit and re-use to teach other students!  Free accounts can have up to 200 students per account - past that, please check out our [pricing options](https://repl.it/site/pricing) to see what's most suitable for you.
+Clicking on "Import and Teach" will clone the classroom into your account, which you can then edit and re-use to teach other students!  Free accounts can have up to 200 students per account - past that, please check out our [pricing options](/site/pricing) to see what's most suitable for you.
 
 Even with a free account, you can take as many classes as you want.  Try it out!
 
@@ -52,14 +52,14 @@ Free accounts are limited to 200 unique active students across *all* classrooms.
 * If you have one student in multiple classrooms, it will only be counted as one student.
 * If you have a student that doesn't submit anything in a month, that student will be considered "inactive" and won't count towards your total (although if they do submit something later, they will count again).
 
-![classroom view](https://repl.it/public/images/blog/classroom-view.png)
+![classroom view](/public/images/blog/classroom-view.png)
 
 You can create as many classrooms as you like under a free account, and in any language.  Within classrooms there is no limit on how many assignments you can create, nor is there any limitation on what kind of testing you can utilize.
 
 Here are some resources on:
-* [Unit Testing](classroom/autograding?id=unit-tests)
-* [Input/Output Matching](classroom/autograding?id=inputoutput-matching)
+* [Unit Testing](/site/docs/classrooms/autograding)
+* [Input/Output Matching](/site/docs/classroom/autograding)
 
 ## Questions?
 
-If you have any more questions about our free service, don't hesitate to reach out to our team at [contact@repl.it](mailto:contact@repl.it) or on our [feedback forums](https://repl.it/feedback)
+If you have any more questions about our free service, don't hesitate to reach out to our team at [contact@repl.it](mailto:contact@repl.it) or on our [feedback forums](/feedback)

@@ -9,7 +9,7 @@ it should work.
 
 If you'd like to embed specific code then do the following:
 
-1. [Write your code in your favorite language](https://repl.it/languages)
+1. [Write your code in your favorite language](/languages)
 2. Save
 3. Share
 4. Copy the embed code

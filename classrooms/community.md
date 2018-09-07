@@ -5,7 +5,7 @@ with each other. We've seen first-hand how the Replit teacher community likes
 to share and exchange ideas. And for us, being Open Source developers, we
 understand how this can promote innovation.
 
-You can access the Classroom Community [here](https://repl.it/community).
+You can access the Classroom Community [here](/community).
 
 To be clear, this in no way would expose student data. We take student data privacy very
 seriously. Sharing your classroom with the community will only make published

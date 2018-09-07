@@ -1,13 +1,13 @@
 # Autograding Assignments
 
-In [Repl.it Classroom](https://repl.it/site/classroom) you can automatically correct
+In [Repl.it Classroom](/site/classroom) you can automatically correct
 (and potentially grade) your student's assignment submissions by one of the
 following ways:
 
 * Unit tests
 * Input/output matching
 
-![](https://repl.it/public/images/blog/correction.png)
+![](/public/images/blog/correction.png)
 
 ## Input/Output Matching
 
@@ -16,7 +16,7 @@ following ways:
 One of the first things to learn about programming computers is how to provide programs
 with input. Command-line programs typically read text from the standard
 input interface (stdin) and display text on the standard output interface (stdout) -- both are
-part of the [standard streams](https://en.wikipedia.org/wiki/Standard_streams).[](preview end)
+part of the [standard streams](https://en.wikipedia.org/wiki/Standard_streams).
 
 Nearly every programming language has a way for interacting with standard
 streams. You can find documentation for this by simply googling the language
@@ -48,7 +48,7 @@ matching feature comes in.
 After you've selected it as your preferred correction method, you can then click
 'create test case' to open the test creation form:
 
-![](https://repl.it/public/images/blog/create_test.png)
+![](/public/images/blog/create_test.png)
 
 * Name: you want to give your test a descriptive name, something that would hint
   at what went wrong if the student fails this test. In this case we're
@@ -70,20 +70,20 @@ In this case we went with regexp to check
 against the expected number output (6 in this case) because we don't really care what other
 things the program is printing.
 
-![](https://repl.it/public/images/blog/tests.png)
+![](/public/images/blog/tests.png)
 
 After creating a couple of tests (`2 * 3 = 6` and `-5 * 3 = -15`) we're going to
 test this on the student end (using the "student preview" button) to see how the
 experience looks like:
 
-![](https://repl.it/public/images/blog/test_failed.png)
+![](/public/images/blog/test_failed.png)
 
 You'll see here that the user failed the test because they added instead of
 multiplying (resulting in 2 + 3 = 5).
 
 And after fixing to correctly multiply we'll pass all the tests:
 
-![](https://repl.it/public/images/blog/tests_passed.png)
+![](/public/images/blog/tests_passed.png)
 
 ## Unit Tests
 
