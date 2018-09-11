@@ -19,3 +19,5 @@ snippets of code interactively, and in [some cases](/site/docs/repls/files), you
 variables that have been defined in your main body of code.
 
 Read on to see what Repls are capable of.
+
+[sample broken link](/site/docs/repls/dafhsdf)
