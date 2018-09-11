@@ -12,9 +12,9 @@ As a teacher, to embed your classroom:
 3. If you want to embed in your LMS then copy the LTI information and follow the instructions
 provided to you by your LMS, otherwise copy the iframe code.
 
-<img src="https://i.imgur.com/FJQFHYK.png" width="300px" />
+![](https://i.imgur.com/FJQFHYK.png)
 
-<img src="https://i.imgur.com/5l2UD12.png" width="500px" />
+![](https://i.imgur.com/5l2UD12.png)
 
 To embed an assignment:
 
