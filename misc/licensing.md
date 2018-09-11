@@ -1,15 +1,6 @@
-# Licensing Information and Takedown Requests
+# Licensing Informations
 
-Our user's privacy is of utmost importance to us.  Here you will find information about how your repls are licensed and our takedown policy.
-
-## Copyrighted and Personal Information
-
-In the case of either of the following:
-
-* You hold a copyright to content contained within a public/private repl, or a public/private classroom assignment
-* Personal/private information is contained within a public/private repl, or a public/private classroom assignment
-
-Please [contact us](mailto:contact@repl.it) immediately and we will remove it.  It is against our [Terms and Conditions](/site/terms) for users to publish any content that violates privacy rights, publicity rights, copyrights, or contract rights.
+Our user's privacy is of utmost importance to us.  Here you will find information about how your repls are licensed.
 
 ## Public Repls and Classrooms
 

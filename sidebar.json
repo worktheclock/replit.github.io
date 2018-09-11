@@ -50,7 +50,7 @@
         "slug": "intro"
       },
       {
-        "name": "Assignment-Submission Workflow",
+        "name": "Assignments and Submissions",
         "slug": "assignment-submission"
       },
       {
@@ -92,8 +92,12 @@
         "slug": "free-features"
       },
       {
-        "name": "Licensing Info / Takedown Requests",
+        "name": "Licensing Info",
         "slug": "licensing"
+      },
+      {
+        "name": "Copyright Claims",
+        "slug": "copyright"
       }
     ]
   }
