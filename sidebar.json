@@ -54,6 +54,10 @@
         "slug": "assignment-submission"
       },
       {
+        "name": "Projects",
+        "slug": "projects"
+      },
+      {
         "name": "Automatic Grading",
         "slug": "autograding"
       },
