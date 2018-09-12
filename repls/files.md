@@ -91,6 +91,4 @@ While you can programmatically create files in project mode, there are a few cav
 - When you change a file through your program, those changes will not be reflected until
 the repl stops running
 - Directories/folders cannot be programmatically generated or removed
-- Files cannot be deleted programmatically (but they can be manually deleted)
-- Because of the above, renaming a file will result in duplicating the file with the new
-name (since the old file won't be deleted).
+- Files cannot be deleted or renamed programmatically (but it can be done manually from the file tree )
