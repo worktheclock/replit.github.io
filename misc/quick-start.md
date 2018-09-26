@@ -22,7 +22,7 @@ No programming knowledge is necessary.  This quick start guide is in Python.
 
 On your [/repls](Repls Dashboard), you create a new repl by clicking on "Start Coding Now" or the red button in the bottom right corner.  This will bring you to a page with a list of our supported languages.
 
-<video width="auto" height="auto" controls>
+<video width="auto" height="auto" controls style="display:block;margin: 0 auto;">
   <source src="https://replit.github.io/media/quick-start/languages-page.mp4" />
 </video>
 
