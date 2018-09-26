@@ -92,6 +92,11 @@
     "slug": "misc",
     "contents": [
       {
+        "name": "Quick Start Guide",
+        "slug": "quick-start",
+        "dev": true
+      },
+      {
         "name": "Using Repl.it for Free",
         "slug": "free-features"
       },
