@@ -6,9 +6,11 @@ No programming knowledge is necessary.  This quick start guide is in Python.
 
 ## Creating a New Python 3 Repl
 
-On your [/repls](Repls Dashboard), you create a new repl by clicking on "Start Coding Now" or the red button in the bottom right corner.  This will bring you to a page with a list of our supported languages.
+On your [Repls Dashboard](/repls), you create a new repl by clicking on "Start Coding Now" or the red button in the bottom right corner.  This will bring you to a page with a list of our supported languages.
 
-![image of languages page](https://replit.github.io/images/quick-start/languages-page.png)
+<video width="auto" height="auto">
+  <source src="https://replit.github.io/media/quick-start/languages-page.mp4" />
+</video>
 
 Go ahead and select Python.  This will bring you to your workspace.
 
@@ -20,11 +22,11 @@ The first thing to do when creating a repl is to give it a name and description.
 
 You can edit the name and description of the repl by clicking on the edit icon highlighted below, then editing the text fields to change the name and add a description.  Clicking off the popover will automatically save any changes you've made.
 
-![editing a repls title and description](https://replit.github.io/images/quick-start/edit-repl.png)
+![editing a repls title and description](https://replit.github.io/media/quick-start/edit-repl.png)
 
 ## The Repl Environment
 
-![the different parts of the repl environment](https://replit.github.io/images/quick-start/repl-labels.png)
+![the different parts of the repl environment](https://replit.github.io/media/quick-start/repl-labels.png)
 
 There are three main parts to the Repl:
 
@@ -40,7 +42,7 @@ Let's start with the **Console/Terminal**.  In that section, type in the followi
 print("Hello World!")
 ```
 
-![printing in the console](https://replit.github.io/images/quick-start/hello-world.png)
+![printing in the console](https://replit.github.io/media/quick-start/hello-world.png)
 
 Here you can evaluate code line by line and interact with its results.  Now let's try entering the following:
 
@@ -54,7 +56,7 @@ Then type:
 x * 3
 ```
 
-![evaling in the console](https://replit.github.io/images/quick-start/heyheyhey.png)
+![evaling in the console](https://replit.github.io/media/quick-start/heyheyhey.png)
 
 Variables declared in the console persist, so you can continue to interact with variables there.
 
@@ -70,7 +72,7 @@ print("Hello", name)
 
 To run it, click on the big Run button at the top of the screen, or hit CTRL+Enter (Windows/Chromebook) / CMD+Enter (Mac).
 
-![output of greeter program](https://replit.github.io/images/quick-start/hello-repler.png)
+![output of greeter program](https://replit.github.io/media/quick-start/hello-repler.png)
 
 You'll see the code run on the right hand side of the screen.  Since the program is asking for input, go ahead and type your name in the console and hit enter.  It should then greet you!
 
@@ -78,17 +80,17 @@ You'll see the code run on the right hand side of the screen.  Since the program
 
 Let's use the `matplotlib` package to make a simple plot.  Click on the packages icon (highlighted below) and enter `matplotlib` to search for the package.  Select the first one (indicated by the arrow).
 
-![installing matplotlib](https://replit.github.io/images/quick-start/install-mpl.png)
+![installing matplotlib](https://replit.github.io/media/quick-start/install-mpl.png)
 
 Click on the `+` button to add it to your packages.
 
-![the actual button to install matplotlib](https://replit.github.io/images/quick-start/click-install-mpl.png)
+![the actual button to install matplotlib](https://replit.github.io/media/quick-start/click-install-mpl.png)
 
 This will create a new file, `requirements.txt`, which contains all the package information for your repl, including the version number.  It will also start installing on the right.
 
 We can view all of our files by selecting the filetree icon on our sidebar - the first icon.  Click on the filetree icon, then select `main.py` to return to your program.
 
-![going back to the filetree](https://replit.github.io/images/quick-start/back-to-files.png)
+![going back to the filetree](https://replit.github.io/media/quick-start/back-to-files.png)
 
 [More on packages](/site/docs/repls/packages).
 
@@ -107,7 +109,7 @@ plt.savefig('plot.png')
 
 Run the code.  You'll see that the newly generated image, `plot.png`, shows up in both the filetree and below the editor so you can see it!  Neat, huh?
 
-![screenshot of workspace with generated plot](https://replit.github.io/images/quick-start/generated-plot.png)
+![screenshot of workspace with generated plot](https://replit.github.io/media/quick-start/generated-plot.png)
 
 [More on plotting in Python](/site/docs/repls/python-plots).
 
@@ -115,7 +117,7 @@ Run the code.  You'll see that the newly generated image, `plot.png`, shows up i
 
 Let's create a new Python3 repl.  As a shortcut, you can create a new repl by going directly to [https://repl.it/languages/python3](https://repl.it/languages/python3).  Let's call this one "python flask server"
 
-![renaming the flask repl](https://replit.github.io/images/quick-start/naming-flask-repl.png)
+![renaming the flask repl](https://replit.github.io/media/quick-start/naming-flask-repl.png)
 
 Our first step is to add the `flask` package.  Go through the steps above except this time, choose the package called `flask`.
 
@@ -135,7 +137,7 @@ if __name__ == '__main__':
 
 Hit run, and you'll see that a new pane has appeared with the URL for your repl's hosted site, along with a preview of what it looks like.  You can share this link with your friends to show them the simple app that you made.
 
-![webview for flask](https://replit.github.io/images/quick-start/flask-webview.png)
+![webview for flask](https://replit.github.io/media/quick-start/flask-webview.png)
 
 [More on web servers](/site/docs/repls/http-servers).
 
@@ -145,7 +147,7 @@ So far, your repl is public to everyone (unless you have a paid plan) and they c
 
 Create a new file by clicking on the File+ icon in your filetree.  Name it `.env`.
 
-![creating the env file](https://replit.github.io/images/quick-start/creating-env.png)
+![creating the env file](https://replit.github.io/media/quick-start/creating-env.png)
 
 `.env` files contain key-value pairs like the following.  Type in:
 
@@ -153,7 +155,7 @@ Create a new file by clicking on the File+ icon in your filetree.  Name it `.env
 PASSWORD=pass1234
 ```
 
-![entering a password into the env file](https://replit.github.io/images/quick-start/password-env.png)
+![entering a password into the env file](https://replit.github.io/media/quick-start/password-env.png)
 
 This `.env` file is special because it is only visible to you.  Anyone who is visiting your repl won't be able to see the contents of this file.
 
@@ -182,11 +184,11 @@ if __name__ == '__main__':
 
 We're creating a new page where we look for a query param `secret` and we check to see if it matches our `.env` secret.  Here's how it looks when we get it right!
 
-![getting the secret correct](https://replit.github.io/images/quick-start/found-env-secret.png)
+![getting the secret correct](https://replit.github.io/media/quick-start/found-env-secret.png)
 
 And here's how it looks when we get it wrong.
 
-![getting the secret incorrect](https://replit.github.io/images/quick-start/wrong-env-secret.png)
+![getting the secret incorrect](https://replit.github.io/media/quick-start/wrong-env-secret.png)
 
 Of course, this is a very insecure way of handling secret tokens, since the URL including the query parameter can be cached.  This is just a simple demonstration.
 
@@ -198,7 +200,7 @@ Finally, now that you've created your first repl, feel free to share it with our
 
 Head on over to [Repl Talk](/talk) and check out the [Share Board](/talk/share).  Click on "Share your repl!", choose the repl from the list (or type the name to search), add a title and a description, and Share!
 
-![sharing to repl talk](https://replit.github.io/images/quick-start/share-to-talk.png)
+![sharing to repl talk](https://replit.github.io/media/quick-start/share-to-talk.png)
 
 Feel free to join our Discord Community as well!  Join with [this invite link](http://discord.gg/346Tapr).
 
