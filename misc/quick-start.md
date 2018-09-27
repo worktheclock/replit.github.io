@@ -38,8 +38,6 @@ You can edit the name and description of the repl by clicking on the edit icon h
 
 ## The Repl Environment
 
-![the different parts of the repl environment](https://replit.github.io/media/quick-start/repl-labels.png)
-
 There are three main parts to the Repl:
 
 1. The **Sidebar**, where you can find a variety of panes for files, the package manager, the debugger, live coding, and so on.
@@ -209,6 +207,9 @@ Head on over to [Repl Talk](/talk) and check out the [Share Board](/talk/share).
 </video>
 
 Feel free to join our Discord Community as well!  Join with [this invite link](http://discord.gg/346Tapr).
+
+## Sample Repls
+
 
 ## More from our Community
 
