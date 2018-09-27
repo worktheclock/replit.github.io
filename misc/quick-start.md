@@ -32,7 +32,7 @@ The first thing to do when creating a repl is to give it a name and description.
 
 You can edit the name and description of the repl by clicking on the edit icon highlighted below, then editing the text fields to change the name and add a description.  Clicking off the popover will automatically save any changes you've made.
 
-<video width="auto" height="auto" controls style="display:block;margin: 0 auto;">
+<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
   <source src="https://replit.github.io/media/quick-start/creating-repl.mp4" />
 </video>
 
@@ -80,7 +80,7 @@ To run it, click on the big Run button at the top of the screen, or hit CTRL+Ent
 
 You'll see the code run on the right hand side of the screen.  Since the program is asking for input, go ahead and type your name in the console and hit enter.  It should then greet you!
 
-<video width="auto" height="auto" controls style="display:block;margin: 0 auto;">
+<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
   <source src="https://replit.github.io/media/quick-start/simple-repl.mp4" />
 </video>
 
@@ -94,7 +94,7 @@ This will create a new file, `requirements.txt`, which contains all the package 
 
 We can view all of our files by selecting the filetree icon on our sidebar - the first icon.  Click on the filetree icon, then select `main.py` to return to your program.
 
-<video width="auto" height="auto" controls style="display:block;margin: 0 auto;">
+<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
   <source src="https://replit.github.io/media/quick-start/install-package.mp4" />
 </video>
 
@@ -115,7 +115,7 @@ plt.savefig('plot.png')
 
 Run the code.  You'll see that the newly generated image, `plot.png`, shows up in both the filetree and below the editor so you can see it!  Neat, huh?
 
-<video width="auto" height="auto" controls style="display:block;margin: 0 auto;">
+<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
   <source src="https://replit.github.io/media/quick-start/generate-plot.mp4" />
 </video>
 
@@ -143,7 +143,7 @@ if __name__ == '__main__':
 
 Hit run, and you'll see that a new pane has appeared with the URL for your repl's hosted site, along with a preview of what it looks like.  You can share this link with your friends to show them the simple app that you made.
 
-<video width="auto" height="auto" controls style="display:block;margin: 0 auto;">
+<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
   <source src="https://replit.github.io/media/quick-start/flask-server.mp4" />
 </video>
 
@@ -188,7 +188,7 @@ if __name__ == '__main__':
 
 We're creating a new page where we look for a query param `secret` and we check to see if it matches our `.env` secret.  Watch the video below to see the results.
 
-<video width="auto" height="auto" controls style="display:block;margin: 0 auto;">
+<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
   <source src="https://replit.github.io/media/quick-start/env-files.mp4" />
 </video>
 
@@ -202,7 +202,7 @@ Finally, now that you've created your first repl, feel free to share it with our
 
 Head on over to [Repl Talk](/talk) and check out the [Share Board](/talk/share).  Click on "Share your repl!", choose the repl from the list (or type the name to search), add a title and a description, and Share!
 
-<video width="auto" height="auto" controls style="display:block;margin: 0 auto;">
+<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
   <source src="https://replit.github.io/media/quick-start/share-repl.mp4" />
 </video>
 
