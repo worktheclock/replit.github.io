@@ -2,15 +2,18 @@
 
 ## What constitutes a student seat?
 
-We bill on _total unique monthly active students_. That's a mouthful so let me
-break it down:
+Student counts are based on _total unique monthly active students_. That's a mouthful
+so let me break it down:
 
 * Total: it doesn't matter how many classrooms you have; we will tally up all the
 number of students across all your classrooms.
 * Unique: a student is counted once, it doesn't matter if they're in multiple
 classrooms.
-* Monhtly active: an active student is a student that submits something that
+* Monthly active: an active student is a student that submits something that
 given month.
+
+Please note that the amount billed is based on your maximum number of students, not
+the number of students currently under your account.
 
 ## Why isn't this free?
 
