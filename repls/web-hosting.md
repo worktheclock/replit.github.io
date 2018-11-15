@@ -32,7 +32,32 @@ from loading.
 
 ## Custom Domains
 
-Coming soon!
+Any hosted repl can be linked to a domain that you own. This includes both [static sites](#hosting-a-web-site) and [HTTP servers](/site/docs/repls/http-servers). To start, click on the pencil icon next to the URL for your repl:
+
+![screenshot of edit button](https://replit.github.io/images/repls/edit-custom-domain-icon.png)
+
+Enter the full domain where you'd like the repl to be accessible from, this includes subdomains.
+
+![screenshot of cname instructions](https://replit.github.io/images/repls/custom-domain-cname.png)
+
+You will be prompted to add a `CNAME` record to your domain pointing at your repl's special `repl.co` domain. Go to your domain registrar and find the section that allows you to add DNS records.
+
+Add a new entry with the following information:
+* The type should be `CNAME`.
+* `name` or `hostname` will be the subdomain you want, or you can enter `@` if you'd like to use the full domain. Some services do not allow `CNAME`s to be at the top level, we recommend instead using www and making sure you enter www.yourdomain.com in your repl.
+* `data` or `target` should be the special repl.co link you got when you started linking your repl. It should contain a long string of random numbers and letters at the beginning.
+
+For example:
+- If I want to serve a repl from `example.com` I'd enter `example.com` in the repl linking box then in my registrar the target should be `@`.
+- If I want to serve a repl from `coolproject.example.com` I'd enter `coolproject.example.com` in the repl linking box and `coolproject` in the target field on my registrar.
+
+The exact steps will vary between services. Here's an example of how it might look, using Google Domains:
+
+![screenshot of cname instructions](https://replit.github.io/images/repls/google-setup-custom-domain.png)
+
+It may take some time for the DNS record to be updated. Once connected, click the big green button to finish and your domain should be linked!
+
+You can unlink your domain at any time by clicking on the pencil icon and clicking "Unlink".
 
 ## Example
 
