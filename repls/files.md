@@ -33,7 +33,7 @@ and still remain in eval mode.
 In any language where we support multiple files, you can enter **Project Mode** by
 creating a file - either by clicking on the
 <img
-  src="http://i.imgur.com/psW3k5D.png"
+  src="https://i.imgur.com/psW3k5D.png"
   style="height: 24px; vertical-align:text-bottom; width: 21px; margin: 0 3px; display: inline-block;"
 />
 icon. Or upload one from your computer by clicking
@@ -63,7 +63,7 @@ will be updated live.
 
 You can edit a file's name or delete it if you wish by clicking on the
 <img
-  src="http://i.imgur.com/Fsg7XB2.png"
+  src="https://i.imgur.com/Fsg7XB2.png"
   style="height: 24px; vertical-align:text-bottom; width: 6px; margin: 0 3px; display: inline-block;"
 />
 icon beside it. If you're renaming your file, make sure you have the right
