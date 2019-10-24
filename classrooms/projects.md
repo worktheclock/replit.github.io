@@ -1,4 +1,4 @@
-# Classroom Projects
+# Projects
 
 Projects allow you to create Classroom assignments that link to Repls.  The teacher provides a template for students, and when students begin the project, they will create a fork (clone) of the template repl.  Teachers can then view the students' repls by name.
 

@@ -33,10 +33,10 @@ can also not see who has enrolled in the class as a self-learner, only the numbe
 
 ## Becoming a Student / Teacher
 
-You can become a student or teacher by going to your [account](/account), going to 'roles',
+You can become a student or teacher by going to your [account](https://repl.it/account), going to 'roles',
 and checking the box next to 'student' or 'teacher'.  Once you've updated your roles, you should see new
 navigation links in your header.
 
-You can also become a student or teacher by going to the [classroom community](/community)
+You can also become a student or teacher by going to the [classroom community](https://repl.it/community)
 and importing a classroom.  "Taking and Learning" a classroom will automatically make you a student, while
 "Importing and Teaching" a classroom will automatically make you a teacher.

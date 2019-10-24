@@ -1,6 +1,6 @@
-# Assignment-Submission Workflow
+# Assignments and Submissions
 
-[Repl.it Classroom](/site/classroom)'s assignment and submission workflow is
+Repl.it Classroom's assignment and submission workflow is
 designed to make running your classroom as easy and effective as possible
 with a gentle learning curve.
 
@@ -10,7 +10,7 @@ from day 0.
 
 ![student overview](https://i.imgur.com/5N4gMNj.jpg)
 
-_The [student overview](/site/blog/classroomoverview) page
+_The [student overview](https://repl.it/site/blog/classroomoverview) page
 showing the different states student submissions can be in_
 
 First, there are a couple of concepts to define:

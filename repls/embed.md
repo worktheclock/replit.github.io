@@ -3,12 +3,12 @@
 ## Embedding a Repl via `iframe`
 
 You can embed repls in an iframe. This is good if you want to integrate Repl.it
-into your app. If your app supports [OEmbed](http://oembed.com/) -- we already
+into your app. If your app supports [OEmbed](https://oembed.com/) -- we already
 implement the standard so simply copy and paste any Repl.it url and it should work.
 
 If you'd like to embed specific code then do the following:
 
-1. [Write your code in your favorite language](/languages)
+1. [Write your code in your favorite language](https://repl.it/languages)
 2. Save
 3. Share
 4. Copy the embed code

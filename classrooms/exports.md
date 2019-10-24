@@ -26,4 +26,4 @@ Each submission has one of the following statuses:
 
 ### Exporting Assignments
 
-Currently there is no place to export all of a classroom's assignments.  If this is something you would like to see, please let us know on our [feedback forums](/feedback).
+Currently there is no place to export all of a classroom's assignments.  If this is something you would like to see, please let us know on our [feedback forums](https://repl.it/feedback).

@@ -1,6 +1,6 @@
 # Autograding Assignments
 
-In [Repl.it Classroom](/site/classroom) you can automatically correct
+In [Repl.it Classroom](https://repl.it/classrooms) you can automatically correct
 and grade your student's assignment submissions by implementing
 **Unit tests** or **Input/output matching tests**.
 

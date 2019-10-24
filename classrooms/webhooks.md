@@ -25,7 +25,7 @@ You can access your webhook settings for a classroom by clicking on the three-do
 
 **Warning: By using webhooks, you are potentially exposing student data to services outside of Repl.it.  Please be aware of where you are sending and storing the data and the security of those places/services.**
 
-Webhooks can be used by services such as [Zapier](https://zapier.com/apps/webhook/integrations), or you can [create your own server](/site/docs/repls/http-servers) to handle the data.
+Webhooks can be used by services such as [Zapier](https://zapier.com/apps/webhook/integrations), or you can [create your own server](/repls/http-servers) to handle the data.
 
 Here's an example of a simple server repls that will receive and log webhooks:
 
@@ -39,7 +39,7 @@ I can then test this by having a student submit an assignment:
 
 ![screenshot of the event logged to my console](https://replit.github.io/images/classrooms/webhook-result.png)
 
-This data can then be saved to a database, or it can trigger another POST request, or anything else.  The world is your oyster with webhooks!  Do note that if your repl is public and you need to store private database keys or API keys, you can do so securely by using [.env files](/site/docs/repls/secret-keys).
+This data can then be saved to a database, or it can trigger another POST request, or anything else.  The world is your oyster with webhooks!  Do note that if your repl is public and you need to store private database keys or API keys, you can do so securely by using [.env files](/repls/secret-keys).
 
 ## Security
 

@@ -31,7 +31,7 @@ from loading.
 
 ## Custom Domains
 
-Any hosted repl can be linked to a domain that you own. This includes both [static sites](#hosting-a-web-site) and [HTTP servers](/site/docs/repls/http-servers). To start, click on the pencil icon next to the URL for your repl:
+Any hosted repl can be linked to a domain that you own. This includes both [static sites](#hosting-a-web-site) and [HTTP servers](/repls/http-servers). To start, click on the pencil icon next to the URL for your repl:
 
 ![screenshot of edit button](https://replit.github.io/images/repls/edit-custom-domain-icon.png)
 

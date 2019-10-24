@@ -20,11 +20,11 @@ No programming knowledge is necessary.  This quick start guide is in Python.
 
 ## Creating a New Python 3 Repl
 
-On your [Repls Dashboard](/repls), you create a new repl by clicking on "Start Coding Now" or the red button in the bottom right corner.  This will bring you to a page with a list of our supported languages.
+On your [Repls Dashboard](https://repl.it/repls), you create a new repl by clicking on "Start Coding Now" or the red button in the bottom right corner.  This will bring you to a page with a list of our supported languages.
 
 Go ahead and select Python.  This will bring you to your workspace.
 
-[More on the repls dashboard](/site/docs/repls/dashboard).
+[More on the repls dashboard](/repls/dashboard).
 
 ## Renaming and Describing your Repl
 
@@ -98,7 +98,7 @@ We can view all of our files by selecting the filetree icon on our sidebar - the
   <source src="https://replit.github.io/media/quick-start/install-package.mp4" />
 </video>
 
-[More on packages](/site/docs/repls/packages).
+[More on packages](/repls/packages).
 
 ## Creating Python Plots
 
@@ -119,7 +119,7 @@ Run the code.  You'll see that the newly generated image, `plot.png`, shows up i
   <source src="https://replit.github.io/media/quick-start/generate-plot.mp4" />
 </video>
 
-[More on plotting in Python](/site/docs/repls/python-plots).
+[More on plotting in Python](/repls/python-plots).
 
 ## Starting a Web Server
 
@@ -147,7 +147,7 @@ Hit run, and you'll see that a new pane has appeared with the URL for your repl'
   <source src="https://replit.github.io/media/quick-start/flask-server.mp4" />
 </video>
 
-[More on web servers](/site/docs/repls/http-servers).
+[More on web servers](/repls/http-servers).
 
 ## Adding Secret Keys
 
@@ -194,19 +194,19 @@ We're creating a new page where we look for a query param `secret` and we check 
 
 Of course, this is a very insecure way of handling secret tokens, since the URL including the query parameter can be cached.  This is just a simple demonstration.
 
-[More on env files](/site/docs/repls/secret-keys)
+[More on env files](/repls/secret-keys)
 
 ## Sharing Your Repl
 
 Finally, now that you've created your first repl, feel free to share it with our community!
 
-Head on over to [Repl Talk](/talk) and check out the [Share Board](/talk/share).  Click on "Share your repl!", choose the repl from the list (or type the name to search), add a title and a description, and Share!
+Head on over to [Repl Talk](https://repl.it/talk) and check out the [Share Board](https://repl.it/talk/share).  Click on "Share your repl!", choose the repl from the list (or type the name to search), add a title and a description, and Share!
 
 <video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
   <source src="https://replit.github.io/media/quick-start/share-repl.mp4" />
 </video>
 
-Feel free to join our Discord Community as well!  Join with [this invite link](http://discord.gg/346Tapr).
+Feel free to join our Discord Community as well!  Join with [this invite link](https://discord.gg/346Tapr).
 
 ## Sample Repls
 
@@ -222,17 +222,17 @@ If you're interested in exploring more in what you can do on Repl.it, take a loo
 
 ## More from our Community
 
-You can find tutorials created by members of our community on [Learn](/talk/learn).  There are tutorials for creating single player and multiplayer games, web apps, Discord bots, and AI programs.  Be sure to give the post an upvote if you enjoyed it!
+You can find tutorials created by members of our community on [Learn](https://repl.it/talk/learn).  There are tutorials for creating single player and multiplayer games, web apps, Discord bots, and AI programs.  Be sure to give the post an upvote if you enjoyed it!
 
-If you want to check out other cool repls that people have shared, you can find them on [Share](/talk/share).
+If you want to check out other cool repls that people have shared, you can find them on [Share](https://repl.it/talk/share).
 
-If you have a question about programming or need help debugging something, be sure to post on [Ask](/talk/ask).  Someone will help you if they can!
+If you have a question about programming or need help debugging something, be sure to post on [Ask](https://repl.it/talk/ask).  Someone will help you if they can!
 
 ## Moving Forward
 
 Enjoy being a Repler!  We would love to hear more from you about how you use Repl.it, how you found out about Repl.it, and if there's anything we can do to improve.  Feel free to contact us through any of the following avenues:
 
-* [Discord](http://discord.gg/346Tapr)
+* [Discord](https://discord.gg/346Tapr)
 * [contact@repl.it](mailto:contact@repl.it)
-* [Repl Talk Ask](/talk/ask)
-* [Feedback](/feedback) / [Bug Reports](/bugs) / [Language Requests](/language-requests)
+* [Repl Talk Ask](https://repl.it/talk/ask)
+* [Feedback](https://repl.it/feedback) / [Bug Reports](https://repl.it/bugs) / [Language Requests](https://repl.it/language-requests)

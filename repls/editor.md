@@ -1,5 +1,5 @@
 
-# Repl.it Code Editor Tips and Tricks
+# Editor Tips and Tricks
 
 The following “Tips and Tricks” will teach you how to be productive in Repl.it code editor. Here, you will become familiar with the code editor’s powerful shortcuts for editing, writing, and inspecting code.
 

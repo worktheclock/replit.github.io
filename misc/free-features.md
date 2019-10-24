@@ -4,7 +4,7 @@ Repl.it offers a number of features that every user can access and utilize for f
 
 ## Repls
 
-Repls are the core of the Repl.it service, and they will always be available for all users.  You can create as many repls as you like, and in any language.  Start by logging into your account (or [signing up for a free account](/signup)).
+Repls are the core of the Repl.it service, and they will always be available for all users.  You can create as many repls as you like, and in any language.  Start by logging into your account (or [signing up for a free account](https://repl.it/signup)).
 
 You can access your repls and create new ones in the "my repls" view, found at the top of your page once logged in.
 
@@ -57,9 +57,9 @@ Free accounts are limited to 200 unique active students across *all* classrooms.
 You can create as many classrooms as you like under a free account, and in any language.  Within classrooms there is no limit on how many assignments you can create, nor is there any limitation on what kind of testing you can utilize.
 
 Here are some resources on:
-* [Unit Testing](/site/docs/classrooms/autograding)
-* [Input/Output Matching](/site/docs/classroom/autograding)
+* [Unit Testing](/classrooms/autograding)
+* [Input/Output Matching](/classroom/autograding)
 
 ## Questions?
 
-If you have any more questions about our free service, don't hesitate to reach out to our team at [contact@repl.it](mailto:contact@repl.it) or on our [feedback forums](/feedback)
+If you have any more questions about our free service, don't hesitate to reach out to our team at [contact@repl.it](mailto:contact@repl.it) or on our [feedback forums](https://repl.it/feedback)
