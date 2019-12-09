@@ -32,7 +32,7 @@ const render = async (res, category, slug) => {
 	const cobj = t.find(c => c.slug === category);
 	const dobj = cobj.contents.find(d => d.slug === slug)
 
-	res.locals.title = `Repl.it - ${dobj.name}`;
+	res.locals.title = `Repl.it - ${dobj ? dobj.name : 'unknown'}`;
 	res.render('index.ejs');
 }
 
@@ -49,7 +49,14 @@ const renderMarkdown = async (path) => {
 
 app.get('/:category/:slug', async (req, res) => {
 	const { category, slug } = req.params;
-	render(res, category, slug);
+	render(res, category, slug)
+		.catch(err => {
+			res.send(`
+<h1>Something went wrong!</h1>
+<pre>${err.toString()}</pre>
+<p>maybe you can <a href="https://repl.it/@turbio/replit-docs">help fix it</a></p>
+`);
+		});
 });
 
 app.listen(3000, () => {

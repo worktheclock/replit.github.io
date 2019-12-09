@@ -42,6 +42,10 @@
       {
         "name": "Editor Tips and Tricks",
         "slug": "editor"
+      },
+      {
+        "name": "Configuring The Run Button",
+        "slug": "dot-replit"
       }
     ]
   },
