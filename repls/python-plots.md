@@ -36,8 +36,7 @@ plt.savefig('plot.png')
 ```
 
 Running the code should then generate a new pane with your generated plot!
-The plot has also been saved to an image `plot.png`.  This will work regardless
-of whether you are in [Project Mode](/repls/files) or not.  The preview pane
+The plot has also been saved to an image `plot.png`. The preview pane
 will appear whenever the file has been changed.
 
 You can see the above example here.  Make sure you drag out the file tree from
