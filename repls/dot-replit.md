@@ -19,4 +19,4 @@ When you clone a repository without a `.replit` file we automatically show the v
 
 ![visual config editor](https://docs.repl.it/images/config_plugin.png)
 
-This will automatically creat the `.replit` file and makes it possible to customize how the repl will run. You can use the shell to run any command and then set the run button once you've decided what it should do. Clicking done will finalize the repl's configuration closing the visual editor. It's always possible to make changes later by visiting the `.replit` file from the file tree. Adding `.replit` to a repository makes cloning fast with no configuration necessary. 
+This will automatically create the `.replit` file and makes it possible to customize how the repl will run. You can use the shell to run any command and then set the run button once you've decided what it should do. Clicking done will finalize the repl's configuration closing the visual editor. It's always possible to make changes later by visiting the `.replit` file from the file tree. Adding `.replit` to a repository makes cloning fast with no configuration necessary. 
