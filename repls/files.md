@@ -2,7 +2,7 @@
 
 When starting a new repl, we like to start you with a "main" file so you can get to coding quickly. However, if you want to split your project into multiple files you can do so by adding a new file from the files sidebar.
 
-![new file](/images/repls/add_file.png)
+<img width="50%" src="/images/repls/add_file.png" />
 
 You can then import the module by referencing the name. Every language will have different syntax for doing this so please consult the respective language documentation. 
 
@@ -14,7 +14,7 @@ Here is an example in Python:
 
 You can upload files by either dragging and dropping them into the files sidebar or by clicking the "three dot menu" and selecting upload file (you can also upload a whole folder!):
 
-![upload file](/images/repls/upload.png)
+<img width="50%" src="/images/repls/upload.png" />
 
 We support uploading any file type including images, video, and audio files, which will be
 displayed correctly in the browser.  These files can also be programmatically generated.
