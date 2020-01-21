@@ -33,11 +33,11 @@ Here's an example of a simple server repls that will receive and log webhooks:
 
 The URL that can receive webhooks is `https://class-webhook-example.timmy-i-chen.repl.co/data`.  I can then set up my webhook settings as follows:
 
-![screenshot of webhook settings](https://replit.github.io/images/classrooms/webhook-setup.png)
+![screenshot of webhook settings](https://replit.github.io/static/images/classrooms/webhook-setup.png)
 
 I can then test this by having a student submit an assignment:
 
-![screenshot of the event logged to my console](https://replit.github.io/images/classrooms/webhook-result.png)
+![screenshot of the event logged to my console](https://replit.github.io/static/images/classrooms/webhook-result.png)
 
 This data can then be saved to a database, or it can trigger another POST request, or anything else.  The world is your oyster with webhooks!  Do note that if your repl is public and you need to store private database keys or API keys, you can do so securely by using [.env files](/repls/secret-keys).
 
