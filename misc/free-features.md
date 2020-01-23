@@ -32,6 +32,14 @@ For web projects (HTML/CSS/JS), **your project will also be hosted** so you can 
 
 When viewing other people's repls, you can "Fork" the repl to clone it into your account.
 
+## Compliance
+
+We take user privacy very seriously and only collect data insofar as it's important to provide our service (you can read more about our [privacy policy](https://repl.it/site/privacy)).
+
+As a small team we're unable to comply with the various edtech regulations around the world. However, you can use Repl.it completly anonymously without providing any identifiable information. Just head over to our [languages page](https://repl.it/languages), select a language and start coding. 
+
+If you're teacher, one anonymous workflow you can use is that you can create a repl with the instructions and starter code, and then have your students fork the repl, work on the assignment, and send the link back. 
+
 ## Community Classrooms
 
 Public classrooms show up under the Community tab at the top of the page.  These are classrooms created by other Repl.it users.
@@ -43,23 +51,3 @@ By clicking on a classroom, you can either "Take and Learn", or "Import and Teac
 Clicking on "Import and Teach" will clone the classroom into your account, which you can then edit and re-use to teach other students!  Free accounts can have up to 200 students per account - past that, please check out our [pricing options](/site/pricing) to see what's most suitable for you.
 
 Even with a free account, you can take as many classes as you want.  Try it out!
-
-## Teaching Classrooms
-
-You can also create your own classrooms!  To enable teacher features, make sure that "Teacher" is checked off under "Roles" in your account settings.  This should enable the "teacher" tab, which is where you can manage your classrooms.
-
-Free accounts are limited to 200 unique active students across *all* classrooms.  This means that:
-* If you have one student in multiple classrooms, it will only be counted as one student.
-* If you have a student that doesn't submit anything in a month, that student will be considered "inactive" and won't count towards your total (although if they do submit something later, they will count again).
-
-![classroom view](https://replit.github.io/media/free-features/classroom-view.png)
-
-You can create as many classrooms as you like under a free account, and in any language.  Within classrooms there is no limit on how many assignments you can create, nor is there any limitation on what kind of testing you can utilize.
-
-Here are some resources on:
-* [Unit Testing](/classrooms/autograding)
-* [Input/Output Matching](/classroom/autograding)
-
-## Questions?
-
-If you have any more questions about our free service, don't hesitate to reach out to our team at [contact@repl.it](mailto:contact@repl.it) or on our [feedback forums](https://repl.it/feedback)
