@@ -48,6 +48,6 @@ Public classrooms show up under the Community tab at the top of the page.  These
 
 By clicking on a classroom, you can either "Take and Learn", or "Import and Teach".  Clicking on "Take and Learn" will add you as a student to that classroom, where you can work through their exercises.  The original creator will not be able to see your submissions, although these classrooms are typically auto-graded through input/output or unit testing.
 
-Clicking on "Import and Teach" will clone the classroom into your account, which you can then edit and re-use to teach other students!  Free accounts can have up to 200 students per account - past that, please check out our [pricing options](/site/pricing) to see what's most suitable for you.
+Clicking on "Import and Teach" will clone the classroom into your account, which you can then edit and re-use to teach other students!  Free accounts can have up to 200 students per account - past that, please check out our [pricing options](https://repl.it/site/pricing) to see what's most suitable for you.
 
 Even with a free account, you can take as many classes as you want.  Try it out!
