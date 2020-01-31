@@ -31,13 +31,15 @@ from loading.
 
 ## Custom Domains
 
-Any hosted repl can be linked to a domain that you own. This includes both [static sites](#hosting-a-web-site) and [HTTP servers](/repls/http-servers). To start, click on the pencil icon next to the URL for your repl:
+Any hosted repl can be linked to a domain that you own. This includes both [static sites](#hosting-a-web-site) and [HTTP servers](/repls/http-servers). To get started you'll need a domain to link with your repl. If you don't already have a domain [Dotcomboom](https://repl.it/@dotcomboom) has created a great tutorial on getting a free domain from Freenom: [How to use a custom domain](https://repl.it/talk/learn/How-to-use-a-custom-domain/8834).
 
-![screenshot of edit button](https://replit.github.io/images/repls/edit-custom-domain-icon.png)
+To start, click on the pencil icon next to the URL for your repl:
+
+![screenshot of edit button](/images/repls/edit-custom-domain-icon.png)
 
 Enter the full domain where you'd like the repl to be accessible from, this includes subdomains.
 
-![screenshot of cname instructions](https://replit.github.io/images/repls/custom-domain-cname.png)
+![screenshot of cname instructions](/images/repls/custom-domain-cname.png)
 
 You will be prompted to add a `CNAME` record to your domain pointing at your repl's special `repl.co` domain. Go to your domain registrar and find the section that allows you to add DNS records.
 
