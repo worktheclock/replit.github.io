@@ -28,7 +28,7 @@
         "slug": "http-servers"
       },
       {
-        "name": "Using Secret Keys",
+        "name": "Storing Secrets (.env)",
         "slug": "secret-keys"
       },
       {
