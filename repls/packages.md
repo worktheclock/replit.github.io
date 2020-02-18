@@ -1,7 +1,6 @@
 # Installing Packages
 
-You can require any package package on Repl.it using Python, JavaScript, or Ruby.  These packages
-are installed on-the-fly.
+You can use most packages available in Python, Javascript, and Ruby. Repl.it will install many packages on the fly just by importing them in code. You can read more about how we do this using [upm](https://blog.repl.it/upm).
 
 ## Searching and Adding Packages
 
@@ -10,23 +9,13 @@ On a Python or JavaScript repl, you can search for a package to install by click
   src="https://replit.github.io/media/misc/libraries_hover.png"
   style="height: 24px; vertical-align:text-bottom; width: 21px; margin: 0 3px; display: inline-block;"
 />
-icon on the sidebar in the workspace.  Simply search for the package you want, and select it
-to install the package or to view its documentation.  Clicking on the Add Package icon will
-put it in a dependencies file (such as `requirements.txt` or `package.json`).  If no such file exists,
-it will be created for you.
+icon on the sidebar in the workspace.  Simply search for the package you want, and select it to install the package or to view its documentation.  Clicking on the Add Package icon will put it in a spec file and a lock file. If no such file exists, it will be created for you.
 
-Python packages are searched through [PyPI](https://pypi.org/), the Python Package Index.
-JavaScript packages are searched through [npm](https://www.npmjs.com/), Node Package Manager.
-Unless otherwise specified, the repl will always attempt to install the latest version of each
-package.
-
-Once installed, packages will not need to be re-installed for the user's session (the session ends
-when the user leaves the page).  If the page is refreshed, the packages will be installed again on
-the first run.
+Unless otherwise specified, the repl will always attempt to install the latest version of each package.
 
 ## Direct Imports
 
-You can also directly import a package without a dependencies file by requiring it:
+The easiest way to add a package is through directly importing it. This can be done by just importing it.
 
 Python:
 
@@ -40,7 +29,7 @@ JavaScript:
 const express = require('express');
 ```
 
-Doing so will install the latest version of the package into your repl.
+Doing so will install the latest version of the package into your repl. A spec file and lock file will be created so the versions won't change.
 
 Ruby works a bit differently.  To import a package in Ruby, you'll have to use `bundler/inline`
 to define the gemspec within the code.  As an example, it may look like this:
@@ -56,27 +45,27 @@ end
 
 However, wherever possible, we recommend using a file to manage dependencies.
 
-## Dependencies Files
+## Spec Files
 
-Each language has a specific file that can be used to describe the project's required packages:
+Each language has a file that is used to describe the project's required packages:
 
-* Python: `requirements.txt`
+* Python: `pyproject.toml`
 * JavaScript (Node.js): `package.json`
 * Ruby: `Gemfile`
 
 ### Python
 
-In a `requirements.txt` file, you list your packages, one per line.  You can optionally specify
-the version of each package.  For example, given the following `requirements.txt`:
+In a `pyproject.toml` file, you list your packages along with other details about your project. For example, given the following snippet from `pyproject.toml`:
 
 ```
-Framework==0.9.4
-Library>=0.2
-Other
+...
+[tool.poetry.dependencies]
+python = "^3.8"
+flask = "^1.1"
+...
 ```
 
-It will install `Framework` at exactly version 0.9.4, while installing `Library` at version
-`0.2` or greater.  `Other` will be installed at the latest version.
+will tell the packager that your project requires at least python version 3.8 and to install the flask package at version 1.1.
 
 ### JavaScript
 
