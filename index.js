@@ -18,6 +18,14 @@ marked.setOptions({
 
 const app = express();
 
+app.use((req, res, next) => {
+  if (req.headers['x-forwarded-proto'] === 'http') {
+    res.redirect(301, `https://${req.headers.host}/${req.url}`)
+  }
+
+  next();
+});
+
 const getTree = async () =>
 	JSON.parse((await fs.readFile('./sidebar.json', 'utf8')));
 
@@ -32,7 +40,7 @@ const render = async (res, category, slug) => {
 	const cobj = t.find(c => c.slug === category);
 	const dobj = cobj.contents.find(d => d.slug === slug)
 
-	res.locals.title = `Repl.it - ${dobj ? dobj.name : 'unknown'}`;
+	res.locals.title = `Repl.it - ${ dobj? dobj.name : 'unknown'}`;
 	res.render('index.ejs');
 }
 
@@ -52,9 +60,9 @@ app.get('/:category/:slug', async (req, res) => {
 	render(res, category, slug)
 		.catch(err => {
 			res.send(`
-<h1>Something went wrong!</h1>
-<pre>${err.toString()}</pre>
-<p>maybe you can <a href="https://repl.it/@turbio/replit-docs">help fix it</a></p>
+      < h1 > Something went wrong!</h1 >
+      <pre>${err.toString()}</pre>
+      <p>maybe you can <a href="https://repl.it/@turbio/replit-docs">help fix it</a></p>
 `);
 		});
 });
