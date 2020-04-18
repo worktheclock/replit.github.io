@@ -47,36 +47,6 @@ Example using a string:
 20 PRINT X
 ```
 
-#### ARRAY
-
-`ARRAY` also lets us declare an array. Arrays can be thought of as lists of values. 
-
-Example:
-```
-10 ARRAY a
-20 a[0] = "car"
-30 a[1] = "bus"
-40 a[2] = "bike"
-50 print a
-```
-
-If we want to create a multi-dimensional array, which is an array of arrays, we can declare the array with a dimension:
-```
-10 ARRAY a, 2
-
-15 REM the first array is ground transportation
-20 a[0][0] = "car"
-30 a[0][1] = "bus"
-40 a[0][2] = "bike"
-
-45 REM the second array aerial transportation
-50 a[1][0] = "plane"
-60 a[1][1] = "helicopter"
-70 a[1][2] = "jetpack"
-
-80 print a
-```
-
 #### INPUT
 
 `INPUT` lets you communicate with the program by typing into the console. Whatever you typed will be stored into a variable that you can then use in your program. 
@@ -203,29 +173,6 @@ Example:
 
 Colors can be any of the these [colors](https://www.w3schools.com/cssref/css_colors.asp).
 
-#### DRAW
-
-`DRAW` is like `PLOT` excepts it lights up multiple pixels on the display. It takes a two-dimensional array of colors.
-
-Example:
-```
-10 ARRAY a, 2
-20 a[0][0] = "red"
-30 a[25][25] = "yellow"
-40 DRAW a
-```
-
-#### TEXT
-
-`TEXT` draws text on the display at an x,y coordinates. Optional text size and color parameters can be passed in.
-
-Example:
-```
-10 TEXT 0, 0, "hello world", 25, "red"
-```
-
-Colors can be any of the these [colors](https://www.w3schools.com/cssref/css_colors.asp).
-
 #### PAUSE
 
 `PAUSE` pauses the program for a number of milliseconds. Milliseconds are 1/1000 of a second.
@@ -235,33 +182,6 @@ Example:
 10 PRINT "pause for a second"
 20 PAUSE 1000
 30 PRINT "end"
-```
-
-#### CLS
-
-`CLS` clears the console and the display.
-
-Example:
-```
-10 CLS
-```
-
-#### CLT
-
-`CLT` clears the console.
-
-Example:
-```
-10 CLT
-```
-
-#### CLC
-
-`CLC` clears the display.
-
-Example:
-```
-10 CLC
 ```
 
 ### Functions
@@ -292,6 +212,11 @@ Example:
 10 PRINT COS(1)
 ```
 
+Output:
+```
+0.5403023058681398
+```
+
 #### SIN
 
 `SIN` returns the trigonometric sine of a number.
@@ -299,6 +224,11 @@ Example:
 Example:
 ```
 10 PRINT SIN(1)
+```
+
+Output:
+```
+0.8414709848078965
 ```
 
 #### TAN
@@ -310,6 +240,11 @@ Example:
 10 PRINT TAN(1)
 ```
 
+Output:
+```
+1.5574077246549023
+```
+
 #### ATAN
 
 `ATAN` returns the trigonometric arctangent of a number.
@@ -319,6 +254,11 @@ Example:
 10 PRINT ATAN(1)
 ```
 
+Output:
+```
+0.7853981633974483
+```
+
 #### EXP
 
 `EXP` returns Euler's number (e) raised to the power of a number.
@@ -326,6 +266,11 @@ Example:
 Example:
 ```
 10 PRINT EXP(2)
+```
+
+Output:
+```
+7.38905609893065
 ```
 
 #### INT
@@ -350,7 +295,7 @@ Alias: `FLOOR`
 
 Example:
 ```
-10 PRINT INT(2.6)
+10 PRINT ROUND(2.6)
 ```
 
 Output:
@@ -365,6 +310,11 @@ Output:
 Example:
 ```
 10 PRINT LOG(5)
+```
+
+Output:
+```
+1.6094379124341003
 ```
 
 #### SGN
@@ -389,9 +339,24 @@ Example:
 10 PRINT SQR(25)
 ```
 
+Output:
+```
+5
+```
+
 #### VAL
 
 `VAL` converts a string to a number, and `0` if it cannot be converted. 
+
+Example:
+```
+10 PRINT VAL("33")
+```
+
+Output:
+```
+33
+```
 
 #### RND
 
@@ -425,7 +390,7 @@ Output:
 
 Example:
 ```
-10 PRINT ASC("s")
+10 PRINT "s"
 ```
 
 Output:
@@ -539,7 +504,7 @@ BASIC
 
 Example: 
 ```
-10 PRINT LOWERCASE("BASIC")
+10 PRINT UPPERCASE("BASIC")
 ```
 
 Output:
