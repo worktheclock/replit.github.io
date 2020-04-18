@@ -18,14 +18,6 @@ marked.setOptions({
 
 const app = express();
 
-app.use((req, res, next) => {
-  if (req.headers['x-forwarded-proto'] === 'http') {
-    res.redirect(301, `https://${req.headers.host}/${req.url}`)
-  }
-
-  next();
-});
-
 const getTree = async () =>
 	JSON.parse((await fs.readFile('./sidebar.json', 'utf8')));
 

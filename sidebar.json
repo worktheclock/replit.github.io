@@ -46,6 +46,10 @@
       {
         "name": "Configuring The Run Button",
         "slug": "dot-replit"
+      },
+      {
+        "name": "Using Multiplayer with anonymous users",
+        "slug": "multiplayer-anon"
       }
     ]
   },
@@ -126,6 +130,10 @@
       {
         "name": "Copyright Claims",
         "slug": "copyright"
+      },
+      {
+        "name": "Basic Docs",
+        "slug": "basic"
       }
     ]
   }
