@@ -9,7 +9,7 @@ On a Python or JavaScript repl, you can search for a package to install by click
   src="https://replit.github.io/media/misc/libraries_hover.png"
   style="height: 24px; vertical-align:text-bottom; width: 21px; margin: 0 3px; display: inline-block;"
 />
-icon on the sidebar in the workspace.  Simply search for the package you want, and select it to install the package or to view its documentation.  Clicking on the Add Package icon will put it in a spec file and a lock file. If no such file exists, it will be created for you.
+icon on the sidebar in the workspace.  Simply search for the package you want and select it to install the package or to view its documentation.  Clicking on the Add Package icon will put it in a spec file and a lock file. If no such file exists, it will be created for you.
 
 Unless otherwise specified, the repl will always attempt to install the latest version of each package.
 

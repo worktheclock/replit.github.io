@@ -31,7 +31,7 @@ Private keys to external services or APIs can be kept in an `.env` file.
 See our documentation on [secret keys](/repls/secret-keys).
 
 If you are using Django and you need access to specific bash commands to
-configure the server, please se
+configure the server, please see
 [this Django template](https://repl.it/@masfrost/Django-Boilerplate).
 
 ## Persistence and Takedown Requests

@@ -37,7 +37,7 @@ To start, click on the pencil icon next to the URL for your repl:
 
 ![screenshot of edit button](/images/repls/edit-custom-domain-icon.png)
 
-Enter the full domain where you'd like the repl to be accessible from, this includes subdomains.
+Enter the full domain where you'd like the repl to be accessible from. This includes subdomains.
 
 ![screenshot of cname instructions](/images/repls/custom-domain-cname.png)
 
