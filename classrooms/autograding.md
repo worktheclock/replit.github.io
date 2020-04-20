@@ -21,7 +21,7 @@ name with "stdin" and/or "stdout". In this tutorial we'll use Python as our lang
 
 Many of the teachers using repl.it like to ask their students to write programs
 that takes input from the user and do something with it. That could be anything
-from a text-based games, to calculators. Let's take a simple example: a program
+from text-based games, to calculators. Let's take a simple example: a program
 that takes two numbers, multiplies them, and prints the result.
 
 ```python
@@ -35,9 +35,9 @@ inputs the number in the console followed by the enter key. This is repeated for
 the second number. Then the program will print the formatted result. You can see
 it running live [on repl.it](https://repl.it/Cl6j).
 
-Now if you have a class of, say, thirty students it becomes labor-intensive
-to run every student program to check that it's takes the right input, does the
-right computation and prints the right output. So this is where the input/output
+Now if you have a class of, say, thirty students, it becomes labor-intensive
+to run every student program to check that it takes the right input, does the
+right computation, and prints the right output. So, this is where the input/output
 matching feature comes in.
 
 ### How to use I/O Matching
@@ -48,10 +48,10 @@ After you've selected it as your preferred correction method, you can then click
 ![](https://replit.github.io/media/autograding/create_test.png)
 
 * Name: you want to give your test a descriptive name, something that would hint
-  at what went wrong if the student fails this test. In this case we're
+  at what went wrong if the student fails this test. In this case, we're
   calling it "Multiply 2 and 3".
-* Input: this is the input that will be automatically sent the student's program
-  when they hit 'submit'. Each line means a single input. In this case numbers
+* Input: this is the input that will be automatically sent to the student's program
+  when they hit 'submit'. Each line means a single input. In this case, numbers
   that we want to multiply (2 and 3) are on seperate lines.
 * Matching type:
     * Strict: If you want to match against your student's program character by
@@ -63,7 +63,7 @@ After you've selected it as your preferred correction method, you can then click
       to match against your student's output.
 
 
-In this case we went with regexp to check
+In this case, we went with regexp to check
 against the expected number output (6 in this case) because we don't really care what other
 things the program is printing.
 

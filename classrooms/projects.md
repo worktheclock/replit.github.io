@@ -2,7 +2,7 @@
 
 Projects allow you to create Classroom assignments that link to Repls.  The teacher provides a template for students, and when students begin the project, they will create a fork (clone) of the template repl.  Teachers can then view the students' repls by name.
 
-Projects allow you to use the functionality of repls not available to classroom assignments, such as hosting, folders, and back-end applications.  The tradeoff is that you cannot auto-grade projects.  Projects can be of any language, and does not necessarily have to be the same language as its classroom.
+Projects allow you to use the functionality of repls not available to classroom assignments, such as hosting, folders, and back-end applications.  The tradeoff is that you cannot auto-grade projects.  Projects can be of any language, and do not necessarily have to be the same language as its classroom.
 
 ## Creating a Project
 

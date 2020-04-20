@@ -19,7 +19,7 @@ First, there are a couple of concepts to define:
 students.
 2. Submissions: the student's work against the assignment given by the teacher.
 
-The submission workflow differ depending on the assignment "correction" type --
+The submission workflow differs depending on the assignment "correction" type --
 whether it's manual or automatic. We currently support two automated correction
 mechanisms and one manual.
 
@@ -34,7 +34,7 @@ When the student is ready to submit their work they can hit _submit_ and their
 submission then goes into an _awaiting feedback_ state. You'll then get a
 notification about the submission. (Note that students are able to _unsubmit_
 their submissions which will remove it from your queue and it goes back to a
-_draft_ state).
+_draft_ state)
 
 You (teachers) can access student submissions either from the notifications page (accessible
 from the header) or by going to the assignment name and clicking on the student
@@ -49,7 +49,7 @@ the end of the submission lifecycle.
 to your student. The submission will then go into an _awaiting resubmission_
 state and your student will then get a notification informing them.
 
-So to sum up here is a diagram showing the lifecycle of a submission:
+So to sum up, here is a diagram showing the lifecycle of a submission:
 
 ![manual submission
  lifecycle](https://replit.github.io/media/assignment-submission/manual_submission_lifecycle.png)

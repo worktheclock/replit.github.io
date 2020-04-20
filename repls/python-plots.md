@@ -1,6 +1,6 @@
 # Interactive Python Plots
 
-Though the console ony supports text output, we provide with the ability to
+Though the console only supports text output, we provide with the ability to
 create plots and charts using matplotlib (and other libraries).  Here, we
 will show you the basics of generating plots using Python3 and matplotlib.
 
