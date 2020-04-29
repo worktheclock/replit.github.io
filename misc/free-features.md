@@ -36,9 +36,9 @@ When viewing other people's repls, you can "Fork" the repl to clone it into your
 
 We take user privacy very seriously and only collect data insofar as it's important to provide our service (you can read more about our [privacy policy](https://repl.it/site/privacy)).
 
-As a small team we're unable to comply with the various edtech regulations around the world. However, you can use Repl.it completly anonymously without providing any identifiable information. Just head over to our [languages page](https://repl.it/languages), select a language and start coding. 
+As a small team we're unable to comply with the various ed-tech regulations around the world. However, you can use Repl.it completely anonymously without providing any identifiable information - choose a language from our [languages page](https://repl.it/languages) and start coding.
 
-If you're teacher, one anonymous workflow you can use is that you can create a repl with the instructions and starter code, and then have your students fork the repl, work on the assignment, and send the link back. 
+If you're teacher, one anonymous workflow you can use is to create a repl with the instructions and starter code, and then have your students fork the repl, work on the assignment, and send the link back.
 
 ## Community Classrooms
 

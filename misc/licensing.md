@@ -4,7 +4,7 @@ Our user's privacy is of utmost importance to us.  Here you will find informatio
 
 ## Public Repls and Classrooms
 
-Content published to a public repl or a Classroom are automatically published with an MIT license.  The full text of the MIT license is as follows:
+Content published to a public repl or a Classroom are automatically published under an MIT license.  The full text of the MIT license reads as follows:
 
 > Copyright <YEAR> <COPYRIGHT HOLDER> <URL TO REPL>
 
@@ -14,8 +14,8 @@ Content published to a public repl or a Classroom are automatically published wi
 
 > THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-We do not take down content from public repls unless it is in violation of our Terms and Conditions.  Please make sure you are careful with what you put in anonymous repls, as they cannot be deleted!
+We do not take down content from public repls unless it is in violation of our Terms and Conditions.  Please be careful of what you add to anonymous repls, as they cannot be deleted!
 
 ## Private Repls and Classrooms
 
-Content published to a private repl and private classrooms are unlicensed and therefore still belongs to you, provided it does not violate our terms and conditions.  If you would like to attach your own license to the code, we recommend you include the license as a (code) comment as part of the repl.
+Content published to a private repl and private classrooms are unlicensed and therefore still belongs to you, provided it does not violate our [Terms and Conditions](https://repl.it/site/terms).  If you would like to attach your own license to the code, we recommend you include the license as a (code) comment as part of the repl.

@@ -3,7 +3,7 @@
 ## Hosting a Web Site
 
 Web Pages written in HTML, CSS, and JavaScript can be hosted on Repl.it.
-HTML/CSS/JS repls are hosted on Repl.it and given a unique URL that can be
+HTML/CSS/JS repls hosted on Repl.it are given a unique URL that can be
 shared with your friends, family, peers, and clients.
 
 After running a repl, your repl will be hosted at the URL provided in the `result` tab.
@@ -31,7 +31,7 @@ from loading.
 
 ## Custom Domains
 
-Any hosted repl can be linked to a domain that you own. This includes both [static sites](#hosting-a-web-site) and [HTTP servers](/repls/http-servers). To get started you'll need a domain to link with your repl. If you don't already have a domain [Dotcomboom](https://repl.it/@dotcomboom) has created a great tutorial on getting a free domain from Freenom: [How to use a custom domain](https://repl.it/talk/learn/How-to-use-a-custom-domain/8834).
+Any hosted repl can be linked to a domain that you own. This includes both [static sites](#hosting-a-web-site) and [HTTP servers](/repls/http-servers). To get started you'll need a domain to link with your repl. If you don't already have a domain, [Dotcomboom](https://repl.it/@dotcomboom) has created a great tutorial on getting a free domain from Freenom: [How to use a custom domain](https://repl.it/talk/learn/How-to-use-a-custom-domain/8834).
 
 To start, click on the pencil icon next to the URL for your repl:
 

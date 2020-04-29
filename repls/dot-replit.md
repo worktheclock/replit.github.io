@@ -1,6 +1,6 @@
 # Configuring the run button
 
-A file named `.replit` can be added to any repl in order to customize the behavior of the run button. This is a simple [toml](https://github.com/toml-lang/toml) file that looks something like:
+A file named `.replit` can be added to any repl in order to customize the behavior of the run button. Written in [toml](https://github.com/toml-lang/toml), a `.replit` file looks something like:
 
 ```
 run = "<run command here>"
@@ -15,7 +15,7 @@ Here is an example of a repl using `.replit` to print "hello world" instead of r
 
 ## Configuring a cloned repl
 
-When you clone a repository without a `.replit` file we automatically show the visual `.replit` editor:
+When you clone a repository without a `.replit` file, we automatically show the visual `.replit` editor:
 
 ![visual config editor](https://docs.repl.it/images/config_plugin.png)
 

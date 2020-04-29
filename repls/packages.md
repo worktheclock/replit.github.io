@@ -15,7 +15,7 @@ Unless otherwise specified, the repl will always attempt to install the latest v
 
 ## Direct Imports
 
-The easiest way to add a package is through directly importing it. This can be done by just importing it.
+The easiest way to add a package is through directly importing it:
 
 Python:
 
@@ -43,7 +43,7 @@ gemfile true do
 end
 ```
 
-However, wherever possible, we recommend using a file to manage dependencies.
+Wherever possible, we recommend using a file to manage dependencies.
 
 ## Spec Files
 
