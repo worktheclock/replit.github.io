@@ -1,10 +1,10 @@
 ## Modules
 
-When starting a new repl, we like to start you with a "main" file so you can get to coding quickly. However, if you want to split your project into multiple files you can do so by adding a new file from the files sidebar.
+When starting a new repl, we create a "main" file for you so you can start coding quickly. However, if you want to split your project into multiple files, you can add new files from the files sidebar.
 
 <img width="50%" src="/images/repls/add_file.png" />
 
-You can then import the module by referencing the name. Every language will have different syntax for doing this so please consult the respective language documentation. 
+Then, you can import the module by referencing the name. Every language will have different syntax for doing this, so please consult the respective language documentation.
 
 Here is an example in Python:
 
@@ -12,7 +12,7 @@ Here is an example in Python:
 
 ## Uploading and assets
 
-You can upload files by either dragging and dropping them into the files sidebar or by clicking the "three dot menu" and selecting upload file (you can also upload a whole folder!):
+You can upload files by either dragging and dropping them into the files sidebar or by clicking the "three dot menu" and selecting upload file (or folder):
 
 <img width="50%" src="/images/repls/upload.png" />
 
@@ -28,13 +28,13 @@ You can edit a file's name or delete it if you wish by clicking on the
   src="https://i.imgur.com/Fsg7XB2.png"
   style="height: 24px; vertical-align:text-bottom; width: 6px; margin: 0 3px; display: inline-block;"
 />
-icon beside it. If you're renaming your file, make sure you have the right
-extension for it.
+icon beside it. When renaming your file, make sure to use the correct
+file extension.
 
 Two things to note about files:
 
 1. They can be of any type/extension and you can use them in your code however you'd like.
-2. Files will be placed in the current working directory, generally you'd access it through
+2. Files will be placed in the current working directory; generally you'd access it through
 the relative path './filename.ext'.
 
 Here's a few examples on files in different languages:
@@ -44,5 +44,4 @@ Here's a few examples on files in different languages:
 
 # File Changes
 
-Programmatic file changes will get synced down to the repl automatically. In case of images we will display and update them for you on each change. This makes it really nice for plotting and data science work. Which we cover in [Python plots](/repls/python-plots).
-
+Programmatic file changes will get synced down to the repl automatically. In case of images we will display and update them for you on each change. This makes it really nice for plotting and data science work, which we cover in [Python plots](/repls/python-plots).
