@@ -617,6 +617,15 @@ Example:
 20 IF I = "" THEN PRINT "no input" else PRINT "input: " + I
 ```
 
+#### GETCLICK
+
+`GETCLICK` returns an array of x, y coordinates of user mouse clicks. The program maintains a queue of clicks. If there are no user clicks in the queue, it will return an empty string `""`.
+
+Example:
+```
+PRINT GETCLICK()
+```
+
 #### TIME
 
 `TIME` returns the current milliseconds elapsed since the UNIX epoch.
