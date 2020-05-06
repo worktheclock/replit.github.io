@@ -7,7 +7,7 @@ Repl.it has created a text-based interface to interact with various aspects of y
 
 Navigate to https://repl.it/~/cli and the following prompt will appear:
 
-<img src="/images/clui.png" />
+![clui](https://docs.repl.it/images/clui.png)
 
 The prompt will display in-line information about the commands which can be run.
 
