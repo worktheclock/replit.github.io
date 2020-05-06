@@ -16,6 +16,10 @@
         "slug": "files"
       },
       {
+      	"name": "History",
+      	"slug": "history"
+      },
+      {
         "name": "Installing Packages",
         "slug": "packages"
       },
