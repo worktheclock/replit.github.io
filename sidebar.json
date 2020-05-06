@@ -124,6 +124,10 @@
         "slug": "free-features"
       },
       {
+      	"name": "CLUI Graphical CLI",
+      	"slug": "clui"
+      },
+      {
         "name": "Security",
         "slug": "security"
       },
