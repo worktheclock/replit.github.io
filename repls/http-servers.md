@@ -22,9 +22,8 @@ Below is an example of a simple HTTP server running Flask in python3, displaying
 
 <iframe height="400px" width="100%" src="https://repl.it/@kodumbeats/flasktemplate?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-We highly recommend using a `requirements.txt` file, `package.json` file, or
-`Gemfile` for Python, Node/Express, and Ruby web apps, respectively.  See our
-documentation on [libraries](/repls/packages).
+Our [package manager](https://github.com/replit/upm) will handle dependency files automatically in your repls.  See our
+documentation on [packages](/repls/packages) for more information on how to install and manage dependencies.
 
 Private keys to external services or APIs can be kept in an `.env` file.
 See our documentation on [secret keys](/repls/secret-keys).
