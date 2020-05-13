@@ -5,7 +5,7 @@
 
 Currently, supported file types are `.wav` and `.aiff`.
 
-Files are played in mono / single channel mode (although there is support for multiple channels).
+Files are played in mono / single channel mode, files with multiple channels will be read and converted into single channel data.
 
 If you have an mp3 file, you can find an online converter such as [this one](https://onlineaudioconverter.com/#).
 
@@ -14,8 +14,6 @@ Note that **files MUST BE at 44,100 hertz, or 44.1khz**. If your file is not at 
 Currently there are 2 libs already created:
 + [For python](https://pypi.org/project/replit/) (This is preinstalled in python3 repls). Please not that this might not work with python 2.
 + [For js/ts](https://github.com/replit/audio-js)
-
-I do plan on supporting mp3 files eventually, but I was unable to find what I needed to do so now.
 
 To make this as light as possible on your repl's resources, audio files are played via a request system.  To make a request, simply write to `/tmp/audio`. Valid source creation requests are formatted as shown below:
 
