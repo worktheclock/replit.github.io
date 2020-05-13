@@ -54,7 +54,11 @@
       {
         "name": "Using Multiplayer with anonymous users",
         "slug": "multiplayer-anon"
-      }
+      },
+	  {
+		  "name": "Audio",
+		  "slug": "audio"
+	  }
     ]
   },
   {
