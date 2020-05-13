@@ -8,13 +8,19 @@
 
 ## Syntax
 
+Every line starts with a command. 
 Every line starts with a line number followed by a command.
 
 ```
-100 PRINT "Hello world"
+PRINT "Hello world"
 ```
 
-Lines allow us to do control flow like subroutines and goto statements (more on this later). 
+Line numbers are optional and allow us to do control flow like subroutines and goto statements (more on this later). 
+
+```
+10 PRINT "hello"
+GOTO 10
+```
 
 Each basic command has its own syntax. 
 
@@ -30,10 +36,9 @@ Example: `REM this is a comment`
 
 `PRINT` puts variables, strings, or numbers on the console. The console is the input/output area of Basic, where the program shows you useful information and asks you for input.
 
+#### LET (optional)
 
-#### LET
-
-`LET` lets us declare variables. Variables are single letters that hold values. Values could be either strings or numbers.
+`LET` lets us declare variables. Variables are single letters that hold values. Values could be either strings or numbers. Note that `LET` is optional and can be left out of an assignement expression.
 
 Example using a number:
 ```
@@ -44,6 +49,12 @@ Example using a number:
 Example using a string:
 ```
 10 LET X = "hello"
+20 PRINT X
+```
+
+Example without `LET`:
+```
+10 X = "hello"
 20 PRINT X
 ```
 
@@ -202,6 +213,30 @@ Example:
 ```
 
 Colors can be any of the these [colors](https://www.w3schools.com/cssref/css_colors.asp).
+
+#### DISPLAY
+
+`DISPLAY` changes the display size (rows, columns) and lets us turn off pixel borders. 
+
+Example:
+```
+DISPLAY 100, 100, FALSE
+```
+
+`DISPLAY` will affect the values of the constants `ROWS` and `COLUMNS`.
+
+Example:
+```
+DISPLAY 50, 100, FALSE
+PRINT ROWS
+PRINT COLUMNS
+```
+
+OUTPUT:
+```
+50
+100
+```
 
 #### DRAW
 
