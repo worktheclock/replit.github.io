@@ -1,16 +1,16 @@
 # Audio on repl.it [BETA]
 
-Bring your repl to life with audio, from background music to spooky sound effects.  Your repl now supports audio, no need to make a website for that that terminal game you want audio on!
+User's can play audio in their repls without creating a website.
 
-To make it as easy as possible for you, we based audio on a request system, with pre-written code to play your file for you. Don't worry though, you can still control:
+To make it as easier for users, we based audio on a request system. This means that users just need to request for a file to be played, rather than reading it directly. Although they aren't directly reading the files users can still control:
 
 + The volume of your file
 + How many times your file is played (without sending multiple requests)
 + Wether your file is playing (wether its paused or not)
 
-Don't make the mistake of thinking that you can only play one file though, because you can play as many as you want!
+Another builtin feature is the abillity for users to play as many files as they would like.
 
-The currently supported files are `.wav` and `.aiff` files.
+Supported files are `.wav` and `.aiff` files.
 
 + Files can have any bit depth/resolution
 + Files can have any amount of channels (although it is combined into one)
