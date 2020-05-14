@@ -10,11 +10,7 @@ To make it as easier for users, we based audio on a request system. This means t
 
 Another builtin feature is the ability for users to play as many files as they would like.
 
-Supported files are `.wav` and `.aiff` files.
-
-+ Files can have any bit depth/resolution
-+ Files can have any amount of channels (although it is combined into one)
-+ Files are played at 44.1khz, regardless of their native sample rate. If your file sounds a bit distorted / sped up you should check the sample rate.
+Supported files are `.wav` and `.aiff` files (detailed more later). 
 
 Currently, we have javascript and python libraries for audio,
 
