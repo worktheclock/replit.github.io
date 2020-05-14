@@ -1,18 +1,34 @@
-# Audio on repl.it
+# Audio on repl.it [BETA]
 
-So currently, repl.it has js and py libs available.
+Bring your repl to life with audio, from background music to spooky sound effects.  Your repl now supports audio, no need to make a website for that that terminal game you want audio on!
 
-An example of use with the js lib is shown below.
+To make it as easy as possible for you, we based audio on a request system, with pre-written code to play your file for you. Don't worry though, you can still control:
+
++ The volume of your file
++ How many times your file is played (without sending multiple requests)
++ Wether your file is playing (wether its paused or not)
+
+Don't make the mistake of thinking that you can only play one file though, because you can play as many as you want!
+
+The currently supported files are `.wav` and `.aiff` files.
+
++ Files can have any bit depth/resolution
++ Files can have any amount of channels (although it is combined into one)
++ Files are played at 44.1khz, regardless of their native sample rate. If your file sounds a bit distorted / sped up you should check the sample rate.
+
+Currently, we have javascript and python libraries for audio,
+
+An example of use with the js lib is shown below, and generated docs can be found [here](https://audio-js-docs--allawesome497.repl.co/).
 
 <iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@turbio/audio-js-demo?lite=true"></iframe>
 
-As for an example using the python lib:
+As for an example using the python library is shown below, and some documentation can be foudn [here](https://pypi.org/project/replit/).
 
 <iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@AllAwesome497/py-audio-demo?lite=true"></iframe>
 
 # Developing an audio library for repl.it
 
-Since we know not everyone uses python anor js, we decided to document how to make a lib.
+Since we know not everyone uses python or js, we decided to document how to make a lib.
 
 ## Step One: Add an audio source
 
