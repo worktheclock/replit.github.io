@@ -6,9 +6,9 @@ To make it as easier for users, we based audio on a request system. This means t
 
 + The volume of your file
 + How many times your file is played (without sending multiple requests)
-+ Wether your file is playing (wether its paused or not)
++ Whether your file is playing (whether its paused or not)
 
-Another builtin feature is the abillity for users to play as many files as they would like.
+Another builtin feature is the ability for users to play as many files as they would like.
 
 Supported files are `.wav` and `.aiff` files.
 
@@ -22,7 +22,7 @@ An example of use with the js lib is shown below, and generated docs can be foun
 
 <iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@turbio/audio-js-demo?lite=true"></iframe>
 
-As for an example using the python library is shown below, and some documentation can be foudn [here](https://pypi.org/project/replit/).
+As for an example using the python library is shown below, and some documentation can be found [here](https://pypi.org/project/replit/).
 
 <iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@AllAwesome497/py-audio-demo?lite=true"></iframe>
 
@@ -51,7 +51,7 @@ To make this as light as possible on your repl's resources, audio files are play
 {
 	"File": "/path/to/file", // The path to the audio file
 	"Volume": 1.5, // A float64 value to determine audio volume.  1 is the file's native volume. Defaults to 1.
-	"DoesLoop": false, // Wether the file should be repeated or not.
+	"DoesLoop": false, // Whether the file should be repeated or not.
 	"LoopCount": -1 // How many times to repeat the file.  Set to a negative value to create an endless loop.
 }
 ```
@@ -84,8 +84,8 @@ The file is formatted as shown below:
 ```js
 {
 	"Sources": [], // A list of sources, formatted as above.
-	"Running": false, // Wether or not anything is playing. true means sources are being played.
-	"Disabled": false, // Wether or not the sound program is running. Should only be true if the repl is stopped.
+	"Running": false, // Whether or not anything is playing. true means sources are being played.
+	"Disabled": false, // Whether or not the sound program is running. Should only be true if the repl is stopped.
 }
 ```
 
