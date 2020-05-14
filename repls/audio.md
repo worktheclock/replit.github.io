@@ -1,4 +1,89 @@
-# Developing an audio library for [repl.it](https://repl.it)
+# Audio on repl.it
+
+So currently, repl.it has js and py libs available.
+
+An example of use with the js lib is shown below.
+[![Run on Repl.it](https://repl.it/badge/github/replit/audio-js)](https://repl.it/@turbio/audio-js-demo)
+
+```js
+const audio = require('@replit/audio');
+
+(async () => {
+  const source = await audio.createSource('./audio.wav' );
+
+  let volume = 1;
+  let loops = 0;
+
+  console.log('type "up" or "down" to change volume');
+  console.log('type "loop" increase loops');
+  console.log('press enter to play/pause');
+
+  while(true) {
+    console.log(
+      'volume is at', volume*100, 'with',
+       await source.getRemainingLoops(), 'loops remaining'
+    );
+
+    const input = prompt('');
+
+    if (input === 'up') {
+      volume += .25
+      await source.setVolume(volume);
+    } else if (input === 'down') {
+      volume -= .25
+      await source.setVolume(volume);
+    } else if (input === 'loop') {
+      loops++;
+      await source.setLoop(loops)
+    } else {
+      await source.togglePlaying();
+    }
+  }
+})();
+```
+
+As for an example using the python lib:
+[![Run on Repl.it](https://repl.it/badge/github/replit/audio-js)](https://repl.it/@AllAwesome497/py-audio-demo)
+
+```py
+from replit import audio
+
+def main():
+	source = audio.play('audio.wav')
+
+	volume = 1
+	loops = 0
+	
+	print('type "up" or "down" to change volume')
+	print('type "loop" to add another loop')
+	print('press enter to play/pause')
+
+	while True:
+		print(
+			f'volume is at {source.volume * 100}% with',
+			f'{source.loops_remaining} loops remaining.'
+		)
+
+		cmd = input('> ').lower()
+
+		if cmd == 'up':
+			source.volume += .25
+			volume += .25
+		elif cmd == 'down':
+			source.volume -= .25
+			volume -= .25
+		elif cmd == 'loop':
+			loops += 1
+			source.set_loop(True, source.loops_remaining + 1)
+		else:
+			source.paused = not source.paused
+
+main()
+```
+
+# Developing an audio library for repl.it
+
+Since we know not everyone uses python anor js, we decided to document how to make a lib.
 
 ## Step One: Add an audio source
 
