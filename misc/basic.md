@@ -299,6 +299,30 @@ Example:
 10 CLC
 ```
 
+#### SOUND
+
+`SOUND` lets us play a frequency for a duration in seconds.
+
+Example:
+```
+10 SOUND 400, 4
+```
+
+Duration is optional and will default to 1 second.
+
+#### PLAY
+
+`PLAY` lets us play a note in an octave for a duration in seconds.
+
+Example:
+```
+10 PLAY "C", 4, 5
+```
+
+- Octave is optional and will default to `2`
+- Duration is optional and will default to `1`
+- Notes can be one of: `C C# D D# E F F# G G# A A# B`
+
 ### Functions
 
 You can think of functions as builtin subroutines you can call. It's important to differentiate between functions and commands. Lines should start with commands, while functions can be used as part of other commands but not on their own. 
