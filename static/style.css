@@ -67,6 +67,9 @@ body {
 }
 
 @media all and (max-width:720px) {
+  .repl-link {
+    display: none;
+  }
 	.markdown h1 {
 		font-size: 28px;
 	}
@@ -243,7 +246,7 @@ body {
 }
 
 @media screen and (max-width: 820px) {
-  .sidebar {
-	  display: none;
+  body {
+	  display: block;
   }
 }
