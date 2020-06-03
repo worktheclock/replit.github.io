@@ -14,6 +14,9 @@ The repl will be hosted with the following URLs:
 * `https://REPL-NAME--USERNAME.repl.co`
 * `http://REPL-NAME.USERNAME.repl.co`
 
+If you create a repl with a title that matches your username (i.e. repl.it/@username/username) it will be hosted at:
+* `https://USERNAME.repl.co`
+
 Where `REPL-NAME` is the name of the repl and `USERNAME` is the owner's username.
 If an anonymous repl is created, the username used in the URL will be `five-nine`.
 
