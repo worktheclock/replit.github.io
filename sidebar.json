@@ -146,6 +146,10 @@
       {
         "name": "Basic Docs",
         "slug": "basic"
+      },
+      {
+        "name": "Change your username",
+        "slug": "change-username"
       }
     ]
   }
