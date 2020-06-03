@@ -148,6 +148,10 @@
         "slug": "basic"
       },
       {
+        "name": "Change your username",
+        "slug": "change-username"
+      },
+      {
         "name": "Favorite Languages",
         "slug": "favorite-languages"
       }
