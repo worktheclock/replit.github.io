@@ -19,6 +19,12 @@ Expand the following top-level commands .
 
   `account view-warns` <br>
   View warnings you have been issued.
+
+	`account languages` <br>
+	Manage your language preferences.
+
+  `account change-username` <br>
+	Change your username (this can only be done once).
 </details>
 
 <details>
