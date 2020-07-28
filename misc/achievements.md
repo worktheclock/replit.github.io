@@ -6,16 +6,27 @@ Achievements is a new Repl.it feature rolling out in the summer 2020 for some us
 
 ## List of Achievements
 
-<img src="../static/images/achievements/mask-off.png" style=" width: 100px;" />
-<img src="../static/images/achievements/contributor.png" style=" width: 100px;" />
-<img src="../static/images/achievements/guide.png" style=" width: 100px;" />
-<img src="../static/images/achievements/unstoppable.png" style=" width: 100px;" />
-  
+
+
+<img src="../static/images/achievements/mask-off.png" style="width: 50px;" />
+
 **Mask Off:** Earned when you update your bio and profile picture on your Repl.it Account
+
+* * *
+
+<img src="../static/images/achievements/contributor.png" style="width: 50px;" />
 
 **Repl.it Contributor:** Earned when you actively submit new posts on Repl Talk
 
+* * *
+
+<img src="../static/images/achievements/guide.png" style="width: 50px;" />
+
 **Repl.it Guide:** Earned when you have your comments accepted as answers on someone's Repl Talk post
+
+* * *
+
+<img src="../static/images/achievements/unstoppable.png" style="width: 50px;" />
 
 **Unstoppable Repler:** Streak that shows how many days in a row you have written code on Repl.it
 
