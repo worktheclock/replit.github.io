@@ -20,7 +20,7 @@ Achievements is a new Repl.it feature rolling out in the summer 2020. These achi
 
 * * *
 
-<img src="/static/images/achievements/guide.png" style="width: 50px;" />
+<img src="/images/achievements/guide.png" style="width: 50px;" />
 
 **Repl.it Guide:** Earned when you have your comments accepted as answers on someone's Repl Talk post
 
