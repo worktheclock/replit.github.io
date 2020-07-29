@@ -30,9 +30,3 @@ Achievements is a new Repl.it feature rolling out in the summer 2020. These achi
 
 **Unstoppable Repler:** Streak that shows how many days in a row you have written code on Repl.it
 
-* * *
-
-<img src="../static/images/achievements/guest.png" style="width: 50px;" />
-
-**Multiplayer:** Earned when you join multiplayer repls
-
