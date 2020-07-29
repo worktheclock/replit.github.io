@@ -13,18 +13,21 @@ Achievements is a new Repl.it feature rolling out in the summer 2020. These achi
 **Mask Off:** Earned when you update your bio and profile picture on your Repl.it Account
 
 * * *
+<br/>
 
 <img src="/images/achievements/contributor.png" style="width: 50px;" />
 
 **Repl.it Contributor:** Earned when you submit new posts on Repl Talk
 
 * * *
+<br/>
 
 <img src="/images/achievements/guide.png" style="width: 50px;" />
 
 **Repl.it Guide:** Earned when you have your comments accepted as answers on someone's Repl Talk post
 
 * * *
+<br/>
 
 <img src="/images/achievements/unstoppable.png" style="width: 50px;" />
 
