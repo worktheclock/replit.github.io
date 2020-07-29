@@ -2,7 +2,7 @@
 
 ###### Note that achievements is currently only enabled for explorers.  Learn to become an explorer [here](https://repl.it/talk/announcements/Become-an-Explorer/6180)
 
-Achievements is a new Repl.it feature rolling out in the summer 2020 for some users. These achievements are given out when a user completes a certain number of actions or a specific action. Achievements is a way to encourage replers to navigate the platform, engage with the community and meet personal goals.
+Achievements is a new Repl.it feature rolling out in the summer 2020. These achievements are given out when a user completes a certain number of actions or a specific action. Achievements is a way to encourage replers to navigate the platform, engage with the community and meet personal goals.
 
 ## List of Achievements
 
@@ -16,7 +16,7 @@ Achievements is a new Repl.it feature rolling out in the summer 2020 for some us
 
 <img src="../static/images/achievements/contributor.png" style="width: 50px;" />
 
-**Repl.it Contributor:** Earned when you actively submit new posts on Repl Talk
+**Repl.it Contributor:** Earned when you submit new posts on Repl Talk
 
 * * *
 
@@ -29,4 +29,10 @@ Achievements is a new Repl.it feature rolling out in the summer 2020 for some us
 <img src="../static/images/achievements/unstoppable.png" style="width: 50px;" />
 
 **Unstoppable Repler:** Streak that shows how many days in a row you have written code on Repl.it
+
+* * *
+
+<img src="../static/images/achievements/guest.png" style="width: 50px;" />
+
+**Unstoppable Repler:** Earned when you join multiplayer repls you have been invited to
 
