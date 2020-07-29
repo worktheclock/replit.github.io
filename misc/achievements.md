@@ -34,5 +34,5 @@ Achievements is a new Repl.it feature rolling out in the summer 2020. These achi
 
 <img src="../static/images/achievements/guest.png" style="width: 50px;" />
 
-**Unstoppable Repler:** Earned when you join multiplayer repls you have been invited to
+**Multiplayer:** Earned when you join multiplayer repls
 
