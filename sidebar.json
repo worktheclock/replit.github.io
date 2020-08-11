@@ -173,9 +173,54 @@
       }
     ]
   },
-    {
-    "name": "Tutorials (coming soon)",
-    "slug": "tuts",
-    "contents": []
+  {
+    "name": "Tutorials",
+    "slug": "tutorials",
+    "contents": [
+      {
+        "name": "Overview",
+        "slug": "00-overview"
+      },
+      {
+        "name": "Introduction to the IDE",
+        "slug": "01-introduction-to-the-repl-it-ide"
+      },
+      {
+        "name": "Working with files",
+        "slug": "02-managing-files-using-repl-it"
+      },
+      {
+        "name": "Managing dependencies and using NLP",
+        "slug": "03-handling-dependencies-with-repl-it"
+      },
+     {
+        "name": "Data science",
+        "slug": "04-data-science-and-visualisation-with-repl-it"
+      },
+      {
+        "name": "Multiplayer",
+        "slug": "05-pair-programming-using-multiplayer-with-repl-it"
+      },
+     {
+        "name": "GitHub and the Run Button",
+        "slug": "06-github-and-run-button"
+      },
+     {
+        "name": "Juggling with PyGame",
+        "slug": "07-building-a-game-with-pygame"
+      },
+     {
+        "name": "Keeping secrets",
+        "slug": "08-storing-secrets-and-history"
+      },
+     {
+        "name": "Test driven development",
+        "slug": "09-test-driven-development"
+      },
+     {
+        "name": "Productivity hacks",
+        "slug": "10-productivity-hacks"
+      }
+    ]
   }
 ]
