@@ -58,6 +58,10 @@
 	  {
 		  "name": "Playing Audio On Repl.it",
 		  "slug": "audio"
+	  },
+    	  {
+		  "name": "repl.run",
+		  "slug": "repl-run"
 	  }
     ]
   },
@@ -68,6 +72,10 @@
       {
         "name": "Introduction to Classrooms",
         "slug": "intro"
+      },
+      {
+        "name": "Teams for Education (closed beta)",
+        "slug": "teams_for_education"
       },
       {
         "name": "Assignments and Submissions",
@@ -154,7 +162,20 @@
       {
         "name": "Favorite Languages",
         "slug": "favorite-languages"
+      },
+            {
+        "name": "General FAQ",
+        "slug": "General-FAQ"
+      }
+      ,{
+        "name": "Replit Databse",
+        "slug": "db"
       }
     ]
+  },
+    {
+    "name": "Tutorials (coming soon)",
+    "slug": "tuts",
+    "contents": []
   }
 ]

@@ -1,5 +1,7 @@
 # Audio on repl.it [BETA]
 
+###### Note that audio is currently only enabled for explorers.  Learn to become an explorer [here](https://repl.it/talk/announcements/Become-an-Explorer/6180)
+
 User's can play audio in their repls without creating a website.
 
 To make it as easier for users, we based audio on a request system. This means that users just need to request for a file to be played, rather than reading it directly. Although they aren't directly reading the files users can still control:

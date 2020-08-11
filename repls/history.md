@@ -4,7 +4,7 @@ Repl.it auto-saves your code as you write, as every repl is backed by its own fi
 ## How to access History
 A repl's history is located at `https://repl.it/@username/repltitle/history`, but you can reach the same page by
   - Choosing "History" in the three-dot menu under [My Repls](https://repl.it/repls) or
-  - Clicking on "saving/saved" while working in a repl.
+  - Clicking on the saved indicator located in the top nav inside a repl.
 
 ## Using History
 
