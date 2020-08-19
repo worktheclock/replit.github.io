@@ -1,6 +1,13 @@
 # Using Repl.it for Free
 
-Repl.it offers a number of features that every user can access and utilize for free.  Here, we'll show you how to take advantage of our free features.  Everything shown on this post can be done with a free account.
+Repl.it offers a number of features that every user can access and utilize for free:
+
+- The best no-setup online [IDE](https://repl.it/site/ide) for beginners with autocomplete and free [automatic hosting](https://repl.it/site/hosting)
+- Teach remotely to the whole class and help your students 1-1 with [multiplayer](https://repl.it/site/multiplayer)
+- Support for Python, Java, HTML/CSS/JavaScript, and 50+ other [languages](https://repl.it/languages)
+- Support for games, graphics, audio and an easy-to-use database
+
+Here, we'll show you how to take advantage of our free features.  Everything shown on this post can be done with a free account.
 
 ## Repls
 
@@ -12,25 +19,19 @@ You can create a new repl on this page by clicking on the big green button.  You
 
 Once you've selected a language, you'll be greeted with your IDE - Integrated Development Environment.  Click on the pencil icon[0] next to the repl name to edit the name and description of the repl.  Repls belonging to free accounts are public.
 
-![view of repl with numbered tags](https://replit.github.io/media/free-features/repl-walkthrough-labels.png)
+Learn more on how to leverage the full power of repls [here](https://docs.repl.it/tutorials/01-introduction-to-the-repl-it-ide).
 
-Write some code, then click on the "Run" button [1] to **execute your code**.  The output will be on the right.
+## Multiplayer
 
-You an **change settings** by clicking on the gear icon[2], and **view the edit history** by clicking on "history"[3].
+Repl.it is the first fully multiplayer programming environment. Meaning you can invite other people to code and collaborate with you. You can use that to pair program with others, teach your classroom, create collaborative projects for your students, or simply present your work to others. 
 
-You can **add multiple files** to a project by clicking on the "add file" icon[4].
+Learn more about multiplayer [here](https://docs.repl.it/tutorials/05-pair-programming-using-multiplayer-with-repl-it)
 
-You can **upload files** by clicking on the cloud icon[5].  If you are in a python3 repl, you will have access to a step-by-step debugger[6] as well.  If you are in a javascript or python repl, you can **access packages** by clicking on the package icon[7].
+## Teams
 
-You can **download files** by clicking on the download icon[8] in the bottom left corner of the screen.
+While teams is not necessary to teach, learn, or collaborate on Repl.it, it can be easier to use when working with others because it allows you to share all your repls and folders by default. 
 
-**Access the help menu** by clicking on the question mark[9] in the bottom right corner of the screen.  Common editor keyboard shortcuts can be found here.
-
-You can also **embed repls**.  Click on the "Share" icon[10] to get a shareable link, links to social media, as well as an `<iframe>` tag to embed in web pages (HTML).
-
-For web projects (HTML/CSS/JS), **your project will also be hosted** so you can send the website to your friends.  You can use it as your homepage, as a proof of concept, or even build it as your startup company.
-
-When viewing other people's repls, you can "Fork" the repl to clone it into your account.
+Teams has a free version that allows for up to 10 collaborators. Learn more about Teams for Education [here](https://docs.repl.it/classrooms/teams_for_education).
 
 ## Compliance
 
