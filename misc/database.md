@@ -111,7 +111,7 @@ the total storage occupied by your keys and values.
 Yes, each Database is private and isolated. Every repl has its own database, and
 they are not shared among repls.
 
-#### How do I share a database across repls?
+#### **How do I share a database across repls?**
 
 The easiest way to do this is to use one repl as the primary database and have other repls connect to it via web hosting. Here’s an example repl in Python: https://repl.it/@util/Replit-Database-proxy
 
