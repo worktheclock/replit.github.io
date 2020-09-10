@@ -36,6 +36,13 @@ Database client.
 curl $REPLIT_DB_URL -d '<key>=<value>'
 ```
 
+If your key and value don't use any unsafe characters, you can use
+an alternative version:
+
+```
+curl -XPOST $REPLIT_DB_URL/<key>=<value>
+```
+
 ##### Get
 
 ```

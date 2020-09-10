@@ -74,7 +74,7 @@
         "slug": "intro"
       },
       {
-        "name": "Teams for Education (closed beta)",
+        "name": "Teams for Education (beta)",
         "slug": "teams_for_education"
       },
       {
@@ -220,6 +220,23 @@
      {
         "name": "Productivity hacks",
         "slug": "10-productivity-hacks"
+      }
+    ]
+  }, {
+    "name": "Teaching Curriculum",
+    "slug": "curriculum",
+    "contents": [
+			      {
+        "name": "How this works",
+        "slug": "Intro"
+      },
+      {
+        "name": "Intro to Python Teaching Curriculum",
+        "slug": "introPython"
+      },
+      {
+        "name": "Intro to HTML/CSS Teaching Curriculum",
+        "slug": "introHTMLCSS"
       }
     ]
   }
