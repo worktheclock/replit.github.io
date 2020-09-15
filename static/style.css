@@ -11,6 +11,9 @@
   --code-snippet-text: #C10000;
   --code-snippet-highlight: #FFEDED;
 
+
+--dark-grey200: #21242C;
+
   --light-grey400: #E4E4E4;
   --light-grey500: #F1F1F1;
   --light-grey600: #F8F8F8;
@@ -135,7 +138,7 @@ body {
 }
 
 .repl-link:hover {
-	background:var(--light-grey500);
+	background:var(--dark-grey200);
   text-decoration: none;
 }
 
