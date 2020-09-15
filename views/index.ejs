@@ -36,35 +36,41 @@
 
 </head>
 <body>
-<%- include('header'); %>
-<a class="repl-link" href="/__repl#<%= active %>.md">
-	edit on Repl.it
-</a>
-<div class="sidebar">
-<% for (const cat of sidebar) { %>
-	<div>
-		<div class="sidebar-heading"><%= cat.name %></div>
-		<ul class="sidebar-list">
-		<% for (const c of cat.contents) { %>
-			<li>
-				<%
-					const path = cat.slug + '/' + c.slug;
-					const alink = active === path ? 'active' : '';
-				%>
-				<a
-					class="sidebar-link <%= alink %>"
-					href="/<%= path %>"
-				>
-					<%= c.name %>
-				</a>
-			</li>
-		<% } %>
-		</ul>
-	</div>
-<% } %>
-</div>
-<div class="markdown">
-	<%- rendered %>
+  <div class="docs-container">
+    <%- include('header'); %>
+    <a class="repl-link" href="/__repl#<%= active %>.md">
+      Edit on Repl.it
+    </a>
+
+    <div class ="content-container">
+    <div class="sidebar">
+    <% for (const cat of sidebar) { %>
+      <div>
+        <div class="sidebar-heading"><%= cat.name %></div>
+        <ul class="sidebar-list">
+        <% for (const c of cat.contents) { %>
+          <li>
+            <%
+              const path = cat.slug + '/' + c.slug;
+              const alink = active === path ? 'active' : '';
+            %>
+            <a
+              class="sidebar-link <%= alink %>"
+              href="/<%= path %>"
+            >
+              <%= c.name %>
+            </a>
+          </li>
+        <% } %>
+        </ul>
+      </div>
+    <% } %>
+    </div>
+
+    <div class="markdown">
+      <%- rendered %>
+    </div>
+  </div>
 </div>
 </body>
 </html>

@@ -11,7 +11,7 @@ language = "<repl language>" # optional
 
 Here is an example of a repl using `.replit` to print "hello world" instead of running the code:
 
-<iframe height="400px" width="100%" src="https://repl.it/@turbio/dotreplit-example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe width="100%" src="https://repl.it/@turbio/dotreplit-example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Configuring a cloned repl
 
