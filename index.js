@@ -52,7 +52,7 @@ app.get('/:category/:slug', async (req, res) => {
 	render(res, category, slug)
 		.catch(err => {
 			res.send(`
-      < h1 > Something went wrong!</h1 >
+      <h1>Something went wrong!</h1 >
       <pre>${err.toString()}</pre>
       <p>maybe you can <a href="https://repl.it/@turbio/replit-docs">help fix it</a></p>
 `);
