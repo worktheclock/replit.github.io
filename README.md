@@ -2,7 +2,14 @@
 
 These are the [docs](https://docs.repl.it) for [Repl.it](https://repl.it) stored in markdown.
 
-This project also holds a simple webserver to render and serve the docs.
+This project also holds a simple webserver to render and serve the docs. You can run it locally with 
+
+```
+npm i
+node index.js
+```
+
+and then visiting http://localhost:3000 in your browser.
 
 # Contributing
 
