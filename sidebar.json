@@ -247,5 +247,14 @@
         "slug": "introHTMLCSS"
       }
     ]
+  }, {
+    "name": "Teachers",
+    "slug": "teachers",
+    "contents": [
+      {
+        "name": "First autograded assignment",
+        "slug": "first-autograded-assignment"
+      }
+    ]
   }
 ]
