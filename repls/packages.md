@@ -31,6 +31,14 @@ const express = require('express');
 
 Doing so will install the latest version of the package into your repl. A spec file and lock file will be created so the versions won't change. Wherever possible, we recommend using a file to manage dependencies.
 
+### Guessing Failures
+
+When you add a package by importing, we attempt to guess what package you want based on the modules you are importing. In most languages this is a direct correspondence, but in Python sometimes we can get it wrong. You can directly request a package by specifying the package directly on the import line.
+
+```python
+import twitter #upm package(python-twitter)
+```
+
 ## Spec Files
 
 Each language has a file that is used to describe the project's required packages:
