@@ -220,6 +220,14 @@
      {
         "name": "Productivity hacks",
         "slug": "10-productivity-hacks"
+      },
+      {
+        "name": "Databases: build a phonebook",
+        "slug": "11-using-the-replit-database"
+      },
+      {
+        "name": "Audio: create a media player",
+        "slug": "12-audio"
       }
     ]
   }, {
