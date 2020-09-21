@@ -53,6 +53,8 @@ body {
   padding: 0 var(--spacing-2);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: start;
 }
 
 .content-container {
@@ -135,12 +137,15 @@ body {
 
 	text-decoration: none;
   transition: .2s background ease-in-out;
-
 }
 
 .repl-link:hover {
 	background:var(--dark-grey200);
   text-decoration: none;
+}
+
+code {
+  border-radius: 8px;
 }
 
 .markdown {
@@ -217,6 +222,8 @@ iframe {
   width: 100% !important ;
   height: 500px !important;
 }
+
+
 
 
 /* Code Snippet */

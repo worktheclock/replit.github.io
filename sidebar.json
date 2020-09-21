@@ -78,6 +78,10 @@
         "slug": "teams_for_education"
       },
       {
+        "name": "Privacy FAQs",
+        "slug": "privacyFAQs"
+      },
+      {
         "name": "Assignments and Submissions",
         "slug": "assignment-submission"
       },
