@@ -1,5 +1,12 @@
 # **Free Curriculum Plans For Educators**
 
+## Curricula
+- [Intro to Python](https://docs.repl.it/curriculum/introPython)
+- [Intro to HTML/CSS](https://docs.repl.it/curriculum/introHTMLCSS)
+- More to come! 
+
+*Email us at contact@repl.it if you'd like to write curriculum for us. We have some budget available.*
+
 ## **Why are we doing this?**
 
 Our mission at Repl.it is to make programming more accessible to all. We know this can be accomplished through multiple avenues and in partnership with the inredibly talented educators in our community, which is why we are now providing free curricula that educators are free to use, modify, and share alike when they are teaching Computer Science and Programming.

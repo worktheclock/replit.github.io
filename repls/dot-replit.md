@@ -23,13 +23,12 @@ This will automatically create the `.replit` file and make it possible to custom
 
 # Other configuration
 the `.replit` file can also provide other configuration hints. The full specification is provided below:
-- `run`: This command the is executed when the run button is clicked
-- `language`: What language is loaded in the prompt when your repl starts up. You'll have to restart you repl to see this change.
-- `onBoot`: This command is executed once when the repl first boots up.
-- `packager`:
-- `afterInstall`
-- `ignoredPaths`
-- `ignoredPackages`
+- `run`: Command that is executed when the run button is clicked
+- `language`: Reserved
+- `onBoot`: Command that is executed once when the repl first starts up
+- `packager.afterInstall`: Command that is executed after a new package is installed
+- `packager.ignoredPaths`: List of paths to ignore while attempting to guess packages ([More about installing packages](https://docs.repl.it/repls/packages/#DirectImports))
+- `packager.ignoredPackages`: List of modules to never attempt to guess a package for when installing packages ([More about installing packages](https://docs.repl.it/repls/packages/#DirectImports))
 
 ## Example .replit file
 
@@ -41,5 +40,5 @@ onBoot="echo Booting up!"
 [packager]
 afterInstall="date >> package_install_log"
 ignoredPaths=[".git"]
-ignoredPackages=["twitter", "
+ignoredPackages=["twitter", "discord"]
 ```

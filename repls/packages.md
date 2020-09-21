@@ -39,6 +39,8 @@ When you add a package by importing, we attempt to guess what package you want b
 import twitter #upm package(python-twitter)
 ```
 
+You can configure additional options for package guessing by reading about the [.replit](https://docs.repl.it/repls/dot-replit) file.
+
 ## Spec Files
 
 Each language has a file that is used to describe the project's required packages:
