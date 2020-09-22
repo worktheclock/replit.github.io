@@ -1,6 +1,6 @@
 # Using the Repl.it database
 
-![](https://codewithrepl.it/img/11-db-title-2.png)
+![](https://www.codewithrepl.it/img/11-db-title-2.png)
 
 In previous tutorials we used the file system to store data persistently. This works fine for smaller projects, but there are some limitations to storing data directly in a file system. A more advanced way to store data which is used by nearly any production application is a database.
 
@@ -40,7 +40,7 @@ print(db["Smith, John"])
 
 You should see the phone number printed to the console, as shown below.
 
-![**Image 1:** *Viewing a phone number from the database.*](https://codewithrepl.it/img/11-phone-out.png)
+![**Image 1:** *Viewing a phone number from the database.*](https://www.codewithrepl.it/img/11-phone-out.png)
 
 ### How is this different from a dictionary?
 
@@ -145,7 +145,7 @@ prompt_add_contact()
 
 Test that this works - run it twice and enter the same name both times, with a different phone number. You should see the confirmation the first time, but the second time it will inform you that the contact already exists, as shown below.
 
-![**Image 2:** *Adding new contacts or showing an error.*](https://codewithrepl.it/img/11-already-exists.png)
+![**Image 2:** *Adding new contacts or showing an error.*](https://www.codewithrepl.it/img/11-already-exists.png)
 
 ### Allowing users to retrieve details of stored contacts
 
@@ -175,11 +175,11 @@ def get_contact(name):
     return number
 ```
 
-Our new code to go into `contact.py` is very simple and it might be tempting to just put this logic directly in the `main.py` file as it's so short. However it's good to stay consistent as each of the files is likely to grow in length and complexity over time, and it will be easier to maintain our codebase if our user interaction code is strictly separate from our database interaction code.
+Our new code to go into `contacts.py` is very simple and it might be tempting to just put this logic directly in the `main.py` file as it's so short. However it's good to stay consistent as each of the files is likely to grow in length and complexity over time, and it will be easier to maintain our codebase if our user interaction code is strictly separate from our database interaction code.
 
 Run the code again and input the same name as before. If all went well, you'll see the number, as in the example below.
 
-![**Image 3:** *Retrieving contacts from user input.*](https://codewithrepl.it/img/11-getting-number.png)
+![**Image 3:** *Retrieving contacts from user input.*](https://www.codewithrepl.it/img/11-getting-number.png)
 
 ### Interlude: Creating a main menu
 
@@ -278,7 +278,7 @@ def prompt_get_contact():
 
 Run the code again and choose to add a contact. Enter "Smith, Mary" when prompted and any phone number. When the program starts over, choose to find a contact and input "Smi". It should print out both "Smith" matches that we have, as shown below.
 
-![**Image 4:** *The user menu: They can now choose what action to do.*](https://codewithrepl.it/img/11-multiple-matches.png)
+![**Image 4:** *The user menu: They can now choose what action to do.*](https://www.codewithrepl.it/img/11-multiple-matches.png)
 
 ### Allowing users to update contacts
 
@@ -429,4 +429,3 @@ You've learned how basic databases work. Databases are a complicated topic on th
 Even without further research, the basic Create, Read, Update, and Delete (CRUD) operations that we covered here will get you far and you can build nearly any app you can imagine with just these.
 
 Next we'll take a look at playing audio files programmatically so you can use Python to control your music.
-

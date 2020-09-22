@@ -1,6 +1,6 @@
 # Repl.it Audio
 
-![](https://codewithrepl.it/img/12-audio-header.png)
+![](https://www.codewithrepl.it/img/12-audio-header.png)
 
 Most people control their music players manually, pressing the pause button to pause a track or hitting a volume up control to raise the volume. With Repl.it, you can automate your media experience using code.
 
@@ -22,7 +22,7 @@ Let's grab the URL of a file we want so that we can use code to download it to o
 
 Search for a song that you like, right-click on the download link and press "copy link location", as shown below.
 
-![**Image 1:** *Downloading an audio track*](https://codewithrepl.it/img/12-getting-audio.png)
+![**Image 1:** *Downloading an audio track*](https://www.codewithrepl.it/img/12-getting-audio.png)
 
 ## Downloading audio files to our project
 
@@ -44,7 +44,7 @@ Change the URL to the one you chose and `o_fortuna.mp3` to something more approp
 
 This downloads the song, opens up a binary file, and writes the contents of the download to the file. You should see the new file pop up in the files tab on the left after you run this code.
 
-![**Image 2:** *Viewing the downloaded audio file in your files tab.*](https://codewithrepl.it/img/12-downloaded-song.png)
+![**Image 2:** *Viewing the downloaded audio file in your files tab.*](https://www.codewithrepl.it/img/12-downloaded-song.png)
 
 Instead of downloading the audio file using `requests` as shown above, you can also press the `add file` button in your repl and upload an audio file from your local machine.
 
@@ -161,7 +161,7 @@ Once again, you should replace the "o_fortuna" string if you downloaded or uploa
 
 If you run the repl now you should hear you track play and you can control it by inputting the various commands.
 
-![**Image 3:** *A preview of our audio status dashboard.*](https://codewithrepl.it/img/12-audio-display.png)
+![**Image 3:** *A preview of our audio status dashboard.*](https://www.codewithrepl.it/img/12-audio-display.png)
 
 ## Playing individual tones
 
@@ -239,3 +239,6 @@ Controlling your audio files through a text-based interface might feel like a do
 
 Once you can control something using code, the possibilities are pretty broad, so use your imagination!
 
+You've reached the end of this collection of tutorials that teach you the ins and outs of Repl.it, and you should be able to build any project that you can imagine now.
+
+If you're stuck for ideas, continue on to Part 3 where we'll walk you through eight practical projects, focusing more on coding concepts than Repl.it features.
