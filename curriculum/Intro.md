@@ -25,6 +25,7 @@ Happy teaching and happy coding!
 
 Email us at contact@repl.it if you have any other resources you'd like us to add to the list.
 
+- [FB Repl.it for CS Education group](https://www.facebook.com/groups/replitforcseducation/)
 - [FB ICT & Computing Teachers group](https://www.facebook.com/groups/ict.computing/)
 - [FB KS3 Computer Science group](https://www.facebook.com/groups/ks3computing/)
 - [FB AP Computer Science A Teachers group](https://www.facebook.com/groups/APComputerScienceTeachers/)

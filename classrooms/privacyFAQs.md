@@ -34,7 +34,7 @@ In addition, consistent with COPPA, we do not disclose student data to third par
 
 **Can Repl.it be used in compliance with FERPA?**
 
-Schools can disclose student data to Repl.it pursuant to FERPA’s school official exception. Please review Repl.it's [Terms of Service](https://repl.it/site/terms) to see the contractual commitments related to using Repl.it. We only use the limited FERPA-covered student data we collect for the purposes for which it was provided to us, that is, to perform services for the school, and we do not disclose data to third parties other than our own subprocessors.
+When we contract with schools to use Teams for Education, we do not collect information about students that can be used to identify or contact them, such as a name and email address from students.  We only collect student’s Log Information (as defined in our [privacy policy](https://repl.it/site/privacy)) and use this limited data for the purposes for which it was provided to us, that is, to perform services for the school and support our internal operations. We do not disclose data to third parties other than our own subprocessors.
 
 **Is this update reflected in your Privacy Policy?**
 

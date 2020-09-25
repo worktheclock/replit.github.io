@@ -64,6 +64,35 @@
 		  "slug": "repl-run"
 	  }
     ]
+  }, {
+    "name": "Teams for Education",
+    "slug": "Teams",
+    "contents": [
+			{
+        "name": "Introduction to Teams For Education",
+        "slug": "Intro"
+      },			      
+			{
+        "name": "Invite Teachers & Students",
+        "slug": "Invitations"
+      },
+						{
+        "name": "Assignment Workflow",
+        "slug": "Assignments"
+      },
+			{
+        "name": "Classroom Material",
+        "slug": "Notes"
+      },
+			{
+        "name": "Different Roles",
+        "slug": "Roles"
+      },
+			{
+        "name": "Create Tests",
+        "slug": "Testing"
+      }
+    ]
   },
   {
     "name": "Repl.it Classrooms",
@@ -72,10 +101,6 @@
       {
         "name": "Introduction to Classrooms",
         "slug": "intro"
-      },
-      {
-        "name": "Teams for Education (beta)",
-        "slug": "teams_for_education"
       },
       {
         "name": "Privacy FAQs",
