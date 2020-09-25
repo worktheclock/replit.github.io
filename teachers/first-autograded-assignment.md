@@ -4,7 +4,7 @@
 
 If you teach a programming course and wish that you could build a robot to grade your students' homework for you, you can! In this guide, you'll see exactly how to set it up with some real-world examples. 
 
-Autograding is done by having unit tests automatically execute your students' code with pre-specified inputs and check if the outputs are as expected. 
+Autograding is accomplished by executing unit tests automatically against your students' code
 
 Specifically, we'll cover:
 * Setting up templates and permissions on Repl.it Teams for Education  
