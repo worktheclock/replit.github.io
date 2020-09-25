@@ -76,7 +76,7 @@ def subtract(a, b):
 
 In this example, we are only asking them to create two basic functions: `add` and `subtract`.
 
-If you need to provide more comprehensive instructions you can create a [markdown](https://en.wikipedia.org/wiki/Markdown) file from within the repl by pressing the `add file` button in the files pane and giving the filename a `.md` extension. Markdown files have two modes, "edit" and "preview", so your students will be able to see basic formatting like links or bullet points.
+If you need to provide more comprehensive instructions you can create a [markdown](https://en.wikipedia.org/wiki/Markdown) file from within the repl by pressing the `add file` button in the files pane and calling a file called `readme.md`. Markdown files in Repl.it have two modes, "edit" and "preview", so your students will be able to see basic formatting like links or bullet points.
 
 ![](https://static.ritza.co/repl/teachers-01-autograding/markdown-example.png)
 
