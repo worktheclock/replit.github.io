@@ -14,9 +14,9 @@ Specifically, we'll cover:
 
 ## What is autograding and how can it help you?
 
-Autograding comes in a variety of different forms:
+We can broadly think of grading as fitting into one of three categories:
 
-* **No autograding:** Without any autograding, your students submit code and you have to inspect it line by line and manually specify inputs. 
+* **Manual grading:** Without any autograding, your students submit code and you have to inspect it line by line and manually specify inputs. 
 * **Partial auto-grading:** To save time, you might have a script that runs your students' code with a pre-specified set of inputs to see exactly how it works and where it breaks, but you still need to decide what grade to award based this.
 * **Full autograding:** You have a sophisticated testing suite and the students' grades are determined by how many tests their code passes.
 
