@@ -91,6 +91,18 @@
 			{
         "name": "Create Tests",
         "slug": "Testing"
+      },
+            {
+        "name": "Create your first autograded assignment",
+        "slug": "first-autograded-assignment"
+      },
+            {
+        "name": "Building a centralised autograding server",
+        "slug": "building-centralized-autograder"
+      },
+            {
+        "name": "How to set a good enrichment assignment",
+        "slug": "setting-enrichment-homework"
       }
     ]
   },
@@ -274,15 +286,6 @@
       {
         "name": "Intro to HTML/CSS Teaching Curriculum",
         "slug": "introHTMLCSS"
-      }
-    ]
-  }, {
-    "name": "Teachers",
-    "slug": "teachers",
-    "contents": [
-      {
-        "name": "First autograded assignment",
-        "slug": "first-autograded-assignment"
       }
     ]
   }
