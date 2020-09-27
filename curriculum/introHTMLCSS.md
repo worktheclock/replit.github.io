@@ -25,7 +25,7 @@ You can find the entire curriculum, including Repl.it assignments, [here](https:
 
 ### **Our Awesome Creator**
 
-<img src="/images/curriculumImg/TScullion.jpg" width="300px"/>
+<img class="profile_pic" src="/images/curriculumImg/TScullion.jpg" width="300px"/>
 
 Toni Scullion is a Computing Science teacher and founder of dressCode, a non-profit charity, aspiring to make a dent in the Computing Science gender gap. She is extremely passionate about teaching Computing Science and getting more young people into the subject, particularly more girls. Toni works to raise the profile of Computing Science as a subject in schools to ultimately help inspire the next generation and get more young people into the work of tech.
 

@@ -39,7 +39,7 @@ Inside of this folder each of the 6 lessons will have its own folder along with 
 
 ### **Our Awesome Creator**
 
-<img src="/images/curriculumImg/andy.jpg" width="300px"/>
+<img class="profile_pic" src="/images/curriculumImg/andy.jpg" width="300px"/>
 
 Andy Colley:
 
