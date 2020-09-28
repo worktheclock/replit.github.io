@@ -70,4 +70,4 @@ Since Repl.it is a general-purpose IDE that supports third-party packages in man
 
 We've written a tutorial for how to do testing in Python using PyTest that you can read [here](https://docs.repl.it/tutorials/09-test-driven-development).
 
-We also have a complete example of how you can set up your first autograded homework assignment using Teams for Education [here](https://docs.repl.it/teachers/first-autograded-assignment).
+We also have a complete example of how you can set up your first autograded homework assignment using Teams for Education [here](https://docs.repl.it/Teams/first-autograded-assignment).
