@@ -91,7 +91,11 @@
 			{
         "name": "Create Tests",
         "slug": "Testing"
-      }
+      },
+            {
+        "name": "Building a centralised autograding server",
+        "slug": "building-centralized-autograder"
+      },
     ]
   },
   {
