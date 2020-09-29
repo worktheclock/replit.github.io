@@ -4,11 +4,11 @@ In a [previous guide](https://docs.repl.it/Teams/first-autograded-assignment) we
 
 In this guide, we'll show you how to take it a step further and build a centralised grading server. Your students will be able to submit their assignments to this server, and each submission will automatically kick off the tests, assign a grade, and create a summary report of submissions and grades for you to review.
 
-This guide shows you how to build the solution step-by-step. If you simply want to get it up and running as quickly as possible, you can copy our existing repls into your Team account. First fork [the server](https://repl.it/@ritza/grading-server#main.py) component and toggle it to "private" so that the students can't see submitted work or mess with the grading algorithm. Second, create a new Python template in your Team account and copy the content from the two Python files (`main.py` and `submit.py`) from [this assignment template repl](https://repl.it/@ritza/autograding-assignment-template) into identically named files in your template. Check the URL that your server runs on and modify the url in the `submit.py` file in the template to match.
+This guide shows you how to build the solution step-by-step. If you just want to get it up and running as quickly as possible, you can follow the [quickstart guide](https://docs.repl.it/Teams/building-centralized-autograder-quickstart) instead which shows you how to get started from our template repls.
 
 Note that you'll need a subscription to [Teams for Education](https://repl.it/teams) to follow this guide as it is presented, but you should also be able to adapt it to run using a normal Repl.it account if you need.
 
-In this guide, we assume that your students are learning Python. We'll give an example Python assignment and an example testing suite using [PyTest](https://docs.pytest.org/en/stable/). We'll use [Flask](https://flask.palletsprojects.com) to create the centralised grading server.
+We assume that your students are learning Python. We'll give an example Python assignment and an example testing suite using [PyTest](https://docs.pytest.org/en/stable/). We'll use [Flask](https://flask.palletsprojects.com) to create the centralised grading server.
 
 ## Overview of how the solution works
 
@@ -22,11 +22,15 @@ The grading server will not be visible to students, so they will still not be ab
 
 ## Setting up the grading server
 
-We'll start by creating the grading server. We don't want to share this code for students, so create a normal team repl (not a template).
+We'll start by creating the grading server. We don't want to share this code for students as it will also host copies of their submitted assignments, so we'll have to make sure to **not publish** this template.
 
-Press the `+` button in the top right corner, choose Python, call your repl "grading-server", choose your team account as the owner, and set the repl to "private".
+1. Press the 'create a template' button on your team page
+2. Choose Python as the language
+3. Call it 'grading-server'
+4. Make a note to remind yourself and other admins not to publish this
+5. Press the Create button
 
-![](https://i.ritzastatic.com/a49c5ac633374f96a41301934a2d4e58/create-server.png)
+![](https://i.ritzastatic.com/images/ecf49cbb731d4b15aa00d588457528c3/create-server-template.png)
 
 Our grading server will consist of a few different components, namely:
 
@@ -342,6 +346,13 @@ You can also see `report.md` has been generated, with details of the two submiss
 
 ![](https://i.ritzastatic.com/1ea3403b1f18430ab434284c9d080933/example-report.png)
 
+## Publishing the template for students to use
+
+Once you are happy with the assignment, press the "publish template" button in the top right. Students will get a notification that their homework is ready and be able to create a fork, modify the code, and submit it to the grading server.
+
+![](https://i.ritzastatic.com/images/07a64f590dd24ae8b6e8ec9349e01cdd/publish-template.png)
+
+Leave the grading server running (don't press the "Stop" button) so that the students can submit when they are ready. You can visit your server URL (that you pasted into the `submit.py` file) to make sure that it stays up (it should display "OK" if everything is running as expected. If you see an error or the page does not load, navigate back to the unpublished template file and hit the `Run` button again.)
 
 ## Where next?
 
