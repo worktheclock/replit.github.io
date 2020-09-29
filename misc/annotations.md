@@ -6,22 +6,25 @@ Annotations enable you to have conversations over code, within repl.it
 
 #### Different ways to use annotations
 
-You can use annotations in many ways:
+Code Annotations make it easy for collaborators to point to particular areas of code, ask questions about syntax, and question decisions during code reviews. Here are some example workflows:
 
 - While collaborating with users, you can use annotations to discuss a selection of code synchronously.
 
-- You can leave annotations for your collaborators to address when they return to the repl. This is really useful if you're teaching a class of students, and want to leave personal feedback
+- You can leave annotations for your collaborators to address when they return to the repl. This is really useful if you're teaching a class of students, and want to leave personal feedback on their code.
 
 - You can leave annotations as a way to highlight and call attention to a selection of code.
 
 #### Using annotations
 
 - Once you're in a repl, you can create annotations by selecting some code, and clicking the annotation button above the editor.
-	- You can also create annotations via right-clicking and selecting annotate, or using the keyboard shortcuts Cmd+Shift+/ (or Ctrl+Shift+/)
-- Add a message, and hit enter!
+	
+	> You can also create annotations via right-clicking and selecting annotate, or using the keyboard shortcuts Cmd+Shift+/ (or Ctrl+Shift+/)
+
+- Add your message, and hit enter!
+
 - Other collaborators will see your message, and can reply to it.
 
-- Once you're done with an annotation, you can delete it
+- Once you're done with an annotation, you can delete it.
 
 #### Mentions
 

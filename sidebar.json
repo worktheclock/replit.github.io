@@ -72,6 +72,10 @@
         "name": "Introduction to Teams For Education",
         "slug": "Intro"
       },			      
+      {
+        "name": "Privacy FAQs",
+        "slug": "privacyFAQs"
+      },
 			{
         "name": "Invite Teachers & Students",
         "slug": "Invitations"
@@ -89,8 +93,20 @@
         "slug": "Roles"
       },
 			{
-        "name": "Create Tests",
+        "name": "Tests and Autograding",
         "slug": "Testing"
+      },
+			{
+        "name": "Simple Autograding Example",
+        "slug": "SimpleAutograding"
+      },
+			{
+        "name": "Full Autograding Example",
+        "slug": "CentralizedAutograder"
+      },
+			{
+        "name": "Example Enrichment Assignment",
+        "slug": "EnrichmentHomework"
       }
     ]
   },
@@ -101,10 +117,6 @@
       {
         "name": "Introduction to Classrooms",
         "slug": "intro"
-      },
-      {
-        "name": "Privacy FAQs",
-        "slug": "privacyFAQs"
       },
       {
         "name": "Assignments and Submissions",
