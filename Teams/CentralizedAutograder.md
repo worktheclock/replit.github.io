@@ -1,10 +1,10 @@
 # Building a centralised autograder with Repl.it
 
-In a [previous guide](https://replitgithubio-1.ritza.repl.co/teachers/first-autograded-assignment) we built a basic autograding solution that could automatically run and test your students' assignments. However, there were still some manual steps involved: you needed to navigate to each student's fork of the assignment and kick off the tests manually.
+In a [previous guide](./SimpleAutograding) we built a basic autograding solution that could automatically run and test your students' assignments. However, there were still some manual steps involved: you needed to navigate to each student's fork of the assignment and kick off the tests manually.
 
 In this guide, we'll show you how to take it a step further and build a centralised grading server. Your students will be able to submit their assignments to this server, and each submission will automatically kick off the tests, assign a grade, and create a summary report of submissions and grades for you to review.
 
-This guide shows you how to build the solution step-by-step. If you just want to get it up and running as quickly as possible, you can follow the [quickstart guide](https://replitgithubio-1.ritza.repl.co/teachers/building-centralized-autograder-quickstart) instead which shows you how to get started from our template repls.
+This guide shows you how to build the solution step-by-step. If you just want to get it up and running as quickly as possible, you can follow the [quickstart guide](./CentralizedAutograderQuickstart) instead which shows you how to get started from our template repls.
 
 Note that you'll need a subscription to [Teams for Education](https://repl.it/teams) to follow this guide as it is presented, but you should also be able to adapt it to run using a normal Repl.it account if you need.
 
