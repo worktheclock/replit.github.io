@@ -240,5 +240,3 @@ Controlling your audio files through a text-based interface might feel like a do
 Once you can control something using code, the possibilities are pretty broad, so use your imagination!
 
 You've reached the end of this collection of tutorials that teach you the ins and outs of Repl.it, and you should be able to build any project that you can imagine now.
-
-If you're stuck for ideas, continue on to Part 3 where we'll walk you through eight practical projects, focusing more on coding concepts than Repl.it features.

@@ -14,23 +14,23 @@ Note that this set of lessons does not focus on teaching you to code, though we 
 
 In this section of the course, you'll learn the basic of Repl.it. But that doesn't mean you won't build some fun stuff along the way.
 
-#### Tutorial 1: Introduction to Repl.it and using the IDE
+#### [Lesson 1: Introduction to Repl.it and using the IDE](./01-introduction-to-the-repl-it-ide)
 
 Learn the basics of the Repl.it IDE. Why use an online IDE and what are all those different panes? Build a simple program to solve your maths homework.
 
-#### Tutorial 2: Working with files using Repl.it
+#### [Lesson 2: Working with files using Repl.it](./02-managing-files-using-repl-it)
 
 Computers were initially created to read and write files, and although we've come a long way files remain central to everything we do. Learn how to create them, read from them, write to them, and import and export them in bulk.
 
-#### Tutorial 3: Managing dependencies with Repl.it
+#### [Lesson 3: Managing dependencies with Repl.it](./03-handling-dependencies-with-repl-it)
 
 No one is an island, and if you build software you'll build it on top of existing modules that others have written. Here we show you how to work with other people's code in a variety of ways: in many cases all you need to do is [import antigravity and fly away](https://xkcd.com/353/).
 
-#### Tutorial 4: Data science: plotting and graphing
+#### [Lesson 4: Data science: plotting and graphing](./04-data-science-and-visualisation-with-repl-it)
 
 Data is only useful if it can be easily understood. Plots, charts, and graphs are the easiest way to know what's happening in the world around you. And did you know that data science is [the sexiest job of the 21st century](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century). Follow along to plot every city in the USA and find out if richer people live longer.
 
-#### Tutorial 5: Pair programming and using multiplayer
+#### [Lesson 5: Pair programming and using multiplayer](./05-pair-programming-using-multiplayer-with-repl-it)
 
 Did we mention that no one is an island? Coders don't have to work alone. You can invite your friends to code along with you, a technique used by beginners and experts alike. Learn how to code collaboratively, as if you were using a Google Doc.
 
@@ -38,31 +38,31 @@ Did we mention that no one is an island? Coders don't have to work alone. You ca
 
 Once you know the basics, it's time to build larger and more complicated projects and keep them secure.
 
-#### Tutorial 6: Running projects from GitHub
+#### [Lesson 6: Running projects from GitHub](./06-github-and-run-button)
 
 Most open source software lives on GitHub and it's easy to take advantage of all of this free software by pulling code from GitHub to Repl.it and running it with one click. Some software needs to be configured in specific ways so you'll also learn how to modify what happens when you press that big green "run" button.
 
-#### Tutorial 7: Building a game with PyGame
+#### [Lesson 7: Building a game with PyGame](./07-building-a-game-with-pygame)
 
 Do you want to develop games? Of course, you can do that with Repl.it to. We'll build a 2D juggling game using PyGame in this lesson and you'll learn more about graphics programming at the same time: sprites, physics, and more.
 
-#### Tutorial 8: Can you keep a secret? What about from time travellers?
+#### [Lesson 8: Can you keep a secret? What about from time travellers?](./08-storing-secrets-and-history)
 
 Have you been hacked? It's only a matter of time if you haven't. Learn how to keep your secrets safe, even when coding in public spaces. Pro tip: if you accidentally paste a password into your code and then remove it, others might still find it in your history, so you'll learn how to navigate that too.
 
-#### Tutorial 9: Introduction to TDD using PyTest
+#### [Lesson 9: Building a web application with TDD](./09-test-driven-development)
 
 By this stage you'll have made a few mistakes. Learn the TDD way and how to write code that tests your other code to catch frustrating errors before they can hurt anyone. Repetitive jobs is what computers are best at after all.
 
-#### Tutorial 10: Become an elite hacker with productivity hacks
+#### [Lesson 10: Become an elite hacker with productivity hacks](./10-productivity-hacks)
 
 Have you seen the Matrix? Learn to be the Neo of coding by getting more than one cursor, using keyboard shortcuts, and all of the other productivity features that Repl.it offers. You'll be soon producing more code in less time.
 
-#### Tutorial 11: Keeping your data in check with the Repl.it database
+#### [Lesson 11: Keeping your data in check with the Repl.it database](./11-using-the-replit-database)
 
 Now that you are starting to build larger and more complicated applications, it is time to start using databases to keep your data clean and secure.
 
-#### Tutorial 12: Repl audio - control (or create) your music with code
+#### [Lesson 12: Repl audio - control (or create) your music with code](./12-audio)
 
 Find, download, play, and control the volume of your music, all in code. If that's not enough, create your own music too.
 
@@ -72,26 +72,26 @@ This is the part where you realize that the possibilities are endless while you 
 
 Once you've gone through everything, you might think "but what should I build?". It's a common problem and we've got you covered. Choose your favourite projects from a list (or turn on the coffee machine, order some pizza, and get through them all). Once you've gone through the step-by-step guides you can easily modify or extend the projects to make them your own.
 
-#### Beginner web scraping with Python and Repl.it
+#### [Beginner web scraping with Python and Repl.it](https://ritza.co/showcase/repl.it/beginner-web-scraping-with-python-and-repl-it)
 Learn more about what web scraping is, how websites are built, and how to automatically scrape data from websites.
 
-#### Building news word clouds using Python and Repl.it
+#### [Building news word clouds using Python and Repl.it](https://ritza.co/showcase/repl.it/building-news-word-clouds-using-python-and-repl-it)
 Extending the beginner's web scraping tutorial, you'll build a more advanced scraper that extracts the plain text from news articles, stripping away the 'boilerplate' content, such as text in sidebars.
 
-#### Building a Discord Bot with Python and Repl.it
+#### [Building a Discord Bot with Python and Repl.it](https://ritza.co/showcase/repl.it/building-a-discord-bot-with-python-and-repl-it)
 Build an echo bot using the Discord API. Your bot will always respond with exactly what you send it, but you can customize it afterwards to do something more useful.
 
-#### Building a Discord bot with Node.js and Repl.it
+#### [Building a Discord bot with Node.js and Repl.it](https://ritza.co/showcase/repl.it/building-a-discord-bot-with-node-and-repl-it)
 A NodeJS version of the Discord bot tutorial above. Even if you prefer Python, it's good to go through this one too to get experience with other languages.
 
-#### Creating and hosting a basic web application with Django and Repl.it
+#### [Creating and hosting a basic web application with Django and Repl.it](https://ritza.co/showcase/repl.it/creating-and-hosting-a-basic-django-application-with-django-and-repl-it)
 Build a django web application and host it with Repl.it. You'll use geolocation a weather API to show the user their local weather forecast.
 
-#### Building a CRM app with NodeJS, Repl.it, and MongoDB
+#### [Building a CRM app with NodeJS, Repl.it, and MongoDB](https://ritza.co/showcase/repl.it/building-a-crm-app-with-nodejs-repl-it-and-mongo-db)
 Another web application, but using NodeJS instead of Django. This is a different application where you'll build a basic app to manage customer information.
 
-#### Introduction to Machine Learning with Python and repl.it
+#### [Introduction to Machine Learning with Python and repl.it](https://ritza.co/showcase/repl.it/introduction-to-machine-learning-with-python-and-repl-it)
 Build a machine-learning based text classifier. We skip the maths but show how you can use machine learning libraries to implement useful solutions without in-depth theoretical knoweldge.
 
-#### Quicksort tutorial: Python implementation with line by line explanation
+#### [Quicksort tutorial: Python implementation with line by line explanation](https://ritza.co/showcase/repl.it/quicksort-tutorial-python-implementation-with-line-by-line-explanation)
 Whether you're applying for jobs or just like algorithms, it's useful to understand how sorting works. In real projects, most of the time you'll just call `.sort()`, but here you'll build a sorter from scratch and understand how it works.

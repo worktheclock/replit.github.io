@@ -100,9 +100,7 @@ Now modify your game loop to include a call to the new `update()` method. The lo
 
 The `(0, 1)` tuple causes the ball to move its Y coordinate by 1 each loop and keep a constant X coordinate. This has the effect of making the ball drop slowly down the screen. Run your code again to check that this works.
 
-![**Image 5:** *The ball falling at a constant rate.*](https://i.ritzastatic.com/repl/codewithrepl/07-pygame/07-05-falling-ball.png)
-
-[*click to open gif*](https://i.ritzastatic.com/repl/codewithrepl/07-pygame/07-05-GIF-falling-ball.gif)
+![**Image 5:** *The ball falling at a constant rate.*](https://i.ritzastatic.com/repl/codewithrepl/07-pygame/07-05-GIF-falling-ball.gif)
 
 When the ball gets to the bottom of the screen, it'll just keep falling but that's OK for now. Let's see how we can add click detection.
 
@@ -119,8 +117,7 @@ To achieve this, add a `for` loop inside the existing `while` loop. The entire g
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if ball.rect.collidepoint(pygame.mouse.get_pos()):
-                    ball.speed[0] = random.uniform(-4, 4)
-                    ball.speed[1] = -2
+                    ball.speed = [0,-1]
         screen.fill(BACKGROUND)
         screen.blit(ball.image, ball.rect)
         ball.update()
@@ -147,9 +144,7 @@ To achieve this, we'll add logic to our `update()` method (this is why we kept i
 
 This checks to see if the top of the ball is above the top of the screen. If it is, we set the speed back to `(0, 1)` (moving down).
 
-![**Image 6:** *Now we can bounce the ball off the ceiling.*](https://i.ritzastatic.com/repl/codewithrepl/07-pygame/07-06-bounce-off-roof.png)
-
-[*click to open gif*](https://i.ritzastatic.com/repl/codewithrepl/07-pygame/07-06-GIF-bounce-off-roof.gif)
+![**Image 6:** *Now we can bounce the ball off the ceiling.*](https://i.ritzastatic.com/repl/codewithrepl/07-pygame/07-06-GIF-bounce-off-roof.gif)
 
 So far, we have restricted the ball to moving vertically, but we can apply the same principles and move it horizontally or diagonally too. Let's also add some randomness into the mix so that it's less predictable (and harder for the player to press). The ball will randomly change its horizontal movement when it bounces off the ceiling and each time we throw it.
 
@@ -283,9 +278,7 @@ To kill balls when they fall through the floor, we can add another check to the 
 
 Run the code again and you should be able to juggle three balls. See how long you can keep them in the air.
 
-![**Image 7:** *Juggling three balls.*](https://i.ritzastatic.com/repl/codewithrepl/07-pygame/07-07-three-balls.png)
-
-[*click to open gif*](https://i.ritzastatic.com/repl/codewithrepl/07-pygame/07-07-GIF-three-balls.gif)
+![**Image 7:** *Juggling three balls.*](https://i.ritzastatic.com/repl/codewithrepl/07-pygame/07-07-GIF-three-balls.gif)
 
 If you want a harder version, add a counter to keep track of how many successful throws the player has achieved and add a new ball for every three successful throws.
 
