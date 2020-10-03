@@ -220,6 +220,3 @@ If you followed along, you'll already have your own version of the repl to exten
 `spaCy` is a very powerful NLP library and it can do far more than simply extract people's names. See what other interesting insights you can automatically extract from today's news.
 
 Now you can use the Repl.it IDE, write programs that use files, and install third-party dependencies. Next up, we'll be taking a look at doing data science with Repl.it by visualising data using `matplotlib` and `seaborn`.
-
-
-
