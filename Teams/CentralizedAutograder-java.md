@@ -483,9 +483,10 @@ Change the `ReadyForSubmission=NO` line to `ReadyForSubmission=YES` and press `R
 Fix the subtract function by swapping `b` and `a` as follows and submit it one more time by pressing the `Run` button. This lets us test that resubmissions are working.
 
 ```java
-def subtract(a, b):
-    """Subtract b from a and return the result"""
-    return a - b
+  // Subtract b from a and return the result
+  public int subtract(int a, int b) {
+    return a - b;
+  }
 ```
 
 Finally, change all of the code back to how it was as this is the version that students will fork and we don't want them to have the solutions. Change the ReadyForSubmission=YES line to NO and change the return statements, replacing the  answers with `return = 0` instead.
