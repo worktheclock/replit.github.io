@@ -1,6 +1,6 @@
 # Building a centralised autograder with Repl.it
 
-In a [previous guide](https://replitgithubio-1.ritza.repl.co/teachers/first-autograded-assignment) we built a basic autograding solution that could automatically run and test your students' assignments. However, there were still some manual steps involved: you needed to navigate to each student's fork of the assignment and kick off the tests manually.
+In a [previous guide](./SimpleAutograding-java) we built a basic autograding solution that could automatically run and test your students' assignments. However, there were still some manual steps involved: you needed to navigate to each student's fork of the assignment and kick off the tests manually.
 
 In this guide, we'll show you how to take it a step further and build a centralised grading server. Your students will be able to submit their assignments to this server, and each submission will automatically kick off the tests, assign a grade, and create a summary report of submissions and grades for you to review.
 
@@ -272,7 +272,7 @@ You can also see `report.md` has been generated, with details of the two submiss
 
 Once you are happy with the assignment, press the "publish project" button in the top right. Students will get a notification that their homework is ready and be able to create a fork, modify the code, and submit it to the grading server.
 
-![](https://i.ritzastatic.com/images/07a64f590dd24ae8b6e8ec9349e01cdd/publish-template.png)
+![](https://i.ritzastatic.com/repl/codewithrepl/java-centralized-autograder/publish-asignment.png)
 
 Leave the grading server running (don't press the "Stop" button) so that the students can submit when they are ready. You can visit your server URL (that you pasted into the `go.sh` file) to make sure that it stays up (it should display two buttons: "Choose file" and "Submit", if everything is running as expected. If you see an error or the page does not load, navigate back to the unpublished project file and hit the `Run` button again.)
 
