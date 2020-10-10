@@ -97,12 +97,28 @@
         "slug": "Testing"
       },
 			{
-        "name": "Simple Autograding Example",
+        "name": "Simple Autograding Example - Python",
         "slug": "SimpleAutograding"
       },
 			{
-        "name": "Full Autograding Example",
+        "name": "Full Autograding Example - Python",
         "slug": "CentralizedAutograder"
+      },
+            {
+        "name": "Quickstart Autograding Example - Python",
+        "slug": "CentralizedAutograderQuickstart"
+      },
+			{
+        "name": "Simple Autograding Example - Java",
+        "slug": "SimpleAutograding-java"
+      },
+			{
+        "name": "Full Autograding Example - Java",
+        "slug": "CentralizedAutograder-java"
+      },
+            {
+        "name": "Quickstart Autograding Example - Java",
+        "slug": "CentralizedAutograderQuickstart-java"
       },
 			{
         "name": "Example Enrichment Assignment",
