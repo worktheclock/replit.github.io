@@ -32,7 +32,7 @@ We'll start by creating the grading server. We don't want to share this code for
 4. Make a note to remind yourself and other admins not to publish this project
 5. Press the Create button
 
-![](/images/teams/CentralizedAutograder-python/create-project-python.png)
+![](https://raw.githubusercontent.com/ritza-co/replit.github.io/add-feedback-autograders/static/images/teams/CentralizedAutograder-python/create-project-python.png)
 
 Our grading server will consist of a few different components, namely:
 
