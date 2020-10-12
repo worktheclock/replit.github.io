@@ -1,8 +1,9 @@
 # Create your first autograded Java homework
 
+There is also [a Python version of this guide](./SimpleAutograding).
+
 **Note: you need a subscription to Repl.it's [Teams for Education](https://repl.it/teams) as well as a team where you have owner or admin privileges in order to follow this guide.**
 
-There is also [a Python version of this article](./SimpleAutograding).
 
 If you teach a programming course and wish that you could build a robot to grade your students' homework for you, you can! In this guide, you'll see exactly how to set it up with some real-world examples. 
 

@@ -1,4 +1,4 @@
-# Building a centralized autograder - quickstart
+# Building a centralized autograder - quickstart (Python)
 
 This is the shortcut guide to the [full walkthrough on how to set up a centralized autograder](./CentralizedAutograder). Follow that guide to get step by step instructions and explanations about how it works. Follow this guide if you just want to get it up and running.
 
