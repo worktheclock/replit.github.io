@@ -4,7 +4,6 @@ There is also [a Python version of this guide](./SimpleAutograding).
 
 **Note: you need a subscription to Repl.it's [Teams for Education](https://repl.it/teams) as well as a team where you have owner or admin privileges in order to follow this guide.**
 
-
 If you teach a programming course and wish that you could build a robot to grade your students' homework for you, you can! In this guide, you'll see exactly how to set it up with some real-world examples. 
 
 Autograding is done by having unit tests automatically execute your students' code with pre-specified inputs and check if the outputs are as expected. 

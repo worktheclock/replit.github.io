@@ -17,3 +17,8 @@ If you want a robot to help you grade your student's homework assignments, you c
 
 - [Simple autograding](./SimpleAutograding-java)
 - [Fully automated autograding](./CentralizedAutograder-java)
+
+### Java autograding guides
+
+- [Simple autograding](https://docs.repl.it/Teams/SimpleAutograding-java)
+- [Fully automated autograding](https://docs.repl.it/Teams/CentralizedAutograder-java)

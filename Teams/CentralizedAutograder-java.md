@@ -48,18 +48,15 @@ Instead of creating each file manually, we've set up a `.zip` project for you to
 2. Call it exactly '.replit'
 3. Copy the below code and paste it into the '.replit' file
 
-
 ```bash
 language = "bash"
 run = "rm Main.java && wget https://i.ritzastatic.com/repl/replit-grading-server-java.zip && unzip -o replit-grading-server-java.zip"
 ```
-
 ![](https://i.ritzastatic.com/repl/codewithrepl/java-centralized-autograder/download-zip-bash.png)
 
 This removes the default `Main.java` file, downloads the zip template, and unzips it. It will also overwrite the `.replit` file you just created with one to run the new project instead.
 
 Press the `Run` button and you should see a bunch of new files appear.
-
 
 ### Creating the tests
 
@@ -99,7 +96,6 @@ public class ExampleTest {
     assertEquals(1, new Example().subtract(-2, -3), "-2 - -3");
   }
 }
-
 ```
 
 These are the four tests that will be automatically run against our students' submitted code, so modify them or add more as needed.
@@ -126,6 +122,7 @@ On your teams page, create a new project. This will be specific to a single assi
 1. Create new file 
 2. Call it '.replit'
 3. Copy the below code and paste it in the '.replit' file
+
 ```bash
 language = "bash"
 run = "rm Main.java && wget https://i.ritzastatic.com/repl/replit-autograding-assignment-template-java.zip && unzip -o replit-autograding-assignment-template-java.zip"
