@@ -32,7 +32,7 @@ We'll start by creating the grading server. We don't want to share this code for
 4. Make a note to remind yourself and other admins not to publish this project
 5. Press the Create button
 
-![](https://i.ritzastatic.com/images/ecf49cbb731d4b15aa00d588457528c3/create-server-template.png)
+![](/images/teams/CentralizedAutograder-python/create-project-python.png)
 
 Our grading server will consist of a few different components, namely:
 
