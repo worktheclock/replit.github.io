@@ -7,7 +7,7 @@ If you teach a programming course and wish that you could build a robot to grade
 Autograding is done by having unit tests automatically execute your students' code with pre-specified inputs and check if the outputs are as expected. 
 
 Specifically, we'll cover:
-* Setting up templates and permissions on Repl.it Teams for Education  
+* Setting up projects and permissions on Repl.it Teams for Education  
 * Creating a skeleton assignment for your students to work on
 * Creating tests to check your students' submissions automatically
 * Running these tests with PyTest.
@@ -24,34 +24,34 @@ In this guide, we'll show you how to set up partial auto-grading: you'll execute
 
 In theory, students could receive their grade automatically too, minutes after they submit. In the version we build though, only you, the teacher, will get the summary of grades, so that you can check these, add any personalised comments, and then share with your students at your convenience.
 
-## Understanding Repl.it teams: Admins, members and templates
-Before we get started with building the autograded solution, you should have a good understanding of some concepts from Repl.it teams. Specifically, we'll be using different roles (admin and member) and **templates**. You can skip this section if you're already familiar with how these work.
+## Understanding Repl.it teams: Admins, members and projects
+Before we get started with building the autograded solution, you should have a good understanding of some concepts from Repl.it teams. Specifically, we'll be using different roles (admin and member) and **projects**. You can skip this section if you're already familiar with how these work.
 
 ### The admin and member roles in Repl.it teams
 
 If you're using Teams for Education, you should make sure that you're added as an 'owner' or 'admin' while all of your students are 'members'.
 
-This means that you will be able to see all submissions (called 'forks') of the homework, while your students will only be able to see the skeleton (or 'template' as described below) that you provide.
+This means that you will be able to see all submissions (called 'forks') of the homework, while your students will only be able to see the skeleton (or 'project' as described below) that you provide.
 
 ![](https://static.ritza.co/repl/teachers-01-autograding/01-member-roles.png)
 
-### Understanding templates
+### Understanding projects
 
-Templates let you create a repl that might have different variants. For example, you can add the homework questions and skeleton code to a template and each student can then easily create their own version of this.
+Projects let you create a repl that might have different variants. For example, you can add the homework questions and skeleton code to a project and each student can then easily create their own version of this.
 
-* Admins and owners can edit the main copy of the template; any changes they make will be seen by any student who creates a copy.
-* Once the template is published, members (students) can only see the template and create their own copy to work on their submission. They cannot edit the main copy.
-* People outside the team cannot see the template at all.
+* Admins and owners can edit the main copy of the project; any changes they make will be seen by any student who creates a copy.
+* Once the project is published, members (students) can only see the project and create their own copy to work on their submission. They cannot edit the main copy.
+* People outside the team cannot see the project at all.
 
-Only admins can see the all forks of a template. This means that students cannot see each other's work, which helps prevent plagiarism.
+Only admins can see the all forks of a project. This means that students cannot see each other's work, which helps prevent plagiarism.
 
-## Create your first template
+## Create your first project
 
-Create a template for the homework assignment you want to prepare and add some details to help you and your students identify it. You can also specify what programming language to use. In this exampe, we'll use Python.
+Create a project for the homework assignment you want to prepare and add some details to help you and your students identify it. You can also specify what programming language to use. In this exampe, we'll use Python.
 
 ![](https://static.ritza.co/repl/teachers-01-autograding/02-create-a-template.png)
 
-Hit the create button and you'll be taken to a normal repl but with some additional features. Note the 'publish template' button in the top right that we'll use later.
+Hit the create button and you'll be taken to a normal repl but with some additional features. Note the 'publish project' button in the top right that we'll use later.
 
 ## Writing a skeleton homework assignment
 
@@ -116,7 +116,7 @@ To run the tests, we'll use PyTest, which is a Python package. Install it by:
 
 ![](https://static.ritza.co/repl/teachers-01-autograding/05-clicking-install.png)
 
-Because we installed PyTest in the main version of the template, it will automatically be installed in students' versions the first time they run code, so they won't have to complete these steps in their copies.
+Because we installed PyTest in the main version of the project, it will automatically be installed in students' versions the first time they run code, so they won't have to complete these steps in their copies.
 
 ## Running the tests
 
@@ -140,7 +140,7 @@ Before students can see and submit this homework you need to 'publish' it. Do th
 
 ![](https://static.ritza.co/repl/teachers-01-autograding/08-publishing-template.png)
 
-Now slide the button across to 'published' and your students can access the template. They will also get a notification in Repl.it that a new template has been published, and you will similarly see a notification once they fork and submit.
+Now slide the button across to 'published' and your students can access the project. They will also get a notification in Repl.it that a new project has been published, and you will similarly see a notification once they fork and submit.
 
 ![](https://static.ritza.co/repl/teachers-01-autograding/09-publishing-2.png)
 
@@ -148,7 +148,7 @@ Now slide the button across to 'published' and your students can access the temp
 
 To experience the process from your students' perspective, sign into a normal 'member' account that's part of your team plan. You can use a different web browser or incognito window to stay signed into your teacher account at the same time.
 
-You'll see all of your published templates but no `edit` button. Instead there'll be a `fork template` button which is the first thing a student needs to press to begin the homework assignment.
+You'll see all of your published projects but no `edit` button. Instead there'll be a `start project` button which is the first thing a student needs to press to begin the homework assignment.
 
 ![](https://static.ritza.co/repl/teachers-01-autograding/10-forking-a-template.png)
 
@@ -160,7 +160,7 @@ Once the student is satisfied, they can press the `submit` button in the top rig
 
 ## Viewing all submissions as a teacher
 
-Back in your teacher account, navigate to the team dashboard and find the relevant template. Press the `View forks` button.
+Back in your teacher account, navigate to the team dashboard and find the relevant project. Press the `View forks` button.
 
 ![](https://static.ritza.co/repl/teachers-01-autograding/12-viewing-forks.png)
 

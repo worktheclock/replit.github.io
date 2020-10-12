@@ -54,7 +54,7 @@ run = "rm Main.java && wget https://i.ritzastatic.com/repl/replit-grading-server
 
 ![](https://i.ritzastatic.com/repl/codewithrepl/java-centralized-autograder/download-zip-bash.png)
 
-This removes the default `Main.java` file, downloads the zip template, and unzips it. It will also overwrite the `.replit` file you just created with one to run the new project instead.
+This removes the default `Main.java` file, downloads the zip project, and unzips it. It will also overwrite the `.replit` file you just created with one to run the new project instead.
 
 Press the `Run` button and you should see a bunch of new files appear.
 
