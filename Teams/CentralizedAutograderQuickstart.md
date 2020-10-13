@@ -4,11 +4,20 @@ This is the shortcut guide to the [full walkthrough on how to set up a centraliz
 
 ## Creating the grading server
 1. Create a new project for the server in your Team account. Make sure that you **do not** publish this project, as it will host students' work.
-2. Create each of the files that you find in [this example autograder server repl](https://repl.it/@ritza/grading-server#main.py) in your private project and copy the contents of each file across as well. Hit the `Run` button and take note of the URL.
+2. Create a file called `.replit` and add the following code. Then press the `Run` button.
+
+```bash
+language = "bash"
+run = "rm main.py && wget https://github.com/replit/replit.github.io/raw/master/static/zip-template-repls/replit-autograding-server-python.zip && unzip -o replit-autograding-server-python.zip && rm .replit"
+```
 
 ## Create the assignment
 1. Create another new project in your Team account. This one you will publish to students.
-2. Create each of the files that you find in [this example assignment repl](https://repl.it/@ritza/autograding-assignment-template), and copy the contents of each file.
+2. Create a file called `.replit` and add the following code. Then press the `Run` button.
+```bash
+language = "bash"
+run = "rm main.py && wget https://github.com/replit/replit.github.io/raw/master/static/zip-template-repls/replit-autograding-assignment-template-python.zip && unzip -o replit-autograding-assignment-template-python.zip && rm .replit"
+```
 3. Modify the `url` variable in the `submit.py` file to match the one you saw when you ran your server repl.
 
 ## Make it your own

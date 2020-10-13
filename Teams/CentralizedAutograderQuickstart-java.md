@@ -8,7 +8,7 @@ This is the shortcut guide to the [full walkthrough on how to set up a centraliz
 
 ```bash
 language = "bash"
-run = "rm Main.java && wget https://i.ritzastatic.com/repl/replit-grading-server-java.zip && unzip -o replit-grading-server-java.zip"
+run = "rm Main.java && wget https://github.com/replit/replit.github.io/raw/master/static/zip-template-repls/replit-autograding-server-java.zip && unzip -o replit-autograding-server-java.zip"
 ```
 
 ## Create the assignment
@@ -16,7 +16,7 @@ run = "rm Main.java && wget https://i.ritzastatic.com/repl/replit-grading-server
 2. Create a file called `.replit` and add the following code. Then press the `Run` button.
 ```bash
 language = "bash"
-run = "rm Main.java && wget https://i.ritzastatic.com/repl/replit-autograding-assignment-template-java.zip && unzip -o replit-autograding-assignment-template-java.zip"
+run = "rm Main.java && wget https://github.com/replit/replit.github.io/raw/master/static/zip-template-repls/replit-autograding-assignment-template-java.zip && unzip -o replit-autograding-assignment-template-java.zip"
 ```
 3. Modify the url in the `go.sh` file to point to the server repl that you created in the previous step.
 
