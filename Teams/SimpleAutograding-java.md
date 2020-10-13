@@ -35,7 +35,7 @@ If you're using Teams for Education, you should make sure that you're added as a
 
 This means that you will be able to see all student versions of the homework, while your students will only be able to see the skeleton project that you provide.
 
-![](https://static.ritza.co/repl/teachers-01-autograding/01-member-roles.png)
+![](/images/teamsForEducation/simple-autograding-java/01-manage-team.png)
 
 ### Understanding projects
 
@@ -49,9 +49,9 @@ Only admins can see the all forks of a project. This means that students cannot 
 
 ## Create your first project
 
-Create a project for the homework assignment you want to prepare and add some details to help you and your students identify it. You can also specify what programming language to use. In this exampe, we'll use Java.
+Create a project for the homework assignment you want to prepare and add some details to help you and your students identify it. You can also specify what programming language to use. In this example, we'll use Java.
 
-![](https://i.ritzastatic.com/images/fc1d00914bd84006830f7538a508ed6b/02-create-a-template-java.png)
+![](/images/teamsForEducation/simple-autograding-java/02-create-project.png)
 
 Hit the create button and you'll be taken to a normal repl but with some additional features. Note the 'publish project' button in the top right that we'll use later.
 
@@ -97,11 +97,11 @@ In this example, we are only asking students to create two basic functions: `add
 
 If you need to provide more comprehensive instructions you can create a [markdown](https://en.wikipedia.org/wiki/Markdown) file from within the repl by pressing the `add file` button in the files pane and calling it `README.md`. Markdown files have two modes, "edit" and "preview", so your students will be able to see basic formatting like links or bullet points and Repl.it will automatically display the `README.md` file when the student opens up the project.
 
-![](https://i.ritzastatic.com/images/3df7b3343066420f8bba6bfc3ecc0996/autograding-example.png)
+![](/images/teamsForEducation/simple-autograding-java/03-instructions-readme.png)
 
 If you already have the instructions in a different format such as PDF, you can upload the file from your local machine and students will be able to view it directly within the Repl.it interface.
 
-![](https://i.ritzastatic.com/images/8805061de511412cb53916e9d783fc4f/autograding-upload.png)
+![](/images/teamsForEducation/simple-autograding-java/04-upload-instructions-file.png)
 
 ## Installing JUnit
 
@@ -112,7 +112,7 @@ To run the tests, we'll use JUnit. Repl.it can import JUnit automatically but yo
 3. clicking on `org.hamcrest:hamcrest` from the results
 4. clicking the plus button to install the package.
 
-![](https://i.ritzastatic.com/images/5c771129e8a94730aa3cda880aaabe3c/03-installing-hamcrest.png)
+![](/images/teamsForEducation/simple-autograding-java/05-instsall-hamcrest.png)
 
 Because we installed hamcrest in the main version of the project, it will automatically be installed in students' versions the first time they run code, so they won't have to complete these steps in their copies.
 
@@ -122,7 +122,7 @@ We call JUnit in our `main()` function, which in turn finds the tests (labelled 
 
 Hit the `Run` button, and you should see the tests execute. The code is deliberately broken (it returns `0` for all inputs), so the tests fail as expected.
 
-![](https://i.ritzastatic.com/images/1d8eeaa2572d4925b9c1252485e590d6/tests-failure.png)
+![](/images/teamsForEducation/simple-autograding-java/06-run-test.png)
 
 
 
@@ -132,11 +132,11 @@ This means that our setup is working: it's the students' job to fix the function
 
 Before students can see and submit this homework you need to 'publish' it. Do that now by pressing the button in the top right.
 
-![](https://i.ritzastatic.com/images/62a26482373d4a2288ef60eeb0a88993/publish-project.png)
+![](/images/teamsForEducation/simple-autograding-java/07-publish-project.png)
 
 Now slide the button across to 'published' and your students can access the project. They will also get a notification in Repl.it that a new project has been published, and you will similarly see a notification once they fork and submit.
 
-![](https://i.ritzastatic.com/images/3d14c163ebf142fd9614c7103426a4db/publish-2.png)
+![](/images/teamsForEducation/simple-autograding-java/08-edit-project-to-published.png)
 
 ## Submitting your homework as a student
 
@@ -146,11 +146,11 @@ You'll see all of your published projects but no `edit` button. Instead there'll
 
 The student will also get a notification (as soon as you published the project, but not when you created it).
 
-![](https://i.ritzastatic.com/images/a860659d6d7648ad93252f5ef9a0fd7d/student-start-project.png)
+![](/images/teamsForEducation/simple-autograding-java/09-notifications-new-project.png)
 
 The student can now make changes to the code. In this example, they fill out the return statements. Note how `a` and `b` are in the wrong order in the subtract function: the correct answer is `return a - b`. 
 
-![](https://i.ritzastatic.com/images/e5476917f202426f9fec7e5d603afda0/student-submit.png)
+![](/images/teamsForEducation/simple-autograding-java/10-submit-assignment.png)
 
 Once the student is satisfied, they can press the `submit` button in the top right.
 
@@ -158,15 +158,15 @@ Once the student is satisfied, they can press the `submit` button in the top rig
 
 Back in your teacher account, navigate to the team dashboard and find the relevant project. Press the `View submissions` button.
 
-![](https://i.ritzastatic.com/images/27693a4ec240409186e4ce8cf15bdb2b/view-submissions.png)
+![](/images/teamsForEducation/simple-autograding-java/11-view-submissions.png)
 
 You'll be taken to a page where you can see all versions of this assignment. In this example, we only see one (from the test we created above). Once your students start forking the assignment you'll see more, and each of them will be labeled as "submitted" or "unsubmitted", depending on whether or not the student has pressed the `submit` button.
 
-![](https://i.ritzastatic.com/images/809e5d3ad88a44f986ee1b9163e828a0/viewing-submissions.png)
+![](/images/teamsForEducation/simple-autograding-java/12-projects-submisions-page.png)
 
 Press "View repl" and hit the `Run` button. You'll see that one of the tests passes and the other fails.
 
-![](https://i.ritzastatic.com/images/10e8194d531843a982ea30771766685e/one-failure.png).
+![](/images/teamsForEducation/simple-autograding-java/13-test-results.png).
 
 Once your students have each created and submitted the project, you can open each of the students' versions and hit `Run` to easily see a summary of how many tests they passed and what mistakes they made. 
 
