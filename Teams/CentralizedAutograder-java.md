@@ -269,7 +269,7 @@ In each of these folders, you can see the code that was submitted.
 
 You can also see `report.md` has been generated, with details of the two submissions (who submitted them and when) and their calculated grades.
 
-![](images/teamsForEducation/centralized-autograder-java/10-java-example-report.png)
+![](/images/teamsForEducation/centralized-autograder-java/10-java-example-report.png)
 
 ## Publishing the project for students to use
 
