@@ -291,7 +291,7 @@ Change the URL to the one that you copied in the final step of the server setup,
 
 To make sure that everything works as expected, run the project. It's still in test mode, so it should run the two functions with the example inputs and display the output. Because we only have the starter code, we can see that the functions don't work yet.
 
-![](replit.github.io/static/images/teamsForEducation/centralized-autograder-python/05-first-test.png)
+![](/images/teamsForEducation/centralized-autograder-python/05-first-test.png)
 
 Now fill out the two functions so that they look as follows. Note that we have a deliberate error in the `subtract()` function to make sure that our grading is working as expected.
 
@@ -307,7 +307,7 @@ def subtract(a, b):
 
 Hit `Run` again and you should see that the functions return results now.
 
-![](replit.github.io/static/images/teamsForEducation/centralized-autograder-python/06-test-mode.png)
+![](/images/teamsForEducation/centralized-autograder-python/06-test-mode.png)
 
 Uncomment the `# MODE = "SUBMIT"` line and press `Run` again. This time it should submit the solution to the grader and return a confirmation message.
 
