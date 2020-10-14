@@ -81,8 +81,8 @@
         "slug": "Invitations"
       },
 						{
-        "name": "Assignment Workflow",
-        "slug": "Assignments"
+        "name": "Project Workflow",
+        "slug": "Projects"
       },
 			{
         "name": "Classroom Material",
@@ -105,7 +105,7 @@
         "slug": "CentralizedAutograder"
       },
 			{
-        "name": "Example Enrichment Assignment",
+        "name": "Example Enrichment Project",
         "slug": "EnrichmentHomework"
       }
     ]
