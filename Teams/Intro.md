@@ -6,7 +6,7 @@
 
 Please read our recent [blog post](https://blog.repl.it/teams-for-education) for more details.
 
-In this article, you'll learn how to sign up for a team and some of the core concepts. Teams (and this documentation) is a work-in-progress, so expect many changes and improvements over the next weeks and months.
+In this article, you'll learn how to sign up for a team and some of the core concepts. Teams (and this documentation) is still in Beta, so expect many changes and improvements over the next weeks and months.
 
 ## Creating a team
 
