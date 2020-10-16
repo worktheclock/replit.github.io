@@ -1,10 +1,12 @@
-# Building a centralised autograder with Repl.it
+# Building a centralized autograder (Java)
+
+[There is also a Python version of this guide](./CentralizedAutograder)
 
 In a [previous guide](./SimpleAutograding-java) we built a basic autograding solution that could automatically run and test your students' assignments. However, there were still some manual steps involved: you needed to navigate to each student's fork of the assignment and kick off the tests manually.
 
 In this guide, we'll show you how to take it a step further and build a centralised grading server. Your students will be able to submit their assignments to this server, and each submission will automatically kick off the tests, assign a grade, and create a summary report of submissions and grades for you to review.
 
-This guide shows you how to build the solution step-by-step. If you just want to get it up and running as quickly as possible, you can follow the [quickstart guide](https://replitgithubio-1.ritza.repl.co/teachers/building-centralized-autograder-quickstart) instead which shows you how to get started from our project repls.
+This guide shows you how to build the solution step-by-step. If you just want to get it up and running as quickly as possible, you can follow the [quickstart guide](./CentralizedAutograderQuickstart-java) instead which shows you how to get started from our project repls.
 
 Note that you'll need a subscription to [Teams for Education](https://repl.it/teams) to follow this guide as it is presented, but you should also be able to adapt it to run using a normal Repl.it account if you need.
 
@@ -46,18 +48,15 @@ Instead of creating each file manually, we've set up a `.zip` project for you to
 2. Call it exactly '.replit'
 3. Copy the below code and paste it into the '.replit' file
 
-
 ```bash
 language = "bash"
 run = "rm Main.java && wget https://i.ritzastatic.com/repl/replit-grading-server-java.zip && unzip -o replit-grading-server-java.zip"
 ```
-
 ![](https://i.ritzastatic.com/repl/codewithrepl/java-centralized-autograder/download-zip-bash.png)
 
 This removes the default `Main.java` file, downloads the zip template, and unzips it. It will also overwrite the `.replit` file you just created with one to run the new project instead.
 
 Press the `Run` button and you should see a bunch of new files appear.
-
 
 ### Creating the tests
 
@@ -97,7 +96,6 @@ public class ExampleTest {
     assertEquals(1, new Example().subtract(-2, -3), "-2 - -3");
   }
 }
-
 ```
 
 These are the four tests that will be automatically run against our students' submitted code, so modify them or add more as needed.
@@ -124,6 +122,7 @@ On your teams page, create a new project. This will be specific to a single assi
 1. Create new file 
 2. Call it '.replit'
 3. Copy the below code and paste it in the '.replit' file
+
 ```bash
 language = "bash"
 run = "rm Main.java && wget https://i.ritzastatic.com/repl/replit-autograding-assignment-template-java.zip && unzip -o replit-autograding-assignment-template-java.zip"
@@ -196,7 +195,7 @@ if cat Example.java | grep -q "ReadyForSubmission=YES"; then
   curl -X POST \
        -H "Content-Type: multipart/form-data" \
        -F "codefile=@Example.java" \
-       https://ritzaautograder.paultomlin.repl.co
+       https://newURLautograder.username.repl.co
 else
   javac Example.java
   java Example
