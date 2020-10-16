@@ -84,6 +84,11 @@
         "name": "Project Workflow",
         "slug": "Projects"
       },
+						{
+        "name": "Annotations and Feedback",
+        "slug": "Annotations"
+      },
+
 			{
         "name": "Classroom Material",
         "slug": "Notes"
