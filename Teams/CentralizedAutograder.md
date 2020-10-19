@@ -24,12 +24,12 @@ The grading server will not be visible to students, so they will still not be ab
 
 ## Setting up the grading server
 
-We'll start by creating the grading server. We don't want to share this code for students as it will also host copies of their submitted assignments, so we'll have to make sure to **not publish** this template.
+We'll start by creating the grading server. We don't want to share this code for students as it will also host copies of their submitted assignments, so we'll have to make sure to **not publish** this project.
 
-1. Press the 'create a template' button on your team page
+1. Press the 'create a project' button on your team page
 2. Choose Python as the language
 3. Call it 'grading-server'
-4. Make a note to remind yourself and other admins not to publish this
+4. Make a note to remind yourself and other admins not to publish this project
 5. Press the Create button
 
 ![](https://i.ritzastatic.com/images/ecf49cbb731d4b15aa00d588457528c3/create-server-template.png)
@@ -96,7 +96,7 @@ def run_tests(subdir):
     pytest.main([subdir, "-p", "no:cacheprovider"])
 ```
 
-The first function, `extract_student_number` reads the first line of the submitted code file and looks for a student number. In the template we prepare later, we'll show students how to format this correctly
+The first function, `extract_student_number` reads the first line of the submitted code file and looks for a student number. In the assignment project we prepare later, we'll show students how to format this correctly
 
 The second function `save_submission` creates a new directory on the server using the student number and populates it with the following files:
 
@@ -200,11 +200,11 @@ That's it for our server. Press the `Run` button and your server should start ru
 
 ## Setting up the assignment 
 
-Now that we have a server, we need to build the other half: the assignment template for students to fork and submit.
+Now that we have a server, we need to build the other half: the assignment project for students to fork and submit.
 
-### Create a new template 
+### Create a new project 
 
-On your teams page, create a new template. This will be specific to a single assignment for your students so call it something like "Grade 10 Python homework week 1" so you can keep track of different assignments for different classes.
+On your teams page, create a new project. This will be specific to a single assignment for your students so call it something like "Grade 10 Python homework week 1" so you can keep track of different assignments for different classes.
 
 ![](https://i.ritzastatic.com/175ab1509be64763bcb7f38662dad9af/create-template.png)
 
@@ -267,7 +267,7 @@ The `main()` function checks what mode we are in and either runs the code locall
 
 ### Creating the submission script
 
-Create a new file in the template called `submit.py` and add the following code.
+Create a new file in the project called `submit.py` and add the following code.
 
 ```python
 import requests
@@ -289,7 +289,7 @@ Change the URL to the one that you copied in the final step of the server setup,
 
 ### Testing it all out
 
-To make sure that everything works as expected, run the template. It's still in test mode, so it should run the two functions with the example inputs and display the output. Because we only have the starter code, we can see that the functions don't work yet.
+To make sure that everything works as expected, run the project. It's still in test mode, so it should run the two functions with the example inputs and display the output. Because we only have the starter code, we can see that the functions don't work yet.
 
 ![](https://i.ritzastatic.com/ead348c62baa4a28a08b86a42d8a6325/running-template-starter.png)
 
@@ -348,13 +348,13 @@ You can also see `report.md` has been generated, with details of the two submiss
 
 ![](https://i.ritzastatic.com/1ea3403b1f18430ab434284c9d080933/example-report.png)
 
-## Publishing the template for students to use
+## Publishing the project for students to use
 
-Once you are happy with the assignment, press the "publish template" button in the top right. Students will get a notification that their homework is ready and be able to create a fork, modify the code, and submit it to the grading server.
+Once you are happy with the assignment, press the "publish project" button in the top right. Students will get a notification that their homework is ready and be able to create a fork, modify the code, and submit it to the grading server.
 
 ![](https://i.ritzastatic.com/images/07a64f590dd24ae8b6e8ec9349e01cdd/publish-template.png)
 
-Leave the grading server running (don't press the "Stop" button) so that the students can submit when they are ready. You can visit your server URL (that you pasted into the `submit.py` file) to make sure that it stays up (it should display "OK" if everything is running as expected. If you see an error or the page does not load, navigate back to the unpublished template file and hit the `Run` button again.)
+Leave the grading server running (don't press the "Stop" button) so that the students can submit when they are ready. You can visit your server URL (that you pasted into the `submit.py` file) to make sure that it stays up (it should display "OK" if everything is running as expected. If you see an error or the page does not load, navigate back to the unpublished project file and hit the `Run` button again.)
 
 ## Where next?
 
