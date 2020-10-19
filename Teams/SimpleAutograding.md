@@ -1,4 +1,6 @@
-# Create your first autograded Python homework with Repl.it
+# Create your first autograded Python homework
+
+There is also a [Java version of this guide](./SimpleAutograding-java).
 
 **Note: you need a subscription to Repl.it's [Teams for Education](https://repl.it/teams) as well as a team where you have owner or admin privileges in order to follow this guide.**
 
