@@ -202,7 +202,7 @@ else
 fi
 ```
 
-Change the URL to the one that you copied in the final step of the server setup, as this is where the students' assignments will be submitted.
+Change the URL `https://newURLautograder.username.repl.co` to the one that you copied in the final step of the server setup, as this is where the students' assignments will be submitted.
 
 ### Testing it all out
 
