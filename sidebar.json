@@ -136,52 +136,8 @@
     "slug": "classrooms",
     "contents": [
       {
-        "name": "Introduction to Classrooms",
-        "slug": "intro"
-      },
-      {
-        "name": "Assignments and Submissions",
-        "slug": "assignment-submission"
-      },
-      {
-        "name": "Projects",
-        "slug": "projects"
-      },
-      {
-        "name": "Automatic Grading",
-        "slug": "autograding"
-      },
-      {
-        "name": "Managing Classrooms",
-        "slug": "management"
-      },
-      {
-        "name": "Assignments in Markdown",
-        "slug": "markdown"
-      },
-      {
         "name": "Exporting Classrooms",
         "slug": "exports"
-      },
-      {
-        "name": "Classroom Webhooks",
-        "slug": "webhooks"
-      },
-      {
-        "name": "Sharing Classrooms",
-        "slug": "sharing"
-      },
-      {
-        "name": "Classroom Community",
-        "slug": "community"
-      },
-      {
-        "name": "Embedding Classrooms",
-        "slug": "embed"
-      },
-      {
-        "name": "Pricing FAQ",
-        "slug": "pricing-faq"
       }
     ]
   },
@@ -311,3 +267,4 @@
     ]
   }
 ]
+
