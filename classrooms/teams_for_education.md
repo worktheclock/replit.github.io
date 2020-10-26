@@ -64,8 +64,8 @@ When the students are done they click "submit" in the IDE header, which will not
 
 You can add arbitrary files to your repl, which means you can add PDFs, images, or any supplemental material. However, we recommend to start your students off with a README.md a file. It's the standard documentation and entry-point file for code repositories and when Repl.it sees that file it will display it first. Here is an [example repl with a README](https://repl.it/@amasad/python-with-readme).
 
-## Testing and assesments
+## Testing and assessments
 
-Since Repl.it is a general-purpose IDE that supports third-party packages in many languages, you can integrate testing frameworks into your projects which can be used for assesments. 
+Since Repl.it is a general-purpose IDE that supports third-party packages in many languages, you can integrate testing frameworks into your projects which can be used for assessments. 
 
 We've written a tutorial for how to do testing in Python using PyTest that you can read [here](https://docs.repl.it/tutorials/09-test-driven-development).
