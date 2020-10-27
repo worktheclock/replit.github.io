@@ -45,7 +45,7 @@ Projects let you create a repl that might have different variants. For example, 
 * Once the project is published, members (students) can only see the project and create their own copy to work on their submission. They cannot edit the main copy.
 * People outside the team cannot see the project at all.
 
-Only admins can see the all forks of a project. This means that students cannot see each other's work, which helps prevent plagiarism.
+Only admins can see all submissions of a project. This means that students cannot see each other's work, which helps prevent plagiarism.
 
 ## Create your first project
 
@@ -134,7 +134,7 @@ Before students can see and submit this homework you need to 'publish' it. Do th
 
 ![](/images/teamsForEducation/simple-autograding-java/07-publish-project.png)
 
-Now slide the button across to 'published' and your students can access the project. They will also get a notification in Repl.it that a new project has been published, and you will similarly see a notification once they fork and submit.
+Now slide the button across to 'published' and your students can access the project. They will also get a notification in Repl.it that a new project has been published, and you will similarly see a notification once they start and submit.
 
 ![](/images/teamsForEducation/simple-autograding-java/08-edit-project-to-published.png)
 
@@ -160,7 +160,7 @@ Back in your teacher account, navigate to the team dashboard and find the releva
 
 ![](/images/teamsForEducation/simple-autograding-java/11-view-submissions.png)
 
-You'll be taken to a page where you can see all versions of this assignment. In this example, we only see one (from the test we created above). Once your students start forking the assignment you'll see more, and each of them will be labeled as "submitted" or "unsubmitted", depending on whether or not the student has pressed the `submit` button.
+You'll be taken to a page where you can see all versions of this assignment. In this example, we only see one (from the test we created above). Once your students start the assignment you'll see more, and each of them will be labeled as "submitted" or "unsubmitted", depending on whether or not the student has pressed the `submit` button.
 
 ![](/images/teamsForEducation/simple-autograding-java/12-projects-submisions-page.png)
 

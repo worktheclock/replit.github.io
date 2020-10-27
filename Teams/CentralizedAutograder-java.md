@@ -2,7 +2,7 @@
 
 [There is also a Python version of this guide](./CentralizedAutograder)
 
-In a [previous guide](./SimpleAutograding-java) we built a basic autograding solution that could automatically run and test your students' assignments. However, there were still some manual steps involved: you needed to navigate to each student's fork of the assignment and kick off the tests manually.
+In a [previous guide](./SimpleAutograding-java) we built a basic autograding solution that could automatically run and test your students' assignments. However, there were still some manual steps involved: you needed to navigate to each student's submission of the assignment and kick off the tests manually.
 
 In this guide, we'll show you how to take it a step further and build a centralised grading server. Your students will be able to submit their assignments to this server, and each submission will automatically kick off the tests, assign a grade, and create a summary report of submissions and grades for you to review.
 
@@ -14,11 +14,11 @@ We assume that your students are learning Java. We'll give an example Java assig
 
 ## Overview of how the solution works
 
-The basic workflow is similar to in the previous guide, but this time you won't need to look at each student's fork individually. Instead, students will submit them to a centralised server, and you can view their code there, or just look at the summary report it will generate.
+The basic workflow is similar to in the previous guide, but this time you won't need to look at each student's submission individually. Instead, students will submit them to a centralised server, and you can view their code there, or just look at the summary report it will generate.
 
 ![](/images/teamsForEducation/centralized-autograder-java/01-solution-overview.png)
 
-After a student forks the assignment, they will be able to write their code, test it on their own, and then submit it when they are satisfied with their answers. 
+After a student starts the assignment, they will be able to write their code, test it on their own, and then submit it when they are satisfied with their answers. 
 
 The grading server will not be visible to students, so they will still not be able to view each other's work or grades.
 
@@ -109,7 +109,7 @@ Take note of the URL, which is based on your team and project name, as we'll nee
 
 ## Setting up the assignment 
 
-Now that we have a server, we need to build the other half: the assignment project for students to fork and submit.
+Now that we have a server, we need to build the other half: the assignment project for students to start and submit.
 
 ### Create a new project 
 
@@ -242,7 +242,7 @@ Fix the subtract function by swapping `b` and `a` as follows and submit it one m
   }
 ```
 
-Finally, change all of the code back to how it was as this is the version that students will fork and we don't want them to have the solutions. Change the ReadyForSubmission=YES line to NO and change the return statements, replacing the  answers with `return = 0` instead.
+Finally, change all of the code back to how it was as this is the version that students will work on and we don't want them to have the solutions. Change the ReadyForSubmission=YES line to NO and change the return statements, replacing the  answers with `return = 0` instead.
 
 ```java
 // ReadyForSubmission=NO
@@ -273,7 +273,7 @@ You can also see `report.md` has been generated, with details of the two submiss
 
 ## Publishing the project for students to use
 
-Once you are happy with the assignment, press the "publish project" button in the top right. Students will get a notification that their homework is ready and be able to create a fork, modify the code, and submit it to the grading server.
+Once you are happy with the assignment, press the "publish project" button in the top right. Students will get a notification that their homework is ready and be able to start the project, modify the code, and submit it to the grading server.
 
 ![](/images/teamsForEducation/centralized-autograder-java/11-publish-asignment.png)
 
