@@ -52,7 +52,7 @@ Have you been hacked? It's only a matter of time if you haven't. Learn how to ke
 
 #### [Lesson 9: Building a web application with TDD](./09-test-driven-development)
 
-By this stage you'll have made a few mistakes. Learn the TDD way and how to write code that tests your other code to catch frustrating errors before they can hurt anyone. Repetitive jobs is what computers are best at after all.
+By this stage you'll have made a few mistakes. Learn the TDD way and how to write code that tests your other code to catch frustrating errors before they can hurt anyone. Repetitive jobs are what computers do best after all.
 
 #### [Lesson 10: Become an elite hacker with productivity hacks](./10-productivity-hacks)
 
