@@ -8,15 +8,16 @@ This is the shortcut guide to the [full walkthrough on how to set up a centraliz
 
 ```bash
 language = "bash"
-run = "rm main.py && wget https://github.com/replit/replit.github.io/raw/master/static/zip-template-repls/replit-autograding-server-python.zip && unzip -o replit-autograding-server-python.zip && rm .replit"
+run = "wget https://github.com/replit/replit.github.io/raw/master/static/zip-template-repls/replit-autograding-server-python.zip && unzip -o replit-autograding-server-python.zip && rm .replit"
 ```
 
 ## Create the assignment
 1. Create another new project in your Team account. This one you will publish to students.
 2. Create a file called `.replit` and add the following code. Then press the `Run` button.
+
 ```bash
 language = "bash"
-run = "rm main.py && wget https://github.com/replit/replit.github.io/raw/master/static/zip-template-repls/replit-autograding-assignment-template-python.zip && unzip -o replit-autograding-assignment-template-python.zip && rm .replit"
+run = "wget https://github.com/replit/replit.github.io/raw/master/static/zip-template-repls/replit-autograding-assignment-template-python.zip && unzip -o replit-autograding-assignment-template-python.zip && rm .replit"
 ```
 3. Modify the `url` variable in the `submit.py` file to match the one you saw when you ran your server repl.
 
