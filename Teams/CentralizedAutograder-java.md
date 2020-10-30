@@ -50,7 +50,7 @@ Instead of creating each file manually, we've set up a `.zip` project for you to
 
 ```bash
 language = "bash"
-run = "rm Main.java && wget https://i.ritzastatic.com/repl/replit-grading-server-java.zip && unzip -o replit-grading-server-java.zip"
+run = "rm Main.java && wget https://github.com/replit/replit.github.io/raw/master/static/zip-template-repls/replit-autograding-server-java.zip && unzip -o replit-grading-server-java.zip"
 ```
 ![](/images/teamsForEducation/centralized-autograder-java/03-download-zip-bash.png)
 
@@ -125,8 +125,9 @@ On your teams page, create a new project. This will be specific to a single assi
 
 ```bash
 language = "bash"
-run = "rm Main.java && wget https://i.ritzastatic.com/repl/replit-autograding-assignment-template-java.zip && unzip -o replit-autograding-assignment-template-java.zip"
+run = "rm Main.java && wget https://github.com/replit/replit.github.io/raw/master/static/zip-template-repls/replit-autograding-assignment-template-java.zip && unzip -o replit-autograding-assignment-template-java.zip"
 ```
+
 4. Run your application
 
 ![](/images/teamsForEducation/centralized-autograder-java/06-assignment-zip-bash.png)
