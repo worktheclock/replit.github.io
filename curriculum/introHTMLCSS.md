@@ -1,4 +1,4 @@
-# **HTML and CSS Curriculum Plan**
+# **Intro HTML and CSS Curriculum Plan**
 
 
 

@@ -267,6 +267,10 @@
       {
         "name": "Intro to HTML/CSS Teaching Curriculum",
         "slug": "introHTMLCSS"
+      },
+      {
+        "name": "Intro to SQL Teaching Curriculum",
+        "slug": "introSQL"
       }
     ]
   }

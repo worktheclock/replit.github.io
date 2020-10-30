@@ -1,4 +1,4 @@
-# **Python Curriculum Plan**
+# **Intro Python Curriculum Plan**
 
 
 
