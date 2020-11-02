@@ -2,6 +2,8 @@
 
 [There is also a Java version of this guide](./CentralizedAutograder-java)
 
+**Note:** ⚠️ ⚠️ This guide shows you how to set up a basic fully automated homework grader. It is intended as a proof-of-concept to showcase how to build similar projects on top of Repl.it. **It should not be used as-is in cases where data is important or sensitive. For example, it offers no protection against malicious students who could submit code similar to `import os; os.system("rm -rf /")` to break the server and delete or modify other students' submissions or grades.** Stay tuned for updated guides and sample repls that resolve these issues. ⚠️⚠️
+
 In a [previous guide](./SimpleAutograding) we built a basic autograding solution that could automatically run and test your students' assignments. However, there were still some manual steps involved: you needed to navigate to each student's submission of the assignment and kick off the tests manually.
 
 In this guide, we'll show you how to take it a step further and build a centralised grading server. Your students will be able to submit their assignments to this server, and each submission will automatically kick off the tests, assign a grade, and create a summary report of submissions and grades for you to review.
