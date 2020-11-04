@@ -20,7 +20,7 @@ You can find the entire curriculum, including Repl.it assignments, [here](https:
 
 ### **More Resources**
 
-- [Here](https://drive.google.com/file/d/1F1qO2ZLB8lxxFjYb7S7VyYj35QnlZPUK/view?usp=sharing) is a video overview of this course.
+- [Here](https://drive.google.com/file/d/1iQffSlt4VF2-usWgf2KdDXcfIMMpCc4Y/view?usp=sharing) is a video overview of this course.
 - Bronze level
   - [Learners' slides](https://docs.google.com/presentation/d/1zv-tk2k8AfdGFUAwzTEj7GUezwq63lHhRYFIaC2M8xA/edit?usp=sharing)
   - [Teacher's slides](https://docs.google.com/presentation/d/1mxtC5CjwbLpPZWQapL6OlqurZI7Nn1fnq9cwrTZP79g/edit?usp=sharing)
