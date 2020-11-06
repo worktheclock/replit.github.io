@@ -1,4 +1,4 @@
-# **Intro SQL Curriculum Plan**
+# **Intro SQL Curriculum**
 
 
 
@@ -36,7 +36,7 @@ You can find the entire curriculum, including Repl.it assignments, [here](https:
 - [SQL Cheat Sheet](https://docs.google.com/presentation/d/1-vY3QibA6nFm40k6tuNBvFUNNwjttpjX9Jl1YA-xazs/edit?usp=sharing)
 
 
-### **Our Awesome Creator**
+## **Our Awesome Creator**
 
 <img class="profile_pic" src="/images/curriculumImg/TScullion.jpg" width="300px"/>
 

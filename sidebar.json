@@ -265,6 +265,10 @@
         "slug": "introPython"
       },
       {
+        "name": "Intermediate Python Teaching Curriculum",
+        "slug": "intermediatePython"
+      },
+      {
         "name": "Intro to HTML/CSS Teaching Curriculum",
         "slug": "introHTMLCSS"
       },

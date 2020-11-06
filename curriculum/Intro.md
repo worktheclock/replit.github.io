@@ -1,7 +1,8 @@
-# **Free Curriculum Plans For Educators**
+# **Free Curriculum For Educators**
 
 ## Curricula
 - [Intro to Python](https://docs.repl.it/curriculum/introPython)
+- [Intermediate Python](https://docs.repl.it/curriculum/intermediatePython)
 - [Intro to HTML/CSS](https://docs.repl.it/curriculum/introHTMLCSS)
 - [Intro to SQL](https://docs.repl.it/curriculum/introSQL)
 - More to come! 

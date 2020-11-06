@@ -1,4 +1,4 @@
-# **Intro Python Curriculum Plan**
+# **Intro Python Curriculum**
 
 
 
@@ -37,10 +37,12 @@ Inside of this folder each of the 6 lessons will have its own folder along with 
 > 
 > **-High School Programming Teacher**
 
-### **Our Awesome Creator**
+## **Our Awesome Creator**
 
 <img class="profile_pic" src="/images/curriculumImg/andy.jpg" width="300px"/>
 
-Andy Colley:
+**Andy Colley:**
 
-Andy has been teaching age 11 - 18 Computer Science and ICT in Manchester, UK for 16 years. He's a Computing At School master teacher, a Lead Practitioner for teaching & learning and mentors trainee teachers. You can find him on twitter as [@MrAColley](https://twitter.com/mracolley) or hosting the [@LearningDust](https://twitter.com/learningdust) edtech podcast at [learningdust.com](https://www.learningdust.com/)>
+Andy has been teaching age 11 - 18 Computer Science and ICT in Manchester, UK  since 2004. He's a Computing At School master teacher, a Lead Practitioner for teaching & learning and mentors trainee teachers. You can find him on twitter as [@MrAColley](https://twitter.com/mracolley) or hosting the [@LearningDust](https://twitter.com/learningdust) edtech podcast at [learningdust.com](https://www.learningdust.com/).
+
+If you have any feedback, questions or comments about the resources please get in touch.  We’re excited about these resources and would love to hear from you.

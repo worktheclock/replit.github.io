@@ -1,4 +1,4 @@
-# **Intro HTML and CSS Curriculum Plan**
+# **Intro HTML and CSS Curriculum**
 
 
 
@@ -23,7 +23,7 @@ You can find the entire curriculum, including Repl.it assignments, [here](https:
 - [This](https://docs.google.com/presentation/d/1m2a0cbzz2hh9_A8U1ztuyoYuIc6eeTXSRAHd0ZT7-Y0/edit?usp=sharing) is the full powerpoint referenced in the curriculum.
 
 
-### **Our Awesome Creator**
+## **Our Awesome Creator**
 
 <img class="profile_pic" src="/images/curriculumImg/TScullion.jpg" width="300px"/>
 
