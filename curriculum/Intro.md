@@ -5,6 +5,7 @@
 - [Intermediate Python](https://docs.repl.it/curriculum/intermediatePython)
 - [Intro to HTML/CSS](https://docs.repl.it/curriculum/introHTMLCSS)
 - [Intro to SQL](https://docs.repl.it/curriculum/introSQL)
+- [Abstract Data Types](https://docs.repl.it/curriculum/abstractData)
 - More to come! 
 
 *Email us at contact@repl.it if you'd like to write curriculum for us. We have some budget available.*
