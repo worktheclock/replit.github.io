@@ -26,3 +26,8 @@ In addition you can find the following:
 ## About
 
 Thomas Bach is a former software developer and a teacher of 14 years. He has taught computer science, IT, and mathematics, both in the United States and internationally.
+
+<img class="profile_pic" src="/images/curriculumImg/tbach.png" width="100px"/>
+
+
+Contact: tsbach@gmail.com 
