@@ -30,4 +30,4 @@ Thomas Bach is a former software developer and a teacher of 14 years. He has tau
 <img class="profile_pic" src="/images/curriculumImg/tbach.png" width="100px"/>
 
 
-Contact: tsbach@gmail.com 
+Contact: tsbach [at] gmail 
