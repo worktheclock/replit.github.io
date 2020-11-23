@@ -64,11 +64,11 @@ run="wget https://i.ritzastatic.com/images/b70936a9f88446dd9216432498010869/repl
 
 Hit the run button. This will pull in the generic starter code for a student repl, but it still needs to be initialised with the student key that you got in the previous step.
 
-Create a file called exactly `.replit` and add the following code.
+The contents of the `.replit` file will now look as follows:
 
 ```bash
 lang="bash"
-run="python initialise.py <student_key>
+run="python initialise.py <student_key> && rm .replit"
 ```
 
 Replace `<student_key>` with the student key that you got in the previous step, which should look something like `1bc29b36f623ba82aaf6724fd3b16718`.
