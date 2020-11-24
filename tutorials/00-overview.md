@@ -10,6 +10,8 @@ Once you've completed Part 1 and Part 2, you'll be able to build nearly any proj
 
 Note that this set of lessons does not focus on teaching you to code, though we will explain some key concepts along the way. If you don't already know how to code, it's best to take this course in conjunction with a more traditional course. If you're not sure what to do next, jump right in and see if you can keep up. We're beginner friendly.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SDlrhS8O3kI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Part 1: The basics of Repl.it
 
 In this section of the course, you'll learn the basic of Repl.it. But that doesn't mean you won't build some fun stuff along the way.
