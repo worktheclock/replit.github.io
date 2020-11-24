@@ -1,5 +1,7 @@
 # Understanding the Repl.it IDE: a practical guide to building your first project with Repl.it
 
+This tutorial is also available [as a video](https://www.youtube.com/watch?v=SDlrhS8O3kI).
+
 Software developers can get pretty attached to their Integrated Development Environments (IDEs) and if you look for advice on which one to use, you'll find no end of people advocating strongly for one over another: VS Code, Sublime Text, IntelliJ, Atom, Vim, Emacs, and no shortage of others.
 
 In the end, an IDE is just a glorified text editor. It lets you type text into files and save those files, functionality that has been present in nearly all computers since those controlled by punch cards.
