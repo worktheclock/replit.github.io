@@ -2,7 +2,7 @@
 
 **Note: replgrader.com is currently in beta and has some limitations. It is actively being worked on. If you have any feedback or need help getting started, feel free to email gareth@ritza.co.**
 
-[ReplGrader.com](https://replgrader.com) is a free third-party grading service partnered with Repl.it. It provides very simple autograding of Python assignments. Here is a quickstart guide on how to use it, or header over to their site for more details.
+[ReplGrader.com](https://replgrader.com) is a free third-party grading service partnered with Repl.it. It provides very simple autograding of Python assignments. Here is a quickstart guide on how to use it, or head over to their site for more details.
 
 ## Create the grader repl
 Create a new Python project under your Teams account.
@@ -16,7 +16,7 @@ language="bash"
 run="wget https://replgrader.com/assets/grader-template.zip && unzip -o grader-template.zip && rm .replit" 
 ```
 
-This will expand all the files needed to run the grading interface as well as an example assignment file that you can expand for your students.
+This will pull in all the files needed to run the grading interface as well as an example assignment file that you can expand for your students.
 
 ![](/images/teamsForEducation/replgrader-com-structure.png)
 
