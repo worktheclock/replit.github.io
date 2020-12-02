@@ -22,9 +22,9 @@ This will pull in all the files needed to run the grading interface as well as a
 
 Modify the `assignment/main.py` and `assignment/test_main.py`. Students will receive a copy of the `main.py` file but the `test_main.py` file which contains the tests will be kept private. You can also modify the `README.md` file which will be distributed to students as the assignment instructions.
 
-Once you are happy with your assignment, press the "run" button and press the "submit assignment" button in the web interface. You'll be prompted in the console below the interface to enter your team name. Do this and press enter.
+Once you are happy with your assignment, press the "run" button and press the "submit assignment" button in the web interface.
 
-Once the assignment is submitted, copy the `student_key` from the manifest.json file as you will need this in the next step.
+After the assignment is submitted, copy the `student_key` from the manifest.json file as you will need this in the next step.
 
 ![](/images/teamsForEducation/replgrader-com-student-key.png)
 
