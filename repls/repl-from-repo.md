@@ -6,7 +6,7 @@ GitHub repositories can be run automatically on Repl.it. Head to https://repl.it
 
 After cloning for the first time, you will be prompted to configure a run command for your repl. For more information, see [.replit documentation](https://docs.repl.it/repls/dot-replit)
 
-## Adding a "Run on Repl.it badge"
+## Adding a "Run on Repl.it" badge
 
 <img style="height: 40px; width: 190px;" src='/images/repls/run-on-replit.svg'>
 
