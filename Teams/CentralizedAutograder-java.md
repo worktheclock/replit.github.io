@@ -52,7 +52,7 @@ Instead of creating each file manually, we've set up a `.zip` project for you to
 
 ```bash
 language = "bash"
-run = "rm Main.java && wget https://github.com/replit/replit.github.io/raw/master/static/zip-template-repls/replit-autograding-server-java.zip && unzip -o replit-grading-server-java.zip"
+run = "rm Main.java && wget https://github.com/replit/replit.github.io/raw/master/static/zip-template-repls/replit-autograding-server-java.zip && unzip -o replit-autograding-server-java.zip"
 ```
 ![](/images/teamsForEducation/centralized-autograder-java/03-download-zip-bash.png)
 
