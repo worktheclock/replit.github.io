@@ -32,7 +32,7 @@ const render = async (res, category, slug) => {
 	const cobj = t.find(c => c.slug === category);
 	const dobj = cobj.contents.find(d => d.slug === slug)
 
-	res.locals.title = `Repl.it - ${ dobj? dobj.name : 'unknown'}`;
+	res.locals.title = `Repl.it - ${ dobj? dobj.name : slug }`;
 	res.render('index.ejs');
 }
 
