@@ -6,7 +6,7 @@ If you need some inspiration to set homework assignments or enrichment projects 
 
 These are higher level guides and walkthrough tutorials that you can use as-is or adapt to your own needs.
 
-### [Create a Pinboard Project](https://docs.repl.it/Teams/PinboardProject)
+### [Create a Pinboard Project](./PinboardProject)
 
 This is a full tutorial on how to build a Pinboard clone with Repl.it. It focuses on front-end coding and uses examples that might appeal more to some girls when compared to traditional beginner coding project examples which tend to skew towards appealing more to boys.
 
@@ -14,7 +14,7 @@ This is a full tutorial on how to build a Pinboard clone with Repl.it. It focuse
 
 This is a higher-level guide on how to set a good enrichment assignment, using a PyGame project as an example. It contains starter code, example instructions, and some guidelines on what to look for in the solution.
 
-### [Teach your kid to code](https://docs.repl.it/Teams/TeachYourKid)
+### [Teach your kid to code](./TeachYourKid)
 
 This guide shows you how to get started with teaching your kid to code, showing examples of our different GUI libraries, including Pygame, Python Play, Turtle, and Basic.
 
