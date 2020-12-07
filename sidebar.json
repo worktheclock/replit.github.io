@@ -102,12 +102,8 @@
                 "slug": "Testing"
             },
             {
-                "name": "Example Enrichment Project",
-                "slug": "EnrichmentHomework"
-            },
-            {
-                "name": "Teach your kid to code",
-                "slug": "TeachYourKid"
+                "name": "Example Homework Assignments",
+                "slug": "HomeworkAssignments"
             }
         ]
     },
