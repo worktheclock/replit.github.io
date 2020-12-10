@@ -60,6 +60,16 @@ It's time to put everything we have learned together. You'll build a full web ap
 
 Have you seen the Matrix? Learn to be the Neo of coding by getting more than one cursor, using keyboard shortcuts, and all of the other productivity features that Repl.it offers. You'll be soon producing more code in less time.
 
+#### [Lesson 11: Keeping your data in check with the Repl.it database](./11-using-the-replit-database)
+
+Now that you are starting to build larger and more complicated applications, it is time to start using databases to keep your data clean and secure.
+
+#### [Lesson 12: Repl audio - control (or create) your music with code](./12-audio)
+
+Find, download, play, and control the volume of your music, all in code. If that's not enough, create your own music too.
+
+This is the part where you realize that the possibilities are endless while you learn how to control your music with code.
+
 ## Part 3: building your own projects
 
 Once you've gone through everything, you might think "but what should I build?". It's a common problem and we've got you covered. Choose your favourite projects from a list (or turn on the coffee machine, order some pizza, and get through them all). Once you've gone through the step-by-step guides you can easily modify or extend the projects to make them your own.
