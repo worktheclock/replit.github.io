@@ -229,6 +229,8 @@ Here we added a `volume` argument to our `play_note()` function so that we can p
 
 If you followed along you'll have your own version to extend, otherwise you can fork the media player repl below.
 
+*Note: Playing audio from the embedded repl below is not supported. To test out this repl, click "open in repl.it" at the top right of the embed window. The repl will open in a new window with a pop-up asking you to confirm audio activation.* 
+
 <iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-12-audio-player?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 The "Twinkle Twinkle Little Star" repl can be found at [https://repl.it/@GarethDwyer1/cwr-12-audio-twinkle-twinkle](https://repl.it/@GarethDwyer1/cwr-12-audio-twinkle-twinkle). 
