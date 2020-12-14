@@ -98,3 +98,22 @@ Build a machine-learning based text classifier. We skip the maths but show how y
 #### [Quicksort tutorial: Python implementation with line by line explanation](https://ritza.co/showcase/repl.it/quicksort-tutorial-python-implementation-with-line-by-line-explanation)
 Whether you're applying for jobs or just like algorithms, it's useful to understand how sorting works. In real projects, most of the time you'll just call `.sort()`, but here you'll build a sorter from scratch and understand how it works.
 
+## More tutorials 
+
+#### [Spotify API project 1: Simple online mixtape](https://mixtape-tutorial.datadesigns.repl.co/)
+
+During this hands-on tutorial you'll learn how to use Python to:
+ - collect data from web-based APIs
+ - create a data-driven web application
+
+You'll be working with the [Spotify API](https://developer.spotify.com/documentation/web-api/) to complete your own web app, using the [MixTape template](https://mixtape.datadesigns.repl.co/) and [Repl.it database](https://docs.repl.it/misc/database). Here's a [completed example](https://mixtape-example.datadesigns.repl.co/).
+ 
+#### [Spotify API project 2: Song seeder and analytics web app](https://seeder-tutorial.datadesigns.repl.co/)
+
+This tutorial follows on from the [MixTape tutorial](https://mixtape-tutorial.datadesigns.repl.co/)
+ - Object-oriented programming (creating classes and methods)
+ - Processing, aggregating and analysing data using `pandas`
+ - Data visualisation using `chartify` (a package based on `bokeh`)
+
+Here's an example of the [finished app](https://seeder.datadesigns.repl.co/).
+
