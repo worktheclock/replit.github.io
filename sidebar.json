@@ -234,6 +234,10 @@
                 "slug": "Intro"
             },
             {
+                "name": "Intro to Java Teaching Curriculum",
+                "slug": "introJava"
+            },
+            {
                 "name": "Intro to Python Teaching Curriculum",
                 "slug": "introPython"
             },

@@ -1,6 +1,7 @@
 # **Free Curriculum For Educators**
 
 ## Curricula
+- [Intro to Java](https://docs.repl.it/curriculum/introJava)
 - [Intro to Python](https://docs.repl.it/curriculum/introPython)
 - [Intermediate Python](https://docs.repl.it/curriculum/intermediatePython)
 - [Intro to HTML/CSS](https://docs.repl.it/curriculum/introHTMLCSS)
