@@ -8,7 +8,7 @@ We've written a tutorial for how to do testing in Python using PyTest that you c
 
 If you want a robot to help you grade your student's homework assignments, you can follow the guides below. We have demonstrated several different ways to do autograding with repl.it so you can pick the one that works best for you.
 
-The "Input/Output Autograder" let's you check to see if your students' programs match expected output for a given input. Students are able to see if their code passes the tests before submitting a project.
+The "Input/Output Autograder" lets you check to see if your students' programs match expected output for a given input. Students are able to see if their code passes the tests before submitting a project.
 
 The "Simple Autograders" show you how to run unit tests directly on your student's work. These are best if you just have a few students and you don't mind sharing the tests with them, and running the tests on each assignment individually.
 
