@@ -1,5 +1,7 @@
 # **Repl.it Database**
 
+You can jump right in and follow [this](https://docs.repl.it/tutorials/11-using-the-replit-database) basic phone book tutorial where you'll learn how to perform the fundamental "CRUD"(Create, Read, Update, Delete) operations with Repl.it Database.
+
 Database is a simple and easy-to-use key-value store inside of every repl.
 There is no configuration—just start using it! Here's how:
 
