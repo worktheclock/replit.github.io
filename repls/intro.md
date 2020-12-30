@@ -13,4 +13,5 @@ enter standard input.  In most languages, the console doubles as an interactive 
 snippets of code interactively, and in [some cases](/repls/files), you can interact with
 variables that have been defined in your main body of code.
 
-To get up and running quickly head to the [quick start guide](/misc/quick-start) or read on to learn what you can do with repls.
+To get up and running quickly head to the [quick start guide](/misc/quick-start) or [tutorials page](https://docs.repl.it/tutorials/00-overview) to learn what you can do with repls.
+
