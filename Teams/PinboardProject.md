@@ -583,18 +583,22 @@ The above function will take the input from the user, correctly format it with a
 ## Where next?
 
 A good place to start would be to customize this project. Feel free to play around with the fonts and styling to make it your own. 
-
 If you followed along you'll have your own version to extend, otherwise you can fork our pinboard repl below.
 
 <iframe height="400px" width="100%" src="https://repl.it/@ritza/inspiration-board?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Here are some similar example projects if you need inspiration:
+Here are some customized pinboards based on this project with their own cards for your inspiration.
 
 * [Home decor board](https://repl.it/@ritza/home-decor)
 * [Recipe collection](https://repl.it/@ritza/recipe-board)
 * [Travel wishlist](https://repl.it/@ritza/travel-todos)
 
-Following that, here are some ideas for feature add-ons to this project:  
+## Shortcomings of the project
+The main missing feature you'll likely notice from this project is that it doesn't *persist* cards - the moment the user refreshes the page, any added cards disappear. It's also hard to remove search terms to get back to a view where all cards can be seen.
+
+[Part two](./PinboardProject-2) of this tutorial addresses these shortcomings.
+
+Below are some more ideas for how you might add more features.
 
 ### Get photos using the Unsplash API
 

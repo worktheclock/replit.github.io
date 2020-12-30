@@ -8,7 +8,7 @@ These are higher level guides and walkthrough tutorials that you can use as-is o
 
 ### [Create a Pinboard Project](./PinboardProject)
 
-This is a full tutorial on how to build a Pinboard clone with Repl.it. It focuses on front-end coding and uses examples that might appeal more to some girls when compared to traditional beginner coding project examples which tend to skew towards appealing more to boys.
+This is a full tutorial on how to build a Pinboard project with Repl.it. It focuses on front-end coding and uses examples that might appeal more to some girls when compared to traditional beginner coding project examples which tend to skew towards appealing more to boys. There's also a [Part 2](./PinboardProject-2) which introduces `LocalStorage` to persist data locally without a backend.
 
 ### [How to create a good enrichment coding assignment using Repl.it](./EnrichmentHomework)
 
