@@ -266,35 +266,22 @@ Add the following function `appendData()` to the `script.js` file:
 
 ```javascript
 function appendData(data) {
-
-  //<!-- get the element that we want to transform -->
-
   var cardContainer = document.getElementById("cardContainer");
   cardContainer.innerHTML = "";
 
-  //<!-- i represents each object within the array  -->
-
   for (var i = 0; i < data.length; i++) {
-
-    //<!-- create a new div element with class="card" and append it to the cardContainer -->
 
     var card = document.createElement("div");
     card.className = "card";
     cardContainer.appendChild(card);
 
-    //<!-- similarly, create an img element with a src value of data[i].src, which refers to the src object within our pins.json file -->
-
     var img = document.createElement("img");
     img.src = data[i].src;
     card.appendChild(img);
 
-    //<!-- create another div element with class="tagContainer" -->
-
     var tagContainer = document.createElement("div");
     tagContainer.className = "tagContainer";
     card.appendChild(tagContainer);
-
-    //<!-- to create the individual tag buttons, we will need to map over the data[i].tags object within pins.json, using the javascript function, map(). For each tag, we create a new button element with an onClick() function -->
 
     const tagButtons = data[i].tags.map((tag) => {
       const tagButton = document.createElement("button");
@@ -309,6 +296,15 @@ function appendData(data) {
 }
 ```
 Above we create an `appendData()` function, which maps over all the objects within the `pins.json` array using a `for` loop. 
+
+Specifically the code above:
+
+1. Gets the element we want to transform with `getElementById`.
+2. Loops through each object within the array where `i` represents the object.
+3. Creates a new `div` element with `class="card"` and appends it to the `cardContainer`.
+4. Creates an `img` element with a `src` value of `data[i].src`, which refers to the `src` object within our `pins.json` file.
+5. Creates another `div` element with `class="tagContainer"`.
+6. Creates the individual tag buttons by mapping over the `data[i].tags` object within `pins.json`, using the javascript function, `map()`. For each tag, we create a new button element with an `onClick()` function.
 
 Note that we can set attributes such as class names, source tags and IDs directly within this function. For example, the following code would set a class name of `class="card"` on all cards created within the for loop.
 
@@ -355,17 +351,10 @@ Add the following function `filterTags()` to your `script.js` file, below the `a
 
 ```javascript
 function filterTags() {
-
-  //<!-- get the value of the searchInput and display it to the user within the searchResult element  -->
-
   var searchTerm = document.getElementById("searchInput").value;
   document.getElementById("searchResult").innerHTML = "You searched for: " + searchTerm;
 
-  //<!-- transform the user input as well as the tags to be lowercase to ensure that the tags match the search keys exactly -->
-
   const searchTermLower = searchTerm.toLowerCase();
-
-  //<!-- filter the cards based on whether the tags include the search term results -->
 
   const filteredCards = cards.filter((card) => {
       return (
@@ -378,6 +367,13 @@ function filterTags() {
   appendData(filteredCards);
 }
 ```
+
+The code above:
+
+1. Gets the value of the `searchInput` and displays it to the user within the `searchResult` element.
+2. Transforms the user input as well as the tags to be lowercase to ensure that the tags match the search keys exactly.
+3. Filters the cards based on whether the tags include the search term results.
+
 Note how we can set the search term value to the user's input value in the search bar by finding `var searchTerm = document.getElementById("searchInput").value;`.
 
 Additionally, we want to be able to filter the cards by clicking on one of the tags. 
@@ -430,8 +426,6 @@ Add the following modal HTML code below the `cardContainer` element in your `ind
             class="newCardInput"
             placeholder="Separate tags with a semicolon ( ; )"
           />
-           
-          <!-- we will define the functionality of saveNewCard() within our script tag -->
 
           <button type="button" class="submitButton" onclick="saveNewCard()">
             Submit
@@ -495,8 +489,6 @@ Your `index.html` file should now look like this:
             class="newCardInput"
             placeholder="Separate tags with a semicolon ( ; )"
           />
-           
-          <!-- we will define the functionality of saveNewCard() within our script file -->
 
           <button type="button" class="submitButton" onclick="saveNewCard()">
             Submit
@@ -528,15 +520,13 @@ var newCardButton = document.getElementById("newCardButton");
         newCardModal.style.display = "none";
       };
 
-    //<!-- this will enable the modal to close when the user clicks anywhere outside of the modal body -->
-
       window.onclick = function (event) {
         if (event.target == newCardModal) {
           newCardModal.style.display = "none";
         }
 };
 ```
-Above we create the button and set the display property to "block" (from a default of `display="none"`). To close the modal, we do the opposite, setting the display property back to `display="none"`.
+Above we create the button and set the display property to "block" (from a default of `display="none"`). To close the modal, we do the opposite, setting the display property back to `display="none"`. The `window.onclick` function will enable the modal to close when the user clicks anywhere outside of the modal body.
 
 When clicking on the `Add a card` button, the modal form should appear and you should be able to close it by clicking the X at the top right, or anywhere outside of the modal contents. 
 
@@ -552,15 +542,9 @@ Add the following code to the end of your `script.js` file.
 function saveNewCard() {
     var newImgSrc = document.getElementById("imgsrc").value;
 
-    //<!-- To separate the tag values, we can use the Javasript split() function. -->
-
     var newTags = document.getElementById("tags").value.split(";");
 
-    //<!-- Each card needs to have a unique ID, which we can create by getting the last ID in the existing array and adding one. -->
-
     var lastCardId = cards[cards.length - 1].id;
-
-    //<!-- Create a newCard variable that stores the new data in the same format as in the existing pins.json format -->
 
     var newCard = {
         id: lastCardId + 1,
@@ -568,17 +552,22 @@ function saveNewCard() {
         tags: newTags,
     };
 
-    //<!-- add newCard to your existing card array -->
-
     cards = [...cards, newCard];
     appendData(cards);
-
-    //<!-- set modal display to none to close the modal -->
 
     newCardModal.style.display = "none";
 }
 ```
 The above function will take the input from the user, correctly format it with a unique id, add it to our collection and close the modal.
+
+Specifically the code:
+
+1. Gets the new image source and saves it in the variable `newImgSrc`.
+2. Separates the tag values with the Javasript `split()` function.
+3. Creates a unique ID by getting the last ID in the existing array and adding one.
+4. Creates a `newCard` variable that stores the new data in the same format as in the existing `pins.json` format.
+5. Adds a `newCard` to your existing card array.
+6. Sets the modal display to `none` to close the modal.
 
 ## Where next?
 
