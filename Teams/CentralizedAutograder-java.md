@@ -60,6 +60,8 @@ This removes the default `Main.java` file, downloads the zip project, and unzips
 
 Press the `Run` button and you should see a bunch of new files appear.
 
+*This grading server identifies each student through a unique student ID that the student will manually add to the top of their submission. You can adapt the `extractStudentNumber` function, in the `Main.java` file, to automatically use the student's Repl.it username by retrieving the "REPL_OWNER" environment variable. You can read [Repl Environment Variables](/misc/repl-environment-variables) for more information.*
+
 ### Creating the tests
 
 For demonstration, we're going to assume that the homework assignment requires the students to write two functions:
