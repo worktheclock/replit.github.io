@@ -100,7 +100,7 @@ def run_tests(subdir):
 
 The first function, `extract_student_number` reads the first line of the submitted code file and looks for a student number. In the assignment project we prepare later, we'll show students how to format this correctly.
 
-*This can be adapted to automatically use the student's Repl.it username by retrieving the "REPL_OWNER" environment variable. You can read [Repl Environment Variables](/misc/repl-environment-variables) for more information.*
+*This can be adapted to automatically use the student's Repl.it username by retrieving the "REPL_OWNER" environment variable. You'll have to retrieve the username through the student's `submit.py` file and modify the `extract_student_number` function from the server's `main.py` file to use the username instead.  You can read [Repl Environment Variables](/misc/repl-environment-variables) for more information.*
 
 The second function `save_submission` creates a new directory on the server using the student number and populates it with the following files:
 
