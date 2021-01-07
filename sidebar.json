@@ -164,6 +164,10 @@
             {
                 "name": "Database",
                 "slug": "database"
+            },
+            {
+                "name": "Repl Environment Variables",
+                "slug": "repl-environment-variables"
             }
         ]
     },
