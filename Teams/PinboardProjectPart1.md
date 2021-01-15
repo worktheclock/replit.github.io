@@ -505,7 +505,7 @@ Yikes! That is quite a lot of HTML and CSS. Regardless, if you run your reply (w
 
 ![../static/images/teamsForEducation/pinboard-project/image-2.png](../static/images/teamsForEducation/pinboard-project/image-2.png)
 
-****You can click the "Open in new tab" button at the far top-right to open your project in a separate browser tab as follows:
+You can click the "Open in new tab" button at the far top-right to open your project in a separate browser tab as follows:
 
 ![../static/images/teamsForEducation/pinboard-project/image-3.png](../static/images/teamsForEducation/pinboard-project/image-3.png)
 
