@@ -1,5 +1,5 @@
 <!-- omit in toc -->
-# Pin Board: Part 1
+# Pinboard Project: Part 1
 
 The goal of this project is to create a pinboard for users to save, categorise and collected images from across the internet. In addition to adding images to the board, users will also be able to assign specific tag values to images for filtering purposes. Lastly, once a user clicks the "Add New Image" button they will be presented with a form in which they can enter the several tag values and the URL of the image to be added.
 
@@ -858,4 +858,4 @@ Similar to our `position: absolute` example above, the `position: fixed` rule on
 
 ## Next Steps
 
-While the above creates all of the structural parts needed for our pinboard, it is completely static. This means that nothing happens when users press buttons or enter text into inputs. Luckily all browsers come with a scripting language, called JavaScript, that allows us to programmatically add interactivity to our pages. We will be doing this in [part 2 of our project](https://www.notion.so/fddf-3b832544209540ff85fad9606f391a00).
+While the above creates all of the structural parts needed for our pinboard, it is completely static. This means that nothing happens when users press buttons or enter text into inputs. Luckily all browsers come with a scripting language, called JavaScript, that allows us to programmatically add interactivity to our pages. We will be doing this in [part 2 of our project](./PinboardProjectPart2.md).
