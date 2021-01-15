@@ -250,9 +250,9 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 
-		0px 11px 15px -7px rgba(0,0,0,0.2),
-		0px 24px 38px 3px rgba(0,0,0,0.14),
-		0px 9px 46px 8px rgba(0,0,0,0.12);
+    0px 11px 15px -7px rgba(0,0,0,0.2),
+    0px 24px 38px 3px rgba(0,0,0,0.14),
+    0px 9px 46px 8px rgba(0,0,0,0.12);
 }
 
 .form {
@@ -292,170 +292,211 @@ After adding the above code to `style.css` then proceed by opening your `index.
   <head>
     <meta charset="utf-8" />
     <title>My Moodboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-		<link rel="stylesheet" href="./style.css" />
-		<script src="./script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-   
-		<link
+
+    <link
       href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body id="app">
-		<datalist id="existing-tags">
+    <datalist id="existing-tags">
       <option>Engineering</option>
       <option>Headphones</option>
       <option>Wellness</option>
       <option>Ocean</option>
       <option>Office</option>
-      <option>Coding </option>
+      <option>Coding</option>
       <option>Desk</option>
       <option>Boxing</option>
       <option>Lab</option>
     </datalist>
 
-		<header>
-		  <h1 class="title">My Moodboard</h1>
-		
-		  <div class="controls">
-		    <label class="field" for="filter-input">
-		      <span class="label">Filter</span>
-		      <input type="search" id="filter-input" class="input" list="existing-tags" placeholder="None" >
-		    </label>
-		    
-		    <button class="button" id="dialog-start">Add New Image</button>
-		  </div>
-		</header>
-	
-		<main>
+    <header>
+      <h1 class="title">My Moodboard</h1>
+
+      <div class="controls">
+        <label class="field" for="filter-input">
+          <span class="label">Filter</span>
+          <input
+            type="search"
+            id="filter-input"
+            class="input"
+            list="existing-tags"
+            placeholder="None"
+          />
+        </label>
+
+        <button class="button" id="dialog-start">Add New Image</button>
+      </div>
+    </header>
+
+    <main>
       <div class="list" id="pins-list">
-				<section class="pin">
-					<img class="image" src="https://images.unsplash.com/photo-1580983218765-f663bec07b37?w=600">
-	
-					<ul class="info">
-						<li class="tag-wrap">
-							<button class="tag">engineering</button>
-						</li>
-					</ul>
-	
-					<button class="remove"aria-label="remove" value="122203215486581930752615279550">
-						&#10005;
-					</button>
-				</section>
-	
-				<section class="pin">
-					<img class="image" src="https://images.unsplash.com/photo-1572932491814-4833690788ad?w=600">
-	
-					<ul class="info">
-						<li class="tag-wrap">
-							<button class="tag">headphones</button>
-						</li>
-	
-						<li class="tag-wrap">
-							<button class="tag">ocean</button>
-						</li>
-	          
-	          <li class="tag-wrap">
-							<button class="tag">wellness</button>
-						</li>
-					</ul>
-	
-					<button class="remove"aria-label="remove" value="144685389103194178251333634000">
-						&#10005;
-					</button>
-				</section >
-	 
-	      <section class="pin">
-					<img class="image" src="https://images.unsplash.com/photo-1580894908361-967195033215?w=600">
-	
-					<ul class="info">
-						<li class="tag-wrap">
-							<button class="tag">office</button>
-						</li>
-	
-						<li class="tag-wrap">
-							<button class="tag">coding</button>
-						</li>
-	          
-	          <li class="tag-wrap">
-							<button class="tag">desk</button>
-						</li>
-					</ul>
-	
-					<button class="remove"aria-label="remove" value="159279541173033634211014623228">
-						&#10005;
-					</button>
-				</section >
-	      
-	      <section class="pin">
-					<img class="image" src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600">
-	
-					<ul class="info">
-						<li class="tag-wrap">
-							<button class="tag">boxing</button>
-						</li>
-	          
-	         <li class="tag-wrap">
-							<button class="tag">wellness</button>
-						</li>
-					</ul>
-	
-					<button class="remove"aria-label="remove" value="75261220651273643680893699100">
-						&#10005;
-					</button>
-				</section >
-	      
-	      <section class="pin">
-					<img class="image" src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600">
-	
-					<ul class="info">
-						<li class="tag-wrap">
-							<button class="tag">lab</button>
-						</li>
-	
-						<li class="tag-wrap">
-							<button class="tag">engineering</button>
-						</li>
-					</ul>
-	
-					<button class="remove"aria-label="remove" value="161051747537834597427464147310">
-						&#10005;
-					</button>
-				</section >
+        <section class="pin">
+          <img
+            class="image"
+            src="https://images.unsplash.com/photo-1580983218765-f663bec07b37?w=600"
+          />
+
+          <ul class="info">
+            <li class="tag-wrap">
+              <button class="tag">engineering</button>
+            </li>
+          </ul>
+
+          <button
+            class="remove"
+            aria-label="remove"
+            value="122203215486581930752615279550"
+          >
+            &#10005;
+          </button>
+        </section>
+
+        <section class="pin">
+          <img
+            class="image"
+            src="https://images.unsplash.com/photo-1572932491814-4833690788ad?w=600"
+          />
+
+          <ul class="info">
+            <li class="tag-wrap">
+              <button class="tag">headphones</button>
+            </li>
+
+            <li class="tag-wrap">
+              <button class="tag">ocean</button>
+            </li>
+
+            <li class="tag-wrap">
+              <button class="tag">wellness</button>
+            </li>
+          </ul>
+
+          <button
+            class="remove"
+            aria-label="remove"
+            value="144685389103194178251333634000"
+          >
+            &#10005;
+          </button>
+        </section>
+
+        <section class="pin">
+          <img
+            class="image"
+            src="https://images.unsplash.com/photo-1580894908361-967195033215?w=600"
+          />
+
+          <ul class="info">
+            <li class="tag-wrap">
+              <button class="tag">office</button>
+            </li>
+
+            <li class="tag-wrap">
+              <button class="tag">coding</button>
+            </li>
+
+            <li class="tag-wrap">
+              <button class="tag">desk</button>
+            </li>
+          </ul>
+
+          <button
+            class="remove"
+            aria-label="remove"
+            value="159279541173033634211014623228"
+          >
+            &#10005;
+          </button>
+        </section>
+
+        <section class="pin">
+          <img
+            class="image"
+            src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600"
+          />
+
+          <ul class="info">
+            <li class="tag-wrap">
+              <button class="tag">boxing</button>
+            </li>
+
+            <li class="tag-wrap">
+              <button class="tag">wellness</button>
+            </li>
+          </ul>
+
+          <button
+            class="remove"
+            aria-label="remove"
+            value="75261220651273643680893699100"
+          >
+            &#10005;
+          </button>
+        </section>
+
+        <section class="pin">
+          <img
+            class="image"
+            src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600"
+          />
+
+          <ul class="info">
+            <li class="tag-wrap">
+              <button class="tag">lab</button>
+            </li>
+
+            <li class="tag-wrap">
+              <button class="tag">engineering</button>
+            </li>
+          </ul>
+
+          <button
+            class="remove"
+            aria-label="remove"
+            value="161051747537834597427464147310"
+          >
+            &#10005;
+          </button>
+        </section>
       </div>
     </main>
 
-		<dialog id="dialog" class="overlay hidden">
-		  <form id="dialog-form" class="form">
-		    <div class="dialog-item">
-		      <label class="field" for="dialog-image">
-		        <span class="label">Image URL</span>
-		        <input class="input" type="url" id="dialog-image">
-		      </label>
-		      
-		      <em class="helper">For example: https://images.unsplash.com/photo-1584464491033-06628f3a6b7b</em>
-		    </div>
-		
-		    <div class="dialog-item">
-		      <label class="field" for="dialog-tags">
-		        <span class="label">Tags</span>
-		        <input class="input" type="text" id="dialog-tags">
-		      </label>
-		      
-		      <em class="helper">Separate multiple tags with commas. For example: engineering, coding</em>
-		    </div>
-		      
-		    <div class="dialog-item">
-		      <button type="submit" class="button" id="dialog-submit" disabled>
-						Save Image
-					</button>
-		    </div>
-		  </form>
-		</dialog>
+    <dialog id="dialog" class="overlay hidden">
+      <form id="dialog-form" class="form">
+        <div class="dialog-item">
+          <label class="field" for="dialog-image">
+            <span class="label">Image URL</span>
+            <input class="input" type="url" id="dialog-image" />
+          </label>
+
+          <em class="helper">For example: https://images.unsplash.com/photo-1584464491033-06628f3a6b7b</em>
+        </div>
+
+        <div class="dialog-item">
+          <label class="field" for="dialog-tags">
+            <span class="label">Tags</span>
+            <input class="input" type="text" id="dialog-tags" />
+          </label>
+
+          <em class="helper">Separate multiple tags with commas. For example: engineering, coding</em>
+        </div>
+
+        <div class="dialog-item">
+          <button type="submit" class="button" id="dialog-submit" disabled>
+            Save Image
+          </button>
+        </div>
+      </form>
+    </dialog>
   </body>
 </html>
 ```
@@ -479,21 +520,21 @@ Our HTML starts off with a `<!DOCTYPE html>` and a `<html>` element. At this poi
 Inside the `<html>` element we see another element titled `<head>`. This element is used to communicate meta information to the browser. The elements inside it won't be shown to the user but provide the browser with useful commands to run before the user-facing HTML content is created. Our `<head>` element has the following nested elements:
 
 ```html
-  <head>
-    <meta charset="utf-8" />
-    <title>My Moodboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-		<link rel="stylesheet" href="./style.css" />
-		<script src="./script.js" defer></script>
+<head>
+  <meta charset="utf-8" />
+  <title>My Moodboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-   
-		<link
-      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
 ```
 
 - The first `<meta>` element determines the character types that should be used by the browser, this is required in all HTML documents, and is almost always set to "utf-8".
@@ -553,26 +594,33 @@ Then we have an `<main>` element (signifying the main content of our `<body>` el
 
 ```html
 <section class="pin">
-	<img class="image" src="https://images.unsplash.com/photo-1580894908361-967195033215?w=600">
+  <img
+    class="image"
+    src="https://images.unsplash.com/photo-1580894908361-967195033215?w=600"
+  />
 
-	<ul class="info">
-		<li class="tag-wrap">
-			<button class="tag">office</button>
-		</li>
-
-		<li class="tag-wrap">
-			<button class="tag">coding</button>
-		</li>
-    
+  <ul class="info">
     <li class="tag-wrap">
-			<button class="tag">desk</button>
-		</li>
-	</ul>
+      <button class="tag">office</button>
+    </li>
 
-	<button class="remove"aria-label="remove" value="1592795411730">
-		&#10005;
-	</button>
-</section >
+    <li class="tag-wrap">
+      <button class="tag">coding</button>
+    </li>
+
+    <li class="tag-wrap">
+      <button class="tag">desk</button>
+    </li>
+  </ul>
+
+  <button
+    class="remove"
+    aria-label="remove"
+    value="159279541173033634211014623228"
+  >
+    &#10005;
+  </button>
+</section>
 ```
 
 - The wrapping `<section>` element indicates to search engines and accessibility devices that the content inside should be treated as a grouped, standalone piece of information.
@@ -592,25 +640,25 @@ Lastly, and perhaps most importantly is a `<dialog>` element. While the `<dialog
     <div class="dialog-item">
       <label class="field" for="dialog-image">
         <span class="label">Image URL</span>
-        <input class="input" type="url" id="dialog-image">
+        <input class="input" type="url" id="dialog-image" />
       </label>
-      
+
       <em class="helper">For example: https://images.unsplash.com/photo-1584464491033-06628f3a6b7b</em>
     </div>
 
     <div class="dialog-item">
       <label class="field" for="dialog-tags">
         <span class="label">Tags</span>
-        <input class="input" type="text" id="dialog-tags">
+        <input class="input" type="text" id="dialog-tags" />
       </label>
-      
+
       <em class="helper">Separate multiple tags with commas. For example: engineering, coding</em>
     </div>
-      
+
     <div class="dialog-item">
-			<button type="submit" class="button" id="dialog-submit" disabled>
-				Save Image
-			</button>
+      <button type="submit" class="button" id="dialog-submit" disabled>
+        Save Image
+      </button>
     </div>
   </form>
 </dialog>
@@ -624,7 +672,7 @@ Lastly, and perhaps most importantly is a `<dialog>` element. While the `<dialog
 
 In order to see how the dialog would look, you might want to temporarily remove the `hidden` CSS class. The dialog should look similar to the screenshot below. However, please remember to read the `hidden` class back again - otherwise, your pinboard will start with the `dialog` open.
 
-![/images/teamsForEducation/pinboard-project/image-4.png](/images/teamsForEducation/pinboard-project/image-4.png)
+![../static/images/teamsForEducation/pinboard-project/image-4.png](../static/images/teamsForEducation/pinboard-project/image-4.png)
 
 ## Styling
 
@@ -832,7 +880,7 @@ We mentioned in our HTML examples that our `<img>` elements's behaviour is a bit
 
 If we leave out the `object-fit` property then our images will get stretched as follows:
 
-![../static/images/teamsForEducation/pinboard-project/image-6.png](../static/images/teamsForEducation/pinboard-project/image-1.png)
+![../static/images/teamsForEducation/pinboard-project/image-6.png](../static/images/teamsForEducation/pinboard-project/image-6.png)
 
 ### Fixed Overlay
 
@@ -850,9 +898,9 @@ Similar to our `position: absolute` example above, the `position: fixed` rule on
   align-items: center;
   justify-content: center;
   box-shadow: 
-		0px 11px 15px -7px rgba(0,0,0,0.2),
-		0px 24px 38px 3px rgba(0,0,0,0.14),
-		0px 9px 46px 8px rgba(0,0,0,0.12);
+    0px 11px 15px -7px rgba(0,0,0,0.2),
+    0px 24px 38px 3px rgba(0,0,0,0.14),
+    0px 9px 46px 8px rgba(0,0,0,0.12);
 }
 ```
 

@@ -174,17 +174,15 @@ function updatePins (newPins) {
 
 
 function applyFilter (filter) {
-	if (filter.trim() === '') return updateHTML();
+  if (filter.trim() === '') return updateHTML();
   const array = filter
     .split(',')
-		.map(text => text.trim())
-    .map(text => text.toLowerCase())
-    .map(tag => escape(tag));
-  const filteredPins = pins.filter(
-    ({ tags }) => {
-			const matchedTags = tags.filter(tag => array.includes(tag));
-			return matchedTags.length >= array.length;
-		}
+    .map(text => text.trim())
+    .map(text => text.toLowerCase());
+  const filteredPins = pins.filter(({ tags }) => {
+    const matchedTags = tags.filter(tag => array.includes(tag));
+    return matchedTags.length >= array.length;
+    }
   )
   updateHTML(filteredPins);
 }
@@ -194,12 +192,12 @@ function handleInput (event) {
   if (event.target === filterInputNode) {
     applyFilter(escape(event.target.value))
   } else if (event.target === dialogImageNode || event.target === dialogTagsNode) {
-		if (dialogImageNode.value.trim() !== '' && dialogTagsNode.value.trim() !== '') {
-			dialogSubmitNode.disabled = false;
-		} else {
-			dialogSubmitNode.disabled = true;
+    if (dialogImageNode.value.trim() !== '' && dialogTagsNode.value.trim() !== '') {
+      dialogSubmitNode.disabled = false;
+    } else {
+      dialogSubmitNode.disabled = true;
     }
-	}
+  }
 }
 
 
@@ -211,9 +209,9 @@ function handleClick (event) {
     updatePins(pins.filter(({ id }) => id !== event.target.value));
     applyFilter(filterInputNode.value)
   }	else if (event.target.classList.contains('tag')) {
-		filterInputNode.value = event.target.innerText;
-		applyFilter(filterInputNode.value)
-	}
+    filterInputNode.value = event.target.innerText;
+    applyFilter(filterInputNode.value)
+  }
 }
 
 
@@ -229,7 +227,6 @@ function handleSubmit (event) {
     .map(tag => tag.toLowerCase())
     .map(tag => escape(tag));
   updatePins([ ...pins, { id, image, tags } ]);
-  
   applyFilter(filterInputNode.value)
   dialogNode.classList.add("hidden");
 	dialogNode.open = false;
@@ -387,48 +384,47 @@ The above should created a string that looks something as follows (and is assign
 
 ```js
 pinsListNode.innerHTML = `
-	<section class="pin">
-		<img 
-			class="image" 
-			src="https://images.unsplash.com/photo-1580983218765-f663bec07b37?w=600"
-		>
-	
-		<ul class="info">
-			<li class="tag-wrap">
-				<button class="tag">engineering</button>
-			</li>
-		</ul>
-	
-			<button class="remove"aria-label="remove" value="1222032154865">
-			&#10005;
-		</button>
-	</section>
-	
-	<section class="pin">
-		<img
-			class="image"
-			src="https://images.unsplash.com/photo-1572932491814-4833690788ad?w=600"
-		>
-	
-		<ul class="info">
-			<li class="tag-wrap">
-				<button class="tag">headphones</button>
-			</li>
-	
-			<li class="tag-wrap">
-				<button class="tag">ocean</button>
-			</li>
-	    
-	    <li class="tag-wrap">
-				<button class="tag">wellness</button>
-			</li>
-		</ul>
-	
-		<button class="remove"aria-label="remove" value="1446853891031">
-			&#10005;
-		</button>
-	</section >
-`;
+<section class="pin">
+  <img 
+    class="image" 
+    src="https://images.unsplash.com/photo-1580983218765-f663bec07b37?w=600"
+  >
+
+  <ul class="info">
+    <li class="tag-wrap">
+      <button class="tag">engineering</button>
+    </li>
+  </ul>
+
+  <button class="remove"aria-label="remove" value="1222032154865">
+  &#10005;
+  </button>
+</section>
+
+<section class="pin">
+  <img
+    class="image"
+    src="https://images.unsplash.com/photo-1572932491814-4833690788ad?w=600"
+  >
+
+  <ul class="info">
+    <li class="tag-wrap">
+      <button class="tag">headphones</button>
+    </li>
+
+    <li class="tag-wrap">
+      <button class="tag">ocean</button>
+    </li>
+
+    <li class="tag-wrap">
+      <button class="tag">wellness</button>
+    </li>
+  </ul>
+
+  <button class="remove"aria-label="remove" value="1446853891031">
+  &#10005;
+  </button>
+</section >`;
 ```
 
 ### Updating Saved Pins
@@ -491,15 +487,17 @@ Lets' create our last core function before we start heading into the realm of ev
 
 ```js
 function applyFilter (filter) {
-	if (filter.trim() === '') return updateHTML()
+  if (filter.trim() === '') return updateHTML();
   const array = filter
     .split(',')
-		.map(text => text.trim());
-    .map(text => text.toLowerCase())
-  const filteredPins = pins.filter(
-    ({ tags }) => (tags.filter(tag => array.includes(tag))).length > 0
+    .map(text => text.trim())
+    .map(text => text.toLowerCase());
+  const filteredPins = pins.filter(({ tags }) => {
+    const matchedTags = tags.filter(tag => array.includes(tag));
+    return matchedTags.length >= array.length;
+    }
   )
-  updateHTML(filteredPins)
+  updateHTML(filteredPins);
 }
 ```
 
@@ -580,12 +578,12 @@ function handleInput (event) {
   if (event.target === filterInputNode) {
     applyFilter(escape(event.target.value))
   } else if (event.target === dialogImageNode || event.target === dialogTagsNode) {
-		if (dialogImageNode.value.trim() !== '' && dialogTagsNode.value.trim() !== '') {
-			dialogSubmitNode.disabled = false;
-		} else {
-			dialogSubmitNode.disabled = true;
+    if (dialogImageNode.value.trim() !== '' && dialogTagsNode.value.trim() !== '') {
+      dialogSubmitNode.disabled = false;
+    } else {
+      dialogSubmitNode.disabled = true;
     }
-	}
+  }
 }
 ```
 
@@ -622,9 +620,9 @@ function handleClick (event) {
     updatePins(pins.filter(({ id }) => id !== event.target.value));
     applyFilter(filterInputNode.value)
   }	else if (event.target.classList.contains('tag')) {
-		filterInputNode.value = event.target.innerText;
-		applyFilter(filterInputNode.value)
-	}
+    filterInputNode.value = event.target.innerText;
+    applyFilter(filterInputNode.value)
+  }
 }
 ```
 
@@ -660,7 +658,6 @@ function handleSubmit (event) {
   dialogImageNode.value = '';
   dialogTagsNode.value = '';
   dialogSubmitNode.disabled = true;
-  }
 }
 ```
 
