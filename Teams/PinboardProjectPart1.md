@@ -292,7 +292,7 @@ After adding the above code to `style.css` then proceed by opening your `index.
   <head>
     <meta charset="utf-8" />
     <title>My Moodboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
@@ -523,7 +523,7 @@ Inside the `<html>` element we see another element titled `<head>`. This element
 <head>
   <meta charset="utf-8" />
   <title>My Moodboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./style.css" />
   <script src="./script.js" defer></script>
