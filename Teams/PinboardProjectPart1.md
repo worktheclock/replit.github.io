@@ -506,7 +506,7 @@ After adding the above code to `style.css`, open your `index.html` file and re
 </html>
 ```
 
-Yikes! That is quite a lot of HTML and CSS. Regardless, if you run your repl (with the big `Run` button at the top) you should see your project spring to live, as shown below.
+Yikes! That is quite a lot of HTML and CSS. Regardless, if you run your repl (with the big `Run` button at the top) you should see your project spring to life, as shown below.
 
 ![../static/images/teamsForEducation/pinboard-project/image-2.png](../static/images/teamsForEducation/pinboard-project/image-2.png)
 
