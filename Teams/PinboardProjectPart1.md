@@ -1,13 +1,19 @@
 <!-- omit in toc -->
 # Pinboard Project: Part 1
 
-The goal of this project is to create a pinboard for users to save, categorise and collected images from across the internet. In addition to adding images to the board, users will also be able to assign specific tag values to images for filtering purposes. Lastly, once a user clicks the "Add New Image" button they will be presented with a form in which they can enter the several tag values and the URL of the image to be added.
+In this project, you'll create a 'Pinboard': a web application to save, categorise and collect images from across the internet. Users will be able to 
+* Add new images to the board
+* Assign specific tags to these images
+* Filter the board to show only images matching a specific tag
 
 You can have a look at the final code that we will have at the end of this project by going to [https://repl.it/@ritza/Pinboard-Project](https://repl.it/@ritza/Pinboard-Project). In addition, you can view it as a standalone page by pressing the "Open in a new tab" button (at the top-right of the REPL) or by going straight to the following URL: [https://pinboard-project.ritza.repl.co](https://pinboard-project.ritza.repl.co/)
 
-Will will walk through the creation of the final pinboard by means of two parts. You are currently looking at part 1, where we will build out the basic HTML and CSS structure of our pinboard. However, if you are not interested in this you can jump straight to [part 2](./PinboardProjectPart2.md), where we will be adding interactivity to our pinboard by means of JavaScript.
+We'll walk through the creation of the final pinboard in two parts.
 
-We will be working through the first part below as follows:
+* In part 1 (this article), we'll set up the HTML and CSS of our pinboard
+* In [part 2](./PinboardProjectPart2.md), we'll add the functionality using JavaScript.
+
+In part 1, we'll work through
 
 - [Creating your own project on Repl.it](#creating-your-own-project-on-replit)
 - [Basic Structure and Styling](#basic-structure-and-styling)
@@ -36,8 +42,7 @@ If you haven't already, head to the [sign up page](https://repl.it/signup) and
 1. Click on the "+ New repl" button.
 2. Choose the "HTML, CSS, JS" language: 
 3. Give your repl a name: In our case "pinboard-project"
-4. For free accounts you can only set your repl to public.
-5. Click the "Create repl" button.
+4. Click the "Create repl" button.
 
 ![/images/teamsForEducation/pinboard-project/image-1.png](../static/images/teamsForEducation/pinboard-project/image-1.png)
 
@@ -283,7 +288,7 @@ body {
 }
 ```
 
-After adding the above code to `style.css` then proceed by opening your `index.html` file and replacing all of the existing code with the following snippet. Once again, we'll explain what it does further down.
+After adding the above code to `style.css`, open your `index.html` file and replacing all of the existing code with the following snippet. 
 
 ```html
 <!DOCTYPE html>
@@ -501,7 +506,7 @@ After adding the above code to `style.css` then proceed by opening your `index.
 </html>
 ```
 
-Yikes! That is quite a lot of HTML and CSS. Regardless, if you run your reply (with the big `Run` button at the top) you should something as follows:
+Yikes! That is quite a lot of HTML and CSS. Regardless, if you run your repl (with the big `Run` button at the top) you should see your project spring to life, as shown below.
 
 ![../static/images/teamsForEducation/pinboard-project/image-2.png](../static/images/teamsForEducation/pinboard-project/image-2.png)
 
@@ -511,11 +516,11 @@ You can click the "Open in new tab" button at the far top-right to open your pro
 
 ## Markup
 
-As promised, let's walk through the above code step-by-step, starting with the HTML.
+Let's walk through the above code step-by-step, starting with the HTML.
 
 ### Head
 
-Our HTML starts off with a `<!DOCTYPE html>` and a `<html>` element. At this point you don't need to understand what these do, but only that they are required in all modern-day `.html` files.
+Our HTML starts off with a `<!DOCTYPE html>` and a `<html>` element. These signal to the browser that we are using modern HTML.
 
 Inside the `<html>` element we see another element titled `<head>`. This element is used to communicate meta information to the browser. The elements inside it won't be shown to the user but provide the browser with useful commands to run before the user-facing HTML content is created. Our `<head>` element has the following nested elements:
 
@@ -542,11 +547,11 @@ Inside the `<html>` element we see another element titled `<head>`. This element
 - The second `<meta>` element tells the browser to not automatically scale the size of our content. This is required for styling to look the same across several screen sizes such as a desktop computer and mobile phone (called [responsive web design](https://en.wikipedia.org/wiki/Responsive_web_design)).
 - The first `<link>` element loads our CSS file (`style.css`) we populated above.
 - The `<script>` element loads the (still empty) JavaScript file (`script.js`). In addition, the `defer` attribute tells the browser to only execute our JavaScript once all HTML has been created. Otherwise, the HTML tags that we look for in our JavaScript will not exist yet (since the `<script>` element is created before our HTML content (inside the `<body>` element.
-- The remaining `<link>` elements are [Google Fonts](https://fonts.google.com) specific code that we receive when selecting fonts to from the [Google Fonts website](https://fonts.google.com/). These are merely copied and pasted from the Google Fonts website, and allow us to use the fonts in question.
+- The remaining `<link>` elements are [Google Fonts](https://fonts.google.com) specific code that we receive when selecting fonts to from the [Google Fonts website](https://fonts.google.com/). These are copied and pasted from the Google Fonts website, and allow us to use the fonts in question.
 
 ### Datalist
 
-Next is our `<body>` element. The `<body>` element contains the actual HTML that should be shown to a user. The first element in our body is an `<datalist>` element. The `<datalist>` element will (ironically) not be displayed to users but will be used by `<input>` elements within our HTML recommend existing tag values as users types. Note that despite the `<datalist>` not rendering anything to users it is required to be in the `<body>` element and not the `<head>` element.
+Next is our `<body>` element. The `<body>` element contains the actual HTML that should be shown to a user. The first element in our body is a `<datalist>` element. The `<datalist>` element will not be displayed to users but will be used by `<input>` elements within our HTML recommend existing tag values as users types. Note that despite the `<datalist>` not rendering anything to users it is required to be in the `<body>` element and not the `<head>` element.
 
 ```html
 <datalist id="existing-tags">
@@ -564,7 +569,7 @@ Next is our `<body>` element. The `<body>` element contains the actual HTML that
 
 ### Header
 
-Next is `<header>` element. The `<header>` element is meant to group a content (shown to the user) at the top of the page. Be careful to not confuse the `<head>` element and the `<header>` element. Despite them sounding similar, they are very different. Inside our `<header>` element we have the following:
+Next is the `<header>` element (note that this is different from `<head>`). The `<header>` element groups content (shown to the user) at the top of the page. Inside our `<header>` element we have the following:
 
 ```html
 <header>
@@ -590,7 +595,7 @@ Next is `<header>` element. The `<header>` element is meant to group a content (
 
 ### Sections
 
-Then we have an `<main>` element (signifying the main content of our `<body>` element). Inside the `<main>` element we have a `<div>` with several `<section>` elements inside it. Each `<section>` element displays an image (and associated controls) pinned by the user. Let us look at a single pinned image:
+Next, we have a `<main>` element (signifying the main content of our `<body>` element). Inside the `<main>` element we have a `<div>` with several `<section>` elements inside it. Each `<section>` element displays an image (and associated controls) pinned by the user. Let's take a look at a single pinned image:
 
 ```html
 <section class="pin">
@@ -632,7 +637,7 @@ Then we have an `<main>` element (signifying the main content of our `<body>` el
 
 ### Dialog
 
-Lastly, and perhaps most importantly is a `<dialog>` element. While the `<dialog>` element is currently hidden from users by means of a `hidden` CSS class that is applied to it, it will be shown once the `hidden` class is removed. Once when visible users can provide values in order to pin a new image to the board. The `<dialog>` element consists of the following:
+Lastly, is a `<dialog>` element. While the `<dialog>` element is currently hidden from users with a `hidden` CSS class, it will be shown once the `hidden` class is removed. When it is visible, users can us it to add a new image to the board. The `<dialog>` element consists of the following:
 
 ```html
 <dialog id="dialog" class="overlay hidden">
@@ -670,13 +675,13 @@ Lastly, and perhaps most importantly is a `<dialog>` element. While the `<dialog
 - Inside the first two `<div>` tags, we are reusing the first input field HTML structure we created (from the above `<header>` snippet), albeit with different `id` and `type` attributes on each `<input>` element.
 - We are also adding `<em>` elements after each. The `<em>` element is short for "emphasis" and is similar in function to `<span>`, however, it indicates that the piece of text has a specific importance. In our snippet above, we use them for helper text provide users with context regarding what is expected in the fields.
 
-In order to see how the dialog would look, you might want to temporarily remove the `hidden` CSS class. The dialog should look similar to the screenshot below. However, please remember to read the `hidden` class back again - otherwise, your pinboard will start with the `dialog` open.
+When unhidden, the dialgoue will look as follows:
 
 ![../static/images/teamsForEducation/pinboard-project/image-4.png](../static/images/teamsForEducation/pinboard-project/image-4.png)
 
 ## Styling
 
-Now that we've covered the basic HTML structure let us dive into our CSS (`style.css`). Most of the code should be self-explanatory even if you know a little bit of CSS. If not you can use the phenomenal [CSS-Tricks maintained Almanac](https://css-tricks.com/almanac/) to understand exactly what specific properties do. However, there are some broader aspects of the CSS that I want to briefly touch on:
+Now that we've covered the basic HTML structure let's dive into our CSS (`style.css`). We won't cover each part of this in detail, but you can use the phenomenal [CSS-Tricks maintained Almanac](https://css-tricks.com/almanac/) to understand exactly what specific properties do. Let's take a look at some broader aspects of CSS which we have used in this file.
 
 ### Universal Selector
 
@@ -688,13 +693,13 @@ The `*` selector is named the [universal CSS selector](https://css-tricks.com/al
 }
 ```
 
-However, what exactly does this do? 
+By default, `content-box` adds all borders and padding on top of the designated size of an element. For example, if we have an element that has a `width: 10rem` with `padding: 1rem` and `border: 1px` the actual size of the element will be the total value of `10rem + 1rem + 1px`. 
 
-By default, `content-box` adds all borders and padding on top of the designated size of an element. For example, if we have an element that has a `width: 10rem` with `padding: 1rem` and `border: 1px` the actual size of the element will be the total value of `10rem + 1rem + 1px`. Alternatively, when an element used `border-box` then all the above is added as part of an element's designated width. For example, instead of the total width being `10rem + 1rem + 1px`, it will be the original `10rem` with the space needed for padding and borders being factored into this amount.
+By using `border-box`, all of these are included as part of an element's designated width. For example, instead of the total width being `10rem + 1rem + 1px`, it will be the specfiied `10rem` with the space needed for padding and borders being factored into this amount.
 
 ### Scrolling
 
-Secondly is the styling of our `<body>` element. You will notice that we set a couple of straight-forward rules in order to override the default (often different) values of the `<body>` element in different browsers. 
+You will notice that we set a couple of rules in order to override the default (often different) values of the `<body>` element in different browsers. 
 
 ```css
 body {
@@ -707,7 +712,7 @@ body {
 }
 ```
 
-However, more specifically, you will see that we set `overflow-x: hidden` and `overflow-y: scroll`. This is done merely to prevent users from accidentally scrolling horizontally, and it also forces a vertical scroll bar (even if the content does exceed the height of your window). The latter is to ensure that the content doesn't jump around when a vertical scroll bar automatically gets added (or removed) as our number of pins exceed the height of the browser viewport.
+Specifically, you'll see that we set `overflow-x: hidden` and `overflow-y: scroll`. This is done to prevent users from accidentally scrolling horizontally, and it also forces a vertical scroll bar (even if the content does exceed the height of your window). The latter is to ensure that the content doesn't jump around when a vertical scroll bar automatically gets added (or removed).
 
 ### Positioning
 
@@ -739,7 +744,7 @@ Next, you'll notice that we are using `position: relative` and `position: absolu
 
 ### Pseudo-classes
 
-You will notice that there is an independant `button` class and selectors with [pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) associated with it. The base class merely defines the styling of our button class in it's resting state, whereas the `:hover` pseudo-class indicates that the styling should only be applied when users hover over a button. Furthermore, you'll notice that we are adding the `font-family` again property once again (despite us already setting it on the `<body>` element. This is due to the fact that the HTML rules do are not automatically applied `<button>` elements, meaning that we need to manually set it once again (this is one of the strange quirks of HTML and CSS). Lastly, you'll see that we are using a special mouse cursor for buttons when they are disabled. Furthermore we are not applying the hover effect when the button is disabled.
+You will notice that there is an independent `button` class which has selectors with [pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) associated. The base class defines the styling of our button class in it's resting state, whereas the `:hover` pseudo-class indicates that the styling should only be applied when users hover over a button. Furthermore, you'll notice that we are adding the `font-family` again property once again (despite us already setting it on the `<body>` element. This is due to the fact that the HTML rules do are not automatically applied `<button>` elements, meaning that we need to manually set it once again (this is one of the strange quirks of HTML and CSS). Lastly, you'll see that we are using a special mouse cursor for buttons when they are disabled. Furthermore we are not applying the hover effect when the button is disabled.
 
 ```css
 .button {
@@ -763,9 +768,9 @@ You will notice that there is an independant `button` class and selectors with [
 
 ### Media Queries
 
-Furthermore, you'll notice that we are using several media queries on our `pin` CSS class. If you are not familiar with media queries, they essentially allow us to set the styling rules to be applied to different browser sizes. Media Queries are the heart of the modern-day [responsive web design](https://en.wikipedia.org/wiki/Responsive_web_design) methodology.
+We use several media queries on our `pin` CSS class. If you are not familiar with media queries, they essentially allow us to set the styling rules to be applied to different browser sizes. Media Queries are the heart of the modern-day [responsive web design](https://en.wikipedia.org/wiki/Responsive_web_design) methodology.
 
-In the snippet below, if a user's browser screen is wider than `40rem` that two pins should be shown on a row (each pin should take up `50%` of available space). However, if the browser width is wider `65rem` then we should show three pins on a row instead, and so forth. Try resizing your browser window when viewing the pinboard to see this in action.
+In the snippet below, if a user's browser screen is wider than `40rem`, then two pins should be shown on a row (each pin should take up `50%` of available space). However, if the browser width is wider -- `65rem` -- then we should show three pins on a row, and so forth. Try resizing your browser window when viewing the pinboard to see this in action.
 
 ```css
 .pin {
@@ -793,7 +798,7 @@ In the snippet below, if a user's browser screen is wider than `40rem` that two 
 }
 ```
 
-You notice we are using the cascading nature of CSS here to override each width if the browser is wider than the previous value. This approach, named [mobile first](https://en.wikipedia.org/wiki/Responsive_web_design#Mobile_first,_unobtrusive_JavaScript,_and_progressive_enhancement), was pioneered by [Luke Wroblewski](https://www.lukew.com/) in [a book with the same title](https://abookapart.com/products/mobile-first). The reasoning being that it is easier to scale our design up than it is to scale them down, therefore we start by assuming the smallest browser size and then incrementally work our way upwards.
+We use the cascading nature of CSS here to override each width if the browser is wider than the previous value. This approach, named [mobile first](https://en.wikipedia.org/wiki/Responsive_web_design#Mobile_first,_unobtrusive_JavaScript,_and_progressive_enhancement), was pioneered by [Luke Wroblewski](https://www.lukew.com/) in [a book with the same title](https://abookapart.com/products/mobile-first). The reasoning being that it is easier to scale our design up than it is to scale them down, therefore we start by assuming the smallest browser size and then incrementally work our way upwards.
 
 This is also closely related to the computer science principle of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement).
 
@@ -801,9 +806,9 @@ This is also closely related to the computer science principle of [progressive e
 
 Further down you will see use the `opacity`, `transform` and `transition` properties being used on a CSS class called `info`. We can use the `transition` property to tell CSS to animate the change in specific CSS values. In our case, we are telling it to animate changes in `opacity` and `transform`. This is used to create the sliding effect of the tags when you hover over an image.
 
-You will see that we are using `.pin:hover .info` and `pin:hover .remove` to change the styling of the `info` and `remove` CSS classes. The blank space between each of these two classes indicates a parent-child relationship. In other words, when users hover over the parent (`pin`) then the following should be applied to the children (`info` and `remove` respectively). Note that, likewise, if a user no longer hovers over an image the styling is animated back to its original resting state.
+We use `.pin:hover .info` and `pin:hover .remove` to change the styling of the `info` and `remove` CSS classes. The blank space between each of these two classes indicates a parent-child relationship. In other words, when users hover over the parent (`pin`) then the following should be applied to the children (`info` and `remove` respectively). Note that, likewise, if a user no longer hovers over an image the styling is animated back to its original resting state.
 
-It is important to keep in mind that a blank space in our CSS selectors do no imply a direct parent-child relation. It merely indicates that class can be nested at any level within the parent element. In order to use a direct parent-child relation you need to use a greater-than sign (`>`). For example with `.pin > .info` it needs to be nest only a single level below the parent.
+Note that a blank space in our CSS selectors do no imply a direct parent-child relation. It indicates that class can be nested at any level within the parent element. In order to use a direct parent-child relation you need to use a greater-than sign (`>`). For example with `.pin > .info` it needs to be nest only a single level below the parent.
 
 ```css
 .info {
@@ -861,7 +866,7 @@ Our hover effect will display the `info` and `remove` classes as follows over ou
 
 ### Object-fit
 
-We mentioned in our HTML examples that our `<img>` elements's behaviour is a bit different from the default `<img>` element behaviour. We accomplish this as follows:
+Our `<img>` elements's behaviour need to be a bit different from the default `<img>` element behaviour. We accomplish this as follows:
 
 - The `width: 100%` and `height: 20rem` values tell the image to fill its entire parent width (the pin itself), but to force a height of `20rem`.
 - By default the above will cause the image to stretch and distort (since it will be forced to that size without crop).
@@ -906,4 +911,5 @@ Similar to our `position: absolute` example above, the `position: fixed` rule on
 
 ## Next Steps
 
-While the above creates all of the structural parts needed for our pinboard, it is completely static. This means that nothing happens when users press buttons or enter text into inputs. Luckily all browsers come with a scripting language, called JavaScript, that allows us to programmatically add interactivity to our pages. We will be doing this in [part 2 of our project](./PinboardProjectPart2.md).
+
+While the above creates all of the structural parts needed for our pinboard, it is completely static. This means that nothing happens when users press buttons or enter text into inputs. In [part 2 of our project](./PinboardProjectPart2.md), we'll use JavaScript to make our project functional and interactive.
