@@ -297,7 +297,7 @@ After adding the above code to `style.css`, open your `index.html` file and re
   <head>
     <meta charset="utf-8" />
     <title>My Moodboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
@@ -528,7 +528,7 @@ Inside the `<html>` element we see another element titled `<head>`. This element
 <head>
   <meta charset="utf-8" />
   <title>My Moodboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./style.css" />
   <script src="./script.js" defer></script>
@@ -910,5 +910,6 @@ Similar to our `position: absolute` example above, the `position: fixed` rule on
 ```
 
 ## Next Steps
+
 
 While the above creates all of the structural parts needed for our pinboard, it is completely static. This means that nothing happens when users press buttons or enter text into inputs. In [part 2 of our project](./PinboardProjectPart2.md), we'll use JavaScript to make our project functional and interactive.
