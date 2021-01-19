@@ -2,9 +2,15 @@
 
 Follow the steps during team creation to invite people with their repl.it username or email addresses.
 
-If you've already created a team, navigate to your [team dashboard](https://repl.it/teams)  and under "Teammates" click "Add more."
+If you've already created a team, navigate to your [team dashboard](https://repl.it/teams)  and click "Manage team members" in the header.
 
-<img src="/images/teamsForEducation/addmore.png" />
+<img style="width: 300px" src="/images/teamsForEducation/manageTeamMembers.png" />
+
+You may add team members by:
+
+1. Entering the email or username of an existing user.
+2. Invite via link (link does not expire).
+3. Uploading a CSV of emails or usernames.
 
 ## Invite anonymous members to maintain privacy
 
