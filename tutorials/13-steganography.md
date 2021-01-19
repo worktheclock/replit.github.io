@@ -33,7 +33,7 @@ The image would look almost identical in any image viewer (we have just added or
 
 Using this technique but extending it over an entire image (millions of pixels), we can hide a large amount of text data in any image.
 
-### Creating the project on Repl.it
+## Creating the project on Repl.it
 
 If you were serious about keeping your messages as secret as possible, you'd want to do all of these steps on an offline computer that you fully control. As a learning exercise though, we'll set the project up on [repl.it](https://repl.it). Navigate to their site and sign up for an account if you don't have one.
 
@@ -43,7 +43,7 @@ Create a new project, choosing "Python" as the language, and give your project a
 
 The first piece we need to build is a function to encode any text message as a binary string.
  
-### Encoding a text message as a binary string
+## Encoding a text message as a binary string
  
 Open the `main.py` file and add the following code
  
@@ -54,30 +54,53 @@ def encode_message_as_bytestring(message):
     b64 = message.encode("utf8")
     bytes_ = base64.encodebytes(b64)
     bytestring = "".join(["{:08b}".format(x) for x in bytes_])
+    return bytestring
+```
+
+This first encodes our text as [base64](https://en.wikipedia.org/wiki/Base64) and then as a binary string. You can add some print statements to see how the message is transformed in the different steps, as shown below.
+
+![Encoding a message as a binary string](images/13-01-encode-binstring.png)
+
+The base64 step is not strictly necessary, but it is useful as any file or data can be encoded as base64. This opens our project up to future extensions such as hiding other kinds of files within image files instead of just text strings.
+
+## Adding an 'end of message' delimeter
+
+We'll assume that our message will always 'fit' in our image. We can fit three binary digits per pixel (one for each of the RGB values), so our resulting binary string should be shorter than the the number of pixels in the image multiplied by three.
+
+We'll also need to know when the message *ends*. The message will only be encoded in the beginning of the image file, but if we don't know how long the message is, we'll keep looking at normal pixels and trying to encode them as text data. Let's add an "end of string" delimiter to the end of our message: this should be something that wouldn't appear half way through our actual message by chance. We'll use the binary representation of '!ENDOFMESSAGE!' for this.
+
+Modify your function to look as follows, which adds this delimeter at the end.
+
+```python
+import base64
+ 
+ENDOFMESSAGE = "0100100101010101010101100100111101010010010001010011100101000111010101000101010101010110010101000101010100110000010001100100100001010010010100110100010100111101"
+ 
+def encode_message_as_bytestring(message):
+    b64 = message.encode("utf8")
+    bytes_ = base64.encodebytes(b64)
+    bytestring = "".join(["{:08b}".format(x) for x in bytes_])
     bytestring += ENDOFMESSAGE
     return bytestring
 ```
 
+Now that we can handle some basic text encoding, let's look at images.
 
- 
-The `ENDOFMESSAGE` variable refers to a random string of binary data that we add to the end of our encoded message to identify where the message ends. The receiving end will use the exact same binary string to identify the end of the message and decode it.
- 
-The `encode_message_as_bytestring()` function does the following:
-- Encodes the message in `utf-8` and then to `base64`. We add the `base64` conversion so that this application will also be able to encode data types other than text. ie. Hiding another image or video file within the image.
-- We then create our `bytestring` by looping through the base64 characters, converting each to its binary representation and joining them together into a string of bits.
-- Now we have the complete message as a binary string. Before returning the `bytesrting` we append `ENDOFMESSAGE` to the `bytestring` to complete the encoded message that we will hide in the image.
- 
-### Getting pixels from an image
- 
-Our next step will be to upload an image and extract the pixel data so that we can hide our encoded message within those pixels.
- 
-You can upload a `png` image of your choice by clicking on the three dot menu, in the top right corner of the files pane to the left, and selecting "upload file" or by simply dragging and dropping it within the files pane.
+## Getting pixels from an image
+
+Find a .png image somewhere - either one you've taken yourself or from a site like unsplash. You can use any online JPG to PNG convertor if you only have `.jpg` files available.
+
+Upload your png file by clicking on the three dot menu in the repl sidebar, in the top right corner of the files pane to the left, and selecting "upload file" or by simply dragging and dropping it within the files pane.
  
 ![Image showing file upload](images/05-upload-file.png)
- 
-Now that we have an image, let's create a function to extract the pixel data from the image. The PyPNG module is a lightweight `png` module that allows us to read and write a `png` file.
- 
-Add the following code under the `encode_message_as_bytestring()` function in the `main.py` file.
+
+We're going to write a function that extracts the raw pixel data from this image file. Add an import to the top of the file.
+
+```python
+import png
+```
+
+And then add a new function to the bottom of `main.py`:
  
 ```python
 def get_pixels_from_image(fname):
@@ -85,24 +108,20 @@ def get_pixels_from_image(fname):
     pixels = img[2]
     return pixels
 ```
-The above function uses the PyPNG module's *Reader Class Object* to get the `png` data.
- 
 The `read()` method returns a 4‑tuple consisting of:
  
-- width: Width of PNG image in pixels;
-- height: Height of PNG image in pixels;
-- rows: A sequence or iterator for the row data;
-- info: An info dictionary containing much of the image metadata.
+- width: Width of PNG image in pixels
+- height: Height of PNG image in pixels
+- rows: A sequence or iterator for the row data
+- info: An info dictionary containing some meta data
+
+We are primarily interested in the third item, "rows", which is an iterator containing all the pixels of the image, row by row. If you're not familiar with Python generators [take a look at this guide](https://realpython.com/introduction-to-python-generators/), but they are essentially memory-efficient lists.
+
+## Encoding the image with the message
  
-We are interested in the third, "rows", which is a lazy iterator containing all the pixels of the image, row by row. So we take the "row" data from the 4-tuple at index position 2 and add it to a variable called `pixels`.
+Now that we have the encoded message and pixels of the image ready we can combine them to form our secret encoded image.
  
-A [generator function](https://realpython.com/introduction-to-python-generators/) returns a lazy iterator which is an object that we can loop over like a list. However, unlike lists, lazy iterators do not store their contents in memory.
- 
-### Encoding the image with the message
- 
-Now that we have the message and pixels of the image ready we can combine them to form our secret encoded image.
- 
-Add the following function to the `main.py` file, below the `get_pixels_from_image()` function.
+Add the following function to the bottom of the `main.py` file. This function takes in the outputs from the previous functions (our raw pixels and our message encoded as a binary string), and combines them.
  
 ```python
 def encode_pixels_with_message(pixels, bytestring):
@@ -129,11 +148,13 @@ def encode_pixels_with_message(pixels, bytestring):
         enc_pixels.append(enc_row)
     return enc_pixels
 ```
-The above function loops through each row of pixels then loops through each character in those rows. It then checks if the pixel is an odd or even number. We accomplish this by dividing the pixel value by 2, if the remainder is 0 then it is an even number, if it is 1 then it's an odd number. It then compares the result (1 or 0) to the bit in the same index position of the `bytestring` list, if they match then it keeps the pixel value the same, if they don't then it subtracts one from the pixel value which in turn changes the value from odd to even or vice versa, changing the bit to match that of the `bytestring` list. We then append the updated pixels from each row to the `enc_row` list and in the end we append `enc_row` to `enc_pixels` forming the complete secret encoded image.
+This is the most complicated part of our project, but most of the code is there to handle edge cases. The important insight is that we want to control whether each pixel has an odd value (representing a 1 in our binary string) or an even one (to represent a 0). By chance, half of the pixel values will already have the correct value.
+
+We simply loop through the binary string and the pixel and 'bump' each value that isn't correct by one. That is, we subtract 1 from the value if we need to change it from odd to even or vice versa. We don't want any negative numbers, so if we need to change any of the `0` values, we add 1 instead.
+
+### Writing our modified pixels back to an image
  
-### Writing pixels to an image
- 
-We now have a complete image with the encoded message but it is still just a list of pixels. Let's add a function that will compile our pixels back into a `png` image.
+We now have all the image data, including the encoded message but it is still just a list of pixels. Let's add a function that will compile our pixels back into a `png` image.
  
 Add the following function to the bottom of the `main.py` file.
  
@@ -141,20 +162,26 @@ Add the following function to the bottom of the `main.py` file.
 def write_pixels_to_image(pixels, fname):
     png.from_array(pixels, 'RGB').save(fname)
 ```
-The above function simply takes the array `pixels` and uses the `png` module to compile and save a new image.
+The above function takes the array `pixels` and uses the `png` module to write these to a brand new .png file.
+
+Play around with these functions to make sure you understand how they work. Before we write some wrapper code to actually use thes, we're going to do everything backwards so that we can also extract hidden messages from previously encoded png files.
  
-## Decoding
- 
-We have now seen how to encode the message into an image, next we'll build the decoding part so that the receiving end can extract the secret message.
- 
-### Decoding the message from an image
- 
-As with the encoding, we need to extract the pixel data from the image again in order to decode the message. We will use the same `get_pixels_from_image()` function already defined above. The flow of the program will become more clear once we get to the `main()` function later.
- 
-After extracting the pixels from the image we can decode the pixels in order to extract our secret message.
- 
-Add the following code to the bottom of the `main.py` file.
- 
+## Decoding messages from image files
+
+First we ned a function that can turn a binary string back into readable text. As before, we'll go via base64 for better compatability. Add the following function to the bottom of the `main.py` file.
+
+```python
+def decode_message_from_bytestring(bytestring):
+    bytestring = bytestring.split(ENDOFMESSAGE)[0]
+    message = int(bytestring, 2).to_bytes(len(bytestring) // 8, byteorder='big')
+    message = base64.decodebytes(message).decode("utf8")
+    return message
+```
+
+Remember how we added a special `ENDOFMESSAGE` delimiter above? Here we first split our string on that so we don't look for text in random data (pixels from the unmodified part of the image) and then go backwards through our encoding pipe: first to base64 and then to text.
+
+We also need a way to extract the bytestring from an image. Add the following function to `main.py` to do this.
+
 ```python
 def decode_pixels(pixels):
     bytestring = []
@@ -165,26 +192,14 @@ def decode_pixels(pixels):
     message = decode_message_from_bytestring(bytestring)
     return message
 ```
-The above function is similar to the `encode_pixels_with_message()` function except this time we reverse it. We loop through the pixel values, divide them by 2 and append the remainder (1 or 0) to the `bytestring` list. This gives us our message in binary format. We then call the `decode_message_from_bytestring()` function passing the `bytestring` list to it.
- 
-Let's add the `decode_message_from_bytestring()` function to the end of the `main.py` file.
- 
-```python
-def decode_message_from_bytestring(bytestring):
-    bytestring = bytestring.split(ENDOFMESSAGE)[0]
-    message = int(bytestring, 2).to_bytes(len(bytestring) // 8, byteorder='big')
-    message = base64.decodebytes(message).decode("utf8")
-    return message
-```
-Again the above function is similar to the `encode_message_as_bytestring()` function only in reverse. Specifically it finds the end of the message by splitting the bytestring at the `ENDOFMESSAGE` string and only keeps the message at index position 0. It then converts the string of bits into 8bit bytes and decodes the message back to text.
- 
+
+Once again, this is just the reverse of what we did before. We grab the remainder of each value to get `1` for each odd value and `0` for each even one and keep them in a string. We then call our decode function to get the plaintext.
+
 That's it for our encoding and decoding functions, next we'll put everything together in our `main()` function.
  
-## Main function
- 
-Ideally, we would want to create a front-end for our app where users can easily upload images and hide secret messages within them but for this tutorial, we'll make it a command-line program.
- 
-Let's create a prompt for our users to interact with our encode/decode application.
+## Adding a command line wrapper script
+
+At this point, we could create a web application with a UI for people to add text to their images. Given the fact that people who want to do steganography probably won't trust a web application with their data, we'll rather create a command line application that people can run on their own machines.
  
 Add the following to the top of your `main.py` file, right below the imports.
  
@@ -197,6 +212,7 @@ Welcome to basic steganography. Please choose:
 q. to exit
 """
 ```
+
 Now let's write the `main()` function that puts it all together. Add the following to the end of the `main.py` file.
  
 ```python
@@ -227,27 +243,10 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
 The `main()` function above creates a prompt flow for the user to interact with the program. Depending on the input from the user, the program will call the relative functions in order to either encode or decode a message. We also included a `q` for the user to close the program.
- 
-## Adding more layers
- 
-Using the methods explained above, Alice can send messages to Bob disguised as innocent pictures. But the system remains imperfect. Depending on their situation, Eve may still grow suspicious if she is expecting Alice to try to communicate with Bob, and sees a stream of images passing between them. And considering that Eve may be anyone from a casual eavesdropper, with nothing better to do, to an entire three-letter government agency, with practically unlimited resources and technology, Alice and Bob may want to add a final layer of security.
- 
-One way to achieve this is counter-intuitive. Instead of Alice sending the image through some supposedly private means of communication, such as e-mail, (which, although private, is not completely secure) Alice can leave the image in a public place for Bob to ‘find’. Alice could upload the modified image to any number of public image sharing services, such as Instagram, or even more creatively, she could use a website such as 9gag.com where hundreds of ‘funny’ images are uploaded every day for the amusement of thousands of viewers. As long as Bob has some inkling of where to look for the image, he can then retrieve it, without alerting Eve to the fact that he and Alice are even communicating. Yet another option is to hide the message in an advertisement image, and pay for a third-party site to show it to their users. With the number of images to be found around the world wide web, Eve’s goal of finding the correct image, and still managing to decode the message it contains, becomes close to impossible.
- 
-## Challenges
- 
-Of course, the more layers of security that Alice and Bob add to their communication, the higher the need becomes for prior contact in order to correctly receive and interpret each other’s messages. But this prior contact is still easier to achieve than for traditional encryption in which each needs to share a long private secret which is different for each message. And should Alice and Bob have had the opportunity to communicate privately in the past, and had the foresight to share the necessary keys, then traditional encryption can be combined with steganography for an even more layered approach to covert communication. That is, Alice can encrypt the message traditionally, and then hide the result of the encryption in the image, making extraction and code-breaking analysis more difficult for Eve.
- 
-Another challenge, especially if the method of storing the images in publicly accessible places is used, is that images are almost always compressed. Many compression schemes use so-called ‘lossy’ compression, in which less important pixels in an image are identified and either discarded or modified.
- 
-A popular example of lossy compression is found in the ubiquitous JPEG format. Once an image has been compressed using one of these methods, it is impossible to reverse the process and retrieve the original image again, even though the result is indistinguishable to the human eye at normal zoom levels. And because there are many different compression methods, and public image sites do not usually specify which they are using, the subtleties introduced to an image by Alice or Bob may well be lost. Therefore Alice and Bob would need to either identify a suitable sharing platform where uncompressed images may be shared, or to examine the compression methods used and attempt to work around them. Nonetheless, steganography remains a more than theoretical means for private communication.
- 
-A few years ago, police in Berlin confiscated a password-protected memory card containing hidden files from a suspect who was undergoing questioning. After these files were decoded, they seemed to be pornographic videos, but after further investigation it turned out over a hundred documents relating to al Qaeda plots were encoded into the videos, using steganography. It took German investigators weeks of effort to discover and retrieve these documents, and it requires no stretch of the imagination to realise that many similar cases may have gone completely undetected. Cases like this necessarily prompt calls for more information about steganography, with the result that receiving funding to spend a few years ‘analysing’ pornography, strictly for academic purposes, is not unheard of.
- 
-## Closing note
- 
-Now you can build an application that you can use for secret text communication. This application can be expanded to encode many different data types like hiding an image within an image or you could add encryption to your message and hide the encrypted message in your image for an extra layer of security.
+
+## Where next?
  
 If you have followed along you'll have your own repl to expand, if not you can fork [our repl](https://repl.it/@ritza/python-steganography) and work from there or test it out below.
  
