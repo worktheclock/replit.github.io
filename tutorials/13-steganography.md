@@ -1,74 +1,54 @@
 # Hiding messages in images: steganography with Python and Repl.it
  
-In this tutorial, we'll build a Steganography tool in pure Python. This tool will enable two parties to hide a secret message within a `png` image and extract the secret message on the receiving end, ensuring private end-to-end communication.
+In this tutorial, we'll build a steganography tool in Python. Steganography is the practice of hiding information within other data. Unlike encryption, where the goal is to secure *the contents* of communication between two parties, steganography aims to obscure the fact that the parties are communicating at all.
+
+Our tool will enable the user to hide secret text within a normal-looking `.png` image file. The receiver of the image will use the same tool to reveal the hidden message.
+
+We'll use Python to build the tool. The most popular Python image processing libraries are [Pillow](https://pypi.org/project/Pillow/) and [OpenCV](https://pypi.org/project/opencv-python/), but these are heavy libraries with many dependencies. We'll avoid these and instead use the lightweight [PyPNG](https://pypi.org/project/pypng/) library which is written in pure Python, and therefore easier to run on various platforms.
  
-[Steganography](https://en.wikipedia.org/wiki/Steganography) is the science of hiding data within other data. It is often used when two parties want to share a secret message with each other. Some examples are hiding a message in the color bits of a jpeg file or in the noisy bits of an audio or video file. This "disguised" file then gets shared and the receiver extracts the message from the file without any "sniffers" in the middle suspecting secret communication.
+## A quick background on steganography
  
-This tutorial is written in [Python](https://www.python.org/) with the following modules:
+Let's imagine three people: Alice, Bob and Eve. Alice wants to send a private message to Bob, while Eve wants to intercept this message. While modern-day encryption can help Alice and Bob ensure that Eve doesn't know the *contents* of their message, Eve can possibly still deduce interesting information just from knowing that Alice and Bob are communicating at all, and how frequently they communicate.
+
+To obscure the communication channel completely, Alice and Bob can exploit the fact that hundreds of millions of photos are uploaded and shared across the internet daily. Instead of communicating direclty, Alice can leave her message hidden in an image at a pre-agreed location and Bob can access this message. From Eve's perspective, there is now no direct communication between the two.
  
-- The [PyPNG](https://pypng.readthedocs.io/en/latest/png.html) module for reading and writing to `png` files.
-- The [base64](https://docs.python.org/3/library/base64.html) module for encoding and decoding between binary data and printable ASCII characters.
+A single image is made up of millions of pixels. While many formats exist, a pixel is most simply represented by a group of three numbers between 0 and 255, one number each for the red, blue, and green values of that pixel. Using this Red-Green-Blue scheme we can represent any colour in the [RGB color model](https://en.wikipedia.org/wiki/RGB_color_model).
  
-## Steganography
- 
-Let's imagine three people: Alice, Bob and Eve. Alice wants to send a private message to Bob, while Eve wishes to intercept this message, probably with malicious intent. The problem for Alice and Bob is that although the communication over the Internet is fast, and easily achieved, the Internet was built from an unstable trust-based model, where a message moves from node to node until it reaches its destination. Any of the intermediary nodes have full access to the message - unless it is encrypted.
- 
-[Encryption](https://en.wikipedia.org/wiki/Encryption) is a great way of keeping your messages private, however, even state-of-the-art encryption today has been called into doubt. Whether there are intentional weaknesses incorporated or because computers have become powerful enough to break even untampered, sophisticated encryption methods, Alice and Bob need to go to more extreme ends to ensure a method of communication which is interpretable by each of them, but not by Eve.
- 
-### Images and text
- 
-Images are prolific. Proud parents send countless badly-shot cellphone snaps of their new-borns to relatives, who pretend to appreciate them; companies’ logos are displayed prominently on their home-pages; and adverts showing pictures of scantily clad women are used to convince the unwary to divulge their credit card information to strangers.
- 
-A single image is made up of millions of pixels; a standard smart-phone these days is likely to have a twelve megapixel camera, or better, which means that every picture it takes, uncompressed, contains about twelve million pixels. A colour pixel is most simply represented by a group of three numbers between 0 and 255, one number each for the red, blue, and green values of the pixel. Using just these three numbers, any colour on the Red-Green-Blue or RGB colour scale can be represented.
- 
-Digital text, like images, is also represented by numbers. Using one of the most basic text encoding methods, ASCII, each character is represented by a number between 0 and 255. Thus a computer, using ASCII encoding, sees an ‘A’ as 65, a ‘B’ as 66, and a ‘Z’ as 90. A lowercase ‘a’ is 97, and other numbers are assigned for special characters. This means that we can represent up to three characters in every single pixel of a picture: (84, 104, 101) could be both a dirty turquoise colour as well as the word ‘The’. In a normal uncompressed photograph, we can therefore fit about thirty-six million characters. The full text of *Alice in Wonderland* by *Lewis Carroll* is 26 000 words or about 150 000 characters, so we can see that there is the potential to send substantial amounts of text in a single image.
- 
-![Alice in Wonderland as an image](images/01-alice-in-wonderland-image.png)
- 
-As you can see, *Alice in Wonderland* as an image doesn't look like much of an image, instead, it looks more like white noise on a television. Sending an image like this will raise suspicion and Eve would probably realise that there is more to the image than meets the eye. Assuming Eve has some technical knowledge it won't take her long to figure out how to decode the message. One solution is to use an ordinary looking image and then overwrite *some* of the pixels. As long as Bob knows which pixels represents the message, he will be able to decode it, and instead of random noise we'll get something that resembles an actual image. This is called steganography.
- 
-![Alice in Wonderland hidden within an image using every Nth pixel](images/02-alice-Nth-pixel.png)
- 
-Above we can see an original image, and then the image again with *Alice in Wonderland* hidden within, using only every 40th number (each number being a third of a pixel). Although the lines are noticeable, these are more likely overlooked as part of the image than the pure 'noise' we had before. Because of the inefficiency of using only every Nth pixel, our image needs to be a bit larger, but in the example the full text of Alice in Wonderland still easily fits in a two megapixel image.
- 
-Again, however, Eve is likely to notice that something is amiss, and spend some time and effort ‘cracking the code’. Another solution, instead of representing our text in decimal ASCII, where an ‘A’ is 65, we can represent it in binary.
- 
-Binary, or base 2, is a base in which only the numbers 0 and 1 are used. In our standard base 10 or decimal system, the last digit of a number represents 1s, the second-last 10s, the third-last 100s, and so forth. The number 111 represents one 100, one 10, and one 1. Adding these together we get one-hundred and eleven. In base 2, the last number represents 1s, the second-last, 2s, the third last 4s, the fourth-last 8s, and so on, doubling with each added digit. Therefore, 111 in binary represents one 1, one 2, and one 4, and we would usually write it as 7.
- 
-Let’s see how we can use this to hide our messages even more securely. One possibility is based on the fact that every number representing a third of a pixel has to have either an odd or an even value. We can interpret all odd pixel values as 1s, and all even values as 0s. Any given image can therefore be seen as a practically random string of 1s and 0s. To encode our text into the image, we simply convert our text to binary ASCII values, meaning our text is now a string of 1s and 0s. We then read each pixel of the image, and see if it ‘matches’ with the value we want (i.e. it is odd if we need a 1 or even if we need a 0). Half of the time, it will already be the value we need, and the other half, we simply modify the value by 1, making it odd or even as required.
- 
-![Alice in Wonderland completely hidden](images/03-alice-hidden.png)
- 
-The final image is almost identical to the original image, as half of the pixel numbers are identical, and the other half have been modified by 1. Remembering that each value we read is actually only a third of a pixel (either the red, green, or blue measure), it shouldn’t be surprising that this kind of modification is completely undetectable to the human eye, for adding a minuscule amount of one colour to a single pixel keeps it virtually identical.
- 
-## Building the Encode/Decode application with Python
- 
-Let's build an application for Alice and Bob using the binary solution, where we will represent the message in binary data and hide it within the pixels of an image.
- 
+Digital text, like images, is also represented internally by numbers, so the differences between a text file and an image file are not as large as you might assume. Any digital data can be represented as a [binary string](https://thehelloworldprogram.com/computer-science/what-is-binary/): a bunch of 1s and 0s, and we can make tiny modifications to an image to encode a binary string within it. As an example, consider the following:
+
+```python
+image = [(255, 0, 0), (0, 255, 0), (0, 0, 255)]
+```
+This is a representation of an image with three pixels: one red, one green, and one blue. If we encode this as an image and open it in an image viewer, we'll see the three pixel image, but if we read this data with Python, it is simply a list of tuples, each containing three integers.
+
+We could also look at each value making up each pixel and calculate whether it is *odd* or *even*. We could encode odd numbers as `1` and even values as `0`. This would give us the binary string "100 010 001" (as the 255 values are odd and the 0s are even).
+
+If we made a small modification to the image as follows:
+
+```python
+image = [(254, 1, 1), (1, 255, 1), (1, 0, 254)]
+```
+
+The image would look almost identical in any image viewer (we have just added or subtracted a minuscule amount of color from some values), but the binary string -- using our odd/even method -- would look completely different: "011 111 100". 
+
+Using this technique but extending it over an entire image (millions of pixels), we can hide a large amount of text data in any image.
+
 ### Creating the project on Repl.it
- 
-If you haven't already, head to the [sign up](https://repl.it/signup) page and create a Repl.it account.
- 
-Let's set up our project on Repl.it through following the below steps:
- 
-- Create a new repl.
-- Choose repl language: "Python"
-- Give the repl a name: In our case "python-steganography"
-- Click the "Create repl" button.
- 
+
+If you were serious about keeping your messages as secret as possible, you'd want to do all of these steps on an offline computer that you fully control. As a learning exercise though, we'll set the project up on [repl.it](https://repl.it). Navigate to their site and sign up for an account if you don't have one.
+
+Create a new project, choosing "Python" as the language, and give your project a name.
+
 ![Creating a new Repl](images/04-create-repl.png)
+
+The first piece we need to build is a function to encode any text message as a binary string.
  
-### Encoding the message
+### Encoding a text message as a binary string
  
-In order to hide our message within the image we first need to encode the message (convert it to binary data). Let's create a function for the encoding of messages.
- 
-Open the `main.py` file and add the following code.
+Open the `main.py` file and add the following code
  
 ```python
-import png
 import base64
- 
-ENDOFMESSAGE = "0100100101010101010101100100111101010010010001010011100101000111010101000101010101010110010101000101010100110000010001100100100001010010010100110100010100111101"
  
 def encode_message_as_bytestring(message):
     b64 = message.encode("utf8")
@@ -77,7 +57,8 @@ def encode_message_as_bytestring(message):
     bytestring += ENDOFMESSAGE
     return bytestring
 ```
-Above, we import the `png` and `base64` modules needed.
+
+
  
 The `ENDOFMESSAGE` variable refers to a random string of binary data that we add to the end of our encoded message to identify where the message ends. The receiving end will use the exact same binary string to identify the end of the message and decode it.
  
