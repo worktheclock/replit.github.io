@@ -228,10 +228,6 @@ We've written a name splitter that can handle some names more complicated than j
 
 <iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/namesplitter?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Because you're using the `main.py` file now, you can also invoke `pytest` directly from the output console on the right by typing `import pytest; pytest.main()`. Note that updates to your code are only properly applied when you press the `Run` button though, so make sure to run your code between changes before running the tests.
-
-![**Image 8:** *Triggering a new error and invoking `pytest` from the output pane.*](https://codewithrepl.it/img/09-error-and-invoke-from-repl.png)
-
 ## Where next
 
 You've learned to do TDD in this project. It's a popular style of programming, but it's not for everyone. Even if you decide not to use TDD, having tests is still very useful and it's not uncommon for large projects to have thousands or millions of tests. 
