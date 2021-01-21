@@ -226,6 +226,10 @@
             {
                 "name": "Audio: create a media player",
                 "slug": "12-audio"
+            },
+            {
+                "name": "Steganography: hiding messages in images",
+                "slug": "13-steganography"
             }
         ]
     },
