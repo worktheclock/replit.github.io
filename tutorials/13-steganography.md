@@ -39,7 +39,7 @@ If you were serious about keeping your messages as secret as possible, you'd wan
 
 Create a new project, choosing "Python" as the language, and give your project a name.
 
-![Creating a new repl](images/04-create-repl.png)
+![Creating a new repl](/images/tutorials/13-steganography/04-create-repl.png)
 
 The first piece we need to build is a function to encode any text message as a binary string.
  
@@ -59,7 +59,7 @@ def encode_message_as_bytestring(message):
 
 This first encodes our text as [base64](https://en.wikipedia.org/wiki/Base64) and then as a binary string. You can add some print statements to see how the message is transformed in the different steps, as shown below.
 
-![Encoding a message as a binary string](images/13-01-encode-binstring.png)
+![Encoding a message as a binary string](/images/tutorials/13-steganography/13-01-encode-binstring.png)
 
 The base64 step is not strictly necessary, but it is useful as any file or data can be encoded as base64. This opens our project up to future extensions such as hiding other kinds of files within image files instead of just text strings.
 
@@ -92,7 +92,7 @@ Find a PNG image somewhere - either one you've taken yourself or from a site lik
 
 Upload your PNG file by clicking on the three dot menu in the repl sidebar, in the top right corner of the files pane to the left, and selecting `upload file` or by simply dragging and dropping your file within the files pane.
  
-![Image showing file upload](images/05-upload-file.png)
+![Image showing file upload](/images/tutorials/13-steganography/05-upload-file.png)
 
 We're going to write a function that extracts the raw pixel data from this image file. Add an import to the top of the file.
 
