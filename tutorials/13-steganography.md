@@ -10,11 +10,11 @@ We'll use Python to build the tool. The most popular Python image processing lib
  
 Let's imagine three people: Alice, Bob and Eve. Alice wants to send a private message to Bob, while Eve wants to intercept this message. While modern-day encryption can help Alice and Bob ensure that Eve doesn't know the *contents* of their message, Eve can possibly still deduce interesting information just from knowing that Alice and Bob are communicating at all, and how frequently they communicate.
 
-To obscure the communication channel completely, Alice and Bob can exploit the fact that hundreds of millions of photos are uploaded and shared across the internet daily. Instead of communicating direclty, Alice can leave her message hidden in an image at a pre-agreed location and Bob can access this message. From Eve's perspective, there is now no direct communication between the two.
+To obscure the communication channel completely, Alice and Bob can exploit the fact that hundreds of millions of photos are uploaded and shared across the internet daily. Instead of communicating directly, Alice can leave her message hidden in an image at a pre-agreed location and Bob can access this message. From Eve's perspective, there is now no direct communication between the two.
  
 A single image is made up of millions of pixels. While many formats exist, a pixel is most simply represented by a group of three numbers between 0 and 255, one number each for the red, blue, and green values of that pixel. Using this Red-Green-Blue scheme we can represent any colour in the [RGB color model](https://en.wikipedia.org/wiki/RGB_color_model).
  
-Digital text, like images, is also represented internally by numbers, so the differences between a text file and an image file are not as large as you might assume. Any digital data can be represented as a [binary string](https://thehelloworldprogram.com/computer-science/what-is-binary/): a bunch of 1s and 0s, and we can make tiny modifications to an image to encode a binary string within it. As an example, consider the following:
+Digital text, like images, is also represented internally by numbers, so the differences between a text file and an image file are not as large as you might assume. Any digital data can be represented as a [binary string](https://thehelloworldprogram.com/computer-science/what-is-binary/), a bunch of 1s and 0s, and we can make tiny modifications to an image to encode a binary string within it. As an example, consider the following:
 
 ```python
 image = [(255, 0, 0), (0, 255, 0), (0, 0, 255)]
@@ -39,7 +39,7 @@ If you were serious about keeping your messages as secret as possible, you'd wan
 
 Create a new project, choosing "Python" as the language, and give your project a name.
 
-![Creating a new Repl](images/04-create-repl.png)
+![Creating a new repl](images/04-create-repl.png)
 
 The first piece we need to build is a function to encode any text message as a binary string.
  
@@ -88,9 +88,9 @@ Now that we can handle some basic text encoding, let's look at images.
 
 ## Getting pixels from an image
 
-Find a .png image somewhere - either one you've taken yourself or from a site like unsplash. You can use any online JPG to PNG convertor if you only have `.jpg` files available.
+Find a PNG image somewhere - either one you've taken yourself or from a site like unsplash. You can use any online JPG to PNG converter if you only have `.jpg` files available.
 
-Upload your png file by clicking on the three dot menu in the repl sidebar, in the top right corner of the files pane to the left, and selecting "upload file" or by simply dragging and dropping it within the files pane.
+Upload your PNG file by clicking on the three dot menu in the repl sidebar, in the top right corner of the files pane to the left, and selecting `upload file` or by simply dragging and dropping your file within the files pane.
  
 ![Image showing file upload](images/05-upload-file.png)
 
@@ -108,6 +108,7 @@ def get_pixels_from_image(fname):
     pixels = img[2]
     return pixels
 ```
+
 The `read()` method returns a 4‑tuple consisting of:
  
 - width: Width of PNG image in pixels
@@ -115,7 +116,7 @@ The `read()` method returns a 4‑tuple consisting of:
 - rows: A sequence or iterator for the row data
 - info: An info dictionary containing some meta data
 
-We are primarily interested in the third item, "rows", which is an iterator containing all the pixels of the image, row by row. If you're not familiar with Python generators [take a look at this guide](https://realpython.com/introduction-to-python-generators/), but they are essentially memory-efficient lists.
+We are primarily interested in the third item, "rows", which is an iterator containing all the pixels of the image, row by row. If you're not familiar with Python generators take a look at [this guide](https://realpython.com/introduction-to-python-generators/), but they are essentially memory-efficient lists.
 
 ## Encoding the image with the message
  
@@ -148,13 +149,14 @@ def encode_pixels_with_message(pixels, bytestring):
         enc_pixels.append(enc_row)
     return enc_pixels
 ```
+
 This is the most complicated part of our project, but most of the code is there to handle edge cases. The important insight is that we want to control whether each pixel has an odd value (representing a 1 in our binary string) or an even one (to represent a 0). By chance, half of the pixel values will already have the correct value.
 
 We simply loop through the binary string and the pixel and 'bump' each value that isn't correct by one. That is, we subtract 1 from the value if we need to change it from odd to even or vice versa. We don't want any negative numbers, so if we need to change any of the `0` values, we add 1 instead.
 
 ### Writing our modified pixels back to an image
  
-We now have all the image data, including the encoded message but it is still just a list of pixels. Let's add a function that will compile our pixels back into a `png` image.
+We now have all the image data, including the encoded message but it is still just a list of pixels. Let's add a function that will compile our pixels back into a PNG image.
  
 Add the following function to the bottom of the `main.py` file.
  
@@ -162,13 +164,14 @@ Add the following function to the bottom of the `main.py` file.
 def write_pixels_to_image(pixels, fname):
     png.from_array(pixels, 'RGB').save(fname)
 ```
-The above function takes the array `pixels` and uses the `png` module to write these to a brand new .png file.
 
-Play around with these functions to make sure you understand how they work. Before we write some wrapper code to actually use thes, we're going to do everything backwards so that we can also extract hidden messages from previously encoded png files.
+The above function takes the array `pixels` and uses the `png` module to write these to a brand new `.png` file.
+
+Play around with these functions to make sure you understand how they work. Before we write some wrapper code to actually use these, we're going to do everything backwards so that we can also extract hidden messages from previously encoded PNG files.
  
 ## Decoding messages from image files
 
-First we ned a function that can turn a binary string back into readable text. As before, we'll go via base64 for better compatability. Add the following function to the bottom of the `main.py` file.
+First we need a function that can turn a binary string back into readable text. As before, we'll go via base64 for better compatability. Add the following function to the bottom of the `main.py` file.
 
 ```python
 def decode_message_from_bytestring(bytestring):
@@ -195,7 +198,7 @@ def decode_pixels(pixels):
 
 Once again, this is just the reverse of what we did before. We grab the remainder of each value to get `1` for each odd value and `0` for each even one and keep them in a string. We then call our decode function to get the plaintext.
 
-That's it for our encoding and decoding functions, next we'll put everything together in our `main()` function.
+That's it for our encoding and decoding functions; next we'll put everything together in our `main()` function.
  
 ## Adding a command line wrapper script
 
@@ -209,7 +212,7 @@ Welcome to basic steganography. Please choose:
  
 1. To encode a message into an image
 2. To decode an image into a message
-q. to exit
+q. To exit
 """
 ```
 
@@ -221,7 +224,6 @@ def main():
     user_inp = ""
     while user_inp not in ("1", "2", "q"):
         user_inp = input("Your choice: ")
- 
     
     if user_inp == "1":
         in_image = input("Please enter filename of existing PNG image: ")
@@ -239,15 +241,14 @@ def main():
         pixels = get_pixels_from_image(in_image)
         print(decode_pixels(pixels))
  
- 
 if __name__ == "__main__":
     main()
 ```
 
-The `main()` function above creates a prompt flow for the user to interact with the program. Depending on the input from the user, the program will call the relative functions in order to either encode or decode a message. We also included a `q` for the user to close the program.
+The `main()` function above creates a prompt flow for the user to interact with the program. Depending on the input from the user, the program will call the relevant functions in order to either encode or decode a message. We also included a `q` for the user to close the program.
 
 ## Where next?
  
-If you have followed along you'll have your own repl to expand, if not you can fork [our repl](https://repl.it/@ritza/python-steganography) and work from there or test it out below.
+If you have followed along you'll have your own repl to expand; if not you can fork [our repl](https://repl.it/@ritza/python-steganography) and work from there or test it out below.
  
 <iframe height="400px" width="100%" src="https://repl.it/@ritza/python-steganography?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
