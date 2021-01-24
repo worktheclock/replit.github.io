@@ -264,6 +264,10 @@
             {
                 "name": "Abstract Data Types Curriculum",
                 "slug": "abstractData"
+            },
+            {
+                "name": "Intro to C++",
+                "slug": "introCpp"
             }
         ]
     }
