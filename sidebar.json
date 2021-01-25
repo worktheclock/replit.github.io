@@ -32,6 +32,10 @@
                 "slug": "http-servers"
             },
             {
+                "name": "Repl Auth",
+                "slug": "repl-auth"
+            },
+            {
                 "name": "Storing Secrets (.env)",
                 "slug": "secret-keys"
             },
