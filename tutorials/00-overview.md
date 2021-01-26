@@ -70,6 +70,10 @@ Find, download, play, and control the volume of your music, all in code. If that
 
 This is the part where you realize that the possibilities are endless while you learn how to control your music with code.
 
+#### [Lesson 13: Steganography - hiding messages in images](./13-steganography)
+
+Share secret messages with your friends by hiding them inside images with steganography, Python and Repl.it.
+
 ## Part 3: building your own projects
 
 Once you've gone through everything, you might think "but what should I build?". It's a common problem and we've got you covered. Choose your favourite projects from a list (or turn on the coffee machine, order some pizza, and get through them all). Once you've gone through the step-by-step guides you can easily modify or extend the projects to make them your own.
