@@ -1,7 +1,7 @@
 <!-- omit in toc -->
 # Pinboard Project: Part 2
 
-During [Part 1](./PinboardProjectPart1.md) of this project, we created the basic structure and styling of our pinboard. However, static HTML and CSS can only get us so far. The last step in creating a fully functional pinboard is to add interactivity by means of JavaScript as follows:
+During [Part 1](./PinboardProjectPart1.md) of this project, we created the basic structure and styling of our pinboard. However, static HTML and CSS can only get us so far. The last step in creating a fully functional pinboard is to add interactivity by using JavaScript as follows:
 
 - [Updating HTML and CSS](#updating-html-and-css)
 - [JavaScript Code](#javascript-code)
