@@ -32,7 +32,7 @@ Add a team profile picture and invite some users, either existing Repl.it users 
 
 Now you can create your first team repl! Any team repl will automatically add your students and fellow teachers for seamless multiplayer collaboration. You can also create projects for your students to work on assignments. See our articles on
 
-* [Assignment workflow](./Assignments)
+* [Assignment workflow](./Projects)
 * [Tests and autograding](./Testing)
 
 for more information.
