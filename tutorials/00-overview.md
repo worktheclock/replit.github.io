@@ -1,6 +1,6 @@
 # Welcome to _Code with Repl.it_
 
-In a series of 12 tutorials, you'll go from beginner to expert in coding with Repl.it. While these lessons are designed to be taken in order, they each make sense on their own too, so feel free to jump in wherever looks the most interesting to you.
+In a series of 13 tutorials, you'll go from beginner to expert in coding with Repl.it. While these lessons are designed to be taken in order, they each make sense on their own too, so feel free to jump in wherever looks the most interesting to you.
 
 Part 1 covers the basics of using Repl.it: how to create projects, work with files, use third party dependencies, do plotting and graphing, and use multiplayer to code as part of a team. 
 
