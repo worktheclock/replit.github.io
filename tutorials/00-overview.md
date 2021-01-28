@@ -1,6 +1,6 @@
 # Welcome to _Code with Repl.it_
 
-In a series of 12 tutorials, you'll go from beginner to expert in coding with Repl.it. While these lessons are designed to be taken in order, they each make sense on their own too, so feel free to jump in wherever looks the most interesting to you.
+In a series of 13 tutorials, you'll go from beginner to expert in coding with Repl.it. While these lessons are designed to be taken in order, they each make sense on their own too, so feel free to jump in wherever looks the most interesting to you.
 
 Part 1 covers the basics of using Repl.it: how to create projects, work with files, use third party dependencies, do plotting and graphing, and use multiplayer to code as part of a team. 
 
@@ -69,6 +69,10 @@ Now that you are starting to build larger and more complicated applications, it 
 Find, download, play, and control the volume of your music, all in code. If that's not enough, create your own music too.
 
 This is the part where you realize that the possibilities are endless while you learn how to control your music with code.
+
+#### [Lesson 13: Steganography - hiding messages in images](./13-steganography)
+
+Share secret messages with your friends by hiding them inside images with steganography, Python and Repl.it.
 
 ## Part 3: building your own projects
 
