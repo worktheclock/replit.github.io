@@ -13,7 +13,7 @@ You can take a look at the final code that we will have at the end of this proje
 We'll walk through the creation of the final pinboard in two parts.
 
 * In part 1 (this article), we'll set up the HTML and CSS of our pinboard.
-* In [part 2](./PinboardProjectPart2.md), we'll add the functionality using JavaScript.
+* In [part 2](./PinboardProjectPart2), we'll add the functionality using JavaScript.
 
 In part 1, we'll work through
 
@@ -913,4 +913,4 @@ Similar to our `position: absolute` example above, the `position: fixed` rule on
 
 ## Next steps
 
-While the above creates all of the structural parts needed for our pinboard, it is completely static. This means that nothing happens when users press buttons or enter text into inputs. In [part 2 of our project](./PinboardProjectPart2.md), we'll use JavaScript to make our project functional and interactive.
+While the above creates all of the structural parts needed for our pinboard, it is completely static. This means that nothing happens when users press buttons or enter text into inputs. In [part 2 of our project](./PinboardProjectPart2), we'll use JavaScript to make our project functional and interactive.

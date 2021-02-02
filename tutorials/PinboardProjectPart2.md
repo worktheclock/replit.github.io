@@ -1,7 +1,7 @@
 <!-- omit in toc -->
 # Pinboard Project: Part 2
 
-[Part 1](./PinboardProjectPart1.md) of this project showed us how to create the basic structure and styling of our pinboard, but static HTML and CSS can only get us so far. The last step in creating a fully functional pinboard is to add interactivity with JavaScript. Here is what we will cover now:
+[Part 1](./PinboardProjectPart1) of this project showed us how to create the basic structure and styling of our pinboard, but static HTML and CSS can only get us so far. The last step in creating a fully functional pinboard is to add interactivity with JavaScript. Here is what we will cover now:
 
 - [Updating HTML and CSS](#updating-html-and-css)
 - [JavaScript Code](#javascript-code)
@@ -685,8 +685,14 @@ Each line is responsible for actioning a different function:
 - We attach an event listener to the HTML body element and tell it to fire `handleSubmit` when a user submits a form created in our HTML.
 - We manually trigger `updatePins` in order to create the HTML for the pins that have been loaded by JavaScript.
 
-## Further Reading
+## Where next
 
-We've touched on many concepts and native functionality of JavaScript itself. We've tried to explain each concept as we went. However, if we missed anything or you simply want a deeper understanding of something, we suggest you consult the phenomenal [Mozilla Developer Network Glossary](https://developer.mozilla.org/en-US/docs/Glossary) page. Alternatively, if you don't mind spending money, look at the even more comprehensive [Web Development Glossary](https://leanpub.com/web-development-glossary) book created by [Jens Oliver Meiert](https://meiert.com/en/).
+We've touched on many concepts and native functionality of JavaScript itself. We've explained each concept as we went. 
 
-If neither option works for you, you might be able to find the material you need with a quick Google search.
+If you want a deeper understanding of something, take a look at the [Mozilla Developer Network Glossary](https://developer.mozilla.org/en-US/docs/Glossary) page. 
+
+You can extend the project by starting from our example repl below. For example, you can add more advanced tagging functionality to allow the user to specify multiple tags and say whether they want to show cards that match all tags (an "AND" search) or any cards (an "OR" search).
+
+If you want to add back-end functionality, you can add a database and use sign-up so that people can view their pins from any device, instead of only the one where they originally saved them.
+
+<iframe height="400px" width="100%" src="https://repl.it/@ritza/Pinboard-Project?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
