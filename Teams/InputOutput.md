@@ -16,7 +16,7 @@ If you are new to projects, you can find more info on creating a project [here](
 
 Once your project is created, you'll find the "Input/Output Tests" window by clicking <img src="https://i.ritzastatic.com/repl/misc/in-out-icon.png" style="width: 38px; margin: 0; display: inline-block; vertical-align: middle;"> in the left side bar.
 
-![Image showing in/out tests location](images/teamsForEducation/input-output-tests/in-out-testing-location.png)
+![Image showing in/out tests location](/images/teamsForEducation/input-output-tests/in-out-testing-location.png)
 
 ## Creating a Project with Input/Output Tests
 

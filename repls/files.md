@@ -10,7 +10,7 @@ Here is an example in Python:
 
 <iframe height="400px" width="100%" src="https://repl.it/@amasad/modules?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-## Uploading and assets
+## Uploading and Assets
 
 You can upload files by either dragging and dropping them into the files sidebar or by clicking the "three dot menu" and selecting upload file (or folder):
 
@@ -34,8 +34,7 @@ file extension.
 Two things to note about files:
 
 1. They can be of any type/extension and you can use them in your code however you'd like.
-2. Files will be placed in the current working directory; generally you'd access it through
-the relative path './filename.ext'.
+2. Files will be placed in the current working directory; generally you'd access it through the relative path './filename.ext'.
 
 Here's a few examples on files in different languages:
 - Ruby: [Word frequency in a file](https://repl.it/@masonclayton/Word-frequency-in-a-file)
