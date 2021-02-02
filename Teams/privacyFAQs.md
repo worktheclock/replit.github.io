@@ -36,6 +36,16 @@ In addition, consistent with COPPA, we do not disclose student data to third par
 
 When we contract with schools to use Teams for Education, we do not collect information about students that can be used to identify or contact them, such as a name and email address from students.  We only collect student’s Log Information (as defined in our [privacy policy](https://repl.it/site/privacy)) and use this limited data for the purposes for which it was provided to us, that is, to perform services for the school and support our internal operations. We do not disclose data to third parties other than our own subprocessors.
 
+**What other privacy regulations and security frameworks is Replit compliant with?**
+
+This list is **not exhaustive** and we will continue to update it over time, however, we have reviewed and are compliant with the following privacy regulations:
+- [New York Education Law 2-D](https://www.nysenate.gov/legislation/laws/EDN/2-D)
+- [California Consumer Privacy Act (CCPA)](https://www.oag.ca.gov/privacy/ccpa)
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+- [Higher Education Community Vendor Assessment Toolkit (HECVAT) Lite](https://library.educause.edu/resources/2020/4/higher-education-community-vendor-assessment-toolkit)
+
+If you would like us to review your local privacy regulation or organization's specific privacy policy, please email [sales@repl.it](mailto:sales@repl.it). We can also share our US Student Data Protection Addendum or our European Data Protection Addendum to speed up the process.
+
 **Is this update reflected in your Privacy Policy?**
 
 We have also updated our [Privacy Policy](https://repl.it/site/privacy) in accordance with this change.
