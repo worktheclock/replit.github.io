@@ -65,7 +65,7 @@ Once the loader is added, we can replace our placeholder pins with the HTML belo
 
 This means you will see this while our JavaScript loads (you don't have any JavaScript now, so it should be in this state indefinitely):
 
-![../static/images/teamsForEducation/pinboard-project/image-7.png](../static/images/teamsForEducation/pinboard-project/image-7.png)
+![Page loading animation](/images/teamsForEducation/pinboard-project/image-7.png)
 
 However, there are still some other left-overs from our hardcoded HTML in part 1. If we enter a value into the filter field (top-left), we will still get autocompleted recommendations from our previous pins (even though we have no pins or tags on the page at the moment). To fix this, we must clear the contents of our `<datalist>` HTML element (since we'll be managing these via JavaScript): 
 
@@ -302,10 +302,10 @@ const defaultPins = [
   },
 ];
 
-const saved = localStorage.getItem('pins');
+const savedPins= localStorage.getItem('savedPins');
 
 if (savedPins) {
-  pins = JSON.parse(saved);
+  pins = JSON.parse(savedPins)
 } else {
   pins = defaultPins;
 }
@@ -381,7 +381,7 @@ function updateHTML (providedPins) {
 
 ```
 
-The above should create a string that looks something as like the below, and is assigned as the HTML inside `pinListNode`:
+The above should create a string that looks something like the below, and is assigned as the HTML inside `pinListNode`:
 
 ```js
 pinsListNode.innerHTML = `
@@ -430,7 +430,7 @@ pinsListNode.innerHTML = `
 
 ### Updating Saved Pins
 
-It's not enought to just update our HTML. We need to perform some higher-level tasks, too. For example, we need to save the current `pins` variable to `localStorage` and update our `datalist` HTML (so that we get the most up-to-date autocomplete recommendations). We do this using the following function:
+It's not enough to just update our HTML. We need to perform some higher-level tasks, too. For example, we need to save the current `pins` variable to `localStorage` and update our `datalist` HTML (so that we get the most up-to-date autocomplete recommendations). We do this using the following function:
 
 ```js
 function updatePins (newPins) {
@@ -483,7 +483,7 @@ At the end, we automatically trigger the `updateHTML` function to make sure that
 
 ### Filtering Displayed Pins
 
-Let's create our last core function before move onto event handlers. This function updates the HTML being displayed to the user based on a single text value (passed directly to the function). This value will correspond to the input of the filter field in our HTML:
+Let's create our last core function before we move on to event handlers. This function updates the HTML being displayed to the user based on a single text value (passed directly to the function). This value will correspond to the input of the filter field in our HTML:
 
 ```js
 function applyFilter (filter) {
@@ -506,7 +506,7 @@ Before we do anything, we want to check if the `filter` argument passed to the f
 However, if the string passed by means of `filter` is not empty, we start by turning it into a variable called `array` that can be looped over when comparing tags. We do this to allow users to pass chained filters into a single string by means of separating them by commas (`,`), for example `"Engineering, Office, Lab"`. To transform this into a useable `array` value, we will:
 
 - Run `split` on the string. This breaks the string into an array, with the argument passed being used as the point of division (essentially the opposite of `.join()`). This means that our example above will be transformed into the following array: `["Engineering", " Office", " Lab"]`
-- The last two items in the array have spaces before them, so they won't match any of our tags –`" Office"` is not the same as `"Office"` according to JavaScript. We use `.map()` and the `trim()` method again to remove any whitespace around our tags. This should also get rid of random spaces added by user.
+- The last two items in the array have spaces before them, so they won't match any of our tags –`" Office"` is not the same as `"Office"` according to JavaScript. We use `.map()` and the `trim()` method again to remove any whitespace around our tags. This should also get rid of random spaces added by users.
 - We also don't want our filtering to be case sensitive, so we run `.map()` over the array and covert all tags to lowercase (since we are keeping everything as lowercase in our JavaScript).
 
 In addition to the above, we have created another array. This array, titled `filteredPins` is a duplicate of the default `pins` array, but we have removed all the objects that do not have tags that match any items in `array`. To create this array, we:
@@ -518,7 +518,7 @@ In addition to the above, we have created another array. This array, titled `fil
 - On the other hand, if there is at least one item in the `matchingTags` array, we can say that at least one tag matches our original filter `array`. This means that the object should be copied to the new `filteredPins` array.
 - After only the objects that have matching tags are copied to `filteredPins`, we run `updateHTML` passing `filteredPins` as the array to use (uing the `providePins` parameter created in the `updateHTMl` function). This means that the default `pins` variable won't be used, replaced by the filtered pins array that we pass.
 
-Here, the distinction between `updatePins` and the lower-level `updateHTML` becomes important. The `updatePins` functions also runs the `updateHTML` function after it performes its own tasks, such as overriding `savedPins` in `localStorage` and updating the `datalist` HTML. You might have wondered why we didn't just embed the `updateHTML` logic directly in the `updatePins` functions. Here, we see the value of being able to call `updateHTML` directly (without `updatePins`), since this means that we can side-step all the latter logic that changes the actual `pins` data. The filters are only visual in nature, so we only want to update the HTML show to the user, while keeping our `pins` data untouched. Filtering pins should not actually remove any objects from the `pins` array or remove any recommendations from our `datalist`. If we used `updatePins` instead, then this would accidentally change the pins that were added.
+Here, the distinction between `updatePins` and the lower-level `updateHTML` becomes important. The `updatePins` functions also runs the `updateHTML` function after it performs its own tasks, such as overriding `savedPins` in `localStorage` and updating the `datalist` HTML. You might have wondered why we didn't just embed the `updateHTML` logic directly in the `updatePins` functions. Here, we see the value of being able to call `updateHTML` directly (without `updatePins`), since this means that we can side-step all the latter logic that changes the actual `pins` data. The filters are only visual in nature, so we only want to update the HTML show to the user, while keeping our `pins` data untouched. Filtering pins should not actually remove any objects from the `pins` array or remove any recommendations from our `datalist`. If we used `updatePins` instead, then this would accidentally change the pins that were added.
 
 Taking this approach also means that we can simply run the default `updateHTML` function (without passing an argument) if the filter value changes to empty, essentially syncing up the displayed HTML with the full `pins` array again.
 
@@ -566,7 +566,7 @@ This means that JavaScript would end the string when it reaches the double quote
 "[{id:"
 ```
 
-We will be escaping some of the data provided by users, so it's important to understand exactly why we are doing this. Lets look at the function itself:
+We will be escaping some of the data provided by users, so it's important to understand exactly why we are doing this. Let's look at the function itself:
 
 ```js
 function handleInput (event) {
@@ -657,9 +657,9 @@ function handleSubmit (event) {
 ```
 
 - By default, when a form is submitted on a web page the page automatically refreshes (assuming that the data will be handled by the server). However, since we are using JavaScript to handle our logic (and not a server), we want to override this behaviour. Luckily, the submit event object includes a method (`preventDefault`) that we can run on the event itself to prevent this from happening.
-- We then need to create a unique `id` value to identify this new pin added to the `pins` array. We generate a unique `id` value by using the current date and time. We simply get the current date and time with `new Date()` and then run `getTime()` on it. The latter turns the created date object date into a number of milliseconds that have passed since midnight 1 January 1970 (called the [unix epoch](https://en.wikipedia.org/wiki/Unix_time) in programming).
+- We then need to create a unique `id` value to identify this new pin added to the `pins` array. We generate a unique `id` value by using the current date and time. We simply get the current date and time with `new Date()` and then run `getTime()` on it. The latter turns the created date object into a number of milliseconds that have passed since midnight 1 January 1970 (called the [unix epoch](https://en.wikipedia.org/wiki/Unix_time) in programming).
 - The implication here is that unless a user presses the submit button twice at the exact same millisecond, each of their pins will have a different unique value (based on when it was created).
-- To be technically correct, we should save our ID as a string, not a number, by running the `.toString()` method on our millisecond number. Although an amount of milliseconds looks like a number, when we use it as a unique ID it techincally isn't a number anymore.
+- To be technically correct, we should save our ID as a string, not a number, by running the `.toString()` method on our millisecond number. Although an amount of milliseconds looks like a number, when we use it as a unique ID it technically isn't a number anymore.
 - Then we retrieve the URL value provided and run `encodeURI()` on it. Not only does `encodeURI()` escape characters (eg. turning `;,/?:@&=+$#` into `%3B%2C%2F%3F%3A%40%26%3D%2B%24%23`), it also does this in a way that still makes it useable as a URL.
 - We then create the tags that were entered. This very closely resembles the logic we use in our `applyFilter` function, with the exception that we loop over the items afterwards and manually run the native JavaScript `escape` function on each item.
 - Next, we create a new array by destructuring the current `pins` array and adding an object to it that uses the values we created above.
@@ -678,7 +678,7 @@ document.body.addEventListener('submit', handleSubmit)
 updatePins();
 ```
 
-Each line is resposible for actioning a different function:
+Each line is responsible for actioning a different function:
 
 - We attach an event listener to the HTML body element and tell it to fire `handleInput` when users input values into any input field.
 - We attach an event listener to the HTML body element and tell it to fire `handleClick` when a user clicks on anything in our HTML.

@@ -6,7 +6,9 @@ In this project, you'll create a 'Pinboard': a web application to save, categori
 * Assign specific tags to these images.
 * Filter the board to show only images matching a specific tag.
 
-You can have a look at the final code that we will have at the end of this project by going to [https://repl.it/@ritza/Pinboard-Project](https://repl.it/@ritza/Pinboard-Project). In addition, you can view it as a standalone page by pressing the `Open in a new tab` button (at the top right of the repl) or by going straight to the following URL: [https://pinboard-project.ritza.repl.co](https://pinboard-project.ritza.repl.co/).
+![Example of the Moodboard functionality](/images/teamsForEducation/pinboard-project/pinboard.gif)
+
+You can take a look at the final code that we will have at the end of this project by going to [https://repl.it/@ritza/Pinboard-Project](https://repl.it/@ritza/Pinboard-Project). In addition, you can view it as a standalone page by pressing the `Open in a new tab` button (at the top right of the repl) or by going straight to the following URL: [https://pinboard-project.ritza.repl.co](https://pinboard-project.ritza.repl.co/)
 
 We'll walk through the creation of the final pinboard in two parts.
 
@@ -44,7 +46,7 @@ If you haven't already, head to the [signup page](https://repl.it/signup) and 
 3. Giving your repl a name: In our case "pinboard-project".
 4. Clicking the `Create repl` button.
 
-![/images/teamsForEducation/pinboard-project/image-1.png](../static/images/teamsForEducation/pinboard-project/image-1.png)
+![Creating a new Repl](/images/teamsForEducation/pinboard-project/image-1.png)
 
 Because we selected "HTML, CSS, JS" as our repl language, Repl.it has created the basic files needed for our front-end project, which should be:
 
@@ -508,11 +510,11 @@ After adding the above code to `style.css`, open your `index.html` file and re
 
 Yikes! That is quite a lot of HTML and CSS. Regardless, if you run your repl (with the big `Run` button at the top) you should see your project spring to life, as shown below.
 
-![../static/images/teamsForEducation/pinboard-project/image-2.png](../static/images/teamsForEducation/pinboard-project/image-2.png)
+![First Run](/images/teamsForEducation/pinboard-project/image-2.png)
 
 You can click the `Open in new tab` button at the far top right to open your project in a separate browser tab as follows:
 
-![../static/images/teamsForEducation/pinboard-project/image-3.png](../static/images/teamsForEducation/pinboard-project/image-3.png)
+![Open in new browser tab](/images/teamsForEducation/pinboard-project/image-3.png)
 
 ## Markup
 
@@ -677,7 +679,7 @@ Lastly, is a `<dialog>` element. While the `<dialog>` element is currently hidde
 
 When unhidden, the dialog will look as follows:
 
-![../static/images/teamsForEducation/pinboard-project/image-4.png](../static/images/teamsForEducation/pinboard-project/image-4.png)
+![Unhidden dialog](/images/teamsForEducation/pinboard-project/image-4.png)
 
 ## Styling
 
@@ -695,7 +697,7 @@ The `*` selector is named the [universal CSS selector](https://css-tricks.com/al
 
 By default, `content-box` adds all borders and padding on top of the designated size of an element. For example, if we have an element that has a `width: 10rem` with `padding: 1rem` and `border: 1px`, the actual size of the element will be the total value of `10rem + 1rem + 1px`. 
 
-By using `border-box`, all of these are included as part of an element's designated width. For example, instead of the total width being `10rem + 1rem + 1px`, it will be the specfiied `10rem` with the space needed for padding and borders being factored into this amount.
+By using `border-box`, all of these are included as part of an element's designated width. For example, instead of the total width being `10rem + 1rem + 1px`, it will be the specified `10rem` with the space needed for padding and borders being factored into this amount.
 
 ### Scrolling
 
@@ -862,7 +864,7 @@ Note that a blank space in our CSS selectors does not imply a direct parent-chil
 
 Our hover effect will display the `info` and `remove` classes over our image, as follows:
 
-![../static/images/teamsForEducation/pinboard-project/image-5.png](../static/images/teamsForEducation/pinboard-project/image-5.png)
+![Image hover overlay](/images/teamsForEducation/pinboard-project/image-5.png)
 
 ### Object-fit
 
@@ -885,7 +887,7 @@ Our `<img>` elements' behaviour needs to be a bit different from the default `<i
 
 If we leave out the `object-fit` property, then our images will get stretched as follows:
 
-![../static/images/teamsForEducation/pinboard-project/image-6.png](../static/images/teamsForEducation/pinboard-project/image-6.png)
+![Stretched images](/images/teamsForEducation/pinboard-project/image-6.png)
 
 ### Fixed overlay
 
