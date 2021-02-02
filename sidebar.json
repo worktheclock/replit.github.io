@@ -32,6 +32,10 @@
                 "slug": "http-servers"
             },
             {
+                "name": "Repl Auth",
+                "slug": "repl-auth"
+            },
+            {
                 "name": "Storing Secrets (.env)",
                 "slug": "secret-keys"
             },
@@ -100,6 +104,10 @@
             {
                 "name": "Tests and Autograding",
                 "slug": "Testing"
+            },
+            {
+                "name": "Input/Output Testing",
+                "slug": "InputOutput"
             },
             {
                 "name": "Example Homework Assignments",
@@ -272,6 +280,10 @@
             {
                 "name": "Abstract Data Types Curriculum",
                 "slug": "abstractData"
+            },
+            {
+                "name": "Intro to C++",
+                "slug": "introCpp"
             }
         ]
     }
