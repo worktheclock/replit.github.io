@@ -6,6 +6,8 @@ In this project, you'll create a 'Pinboard': a web application to save, categori
 * Assign specific tags to these images
 * Filter the board to show only images matching a specific tag.
 
+![Example of the Moodboard functionality](/images/teamsForEducation/pinboard-project/pinboard.gif)
+
 You can have a look at the final code that we will have at the end of this project by going to [https://repl.it/@ritza/Pinboard-Project](https://repl.it/@ritza/Pinboard-Project). In addition, you can view it as a standalone page by pressing the `Open in a new tab` button (at the top right of the repl) or by going straight to the following URL: [https://pinboard-project.ritza.repl.co](https://pinboard-project.ritza.repl.co/)
 
 We'll walk through the creation of the final pinboard in two parts.
@@ -44,7 +46,7 @@ If you haven't already, head to the [signup page](https://repl.it/signup) and 
 3. Give your repl a name: In our case "pinboard-project".
 4. Click the `Create repl` button.
 
-![/images/teamsForEducation/pinboard-project/image-1.png](../static/images/teamsForEducation/pinboard-project/image-1.png)
+![Creating a new Repl](/images/teamsForEducation/pinboard-project/image-1.png)
 
 Because we selected "HTML, CSS, JS" as our repl language, Repl.it has created the basic files needed for our front-end project, which should be as follows:
 
@@ -288,7 +290,7 @@ body {
 }
 ```
 
-After adding the above code to `style.css`, open your `index.html` file and replacing all of the existing code with the following snippet. 
+After adding the above code to `style.css`, open your `index.html` file and replace all of the existing code with the following snippet. 
 
 ```html
 <!DOCTYPE html>
@@ -508,11 +510,11 @@ After adding the above code to `style.css`, open your `index.html` file and re
 
 Yikes! That is quite a lot of HTML and CSS. Regardless, if you run your repl (with the big `Run` button at the top) you should see your project spring to life, as shown below.
 
-![../static/images/teamsForEducation/pinboard-project/image-2.png](../static/images/teamsForEducation/pinboard-project/image-2.png)
+![First Run](/images/teamsForEducation/pinboard-project/image-2.png)
 
 You can click the `Open in new tab` button at the far top right to open your project in a separate browser tab as follows:
 
-![../static/images/teamsForEducation/pinboard-project/image-3.png](../static/images/teamsForEducation/pinboard-project/image-3.png)
+![Open in new browser tab](/images/teamsForEducation/pinboard-project/image-3.png)
 
 ## Markup
 
@@ -543,10 +545,10 @@ Inside the `<html>` element we see another element titled `<head>`. This element
 ```
 
 - The first `<meta>` element determines the character types that should be used by the browser, this is required in all HTML documents, and is almost always set to "utf-8".
-- The `<title>` element determines the name that is shown on in a user's browser tab. It is also used by search engines and accessibility devices as the name of the page.
+- The `<title>` element determines the name that is shown on a user's browser tab. It is also used by search engines and accessibility devices as the name of the page.
 - The second `<meta>` element tells the browser to not automatically scale the size of our content. This is required for styling to look the same across several screen sizes such as a desktop computer and mobile phone (called [responsive web design](https://en.wikipedia.org/wiki/Responsive_web_design)).
 - The first `<link>` element loads our CSS file (`style.css`) which we populated above.
-- The `<script>` element loads the (still empty) JavaScript file (`script.js`). In addition, the `defer` attribute tells the browser to only execute our JavaScript once all HTML has been created. Otherwise, the HTML tags that we look for in our JavaScript will not exist yet (since the `<script>` element is created before our HTML content (inside the `<body>` element.
+- The `<script>` element loads the (still empty) JavaScript file (`script.js`). In addition, the `defer` attribute tells the browser to only execute our JavaScript once all HTML has been created. Otherwise, the HTML tags that we look for in our JavaScript will not exist yet (since the `<script>` element is created before our HTML content) inside the `<body>` element.
 - The remaining `<link>` elements are specific code that we receive when selecting fonts to use from the [Google Fonts website](https://fonts.google.com/). These are copied and pasted from the Google Fonts website, and allow us to use the fonts in question.
 
 ### Datalist
@@ -586,7 +588,7 @@ Next is the `<header>` element (note that this is different from `<head>`). The 
 </header>
 ```
 
-- An `<h1>` element that serves as the title of our page. The `<h1>` element will be used by search engines and accessibility devices to determine what page a user is currently on. Given that we only have one page this can be the same as our `<title>` (defined in the above section).
+- An `<h1>` element that serves as the title of our page. The `<h1>` element will be used by search engines and accessibility devices to determine what page a user is currently on. Given that we only have one page this can be the same as our `<title>` (defined in the above section). 
 - By default `<div>` elements do not have any inherent meaning and are often used to group and position content. The `<div>` element that we are using here is meant to wrap and style both the filter field and "Add New Image" button. The `controls` CSS `class` attribute is used to add styling that aligns the filter and button side by side.
 - The `<label>` element wraps the entire filter field and tells search engines and accessibility devices that the tags inside are grouped together. The `field` CSS `class` is used to style the field itself, whereas the `for` attribute points to the `id` attribute of the `input` element that is used by this `<label>` element.
 - By default `<span>` elements indicate a piece of short text used on our page. In our case it adds a description in the top of the field. We are using the `label` CSS `class` attribute to add the styling required to overlay the `<span>` element on top of the `<input>` element.
@@ -677,7 +679,7 @@ Lastly, is a `<dialog>` element. While the `<dialog>` element is currently hidde
 
 When unhidden, the dialog will look as follows:
 
-![../static/images/teamsForEducation/pinboard-project/image-4.png](../static/images/teamsForEducation/pinboard-project/image-4.png)
+![Unhidden dialog](/images/teamsForEducation/pinboard-project/image-4.png)
 
 ## Styling
 
@@ -695,7 +697,7 @@ The `*` selector is named the [universal CSS selector](https://css-tricks.com/al
 
 By default, `content-box` adds all borders and padding on top of the designated size of an element. For example, if we have an element that has a `width: 10rem` with `padding: 1rem` and `border: 1px` the actual size of the element will be the total value of `10rem + 1rem + 1px`. 
 
-By using `border-box`, all of these are included as part of an element's designated width. For example, instead of the total width being `10rem + 1rem + 1px`, it will be the specfiied `10rem` with the space needed for padding and borders being factored into this amount.
+By using `border-box`, all of these are included as part of an element's designated width. For example, instead of the total width being `10rem + 1rem + 1px`, it will be the specified `10rem` with the space needed for padding and borders being factored into this amount.
 
 ### Scrolling
 
@@ -804,7 +806,7 @@ This is also closely related to the computer science principle of [progressive e
 
 ### Transition
 
-Further down you will see use the `opacity`, `transform` and `transition` properties being used on a CSS class called `info`. We can use the `transition` property to tell CSS to animate the change in specific CSS values. In our case, we are telling it to animate changes in `opacity` and `transform`. This is used to create the sliding effect of the tags when you hover over an image.
+Further down you will see the `opacity`, `transform` and `transition` properties being used on a CSS class called `info`. We can use the `transition` property to tell CSS to animate the change in specific CSS values. In our case, we are telling it to animate changes in `opacity` and `transform`. This is used to create the sliding effect of the tags when you hover over an image.
 
 We use `.pin:hover .info` and `pin:hover .remove` to change the styling of the `info` and `remove` CSS classes. The blank space between each of these two classes indicates a parent-child relationship. In other words, when users hover over the parent (`pin`) then the following should be applied to the children: `info` and `remove`. Note that, likewise, if a user no longer hovers over an image the styling is animated back to its original resting state.
 
@@ -862,7 +864,7 @@ Note that a blank space in our CSS selectors does not imply a direct parent-chil
 
 Our hover effect will display the `info` and `remove` classes as follows over our image:
 
-![../static/images/teamsForEducation/pinboard-project/image-5.png](../static/images/teamsForEducation/pinboard-project/image-5.png)
+![Image hover overlay](/images/teamsForEducation/pinboard-project/image-5.png)
 
 ### Object-fit
 
@@ -885,7 +887,7 @@ Our `<img>` elements' behaviour needs to be a bit different from the default `<i
 
 If we leave out the `object-fit` property then our images will get stretched as follows:
 
-![../static/images/teamsForEducation/pinboard-project/image-6.png](../static/images/teamsForEducation/pinboard-project/image-6.png)
+![Stretched images](/images/teamsForEducation/pinboard-project/image-6.png)
 
 ### Fixed overlay
 

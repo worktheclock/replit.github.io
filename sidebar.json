@@ -226,6 +226,18 @@
             {
                 "name": "Audio: create a media player",
                 "slug": "12-audio"
+            },
+            {
+                "name": "Steganography: hiding messages in images",
+                "slug": "13-steganography"
+            },
+            {
+                "name": "Pinboard Project Part 1: HTML & CSS",
+                "slug": "PinboardProjectPart1"
+            },
+            {
+                "name": "Pinboard Project Part 2: JavaScript",
+                "slug": "PinboardProjectPart2"
             }
         ]
     },
