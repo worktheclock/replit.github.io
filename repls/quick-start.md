@@ -1,8 +1,8 @@
 # Quick Start Guide
 
-Welcome to Repl.it!  This guide is meant to give you a quick overview of the many features of Repl.it.  We're very excited to introduce you to a new workflow that can change the way you write code.
+Welcome to Repl.it! This guide is meant to give you a quick overview of the many features of Repl.it.  We're very excited to introduce you to a new workflow that can change the way you write code.
 
-No programming knowledge is necessary.  This quick start guide is in Python.
+No programming knowledge is necessary. This quick start guide is in Python.
 
 1. [Creating a New Python 3 Repl](#creating-a-new-python-3-repl)
 2. [Renaming and Describing your Repl](#renaming-and-describing-your-repl)
@@ -20,17 +20,17 @@ No programming knowledge is necessary.  This quick start guide is in Python.
 
 ## Creating a New Python 3 Repl
 
-On your [Repls Dashboard](https://repl.it/repls), you create a new repl by clicking on "Start Coding Now" or the red button in the bottom right corner.  This will bring you to a page with a list of our supported languages.
+On your [Repls Dashboard](https://repl.it/repls), you create a new repl by clicking on "Start Coding Now" or the red button in the bottom right corner. This will bring you to a page with a list of our supported languages.
 
-Go ahead and select Python.  This will bring you to your workspace.
+Go ahead and select Python. This will bring you to your workspace.
 
 [More on the repls dashboard](/repls/dashboard).
 
 ## Renaming and Describing your Repl
 
-The first thing to do when creating a repl is to give it a name and description.  This will make it easier to come back to later, and will help with organizing your repls.
+The first thing to do when creating a repl is to give it a name and description. This will make it easier to come back to later, and will help with organizing your repls.
 
-You can edit the name and description of the repl by clicking on the edit icon highlighted below, then editing the text fields to change the name and add a description.  Clicking off the popover will automatically save any changes you've made.
+You can edit the name and description of the repl by clicking on the edit icon highlighted below, then editing the text fields to change the name and add a description. Clicking off the popover will automatically save any changes you've made.
 
 <video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
   <source src="https://replit.github.io/media/quick-start/creating-repl.mp4" />
@@ -84,9 +84,10 @@ You'll see the code run on the right hand side of the screen.  Since the program
   <source src="https://replit.github.io/media/quick-start/simple-repl.mp4" />
 </video>
 
+
 ## Adding Packages
 
-Let's use the `matplotlib` package to make a simple plot.  Clear the existing code, click on the packages icon on your sidebar, and enter `matplotlib` to search for the package.  Select the first one (indicated by the arrow).
+Let's use the `matplotlib` package to make a simple plot. Clear the existing code, click on the packages icon on your sidebar, and enter `matplotlib` to search for the package. Select the first one (indicated by the arrow).
 
 Click on the `+` button to add it to your packages.
 
@@ -113,7 +114,7 @@ plt.plot([1, 2, 4, 8, 16])
 plt.savefig('plot.png')
 ```
 
-Run the code.  You'll see that the newly generated image, `plot.png`, shows up in both the filetree and below the editor so you can see it!  Neat, huh?
+Run the code. You'll see that the newly generated image, `plot.png`, shows up in both the filetree and below the editor so you can see it!  Neat, huh?
 
 <video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
   <source src="https://replit.github.io/media/quick-start/generate-plot.mp4" />
@@ -123,9 +124,9 @@ Run the code.  You'll see that the newly generated image, `plot.png`, shows up i
 
 ## Starting a Web Server
 
-Let's create a new Python3 repl.  As a shortcut, you can create a new repl by going directly to [https://repl.it/languages/python3](https://repl.it/languages/python3).  Let's call this one "python flask server"
+Let's create a new Python3 repl. As a shortcut, you can create a new repl by going directly to [https://repl.it/languages/python3](https://repl.it/languages/python3). Let's call this one "python flask server".
 
-Our first step is to add the `flask` package.  Go through the steps above except this time, choose the package called `flask`.
+Our first step is to add the `flask` package. Go through the steps above except this time, choose the package called `flask`.
 
 Once finished, go back to `main.py` and enter the following code:
 
@@ -151,11 +152,11 @@ Hit run, and you'll see that a new pane has appeared with the URL for your repl'
 
 ## Adding Secret Keys
 
-So far, your repl is public to everyone (unless you have a paid plan) and they can see the code that you put here.  If you need to put some private information, such as an API key, or a database password, you can use `.env` files.
+So far, your repl is public to everyone (unless you have a paid plan) and they can see the code that you put here. If you need to put some private information, such as an API key, or a database password, you can use `.env` files.
 
 Create a new file by clicking on the File+ icon in your filetree.  Name it `.env`.
 
-`.env` files contain key-value pairs like the following.  Type in:
+`.env` files contain key-value pairs like the following. Type in:
 
 ```
 PASSWORD=pass1234
@@ -186,13 +187,13 @@ if __name__ == '__main__':
   app.run(host='0.0.0.0', port=8080)
 ```
 
-We're creating a new page where we look for a query param `secret` and we check to see if it matches our `.env` secret.  Watch the video below to see the results.
+We're creating a new page where we look for a query parameter `secret` and we check to see if it matches our `.env` secret. Watch the video below to see the results.
 
 <video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
   <source src="https://replit.github.io/media/quick-start/env-files.mp4" />
 </video>
 
-Of course, this is a very insecure way of handling secret tokens, since the URL including the query parameter can be cached.  This is just a simple demonstration.
+Of course, this is a very insecure way of handling secret tokens, since the URL including the query parameter can be cached. This is just a simple demonstration.
 
 [More on env files](/repls/secret-keys)
 
@@ -200,13 +201,13 @@ Of course, this is a very insecure way of handling secret tokens, since the URL 
 
 Finally, now that you've created your first repl, feel free to share it with our community!
 
-Head on over to [Repl Talk](https://repl.it/talk) and check out the [Share Board](https://repl.it/talk/share).  Click on "Share your repl!", choose the repl from the list (or type the name to search), add a title and a description, and Share!
+Head on over to [Repl Talk](https://repl.it/talk) and check out the [Share Board](https://repl.it/talk/share). Click on "Share your repl!", choose the repl from the list (or type the name to search), add a title and a description, and share!
 
 <video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
   <source src="https://replit.github.io/media/quick-start/share-repl.mp4" />
 </video>
 
-Feel free to join our Discord Community as well!  Join with [this invite link](https://discord.gg/346Tapr).
+Feel free to join our Discord Community as well! Join with [this invite link](https://discord.gg/346Tapr).
 
 ## Sample Repls
 
@@ -222,7 +223,7 @@ If you're interested in exploring more in what you can do on Repl.it, take a loo
 
 ## More from our Community
 
-You can find tutorials created by members of our community on [Learn](https://repl.it/talk/learn).  There are tutorials for creating single player and multiplayer games, web apps, Discord bots, and AI programs.  Be sure to give the post an upvote if you enjoyed it!
+You can find tutorials created by members of our community on [Learn](https://repl.it/talk/learn). There are tutorials for creating single player and multiplayer games, web apps, Discord bots, and AI programs. Be sure to give the post an upvote if you enjoyed it!
 
 If you want to check out other cool repls that people have shared, you can find them on [Share](https://repl.it/talk/share).
 
@@ -230,7 +231,7 @@ If you have a question about programming or need help debugging something, be su
 
 ## Moving Forward
 
-Enjoy being a Repler!  We would love to hear more from you about how you use Repl.it, how you found out about Repl.it, and if there's anything we can do to improve.  Feel free to contact us through any of the following avenues:
+Enjoy being a Repler! We would love to hear more from you about how you use Repl.it, how you found out about Repl.it, and if there's anything we can do to improve. Feel free to contact us through any of the following avenues:
 
 * [Discord](https://discord.gg/346Tapr)
 * [contact@repl.it](mailto:contact@repl.it)
