@@ -1,274 +1,290 @@
 [
-    {
-        "name": "Repls",
-        "slug": "repls",
-        "contents": [
-            {
-                "name": "Introduction to Repls",
-                "slug": "intro"
-            },
-            {
-                "name": "Repls Dashboard",
-                "slug": "dashboard"
-            },
-            {
-                "name": "Files and Modules",
-                "slug": "files"
-            },
-            {
-                "name": "History",
-                "slug": "history"
-            },
-            {
-                "name": "Installing Packages",
-                "slug": "packages"
-            },
-            {
-                "name": "Web Hosting",
-                "slug": "web-hosting"
-            },
-            {
-                "name": "Deploying HTTP Servers",
-                "slug": "http-servers"
-            },
-            {
-                "name": "Repl Auth",
-                "slug": "repl-auth"
-            },
-            {
-                "name": "Storing Secrets (.env)",
-                "slug": "secret-keys"
-            },
-            {
-                "name": "Interactive Python Plots",
-                "slug": "python-plots"
-            },
-            {
-                "name": "Embedding Repls",
-                "slug": "embed"
-            },
-            {
-                "name": "Editor Tips and Tricks",
-                "slug": "editor"
-            },
-            {
-                "name": "Configuring The Run Button",
-                "slug": "dot-replit"
-            },
-            {
-                "name": "Repl From Repo",
-                "slug": "repl-from-repo"
-            },
-            {
-                "name": "Using Multiplayer with anonymous users",
-                "slug": "multiplayer-anon"
-            },
-            {
-                "name": "Playing Audio On Repl.it",
-                "slug": "audio"
-            }
-        ]
-    },
-    {
-        "name": "Teams for Education",
-        "slug": "Teams",
-        "contents": [
-            {
-                "name": "Introduction to Teams For Education",
-                "slug": "Intro"
-            },
-            {
-                "name": "Privacy FAQs",
-                "slug": "privacyFAQs"
-            },
-            {
-                "name": "Invite Teachers & Students",
-                "slug": "Invitations"
-            },
-            {
-                "name": "Project Workflow",
-                "slug": "Projects"
-            },
-            {
-                "name": "Annotations and Feedback",
-                "slug": "Annotations"
-            },
-            {
-                "name": "Classroom Material",
-                "slug": "Notes"
-            },
-            {
-                "name": "Different Roles",
-                "slug": "Roles"
-            },
-            {
-                "name": "Tests and Autograding",
-                "slug": "Testing"
-            },
-            {
-                "name": "Example Homework Assignments",
-                "slug": "HomeworkAssignments"
-            }
-        ]
-    },
-    {
-        "name": "Repl.it Classrooms",
-        "slug": "classrooms",
-        "contents": [
-            {
-                "name": "Exporting Classrooms",
-                "slug": "exports"
-            }
-        ]
-    },
-    {
-        "name": "Miscellaneous",
-        "slug": "misc",
-        "contents": [
-            {
-                "name": "Quick Start Guide",
-                "slug": "quick-start"
-            },
-            {
-                "name": "Using Repl.it for Free",
-                "slug": "free-features"
-            },
-            {
-                "name": "CLUI Graphical CLI",
-                "slug": "clui"
-            },
-            {
-                "name": "Security",
-                "slug": "security"
-            },
-            {
-                "name": "Licensing Info",
-                "slug": "licensing"
-            },
-            {
-                "name": "Copyright Claims",
-                "slug": "copyright"
-            },
-            {
-                "name": "Basic Docs",
-                "slug": "basic"
-            },
-            {
-                "name": "Change your username",
-                "slug": "change-username"
-            },
-            {
-                "name": "Favorite Languages",
-                "slug": "favorite-languages"
-            },
-            {
-                "name": "General FAQ",
-                "slug": "General-FAQ"
-            },
-            {
-                "name": "Database",
-                "slug": "database"
-            },
-            {
-                "name": "Repl Environment Variables",
-                "slug": "repl-environment-variables"
-            }
-        ]
-    },
-    {
-        "name": "Tutorials",
-        "slug": "tutorials",
-        "contents": [
-            {
-                "name": "Overview",
-                "slug": "00-overview"
-            },
-            {
-                "name": "Introduction to the IDE",
-                "slug": "01-introduction-to-the-repl-it-ide"
-            },
-            {
-                "name": "Working with files",
-                "slug": "02-managing-files-using-repl-it"
-            },
-            {
-                "name": "Managing dependencies and using NLP",
-                "slug": "03-handling-dependencies-with-repl-it"
-            },
-            {
-                "name": "Data science",
-                "slug": "04-data-science-and-visualisation-with-repl-it"
-            },
-            {
-                "name": "Multiplayer",
-                "slug": "05-pair-programming-using-multiplayer-with-repl-it"
-            },
-            {
-                "name": "GitHub and the Run Button",
-                "slug": "06-github-and-run-button"
-            },
-            {
-                "name": "Juggling with PyGame",
-                "slug": "07-building-a-game-with-pygame"
-            },
-            {
-                "name": "Keeping secrets",
-                "slug": "08-storing-secrets-and-history"
-            },
-            {
-                "name": "Test driven development",
-                "slug": "09-test-driven-development"
-            },
-            {
-                "name": "Productivity hacks",
-                "slug": "10-productivity-hacks"
-            },
-            {
-                "name": "Databases: build a phonebook",
-                "slug": "11-using-the-replit-database"
-            },
-            {
-                "name": "Audio: create a media player",
-                "slug": "12-audio"
-            },
-            {
-                "name": "Steganography: hiding messages in images",
-                "slug": "13-steganography"
-            }
-        ]
-    },
-    {
-        "name": "Teaching Curriculum",
-        "slug": "curriculum",
-        "contents": [
-            {
-                "name": "How this works",
-                "slug": "Intro"
-            },
-            {
-                "name": "Intro to Java Teaching Curriculum",
-                "slug": "introJava"
-            },
-            {
-                "name": "Intro to Python Teaching Curriculum",
-                "slug": "introPython"
-            },
-            {
-                "name": "Intermediate Python Teaching Curriculum",
-                "slug": "intermediatePython"
-            },
-            {
-                "name": "Intro to HTML/CSS Teaching Curriculum",
-                "slug": "introHTMLCSS"
-            },
-            {
-                "name": "Intro to SQL Teaching Curriculum",
-                "slug": "introSQL"
-            },
-            {
-                "name": "Abstract Data Types Curriculum",
-                "slug": "abstractData"
-            }
-        ]
-    }
+  {
+    "name": "Get Started",
+    "slug": "repls",
+    "contents": [
+      {
+        "name": "Introduction to Repls",
+        "slug": "intro"
+      },
+      {
+        "name": "Managing Your Repls",
+        "slug": "dashboard"
+      },
+      {
+        "name": "Creating Files and Modules",
+        "slug": "files"
+      },
+      {
+        "name": "Using History",
+        "slug": "history"
+      },
+      {
+        "name": "Quick Start Guide",
+        "slug": "quick-start"
+      },
+      {
+        "name": "Installing Packages",
+        "slug": "packages"
+      },
+      {
+        "name": "Web Hosting",
+        "slug": "web-hosting"
+      },
+      {
+        "name": "Deploying HTTP Servers",
+        "slug": "http-servers"
+      },
+      {
+        "name": "Repl Auth",
+        "slug": "repl-auth"
+      },
+      {
+        "name": "Storing Secrets (.env)",
+        "slug": "secret-keys"
+      },
+      {
+        "name": "Interactive Python Plots",
+        "slug": "python-plots"
+      },
+      {
+        "name": "Embedding Repls",
+        "slug": "embed"
+      },
+      {
+        "name": "Editor Tips and Tricks",
+        "slug": "editor"
+      },
+      {
+        "name": "Configuring The Run Button",
+        "slug": "dot-replit"
+      },
+      {
+        "name": "Repl From Repo",
+        "slug": "repl-from-repo"
+      },
+      {
+        "name": "Using Multiplayer with anonymous users",
+        "slug": "multiplayer-anon"
+      },
+      {
+        "name": "Playing Audio On Repl.it",
+        "slug": "audio"
+      }
+    ]
+  },
+  {
+    "name": "Teams for Education",
+    "slug": "Teams",
+    "contents": [
+      {
+        "name": "Introduction to Teams For Education",
+        "slug": "Intro"
+      },
+      {
+        "name": "Privacy FAQs",
+        "slug": "privacyFAQs"
+      },
+      {
+        "name": "Invite Teachers & Students",
+        "slug": "Invitations"
+      },
+      {
+        "name": "Project Workflow",
+        "slug": "Projects"
+      },
+      {
+        "name": "Annotations and Feedback",
+        "slug": "Annotations"
+      },
+      {
+        "name": "Classroom Material",
+        "slug": "Notes"
+      },
+      {
+        "name": "Different Roles",
+        "slug": "Roles"
+      },
+      {
+        "name": "Input/Output Testing",
+        "slug": "InputOutput"
+      },
+      {
+        "name": "Tests and Autograding",
+        "slug": "Testing"
+      },
+      {
+        "name": "Example Homework Assignments",
+        "slug": "HomeworkAssignments"
+      }
+    ]
+  },
+  {
+    "name": "Repl.it Classrooms",
+    "slug": "classrooms",
+    "contents": [
+      {
+        "name": "Exporting Classrooms",
+        "slug": "exports"
+      }
+    ]
+  },
+  {
+    "name": "Miscellaneous",
+    "slug": "misc",
+    "contents": [
+      {
+        "name": "Using Repl.it for Free",
+        "slug": "free-features"
+      },
+      {
+        "name": "CLUI Graphical CLI",
+        "slug": "clui"
+      },
+      {
+        "name": "Security",
+        "slug": "security"
+      },
+      {
+        "name": "Licensing Info",
+        "slug": "licensing"
+      },
+      {
+        "name": "Copyright Claims",
+        "slug": "copyright"
+      },
+      {
+        "name": "Basic (Language) Docs",
+        "slug": "basic"
+      },
+      {
+        "name": "Change your username",
+        "slug": "change-username"
+      },
+      {
+        "name": "Favorite Languages",
+        "slug": "favorite-languages"
+      },
+      {
+        "name": "General FAQ",
+        "slug": "General-FAQ"
+      },
+      {
+        "name": "Database",
+        "slug": "database"
+      },
+      {
+        "name": "Repl Environment Variables",
+        "slug": "repl-environment-variables"
+      }
+    ]
+  },
+  {
+    "name": "Tutorials",
+    "slug": "tutorials",
+    "contents": [
+      {
+        "name": "Overview",
+        "slug": "00-overview"
+      },
+      {
+        "name": "Introduction to the IDE",
+        "slug": "01-introduction-to-the-repl-it-ide"
+      },
+      {
+        "name": "Working with files",
+        "slug": "02-managing-files-using-repl-it"
+      },
+      {
+        "name": "Managing dependencies and using NLP",
+        "slug": "03-handling-dependencies-with-repl-it"
+      },
+      {
+        "name": "Data science",
+        "slug": "04-data-science-and-visualisation-with-repl-it"
+      },
+      {
+        "name": "Multiplayer",
+        "slug": "05-pair-programming-using-multiplayer-with-repl-it"
+      },
+      {
+        "name": "GitHub and the Run Button",
+        "slug": "06-github-and-run-button"
+      },
+      {
+        "name": "Juggling with PyGame",
+        "slug": "07-building-a-game-with-pygame"
+      },
+      {
+        "name": "Keeping secrets",
+        "slug": "08-storing-secrets-and-history"
+      },
+      {
+        "name": "Test driven development",
+        "slug": "09-test-driven-development"
+      },
+      {
+        "name": "Productivity hacks",
+        "slug": "10-productivity-hacks"
+      },
+      {
+        "name": "Databases: build a phonebook",
+        "slug": "11-using-the-replit-database"
+      },
+      {
+        "name": "Audio: create a media player",
+        "slug": "12-audio"
+      },
+      {
+        "name": "Steganography: hiding messages in images",
+        "slug": "13-steganography"
+      },
+      {
+          "name": "Pinboard Project Part 1: HTML & CSS",
+          "slug": "PinboardProjectPart1"
+      },
+      {
+          "name": "Pinboard Project Part 2: JavaScript",
+          "slug": "PinboardProjectPart2"
+      }
+    ]
+  },
+  {
+    "name": "Teaching Curriculum",
+    "slug": "curriculum",
+    "contents": [
+      {
+        "name": "How this works",
+        "slug": "Intro"
+      },
+      {
+        "name": "Intro to Java Teaching Curriculum",
+        "slug": "introJava"
+      },
+      {
+        "name": "Intro to Python Teaching Curriculum",
+        "slug": "introPython"
+      },
+      {
+        "name": "Intermediate Python Teaching Curriculum",
+        "slug": "intermediatePython"
+      },
+      {
+        "name": "Intro to HTML/CSS Teaching Curriculum",
+        "slug": "introHTMLCSS"
+      },
+      {
+        "name": "Intro to SQL Teaching Curriculum",
+        "slug": "introSQL"
+      },
+      {
+        "name": "Abstract Data Types Curriculum",
+        "slug": "abstractData"
+      },
+      {
+          "name": "Intro to C++",
+          "slug": "introCpp"
+      }
+    ]
+  }
 ]

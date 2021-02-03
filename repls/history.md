@@ -1,4 +1,4 @@
-# Repl History
+# Using Repl History
 Repl.it auto-saves your code as you write, as every repl is backed by its own filesystem. If you ever make an edit to your code that you'd like to recover, repl history can help.
 
 ## How to access History
