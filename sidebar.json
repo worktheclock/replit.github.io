@@ -106,6 +106,10 @@
         "slug": "Roles"
       },
       {
+        "name": "Input/Output Testing",
+        "slug": "InputOutput"
+      },
+      {
         "name": "Tests and Autograding",
         "slug": "Testing"
       },
@@ -150,7 +154,7 @@
         "slug": "copyright"
       },
       {
-        "name": "Basic Docs",
+        "name": "Basic (Language) Docs",
         "slug": "basic"
       },
       {
@@ -276,6 +280,10 @@
       {
         "name": "Abstract Data Types Curriculum",
         "slug": "abstractData"
+      },
+      {
+          "name": "Intro to C++",
+          "slug": "introCpp"
       }
     ]
   }
