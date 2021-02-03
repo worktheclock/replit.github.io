@@ -7,6 +7,7 @@
 - [Intro to HTML/CSS](https://docs.repl.it/curriculum/introHTMLCSS)
 - [Intro to SQL](https://docs.repl.it/curriculum/introSQL)
 - [Abstract Data Types](https://docs.repl.it/curriculum/abstractData)
+- [Intro to C++](https://docs.repl.it/curriculum/introCpp)
 - More to come! 
 
 *Email us at contact@repl.it if you'd like to write curriculum for us. We have some budget available.*
