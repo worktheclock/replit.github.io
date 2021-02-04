@@ -36,7 +36,7 @@
         "slug": "http-servers"
       },
       {
-        "name": "Repl Auth",
+        "name": "Authenticating Users",
         "slug": "repl-auth"
       },
       {
@@ -44,7 +44,7 @@
         "slug": "secret-keys"
       },
       {
-        "name": "Interactive Python Plots",
+        "name": "Creating Interactive Python Plots",
         "slug": "python-plots"
       },
       {
@@ -52,11 +52,11 @@
         "slug": "embed"
       },
       {
-        "name": "Editor Tips and Tricks",
+        "name": "Editor Shortcuts",
         "slug": "editor"
       },
       {
-        "name": "Configuring The Run Button",
+        "name": "Configuring the Run Button",
         "slug": "dot-replit"
       },
       {
@@ -64,11 +64,11 @@
         "slug": "repl-from-repo"
       },
       {
-        "name": "Using Multiplayer with anonymous users",
+        "name": "Using Multiplayer with Anonymous Users",
         "slug": "multiplayer-anon"
       },
       {
-        "name": "Playing Audio On Repl.it",
+        "name": "Playing Audio on Repl.it",
         "slug": "audio"
       }
     ]
