@@ -1,11 +1,11 @@
-# Using Multiplayer with anonymous users
+# Using Multiplayer with Anonymous Users
 
 As of right now, Multiplayer can only be used if you're signed into Repl.it. We are working on some solutions to allow for anonymous Multiplayer functionality, but in the meantime, here are the steps you should follow if you have an anonymous user who wants to collaborate with you. 
 
 ### 1. First, click invite in your repl.
 <img width="100%" src="/images/repls/multiplayer-invite-button.png" />
 
-### 2. Then copy the join link in your repl.
+### 2. Copy the join link in your repl.
 
 <img width="100%" src="/images/repls/multiplayer-invite-link.png" />
 

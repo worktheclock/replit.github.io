@@ -213,13 +213,13 @@ Feel free to join our Discord Community as well! Join with [this invite link](ht
 
 If you're interested in exploring more in what you can do on Repl.it, take a look at the following repls:
 
-* [OneShot](https://repl.it/@IbraheemRodrigues/OneShot?ref=quickstart) by [@IbraheemRodrigues](https://repl.it/@IbraheemRodrigues?ref=quickstart) - an online multiplayer mobile-friendly space shooter game using Express.js and Socket.io.
-* [Quantum Programming Tutorial](https://repl.it/@quantum_jim/QuantumProgrammingTutorial?ref=quickstart) by [@quantum_jim](https://repl.it/@quantum_jim?ref=quickstart) - an interactive CLI program to teach you quantum programming.
-* [CartPole](https://repl.it/@MikeShi42/CartPole?ref=quickstart) by [@mikeshi42](https://repl.it/@MikeShi42/CartPole?ref=quickstart) - utilizing machine learning via OpenAI Gym to solve the classic cartpole game.
-* [Game of Life](https://repl.it/@AlephZero/GameOfLife?ref=quickstart) by [@AlephZero](https://repl.it/@AlephZero?ref=quickstart) - the classic cellular automaton written in vanilla JavaScript.
-* [Language Translator](https://repl.it/@panniu/Language-Translator?ref=quickstart) by [@panniu](https://repl.it/@panniu?ref=quickstart) - a simple translator CLI app in Python in less than 30 lines of code.
-* [Nodejs Discord Bot](https://repl.it/@GarethDwyer1/discord-bot-node?ref=quickstart) by [@GarethDwyer1](https://repl.it/@GarethDwyer1?ref=quickstart) - a simple discord bot written in Node.js.
-* [Neural Network](https://repl.it/@shamdasani/Enlight-Neural-Network?ref=quickstart) by [@shamdasani](https://repl.it/@shamdasani?ref=quickstart) - a neural network written from scratch using Python.
+* [OneShot](https://repl.it/@IbraheemRodrigues/OneShot?ref=quickstart) by [@IbraheemRodrigues](https://repl.it/@IbraheemRodrigues?ref=quickstart) – an online multiplayer mobile-friendly space shooter game using Express.js and Socket.io.
+* [Quantum Programming Tutorial](https://repl.it/@quantum_jim/QuantumProgrammingTutorial?ref=quickstart) by [@quantum_jim](https://repl.it/@quantum_jim?ref=quickstart) – an interactive CLI program to teach you quantum programming.
+* [CartPole](https://repl.it/@MikeShi42/CartPole?ref=quickstart) by [@mikeshi42](https://repl.it/@MikeShi42/CartPole?ref=quickstart) – utilizing machine learning via OpenAI Gym to solve the classic cartpole game.
+* [Game of Life](https://repl.it/@AlephZero/GameOfLife?ref=quickstart) by [@AlephZero](https://repl.it/@AlephZero?ref=quickstart) – the classic cellular automaton written in vanilla JavaScript.
+* [Language Translator](https://repl.it/@panniu/Language-Translator?ref=quickstart) by [@panniu](https://repl.it/@panniu?ref=quickstart) – a simple translator CLI app in Python in less than 30 lines of code.
+* [Nodejs Discord Bot](https://repl.it/@GarethDwyer1/discord-bot-node?ref=quickstart) by [@GarethDwyer1](https://repl.it/@GarethDwyer1?ref=quickstart) – a simple discord bot written in Node.js.
+* [Neural Network](https://repl.it/@shamdasani/Enlight-Neural-Network?ref=quickstart) by [@shamdasani](https://repl.it/@shamdasani?ref=quickstart) – a neural network written from scratch using Python.
 
 ## More from our Community
 

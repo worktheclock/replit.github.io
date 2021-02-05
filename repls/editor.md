@@ -1,5 +1,5 @@
 
-# Editor Tips and Tricks
+# Editor Shortcuts
 
 The following “Tips and Tricks” will teach you how to be productive in the Repl.it code editor. Here, you will become familiar with the code editor’s powerful shortcuts for editing, writing, and inspecting code.
 
@@ -101,7 +101,7 @@ On other computers, press `ctrl+D`.
 
 Use the following shortcuts to navigate the editor.
 
-### Open files
+### Open Files
 
 Press `cmd+P` on a Mac to quickly open files.
 

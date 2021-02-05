@@ -9,7 +9,7 @@ On a Python or JavaScript repl, you can search for a package to install by click
   src="https://replit.github.io/media/misc/libraries_hover.png"
   style="height: 24px; vertical-align:text-bottom; width: 21px; margin: 0 3px; display: inline-block;"
 />
-icon on the sidebar in the workspace.  Simply search for the package you want and select it to install the package or to view its documentation.  Clicking on the Add Package icon will put it in a spec file and a lock file. If no such file exists, it will be created for you.
+icon on the sidebar in the workspace. Simply search for the package you want and select it to install the package or to view its documentation. Clicking on the "Add Package" icon will put it in a spec file and a lock file. If no such file exists, it will be created for you.
 
 Unless otherwise specified, the repl will always attempt to install the latest version of each package.
 
@@ -65,8 +65,8 @@ will tell the packager that your project requires at least python version 3.8 an
 ### JavaScript
 
 Note that `package.json` files are only for Nodejs/Express repls (they do not work in HTML/CSS/JS
-repls).  A package.json contains more information about the project, but also lists the
-dependencies.  As an example, here is the `package.json` file included in our
+repls). A package.json contains more information about the project, but also lists the
+dependencies. As an example, here is the `package.json` file included in our
 [express template](https://repl.it/languages/express).
 
 ```json
@@ -87,9 +87,9 @@ dependencies.  As an example, here is the `package.json` file included in our
 }
 ```
 
-Note that all the packages are being installed with their latest version.  You can replace
+Note that all the packages are being installed with their latest version. You can replace
 "latest" with a specific version number to install that version, or precede it with a carat
-`^` to indicate "this version or newer".  For example:
+`^` to indicate "this version or newer". For example:
 
 ```json
   "dependencies": {
@@ -99,5 +99,4 @@ Note that all the packages are being installed with their latest version.  You c
   }
 ```
 
-This will install `express` at version 4.16.3 or newer, `body-parser` at the latest version,
-and `sqlite3` at exactly version 3.1.12.
+This will install `express` at version 4.16.3 or newer, `body-parser` at the latest version, and `sqlite3` at exactly version 3.1.12.
