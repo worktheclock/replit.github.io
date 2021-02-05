@@ -13,7 +13,7 @@ and then visiting http://localhost:3000 in your browser.
 
 # Contributing
 
-If you'd like to contribute please [fork this repl](https://docs.repl.it/__repl), then share your fork in an issue on the [github repo](https://github.com/replit/replit.github.io/). You can also submit a pull request to the same github repo.
+If you'd like to contribute please [fork this repl](https://docs.repl.it/__repl), then share your fork in an issue on the [github repo](https://github.com/replit/replit.github.io/). Alternatively, you can submit a pull request to the same github repo.
 
 When adding new pages, the markdown file should be placed in the appropriate folder (`repls`/`classrooms`/`misc`), and an additional entry should be added to the `sidebar.json` file.
 
