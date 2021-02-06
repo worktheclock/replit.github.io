@@ -12,7 +12,7 @@ Always-on is controlled by a toggle inside your repl. Navigate to your repl, and
 
 After Always-on is enabled, you will see a green indicator next to your repl's name:
 
-![screenshot of repl with Always on enabled](/images/repls/always-on-enabled.png)
+![screenshot of repl with Always-on enabled](/images/repls/always-on-enabled.png)
 
 That's it! We will run your repl whenever it goes to sleep.
 
