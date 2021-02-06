@@ -1,6 +1,6 @@
-# **Repl.it Database**
+# **Replit Database**
 
-You can jump right in and follow [this](https://docs.repl.it/tutorials/11-using-the-replit-database) basic phone book tutorial where you'll learn how to perform the fundamental "CRUD"(Create, Read, Update, Delete) operations with Repl.it Database.
+You can jump right in and follow [this](https://docs.repl.it/tutorials/11-using-the-replit-database) basic phone book tutorial where you'll learn how to perform the fundamental "CRUD" (Create, Read, Update, Delete) operations with Repl.it Database.
 
 Database is a simple and easy-to-use key-value store inside of every repl.
 There is no configuration—just start using it! Here's how:
@@ -14,7 +14,7 @@ That’s Repl.it’s new key-value database, built right into your repl!
 
 To access Database, you can use a library or simple curl commands.
 
-Repl.it provides official clients:
+Replit provides official clients:
 
 - Python: https://pypi.org/project/replit/
 - Node.js: https://www.npmjs.com/package/@replit/database
@@ -26,7 +26,7 @@ We recommend using the above clients if your repl is in one of those languages.
 
 When you click on the Database icon in the sidebar, you'll see some instructions.
 If your repl is in a language that has an official Database client, you can quickly
-import it and start using Database by clicking on the "Do it" buttons.
+import it and start using Database by clicking on the "Insert" buttons.
 
 If your language does not have a client, we provide some curl examples. They are
 also found below. These are a useful reference if you wish to write your own
