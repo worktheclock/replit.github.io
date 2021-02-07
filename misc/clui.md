@@ -12,7 +12,7 @@ Navigate to https://repl.it/~/cli and the following prompt will appear:
 The prompt will display in-line information about the commands which can be run.
 
 ## Commands
-Expand the following top-level commands .
+Expand the following top-level commands.
 
 <details>
   <summary><b>account</b>: manage your account</summary>
@@ -45,5 +45,5 @@ Expand the following top-level commands .
 
 </details>
 
-## Further reading
+## Further Reading
 Check out our [blog post](https://blog.repl.it/clui) for a discussion on building CLUI.

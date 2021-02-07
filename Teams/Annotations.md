@@ -1,4 +1,4 @@
-## Annotations: Leaving feedback on projects
+## Annotations: Leaving Feedback on Projects
 
 You can use **Annotations** to leave feedback on your students' work. Annotations can be added on projects and team repls. Annotations provide an easy way to give feedback on a specific line of code.
 

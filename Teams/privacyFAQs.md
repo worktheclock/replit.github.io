@@ -1,16 +1,16 @@
 # Privacy FAQs
 
-**Can Repl.it’s services be used in schools?**
+**Can Repl.its services be used in schools?**
 
 Yes. Using [Teams for Education](https://repl.it/site/teams), teachers can set up their own accounts and email students directly to invite them to use the service. Students can create accounts and use Teams for Education without providing personal information like names or email addresses.  
 
-*Note: that the free/anonymous plan, which doesn't require login, has always been and remains compliant with privacy regulations. We allow anyone to code for free in the browser. You just won't get all the great extras available in our upgraded plans. Interested? [Start coding now](https://repl.it/languages).*
+*Note: The free/anonymous plan, which doesn't require login, has always been and remains compliant with privacy regulations. We allow anyone to code for free in the browser. You just won't get all the great extras available in our upgraded plans. Interested? [Start coding now](https://repl.it/languages).*
 
 **How can I invite students and protect their privacy?**
 
-With [Teams for Education](https://repl.it/teams) and Private Invites, you can choose to generate a private invite link, which will protect the privacy of your students (including under 13-year olds). 
+With [Teams for Education](https://repl.it/teams) and Private Invites, you can choose to generate a private invite link, which will protect the privacy of your students (including under 13-year-olds). 
 
-When you share that link (for example by emailing it outside of Repl.it to your students or by pasting the link into your LMS or curriculum), then we will not ask students to provide names, emails, or other personal information when they sign up. Neither you nor the students will need to provide us with that information. Students will also have view-only access to the [Repl Talk forum](https://repl.it/talk/all), so they can still see all the great content, guides, and tutorials from the community, while protecting their privacy.
+When you share that link (for example by emailing it outside of Repl.it to your students or by pasting the link into your LMS or curriculum), we will not ask students to provide names, emails, or other personal information when they sign up. Neither you nor the students need to provide us with that information. Students also have view-only access to the [Repl Talk forum](https://repl.it/talk/all), so they can still see all the great content, guides, and tutorials from the community, while protecting their privacy.
 
 ![private invite](/images/teamsForEducation/privacy-invite-tooltip.png)
 
@@ -28,15 +28,15 @@ We do not disclose student data to third parties other than our own subprocessor
 
 **Can students under 13 use Repl.it in compliance with COPPA?**
 
-With Teams for Education, students under 13 can use Repl.it in compliance with COPPA. As noted above, we do not ask students (including students under 13) to provide personal information during sign up and we do not allow them to post in our public forums. The only COPPA-covered personal information we collect from students under 13 is Log Information and, as noted above, we only use that information to provide services for the school and otherwise support the internal operations of our Service. Because the only COPPA-covered personal information we collect is Log Information and we only use that information to support the internal operations of our Service, “verifiable parental consent” is not required for students to use our Service.
+With Teams for Education, students under 13 can use Repl.it in compliance with COPPA. As noted above, we do not ask students (including students under 13) to provide personal information during sign up and we do not allow them to post in our public forums. The only COPPA-covered personal information we collect from students under 13 is Log Information and, as noted above, we only use that information to provide services for the school and otherwise support the internal operations of our service. “Verifiable parental consent” is not required for students to use our service because the only COPPA-covered personal information we collect is Log Information, and we only use that information to support the internal operations of our service.
 
 In addition, consistent with COPPA, we do not disclose student data to third parties other than our own subprocessors, and we implement appropriate measures to protect students’ information.
 
 **Can Repl.it be used in compliance with FERPA?**
 
-When we contract with schools to use Teams for Education, we do not collect information about students that can be used to identify or contact them, such as a name and email address from students.  We only collect student’s Log Information (as defined in our [privacy policy](https://repl.it/site/privacy)) and use this limited data for the purposes for which it was provided to us, that is, to perform services for the school and support our internal operations. We do not disclose data to third parties other than our own subprocessors.
+When we contract with schools to use Teams for Education, we do not collect information about students that can be used to identify or contact them, such as a name and email address. We only collect student’s Log Information (as defined in our [privacy policy](https://repl.it/site/privacy)) and use this limited data for the purposes for which it was provided to us; that is, to perform services for the school and support our internal operations. We do not disclose data to third parties other than our own subprocessors.
 
-**What other privacy regulations and security frameworks is Replit compliant with?**
+**What other privacy regulations and security frameworks is Repl.it compliant with?**
 
 This list is **not exhaustive** and we will continue to update it over time, however, we have reviewed and are compliant with the following privacy regulations:
 - [New York Education Law 2-D](https://www.nysenate.gov/legislation/laws/EDN/2-D)
