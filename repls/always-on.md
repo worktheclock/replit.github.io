@@ -25,6 +25,5 @@ Always-on does not extend your repl's lifetime. All repls are subject to go to s
 <!--
 ## Feedback
 
-We are interested in hearing from you about your experience with Always-on. Link to some thread where we want this
-
+We are interested in hearing from you about your experience with Always-on. Link to some thread where this can happen.
 -->
