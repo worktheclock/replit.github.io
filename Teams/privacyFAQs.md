@@ -44,7 +44,7 @@ This list is **not exhaustive** and we will continue to update it over time, how
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
 - [Higher Education Community Vendor Assessment Toolkit (HECVAT) Lite](https://library.educause.edu/resources/2020/4/higher-education-community-vendor-assessment-toolkit)
 
-If you would like us to review your local privacy regulation or organization's specific privacy policy, please email [sales@repl.it](mailto:sales@repl.it). We can also share our US Student Data Protection Addendum or our European Data Protection Addendum to speed up the process.
+If you would like us to review and sign your local privacy regulation or organization's specific privacy policy, please email [sales@repl.it](mailto:sales@repl.it). We can also share our US Student Data Protection Addendum ([online copy](https://docs.repl.it/Teams/US_Student_DPA)) or our European Data Protection Addendum to speed up the process.
 
 **Is this update reflected in your Privacy Policy?**
 

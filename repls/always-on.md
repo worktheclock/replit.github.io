@@ -6,7 +6,7 @@ Always-on is currently available for [Hackers](https://repl.it/site/pricing).
 
 ## Enabling Always-on
 
-Always-on is controlled by a toggle inside your repl. Navigate to your repl, and then open up the info panel by clicking on your repl's name. You can then enable Always-on by clicking on the slider at the bottom:
+Always-on is controlled by a toggle inside your repl. Navigate to your repl, and then open up the info panel by clicking on your repl's name. You can then enable Always-on by clicking on the toggle at the bottom:
 
 ![screenshot of Always-on toggle](/images/repls/always-on-toggle.png)
 
