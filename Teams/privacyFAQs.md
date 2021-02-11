@@ -6,7 +6,7 @@ Yes. Using [Teams for Education](https://repl.it/teams-for-education), teachers 
 
 *Note: that you can code in any of our supported languages without needing to log in or share any information. You just won't get all the great extras available when you sign up. [Try coding in Python](https://repl.it/languages/python3) in a private browser window.*
 
-**Key Privacy Assurances**
+**Key Privacy and Data Security Assurances**
 
 - Replit will never sell your data or your students' data
 - Replit will never show you advertisements for products/services from other companies
@@ -14,6 +14,9 @@ Yes. Using [Teams for Education](https://repl.it/teams-for-education), teachers 
 - You retain rights to the work you create on Replit
 - Replit makes it easy to keep student work private and preserve acedmic integrity
 - Replit follows industry standard best practices for privacy and data security
+- All Replit employees receive privacy/security training and are bound by our privacy/security policies
+- Replit ensures all contracts with 3rd-parties are compliant with our policies
+- Replit has a designated Data Protection Officer 
 - Replit values transparency and will update you about any changes to our policies
 
 **How can I invite students and protect their privacy?**
