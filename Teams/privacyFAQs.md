@@ -6,6 +6,16 @@ Yes. Using [Teams for Education](https://repl.it/teams-for-education), teachers 
 
 *Note: that you can code in any of our supported languages without needing to log in or share any information. You just won't get all the great extras available when you sign up. [Try coding in Python](https://repl.it/languages/python3) in a private browser window.*
 
+**Key Privacy Assurances**
+
+- Replit will never sell your data or your students' data
+- Replit will never show you advertisements for products/services from other companies
+- Replit is compliant with GDPR, FERPA, and COPPA (and many other privacy regulations)
+- You retain rights to the work you create on Replit
+- Replit makes it easy to keep student work private and preserve acedmic integrity
+- Replit follows industry standard best practices for privacy and data security
+- Replit values transparency and will update you about any changes to our policies
+
 **How can I invite students and protect their privacy?**
 
 With [Teams for Education](https://repl.it/teams-for-education) and [Private Invites](https://docs.repl.it/Teams/Invitations), you can choose to generate a private invite link, which will protect the privacy of your students (including under 13-year olds). 
