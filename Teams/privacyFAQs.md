@@ -10,7 +10,7 @@ Yes. Using [Teams for Education](https://repl.it/teams-for-education), teachers 
 
 - Replit will never sell your data or your students' data
 - Replit will never show you advertisements for products/services from other companies
-- Replit is compliant with GDPR, FERPA, and COPPA (and many other privacy regulations)
+- Replit is compliant with FERPA and COPPA (and many other privacy regulations)
 - You retain rights to the work you create on Replit
 - Replit makes it easy to keep student work private and preserve acedmic integrity
 - Replit follows industry standard best practices for privacy and data security
