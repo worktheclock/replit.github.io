@@ -74,6 +74,10 @@ This is the part where you realize that the possibilities are endless while you 
 
 Share secret messages with your friends by hiding them inside images with steganography, Python and Repl.it.
 
+#### [Lesson 14: 2D platform game with PyGame and Repl.it](./14-2d-platform-game)
+
+Build a fun 2D platform game while learning all about Python game development. It's is easily expandible with endless possibilities so let your imagination run wild!
+
 ## Part 3: building your own projects
 
 Once you've gone through everything, you might think "but what should I build?". It's a common problem and we've got you covered. Choose your favourite projects from a list (or turn on the coffee machine, order some pizza, and get through them all). Once you've gone through the step-by-step guides you can easily modify or extend the projects to make them your own.
