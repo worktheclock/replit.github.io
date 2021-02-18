@@ -17,7 +17,7 @@
 
   It could be due to a few issues:
 
-  1. Check if your browser is blocked javascript
+  1. Check if your browser has blocked javascript
   2. Make sure to disable any ad block software
 
   If none of these apply, please post your issue [here](https://repl.it/bugs/) along with the repl/s in question as well as browser information and operating system. You can always check and see if others have already raised a similar issue and just upvote and comment on that post.
@@ -44,7 +44,7 @@
 
 ##### **I have two repls in different folders and am unable to give them the same name**
 
-  Unforutnately the folders in the myrepls portion are more so metaphors and do not do much else. When you click on any repl it will always be https://repl.it/@usernmae/repl_name which means all your repls need to be unique.
+  Unforutnately the folders in the myrepls portion are more so metaphors and do not do much else. When you click on any repl it will always be https://repl.it/@username/repl_name which means all your repls need to be unique.
 
 ##### **How do I keep my repls to always stay on?**
 
