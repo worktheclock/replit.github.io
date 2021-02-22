@@ -1,39 +1,34 @@
-# Web Hosting & HTTP Servers
+# Hosting sites and apps
 
-## Hosting a Website
+You can use Repl.it to host your websites and web apps. These can be temporary (e.g. to get feedback from your team on a prototype) or "always-on" (e.g. served to your end users). You can host plain (front-end only) websites or full-blown web applications, written in Django, Rails, Express, or nearly any other backend language.
 
-Web pages written in HTML, CSS, and JavaScript can be hosted on Repl.it. 
+You can add your own domain (e.g. `https://yourname.com`) or use one of ours (e.g. `https://my-site.yourname.repl.co`). Hosting on Repl.it allows you to quickly deploy changes right after making them, and track history to roll back to previous versions if necessary.
 
-HTML/CSS/JS repls hosted on Repl.it are given a unique URL that can be shared with your friends, family, peers, and clients.
+We also provide our own custom database, a simple key-value store, so you can save data persistently even between app redeploys.
 
-After creating an HTML/CSS/JS repl and running it, your repl will be hosted at the URL provided in the preview browser to the right.
+## Accessing your hosted repl from anywhere in the world
+
+After you run certain types of projects or templates (e.g. HTML for a website or Django for a web application), you'll see a new window pop up in the editor along with a URL, from which you can access the hosted version of your repl anywhere in the world.
 
 ![](/images/repls/web-hosting/01-web-hosting-URL-location.png)
 
-### Updating Websites
+You won't see changes in the hosted 'live' version of your repl until you re-run the project (by first hitting stop and the green "Run" button), so you can make changes without breaking things for your users.
 
-Changes made to your repl will not be reflected in the live version until the web project is re-run. Running a web repl will update its live version.
-
-Note that a repl's public link will persist, even after the repl has been deleted. You can clear a repl of its server code before deleting it in order to prevent it from loading or submit a [takedown request](#persistence-and-takedown-requests).
-
-### Example webpage
+### Hosting web sites (front-end only)
 
 Here's an example of a hosted webpage using p5.js. The live, full-screen version can be found [here](https://p5-demo--timmy_i_chen.repl.co).
 
 <iframe height="800px" width="100%" src="https://repl.it/@timmy_i_chen/p5-demo?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-## HTTP Servers
+## Hosting web applications (back-end + front-end)
 
 For deploying HTTP servers, we provide templates for Ruby on Rails, Django, Node (Express), React and many more but any framework can be used so long as the package can be imported or the port can be opened.
 
-### Deploying an HTTP Server
-
 To deploy an HTTP server on Repl.it, simply write the code that imports the required libraries or frameworks and begin listening on a port.  As your server starts up, as soon as the repl begins listening on a port, a new pane should appear in your editor with the URL to your web app, along with a preview of the app.
 
-### Repl lifetime
+### Understanding the repl lifecycle
 
-Once deployed, the server will continue to run in the background, even after you close the browser tab. The server will stay awake and active until an hour after its last request, after which it will enter a sleeping stage. 
-
+Once deployed, your server will continue to run in the background, even after you close the browser tab. The server will stay awake and active until an hour after its last request, after which it will enter a sleeping stage. 
 A sleeping repl will be woken up as soon as it receives another request; there is no need to re-run the repl. However, if you make changes to your server, you will need to restart the repl in order to see those changes reflected in the live version.
 
 ### Always on
