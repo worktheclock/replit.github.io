@@ -18,6 +18,7 @@ We will create the above example in two separate steps. Part 1, which you are lo
   - [Adding GraphQL to JavaScript](#adding-graphql-to-javascript)
 - [Creating an API](#creating-an-api)
   - [GraphQL as Service](#graphql-as-service)
+  - [Custom GraphQL Function](#custom-graphql-function)
   - [Loading the Data](#loading-the-data)
 
 
@@ -326,7 +327,7 @@ Note that your API endpoint should look something like the following:
 
 ```
 https://api-us-east-1.graphcms.com/v2/ckll20qnkffe101xr8m2a7m2h/master
-```. 
+```
 
 However, in the next code examples, I will be using `<<<YOUR ENDPOINT HERE>>>` to prevent you from accidentally using an example endpoint if you are following along. Furthermore, you will also note that if you navigate straight to your endpoint within your browser you will be presented with a GraphiQL Explorer that allows you to test and try out queries for your specific endpoint:
 
