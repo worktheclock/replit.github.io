@@ -238,28 +238,29 @@ query {
 
 ### Adding GraphQL to JavaScript
 
-Let's take the above query built within the GraphiQL explorer and place it in a JavaScript snippet. This allows us to request the above data directly from our browser. Note that the following example assumes familiarity with the native JavaScript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API):
+Let's take the above query built within the GraphiQL explorer (in all it's circular logic!) and place it in a JavaScript snippet. This allows us to request the above data directly from our browser. Note that the following example assumes familiarity with the native JavaScript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API):
 
 *Note that if this is the first time you are encountering I recommend that you give the phenomenal [How to Use the JavaScript Fetch API to Get Data](https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data) by the [Digital Ocean team](https://www.digitalocean.com/).*
 
 ```jsx
 const QUERY = `
-	query {
-	  event(id: "5879ad8f6672e70036d58ba5") {
-	    title
-	    address
-	    currency
-	    host {
-	      firstName
-	    }
-	    timeSlots {
-	      totalCount
-	      nodes {
-	        startAt
-	      }
-	    }
-	  }
-	}
+  query {
+    event(id: "5879ad8f6672e70036d58ba5") {
+      active
+      address
+      url
+
+      timeSlots {
+        nodes {
+          event {
+            active
+            address
+            url
+          }
+        }
+      }
+    }
+  }
 `
 
 const FETCH_OPTIONS =   {
@@ -267,7 +268,7 @@ const FETCH_OPTIONS =   {
   body: JSON.stringify({ query: QUERY }),
 }
 
-fetch('[https://universe.com/graphiql](https://universe.com/graphiql)', FETCH_OPTIONS )
+fetch('https://universe.com/graphiql', FETCH_OPTIONS )
 	.then(response => response.json())
 	.then(console.log)
 ```
