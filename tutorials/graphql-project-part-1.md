@@ -307,13 +307,15 @@ The above example should log something as follows to the browser console:
 
 Great, we've mastered the basics of GraphQL!
 
-However, we probably want to create our own endpoint, since being bound exclusively to data from [Universe.com](http://universe.com) won't be that helpful in our own project. There are several ready-to-go GraphQL endpoint frameworks that you we deploy to a server or cloud hosting. Some extremely popular examples are [express-graphql](https://www.npmjs.com/package/express-graphql) for Node (running [Express](https://expressjs.com/)) and [Graphene](https://graphene-python.org/) for Python servers. Alternatively, there are several all-in-one solutions like [Prisma](https://www.prisma.io/) or [Hasura](https://hasura.io/) that come with a database already baked in.
+However, we probably want to create our own endpoint, since being bound to data from [Universe.com](http://universe.com) won't be that helpful going forward. There are several server-side GraphQL frameworks that you we deploy as required. Some extremely popular examples are [express-graphql](https://www.npmjs.com/package/express-graphql) for Node (running [Express](https://expressjs.com/)) and [Graphene](https://graphene-python.org/) for Python servers. Alternatively, there are several all-in-one solutions like [Prisma](https://www.prisma.io/) or [Hasura](https://hasura.io/) that come with databases already baked in.
 
 ### GraphQL as Service
 
 However, for the sake of simplicity, we will be using a free [software as a service](https://en.wikipedia.org/wiki/Software_as_a_service) (SaaS) platform called [GraphCMS](https://graphcms.com/). This allows us to get a custom GraphQL endpoint up and running with extreme ease.
 
-In order to follow along, you can visit [https://graphcms.com](https://graphcms.com/) and sign up for a free account. Once your account has been created you can create a new sample project by selecting the "Podcast Starter". Make sure that "Include template content" is selected since this will populate our API with placeholder information. You are welcome to add or edit content to the API by means of the GraphCMS project dashboard, however, please make sure that you don't change the schema since we will be relying on it to write our queries.
+In order to follow along, you can visit [https://graphcms.com](https://graphcms.com/) and sign up for a free account. Once your account has been created you can create a new sample project by selecting the "Podcast Starter" template. Make sure that "Include template content" is selected since this will populate our API with placeholder information. You are welcome to add or edit content to the API by means of the GraphCMS project dashboard, however, please make sure that you don't change the schema since we will be relying on it to write our queries.
+
+_Note that GraphCMS allows you to create a new project completely from scratch, however for our purposes we only want to have a working endpoint with placeholder content. However, if you are interested in diving deeper into GraphCMS you can consult their documentation at [https://graphcms.com/docs](https://graphcms.com/docs).
 
 Once your project has been created you can select the "Settings" tab at the bottom, and navigate to "API Access". Make sure to copy the endpoint URL (at the top of the page) and save it somewhere where you will be able to access it later. We'll be directing all our GraphQL queries to this URL, so it is useful to have it at hand all the time.
 
