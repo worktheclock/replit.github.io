@@ -28,7 +28,7 @@ If you haven't already, head to the [signup page](https://repl.it/signup) and 
 
 1. Clicking on the `+ New repl` button.
 2. Choosing the "HTML, CSS, JS" language. 
-3. Giving your repl a name: In our case "pinboard-project".
+3. Giving your repl a name: In our case "graphql-fm".
 4. Clicking the `Create repl` button.
 
 ![Creating a new Repl](../static/images/teamsForEducation/graphql-project/graphql-project-1.png)
