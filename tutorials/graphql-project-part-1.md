@@ -335,23 +335,22 @@ However, in the next code examples, I will be using `<<<YOUR ENDPOINT HERE>>>` t
 
 ### Custom GraphQL Function
 
-We will be making several GraphQL queries from our website. To this end, it is helpful to create a basic abstraction (by means of a JavaScript function) that handles these requests for us in order to reduce boilerplate code. We can convert our JavaScript example above into a basic GraphQL function as follows:
+We will be making several GraphQL queries from our website. For this purpose it is helpful to create a basic abstraction (by means of a JavaScript function) that handles these requests in order to reduce boilerplate code. We can convert our JavaScript example above into a basic JavaScript function as follows:
+
+_Note that the following section assumes familiarity with the [async/await operators](https://en.wikipedia.org/wiki/Async/await) in JavaScript. If you are unfamiliar with them you can have a look at the [following guide on the Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)._
 
 ```jsx
 const gqlQuery = async (query) => {
-  const response = await fetch(
-    '<<<YOUR ENDPOINT HERE>>>',
-    {
-      method: 'POST',
-      body: JSON.stringify({ query });
-    }
-  )
+  const REQUEST_OPTIONS = { method: 'POST', body: JSON.stringify({ query }) };
+
+  const response = await fetch('<<<YOUR ENDPOINT HERE>>>', REQUEST_OPTIONS)
   
   if (!response || !response.ok) {
     throw new Error('Query failed');
   }
   
-  return await response.json().data;
+  const { data } = await response.json();
+  return data;
 }
 ```
 
