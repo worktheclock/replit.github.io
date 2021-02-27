@@ -269,13 +269,13 @@ const FETCH_OPTIONS =   {
 }
 
 fetch('https://universe.com/graphiql', FETCH_OPTIONS )
-	.then(response => response.json())
-	.then(console.log)
+  .then(response => response.json())
+  .then(console.log)
 ```
 
-The above example should return something along the following lines:
+The above example should log something as follows to the browser console:
 
-```jsx
+```json
 {
   "data": {
     "event": {
