@@ -731,4 +731,4 @@ Upon running the above we get one big object in your browser console. This objec
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-10.png)
 
-Yet, merely having the data in not enough, we need to do so additional work structure it in a presentable way for users visiting our website. If you are interested in how we take the above and turn it into a the fully functional example shown at the beginning of this guide then you can proceed directly to [part 2](./graphql-project-part-2).
+Yet, merely having the data in our browser console is not enough. We need to do so additional work in order to structure it in HTML and CSS to be consumed directly by users. If you are interested in how we take the above and turn it into the fully functional website shown at the beginning of this guide then you can proceed directly to [part 2](./graphql-project-part-2).
