@@ -238,9 +238,9 @@ query {
 
 ### Adding GraphQL to JavaScript
 
-Let's take the above query built within the GraphiQL explorer (in all it's circular logic!) and place it in a JavaScript snippet. This allows us to request the above data directly from our browser. Note that the following example assumes familiarity with the native JavaScript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API):
+Let's take the above query built within the GraphiQL explorer (in all it's circular logic!) and place it in our JavaScript file. This allows us to request the above data directly from our browser:
 
-*Note that if this is the first time you are encountering I recommend that you give the phenomenal [How to Use the JavaScript Fetch API to Get Data](https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data) by the [Digital Ocean team](https://www.digitalocean.com/).*
+_Note that the following example assumes familiarity with the native JavaScript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). If this is the first time you are encountering I recommend that you give the phenomenal [How to Use the JavaScript Fetch API to Get Data](https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data) by the [Digital Ocean team](https://www.digitalocean.com/).*
 
 ```jsx
 const QUERY = `
@@ -273,7 +273,7 @@ fetch('https://universe.com/graphiql', FETCH_OPTIONS )
   .then(console.log)
 ```
 
-The above example should log something as follows to the browser console:
+The above  should output something as follows to the browser console:
 
 ```json
 {
@@ -384,11 +384,9 @@ However, this isn't very flexible, since it means that we'll need to create an e
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-9.gif)
 
-You'll see that we can pass variables as a JSON object, and then within the query we can declare the expected variables in brackets (`( )`) right after the `query` command. Note that the variable names should always start with a dollar sign (`$`). In our case we can specify that we are expecting `$count`. However, because GraphQL is [strongly typed language](https://en.wikipedia.org/wiki/Strong_and_weak_typing) we are required to declare what type of data `$count` will be. Luckily we know that it will be an `Int` value. An `Int` is essentially just a whole number that doesn't have a decimal.
+You'll see that we can pass variables as a JSON object, and then within the query we can declare the expected variables in brackets (`( )`) right after the `query` command. Note that the variable names should always start with a dollar sign (`$`). In our case we can specify that we are expecting `$count`. However, because GraphQL is [strongly typed language](https://en.wikipedia.org/wiki/Strong_and_weak_typing) we are required to declare what type of data `$count` will be. Luckily we know that it will be an `Int` value. An `Int` is essentially just a whole number that doesn't have a decimal. We then pass the value of `$count` directly to `episodes(first: $count)` . In order to replicate this within our JavaScript we can simply add variables to our body as follows:
 
 _If you are not familiar with the concept of strongly typed languages you can have a look at [the following guide](https://flaviocopes.com/loosely-strongly-typed) by [Glavio Copes](https://flaviocopes.com/)._
-
-We then pass the value of `$count` directly to `episodes(first: $count)` . In order to replicate this within our JavaScript we can simply add variables to our body as follows:
 
 ```jsx
 const gqlQuery = async (query, variables) => {
@@ -422,7 +420,9 @@ gqlQuery(QUERY, { count: 3 }).then(console.log)
 
 ```
 
-Now with our endpoint set up we probably need to start mapping out all the information we will be needing on each page. This can be done in any manner, include a hand-drawn node, however I like to just do this in markdown as follows:
+Now with our endpoint set up we probably need to start mapping out all the information required throughout our website. This can be done in any manner, include a hand-drawn notes or flow charts. If you're feeling adventurous you might even try something like [Sketch Systems](https://sketch.systems). However, more often than note I find that a simple Markdown file is sufficient. Remember that the value of this exercise is that we're trying to anticipate problems before they arise as cheaply and soon as possible - so don't over think it! 
+
+I wrote out the following basic outline, which will be used as reference when requesting data from the endpoint:
 
 ```markdown
 # GraphQL FM Website
