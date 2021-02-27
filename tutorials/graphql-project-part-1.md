@@ -1,37 +1,53 @@
+<!-- omit in toc -->
 # GraphQL Project: Part 1
 
-In this project, we will create a website that fetches data from a [GraphQL](https://graphql.org) endpoint. We will be using a GraphQL endpoint that exposes data related to an imagined podcast called *GraphQL FM.*
+In this project, we will create a website that fetches data from a [GraphQL](https://graphql.org) endpoint that exposes data related to an imagined podcast called *GraphQL FM.*.
 
-![](/images/teamsForEducation/graphql-project/graphql-project-1.gif)
+![](../static/images/teamsForEducation/graphql-project/graphql-project-0.gif)
 
 You can take a look at the final project in its entirety at [https://repl.it/@ritza/GraphQL-FM](https://repl.it/@ritza/GraphQL-FM). You can also view it as a standalone page by pressing the `Open in a new tab` button (at the top right of the former link) or by going straight to [https://graphql-fm.ritza.repl.co](https://graphql-fm.ritza.repl.co/)
 
-The creation of the above example will be broken down into two separate parts. Part 1, which you are looking at now, will cover the basics of GraphQL and the API. Whereas, [Part 2](./graphql-project-part-2) will show how we can transform the data we received from GraphQL into a fully functional website. This part (part 1) will be broken down as follows:
+The creation of the above example will be broken down into two separate parts. Part 1, which you are looking at now, will cover the basics of GraphQL and the API. Whereas, [Part 2](./graphql-project-part-2) will show how we can turn the data into a fully functional website. Within part 1 we will be covering the following:
 
-- [GraphQL Project: Part 1](#graphql-project-part-1)
-  - [Core Concepts](#core-concepts)
-    - [What is GraphQL?](#what-is-graphql)
-    - [GraphQL as an alternative to REST](#graphql-as-an-alternative-to-rest)
-    - ["Hello World" in GraphQL](#hello-world-in-graphql)
-    - [Using a GraphQL Explorer](#using-a-graphql-explorer)
-    - [Adding GraphQL to JavaScript](#adding-graphql-to-javascript)
-  - [Creating an API](#creating-an-api)
-    - [GraphQL as Service](#graphql-as-service)
-    - [Custom GraphQL Function](#custom-graphql-function)
-    - [Loading the Data](#loading-the-data)
+- [Creating Your Own Project on Repl.it](#creating-your-own-project-on-replit)
+- [Core Concepts](#core-concepts)
+  - [What is GraphQL?](#what-is-graphql)
+  - [GraphQL as an alternative to REST](#graphql-as-an-alternative-to-rest)
+  - ["Hello World" in GraphQL](#hello-world-in-graphql)
+  - [Using a GraphQL Explorer](#using-a-graphql-explorer)
+  - [Adding GraphQL to JavaScript](#adding-graphql-to-javascript)
+- [Creating an API](#creating-an-api)
+  - [GraphQL as Service](#graphql-as-service)
+  - [Custom GraphQL Function](#custom-graphql-function)
+  - [Loading the Data](#loading-the-data)
 
+
+## Creating Your Own Project on Repl.it
+
+If you haven't already, head to the [signup page](https://repl.it/signup) and create a Repl.it account. Once created, set up a new project by:
+
+1. Clicking on the `+ New repl` button.
+2. Choosing the "HTML, CSS, JS" language. 
+3. Giving your repl a name: In our case "pinboard-project".
+4. Clicking the `Create repl` button.
+
+![Creating a new Repl](../static/images/teamsForEducation/graphql-project/graphql-project-1.gif)
+
+Because we selected "HTML, CSS, JS" as our repl language, Repl.it has created the basic files needed for our front-end project, which should be:
+
+- `index.html`
+- `style.css`
+- `script.js`
 
 ## Core Concepts
 
-![](/images/teamsForEducation/graphql-project/graphql-project-2.jpg)
+![](../static/images/teamsForEducation/graphql-project/graphql-project-2.jpg)
 
-[Artsy](https://www.artsy.net) Engineering Lead, [Alan Johnson](http://artsy.github.io/author/alan) once proclaimed that [‘I have seen the future, and it looks a lot like GraphQL](http://artsy.github.io/blog/2018/05/08/is-graphql-the-future)’. 
+[Artsy](https://www.artsy.net) Engineering Lead, [Alan Johnson](http://artsy.github.io/author/alan) once proclaimed that [‘I have seen the future, and it looks a lot like GraphQL](http://artsy.github.io/blog/2018/05/08/is-graphql-the-future)’. Whether you agree with him or not, one thing is clear: the sheer boldness of the statement itself is indicative of the meteoric rise in popularity experienced by GraphQL over the last couple of years. 
 
-Whether your take GraphQL aligns with the latter or not, one thing is clear: the sheer boldness of the statement itself is indicative of the meteoric rise in popularity experienced by GraphQL over the last couple of years. 
+Yet, despite it's surging popularity, you might (despite having heard about it) not really have an idea what exactly GraphQL entails. Alternatively, this might even be the first time that you're encounter GraphQL. Regardless, the following two-part guide should introduce you to GraphQL as a concept and illustrate how we can use GraphQL in native JavaScript code without requiring any additional libraries or frameworks. This means that even if you are already familiar with GraphQL, but have only experienced it by means of libraries like [Apollo](https://www.apollographql.com) or [Relay](https://relay.dev), then you will find value by learning how to make use of GraphQL by means of the native JavaScript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
 ### What is GraphQL?
-
-Yet, despite it's surging popularity, you might (despite having heard about it) not really have an idea what GraphQL entails. Alternatively, this might even be the first time that you even encounter GraphQL. Regardless, the following two-part guide should introduce you to GraphQL as a concept and illustrate how we can use GraphQL in native JavaScript code without requiring any additional libraries or frameworks. This means that even if you are already familiar with GraphQL, but have only experienced it by means of libraries like [Apollo](https://www.apollographql.com) or [Relay](https://relay.dev), then you will find value by learning how to make use of GraphQL by means of the native JavaScript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
 Given that Alan Johnson believes the future "looks a lot like GraphQL", how would he define GraphQL?
 
@@ -109,7 +125,7 @@ As an example, let's start with a public GraphQL endpoint provided by the event 
 
 If you go to [https://universe.com/graphiql](https://universe.com/graphiql) you should see the following:
 
-![](/images/teamsForEducation/graphql-project/graphql-project-3.png)
+![](../static/images/teamsForEducation/graphql-project/graphql-project-3.png)
 
 The left-hand pane allows you to test specific queries, whereas the middle pane shows the query response once run, and lastly, the right-hand pane is the documentation describing the data structures that can be queried from this endpoint (if it is hidden click on the top-right button that says "*< Docs*"). The play button (the sideways triangle in the upper-left) executes the current query in the left-hand pane, whereas "Prettify" forces a best-practice layout for your query, and finally "History" merely allows you to see previous queries you used.
 
@@ -294,7 +310,7 @@ The above example should return something along the following lines:
 
 ## Creating an API
 
-![](/images/teamsForEducation/graphql-project/graphql-project-6.jpg)
+![](../static/images/teamsForEducation/graphql-project/graphql-project-6.jpg)
 
 Great, we've mastered the basics of GraphQL!
 
@@ -310,13 +326,13 @@ Once your project has been created you can select the "Settings" tab at the bott
 
 If you are struggling you can have a look at the following animated demo:
 
-![](/images/teamsForEducation/graphql-project/graphql-project-7.gif)
+![](../static/images/teamsForEducation/graphql-project/graphql-project-7.gif)
 
 Note that your API endpoint should look something like the following: `[https://api-us-east-1.graphcms.com/v2/ckll20qnadfe101xr8m2a7m2h/master](https://api-us-east-1.graphcms.com/v2/ckll20qnkffe101xr8m2a7m2h/master)`. However, in the following code snippets, I will be using `<<<YOUR ENDPOINT HERE>>>` to prevent you from accidentally using an example endpoint if you are following along.
 
 Furthermore, you will also note that if you navigate straight to your endpoint within your browser you will be presented with a GraphiQL Explorer that allows you to test and try out queries for your specific endpoint:
 
-![](/images/teamsForEducation/graphql-project/graphql-project-8.gif)
+![](../static/images/teamsForEducation/graphql-project/graphql-project-8.gif)
 
 ### Custom GraphQL Function
 
@@ -370,7 +386,7 @@ However, this isn't very flexible, since it means that we'll need to create an e
 
 For example, if we have a look in our GraphiQL explorer we can do the following (you might need to click on "QUERY VARIABLES" in the bottom-left corner to open it up:
 
-![](/images/teamsForEducation/graphql-project/graphql-project-9.gif)
+![](../static/images/teamsForEducation/graphql-project/graphql-project-9.gif)
 
 You'll see that we can pass variables as a JSON object, and then within the query we can specify the variables these variables in brackets `( )` after the `query` command. Note that variable names should always start with a dollar sign (`$`). In our case we can specify that we are expecting `$count` and that it will be an `Int` value. An `Int` is essentially just a whole number that doesn't have a decimal. 
 
@@ -710,6 +726,6 @@ getData();
 
 Upon running the above you should get one big object in your browser console that contains all the data that we'll be using in our website:
 
-![](/images/teamsForEducation/graphql-project/graphql-project-10.png)
+![](../static/images/teamsForEducation/graphql-project/graphql-project-10.png)
 
 However, merely having the data in not enough, we need to do so additional work structure it in a presentable way for users visiting our website. If you are interested in how we take the above and turn it into a the fully functional example shown at the beginning of this guide then you can proceed directly to [part 2](./graphql-project-part-2).
