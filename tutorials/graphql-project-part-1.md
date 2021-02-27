@@ -5,9 +5,9 @@ In this project, we will create a website that fetches data from a [GraphQL](htt
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-0.gif)
 
-You can take a look at the final project in its entirety at [https://repl.it/@ritza/GraphQL-FM](https://repl.it/@ritza/GraphQL-FM). You can also view it as a standalone page by pressing the `Open in a new tab` button (at the top right of the former link) or by going straight to [https://graphql-fm.ritza.repl.co](https://graphql-fm.ritza.repl.co/)
+You can take a look at the final project in its entirety at [https://repl.it/@ritza/GraphQL-FM](https://repl.it/@ritza/GraphQL-FM). You can also view it as a standalone page by pressing the `Open in a new tab` button (at the top right of the former link) or by going straight to [https://graphql-fm.ritza.repl.co](https://graphql-fm.ritza.repl.co/).
 
-The creation of the above example will be broken down into two separate parts. Part 1, which you are looking at now, will cover the basics of GraphQL and the API. Whereas, [Part 2](./graphql-project-part-2) will show how we can turn the data into a fully functional website. Within part 1 we will be covering the following:
+We will create the above example in two separate steps. Part 1, which you are looking at now, will cover the basics of GraphQL and setting up our API. Whereas, [Part 2](./graphql-project-part-2) will show how we can turn the data from the GraphQL API into a fully functional website. We will start with the following:
 
 - [Creating Your Own Project on Repl.it](#creating-your-own-project-on-replit)
 - [Core Concepts](#core-concepts)
@@ -31,7 +31,7 @@ If you haven't already, head to the [signup page](https://repl.it/signup) and 
 3. Giving your repl a name: In our case "pinboard-project".
 4. Clicking the `Create repl` button.
 
-![Creating a new Repl](../static/images/teamsForEducation/graphql-project/graphql-project-1.gif)
+![Creating a new Repl](../static/images/teamsForEducation/graphql-project/graphql-project-1.png)
 
 Because we selected "HTML, CSS, JS" as our repl language, Repl.it has created the basic files needed for our front-end project, which should be:
 
