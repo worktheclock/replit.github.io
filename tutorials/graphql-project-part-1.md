@@ -18,7 +18,6 @@ We will create the above example in two separate steps. Part 1, which you are lo
   - [Adding GraphQL to JavaScript](#adding-graphql-to-javascript)
 - [Creating an API](#creating-an-api)
   - [GraphQL as Service](#graphql-as-service)
-  - [Custom GraphQL Function](#custom-graphql-function)
   - [Loading the Data](#loading-the-data)
 
 
@@ -317,15 +316,19 @@ In order to follow along, you can visit [https://graphcms.com](https://graphcms.
 
 _Note that GraphCMS allows you to create a new project completely from scratch, however for our purposes we only want to have a working endpoint with placeholder content. However, if you are interested in diving deeper into GraphCMS you can consult their documentation at [https://graphcms.com/docs](https://graphcms.com/docs)._
 
-Once your project has been created you can select the "Settings" tab at the bottom, and navigate to "API Access". Make sure to copy the endpoint URL (at the top of the page) and save it somewhere where you will be able to access it later. We'll be directing all our GraphQL queries to this URL, so it is useful to have it at hand all the time.
+Once your project has been created you can select the _"Settings"_ tab at the bottom-left corner, and navigate to "API Access". Make sure to copy the endpoint URL (at the top of the page) and save it somewhere where you will be able to access it later. We'll be directing all our GraphQL queries to this URL, so it is useful to have it at hand.
 
 If you are struggling you can have a look at the following animated demo:
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-7.gif)
 
-Note that your API endpoint should look something like the following: `https://api-us-east-1.graphcms.com/v2/ckll20qnkffe101xr8m2a7m2h/master`. However, in the following code snippets, I will be using `<<<YOUR ENDPOINT HERE>>>` to prevent you from accidentally using an example endpoint if you are following along.
+Note that your API endpoint should look something like the following: 
 
-Furthermore, you will also note that if you navigate straight to your endpoint within your browser you will be presented with a GraphiQL Explorer that allows you to test and try out queries for your specific endpoint:
+```
+https://api-us-east-1.graphcms.com/v2/ckll20qnkffe101xr8m2a7m2h/master
+```. 
+
+However, in the next code examples, I will be using `<<<YOUR ENDPOINT HERE>>>` to prevent you from accidentally using an example endpoint if you are following along. Furthermore, you will also note that if you navigate straight to your endpoint within your browser you will be presented with a GraphiQL Explorer that allows you to test and try out queries for your specific endpoint:
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-8.gif)
 
