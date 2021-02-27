@@ -1,7 +1,7 @@
 <!-- omit in toc -->
 # GraphQL Project: Part 1
 
-In this project, we will create a website that fetches data from a [GraphQL](https://graphql.org) endpoint that exposes data related to an imagined podcast called *GraphQL FM.*.
+In this project, we will create a website that fetches data from a [GraphQL](https://graphql.org) endpoint that exposes data related to an imagined podcast called *GraphQL FM*.
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-0.gif)
 
