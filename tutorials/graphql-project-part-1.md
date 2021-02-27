@@ -360,51 +360,48 @@ This means that we should be able to do the following:
 
 ```jsx
 const QUERY = `
-	query {
-	  episodes {
-	    title
-		}
-	}
+  query {
+    episodes {
+      title
+    }
+  }
 `
 
 gqlQuery(QUERY).then(console.log)
 ```
 
-However, the above will always return all the episodes from our database. Yet, if we only want to show the two most recent episodes we can do the following in our query:
+Yet there is a problem: The above will always return an array of all the episodes from our entire database. This means that if we only want the two most recent episodes we can do the following in our query:
 
 ```graphql
 query {
   episodes(first: 2) {
     title
-	}
+  }
 }
 ```
 
-However, this isn't very flexible, since it means that we'll need to create an entirely new query when we want to only get the first or first-three episodes. Luckily, GraphQL allows us to designate and pass variables to be used by the query.
-
-For example, if we have a look in our GraphiQL explorer we can do the following (you might need to click on "QUERY VARIABLES" in the bottom-left corner to open it up:
+However, this isn't very flexible, since it means that we'll need to create an entire new query each time we want get a specific amount of episodes. Luckily, GraphQL allows us to designate and pass variables to be used by the query. For example, if we have a look in our GraphiQL explorer we can do the following (you might need to click on "QUERY VARIABLES" in the bottom-left corner to open it up):
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-9.gif)
 
-You'll see that we can pass variables as a JSON object, and then within the query we can specify the variables these variables in brackets `( )` after the `query` command. Note that variable names should always start with a dollar sign (`$`). In our case we can specify that we are expecting `$count` and that it will be an `Int` value. An `Int` is essentially just a whole number that doesn't have a decimal. 
+You'll see that we can pass variables as a JSON object, and then within the query we can declare the expected variables in brackets (`( )`) right after the `query` command. Note that the variable names should always start with a dollar sign (`$`). In our case we can specify that we are expecting `$count`. However, because GraphQL is [strongly typed language](https://en.wikipedia.org/wiki/Strong_and_weak_typing) we are required to declare what type of data `$count` will be. Luckily we know that it will be an `Int` value. An `Int` is essentially just a whole number that doesn't have a decimal.
+
+_If you are not familiar with the concept of strongly typed languages you can have a look at [the following guide](https://flaviocopes.com/loosely-strongly-typed) by [Glavio Copes](https://flaviocopes.com/)._
 
 We then pass the value of `$count` directly to `episodes(first: $count)` . In order to replicate this within our JavaScript we can simply add variables to our body as follows:
 
 ```jsx
 const gqlQuery = async (query, variables) => {
-  const response = await fetch(
-    'https://api-us-east-1.graphcms.com/v2/ckll20qnkffe101xr8m2a7m2h/master',
-    {
-      method: 'POST',
-      body: JSON.stringify({ query, variables });
-    }
-  )
+  const REQUEST_OPTIONS = { method: 'POST', body: JSON.stringify({ query, variables }) };
+
+  const response = await fetch('<<<YOUR ENDPOINT HERE>>>', REQUEST_OPTIONS)
   
   if (!response || !response.ok) {
     throw new Error('Query failed');
   }
   
-  return await response.json().data;
+  const { data } = await response.json();
+  return data;
 }
 ```
 
@@ -412,11 +409,11 @@ This means that we'll be able to do the following (which will respectively log t
 
 ```jsx
 const QUERY = `
-	query ($count: Int) {
-	  episodes(first: $count) {
-	    title
-		}
-	}
+  query ($count: Int) {
+    episodes(first: $count) {
+      title
+    }
+  }
 `
 
 gqlQuery(QUERY, { count: 1 }).then(console.log)
