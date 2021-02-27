@@ -424,7 +424,9 @@ gqlQuery(QUERY, { count: 3 }).then(console.log)
 
 ###  Defining an Information Architecture
 
-Now with our endpoint set up we probably need to start mapping out all the information we want to show on each page. This is a common exercise in the world of User Experience called information architecture mapping. If you are interested in this topic, you can learn more by reading the free book by Abby Covert (also from Etsy) titled How to Make Sense of Any Mess. This can be done in any manner, including (amongst others) hand-drawn notes or flow charts. If you're feeling adventurous you might even try something like [Sketch Systems](https://sketch.systems). However, more often than note I find that a simple Markdown file is sufficient. Remember that the value of this exercise is that we're trying to anticipate problems before they arise as cheaply and soon as possible - so don't over think it! 
+Now with our endpoint set up we probably need to start mapping out all the information we want to show on each page. This is a common exercise in the world of User Experience called information architecture mapping. If you are interested in this topic, you can learn more by reading the free book by Abby Covert (also from Etsy) titled How to Make Sense of Any Mess. 
+
+This can be done in any manner, including (amongst others) hand-drawn notes or flow charts. If you're feeling adventurous you might even try something like [Sketch Systems](https://sketch.systems). However, more often than note I find that a simple Markdown file is sufficient. Remember that the value of this exercise is that we're trying to anticipate problems before they arise as cheaply and soon as possible - so don't over think it! 
 
 I wrote out the following basic outline, which will be used as reference when requesting data from the endpoint:
 
@@ -434,51 +436,51 @@ I wrote out the following basic outline, which will be used as reference when re
 ## Episodes Page (Default Landing Page)
 
 - The First Episode (for hero banner)
-	- Unique ID (This will be used as the URL when viewing the episode)
-	- Episode Name
+  - Unique ID (This will be used as the URL when viewing the episode)
+  - Episode Name
   - Cover Image URL
   - Audio
-		- File URL
+    - File URL
     - File type (for example `.mp3`, `.wav`, etc.)
 
 - Previous Episodes (all episodes after the first one)
-	- Unique ID (This will be used as the URL when viewing the episode)
-	- Published date
+  - Unique ID (This will be used as the URL when viewing the episode)
+  - Published date
   - Episode Name
-	- Cover Image URL
+  - Cover Image URL
 
 ## Single Episode Page
 	
 - Previous Episode ID (if applicable)
 - Next Episode ID (if applicable)
 
-- Current Episode
-	- Episode Number
+  - Current Episode
+  - Episode Number
   - Published Date
   - Episode Name
-	- Cover Image URL
+  - Cover Image URL
   - Show Notes
-	- List of topics associated with episode
+  - List of topics associated with episode
   - Audio
-		- File URL
+    - File URL
     - File type (for example `.mp3`, `.wav`, etc.)
   - List of Guests
-		- Name of each guest
+    - Name of each guest
     - Photo URL of each guest
   - List of episode sponsors
-		- Name of sponsoring  company
-		- Website URL of sponsoring company
+    - Name of sponsoring  company
+    - Website URL of sponsoring company
 
 ## Guests Page
 
 - List of guests
-	- Name of each guest
+  - Name of each guest
   - Photo URL of each guest
   - List of episodes that appeared on
-		- Unique ID (This will be used as the URL when viewing the episode)
-		- Date that each episode was published
+    - Unique ID (This will be used as the URL when viewing the episode)
+    - Date that each episode was published
     - Episode Name for each episode
-		- Cover Image URL for each episode
+    - Cover Image URL for each episode
 
 ## Topics Page
 
@@ -510,22 +512,24 @@ I wrote out the following basic outline, which will be used as reference when re
 
 ### Loading the Data
 
-While creating our information architecture one thing should have become apparent: there are some specific data co-configurations that are called on several different pages. Luckily, the GraphQL standardization allows for something called [Fragments](https://graphql.org/learn/queries/#fragments) that helps us keep our queries DRY (an programming acronym for [Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)). The most common structure that seems to be popping up commonly in our information architecture is the data required to show a preview of a specific episode. We can wrap this in GraphQL query as follow (very similar to how we would create a query itself in JavaScript):
+While creating our information architecture one thing immediately stand out: there are some specific data co-configurations that are called multiple times. Luckily, the GraphQL standardization allows for something called [fragments](https://graphql.org/learn/queries/#fragments). Fragments helps keep our queries DRY (a programming acronym for [Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)). The most common co-configuration seems to be the data required to show a preview of a specific episode. 
+
+We can wrap this in a GraphQL fragment as follow (very similar to how we would create a query itself in JavaScript):
 
 ```js
-  const EPISODE_PREVIEW_FRAGMENT = `
-    fragment EpisodePreview on Episode {
-        id
-        date: publishedAt
-        title
-        image {
-          url
-        }
+const EPISODE_PREVIEW_FRAGMENT = `
+  fragment EpisodePreview on Episode {
+    id
+    date: publishedAt
+    title
+    image {
+      url
     }
-  `
+  }
+`
 ```
 
-We can then use it in a specific query as follows (by using [string interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#expression_interpolation)):
+We can then use it in a specific query as follows (by using JavaScript [string interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#expression_interpolation)):
 
 ```js
 const GUESTS_PAGE_QUERY = `
@@ -544,7 +548,7 @@ const GUESTS_PAGE_QUERY = `
   ${EPISODE_PREVIEW_FRAGMENT}
 ```
 
-It is common practice to place fragments after the query expression instead of before. Using the above information architecture and our declared fragment we can convert fetch all the data required in our information architecture by modify our JavaScript file so that end up with the following:
+Note that it is common practice to place fragments after the query expression instead of declaring the before the query. The reason for this is that query should first and foremost be expressive, and we should rather include fragments as footnotes for reference (if the reader doesn't know what the fragment does). Using our information architecture and the fragment declared above we can replace all the content in our JavaScript file with the following:
 
 ```js
 const EPISODE_PREVIEW_FRAGMENT = `
@@ -723,8 +727,8 @@ const getData = async () => {
 getData();
 ```
 
-Upon running the above you should get one big object in your browser console that contains all the data that we'll be using in our website:
+Upon running the above we get one big object in your browser console. This object contains all the data that we'll be using in our website:
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-10.png)
 
-However, merely having the data in not enough, we need to do so additional work structure it in a presentable way for users visiting our website. If you are interested in how we take the above and turn it into a the fully functional example shown at the beginning of this guide then you can proceed directly to [part 2](./graphql-project-part-2).
+Yet, merely having the data in not enough, we need to do so additional work structure it in a presentable way for users visiting our website. If you are interested in how we take the above and turn it into a the fully functional example shown at the beginning of this guide then you can proceed directly to [part 2](./graphql-project-part-2).
