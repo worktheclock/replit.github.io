@@ -155,17 +155,17 @@ We can run the default starting query (at the time of writing) and we'll get a [
 }
 ```
 
-This is great! But you might not have any idea what just happened. 
+This is great! But you might have no idea what just happened. 
 
-To this end, let us clear the left-hand pane and recreate the query step by step. This will allow me to explain the underlying logic as we go. We can start by adding `query {}`. This indicates to the endpoint that we want to retrieve data from the server. Note that `mutation {}` allows us to actually send data to the endpoint and `subscription {}` allows us to listen for changes in the data. However for the scope of this guide we will not be covering either of these - however, you can learn more [on the GraphQL website itself](https://graphql.org/learn/queries/).
+To this end, let us clear the left-hand pane and recreate the query step by step. This allows me to explain the underlying logic as we go. We can start by adding `query { }`. This indicates to the endpoint that we want to retrieve data from the server. Note that `mutation {}` allows us to send data to the endpoint and `subscription {}` listen for changes in the data. However for the scope of this guide we will only be covering `query` - however, you can learn more about `mutation` and `subscription` [on the GraphQL website itself](https://graphql.org/learn/queries/).
 
 If we place our cursors within the curly brackets and press the spacebar and enter keys at the same time we should get a list of recommended queries (based on the structure of the data) as follows:
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-4.png)
 
-As per the initial example let us reselect `event`. This means that we want to retrieve information associate with a specific event. The specific event we are interested in has a unique ID of `5879ad8f6672e70036d58ba5` (at the time of writing). We can pass this ID as an argument to the query (similar to how we would with JavaScript functions) as follows: `event(id: "5879ad8f6672e70036d58ba5") {}` .
+As per our initial example let us reselect `event`. This means that we want to retrieve information associate with a specific event. The event we are interested in has a unique ID of `5879ad8f6672e70036d58ba5` (at the time of writing). We can pass this ID as an argument to the query (similar to how we would with JavaScript functions) as follows: `event(id: "5879ad8f6672e70036d58ba5") { }` .
 
-Now that we've identified the event that we want to query we can instruct GraphQL to only retrieve the information that we're interested in. This prevents the response from returning the entire event data-structure (called [over-fetching](https://stackoverflow.com/questions/44564905/what-is-over-fetching-or-under-fetching) in REST). In order to illustrate the dynamic nature of GraphQL, we will be asking for completely different data than was covered in the initial example. This means that our query will now look something like this:
+Now that we've identified the event that we want to query we can instruct GraphQL to only retrieve the information that we're interested in. This prevents the response from returning the entire event data-structure (called [over-fetching](https://stackoverflow.com/questions/44564905/what-is-over-fetching-or-under-fetching) in REST). In order to illustrate the dynamic nature of GraphQL, we will be querying completely different data associated with the event as per the example below:
 
 ```graphql
 query {
@@ -177,9 +177,9 @@ query {
 }
 ```
 
-However, if you were attentive you would have noticed that the initial example had nested queries. This is where the distinction between GraphQL and REST becomes central. Everything we've done up until this point very much adheres to the way we would think about REST (apart from [over-fetching and under-fetching](https://stackoverflow.com/questions/44564905/what-is-over-fetching-or-under-fetching)). REST function similar to a traditional JavaScript function, wheres we provide input values and we get a specific, pre-determined output. GraphQL works a bit differently. 
+If you've been attentive you would have noticed that our initial example had nested queries. This is where the distinction between GraphQL and REST becomes central. Everything we've done up until this point very much adheres to the way we would think about a traditional REST request (apart from [over-fetching and under-fetching](https://stackoverflow.com/questions/44564905/what-is-over-fetching-or-under-fetching)).
 
-It can be said that GraphQL queries are little maps in the form of strings used to navigate and find all requested data in a single journey. This means that we can (for the fun of it) conceptualise a set of real-world instructions within the GraphQL syntax:
+REST requests function similar to a traditional JavaScript functions, where we provide specific arguments and we get a pre-determined response based on the arguments. GraphQL works a bit differently. It can be said that GraphQL queries are like little maps used to navigate and find all requested data in a single journey. This means that we can (for the fun of it) conceptualize a set of real-world instructions by mean of the GraphQL syntax as follows:
 
 ```jsx
 instructions {
@@ -212,31 +212,24 @@ instructions {
 
 I’m calling it — 2038 robot servants will be programmed with GraphQL!
 
-Since GraphQL is a [graph-like structure](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)) (as per the name), we can get information related to a specific event without creating a completely new request. This is where GraphQL really shines when compared to REST! You can think of these as roads or pathways connecting different places. In other words, if you are in the mall (as per our example above), you can go directly to the `general_store_store` in that `mall` and then to the `hardware_store` afterwards. Furthermore, because the `mall` is connected to the `post_office` by a road you can then drive to the `post_office` afterwards.
+Since GraphQL is a [graph-like structure](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)), we can get information loosely related to our event without creating a completely new request. This is where GraphQL really shines when compared to REST! You can think of these as roads or pathways connecting different places. In other words, if you are in the mall (as per our example above), you can go directly to the `general_store_store` in that `mall` and then to the `hardware_store` afterwards. Furthermore, because the `mall` is connected to the `post_office` by a road you can then drive to the `post_office` afterwards.
 
-Due to the map-like nature of queries, we can actually have the query goes in a complete circle ending up exactly where it started (although there is no real practical reason for this, it is fun nonetheless):
+Due to the map-like nature of queries, we can actually have a query that follows a circle route, ending up exactly where it started (although there is no real practical reason for this, it is fun nonetheless):
 
 ```graphql
 {
-  event(id: "5879ad8f6672e70036d58ba5") {
-    active
-    address
-    url
+event(id: "5879ad8f6672e70036d58ba5") {
+  active
+  address
+  url
 
-    timeSlots {
-      totalCount
-
-      nodes {
-				id
-        startAt
-				endAt
-
-				event {
-					id
-			    active
-			    address
-			    url
-			  }
+  timeSlots {
+    nodes {
+      event {
+        active
+        address
+        url
+      }
     }
   }
 }
