@@ -19,7 +19,9 @@ We will create the above example in two separate steps. Part 1, which you are lo
 - [Creating an API](#creating-an-api)
   - [GraphQL as Service](#graphql-as-service)
   - [Custom GraphQL Function](#custom-graphql-function)
+  - [Defining an Information Architecture](#defining-an-information-architecture)
   - [Loading the Data](#loading-the-data)
+
 
 
 ## Creating Your Own Project on Repl.it
@@ -419,6 +421,8 @@ gqlQuery(QUERY, { count: 2 }).then(console.log)
 gqlQuery(QUERY, { count: 3 }).then(console.log)
 
 ```
+
+###  Defining an Information Architecture
 
 Now with our endpoint set up we probably need to start mapping out all the information we want to show on each page. This is a common exercise in the world of User Experience called information architecture mapping. If you are interested in this topic, you can learn more by reading the free book by Abby Covert (also from Etsy) titled How to Make Sense of Any Mess. This can be done in any manner, including (amongst others) hand-drawn notes or flow charts. If you're feeling adventurous you might even try something like [Sketch Systems](https://sketch.systems). However, more often than note I find that a simple Markdown file is sufficient. Remember that the value of this exercise is that we're trying to anticipate problems before they arise as cheaply and soon as possible - so don't over think it! 
 
