@@ -217,18 +217,19 @@ Since GraphQL is a [graph-like structure](https://en.wikipedia.org/wiki/Graph_(a
 Due to the map-like nature of queries, we can actually have a query that follows a circle route, ending up exactly where it started (although there is no real practical reason for this, it is fun nonetheless):
 
 ```graphql
-{
-event(id: "5879ad8f6672e70036d58ba5") {
-  active
-  address
-  url
+query {
+  event(id: "5879ad8f6672e70036d58ba5") {
+    active
+    address
+    url
 
-  timeSlots {
-    nodes {
-      event {
-        active
-        address
-        url
+    timeSlots {
+      nodes {
+        event {
+          active
+          address
+          url
+        }
       }
     }
   }
