@@ -424,7 +424,7 @@ gqlQuery(QUERY, { count: 3 }).then(console.log)
 
 ###  Defining an Information Architecture
 
-Now with our endpoint set up we probably need to start mapping out all the information we want to show on each page. This is a common exercise in the world of User Experience called information architecture mapping. If you are interested in this topic, you can learn more by reading the free book by Abby Covert (also from Etsy) titled How to Make Sense of Any Mess. 
+Now with our endpoint set up we probably need to start mapping out all the information we want to show on each page. This is a common exercise in the world of user experience called [information architecture](https://en.wikipedia.org/wiki/Information_architecture) mapping. If you are interested in this topic, you can learn more by reading the free book by [Abby Covert](https://abbycovert.com/) (also from Etsy) titled [How to Make Sense of Any Mess](http://www.howtomakesenseofanymess.com/). 
 
 This can be done in any manner, including (amongst others) hand-drawn notes or flow charts. If you're feeling adventurous you might even try something like [Sketch Systems](https://sketch.systems). However, more often than note I find that a simple Markdown file is sufficient. Remember that the value of this exercise is that we're trying to anticipate problems before they arise as cheaply and soon as possible - so don't over think it! 
 
@@ -585,7 +585,7 @@ const EPISODES_PAGE_QUERY = `
 `;
 
 const SINGLE_EPISODE_PAGE_QUERY = `
-	query($id: ID) {
+  query($id: ID) {
     episode(where: { id: $id }) {
       number: episodeNumber
       date: publishedAt
@@ -619,7 +619,7 @@ const SINGLE_EPISODE_PAGE_QUERY = `
 `;
 
 const SINGLE_EPISODE_NEIGHBORS_QUERY = `
-	query($previous: Int, $next: Int) {
+  query($previous: Int, $next: Int) {
     previous: episode(where: { episodeNumber: $previous }) { id }
     next: episode(where: { episodeNumber: $next }) { id }
   }
@@ -642,7 +642,7 @@ const GUESTS_PAGE_QUERY = `
 `;
 
 const TOPICS_PAGE_QUERY = `
-	query {
+  query {
     tags {
       name
       episodes {
@@ -655,7 +655,7 @@ const TOPICS_PAGE_QUERY = `
 `;
 
 const RESOURCES_PAGE_QUERY = `
-	query {
+  query {
      assets {
       fileName
       mimeType
@@ -667,7 +667,7 @@ const RESOURCES_PAGE_QUERY = `
 `;
 
 const SPONSORS_PAGE_QUERY = `
-	query {
+  query {
     sponsorships {
       company {
         name
