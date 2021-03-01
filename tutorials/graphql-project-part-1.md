@@ -1,15 +1,15 @@
 <!-- omit in toc -->
-# GraphQL Project: Part 1
+# An introduction to GraphQL (part 1)
 
-In this project, we will create a website that fetches data from a [GraphQL](https://graphql.org) endpoint that exposes data related to an imagined podcast called *GraphQL FM*.
+In this project, we will create a website that fetches data from a [GraphQL](https://graphql.org) endpoint. The endpoint exposes data related to an imagined podcast called *GraphQL FM*.
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-0.gif)
 
-You can take a look at the final project in its entirety at [https://repl.it/@ritza/GraphQL-FM](https://repl.it/@ritza/GraphQL-FM). You can also view it as a standalone page by pressing the `Open in a new tab` button (at the top right of the former link) or by going straight to [https://graphql-fm.ritza.repl.co](https://graphql-fm.ritza.repl.co/).
+You can take a look at the final project at [https://repl.it/@ritza/GraphQL-FM](https://repl.it/@ritza/GraphQL-FM). You can also view it as a standalone page by pressing the `Open in a new tab` button (at the top right of the former link) or by going straight to [https://graphql-fm.ritza.repl.co](https://graphql-fm.ritza.repl.co/).
 
-We will create the above example in two separate steps. Part 1, which you are looking at now, will cover the basics of GraphQL and setting up our API. Whereas, [Part 2](./graphql-project-part-2) will show how we can turn the data from the GraphQL API into a fully functional website. We will start with the following:
+We will create the above example in two separate steps. Part 1 (this article), will cover the basics of GraphQL and setting up our API. [Part 2](./graphql-project-part-2) will show how we can turn the data from the GraphQL API into a fully functional website. We will start with the following:
 
-- [Creating Your Own Project on Repl.it](#creating-your-own-project-on-replit)
+- [Creating Your Own Project on Replit](#creating-your-own-project-on-replit)
 - [Core Concepts](#core-concepts)
   - [What is GraphQL?](#what-is-graphql)
   - [GraphQL as an alternative to REST](#graphql-as-an-alternative-to-rest)
@@ -22,11 +22,9 @@ We will create the above example in two separate steps. Part 1, which you are lo
   - [Defining an Information Architecture](#defining-an-information-architecture)
   - [Loading the Data](#loading-the-data)
 
+## Creating Your Own Project on Replit
 
-
-## Creating Your Own Project on Repl.it
-
-If you haven't already, head to the [signup page](https://repl.it/signup) and create a Repl.it account. Once created, set up a new project by:
+If you haven't already, head to the [signup page](https://repl.it/signup) and create a Replit account. Once created, set up a new project by:
 
 1. Clicking on the `+ New repl` button.
 2. Choosing the "HTML, CSS, JS" language. 
@@ -35,33 +33,34 @@ If you haven't already, head to the [signup page](https://repl.it/signup) and 
 
 ![Creating a new Repl](../static/images/teamsForEducation/graphql-project/graphql-project-1.png)
 
-Because we selected "HTML, CSS, JS" as our repl language, Repl.it has created the basic files needed for our front-end project, which should be:
+Because we selected "HTML, CSS, JS" as our language, Replit has created the basic files needed for our front-end project, which should be:
 
 - `index.html`
 - `style.css`
 - `script.js`
 
-## Core Concepts
+## Our GraphQL goals for this guide
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-2.jpg)
 
-[Artsy](https://www.artsy.net) Engineering Lead, [Alan Johnson](http://artsy.github.io/author/alan) once proclaimed that [‘I have seen the future, and it looks a lot like GraphQL](http://artsy.github.io/blog/2018/05/08/is-graphql-the-future)’. Whether you agree with him or not, one thing is clear: the sheer boldness of the statement itself is indicative of the meteoric rise in popularity experienced by GraphQL over the last couple of years. 
+Our goals are to: 
 
-Despite it's surging popularity, you might have heard about it, but not really understand what exactly GraphQL entails. Alternatively, this might even be the first time you hear about GraphQL. Regardless, the following two-part guide should introduce you to GraphQL as a concept and illustrate how we can use GraphQL in native JavaScript code without requiring any additional libraries or frameworks. This means that even if you are already familiar with GraphQL, but have only experienced it by means of libraries like [Apollo](https://www.apollographql.com) or [Relay](https://relay.dev), then you will find value by learning how to make use of GraphQL by means of the native JavaScript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+* Gain familiarity with GraphQL as a concept
+* Illustrate how we can use GraphQL in native JavaScript code without requiring any additional libraries or frameworks. 
+
+This means that even if you are already familiar with GraphQL but have only experienced it through libraries like [Apollo](https://www.apollographql.com) or [Relay](https://relay.dev), then you will find value by learning how to make use of GraphQL by using the native JavaScript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
 ### What is GraphQL?
 
-Given that Alan Johnson believes the future "looks a lot like GraphQL", how would he define GraphQL?
+You might have seen definitions of GraphQL that look like this one:
 
 > *“I have seen the future, and it looks a lot like GraphQL. Mark my words: in 5 years, newly minted full-stack app developers won’t be debating RESTfulness anymore, because REST API design will be obsolete. […] It lets you model the resources and processes provided by a server as a domain-specific language (DSL). Clients can use it to send scripts written in your DSL to the server to process and respond to as a batch.”*
 >
 >— [Alan Johnson](https://artsy.github.io/author/alan/): [*Is GraphQL The Future?*](http://artsy.github.io/blog/2018/05/08/is-graphql-the-future/)
 
-Yikes! That probably wasn’t the explanation you were looking for! Yet, by diving into some of the key concepts mentioned above we will be able to create a clear, concise summary of GraphQL.
+Let's take a look at what this actually means. Specifically, a "[domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language)" (DSL) is a programming language created to express a very specific and narrow type of digital information (a domain). While a [general-purpose language](https://en.wikipedia.org/wiki/General-purpose_programming_language) like [JavaScript](https://en.wikipedia.org/wiki/JavaScript) can be used to express a wide range of digital information, domain-specific languages tend to be more limited. However, it is precisely because of their narrow scope that DSLs can be easier to read and write when compared to general-purpose languages.
 
-Let's start by unpacking the concept of a "[domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language)" (DSL). A DSL is a programming language created to express a very specific and narrow type of digital information (a domain). Whereas a [general-purpose language](https://en.wikipedia.org/wiki/General-purpose_programming_language) like [JavaScript](https://en.wikipedia.org/wiki/JavaScript) can (similar to a [Swiss army knife](https://en.wikipedia.org/wiki/Swiss_Army_knife)) be used to express a wide range of digital information. This includes everything from low-level data structures like [objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object), [functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions), [strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), [symbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) to broader patterns like [HTTP requests](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol), [DOM manipulations](https://en.wikipedia.org/wiki/Document_Object_Model) and/or [browser storage](https://en.wikipedia.org/wiki/Web_storage). Domain-specific languages tend to be more limited (and intentionally so) in what they are able to express when compared to general-purpose languages. However, it is precisely because of their narrow scope that DSL’s are able to be much more expressive (in other words, easy to read and write) compared to general-purpose languages.
-
-However, because of this limited scope, DSL’s are often embedded inside other languages. The reason being that they often need to piggyback on the larger functionality provided by general-purpose languages. However, this does not mean that DSL’s are tied to specific languages. For example, [SQL](https://en.wikipedia.org/wiki/SQL) (Structured Query Language) is another domain-specific language that is used to query database structures like [MySQL](https://www.mysql.com) or [Postgres](https://www.postgresql.org). Yet, SQL has the same exact syntax whether embedded inside JavaScript, [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) or [PHP](https://en.wikipedia.org/wiki/PHP) (amongst others).
+Because of this limited scope, DSLs are often embedded inside other languages. The reason being that they often need to piggyback on the larger functionality provided by general-purpose languages. However, this does not mean that DSLs are tied to specific languages. For example, [SQL](https://en.wikipedia.org/wiki/SQL) (Structured Query Language) is another domain-specific language that is used to query database structures like [MySQL](https://www.mysql.com) or [Postgres](https://www.postgresql.org). Yet, SQL has the same exact syntax whether embedded inside JavaScript, [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) or [PHP](https://en.wikipedia.org/wiki/PHP).
 
 As an example, in JavaScript (via [Node](https://en.wikipedia.org/wiki/Node.js)) you might do the following:
 
@@ -93,7 +92,7 @@ db = mysql.connector.connect(
 db.cursor().execute("SELECT * FROM customers")
 ```
 
-You will note that the SQL expression (`SELECT * FROM customers`) is the exact same regardless of the environment. Similarly, GraphQL allows us to express specific data queries independently of how (or where) we use them.
+You will note that the SQL expression (`SELECT * FROM customers`) is the exact same regardless of the environment. Similarly, GraphQL allows us to express **specific data queries** independently of how (or where) we use them.
 
 ### GraphQL as an alternative to REST
 
@@ -105,19 +104,15 @@ For a long time REST was considered the de-facto standard for sending data betwe
 >
 >— [Chimezie Enyinnaya](https://blog.pusher.com/author/mezie/)*: [REST versus GraphQL](https://blog.pusher.com/rest-versus-graphql/)*
 
-GraphQL was specifically conceived as a solution to this problem. It was originally created in 2012 for internal usage at [Facebook](https://www.facebook.com). The goal was to provide a standardized syntax to write more expressive (and powerful) data queries within the Facebook mobile app when fetching remote data. In fact, the above was such a common pain-point that two alternatives to GraphQL were developed in parallel by the[Coursera](https://www.coursera.org/) and [Netflix](https://www.netflix.com/) teams respectively. Both Facebook and Netflix eventually open-sourced their solutions. However, [Falcor](https://netflix.github.io/falcor) (the Netflix alternative) quickly lost ground to the immensely popular GraphQL.
+GraphQL was created as a solution to this problem. Facebook created it to provide a standardized syntax to write more expressive (and powerful) data queries within the Facebook mobile app when fetching remote data.
 
 ### "Hello World" in GraphQL
 
 So where does one start with GraphQL?
 
-Fortunately, there are several GraphQL libraries that provide useful abstractions when working with GraphQL. The most popular (as previously mentioned) are Apollo and Relay. While these provide a lot of helpful features, like [cache management](https://www.apollographql.com/docs/react/caching/cache-configuration/) and [normalization](https://www.apollographql.com/blog/demystifying-cache-normalization). I often find that they are somewhat overwhelming to someone just starting with GraphQL. They also tend to be quite large and opinionated - meaning that they might be overkill for smaller, more flexible projects. Yet, a large number of developers don't even realise that you are able to use GraphQL without them!
+There are several GraphQL libraries that provide useful abstractions when working with GraphQL. The most popular are Apollo and Relay. While these provide a lot of helpful features, like [cache management](https://www.apollographql.com/docs/react/caching/cache-configuration/) and [normalization](https://www.apollographql.com/blog/demystifying-cache-normalization) they can be overwhelming to someone just starting with GraphQL. They also tend to be quite large and opinionated - meaning that they might be overkill for smaller, more flexible projects.
 
-It is important to remember that GrahpQL is merely an open standard (similar to HTML). It is therefore not locked to any specific tool, library or platform. The implication being that we are able to use GraphQL directly with the [native JavaScript fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), or even with a light-weight [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) library like [Axios](https://www.npmjs.com/package/axios). In the example below, we will establish what the '[Hello World](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)' equivalent of GraphQL in JavaScript would be. In other words:
-
-> "Such a program is very simple in most programming languages, and is often used to illustrate the basic syntax of a programming language"
->
->— Wikipedia: *["Hello, World!" program](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)*
+Remember that GrahpQL is merely an open standard (similar to HTML). It is therefore not locked to any specific tool, library or platform. This meanas that we are able to use GraphQL directly with the [native JavaScript fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), or even with a light-weight [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) library like [Axios](https://www.npmjs.com/package/axios). In the example below, we will establish what the '[Hello World](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)' equivalent of GraphQL in JavaScript would be. In other words:
 
 ### Using a GraphQL Explorer
 
@@ -156,18 +151,17 @@ We can run the default starting query (at the time of writing) and we'll get a [
   }
 }
 ```
+Let's take a look at what just happened. We'll clear the left-hand pane and recreate the query step by step. 
 
-This is great! But you might have no idea what just happened. 
+We can start by adding `query { }`. This indicates to the endpoint that we want to retrieve data from the server.
 
-To this end, let us clear the left-hand pane and recreate the query step by step. This allows me to explain the underlying logic as we go. We can start by adding `query { }`. This indicates to the endpoint that we want to retrieve data from the server. Note that `mutation {}` allows us to send data to the endpoint and `subscription {}` listen for changes in the data. However for the scope of this guide we will only be covering `query` - however, you can learn more about `mutation` and `subscription` [on the GraphQL website itself](https://graphql.org/learn/queries/).
-
-If we place our cursors within the curly brackets and press the spacebar and enter keys at the same time we should get a list of recommended queries (based on the structure of the data) as follows:
+Place your cursor within the curly brackets and press the spacebar and enter keys at the same time we should get a list of recommended queries (based on the structure of the data) as follows:
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-4.png)
 
-As per our initial example let us reselect `event`. This means that we want to retrieve information associate with a specific event. The event we are interested in has a unique ID of `5879ad8f6672e70036d58ba5` (at the time of writing). We can pass this ID as an argument to the query (similar to how we would with JavaScript functions) as follows: `event(id: "5879ad8f6672e70036d58ba5") { }` .
+As per our initial example let's reselect `event`. This means that we want to retrieve information associate with a specific event. The event we are interested in has a unique ID of `5879ad8f6672e70036d58ba5`. We can pass this ID as an argument to the query (similar to how we would with JavaScript functions) as follows: `event(id: "5879ad8f6672e70036d58ba5") { }` .
 
-Now that we've identified the event that we want to query we can instruct GraphQL to only retrieve the information that we're interested in. This prevents the response from returning the entire event data-structure (called [over-fetching](https://stackoverflow.com/questions/44564905/what-is-over-fetching-or-under-fetching) in REST). In order to illustrate the dynamic nature of GraphQL, we will be querying completely different data associated with the event as per the example below:
+Now that we've identified the event that we want to query, we can instruct GraphQL to only retrieve the information that we're interested in. This prevents the response from returning the entire event data-structure (called [over-fetching](https://stackoverflow.com/questions/44564905/what-is-over-fetching-or-under-fetching) in REST). In order to illustrate the dynamic nature of GraphQL, we will be querying completely different data associated with the event as shown in the example below:
 
 ```graphql
 query {
@@ -179,9 +173,9 @@ query {
 }
 ```
 
-If you've been attentive you would have noticed that our initial example had nested queries. This is where the distinction between GraphQL and REST becomes central. Everything we've done up until this point very much adheres to the way we would think about a traditional REST request (apart from [over-fetching and under-fetching](https://stackoverflow.com/questions/44564905/what-is-over-fetching-or-under-fetching)).
+Notice that our initial example had **nested queries**. This is where the distinction between GraphQL and REST becomes central. Everything we've done up until this point very much adheres to the way we would think about a traditional REST request.
 
-REST requests function similar to a traditional JavaScript functions, where we provide specific arguments and we get a pre-determined response based on the arguments. GraphQL works a bit differently. It can be said that GraphQL queries are like little maps used to navigate and find all requested data in a single journey. This means that we can (for the fun of it) conceptualize a set of real-world instructions by mean of the GraphQL syntax as follows:
+REST requests function similar to a traditional JavaScript functions, where we provide specific arguments and we get a pre-determined response based on the arguments. GraphQL works a bit differently. GraphQL queries are like little maps used to navigate and find all requested data in a single journey. This means that we can conceptualize a set of real-world instructions by mean of the GraphQL syntax as follows:
 
 ```jsx
 instructions {
@@ -212,11 +206,9 @@ instructions {
 }
 ```
 
-I’m calling it — 2038 robot servants will be programmed with GraphQL!
-
 Since GraphQL is a [graph-like structure](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)), we can get information loosely related to our event without creating a completely new request. This is where GraphQL really shines when compared to REST! You can think of these as roads or pathways connecting different places. In other words, if you are in the mall (as per our example above), you can go directly to the `general_store_store` in that `mall` and then to the `hardware_store` afterwards. Furthermore, because the `mall` is connected to the `post_office` by a road you can then drive to the `post_office` afterwards.
 
-Due to the map-like nature of queries, we can actually have a query that follows a circle route, ending up exactly where it started (although there is no real practical reason for this, it is fun nonetheless):
+Due to the map-like nature of queries, we can actually have a query that follows a circle route, ending up exactly where it started (there is no real practical reason for this, but it demonstrates the graph foundations of GraphQL).
 
 ```graphql
 query {
@@ -240,9 +232,9 @@ query {
 
 ### Adding GraphQL to JavaScript
 
-Let's take the above query built within the GraphiQL explorer (in all it's circular logic!) and place it in our JavaScript file. This allows us to request the above data directly from our browser:
+Let's take the above query built within the GraphiQL explorer and place it in our JavaScript file. This allows us to request the above data directly from our browser:
 
-_Note that the following example assumes familiarity with the native JavaScript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). If this is the first time you are encountering I recommend that you give the phenomenal [How to Use the JavaScript Fetch API to Get Data](https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data) by the [Digital Ocean team](https://www.digitalocean.com/).*
+_Note that the following example assumes familiarity with the native JavaScript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). If this is the first time you are encountering I recommend that you give the phenomenal [How to Use the JavaScript Fetch API to Get Data](https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data)*
 
 ```jsx
 const QUERY = `
@@ -275,7 +267,7 @@ fetch('https://universe.com/graphiql', FETCH_OPTIONS )
   .then(console.log)
 ```
 
-The above  should output something as follows to the browser console:
+The above should output something as follows to the browser console:
 
 ```json
 {
@@ -307,21 +299,19 @@ The above  should output something as follows to the browser console:
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-6.jpg)
 
-Great, we've mastered the basics of GraphQL!
+Congratulations, you can now write basic GraphQL queries!
 
-However, we probably want to create our own endpoint, since being bound to data from [Universe.com](http://universe.com) won't be that helpful going forward. There are several server-side GraphQL frameworks that you we deploy as required. Some extremely popular examples are [express-graphql](https://www.npmjs.com/package/express-graphql) for Node (running [Express](https://expressjs.com/)) and [Graphene](https://graphene-python.org/) for Python servers. Alternatively, there are several all-in-one solutions like [Prisma](https://www.prisma.io/) or [Hasura](https://hasura.io/) that come with databases already baked in.
+Next, we'll want to create our own endpoint, since being restricted to data from [Universe.com](http://universe.com) is limiting. There are several server-side GraphQL frameworks. Some extremely popular examples are [express-graphql](https://www.npmjs.com/package/express-graphql) for Node (running [Express](https://expressjs.com/)) and [Graphene](https://graphene-python.org/) for Python servers. Alternatively, there are several all-in-one solutions like [Prisma](https://www.prisma.io/) or [Hasura](https://hasura.io/) that come with databases included.
 
 ### GraphQL as Service
 
-However, for the sake of simplicity, we will be using a free [software as a service](https://en.wikipedia.org/wiki/Software_as_a_service) (SaaS) platform called [GraphCMS](https://graphcms.com/). This allows us to get a custom GraphQL endpoint up and running with extreme ease.
+For the sake of simplicity, we will be using a free [software as a service](https://en.wikipedia.org/wiki/Software_as_a_service) (SaaS) platform called [GraphCMS](https://graphcms.com/). This allows us to get a custom GraphQL endpoint up with minimal set up.
 
-In order to follow along, you can visit [https://graphcms.com](https://graphcms.com/) and sign up for a free account. Once your account has been created you can create a new sample project by selecting the "Podcast Starter" template. Make sure that "Include template content" is selected since this will populate our API with placeholder information. You are welcome to add or edit content to the API by means of the GraphCMS project dashboard, however, please make sure that you don't change the schema since we will be relying on it to write our queries.
+In order to follow along, visit [https://graphcms.com](https://graphcms.com/) and sign up for a free account. Once your account has been created, create a new sample project by selecting the "Podcast Starter" template. Make sure that "Include template content" is selected since this will populate our API with placeholder information. You can add or edit content to the API using the GraphCMS project dashboard, but make sure that you don't change the schema since we will be relying on it to write our queries.
 
-_Note that GraphCMS allows you to create a new project completely from scratch, however for our purposes we only want to have a working endpoint with placeholder content. However, if you are interested in diving deeper into GraphCMS you can consult their documentation at [https://graphcms.com/docs](https://graphcms.com/docs)._
+_Note that GraphCMS allows you to create a new project completely from scratch, however for our purposes we only want to have a working endpoint with placeholder content. If you are interested in diving deeper into GraphCMS you can consult their documentation at [https://graphcms.com/docs](https://graphcms.com/docs)._
 
 Once your project has been created you can select the _"Settings"_ tab at the bottom-left corner, and navigate to "API Access". Make sure to copy the endpoint URL (at the top of the page) and save it somewhere where you will be able to access it later. We'll be directing all our GraphQL queries to this URL, so it is useful to have it at hand.
-
-If you are struggling you can have a look at the following animated demo:
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-7.gif)
 
@@ -331,13 +321,13 @@ Note that your API endpoint should look something like the following:
 https://api-us-east-1.graphcms.com/v2/ckll20qnkffe101xr8m2a7m2h/master
 ```
 
-However, in the next code examples, I will be using `<<<YOUR ENDPOINT HERE>>>` to prevent you from accidentally using an example endpoint if you are following along. Furthermore, you will also note that if you navigate straight to your endpoint within your browser you will be presented with a GraphiQL Explorer that allows you to test and try out queries for your specific endpoint:
+However, in the next code examples, we'll use `<<<YOUR ENDPOINT HERE>>>` to prevent you from accidentally using an example endpoint if you are following along. If you navigate straight to your endpoint within your browser you will be presented with a GraphiQL Explorer that allows you to test and try out queries for your specific endpoint:
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-8.gif)
 
 ### Custom GraphQL Function
 
-We will be making several GraphQL queries from our website. For this purpose it is helpful to create a basic abstraction (by means of a JavaScript function) that handles these requests in order to reduce boilerplate code. We can convert our JavaScript example above into a basic JavaScript function as follows:
+We will be making several GraphQL queries from our website. For this purpose it is helpful to create a basic abstraction (using a JavaScript function) that handles these requests in order to reduce boilerplate code. We can convert our JavaScript example above into a basic JavaScript function as follows:
 
 _Note that the following section assumes familiarity with the [async/await operators](https://en.wikipedia.org/wiki/Async/await) in JavaScript. If you are unfamiliar with them you can have a look at the [following guide on the Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)._
 
@@ -356,7 +346,7 @@ const gqlQuery = async (query) => {
 }
 ```
 
-This allows us to pass a query to the function, which in return provides a response once the query resolves. It is also worth noting that we are including a check in the function to determine whether the response succeeded (by checking if it returned a `200` status, by means of `response.ok` ).
+This allows us to pass a query to the function, which in return provides a response once the query resolves. We also include a check in the function to determine whether the response succeeded (by checking if it returned a `200` status, by means of `response.ok` ).
 
 This means that we should be able to do the following:
 
@@ -372,7 +362,7 @@ const QUERY = `
 gqlQuery(QUERY).then(console.log)
 ```
 
-Yet there is a problem: The above will always return an array of all the episodes from our entire database. This means that if we only want the two most recent episodes we can do the following in our query:
+This works, but it always return an array of **all** the episodes from our entire database. If we only want the two most recent episodes we can do the following in our query:
 
 ```graphql
 query {
@@ -382,11 +372,11 @@ query {
 }
 ```
 
-However, this isn't very flexible, since it means that we'll need to create an entire new query each time we want get a specific amount of episodes. Luckily, GraphQL allows us to designate and pass variables to be used by the query. For example, if we have a look in our GraphiQL explorer we can do the following (you might need to click on "QUERY VARIABLES" in the bottom-left corner to open it up):
+However, this isn't very flexible, since it means that we'll need to create an entire new query each time we want get a specific number of episodes. Luckily, GraphQL lets us pass variables as part of the query. For example, if we have a look in our GraphiQL explorer we can do the following (you might need to click on "QUERY VARIABLES" in the bottom-left corner to open it up):
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-9.gif)
 
-You'll see that we can pass variables as a JSON object, and then within the query we can declare the expected variables in brackets (`( )`) right after the `query` command. Note that the variable names should always start with a dollar sign (`$`). In our case we can specify that we are expecting `$count`. However, because GraphQL is [strongly typed language](https://en.wikipedia.org/wiki/Strong_and_weak_typing) we are required to declare what type of data `$count` will be. Luckily we know that it will be an `Int` value. An `Int` is essentially just a whole number that doesn't have a decimal. We then pass the value of `$count` directly to `episodes(first: $count)` . In order to replicate this within our JavaScript we can simply add variables to our body as follows:
+You'll see that we can pass variables as a JSON object, and then within the query we can declare the expected variables in brackets (`( )`) right after the `query` command. The variable names should always start with a dollar sign (`$`). In our case we can specify that we are expecting `$count`. However, because GraphQL is [strongly typed language](https://en.wikipedia.org/wiki/Strong_and_weak_typing) we are required to declare what type of data `$count` will be. In this case, it will be an `Int` value. We then pass the value of `$count` directly to `episodes(first: $count)`. In order to replicate this within our JavaScript we can add variables to our body as follows:
 
 _If you are not familiar with the concept of strongly typed languages you can have a look at [the following guide](https://flaviocopes.com/loosely-strongly-typed) by [Glavio Copes](https://flaviocopes.com/)._
 
@@ -424,11 +414,9 @@ gqlQuery(QUERY, { count: 3 }).then(console.log)
 
 ###  Defining an Information Architecture
 
-Now with our endpoint set up we probably need to start mapping out all the information we want to show on each page. This is a common exercise in the world of user experience called [information architecture](https://en.wikipedia.org/wiki/Information_architecture) mapping. If you are interested in this topic, you can learn more by reading the free book by [Abby Covert](https://abbycovert.com/) (also from Etsy) titled [How to Make Sense of Any Mess](http://www.howtomakesenseofanymess.com/). 
+Now with our endpoint set up we need to start mapping out all the information we want to show on each page. This is a common exercise in the world of user experience called [information architecture](https://en.wikipedia.org/wiki/Information_architecture) mapping.
 
-This can be done in any manner, including (amongst others) hand-drawn notes or flow charts. If you're feeling adventurous you might even try something like [Sketch Systems](https://sketch.systems). However, more often than note I find that a simple Markdown file is sufficient. Remember that the value of this exercise is that we're trying to anticipate problems before they arise as cheaply and soon as possible - so don't over think it! 
-
-I wrote out the following basic outline, which will be used as reference when requesting data from the endpoint:
+As an example, consider the following basic outline, which we'll use as a reference when requesting data from the endpoint:
 
 ```markdown
 # GraphQL FM Website
@@ -512,9 +500,9 @@ I wrote out the following basic outline, which will be used as reference when re
 
 ### Loading the Data
 
-While creating our information architecture one thing immediately stand out: there are some specific data co-configurations that are called multiple times. Luckily, the GraphQL standardization allows for something called [fragments](https://graphql.org/learn/queries/#fragments). Fragments helps keep our queries DRY (a programming acronym for [Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)). The most common co-configuration seems to be the data required to show a preview of a specific episode. 
+While creating our information architecture one thing immediately stands out: there are some specific data co-configurations that are called multiple times. Luckily, the GraphQL standardization allows for something called [fragments](https://graphql.org/learn/queries/#fragments). Fragments helps keep our queries DRY (a programming acronym for [Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)). The most common co-configuration seems to be the data required to show a preview of a specific episode. 
 
-We can wrap this in a GraphQL fragment as follow (very similar to how we would create a query itself in JavaScript):
+We can wrap this in a GraphQL fragment as follows (very similar to how we would create a query itself in JavaScript):
 
 ```js
 const EPISODE_PREVIEW_FRAGMENT = `
@@ -548,7 +536,7 @@ const GUESTS_PAGE_QUERY = `
   ${EPISODE_PREVIEW_FRAGMENT}
 ```
 
-Note that it is common practice to place fragments after the query expression instead of declaring the before the query. The reason for this is that query should first and foremost be expressive, and we should rather include fragments as footnotes for reference (if the reader doesn't know what the fragment does). Using our information architecture and the fragment declared above we can replace all the content in our JavaScript file with the following:
+Note that it is common practice to place fragments **after** the query expression instead of declaring them before the query. The reason for this is that the query should first and foremost be expressive, and we should rather include fragments as footnotes for reference. Using our information architecture and the fragment declared above we can replace all the content in our JavaScript file with the following:
 
 ```js
 const EPISODE_PREVIEW_FRAGMENT = `
@@ -726,9 +714,8 @@ const getData = async () => {
 
 getData();
 ```
-
-Upon running the above we get one big object in your browser console. This object contains all the data that we'll be using in our website:
+If you run the above, you'll get one big object in your browser console. This object contains all the data that we'll be using in our website:
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-10.png)
 
-Yet, merely having the data in our browser console is not enough. We need to do so additional work in order to structure it in HTML and CSS to be consumed directly by users. If you are interested in how we take the above and turn it into the fully functional website shown at the beginning of this guide then you can proceed directly to [part 2](./graphql-project-part-2).
+Having the data in our browser console is not enough. We need to do so additional work in order to structure it in HTML and CSS, to be consumed directly by users. In [part 2](./graphql-project-part-2), we'll walk through doing this, turning our data into a fully functional website.
