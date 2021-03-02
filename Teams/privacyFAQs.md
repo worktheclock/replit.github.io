@@ -8,8 +8,8 @@ Yes. Using [Teams for Education](https://repl.it/teams-for-education), teachers 
 
 **Key Privacy and Data Security Assurances**
 
-- Replit will never sell your data or your students' data
-- Replit will never show you advertisements for products/services from other companies
+- Replit does not sell your data or your students' data
+- Replit does not show you advertisements for products/services from other companies
 - Replit is compliant with FERPA and COPPA (and many other privacy regulations)
 - You retain rights to the work you create on Replit
 - Replit makes it easy to keep student work private and preserve acedmic integrity
@@ -49,11 +49,20 @@ In addition, consistent with COPPA, we do not disclose student data to third par
 
 When we contract with schools to use Teams for Education, we do not collect information about students that can be used to identify or contact them, such as a name and email address. We only collect student’s Log Information (as defined in our [privacy policy](https://repl.it/site/privacy)) and use this limited data for the purposes for which it was provided to us; that is, to perform services for the school and support our internal operations. We do not disclose data to third parties other than our own subprocessors.
 
+**Is Replit compliant with the GDPR?**
+
+Yes, Replit is GDPR compliant.
+
+**What is the GDPR?**
+
+The [EU General Data Protection Regulation](https://gdpr-info.eu/) (GDPR) is the primary law regulating how companies must protect the personal data of EU citizens.  The GDPR took effect on May 25th, 2018, and it gives EU citizens broad rights to their data, creates strong safeguards for the processing of any data, and requires companies to transparently disclose their data processing activities. Any company that processes or stores EU personal data must be compliant with the GDPR. "Personal Data" is considered any information relating to an identified or identifiable natural person.  
+
 **What other privacy regulations and security frameworks is Repl.it compliant with?**
 
 This list is **not exhaustive** and we will continue to update it over time, however, we have reviewed and are compliant with the following privacy regulations:
 - [New York Education Law 2-D](https://www.nysenate.gov/legislation/laws/EDN/2-D)
 - [California Consumer Privacy Act (CCPA)](https://www.oag.ca.gov/privacy/ccpa)
+- [UK Data Protection Act of 2018](https://www.gov.uk/data-protection)
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
 - [Higher Education Community Vendor Assessment Toolkit (HECVAT) Lite](https://library.educause.edu/resources/2020/4/higher-education-community-vendor-assessment-toolkit)
 
@@ -61,7 +70,7 @@ This list is **not exhaustive** and we will continue to update it over time, how
 
 Yes. If you would like us to review your local privacy regulation or sign your organization's specific privacy policy, please email [sales@repl.it](mailto:sales@repl.it). 
 
-We can also share our US Student Data Protection Addendum ([online copy](https://docs.repl.it/Teams/US_Student_DPA)) or our European Data Protection Addendum to speed up the process.
+If you are a Local Educational Agency in the United States, our [U.S. Student Data Protection Addendum](https://docs.repl.it/Teams/US_Student_DPA) also applies. We are happy to send you a copy for comments/edits if you'd like.
 
 **Is this update reflected in your Privacy Policy?**
 
