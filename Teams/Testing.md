@@ -1,37 +1,7 @@
 # Testing, Assessments, and Autograding
 
-Since Repl.it is a general-purpose IDE that supports third-party packages in many languages, you can integrate testing frameworks into your projects which can be used for assessments. 
+Replit has a number of features related to helping teachers automatically grade students' assignments.
 
-We've written a tutorial for how to do testing in Python using PyTest that you can read [here](https://docs.repl.it/tutorials/09-test-driven-development).
+The simplest of these is [Input/Output testing](./InputOutput), which allows you to check that your student's homework produces specific outputs, matching exact strings or regexes.
 
-## Autograding Guides and Example Projects
-
-If you want a robot to help you grade your student's homework assignments, you can follow the guides below. We have demonstrated several different ways to do autograding with Repl.it so you can pick the one that works best for you.
-
-The "Input/Output Autograder" lets you check to see if your students' programs match expected output for a given input. Students are able to see if their code passes the tests before submitting a project.
-
-The "Simple Autograders" show you how to run unit tests directly on your student's work. These are best if you just have a few students and you don't mind sharing the tests with them, and running the tests on each assignment individually.
-
-The "Centralized Autograders" show you how to build your own custom grading server from scratch. These are best if you have very custom needs, but are more challenging to set up.
-
-Alternatively you can use our guides to integrate with ReplGrader.com which is a third-party grading service. This is the simplest option, but also the most limited.
-
-### Input/output autograding guide
-
-- [Input/output testing](./InputOutput)
-
-### Python autograding guides
-
-- [Simple autograding](./SimpleAutograding)
-- [Fully automated autograding](./CentralizedAutograder) or [Quickstart Guide](CentralizedAutograderQuickstart)
-- [Autograding with replgrader.com](./ReplGraderQuickstart)
-
-### Java autograding guides
-
-- [Simple autograding](./SimpleAutograding-java)
-- [Fully automated autograding](./CentralizedAutograder-java) or [Quickstart Guide](CentralizedAutograderQuickstart-java)
-
-## Example Homework Assignments
-
-If you want inspiration for what kind of homework you can set for your class, we also have some tutorials with example assignments. Obviously your students might find these too as they are freely available, so probably modify them to prevent plagiarism.
-
+A step above this is [Unit Testing](/repls/UnitTesting), which allows you to write full unit tests in Java (JUnit), Python (unittest), or JavaScript (Jest).
