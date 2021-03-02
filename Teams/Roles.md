@@ -1,4 +1,4 @@
-# Team Rroles
+# Team Roles
 
 You can assign different members of your team different roles.
 
