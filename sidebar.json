@@ -70,6 +70,14 @@
       {
         "name": "Playing Audio on Repl.it",
         "slug": "audio"
+      },
+      {
+        "name": "Always-on",
+        "slug": "always-on"
+      },
+      {
+        "name": "Unit Testing",
+        "slug": "UnitTesting"
       }
     ]
   },
@@ -238,6 +246,10 @@
       {
         "name": "Steganography: hiding messages in images",
         "slug": "13-steganography"
+      },
+      {
+        "name": "2D platform game with PyGame",
+        "slug": "14-2d-platform-game"
       },
       {
           "name": "Pinboard Project Part 1: HTML & CSS",

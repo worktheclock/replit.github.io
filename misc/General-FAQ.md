@@ -8,9 +8,6 @@
 
   It is the new product we have built out for all our teachers. We are transitioning from _Classrooms_ to _Teams for Education_ as it has a lot more features. Please check out our blog post [here](https://blog.repl.it/teams-for-education) to learn more.
 
-
-
-
 ## **Repls**
 
 ##### **Why isn't my repl loading?**
@@ -44,7 +41,8 @@
 
 ##### **What if I have two repls in different folders and am unable to give them the same name?**
 
-  The folders in the "My repls" portion are more so metaphors and do not do much else. When you click on any repl, it will always be https://repl.it/@usernmae/repl_name which means all your repls need to be unique.
+
+  Unforutnately the folders in the myrepls portion are more so metaphors and do not do much else. When you click on any repl it will always be https://repl.it/@username/repl_name which means all your repls need to be unique.
 
 ##### **How do I keep my repls to always stay on?**
 

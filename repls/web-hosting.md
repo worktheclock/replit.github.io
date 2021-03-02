@@ -55,7 +55,7 @@ For example:
 
 The exact steps will vary between services. Here's an example of how it might look, using Google Domains:
 
-![screenshot of cname instructions](https://replit.github.io/images/repls/google-setup-custom-domain.png)
+![screenshot of cname instructions](/images/repls/google-setup-custom-domain.png)
 
 It may take some time for the DNS record to be updated. Once connected, click the big green button to finish and your domain should be linked!
 
