@@ -105,7 +105,7 @@ The limits are currently:
 
 - 50 MB per database (sum of keys and values)
 - 5,000 keys per database
-- 100 bytes per key
+- 1000 bytes per key
 - 5 MB per value
 
 There are rate limits that apply to all operations. You will receive an HTTP 429 if you exceed them. We recommend implementing an exponential backoff and retry to handle this case.
