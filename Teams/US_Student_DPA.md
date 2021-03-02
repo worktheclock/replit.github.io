@@ -1,6 +1,6 @@
 # US Student Data Protection Addendum
 
-This Data Protection Addendum (“DPA” or “Addendum”) is entered into between [insert Local Educational Agency name] ("LEA") and Replit, Inc. ("Provider") (together, the “Parties”) on [insert date] ("Effective Date").
+This U.S. Student Data Protection Addendum ("DPA" or "Addendum") is entered into between the Local Educational Agency using the Replit, Inc. ("Provider") services ("LEA") and Provider (together, the "Parties") on the date on which the LEA first enters into the Replit Terms & Conditions ("Effective Date").
 
 WHEREAS LEA and Provider exchange certain information and Provider may collect certain information on behalf LEA in furtherance of the Services as defined in the Master Services Agreement (“MSA”) between the Parties and intend for this DPA to apply to all information exchanged or collected for the purpose of such Services, unless otherwise expressly agreed by the Parties in writing in advance;
 
