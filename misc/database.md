@@ -80,7 +80,7 @@ will be URL encoded. This lets you safely handle keys that contain newlines.
 
 This is the environment variable we have created with your repl. It is the key that will allow you to access your database.
 
-The clients listed above take care of using `REPLIT_DB_URL` for you. But if you want to write your own client or use Database from a language that doesn't yet have a client, here are two examples:
+The clients listed above take care of using `REPLIT_DB_URL` for you. But if you want to write your own client or use Database from a language that doesn't yet have a client. Here are two examples:
 
 Python:
 

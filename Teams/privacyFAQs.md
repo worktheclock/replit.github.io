@@ -47,9 +47,9 @@ In addition, consistent with COPPA, we do not disclose student data to third par
 
 **Can Replit be used in compliance with FERPA?**
 
-When we contract with schools to use Teams for Education, we do not collect information about students that can be used to identify or contact them, such as a name and email address from students.  We only collect student’s Log Information (as defined in our [privacy policy](https://repl.it/site/privacy)) and use this limited data for the purposes for which it was provided to us, that is, to perform services for the school and support our internal operations. We do not disclose data to third parties other than our own subprocessors.
+When we contract with schools to use Teams for Education, we do not collect information about students that can be used to identify or contact them, such as a name and email address. We only collect student’s Log Information (as defined in our [privacy policy](https://repl.it/site/privacy)) and use this limited data for the purposes for which it was provided to us; that is, to perform services for the school and support our internal operations. We do not disclose data to third parties other than our own subprocessors.
 
-**What other privacy regulations and security frameworks is Replit compliant with?**
+**What other privacy regulations and security frameworks is Repl.it compliant with?**
 
 This list is **not exhaustive** and we will continue to update it over time, however, we have reviewed and are compliant with the following privacy regulations:
 - [New York Education Law 2-D](https://www.nysenate.gov/legislation/laws/EDN/2-D)

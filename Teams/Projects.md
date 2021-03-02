@@ -1,5 +1,5 @@
 
-## Project creation and submission
+## Project Creation and Submission
 
 From your team dashboard, create a new project.
 
@@ -27,11 +27,11 @@ Click "Save" to finalize any changes, or "Cancel" to discard changes.
 
 ## Submitting
 
-When students have completed their work on the project, they click "Submit" in the IDE header, which will notify all teachers of their submission.  Students may have access to only one submission for each project.
+When students have completed their work on the project, they click "Submit" in the IDE header, which will notify all teachers of their submission. Students may have access to only one submission for each project.
 
 <img style="max-width: 100px" src="/images/teamsForEducation/project-submit.png" />
 
-## Reviewing submissions
+## Reviewing Submissions
 
 Teachers are able to view project submissions from the team dashboard. Click "View submissions" on the project.
 

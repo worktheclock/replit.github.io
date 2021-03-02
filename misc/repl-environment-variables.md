@@ -1,4 +1,4 @@
-# Automatically get metadata about a repl (username and project slug)
+# Automatically Get Metadata about a repl (username and project slug)
 
 In some cases it's useful to automatically retrieve metadata about a repl from within that repl.
 
@@ -6,7 +6,7 @@ You can find **owner** and **project name** of the current repl in environment v
 
 ![owner and slug](/images/misc/ownerproject.png)
 
-For example, in Python
+For example, in Python:
 
 ```python
 import os
@@ -27,4 +27,4 @@ slug = os.getenv("REPL_SLUG")
 print(f"This project can be found at https://repl.it/@{user}/{slug}")
 ```
 
-This is useful, for example, when having homework assignments automatically submit themselves to an [autograding server](/Teams/Testing)
+This is useful, for example, when having homework assignments automatically submit themselves to an [autograding server](/Teams/Testing).
