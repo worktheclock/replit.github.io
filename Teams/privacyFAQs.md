@@ -57,6 +57,18 @@ Yes, Replit is GDPR compliant.
 
 The [EU General Data Protection Regulation](https://gdpr-info.eu/) (GDPR) is the primary law regulating how companies must protect the personal data of EU citizens.  The GDPR took effect on May 25th, 2018, and it gives EU citizens broad rights to their data, creates strong safeguards for the processing of any data, and requires companies to transparently disclose their data processing activities. Any company that processes or stores EU personal data must be compliant with the GDPR. "Personal Data" is considered any information relating to an identified or identifiable natural person.  
 
+**How is Replit Compliant with the GDPR?**
+
+Replit is committed to protecting customer data and privacy, and we take our obligations regarding data compliance seriously and transparently. Replit has engaged in a GDPR compliance review to make its practices with respect to the processing of EU personal data consistent with the GDPR.  For example, Replit maintains records of its processing activities, has a legal basis for each processing activity in which it engages, and uses a variety of technical, organizational, and physical measures to safeguard and protect data.  We also actively monitor our compliance efforts and seek to continuously improve them.  
+
+**How does Replit Protect Personal Data Provided by its EU Customers and Users?**
+
+Replit executes a [Data Processing Agreement](https://repl.it/site/dpa) (DPA) with its EU entity customers, which contains all of the requirements of GDPR Article 28 and governs how Replit uses and protects personal data when it serves as a data processor to its controller customers.  Moreover, with respect to individual end users of Replit, Replit maintains a consumer-facing [Privacy Policy](https://repl.it/site/privacy) that provides transparent information about its information collection and processing activities consistent with the GDPR.  Replit also enters into agreements with its subprocessors binding them to contractual provisions designed to comply with the GDPR, and keeps an [updated list of its subprocessors](https://repl.it/site/subprocessors).
+
+**How does Replit Transfer and Store Personal Data from the EU?**
+ 
+As Replit is located in the United States, Replit stores the Personal Data it receives from its EU customers on secure data servers hosted by reputable third parties in the United States.  To transfer personal data from the EU to the United States, Replit relies on a variety of transfer mechanisms as applicable to a particular transfer, such as EU Commission approved Standard Contractual Clauses, contractual necessity, and consent.  
+
 **What other privacy regulations and security frameworks is Repl.it compliant with?**
 
 This list is **not exhaustive** and we will continue to update it over time, however, we have reviewed and are compliant with the following privacy regulations:
