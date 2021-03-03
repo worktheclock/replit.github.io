@@ -1,12 +1,6 @@
-# Teams for Education [BETA]
+# Teams for Education
 
-##### Please note that teams for education is currently in beta. If you are interested in getting started, you can [create a team here](https://repl.it/teams).
-
-[Teams for Education](https://blog.repl.it/teams-for-education) is our newest offering for students and teachers. 
-
-Please read our recent [blog post](https://blog.repl.it/teams-for-education) for more details.
-
-In this article, you'll learn how to sign up for a team and some of the core concepts. Teams (and this documentation) is still in Beta, so you can expect many changes and improvements in the coming weeks and months.
+[Teams for Education](https://repl.it/teams-for-education) adds key workflows for students and teachers on top of all the core Replit features. In this article, you'll learn how to sign up for a team and get started.
 
 ## Creating a Team
 
