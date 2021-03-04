@@ -22,6 +22,7 @@ const getTree = async () =>
 	JSON.parse((await fs.readFile('./sidebar.json', 'utf8')));
 
 const render = async (res, category, slug) => {
+  res.set('Cache-Control', 'public, max-age=600, stale-if-error=60, stale-while-revalidate=60')
 	res.locals.rendered = await renderMarkdown(
 		path.join(__dirname, category, slug) + '.md',
 	);
