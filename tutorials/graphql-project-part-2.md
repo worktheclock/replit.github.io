@@ -20,6 +20,7 @@ We will do this by means of discussing the following:
     - [Date Conversion](#date-conversion)
     - [Reusable Block Functions](#reusable-block-functions)
     - [Page-level Functions](#page-level-functions)
+- [Where next](#where-next)
 
 ## App Shell
 
@@ -822,7 +823,7 @@ This should render the following within our interface:
 
 ### Divider
 
-<!-- Content to be Added -->
+Next we'll want to add a HTML block that allows us to separate different sections on a page.
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-22.png)
 
@@ -869,7 +870,7 @@ This should render the following within our interface:
 
 ### Loader
 
-<!-- Content to be Added -->
+Lastly, we'll want to display some type of animated loader to users when data is being loaded from the endpoint.
 
 ```html
 <span class="loader"></span>
@@ -895,15 +896,19 @@ This should render the following within our interface:
 
 ![](../static/images/teamsForEducation/graphql-project/graphql-project-23.png)
 
+Up until this point we've been merely showing users a "Loading..." piece of text. In order to have our website start off as loading we need to add the loader into our `<main>` element in the HTML. In addition we also want to replace the current app node with a loader when a user changes the current page.
+
 ```js
 appNode.innerHTML = '<span class="loader"></span>'
 ```
 
 ## Final Transformations
 
+Luckily most of the preparatory work is done and we can get down to actually linking our GraphQL endpoint to our routes. We will do this by creating a date-specific conversion utility function and then creating functions that return our reusable HTML blocks (based on data passed to the function). Lastly we will tie all of the above together by creating an asynchronous function for each route.
+
 ### Date Conversion
 
-<!-- Content to be Added -->
+All date-specific data is stored on GraphCMS as [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) strings. This means that we need to run the following function on dates in order to convert them into a more human readable format (for example: "20 October 2015"):
 
 ```js
 const MONTHS = [
@@ -924,7 +929,7 @@ const MONTHS = [
 const convertToPrettyDate = (dateString) => {
   const dateObj = new Date(dateString)
   const day = dateObj.getDate();
-  const month = MONTHS[dateObj.getMonth() - 1]**;**
+  const month = MONTHS[dateObj.getMonth() - 1];
   const year = dateObj.getFullYear()
 
   return `${day} ${month} ${year}`;
@@ -933,7 +938,7 @@ const convertToPrettyDate = (dateString) => {
 
 ### Reusable Block Functions
 
-<!-- Content to be Added -->
+Given that we've already created all our lower-level reusable HTML blocks we can create the following four functions that create them programmatically:
 
 ```js
 const createHeroBlock = (props) => {
@@ -1080,8 +1085,7 @@ const createDividerBlock = (props) => {
 
 ### Page-level Functions
 
-
-<!-- Content to be Added -->
+With all our HTML block functions in place we can start co-configuring them into specific pages and pass all required data straight from each page's GraphQL response into the respective HTML blocks.
 
 ```js
 const createEpisodesPage = async () => {
@@ -1341,3 +1345,7 @@ const createSingleEpisodePage = async (value) => {
     `;
 };
 ```
+
+# Where next
+
+We've touched on many GraphQL concepts as we went. However, we've barely scratched the surface. If you want a deeper understanding of GraphQL you can consult the [official GraphQL documentation](https://graphql.org/learn/) or follow along to the completely free [How To GraphQL Resources](https://www.howtographql.com).
