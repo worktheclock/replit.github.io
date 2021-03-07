@@ -22,7 +22,7 @@ We will create the above example in two separate steps. Part 1 (this article), w
   - [Defining an Information Architecture](#defining-an-information-architecture)
   - [Loading the Data](#loading-the-data)
 
-## Creating Your Own Project on Replit
+## Creating your own project with Replit
 
 If you haven't already, head to the [signup page](https://repl.it/signup) and create a Replit account. Once created, set up a new project by:
 
