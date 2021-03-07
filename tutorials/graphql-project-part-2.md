@@ -1,8 +1,8 @@
 # GraphQL Project: Part 2
 
-[Part 1](./graphql-project-part-1) of this project showed us how to set up the initial GraphQL endpoint and create our queries. The remaining step is simply to transform the data into a fully functional website.
+[Part 1](./graphql-project-part-1) of this project showed us how to set up the initial GraphQL endpoint and create our queries. The remaining step is to transform the data into a fully functional website.
 
-We will do this by means of discussing the following:
+We will do this by completing the following steps:
 
 - [GraphQL Project: Part 2](#graphql-project-part-2)
   - [App Shell](#app-shell)
@@ -22,17 +22,17 @@ We will do this by means of discussing the following:
     - [Page-level Functions](#page-level-functions)
 - [Where next](#where-next)
 
-## App Shell
+## Understanding the App Shell Model
 
-![](../static/images/teamsForEducation/graphql-project/graphql-project-11.png)
+![](/images/tutorials/graphql-project/graphql-project-11.png)
 
-Before we start building out the different parts of our website it is worth considering how we can structure our website based on the [App Shell Model](https://developers.google.com/web/fundamentals/architecture/app-shell). This approach is super useful for [single-page applications](https://en.wikipedia.org/wiki/Single-page_application), in other words: websites or applications that rely almost exclusively on JavaScript for their logic and routing. By making use of an app shell pattern we are ensuring that users never see a blank screen as they move between different states and pages. [Addy Osmani](https://addyosmani.com/), a well known senior engineer at [Google](http://google.com/), describes an app shell as follows:
+We'll structure our website based on the [App Shell Model](https://developers.google.com/web/fundamentals/architecture/app-shell). This approach is useful for [single-page applications](https://en.wikipedia.org/wiki/Single-page_application), websites or applications that rely almost exclusively on JavaScript for their logic and routing. By using an app shell pattern we ensure that users never see a blank screen as they move between different states and pages. [Addy Osmani](https://addyosmani.com/), a well known senior engineer at [Google](http://google.com/), describes an app shell as follows:
 
 > _"Put another way, the app shell is similar to the bundle of code that you’d publish to an app store when building a native app. It is the skeleton of your UI and the core components necessary to get your app off the ground, but likely does not contain the data. [...] An application shell architecture makes the most sense for apps and sites with relatively unchanging navigation but changing content."_
 
 — Addy Osmani: [The App Shell Model](https://developers.google.com/web/fundamentals/architecture/app-shell)
 
-## Global Configurations
+## Adding some global configurations
 
 Before diving into our app shell architecture let us take a step back and add some site-wide configurations. In terms of HTML, we can keep the structure of our `index.html` file mostly unchanged. The only exceptions being the following four additions:
 
@@ -41,7 +41,7 @@ Before diving into our app shell architecture let us take a step back and add so
 - Adding the "Markdown It" JavaScript library via a `<script>` tag.
 - A `<main>` element that has an ID attribute of `"app"` .
 
-This means that our HTML should look something like this:
+This means that our HTML should look as follows:
 
 ```html
 <!DOCTYPE html>
@@ -67,7 +67,7 @@ This means that our HTML should look something like this:
 
 ```
 
-We can also add the following CSS to our `style.css` file:
+Now add the following CSS to our `style.css` file:
 
 ```css
 * {
@@ -88,13 +88,13 @@ body {
 }
 ```
 
-You will notice that we are overriding the default browser margins and padding applied to the `<body>` element. Furthermore, we are using an overflow properties to prevent content from overflowing horizontally - while at the same time forcing a scroll bar (regardless of whether vertical content overflows or not). The latter prevents interface elements from jumping around as the scroll bar appears and disappears. We are also adding some background and foreground colours.
+You will notice that we are overriding the default browser margins and padding applied to the `<body>` element. Furthermore, we use overflow properties to prevent content from overflowing horizontally - while at the same time forcing a scroll bar (regardless of whether vertical content overflows or not). The latter prevents interface elements from jumping around as the scroll bar appears and disappears. We also add some background and foreground colours.
 
-### Routing
+### Adding routing
 
-At the end of [part 1](./graphql-project-part-1), we loaded all our data at once. While this was helpful in order to validate that we are able to retrieve the data required, it doesn't make for the best user experience. It is common to split the loading of data into specific pages or views as required. In computer science, this is called [routing](https://en.wikipedia.org/wiki/Routing).
+At the end of [part 1](./graphql-project-part-1), we loaded all our data at once. While this was helpful in order to validate that we are able to retrieve the data required, it doesn't make for the best user experience. We'll split the loading of data into specific pages or views as required. 
 
-Routing is commonly done by means of URL paths that correspond to specific HTML files located on a server. Alternatively, the server can also intercept [HTTP requests](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) and send back generated HTML to the browser. However, in our case, we want all routing to happen directly in the browser without sending new HTTP requests as pages change.
+Routing is usually done by means of URL paths that correspond to specific HTML files located on a server. Alternatively, the server can also intercept [HTTP requests](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) and send back generated HTML to the browser. In our case, we want all routing to happen directly in the browser without sending new HTTP requests as pages change.
 
 In order to accomplish this, we'll use a common trick called [hash routing](https://itnext.io/why-using-hash-based-urls-in-your-react-spa-will-save-you-more-time-than-you-think-a21e2c560879). By placing a hash (`#` ) in our URL we convert everything (including any URL paths) after the hash into a single string. Hashing functionality was originally added to URLs in order to have links scroll to specific positions on pages. For example, you can go directly to this section in the guide by following the [#routing](https://www.notion.so/routing-c8e9bc6cd4734fcc9a30c0ae7df2d7d7) link. Yet, hashes also ended up being super useful for emulating traditional routing in single-page applications. Nowadays it is included under the hood in several routing libraries like [React Router](https://reactrouter.com/) and the official [Vue Router](https://router.vuejs.org/).
 
@@ -135,7 +135,7 @@ const handleRouting = async () => {
 };
 ```
 
-Yet, our JavaScript doesn't do anything just yet. We need to manually call the routing function once the website loads. We also need to configure an event listener to fire the `handleRouting` function each time the URL hash changes. This will look something as follows:
+Yet, our JavaScript doesn't do anything just yet. We need to manually call the routing function once the website loads. We also need to configure an event listener to fire the `handleRouting` function each time the URL hash changes. This will look as follows:
 
 ```js
 handleRouting();
@@ -176,7 +176,7 @@ Now that we have the above functionality set up we need some way to trigger the 
 
 Upon running your code you will see the following:
 
-![](../static/images/teamsForEducation/graphql-project/graphql-project-12.gif)
+![](/images/tutorials/graphql-project/graphql-project-12.gif)
 
 Note how the name of the route is both shown inside the `<main id="app"></main>` element and updated in the URL as a user navigates to a new hash-based route.
 
@@ -300,9 +300,9 @@ We can then apply the following CSS styling to our `style.css` file:
 
 The above should provide us with a nicely designed app shell:
 
-![](../static/images/teamsForEducation/graphql-project/graphql-project-13.png)
+![](/images/tutorials/graphql-project/graphql-project-13.png)
 
-### Responsive Design
+### Making our web app responsive
 
 However, as you resize your browser you might notice that the above isn't fully responsive.
 
@@ -421,7 +421,7 @@ However, we'll need to also add some additional CSS for the HTML elements we jus
 
 By adding the above our app shell will now work as follows on different screen sizes:
 
-![](../static/images/teamsForEducation/graphql-project/graphql-project-14.gif)
+![](/images/tutorials/graphql-project/graphql-project-14.gif)
 
 Given that we're controlling our routing now exclusively by means of JavaScript instead of the default browser behaviour of loading a new HTML file we need to toggle the CSS styling that indicates what page you are viewing by means of JavaScript as follows in our routing function as follows:
 
@@ -479,13 +479,11 @@ const handleRouting = async () => {
 navigateNode.addEventListener('click', toggleNavigate)
 ```
 
-Essentially the above retrieves all HTML elements with the class of `header__button` and then loops over them converting their text value to lowercase and comparing it against the current route. If it matches the current route then it is disabled since you can't go to the current page if you are already on it. However, this also serves as a (commonly used) visual cue to which page you are on at the moment. Furthermore, if the user is on mobile and the navigation list is open then it is automatically closed upon loading the new page. Lastly we are also adding a event listener to toggle the menu on mobile when a user clicks the navigate button.
-
-...
+The above retrieves all HTML elements with the class of `header__button` and then loops over them converting their text value to lowercase and comparing it against the current route. If it matches the current route then it is disabled since you can't go to the current page if you are already on it. However, this also serves as a (commonly used) visual cue to which page you are on at the moment. Furthermore, if the user is on mobile and the navigation list is open then it is automatically closed upon loading the new page. Lastly we are also adding a event listener to toggle the menu on mobile when a user clicks the navigate button.
 
 ## Reusable Blocks
 
-![](../static/images/teamsForEducation/graphql-project/graphql-project-15.png)
+![](/images/tutorials/graphql-project/graphql-project-15.png)
 
 Now that we have a working app shell it is time to create the actual page content. A common approach is to create basic reusable HTML blocks to render your interface. This keeps our code[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Luckily BEM already provides us with a mental model to scope areas of HTML and CSS to specific reusable blocks.
 
@@ -496,7 +494,7 @@ By consulting the information architecture created in the previous part of the g
 - A details section that contains extra textual information about a specific subject.
 - A divider component that we'll be using to divide different sections.
 
-### Hero
+### Adding a hero image
 
 Let us start with the top-most block on our pages, often called a [hero](https://en.wikipedia.org/wiki/Hero_image) in web and print design. Starting out we can create a simple implementation that merely displays the name of a page. We will also add an image in order to create a strong visual anchor.
 
@@ -516,8 +514,6 @@ We can add the following HTML:
 ```
 
 With the following CSS:
-
-Note that we are using `postion: relative` and `z-index: -1` to position the image underneath the hero component. While you are able to achieve the same result by using `background-image`, we want to earmark the image as semantically meaningful. This means that accessibility devices and search engines will recognize the above as an image.
 
 ```css
 .hero {
@@ -551,9 +547,11 @@ Note that we are using `postion: relative` and `z-index: -1` to position the ima
 }
 ```
 
-The above should give us something as follows:
+Note that we are using `postion: relative` and `z-index: -1` to position the image underneath the hero component. While you are able to achieve the same result by using `background-image`, we want to earmark the image as semantically meaningful. This means that accessibility devices and search engines will recognize the above as an image.
 
-![](../static/images/teamsForEducation/graphql-project/graphql-project-16.png)
+The above should now look as in the image below.
+
+![](/images/tutorials/graphql-project/graphql-project-16.png)
 
 However, we want to include another variant of our hero block (to be used on the homepage and on single episode pages). This variant will embed a specific audio file and call to actions as required. In order to do this we can modify our hero HTML code from above as follows:
 
@@ -632,9 +630,9 @@ We also need to add the following CSS to our `style.css` file:
 
 By making the above changes we are able to use the hero as follows as well:
 
-![](../static/images/teamsForEducation/graphql-project/graphql-project-17.png)
+![](/images/tutorials/graphql-project/graphql-project-17.png)
 
-### Cards Grid
+### Adding a grid of cards
 
 Nex we will look at ways of displaying items on the screen in a grid-like format. We will create a basic column-like structure. The key here is that the number of columns should change depending on the size of the screen:
 
@@ -680,7 +678,7 @@ By adding the following CSS we can set our grid to alternate between a single co
 
 After adding the above we should see the following behavior in our HTML:
 
-![](../static/images/teamsForEducation/graphql-project/graphql-project-18.png)
+![](/images/tutorials/graphql-project/graphql-project-18.png)
 
 However, we still need to populate the columns with card components. We can create a single card as follows. This element will then be repeated within the grid cells:
 
@@ -761,7 +759,7 @@ We can add the following styling for our card components:
 
 The above should create a single card element as follows:
 
-![](../static/images/teamsForEducation/graphql-project/graphql-project-19.png)
+![](/images/tutorials/graphql-project/graphql-project-19.png)
 
 ### Details
 
@@ -819,13 +817,13 @@ We can then add the following HTML in order to test the above approach:
 
 This should render the following within our interface:
 
-![](../static/images/teamsForEducation/graphql-project/graphql-project-21.png)
+![](/images/tutorials/graphql-project/graphql-project-21.png)
 
-### Divider
+### Adding a divider to separate sections
 
 Next we'll want to add a HTML block that allows us to separate different sections on a page.
 
-![](../static/images/teamsForEducation/graphql-project/graphql-project-22.png)
+![](/images/tutorials/graphql-project/graphql-project-22.png)
 
 ```js
 <div class="divider">
@@ -868,7 +866,7 @@ Next we'll want to add a HTML block that allows us to separate different section
 }
 ```
 
-### Loader
+### Adding a loader
 
 Lastly, we'll want to display some type of animated loader to users when data is being loaded from the endpoint.
 
@@ -894,7 +892,7 @@ Lastly, we'll want to display some type of animated loader to users when data is
 }
 ```
 
-![](../static/images/teamsForEducation/graphql-project/graphql-project-23.png)
+![](/images/tutorials/graphql-project/graphql-project-23.png)
 
 Up until this point we've been merely showing users a "Loading..." piece of text. In order to have our website start off as loading we need to add the loader into our `<main>` element in the HTML. In addition we also want to replace the current app node with a loader when a user changes the current page.
 
@@ -902,11 +900,10 @@ Up until this point we've been merely showing users a "Loading..." piece of text
 appNode.innerHTML = '<span class="loader"></span>'
 ```
 
-## Final Transformations
-
+## Adding some final touches
 Luckily most of the preparatory work is done and we can get down to actually linking our GraphQL endpoint to our routes. We will do this by creating a date-specific conversion utility function and then creating functions that return our reusable HTML blocks (based on data passed to the function). Lastly we will tie all of the above together by creating an asynchronous function for each route.
 
-### Date Conversion
+### Doing date conversion
 
 All date-specific data is stored on GraphCMS as [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) strings. This means that we need to run the following function on dates in order to convert them into a more human readable format (for example: "20 October 2015"):
 
@@ -936,7 +933,7 @@ const convertToPrettyDate = (dateString) => {
 }
 ```
 
-### Reusable Block Functions
+### Adding reusable block functions
 
 Given that we've already created all our lower-level reusable HTML blocks we can create the following four functions that create them programmatically:
 
@@ -1083,7 +1080,7 @@ const createDividerBlock = (props) => {
 
 ```
 
-### Page-level Functions
+### Adding page-level functions
 
 With all our HTML block functions in place we can start co-configuring them into specific pages and pass all required data straight from each page's GraphQL response into the respective HTML blocks.
 
@@ -1349,3 +1346,7 @@ const createSingleEpisodePage = async (value) => {
 # Where next
 
 We've touched on many GraphQL concepts as we went. However, we've barely scratched the surface. If you want a deeper understanding of GraphQL you can consult the [official GraphQL documentation](https://graphql.org/learn/) or follow along to the completely free [How To GraphQL Resources](https://www.howtographql.com).
+
+If you followed along, you can keep adding features to your version. If you want to start from ours, you can find it below.
+
+<iframe height="800px" width="100%" src="https://repl.it/@ritza/GraphQL-FM?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
