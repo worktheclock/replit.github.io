@@ -14,7 +14,7 @@ You'll see "Python3 with PyGame" displayed in the default console and a separate
 
 Before we start writing code, we're going to need a few sprites, which we've made available [here](/tutorial-files/2d-platform-game/2d-platform-game-sprites.zip). Extract this ZIP file and add the files inside to your repl using the `upload file` function. You can select multiple files to upload at once. Your repl's file pane should now look like this:
 
-![](/images/tutorials/14-2d-platform-game/14-02-repl-files.png)
+<img src="/images/tutorials/14-2d-platform-game/14-02-repl-files.png" style="width:60%; height:60%">
 
 In this tutorial, we will be gradually building up the `main.py` file, adding code in different parts of the file as we go along. Each code snippets will contain some existing code to give you an idea of where in the file the new additions should be placed. The line `# ...` will be used to represent existing code that has been left out for brevity.
 
