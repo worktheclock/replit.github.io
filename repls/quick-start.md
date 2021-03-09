@@ -32,9 +32,7 @@ The first thing to do when creating a repl is to give it a name and description.
 
 You can edit the name and description of the repl by clicking on the edit icon highlighted below, then editing the text fields to change the name and add a description. Clicking off the popover will automatically save any changes you've made.
 
-<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
-  <source src="https://replit.github.io/media/quick-start/creating-repl.mp4" />
-</video>
+![Renaming repls](/images/repls/quickstart/renaming_repl.gif)
 
 ## The Repl Environment
 
@@ -80,9 +78,7 @@ To run it, click on the big Run button at the top of the screen, or hit CTRL+Ent
 
 You'll see the code run on the right hand side of the screen.  Since the program is asking for input, go ahead and type your name in the console and hit enter.  It should then greet you!
 
-<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
-  <source src="https://replit.github.io/media/quick-start/simple-repl.mp4" />
-</video>
+![Simple input program](/images/repls/quickstart/simple_repl.gif)
 
 
 ## Adding Packages
@@ -91,13 +87,11 @@ Let's use the `matplotlib` package to make a simple plot. Clear the existing cod
 
 Click on the `+` button to add it to your packages.
 
-This will create a new file, `requirements.txt`, which contains all the package information for your repl, including the version number.  It will also start installing on the right.
+This will create new files, `pyproject.toml` and `poetry.lock`, which contains all the package information for your repl, including the version number.  It will also start installing on the right.
 
 We can view all of our files by selecting the filetree icon on our sidebar - the first icon.  Click on the filetree icon, then select `main.py` to return to your program.
 
-<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
-  <source src="https://replit.github.io/media/quick-start/install-package.mp4" />
-</video>
+![Install package](/images/repls/quickstart/install_package.gif)
 
 [More on packages](/repls/packages).
 
@@ -116,9 +110,7 @@ plt.savefig('plot.png')
 
 Run the code. You'll see that the newly generated image, `plot.png`, shows up in both the filetree and below the editor so you can see it!  Neat, huh?
 
-<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
-  <source src="https://replit.github.io/media/quick-start/generate-plot.mp4" />
-</video>
+![Generate plot](/images/repls/quickstart/generate_plot.gif)
 
 [More on plotting in Python](/repls/python-plots).
 
@@ -127,6 +119,8 @@ Run the code. You'll see that the newly generated image, `plot.png`, shows up in
 Let's create a new Python3 repl. As a shortcut, you can create a new repl by going directly to [https://repl.it/languages/python3](https://repl.it/languages/python3). Let's call this one "python flask server".
 
 Our first step is to add the `flask` package. Go through the steps above except this time, choose the package called `flask`.
+
+![Starting a serve](/images/repls/quickstart/flask_server.gif)
 
 Once finished, go back to `main.py` and enter the following code:
 
@@ -144,9 +138,7 @@ if __name__ == '__main__':
 
 Hit run, and you'll see that a new pane has appeared with the URL for your repl's hosted site, along with a preview of what it looks like.  You can share this link with your friends to show them the simple app that you made.
 
-<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
-  <source src="https://replit.github.io/media/quick-start/flask-server.mp4" />
-</video>
+![Flask run](/images/repls/quickstart/flask_run_result.png)
 
 [More on web servers](/repls/http-servers).
 
@@ -167,15 +159,15 @@ This `.env` file is special because it is only visible to you.  Anyone who is vi
 Now let's edit `main.py` to include the following:
 
 ```python
-from flask import Flask, request
+from flask import Flask, request, redirect
 import os
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-  return 'Hello, Repler!'
+  return redirect('/secret_route?secret=pass1234')
 
-@app.route('/secure-page')
+@app.route('/secret_route')
 def secret_route():
   password = request.args.get('secret')
   if (password == os.environ['PASSWORD']):
@@ -189,9 +181,7 @@ if __name__ == '__main__':
 
 We're creating a new page where we look for a query parameter `secret` and we check to see if it matches our `.env` secret. Watch the video below to see the results.
 
-<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
-  <source src="https://replit.github.io/media/quick-start/env-files.mp4" />
-</video>
+![Secret keys](/images/repls/quickstart/secret_keys.gif)
 
 Of course, this is a very insecure way of handling secret tokens, since the URL including the query parameter can be cached. This is just a simple demonstration.
 
@@ -203,9 +193,7 @@ Finally, now that you've created your first repl, feel free to share it with our
 
 Head on over to [Repl Talk](https://repl.it/talk) and check out the [Share Board](https://repl.it/talk/share). Click on "Share your repl!", choose the repl from the list (or type the name to search), add a title and a description, and share!
 
-<video width="60%" height="auto" controls style="display:block;margin: 0 auto;">
-  <source src="https://replit.github.io/media/quick-start/share-repl.mp4" />
-</video>
+![Share your repl](/images/repls/quickstart/sharing_repl.gif)
 
 Feel free to join our Discord Community as well! Join with [this invite link](https://discord.gg/346Tapr).
 
