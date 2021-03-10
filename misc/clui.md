@@ -7,7 +7,7 @@ Repl.it has created a text-based interface to interact with various aspects of y
 
 Navigate to https://repl.it/~/cli and the following prompt will appear:
 
-![clui](https://docs.repl.it/images/clui.png)
+![clui](/images/misc/clui.png)
 
 The prompt will display in-line information about the commands which can be run.
 
@@ -28,13 +28,6 @@ Expand the following top-level commands.
 </details>
 
 <details>
-  <summary><b>clear</b>: clears the screen</summary>
-
-  `clear` <br>
-  Clears screen.
-</details>
-
-<details>
   <summary><b>trash</b>: list and restore deleted repls</summary>
 
   `trash restore --title $title` <br>
@@ -43,6 +36,24 @@ Expand the following top-level commands.
   `trash view` <br>
   View your most recently deleted repls.
 
+</details>
+
+<details>
+  <summary><b>team</b>: view and manage your teams</summary>
+
+  `view` <br>
+  View the members of your team
+  
+  `transfer-repl` <br>
+  Transfer an own repl to team
+
+</details>
+
+<details>
+  <summary><b>clear</b>: clears the screen</summary>
+
+  `clear` <br>
+  Clears screen.
 </details>
 
 ## Further Reading
