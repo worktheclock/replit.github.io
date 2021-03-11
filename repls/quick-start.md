@@ -120,7 +120,7 @@ Let's create a new Python3 repl. As a shortcut, you can create a new repl by goi
 
 Our first step is to add the `flask` package. Go through the steps above except this time, choose the package called `flask`.
 
-![Starting a serve](/images/repls/quickstart/flask_server.gif)
+![Starting a server](/images/repls/quickstart/flask_server.gif)
 
 Once finished, go back to `main.py` and enter the following code:
 
