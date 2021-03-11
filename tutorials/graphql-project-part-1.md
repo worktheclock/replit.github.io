@@ -9,15 +9,15 @@ You can take a look at the final project at [https://repl.it/@ritza/GraphQL-FM](
 
 We will create the above example in two separate steps. Part 1 (this article) covers the basics of GraphQL and setting up our API. [Part 2](./graphql-project-part-2) will show how we can turn the data from the GraphQL API into a fully functional website. We will start with the following:
 
-- [Creating Your Own Project on Replit](#creating-your-own-project-on-replit)
-- [Our GraphQL Goals for This Guide](#our-graphql-goals-for-this-guide)
+- [Creating your own project with Replit](#creating-your-own-project-with-replit)
+- [Our GraphQL Goals For This Guide](#our-graphql-goals-for-this-guide)
   - [What is GraphQL?](#what-is-graphql)
   - [GraphQL as an alternative to REST](#graphql-as-an-alternative-to-rest)
   - ["Hello World" in GraphQL](#hello-world-in-graphql)
   - [Using a GraphQL Explorer](#using-a-graphql-explorer)
-  - [Adding GraphQL to JavaScript](#adding-graphql-to-javascript)
 - [Creating an API](#creating-an-api)
   - [GraphQL as a Service](#graphql-as-a-service)
+  - [Adding GraphQL to JavaScript](#adding-graphql-to-javascript)
   - [Custom GraphQL Function](#custom-graphql-function)
   - [Defining an Information Architecture](#defining-an-information-architecture)
   - [Loading the Data](#loading-the-data)
@@ -230,71 +230,6 @@ query {
 }
 ```
 
-### Adding GraphQL to JavaScript
-
-Let's take the above query built within the GraphiQL explorer and place it in our JavaScript file. This allows us to request the above data directly from our browser:
-
-_Note that the following example assumes familiarity with the native JavaScript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). If this is the first time you are encountering it, learn [How to Use the JavaScript Fetch API to Get Data](https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data)._
-
-```jsx
-const QUERY = `
-  query {
-    event(id: "5879ad8f6672e70036d58ba5") {
-      active
-      address
-      url
-
-      timeSlots {
-        nodes {
-          event {
-            active
-            address
-            url
-          }
-        }
-      }
-    }
-  }
-`
-
-const FETCH_OPTIONS =   {
-  method: 'POST',
-  body: JSON.stringify({ query: QUERY }),
-}
-
-fetch('https://universe.com/graphiql', FETCH_OPTIONS )
-  .then(response => response.json())
-  .then(console.log)
-```
-
-The above should output something as follows to the browser console:
-
-```json
-{
-  "data": {
-    "event": {
-      "title": "End of Unix Time",
-      "address": "Los Angeles, CA, USA",
-      "currency": "USD",
-      "host": {
-        "firstName": "Joshua"
-      },
-      "timeSlots": {
-        "totalCount": 2,
-        "nodes": [
-          {
-            "startAt": "2018-08-31T12:00:00"
-          },
-          {
-            "startAt": "2038-01-18T21:00:00"
-          }
-        ]
-      }
-    }
-  }
-}
-```
-
 ## Creating an API
 
 ![](/images/tutorials/graphql-project/graphql-project-6.jpg)
@@ -328,6 +263,52 @@ https://api-us-east-1.graphcms.com/v2/ckll20qnkffe101xr8m2a7m2h/master
 However, in the next code examples, we'll use `<<<YOUR ENDPOINT HERE>>>` to prevent you from accidentally using an example endpoint if you are following along. If you navigate straight to your endpoint within your browser, you will be presented with a GraphiQL Explorer that allows you to test and try out queries for your specific endpoint:
 
 ![](/images/tutorials/graphql-project/graphql-project-8.gif)
+
+
+### Adding GraphQL to JavaScript
+
+Let's take a query built within our API endpoint GraphiQL explorer and place it in our JavaScript file. This allows us to request the above data directly from our browser:
+
+_Note that the following example assumes familiarity with the native JavaScript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). If this is the first time you are encountering it, learn [How to Use the JavaScript Fetch API to Get Data](https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data)._
+
+```js
+const QUERY = `
+  query {
+    episodes {
+      title
+    }
+  }
+`
+
+const FETCH_OPTIONS =   {
+  method: 'POST',
+  body: JSON.stringify({ query: QUERY }),
+}
+
+fetch('<<<YOUR ENDPOINT HERE>>>', FETCH_OPTIONS )
+  .then(response => response.json())
+  .then(console.log)
+```
+
+The above should output something as follows to the browser console:
+
+```json
+{
+  "data": {
+    "episodes": [
+      {
+        "title": "# Cras eu urna at ligula – tempus commodo"
+      },
+      {
+        "title": "# Phasellus feugiat – non massa eu tincidunt"
+      },
+      {
+        "title": "# Lorem ipsum dolor sit"
+      }
+    ]
+  }
+}
+```
 
 ### Custom GraphQL Function
 
