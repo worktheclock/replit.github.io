@@ -8,7 +8,7 @@ The following “Tips and Tricks” will teach you how to be productive in the R
 
 The command palette allows you to view all available commands based on your current context. 
 
-To access the command palette press `F1` or `Ctrl+Shift+P` (`cmd+shift+P` on MacOS). **Note** that if you're using Firefox the second option will open an incognito window instead
+To access the command palette press `F1` or `Ctrl+Shift+P` (`cmd+shift+P` on macOS). **Note:** if you are using Firefox, the second option will open an incognito window, so use the `F1` option instead.
 
 ![command palette](/images/repls/editor/command_palette.gif)
 
