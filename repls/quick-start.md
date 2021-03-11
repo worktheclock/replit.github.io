@@ -30,7 +30,7 @@ Go ahead and select Python. This will bring you to your workspace.
 
 The first thing to do when creating a repl is to give it a name and description. This will make it easier to come back to later, and will help with organizing your repls.
 
-You can edit the name and description of the repl by clicking on the edit icon highlighted below, then editing the text fields to change the name and add a description. Clicking off the popover will automatically save any changes you've made.
+You can edit the name and description of the repl by clicking on the repl name in the top bar as highlighted below, then editing the text fields to change the name and add a description. Clicking off the popover will automatically save any changes you've made.
 
 ![Renaming repls](/images/repls/quickstart/renaming_repl.gif)
 
@@ -74,7 +74,7 @@ name = input("What's your name?")
 print("Hello", name)
 ```
 
-To run it, click on the big Run button at the top of the screen, or hit CTRL+Enter (Windows/Chromebook) / CMD+Enter (Mac).
+To run it, click on the big Run button at the top of the screen, or hit `CTRL+Enter` (Windows/Chromebook) / `CMD+Enter` (Mac).
 
 You'll see the code run on the right hand side of the screen.  Since the program is asking for input, go ahead and type your name in the console and hit enter.  It should then greet you!
 
@@ -179,7 +179,7 @@ if __name__ == '__main__':
   app.run(host='0.0.0.0', port=8080)
 ```
 
-We're creating a new page where we look for a query parameter `secret` and we check to see if it matches our `.env` secret. Watch the video below to see the results.
+We're creating a new page where we look for a query parameter `secret` and we check to see if it matches our `.env` secret. The gif below demonstrates the results.
 
 ![Secret keys](/images/repls/quickstart/secret_keys.gif)
 
