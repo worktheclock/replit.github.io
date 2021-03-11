@@ -1,5 +1,7 @@
 # IT Administrators Toolkit
 
+If you are new to Teams for Education, please send this page to your technology team or IT department.
+
 **URLs**
 
 To make sure Replit works for you and your students on your school network, please ask your technology team to whitelist/unblock the following domains:
