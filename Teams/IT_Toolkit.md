@@ -2,7 +2,7 @@
 
 If you are new to Teams for Education, please send this page to your technology team or IT department.
 
-Read more about [our committment to user safety](https://docs.google.com/document/d/1rGjlPhRIFDYVkLkP_nO0Db6o1_9EmGvSnLt9cHacE5M/edit).
+Read more about [our commitment to user safety](https://docs.google.com/document/d/1rGjlPhRIFDYVkLkP_nO0Db6o1_9EmGvSnLt9cHacE5M/edit).
 
 **URLs**
 
