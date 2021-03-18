@@ -13,12 +13,12 @@ You can use Replit in different ways. It can replace some or all of your:
 
 Every repl you create is a fully functional development and production environment. "[Hosting from your editor](https://amasad.me/hosting)" makes it easy to iterate quickly on your work, collaborate with others, and get feedback.
 
-We know that's a lot to take in, so we've broken done some of the key features below for [developers](#developers), [startups](#hosting), [teachers](#teachers) and [learners](#learners). Choose your own path, or go through all of them to become an expert in all things Replit.
+We know that's a lot to take in, so we've broken down some of the key features below for [developers](#developers), [startups](#hosting), [teachers](#teachers) and [learners](#learners). Choose your own path, or go through all of them to become an expert in all things Replit.
 
 <a name="developers"></a>
 ## Writing Code: Replit for Software Developers
 
-For software developers, Replit can be your cloud-based IDE. Having a cloud IDE offers several advantages. There's no set up – you can access your environment from any device, including your phone or tablet, and everything will _just work_. You can manage things like dependencies, build scripts, and environment variables in a single place and always be in sync. It's also easy to get help from others – every repl is multiplayer by default, so you can work with other developers in a Google Docs like environemnt in real time from anywhere on the globe.
+For software developers, Replit can be your cloud-based IDE. Having a cloud IDE offers several advantages. There's no setup – you can access your environment from any device, including your phone or tablet, and everything will _just work_. You can manage things like dependencies, build scripts, and environment variables in a single place and always be in sync. It's also easy to get help from others – every repl is multiplayer by default, so you can work with other developers in a Google Docs-like environment in real-time from anywhere on the globe.
 
 Each repl is its own Docker container running in a VM, so you can run shell commands and do nearly anything else that is possible from a standard Linux box.
 
@@ -29,7 +29,7 @@ This guide shows you how the IDE works. If you've used VS Code before, everythin
 our editor also uses [Monaco](https://microsoft.github.io/monaco-editor/).
 
 #### [Working with Files](./tutorials/02-managing-files-using-repl-it)
-Each repl has a built-in file system, so you can upload existing files or create new ones, manually or programatically.
+Each repl has a built-in file system, so you can upload existing files or create new ones, manually or programmatically.
 
 #### [Storing Secrets](./repls/secret-keys)
 You can easily add environment variables to keep others from viewing sensitive data such as API credentials.
@@ -88,6 +88,6 @@ If you're learning to code, whether as a self-taught programmer or as part of an
 
 You can work through our [project-based tutorials](./tutorials/00-overview) to learn how to code, or download them all as [an ebook](https://codewithrepl.it).
 
-If you're learning a specific language, we probably cover it in one our teacher-contributed [open curricula](./curriculum/Intro).
+If you're learning a specific language, we probably cover it in one of our teacher-contributed [open curricula](./curriculum/Intro).
 
 We also have a beginner-friendly [Discord server](https://replit.com/discord) where you can get (and give) help on nearly anything.
