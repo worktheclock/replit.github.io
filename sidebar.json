@@ -252,6 +252,10 @@
         "slug": "14-2d-platform-game"
       },
       {
+        "name": "Chat app using Node.js",
+        "slug": "15-repl-chat"
+      },
+      {
           "name": "Pinboard Project Part 1: HTML & CSS",
           "slug": "PinboardProjectPart1"
       },
@@ -259,7 +263,7 @@
           "name": "Pinboard Project Part 2: JavaScript",
           "slug": "PinboardProjectPart2"
       },
-    {
+      {
           "name": "GraphQL Part 1: setting up endpoints",
           "slug": "graphql-project-part-1"
       },
