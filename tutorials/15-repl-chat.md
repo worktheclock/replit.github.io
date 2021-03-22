@@ -2,7 +2,9 @@
 
 In this tutorial, we'll make a chat app with a difference. Instead of the usual web client to server chat architecture, we'll have a chat app directly running from the repl.it console window.
 
-We'll use Socket.io to implement websockets in our app. We'll also use the fact that the [socket.io-client code can be run in Node.js](https://socket.io/docs/v3/client-installation/index.html), not only in a browser!
+We'll use Socket.io to implement websockets in our app. We'll also use the fact that the [Socket.io-client code can be run in Node.js](https://socket.io/docs/v3/client-installation/index.html), not only in a browser!
+
+![Example of the chat app functionality](/images/tutorials/15-replit-chat/friends_chat.gif)
 
 ## Overview and requirements
 
@@ -83,6 +85,7 @@ server.listen(3000, function() {
 
 Now you can click the big **Run >** button at the top of the repl to test the server. You should see it installing packages, and output the connection, and finally write _listening on port 3000_
 
+![Running the chat server](/images/tutorials/15-replit-chat/server_run.png)
 
 ### Complete server code
 
@@ -299,7 +302,7 @@ This assumes you are still running the chat server we created earlier on.
 
 If you type in a message to your client, you should see it logged on the server. The image below shows the repl console of the client on the left, and the repl console of the server on the right. 
 
-![testing client and server together, showing output](/images/tutorials/15-replit-chat/testing-client-server-output.png)
+![testing client and server together, showing output](/images/tutorials/15-replit-chat/client_server_run.gif)
 
 
 ## Chatting with a friend 
@@ -324,6 +327,9 @@ If you followed along, you'll already have your own version of the chat server a
 ### Chat client
 
 <iframe height="400px" width="100%" src="https://replit.com/@ritza/repl-chat-client?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+
+![Example chat with a friend](/images/tutorials/15-replit-chat/friends_chat.gif)
 
 
 ## Things to try next
