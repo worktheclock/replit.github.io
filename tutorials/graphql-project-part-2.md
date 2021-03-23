@@ -4,44 +4,42 @@
 
 We will do this by completing the following steps:
 
-- [GraphQL Project: Part 2](#graphql-project-part-2)
-  - [App Shell](#app-shell)
-  - [Global Configurations](#global-configurations)
-    - [Routing](#routing)
-    - [Styling](#styling)
-    - [Responsive Design](#responsive-design)
-  - [Reusable Blocks](#reusable-blocks)
-    - [Hero](#hero)
-    - [Cards Grid](#cards-grid)
-    - [Details](#details)
-    - [Divider](#divider)
-    - [Loader](#loader)
-  - [Final Transformations](#final-transformations)
-    - [Date Conversion](#date-conversion)
-    - [Reusable Block Functions](#reusable-block-functions)
-    - [Page-level Functions](#page-level-functions)
-- [Where next](#where-next)
+  - [Understanding the App Shell Model](#understanding-the-app-shell)
+  - [Adding Some Global Configurations](#adding-some-global-configurations)
+    - [Adding routing](#adding-routing)
+    - [Adding styling](#adding-styling)
+    - [Making our web app responsive](#making-our-web-app-responsive)
+  - [Creating Reusable Blocks](#creating-reusable-blocks)
+    - [Adding a hero image](#adding-a-hero-image)
+    - [Adding a grid of cards](#adding-a-grid-of-cards)
+    - [Adding some details](#adding-some-details)
+    - [Adding a divider to separate sections](#adding-a-divider-to-separate-sections)
+    - [Adding a loader](#adding-a-loader)
+  - [Adding Some Final Touches](#adding-some-final-touches)
+    - [Doing date conversion](#doing-date-conversion)
+    - [Adding reusable block functions](#adding-reusable-block-functions)
+    - [Adding page-level functions](#adding-page-level-functions)
 
 ## Understanding the App Shell Model
 
 ![](/images/tutorials/graphql-project/graphql-project-11.png)
 
-We'll structure our website based on the [App Shell Model](https://developers.google.com/web/fundamentals/architecture/app-shell). This approach is useful for [single-page applications](https://en.wikipedia.org/wiki/Single-page_application), websites or applications that rely almost exclusively on JavaScript for their logic and routing. By using an app shell pattern we ensure that users never see a blank screen as they move between different states and pages. [Addy Osmani](https://addyosmani.com/), a well known senior engineer at [Google](http://google.com/), describes an app shell as follows:
+We'll structure our website based on the [App Shell Model](https://developers.google.com/web/fundamentals/architecture/app-shell). This approach is useful for [single-page applications](https://en.wikipedia.org/wiki/Single-page_application), websites or applications that rely almost exclusively on JavaScript for their logic and routing. By using an app shell pattern, we ensure that users never see a blank screen as they move between different states and pages. [Addy Osmani](https://addyosmani.com/), a well known senior engineer at [Google](http://google.com/), describes an app shell as follows:
 
 > _"Put another way, the app shell is similar to the bundle of code that you’d publish to an app store when building a native app. It is the skeleton of your UI and the core components necessary to get your app off the ground, but likely does not contain the data. [...] An application shell architecture makes the most sense for apps and sites with relatively unchanging navigation but changing content."_
 
-— Addy Osmani: [The App Shell Model](https://developers.google.com/web/fundamentals/architecture/app-shell)
+— Addy Osmani: [_The App Shell Model_](https://developers.google.com/web/fundamentals/architecture/app-shell)
 
-## Adding some global configurations
+## Adding Some Global Configurations
 
-Before diving into our app shell architecture let us take a step back and add some site-wide configurations. In terms of HTML, we can keep the structure of our `index.html` file mostly unchanged. The only exceptions being the following four additions:
+Before diving into our app shell architecture, we'll add some site-wide configurations. We can keep the structure of our `index.html` file mostly unchanged, except for a few changes:
 
-- Changing the default `<title>` value.
-- Adding the "Roboto" Google Font via a `<link>` tag.
-- Adding the "Markdown It" JavaScript library via a `<script>` tag.
-- A `<main>` element that has an ID attribute of `"app"` .
+- Change the default `<title>` value.
+- Add the "Roboto" Google Font via a `<link>` tag.
+- Add the "Markdown It" JavaScript library via a `<script>` tag.
+- Add a `<main>` element that has an ID attribute of `"app"` .
 
-This means that our HTML should look as follows:
+This means that our HTML should look like this:
 
 ```html
 <!DOCTYPE html>
@@ -67,7 +65,7 @@ This means that our HTML should look as follows:
 
 ```
 
-Now add the following CSS to our `style.css` file:
+Now we add the following CSS to our `style.css` file:
 
 ```css
 * {
@@ -88,23 +86,27 @@ body {
 }
 ```
 
-You will notice that we are overriding the default browser margins and padding applied to the `<body>` element. Furthermore, we use overflow properties to prevent content from overflowing horizontally - while at the same time forcing a scroll bar (regardless of whether vertical content overflows or not). The latter prevents interface elements from jumping around as the scroll bar appears and disappears. We also add some background and foreground colours.
+With this code, we are:
+* Overriding the default browser margins and padding applied to the `<body>` element.
+* Using overflow properties to prevent content from overflowing horizontally.
+* Forcing a scroll bar, regardless of whether vertical content overflows. This prevents interface elements from jumping around as the scroll bar appears and disappears. 
+* Adding some background and foreground colours.
 
 ### Adding routing
 
-At the end of [part 1](./graphql-project-part-1), we loaded all our data at once. While this was helpful in order to validate that we are able to retrieve the data required, it doesn't make for the best user experience. We'll split the loading of data into specific pages or views as required. 
+At the end of [part 1](./graphql-project-part-1), we loaded all our data at once. While this was helpful to validate that we can retrieve the data required, it doesn't provide the best user experience. We'll split the loading of data into specific pages or views as required. 
 
 Routing is usually done by means of URL paths that correspond to specific HTML files located on a server. Alternatively, the server can also intercept [HTTP requests](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) and send back generated HTML to the browser. In our case, we want all routing to happen directly in the browser without sending new HTTP requests as pages change.
 
-In order to accomplish this, we'll use a common trick called [hash routing](https://itnext.io/why-using-hash-based-urls-in-your-react-spa-will-save-you-more-time-than-you-think-a21e2c560879). By placing a hash (`#` ) in our URL we convert everything (including any URL paths) after the hash into a single string. Hashing functionality was originally added to URLs in order to have links scroll to specific positions on pages. For example, you can go directly to this section in the guide by following the [#routing](https://www.notion.so/routing-c8e9bc6cd4734fcc9a30c0ae7df2d7d7) link. Yet, hashes also ended up being super useful for emulating traditional routing in single-page applications. Nowadays it is included under the hood in several routing libraries like [React Router](https://reactrouter.com/) and the official [Vue Router](https://router.vuejs.org/).
+To accomplish this, we'll use [hash routing](https://itnext.io/why-using-hash-based-urls-in-your-react-spa-will-save-you-more-time-than-you-think-a21e2c560879). By placing a hash (`#` ) in our URL, we convert everything (including any URL paths) after the hash into a single string. Hashing functionality was originally added to URLs in order to have links scroll to specific positions on pages. For example, you can go directly to this section in the guide by following the [#adding-routing](https://www.notion.so/routing-c8e9bc6cd4734fcc9a30c0ae7df2d7d7) link. Hashes are also super useful for emulating traditional routing in single-page applications. Nowadays, it is included under the hood in several routing libraries like [React Router](https://reactrouter.com/) and the official [Vue Router](https://router.vuejs.org/).
 
-Before creating our routing function let us first find and store our `<main>` HTML node by means of the `"app"` ID. This element will serve as the content area of our website (the area that is wrapped by the app shell and changes when the route changes).
+Before creating our routing function, let's first find and store our `<main>` HTML node using the `"app"` ID. This element will serve as the content area of our website (the area that is wrapped by the app shell and changes when the route changes).
 
 ```js
 const appNode = document.querySelector('#app');
 ```
 
-Then we need to create a JavaScript object that maps the relationship between specific routes and the functions that create their HTML. For now, we will simply display the name of the page on the screen. Therefore, our map will end up looking something like this:
+Then we need to create a JavaScript object that maps the relationship between specific routes and the functions that create their HTML. For now, we will simply display the name of the page on the screen. Our map will end up looking something like this:
 
 ```js
 const routesMap = {
@@ -117,13 +119,15 @@ const routesMap = {
 };
 ```
 
-Then we get to the real task at hand, the routing function itself (called `handleRouting`):
+Then we get to the real task at hand; the routing function itself (called `handleRouting`):
 
-We start by extracting the URL hash directly from the `window.location` object. We then use a [regular expression](https://en.wikipedia.org/wiki/Regular_expression) to remove the trailing characters at the start and the end of the hash string. For example, if we have `#/id/21w67g2fi/` it will be converted into ``id/21w67g2fi`. Lastly, we split the value into an array based on all forward-slash characters (`/`). This means that the latter will be split into `['id', '21w67g2fi']`.
+1. Extract the URL hash directly from the `window.location` object.
+2. Use a [regular expression](https://en.wikipedia.org/wiki/Regular_expression) to remove the trailing characters at the start and the end of the hash string. For example, if we have `#/id/21w67g2fi/` it will be converted into ``id/21w67g2fi`. 
+3. Split the value into an array based on all forward-slash characters (`/`). This means that our example would be split into `['id', '21w67g2fi']`.
 
-Upon [destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the page name (the first "folder" in the path) and the optional trailing id value (the second "folder" in the path) we then retrieve the function that corresponds to that page. We proceed by calling it and passing an id value (if present). Note that if no page value is supplied then the episodes page will be shown (which serves as the homepage and general fallback page). Furthermore, if you have a hash with no ID, for example, `#/guests` then `null` will simply be passed to the specific route function as the ID.
+Once we've [destructured](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the page name (the first "folder" in the path) and the optional trailing id value (the second "folder" in the path), we then retrieve the function that corresponds to that page. We proceed by calling it and passing an id value (if present). If no page value is supplied, the episodes page will be shown (which serves as the homepage and general fallback page). Furthermore, if you have a hash with no ID – for example, `#/guests` – then `null` will simply be passed to the specific route function as the ID.
 
-After the above our function should look something like this:
+After the above, our function should look something like this:
 
 ```js
 const handleRouting = async () => {
@@ -135,14 +139,14 @@ const handleRouting = async () => {
 };
 ```
 
-Yet, our JavaScript doesn't do anything just yet. We need to manually call the routing function once the website loads. We also need to configure an event listener to fire the `handleRouting` function each time the URL hash changes. This will look as follows:
+But our JavaScript doesn't do anything just yet. We need to manually call the routing function once the website loads. We also need to configure an event listener to fire the `handleRouting` function each time the URL hash changes. This will look like:
 
 ```js
 handleRouting();
 window.addEventListener("hashchange", handleRouting);
 ```
 
-Now that we have the above functionality set up we need some way to trigger the page changes. We can add an extremely simple header with links as below. Note that the header is part of the app shell and therefore goes above the `<main id="app"></main>` element:
+With the above functionality set up, we now need some way to trigger the page changes. We can add a simple header with links as below. Note that the header is part of the app shell and therefore goes above the `<main id="app"></main>` element:
 
 ```html
 <header>
@@ -174,17 +178,17 @@ Now that we have the above functionality set up we need some way to trigger the 
 <main id="app"></main>
 ```
 
-Upon running your code you will see the following:
+When running your code, you will see the following:
 
 ![](/images/tutorials/graphql-project/graphql-project-12.gif)
 
 Note how the name of the route is both shown inside the `<main id="app"></main>` element and updated in the URL as a user navigates to a new hash-based route.
 
-### Styling
+### Adding styling
 
-While the above works, it isn't the most pleasing user experience. To this end, let us add some basic CSS class names.
+While the above works, it isn't the most pleasing user experience. To this end, let's add some basic CSS class names.
 
-You will note that I'm using the [BEM naming convention](https://en.bem.info/methodology/naming-convention/) in my HTML class names. If you are unfamiliar with BEM and interested in learning more you can visit the BEM documentation at [https://bem.info](https://bem.info/). For the purposes of this guide, it is only helpful to know that BEM provides us with a systematic way of naming our CSS classes to more easily manage them. Within a static web project, BEM might be a bit overkill, but whenever you are working with an considerable amount of interactivity then BEM really helps to keep your CSS organized.
+I'm using the [BEM naming convention](https://en.bem.info/methodology/naming-convention/) in my HTML class names. If you are unfamiliar with BEM and want to learn more, visit the BEM documentation at [https://bem.info](https://bem.info/). For now, all you need to know about BEM is that it provides us with a systematic way of naming our CSS classes to manage them more easily. Within a static web project, BEM might be a bit overkill, but whenever you are working with an considerable amount of interactivity, BEM really helps to keep your CSS organized.
 
 ```html
 <header class="header">
@@ -304,9 +308,9 @@ The above should provide us with a nicely designed app shell:
 
 ### Making our web app responsive
 
-However, as you resize your browser you might notice that the above isn't fully responsive.
+As you resize your browser, you might notice that the above isn't fully responsive.
 
-Unfortunately accommodating the above on mobile viewports will be a bit challenging due to restricted space. Luckily we can add a "Navigate" button between the logo and the menu items. This button will open and close a vertically aligned list of pages when clicked and will hide the list when clicked again. This is called [progressive disclosure](https://en.wikipedia.org/wiki/Progressive_disclosure) within the world of user experience.
+Unfortunately, accommodating the above on mobile viewports will be a bit challenging due to restricted space. Luckily, we can add a "Navigate" button between the logo and the menu items. This button will open and close a vertically aligned list of pages when clicked, and will hide the list when clicked again. This is called [progressive disclosure](https://en.wikipedia.org/wiki/Progressive_disclosure) within the world of user experience.
 
 ```html
 <button class="header__navigate" id="navigate">Navigate</button>
@@ -353,7 +357,7 @@ Let's adjust some of our existing CSS in order to make it a bit more usable on m
 }
 ```
 
-However, we'll need to also add some additional CSS for the HTML elements we just added. We'll also have to add some media queries in order to transition between the above full-screen functionality and the mobile approach. Also note that we are using pseudo-elements to control the arrow in the button:
+We'll also need to add some additional CSS for the HTML elements we just added. Further, we must add some media queries in order to transition between the above full-screen functionality and the mobile approach. Also note that we are using pseudo-elements to control the arrow in the button:
 
 ```css
 .header__navigate {
@@ -419,11 +423,11 @@ However, we'll need to also add some additional CSS for the HTML elements we jus
 }
 ```
 
-By adding the above our app shell will now work as follows on different screen sizes:
+By adding the above, our app shell will now work as follows on different screen sizes:
 
 ![](/images/tutorials/graphql-project/graphql-project-14.gif)
 
-Given that we're controlling our routing now exclusively by means of JavaScript instead of the default browser behaviour of loading a new HTML file we need to toggle the CSS styling that indicates what page you are viewing by means of JavaScript as follows in our routing function as follows:
+We're now controlling our routing exclusively through JavaScript instead of the default browser behaviour of loading a new HTML file. This means we need to toggle the CSS styling that indicates what page you are viewing. We'll do this using JavaScript in our routing function as follows:
 
 ```js
 const appNode = document.querySelector('#app');
@@ -479,15 +483,15 @@ const handleRouting = async () => {
 navigateNode.addEventListener('click', toggleNavigate)
 ```
 
-The above retrieves all HTML elements with the class of `header__button` and then loops over them converting their text value to lowercase and comparing it against the current route. If it matches the current route then it is disabled since you can't go to the current page if you are already on it. However, this also serves as a (commonly used) visual cue to which page you are on at the moment. Furthermore, if the user is on mobile and the navigation list is open then it is automatically closed upon loading the new page. Lastly we are also adding a event listener to toggle the menu on mobile when a user clicks the navigate button.
+The above retrieves all HTML elements with the class of `header__button` and then loops over them, converting their text value to lowercase and comparing it against the current route. If it matches the current route, then it is disabled since you can't go to the current page if you are already on it. However, this also serves as a (commonly used) visual cue to which page you are on at the moment. Furthermore, if the user is on mobile and the navigation list is open, then it is automatically closed upon loading the new page. Lastly, we are also adding a event listener to toggle the menu on mobile when a user clicks the navigate button.
 
-## Reusable Blocks
+## Creating Reusable Blocks
 
 ![](/images/tutorials/graphql-project/graphql-project-15.png)
 
-Now that we have a working app shell it is time to create the actual page content. A common approach is to create basic reusable HTML blocks to render your interface. This keeps our code[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Luckily BEM already provides us with a mental model to scope areas of HTML and CSS to specific reusable blocks.
+Now that we have a working app shell, it's time to create the actual page content. A common approach is to create basic reusable HTML blocks to render your interface. This keeps our code[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Luckily, BEM already provides us with a mental model to scope areas of HTML and CSS to specific reusable blocks.
 
-By consulting the information architecture created in the previous part of the guide [part 1](./graphql-project-part-1) we can split our interface into the following reusable blocks:
+By consulting the information architecture we created in [part 1](./graphql-project-part-1), we can split our interface into the following reusable blocks:
 
 - A hero section at the top of each page that contains either a title or the latest episode.
 - A grid of card-like components that can be used to present a list of items as independent units.
@@ -496,7 +500,7 @@ By consulting the information architecture created in the previous part of the g
 
 ### Adding a hero image
 
-Let us start with the top-most block on our pages, often called a [hero](https://en.wikipedia.org/wiki/Hero_image) in web and print design. Starting out we can create a simple implementation that merely displays the name of a page. We will also add an image in order to create a strong visual anchor.
+Let's start with the top-most block on our pages, often called a [hero](https://en.wikipedia.org/wiki/Hero_image) in web and print design. Starting out, we can create a simple implementation that merely displays the name of a page. We will also add an image in order to create a strong visual anchor.
 
 We can add the following HTML:
 
@@ -547,13 +551,13 @@ With the following CSS:
 }
 ```
 
-Note that we are using `postion: relative` and `z-index: -1` to position the image underneath the hero component. While you are able to achieve the same result by using `background-image`, we want to earmark the image as semantically meaningful. This means that accessibility devices and search engines will recognize the above as an image.
+We are using `postion: relative` and `z-index: -1` to position the image underneath the hero component. While you are able to achieve the same result by using `background-image`, we want to earmark the image as semantically meaningful. This means that accessibility devices and search engines will recognize the above as an image.
 
-The above should now look as in the image below.
+The above should now look like this.
 
 ![](/images/tutorials/graphql-project/graphql-project-16.png)
 
-However, we want to include another variant of our hero block (to be used on the homepage and on single episode pages). This variant will embed a specific audio file and call to actions as required. In order to do this we can modify our hero HTML code from above as follows:
+However, we want to include another variant of our hero block (to be used on the homepage and on single episode pages). This variant will embed a specific audio file and call to actions as required. To do this, we can modify our hero HTML code from above as follows:
 
 ```html
 <div class="hero">
@@ -628,13 +632,13 @@ We also need to add the following CSS to our `style.css` file:
 }
 ```
 
-By making the above changes we are able to use the hero as follows as well:
+By making the above changes, we are able to use the hero as follows as well:
 
 ![](/images/tutorials/graphql-project/graphql-project-17.png)
 
 ### Adding a grid of cards
 
-Nex we will look at ways of displaying items on the screen in a grid-like format. We will create a basic column-like structure. The key here is that the number of columns should change depending on the size of the screen:
+Next, we'll look at ways of displaying items on the screen in a grid-like format. We will create a basic column-like structure. The key goal here is that the number of columns should change depending on the size of the screen:
 
 ```html
 <ul class="cards">
@@ -645,7 +649,7 @@ Nex we will look at ways of displaying items on the screen in a grid-like format
 </ul>
 ```
 
-By adding the following CSS we can set our grid to alternate between a single column, two or even three columns (depending on the available space):
+By adding the following CSS, we can set our grid to alternate between a single column, two or even three columns (depending on the available space):
 
 ```css
 .cards {
@@ -676,11 +680,11 @@ By adding the following CSS we can set our grid to alternate between a single co
 }
 ```
 
-After adding the above we should see the following behavior in our HTML:
+After adding the above, we should see the following behavior in our HTML:
 
 ![](/images/tutorials/graphql-project/graphql-project-18.png)
 
-However, we still need to populate the columns with card components. We can create a single card as follows. This element will then be repeated within the grid cells:
+However, we still need to populate the columns with card components. We can create a single card with the code below. This element will then be repeated within the grid cells:
 
 ```html
 <section class="cards__item">
@@ -697,7 +701,7 @@ However, we still need to populate the columns with card components. We can crea
 </section>
 ```
 
-We can add the following styling for our card components:
+Let's add the following styling for our card components:
 
 ```css
 .cards__item {
@@ -761,11 +765,11 @@ The above should create a single card element as follows:
 
 ![](/images/tutorials/graphql-project/graphql-project-19.png)
 
-### Details
+### Adding some details
 
-A lot of the content returned from our endpoint will be in [markdown format](https://en.wikipedia.org/wiki/Markdown). If you remember correctly, we've included the [Markdown It](https://github.com/markdown-it/markdown-it) library in our HTML app shell. However, unfortunately we are pushing up against the limits of the BEM methodology here (which is not uncommon) insofar that we aren't able to assign CSS class names directly to the HTML elements created by Markdown It.
+A lot of the content returned from our endpoint will be in [markdown format](https://en.wikipedia.org/wiki/Markdown). We've included the [Markdown It](https://github.com/markdown-it/markdown-it) library in our HTML app shell. However, we are pushing up against the limits of the BEM methodology here (which is not uncommon) because we aren't able to assign CSS class names directly to the HTML elements created by Markdown It.
 
-To that end we will simply wrap all the element tag selectors (which is not allowed by BEM), inside a block called "details". We'll do it as follows:
+To that end, we will wrap all the element tag selectors (which is not allowed by BEM), inside a block called "details". We'll do it as follows:
 
 ```css
 .details {
@@ -821,7 +825,7 @@ This should render the following within our interface:
 
 ### Adding a divider to separate sections
 
-Next we'll want to add a HTML block that allows us to separate different sections on a page.
+Next, we'll add an HTML block that allows us to separate different sections on a page.
 
 ![](/images/tutorials/graphql-project/graphql-project-22.png)
 
@@ -894,14 +898,14 @@ Lastly, we'll want to display some type of animated loader to users when data is
 
 ![](/images/tutorials/graphql-project/graphql-project-23.png)
 
-Up until this point we've been merely showing users a "Loading..." piece of text. In order to have our website start off as loading we need to add the loader into our `<main>` element in the HTML. In addition we also want to replace the current app node with a loader when a user changes the current page.
+Up to now, we've been showing users a "Loading..." piece of text. To have our website start off as loading we need to add the loader into our `<main>` element in the HTML. We also want to replace the current app node with a loader when a user changes the current page. You can achieve this with:
 
 ```js
 appNode.innerHTML = '<span class="loader"></span>'
 ```
 
-## Adding some final touches
-Luckily most of the preparatory work is done and we can get down to actually linking our GraphQL endpoint to our routes. We will do this by creating a date-specific conversion utility function and then creating functions that return our reusable HTML blocks (based on data passed to the function). Lastly we will tie all of the above together by creating an asynchronous function for each route.
+## Adding Some Final Touches
+Most of the preparatory work is done and we can get down to actually linking our GraphQL endpoint to our routes. We will do this by creating a date-specific conversion utility function and then creating functions that return our reusable HTML blocks (based on data passed to the function). Lastly, we will tie all of the above together by creating an asynchronous function for each route.
 
 ### Doing date conversion
 
@@ -935,7 +939,7 @@ const convertToPrettyDate = (dateString) => {
 
 ### Adding reusable block functions
 
-Given that we've already created all our lower-level reusable HTML blocks we can create the following four functions that create them programmatically:
+Given that we've already created all our lower-level reusable HTML blocks, we can create the following four functions that create them programmatically:
 
 ```js
 const createHeroBlock = (props) => {
@@ -1082,7 +1086,7 @@ const createDividerBlock = (props) => {
 
 ### Adding page-level functions
 
-With all our HTML block functions in place we can start co-configuring them into specific pages and pass all required data straight from each page's GraphQL response into the respective HTML blocks.
+With all our HTML block functions in place, we can start co-configuring them into specific pages and pass all required data straight from each page's GraphQL response into the respective HTML blocks.
 
 ```js
 const createEpisodesPage = async () => {
@@ -1343,9 +1347,9 @@ const createSingleEpisodePage = async (value) => {
 };
 ```
 
-# Where next
+## Where Next?
 
-We've touched on many GraphQL concepts as we went. However, we've barely scratched the surface. If you want a deeper understanding of GraphQL you can consult the [official GraphQL documentation](https://graphql.org/learn/) or follow along to the completely free [How To GraphQL Resources](https://www.howtographql.com).
+We've touched on many GraphQL concepts in this tutorial. However, we've barely scratched the surface. For a deeper understanding of GraphQL, consult the [official GraphQL documentation](https://graphql.org/learn/) or follow along to the completely free [How To GraphQL Resources](https://www.howtographql.com).
 
 If you followed along, you can keep adding features to your version. If you want to start from ours, you can find it below.
 

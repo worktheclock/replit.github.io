@@ -6,7 +6,7 @@ Repl unit testing allows a Repl author to create code driven tests that compare 
 
 - Java - [JUnit](https://junit.org/junit5/docs/current/user-guide/)
 - Python - [unittest](https://docs.python.org/3/library/unittest.html)
-- JavaScript - [Jest](https://jestjs.io/docs/en/getting-started)
+- Node.js - [Jest](https://jestjs.io/docs/en/getting-started)
 
 ## Why use Unit Testing?
 
@@ -116,7 +116,7 @@ Use these links to read about the supported assert function for each unit testin
 
 - [Java JUnit](https://junit.org/junit4/javadoc/latest/org/junit/Assert.html)
 - [Python unittest assert methods](https://docs.python.org/3/library/unittest.html#assert-methods)
-- [JavaScript Jest expect functions](https://jestjs.io/docs/en/expect)
+- [Node.js Jest expect functions](https://jestjs.io/docs/en/expect)
 
 
 ## Tips for writing good tests
@@ -149,4 +149,4 @@ Use project share links below to import a example unit test projects into your t
 
   - Java `JUnit`: link
   - Python `unittest`: link
-  - JavaScript `Jest`: link -->
+  - Node.js `Jest`: link -->

@@ -864,7 +864,7 @@ Note that a blank space in our CSS selectors does not imply a direct parent-chil
 
 Our hover effect will display the `info` and `remove` classes over our image, as follows:
 
-![Image hover overlay](/images/teamsForEducation/pinboard-project/image-5.png)
+![Image hover overlay](/images/teamsForEducation/pinboard-project/image-5.gif)
 
 ### Object-fit
 

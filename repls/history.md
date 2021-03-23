@@ -10,7 +10,7 @@ A repl's history is located at `https://repl.it/@username/repltitle/history`, bu
 
 A repl's history will show the individual changes to a file, in order from most recent. Clicking "change file" next to the file name will bring up a prompt to select the desired file. Selecting a file with a particular time and date will reveal the code differences between that revision and the latest code. 
 
-![history](https://docs.repl.it/images/repls/history.png)
+![History](/images/repls/history.png)
 
 To restore a previous revision of code, select the desired revision and click "Restore" in the top-right corner of the screen.
 
@@ -18,4 +18,4 @@ To restore a previous revision of code, select the desired revision and click "R
 
 Here's a short gif demonstrating repl history in action:
 
-![historygif](https://docs.repl.it/images/repls/history.gif)
+![History usage demo](/images/repls/history.gif)
