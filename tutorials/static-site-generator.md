@@ -1,8 +1,8 @@
 # Create a Static Site Generator with Python and Replit
 
-A static site generator (SSG) is a tool for building informational websites such as blogs and documentation repositories. They allow technical users to build websites that are faster and more secure than ones running on dynamic platforms such as Wordpress, without having to write each HTML page.
+A static site generator (SSG) is a tool for building informational websites such as blogs and documentation repositories. SSGs allow technical users to build websites that are faster and more secure than ones running on dynamic platforms such as Wordpress, without having to write each HTML page.
 
-There are many SSGs out there already, such as Jekyl and Hugo, but many people opt to write their own – either so that they fully understand it and can be more productive, or to meet custom needs.
+There are many SSGs out there already, such as Jekyll and Hugo, but many people opt to write their own – either so that they fully understand it and can be more productive, or to meet custom needs.
 
 After this tutorial, you'll: 
 * Be able to build a simple but flexible SSG in Python in under 100 lines of code.
@@ -114,7 +114,7 @@ We'll parse these strings in our `load_content_items` function. Give the functio
 def load_content_items(content_strings):
     items = []
     for item in content_strings:
-        frontmatter, content = re.split("^\+\+\+\+\+$", item, 1, re.MULTILINE)
+        frontmatter, content = re.split("^\s*\+\+\+\+\+\s*$", item, 1, re.MULTILINE)
         item = toml.loads(frontmatter)
         item['content'] = markdown.markdown(content)
 
@@ -178,7 +178,7 @@ def load_templates(template_string):
 We'll also change the `load_templates` function invocation in the `main` function like so:
 
 ```python
-    template = load_templates(template_string)
+    templates = load_templates(template_string)
 ```
 
 ### Rendering the site
@@ -222,7 +222,7 @@ Next, let's create and ingest some files.
 
 ## Blog Generator
 
-First off, we need to create a directory structure. In the file pane of your repl, create four directories: `content`, `content/posts`, `layout` and `static`. Your file pane should now look like this:
+First, we need to create a directory structure. In the file pane of your repl, create four directories: `content`, `content/posts`, `layout` and `static`. Your file pane should now look like this:
 
 ![](/images/tutorials/static-site-generator/input-dirs.png)
 
@@ -230,7 +230,7 @@ We will put our Markdown files in `content/posts`, our Jinja files in `layout` a
 
 ### Creating input files
 
-First, we'll create our config file at `config.toml`. In addition to the title value, we'll give it a base URL based on our repl's URL.
+First, we'll create our config file `config.toml`. In addition to the title value, we'll give it a base URL based on our repl's URL.
 
 `config.toml`
 ```
@@ -811,7 +811,7 @@ Run your code and preview your site with `cd public && python -m http.server` in
 
 ![](/images/tutorials/static-site-generator/homepage-final.png)
 
-## Where Next?
+## Where to Next?
 
 We've created a flexible static site generator capable of generating many different types of HTML pages, which can be served from any webserver. Apart from fleshing out the templates and adding new content types, you might want to expand the generator's functionality to allow things like:
 
@@ -823,4 +823,4 @@ We've created a flexible static site generator capable of generating many differ
 
 You can find our SSG repl below:
 
-<iframe height="800px" width="100%" src="https://replit.com/@ritza/python-static-side-generator" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="800px" width="100%" src="https://replit.com/@ritza/python-static-side-generator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
