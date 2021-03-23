@@ -1,8 +1,7 @@
 
 # Editor Shortcuts
 
-The following “Tips and Tricks” will teach you how to be productive in the Repl.it code editor. Here, you will become familiar with the code editor’s powerful shortcuts for editing, writing, and inspecting code.
-
+Be more productive in the Replit code editor by learning the code editor’s powerful shortcuts for editing, writing, and inspecting code.
 
 ## Command Palette
 

@@ -1,12 +1,10 @@
 # Authenticating users with Repl Auth
 
-## Introduction
+*This tutorial is an expansion of [this one](https://replit.com/talk/learn/Authenticating-users-with-Replit-Auth/23460) written by [Mat](https://replit.com/@mat1)*
 
-*This tutorial is an expansion of [this one](https://repl.it/talk/learn/Authenticating-users-with-Replit-Auth/23460) written by [Mat](https://repl.it/@mat1)*
+To help you authenticate users hassle-free, we have created Repl Auth. This allows you to authenticate users without having to write your own authentication logic or work with databases. You can simply authenticate a user with their Replit account without the need to store secure passwords. It's also faster to set up than something like Google authentication.
 
-Repl Auth is a great way to authenticate users without the hassle of writing your own authentication logic and working with databases. With Repl Auth, you can authenticate a user with their Repl.it account without the need to store secure passwords. It's also faster to set up than something like Google authentication.
-
-In this tutorial, we'll build a basic Flask web application where Repl.it users can be authenticated with Repl Auth. To show that a user is authenticated, we will display some of their Repl.it account information back to them.
+In this tutorial, we'll build a basic Flask web application where Replit users can be authenticated with Repl Auth. To show that a user is authenticated, we will display some of their Replit account information back to them.
 
 The main components for this tutorial are:
 - [Python](https://www.python.org/doc/) for serverside code.
@@ -15,7 +13,7 @@ The main components for this tutorial are:
 
 ## Setup
 
-You'll need a Repl.it account for this tutorial so if you haven't already, you can head over to the [signup page](https://repl.it/signup) to create an account. If this is your first time using Repl.it, check out the [quick-start guide](https://docs.repl.it/misc/quick-start) before continuing with this tutorial.
+You'll need a Replit account for this tutorial so if you haven't already, head over to the [signup page](https://replit.com/signup) to create an account. If this is your first time using Replit, check out the [Quick Start Guide](https://docs.replit.com/repls/quick-start) before continuing with this tutorial.
 
 Create a new Python repl and give it a name. 
 
@@ -54,12 +52,12 @@ Copy the following HTML to the `index.html` file:
 	<title>Repl Auth</title>
 </head>
 <body>
-	Hello, Repl.it!
+	Hello, Replit!
 </body>
 </html>
 ```
 
-That's it for the Flask app. Run the code and you should see the browser window display 'Hello, Repl.it!'.
+That's it for the Flask app. Run the code and you should see the browser window display 'Hello, Replit!'.
 
 ![Hello Repl.it](/images/repls/repl-auth/hello-replit.png)
 

@@ -2,7 +2,7 @@
 
 ## Repls Dashboard
 
-The repls dashboard is the place to manage and keep track of all your repls.  Repls are listed in order of when they were created. Each repl has its own three-dot menu at the far right – bringing up this menu will allow you to:
+The repls dashboard is the place to manage and keep track of all your repls. Repls are listed in order of when they were created. Each repl has its own three-dot menu at the far right – bringing up this menu will allow you to:
 
 * Edit the repl (change its name and description)
 * View its history
