@@ -33,7 +33,7 @@ const render = async (res, category, slug) => {
 	const cobj = t.find(c => c.slug === category);
 	const dobj = cobj.contents.find(d => d.slug === slug)
 
-	res.locals.title = `Repl.it - ${ dobj? dobj.name : slug }`;
+	res.locals.title = `Replit - ${ dobj? dobj.name : slug }`;
 	res.render('index.ejs');
 }
 
@@ -54,7 +54,7 @@ app.get('/:category/:slug', async (req, res) => {
 		.catch(err => {
 			res.send(`
       <h1>Something went wrong!</h1 >
-      <p>maybe you can <a href="https://repl.it/@turbio/replit-docs">help fix it</a></p>
+      <p>maybe you can <a href="https://replit.com/@turbio/replit-docs">help fix it</a></p>
 `);
 		});
 });
