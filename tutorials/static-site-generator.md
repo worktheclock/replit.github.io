@@ -401,13 +401,13 @@ Since we're now building a real site with multiple pages, we'll need to add a co
 Let's create the slug by using `os.path.basename` to get our file's filename without its full path (i.e. `first-post.md` rather than `content/posts/first-post.md`). Then we'll use `os.path.splitext` on the result to split the filename and extension, and we'll discard the extension. Add the following line to the for loop, below where we define `item['content']`
 
 ```python
-            item['slug'] = os.path.splitext(os.path.basename(file.name))[0]
+    item['slug'] = os.path.splitext(os.path.basename(file.name))[0]
 ```
 
 We'll then use this slug along with our post's date to construct the full URL. We'll use Python's [string formatting](https://docs.python.org/3/library/string.html#string-formatting) to ensure correct zero-padding of single-digit values for months and days. Add this line below the one we just added:
 
 ```python
-            item['url'] = f"/{item['date'].year}/{item['date'].month:0>2}/{item['date'].day:0>2}/{item['slug']}/"
+    item['url'] = f"/{item['date'].year}/{item['date'].month:0>2}/{item['date'].day:0>2}/{item['slug']}/"
 ```
 
 Now we can update our function invocation in `main`. Change this line:
@@ -488,7 +488,7 @@ First we create the directories necessary to show our post URLs. To display a UR
 
 Note the values we pass to `render`: variables for this post are contained in `this` and site-wide configuration variables are contained in `config`. We also pass in `content` to allow us to access other posts. Although we aren't using this in the `post.html` template right now, it's good to have the option for future template updates.
 
-Now we need to load our static files. Add this code to the bottom of the the `render_site` function:
+Now we need to load our static files. Add this code to the bottom of the `render_site` function:
 
 ```python
     # Static files
@@ -548,7 +548,7 @@ page.sortBy = "title"
 page.sortReverse = false
 ```
 
-Here we've told our site we want two kinds of pages – a *post* type, which we will use for blog posts, and a *page* type, which we will use for evergreen content such as contact details and general site information. Below that, we've used TOML's dictionary syntax to specify some characteristics of each type.
+Here we've told our site generator we want two kinds of pages – a *post* type, which we will use for blog posts, and a *page* type, which we will use for evergreen content such as contact details and general site information. Below that, we've used TOML's dictionary syntax to specify some characteristics of each type.
 
 * Posts will have a date in their URLs and will be sorted in reverse date order when listed.
 * Pages will not have a date in their URLs and will be sorted alphabetically by their title.
