@@ -1,21 +1,22 @@
-# Create a Static Site Generator with Python and Replit
+# Create a static site generator with Python and Repl.it
 
 A static site generator (SSG) is a tool for building informational websites such as blogs and documentation repositories. SSGs allow technical users to build websites that are faster and more secure than ones running on dynamic platforms such as Wordpress, without having to write each HTML page.
 
 There are many SSGs out there already, such as Jekyll and Hugo, but many people opt to write their own – either so that they fully understand it and can be more productive, or to meet custom needs.
 
 After this tutorial, you'll: 
+
 * Be able to build a simple but flexible SSG in Python in under 100 lines of code.
 * Understand advanced file and directory handling.
 * Know how to build a configurable tool for technical users. 
 
 ![Example static site generator functionality](/images/tutorials/static-site-generator/generator_functionality.gif)
 
-At the end, you'll have a full SSG that you can use as-is or extend for your own requirements.
+At the end, you'll have a full SSG that you can use as is or extend for your own requirements.
 
-## Building a Proof of Concept
+## Building a proof of concept
 
-A basic SSG takes in a list of [Markdown](https://en.wikipedia.org/wiki/Markdown) files, converts them to HTML, and inserts them into different predefined HTML templates. Beyond that, most SSGs have the concept of [frontmatter](https://jekyllrb.com/docs/front-matter/) to define metadata such as title and publish date for each markdown file. SSGs also usually have global configuration files, containing general information about the site such as its name and domain.
+A basic SSG takes in a list of [Markdown](https://en.wikipedia.org/wiki/Markdown) files, converts them to HTML, and inserts them into different predefined HTML templates. Beyond that, most SSGs have the concept of [frontmatter](https://jekyllrb.com/docs/front-matter/) to define metadata such as title and publish date for each Markdown file. SSGs also usually have global configuration files, containing general information about the site such as its name and domain.
 
 Before we start dealing with files, we're going to implement our SSG using strings. This will serve as an initial proof of concept.
 
@@ -23,7 +24,7 @@ Before we start dealing with files, we're going to implement our SSG using strin
 
 We'll start by defining the main functions we'll use. Create a new Python repl and enter the following code in `main.py`.
 
-![Creating a new python repl](/images/tutorials/static-site-generator/new_repl.png)
+![Creating a new Python repl](/images/tutorials/static-site-generator/new_repl.png)
 
 ```python
 def load_config():
@@ -50,8 +51,8 @@ main()
 This skeleton defines the program flow:
 
 1. Load the global site configuration.
-2. Load the content files containing markdown and frontmatter.
-3. Load the HTML templates
+2. Load the content files containing Markdown and frontmatter.
+3. Load the HTML templates.
 4. Render the site using everything we've loaded above.
 
 Throughout this tutorial, we will keep to this flow, even as we expand and refine its individual elements.
@@ -69,9 +70,9 @@ All four of these modules are essentially parsers:
 * `markdown`: This module will render Markdown.
 * `jinja2`: The [Jinja templating language](https://jinja.palletsprojects.com/en/2.11.x/), which we will use to create HTML templates that we can enhance with Python-esque code.
 * `toml`: We will use [TOML](https://github.com/toml-lang/toml) (Tom's Obvious, Minimal Language) for post frontmatter and global configuration.
-* `re`: We'll use Python's regular expressions (regex) module for some additional, very light parsing not provided by the three packages above.
+* `re`: We'll use Python's regular expressions (regex) module for some additional, very light, parsing not provided by the three packages above.
 
-Now that we have our parsers, let's add some content to parse. Add a TOML string for global site configuration at the top of the `main` function:
+Now that we have our parsers, let's add some content to parse. Add a TOML string for global site configuration at the top of the `main` function.
 
 ```python
 def main():
@@ -80,20 +81,20 @@ def main():
     """
 ```
 
-For now, this just defines the title of our site. Change it to whatever you want. To load this config, we'll use `toml.loads` on its content. Go to the `load_config` function at the top of `main.py` and give it the following parameter and content:
+For now, this just defines the title of our site. Change it to whatever you want. To load this config, we'll use `toml.loads` on its content. Go to the `load_config` function at the top of `main.py` and give it the following parameter and content.
 
 ```python
 def load_config(config_string):
     return toml.loads(config_string)
 ```
 
-To use this function, go back to the `main` function and pass `config_string` to this line in the `main` function:
+To use this function, go back to the `main` function and pass `config_string` to this line in the `main` function.
 
 ```python
     config = load_config(config_string)
 ```
 
-Now let's create a couple of content strings below the config string. We're going to format these strings with a block of TOML metadata terminated by a row of five plus signs (`+++++`). The rest of the string will contain markdown-formatted text. Add this block of code below the definition of `config_string` in the `main` function.
+Now let's create a couple of content strings below the config string. We're going to format these strings with a block of TOML metadata terminated by a row of five plus signs (`+++++`). The rest of the string will contain Markdown-formatted text. Add this block of code below the definition of `config_string` in the `main` function.
 
 ```python
     content_strings = ["""
@@ -112,7 +113,7 @@ This is my second post.
 """]
 ```
 
-We'll parse these strings in our `load_content_items` function. Give the function a `content_strings` parameter and add the following code:
+We'll parse these strings in our `load_content_items` function. Give the function a `content_strings` parameter and add the following code.
 
 ```python
 def load_content_items(content_strings):
@@ -132,7 +133,7 @@ def load_content_items(content_strings):
 
 Here we use a _for_ loop to construct a list of items from our item strings. For each one, we split up the frontmatter and content on a regular expression that will match a line of text containing five plus signs. We pass in `1` as `re.split`'s `maxsplit` parameter to ensure that we only split on the first matched line, and `re.MULTILINE` so that our regex will work correctly in a multiline string.
 
-We then use `toml.loads()` to convert the frontmatter into a dictionary. Finally, we convert the markdown in `content` into HTML and add it to the dictionary we just created. The result will be a dictionary that looks something like this:
+We then use `toml.loads()` to convert the frontmatter into a dictionary. Finally, we convert the Markdown in `content` into HTML and add it to the dictionary we just created. The result will be a dictionary that looks something like this:
 
 ```python
 {
@@ -144,13 +145,13 @@ We then use `toml.loads()` to convert the frontmatter into a dictionary. Finally
 
 Finally, since this is a blog site, we're sorting our `items` dictionary in reverse chronological order. We do this by using Python's `list.sort` method's custom sort functionality to sort by each list entry's `date` value. The `key` parameter takes a function which it will pass each value into and use the return value to sort the list. For brevity, we've created an in-line anonymous function using a [lambda expression](https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions).
 
-Back in our `main` function, let's pass `content_strings` to the `load_content_items` function call:
+Back in our `main` function, let's pass `content_strings` to the `load_content_items` function call.
 
 ```python
     content = load_content_items(content_strings)
 ```
 
-Now let's create a template string below the content strings. This is just some HTML with Jinja code in `{{ }}` and `{% %}` blocks. Add this code block beneath the definition of `content_strings` in the `main` function:
+Now let's create a template string below the content strings. This is just some HTML with Jinja code in `{{ }}` and `{% %}` blocks. Add this code block beneath the definition of `content_strings` in the `main` function.
 
 ```python
     template_string = """
@@ -172,14 +173,14 @@ Now let's create a template string below the content strings. This is just some 
 
 Each of the values inside `{{ }}` blocks is something we've assembled in the preceding code: `config.title` from the config strings, `content` from the content strings, and the individual values inside the Jinja [for loop](https://jinja.palletsprojects.com/en/2.11.x/templates/#for) from each item in the `content` list. Note that in Jinja, `post.title` is equivalent to `post["title"]`.
 
-To load this template, we will add the following parameter and code to the `load_templates` function:
+To load this template, we will add the following parameter and code to the `load_templates` function.
 
 ```python
 def load_templates(template_string):
     return jinja2.Template(template_string)
 ```
 
-We'll also change the `load_templates` function invocation in the `main` function like so:
+We'll also change the `load_templates` function invocation in the `main` function.
 
 ```python
     templates = load_templates(template_string)
@@ -222,11 +223,11 @@ As our `render_site` invocation in `main` already takes the correct arguments, w
 
 ![Proof of concept output](/images/tutorials/static-site-generator/poc_run.png)
 
-We now have the core of our static site generator. Modify the content of one of the content strings and the output will change. Add new variables to each content file's frontmatter and the template, and they will propagate through without any changes to the Python code.
+We now have the core of our SSG. Modify the content of one of the content strings and the output will change. Add new variables to each content file's frontmatter and the template, and they will propagate through without any changes to the Python code.
 
 Next, let's create and ingest some files.
 
-## Blog Generator
+## Blog generator
 
 First, we need to create a directory structure. In the file pane of your repl, create four directories: `content`, `content/posts`, `layout` and `static`. Your file pane should now look like this:
 
@@ -246,7 +247,7 @@ baseURL = "https://YOUR-REPL-NAME-HERE.YOUR-REPLIT-USERNAME.repl.co"
 
 Replace the all-caps text with the relevant values.
 
-Now let's put our content strings into post files. Create the following two files with the following content:
+Now let's put our content strings into post files. Create two files with the following content:
 
 `content/posts/first-post.md`
 ```
@@ -272,9 +273,9 @@ In contrast to our proof of concept, this will be a multi-page website, so we're
 
 * `index.html` will be the template for our homepage, showing a list of blog posts in reverse chronological order.
 * `post.html` will be the template for post pages, containing their rendered Markdown content.
-* `macros.html` will not be a template, but a container file for Jinja [macros](https://jinja.palletsprojects.com/en/2.10.x/templates/#macros). These are reusable snippets of HTML we can use in our templates.
+* `macros.html` will not be a template, but a container file for Jinja [macros](https://jinja.palletsprojects.com/en/2.10.x/templates/#macros). These are reusable snippets of HTML that we can use in our templates.
 
-Create these three files and populate them as follows.
+Create three files and populate them as follows.
 
 `layout/index.html`
 ```html
@@ -308,7 +309,7 @@ Create these three files and populate them as follows.
 </html>
 ```
 
-(`&#10558;` is the [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity) for "⤾")
+(`&#10558;` is the [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity) for "⤾".)
 
 `layout/macros.html`
 ```html
@@ -322,7 +323,7 @@ Create these three files and populate them as follows.
 
 The only macro we've defined is `head`, which will generate an HTML `<head>` tag containing an appropriate title for the page as well as a link to our website's stylesheet. Let's create that now.
 
-In the `static` directory, create a subdirectory called `css`. Then create a file called `style.css` in this subdirectory and add the following:
+In the `static` directory, create a subdirectory called `css`. Then create a file called `style.css` in this subdirectory and add the following code.
 
 `static/css/style.css`
 ```css
@@ -343,7 +344,7 @@ These are a couple of small style adjustments to improve readability and differe
 
 ### Ingesting input files
 
-Now that we've created our input files, let's write some code in `main.py` to read them and create our website. To do this, we'll be iterating on our proof-of-concept code.
+Now that we've created our input files, let's write some code in `main.py` to read them and create our website. To do this, we'll be iterating our proof-of-concept code.
 
 First, at the top of the file, let's import some new modules for dealing with reading and writing files and directories. Add the second line below the first in `main.py`.
 
@@ -356,7 +357,7 @@ Then delete the `config_string`, `content_strings` and `template_string` definit
 
 ### Ingesting site configuration
 
-First, let's ingest the configuration file. Change the `load_config` function as follows:
+First, let's ingest the configuration file. Change the `load_config` function as follows.
 
 ```python
 def load_config(config_filename):
@@ -378,7 +379,7 @@ To this:
 
 ### Ingesting posts
 
-Next, we will ingest the `content/posts` directory. Change the content of the `load_content_items` function as follows:
+Next, we will ingest the `content/posts` directory. Change the content of the `load_content_items` function as follows.
 
 ```python
 def load_content_items(content_directory):
@@ -404,7 +405,7 @@ Since we're now building a real site with multiple pages, we'll need to add a co
 * `slug` will be the name of the post's Markdown file without the `.md` extension.
 * `url` will be a partial URL including the post's date and slug. For the first post, it will look like this: `/2021/02/14/first-post/`
 
-Let's create the slug by using `os.path.basename` to get our file's filename without its full path (i.e. `first-post.md` rather than `content/posts/first-post.md`). Then we'll use `os.path.splitext` on the result to split the filename and extension, and we'll discard the extension. Add the following line to the for loop, below where we define `item['content']`
+Let's create the slug by using `os.path.basename` to get our file's filename without its full path (i.e. `first-post.md` rather than `content/posts/first-post.md`). Then we'll use `os.path.splitext` on the result to split the filename and extension, and we'll discard the extension. Add the following line to the _for_ loop, below where we define `item['content']`.
 
 ```python
     item['slug'] = os.path.splitext(os.path.basename(file.name))[0]
@@ -432,7 +433,7 @@ Using a dictionary instead of a plain list will allow us to add additional conte
 
 ### Ingesting templates
 
-Now that we have a list of posts, let's ingest our templates so we have somewhere to put them. Jinja works quite differently from the file system than from strings, so we're going to change our `load_templates` function to create a Jinja [`Environment`](https://jinja.palletsprojects.com/en/2.11.x/api/#jinja2.Environment) with a [`FileSystemLoader`](https://jinja.palletsprojects.com/en/2.11.x/api/#loaders) that knows to look for templates in a particular directory. Change the function code as follows:
+Now that we have a list of posts, let's ingest our templates so we have somewhere to put them. Jinja works quite differently from the file system and from strings, so we're going to change our `load_templates` function to create a Jinja [`Environment`](https://jinja.palletsprojects.com/en/2.11.x/api/#jinja2.Environment) with a [`FileSystemLoader`](https://jinja.palletsprojects.com/en/2.11.x/api/#loaders) that knows to look for templates in a particular directory. Change the function code as follows.
 
 ```python
 def load_templates(template_directory):
@@ -456,7 +457,7 @@ In the next section, we'll pass this environment to our `render_site` function w
 
 ### Writing output files
 
-Now let's render the site by writing some output files. We'll be using a directory named `public` for this, but you don't need to create this in your file pane – we'll do so in code. Go to the `render_site` function and replace its code with the following (remember to change the function parameters):
+Now let's render the site by writing some output files. We'll be using a directory named `public` for this, but you don't need to create this in your file pane – we'll do so in code. Go to the `render_site` function and replace its code with the following (remember to change the function parameters).
 
 ```python
 def render_site(config, content, environment, output_directory):
@@ -467,7 +468,7 @@ def render_site(config, content, environment, output_directory):
 
 We do two things here: remove the output directory and all of its content if it exists, and create a fresh output directory. This will avoid errors when running our code multiple times.
 
-Now let's write our homepage by adding this code to the bottom of the function.
+Now let's write our home page by adding this code to the bottom of the function.
 
 ```python
     # Homepage
@@ -478,7 +479,7 @@ Now let's write our homepage by adding this code to the bottom of the function.
 
 Here we use our Jinja environment to load the template at `layout/index.html`. We then open the `public/index.html` file and write to it the results of rendering `index_template` with our `config` and `content` dictionaries passed in.
 
-The code for writing individual post files is a bit more complex. Add the for loop below to the bottom of the function.
+The code for writing individual post files is a bit more complex. Add the _for_ loop below to the bottom of the function.
 
 ```python
     # Post pages
@@ -515,7 +516,7 @@ To this:
     render_site(config, content, environment, "public")
 ```
 
-Now run the code. You should see the `public` directory appear in your filepane. Look inside, and you'll see the directories and files we just created. To see your site in action, run the following commands in Replit's "Shell" tab:
+Now run the code. You should see the `public` directory appear in your file pane. Look inside, and you'll see the directories and files we just created. To see your site in action, run the following commands in Repl.it's "Shell" tab.
 
 ```
 cd public
@@ -524,21 +525,21 @@ python -m http.server
 
 ![Shell tab](/images/tutorials/static-site-generator/shell.png)
 
-This should bring up the Replit web view with your homepage, as below. Click on each of the links to visit the post pages.
+This should bring up the Repl.it web view with your home page, as below. Click on each of the links to visit the post pages.
 
 ![Blog homepage](/images/tutorials/static-site-generator/homepage-blog.png)
 
 This server will need to be restarted periodically as you work on your site.
 
-## Generic Site Generator
+## Generic site generator
 
-In addition to chronological blog posts, our site could do with undated pages, such as an "About" or "Contact" page. Depending on what kind of site we want to build, we may also want photo pages, or pages including podcast episodes, or any number of other things. If we give this static site generator to someone else to use, they may have their own ideas as well – for example, they may want to make a site organised as a book with numbered chapters rather than as a blog. Rather than trying to anticipate everyone's needs, let's make it so we can create multiple types of content pages, and allow the user to define those types and how they should be ordered.
+In addition to chronological blog posts, our site could do with undated pages, such as an "About" or "Contact" page. Depending on the kind of site we want to build, we may also want photo pages, or pages including podcast episodes, or any number of other things. If we give this SSG to someone else to use, they may have their own ideas as well – for example, they may want to make a site organised as a book with numbered chapters rather than as a blog. Rather than trying to anticipate everyone's needs, let's make it so we can create multiple types of content pages, and allow the user to define those types and how they should be ordered.
 
 This is simpler than it sounds, but will require some refactoring.
 
 ### Expanding the config file
 
-First, let's add some content to our `config.toml` file to give this customization a definite shape. Add the lines below the definition of `baseURL`.
+First, let's add some content to our `config.toml` file to give this customization a definite shape. Add these lines below the definition of `baseURL`.
 
 `config.toml`
 ```toml
@@ -561,7 +562,7 @@ Here we've told our site generator we want two kinds of pages – a *post* type,
 * Posts will have a date in their URLs and will be sorted in reverse date order when listed.
 * Pages will not have a date in their URLs and will be sorted alphabetically by their title.
 
-By creating enabling these settings, we'll make it possible to sort a content type by any attribute in its frontmatter.
+By creating these settings, we'll make it possible to sort a content type by any attribute in its frontmatter.
 
 ### Ingesting user-defined content
 
@@ -573,7 +574,7 @@ import glob, pathlib, os, shutil, distutils.dir_util
 import inflect
 ```
 
-The [`inflect`](https://pypi.org/project/inflect/) module allows us to turn singular words into plurals and vice-versa. This will be useful for working with the `types` list from our configuration file. Change the `load_config` function to resemble the following:
+The [`inflect`](https://pypi.org/project/inflect/) module allows us to turn singular words into plurals and vice versa. This will be useful for working with the `types` list from our configuration file. Change the `load_config` function to resemble the following.
 
 ```python
 def load_config(config_filename) 
@@ -663,7 +664,7 @@ To this:
                 item['url'] = f"/{item['slug']}/"
 ```
     
-Now we'll sort according to the configuration file by changing these lines:
+Now we'll sort according to the configuration file by changing this line:
 
 ```python
     # sort in reverse chronological order
@@ -678,7 +679,7 @@ To this:
                reverse=config[content_type]["sortReverse"])
 ```    
 
-We can complete this `load_content_items` function by writing some code to iterate through our site's configured content types, calling `load_content_type` for each one. Add the following code below the definition of `load_content_type` – ensure that it's de-indented so as to be part of `load_content_items`:
+We can complete this `load_content_items` function by writing some code to iterate through our site's configured content types, calling `load_content_type` for each one. Add the following code below the definition of `load_content_type` (ensure that it's de-indented so as to be part of `load_content_items`).
 
 ```python
     content_types = {}
@@ -702,7 +703,7 @@ To this:
 
 ### Rendering user-defined content
 
-Now we need to change our output code in `render_site` to render each content type with its own template. As we did with `load_content_items`, we'll start by moving the post-creating for loop into an inner function, this time named `render_type`. Alter your `render_site` function so that it resembles the following:
+Now we need to change our output code in `render_site` to render each content type with its own template. As we did with `load_content_items`, we'll start by moving the post-creating _for_ loop into an inner function, this time named `render_type`. Alter your `render_site` function so that it resembles the following.
 
 ```python
 def render_site(config, content, environment, output_directory):
@@ -747,13 +748,13 @@ Into this line that loads a template for the provided content type:
         template = environment.get_template(f"{content_type}.html")
 ```
 
-Alter the for loop below that line to use the content type's plural as below:
+Alter the _for_ loop below that line to use the content type's plural.
 
 ```python
         for item in content[config[content_type]["plural"]]:
 ```
 
-Finally, change `post_template` in the loop's final line to `template`:
+Finally, change `post_template` in the loop's final line to `template`.
 
 ```python
                 file.write(template.render(this=item, config=config, content=content))
@@ -761,7 +762,7 @@ Finally, change `post_template` in the loop's final line to `template`:
 
 ### Adding a new content type
 
-Now that we've done all that work to generify our code, all that's left is to create our pages. First, let's create a page template at `layout/page.html`. Use the following code:
+Now that we've done all that work to generify our code, all that's left is to create our pages. First, let's create a page template at `layout/page.html`. Use the following code.
 
 ```html
 <!DOCTYPE html>
@@ -778,7 +779,7 @@ Now that we've done all that work to generify our code, all that's left is to cr
 
 This is just our `post.html` template without the date.
 
-Now create a new subdirectory in `content` called `pages`. Inside that subdirectory, create a file named `about.md` and put the following content in it:
+Now create a new subdirectory in `content` called `pages`. Inside that subdirectory, create a file named `about.md` and put the following content in it.
 
 ```
 title = "About"
@@ -787,7 +788,7 @@ title = "About"
 This website is built with Python, Jinja, TOML and Markdown.
 ```
 
-This is sufficient to create a new page at `/about/`, but it won't be linked anywhere. For that, we'll need to create a global navigation bar for our site. Create the following additional macro in `layout/macros.html`:
+This is sufficient to create a new page at `/about/`, but it won't be linked anywhere. For that, we'll need to create a global navigation bar for our site. Create the following additional macro in `layout/macros.html`.
 
 ```html
 {% macro navigation(pages) -%}
@@ -799,7 +800,7 @@ This is sufficient to create a new page at `/about/`, but it won't be linked any
 {% endmacro -%}
 ```
 
-Then include the macro in `index.html`, `page.html` and `post.html` by inserting the following code just underneath `{{ macros.head(this.title) }}`:
+Then include the macro in `index.html`, `page.html` and `post.html` by inserting the following code just underneath `{{ macros.head(this.title) }}`.
 
 ```html
     {{ macros.navigation(content.pages) }}
@@ -819,11 +820,11 @@ Run your code and preview your site with `cd public && python -m http.server` in
 
 ![Static site generator functionality](/images/tutorials/static-site-generator/generator_functionality.gif)
 
-## Where to Next?
+## Where to next?
 
-We've created a flexible static site generator capable of generating many different types of HTML pages, which can be served from any webserver. Apart from fleshing out the templates and adding new content types, you might want to expand the generator's functionality to allow things like:
+We've created a flexible SSG capable of generating many different types of HTML pages, which can be served from any web server. Apart from fleshing out the templates and adding new content types, you might want to expand the generator's functionality to allow things like:
 
-- Categories and/or tags for content items.
+- Categories or tags for content items.
 - Ability to generate an RSS or Atom feed for people to subscribe to.
 - A way to mark items as drafts, so they won't be included when the site is compiled.
 - Navigation features like next and previous item links.
