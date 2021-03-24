@@ -9,6 +9,8 @@ After this tutorial, you'll:
 * Understand advanced file and directory handling.
 * Know how to build a configurable tool for technical users. 
 
+![Example static site generator functionality](/images/tutorials/static-site-generator/generator_functionality.gif)
+
 At the end, you'll have a full SSG that you can use as-is or extend for your own requirements.
 
 ## Building a Proof of Concept
@@ -20,6 +22,8 @@ Before we start dealing with files, we're going to implement our SSG using strin
 ### Setting up and defining the flow
 
 We'll start by defining the main functions we'll use. Create a new Python repl and enter the following code in `main.py`.
+
+![Creating a new python repl](/images/tutorials/static-site-generator/new_repl.png)
 
 ```python
 def load_config():
@@ -215,6 +219,8 @@ As our `render_site` invocation in `main` already takes the correct arguments, w
     </body>
 </html>
 ```
+
+![Proof of concept output](/images/tutorials/static-site-generator/poc_run.png)
 
 We now have the core of our static site generator. Modify the content of one of the content strings and the output will change. Add new variables to each content file's frontmatter and the template, and they will propagate through without any changes to the Python code.
 
@@ -516,9 +522,11 @@ cd public
 python -m http.server
 ```
 
+![Shell tab](/images/tutorials/static-site-generator/shell.png)
+
 This should bring up the Replit web view with your homepage, as below. Click on each of the links to visit the post pages.
 
-![](/images/tutorials/static-site-generator/homepage-blog.png)
+![Blog homepage](/images/tutorials/static-site-generator/homepage-blog.png)
 
 This server will need to be restarted periodically as you work on your site.
 
@@ -809,7 +817,7 @@ nav ul
 
 Run your code and preview your site with `cd public && python -m http.server` in the repl shell, and you should see something like this:
 
-![](/images/tutorials/static-site-generator/homepage-final.png)
+![Static site generator functionality](/images/tutorials/static-site-generator/generator_functionality.gif)
 
 ## Where Next?
 
@@ -823,4 +831,4 @@ We've created a flexible static site generator capable of generating many differ
 
 You can find our SSG repl below:
 
-<iframe height="800px" width="100%" src="https://replit.com/@ritza/python-static-side-generator" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="800px" width="100%" src="https://replit.com/@ritza/python-static-side-generator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>

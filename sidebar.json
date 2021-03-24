@@ -259,13 +259,17 @@
           "name": "Pinboard Project Part 2: JavaScript",
           "slug": "PinboardProjectPart2"
       },
-    {
+      {
           "name": "GraphQL Part 1: setting up endpoints",
           "slug": "graphql-project-part-1"
       },
       {
           "name": "GraphQL Part 2: creating a web application",
           "slug": "graphql-project-part-2"
+      },
+      {
+        "name": "Static Site Generator",
+        "slug": "static-site-generator"
       }
     ]
   },
