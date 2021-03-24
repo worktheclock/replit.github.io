@@ -1,4 +1,4 @@
-# Create a static site generator with Python and Repl.it
+# Create a static site generator with Python and Replit
 
 A static site generator (SSG) is a tool for building informational websites such as blogs and documentation repositories. SSGs allow technical users to build websites that are faster and more secure than ones running on dynamic platforms such as Wordpress, without having to write each HTML page.
 
@@ -516,7 +516,7 @@ To this:
     render_site(config, content, environment, "public")
 ```
 
-Now run the code. You should see the `public` directory appear in your file pane. Look inside, and you'll see the directories and files we just created. To see your site in action, run the following commands in Repl.it's "Shell" tab.
+Now run the code. You should see the `public` directory appear in your file pane. Look inside, and you'll see the directories and files we just created. To see your site in action, run the following commands in Replit's "Shell" tab.
 
 ```
 cd public
@@ -525,7 +525,7 @@ python -m http.server
 
 ![Shell tab](/images/tutorials/static-site-generator/shell.png)
 
-This should bring up the Repl.it web view with your home page, as below. Click on each of the links to visit the post pages.
+This should bring up the Replit web view with your home page, as below. Click on each of the links to visit the post pages.
 
 ![Blog homepage](/images/tutorials/static-site-generator/homepage-blog.png)
 
