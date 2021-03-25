@@ -37,9 +37,9 @@ const app = express();
 
 ### Add a web server
 
-Now that we have a web framework to route our requests, we need to create a web server to listen for requests and handle the http protocol. We will use the built in [Node.js http module](https://nodejs.org/api/http.html) for this. 
+Now that we have a web framework to route our requests, we need to create a web server to listen for requests and handle the HTTP protocol. We will use the built in [node HTTP module](https://nodejs.org/api/http.html) for this. 
 
-Add a reference to http, and create a new server with the Express framework we created above: 
+Add a reference to HTTP, and create a new server with the express framework we created above: 
 
 ```javascript
 const http = require('http'); 
