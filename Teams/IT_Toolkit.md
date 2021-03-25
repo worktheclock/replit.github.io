@@ -25,6 +25,12 @@ The Replit application is delivered over the following protocols:
 - WebSocket over HTTPS
 - VNC (for running graphical applications in a browser)
 
+**Whitelist/Network Security Vendor Guides**
+
+Please refer to these guides to get Replit working under your whitelist/network security vendor:
+- [Lightspeed Systems](https://help.lightspeedsystems.com/s/article/Repl-it-Domains?language=en_US)
+- (more to come)
+
 **Data Retention and Usage**
 
 Please refer to our [Privacy FAQs](https://docs.repl.it/Teams/privacyFAQs) and [U.S. Student Data Protection Addendum](https://docs.repl.it/Teams/US_Student_DPA) for more details.
