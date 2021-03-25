@@ -260,6 +260,10 @@
         "slug": "15-repl-chat"
       },
       {
+        "name": "Static Site Generator",
+        "slug": "16-static-site-generator"
+      },
+      {
           "name": "Pinboard Project Part 1: HTML & CSS",
           "slug": "PinboardProjectPart1"
       },
@@ -279,7 +283,6 @@
           "name": "Spotify API tutorials",
           "slug": "spotify-tutorials"
       }
-
     ]
   },
   {
