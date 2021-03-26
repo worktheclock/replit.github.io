@@ -1,7 +1,8 @@
 import 'regenerator-runtime/runtime'
 import Fuse from "fuse.js";
 
-const getData = async () => {
+const initSearch = async () => {
+    let closing = null;
     const response = await fetch("/search.json");
     const data = await response.json();
 
@@ -28,12 +29,16 @@ const getData = async () => {
     const output = document.querySelector('[data-search="output"')
     source.disabled = false;
 
-    const removeResults = (event) => {
-        if (event && event.relatedTarget && event.relatedTarget.getAttribute('data-search') === 'link') return;
-        output.classList.remove('search_preview__open')
+    const removeResults = () => {
+        closing = setTimeout(
+            () => output.classList.remove('search_preview__open'),
+            500,
+        )
     };
 
     const createResults = (value) => {
+        if (closing) clearTimeout(closing)
+
         output.classList.add('search_preview__open')
         const results = fuse.search(value);
 
@@ -71,6 +76,7 @@ const getData = async () => {
     }
 
     source.addEventListener('blur', removeResults)
+    output.addEventListener('click', console.log)
 
     source.addEventListener('input', ({ target: { value }}) => {
         if (value.length < 2) return removeResults();
@@ -83,4 +89,22 @@ const getData = async () => {
     })
 };
 
-getData();
+const initMenu = () => {
+    const menuButton = document.querySelector('[data-menu="button"]')
+    const menuContent = document.querySelector('[data-menu="content"]')
+    const menuClose = document.querySelector('[data-menu="close"]')
+
+    const elements = [
+        [document.body, 'no-scroll'],
+        [menuContent, 'menu__content_open'],
+        [menuClose, 'menu__close_open'],
+    ]
+
+    const toggleMenu = () => elements.forEach(([node, className]) => node.classList.toggle(className))
+    menuButton.addEventListener('click', toggleMenu)
+    menuClose.addEventListener('click', toggleMenu)
+}
+
+initMenu();
+initSearch();
+
