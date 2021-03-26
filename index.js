@@ -33,7 +33,12 @@ const render = async (res, category, slug) => {
 	const cobj = t.find(c => c.slug === category);
 	const dobj = cobj.contents.find(d => d.slug === slug)
 
-	res.locals.title = `Replit - ${ dobj? dobj.name : slug }`;
+  if (category === 'repls' && slug === 'intro') {
+    // landing page gets a short title for search engine visibility
+    res.locals.title = 'Replit Docs';
+  } else {
+	  res.locals.title = `Replit Docs - ${ dobj? dobj.name : slug }`;
+  }
 	res.render('index.ejs');
 }
 
