@@ -107,4 +107,3 @@ const initMenu = () => {
 
 initMenu();
 initSearch();
-
