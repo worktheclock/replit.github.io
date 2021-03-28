@@ -4,12 +4,16 @@ In this tutorial we'll use NodeJS on Repl.it to build a Pomodoro timer. The [Pom
 
 Our timer will show a countdown timer for both the Pomodoros and the breaks, as well as the total number of completed Pomodoros.
 
+![Pomodoro timer funcionality](/images/tutorials/17-pomodoro-timer/pomodoro_functionality.gif)
+
 This tutorial assumes knowledge of basic JavaScript concepts such as functions and objects. However the code is explained so that even a beginner may follow along.
 
 
 ## Creating a Repl and adding dependencies
 
 First, we need to create a new Node.js Repl for our code. Navigate to repl.it and create a new Repl, selecting "Node.js" as the language. You may name the Repl however you wish.
+
+![Creating project](/images/tutorials/17-pomodoro-timer/new_project.png)
 
 We then want to add our only dependency, Timrjs. TimrJS is a library for creating timers in JavaScript. It saves us from implementing our own timer and comes with some cool features that we can use.
 
@@ -19,7 +23,7 @@ In the default `index.js` file that is included in the new Repl, add the followi
 
 Press the "Run" button and you should see Repl.it install the Timr library and adding it to the dependencies in the `package.json` file. If this does not work click the cube icon on the left panel- it allows you to search for packages by name - and search for "timrjs". 
 
-![adding package](/images/tutorials/17-pomodoro-timer/addingpackage.png)
+![adding package](/images/tutorials/17-pomodoro-timer/addingpackage.gif)
 
 
 ## Our Program
@@ -267,7 +271,14 @@ function startPomodoro() {
 
 If you run it you should see something like this on the console:
 
-![test run](/images/tutorials/17-pomodoro-timer/test_run.png)
+![test run](/images/tutorials/17-pomodoro-timer/pomodoro_functionality.gif)
+
+
+## Make it Your Own
+
+If you followed along, you'll already have your own version of the pomodoro timer repl to extend. If not, start from ours. Fork it from the repl embedded below.
+
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/pomodoro-timer?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 
 ## Extending our Pomodoro Timer
