@@ -315,6 +315,7 @@ Run the chat server app. Then run your client app, and your friend's client app.
 
 You should see the client apps prompt for your usernames. After you send them, they'll be shown on both clients and in the server logs. Now you can message each other from the repl console! Once you're comfortable that it works with a friend, you can invite others to join, too.
 
+![Example chat with a friend](/images/tutorials/15-replit-chat/friends_chat.gif)
 
 ## Make it Your Own
 
@@ -329,10 +330,6 @@ If you followed along, you'll already have your own version of the chat server a
 ### Chat client
 
 <iframe height="400px" width="100%" src="https://replit.com/@ritza/repl-chat-client?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
-
-![Example chat with a friend](/images/tutorials/15-replit-chat/friends_chat.gif)
-
 
 ## Things to Try Next
 
