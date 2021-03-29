@@ -78,6 +78,10 @@
       {
         "name": "Unit Testing",
         "slug": "UnitTesting"
+      },
+      {
+        "name": "Native Graphics using VNC",
+        "slug": "vnc"
       }
     ]
   },
