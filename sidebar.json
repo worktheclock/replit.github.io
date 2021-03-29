@@ -132,6 +132,14 @@
       {
         "name": "Example Homework Assignments",
         "slug": "HomeworkAssignments"
+      },
+      {
+        "name": "Embedding Projects",
+        "slug": "EmbedProjects"
+      },
+      {
+        "name": "Team and Project Sharing",
+        "slug": "projectCopying"
       }
     ]
   },
