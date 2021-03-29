@@ -1,4 +1,4 @@
-# Repl.it Docs
+# Replit Docs
 
 These are the [docs](https://docs.repl.it) for [Repl.it](https://repl.it) stored in markdown.
 
