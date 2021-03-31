@@ -1,6 +1,6 @@
 # Building a predictive text engine with Node.js
 
-Have you ever wondered how your phone knows what to sugggest in the autocomplete box in texts? Or how Gmail suggests phrases to you?
+Have you ever wondered how your phone knows what to suggest in the autocomplete box in texts? Or how Gmail suggests phrases to you?
 
 In this tutorial, we'll make a predictive text engine that learns by example. Newer text prediction engines, like [GPT3](https://en.wikipedia.org/wiki/GPT-3) use neural networks, but we'll use more standard coding for this project. 
 
@@ -12,7 +12,7 @@ We'll use the [Repl.it](https://repl.it) Web IDE for developing and running our 
 
 Let's think about the requirements, and come up with some potential solutions. For autocomplete, we normally type in a few words, and then the computer or phone suggests the next likely few words. The question is basically: _Given an initial phrase, what are some likely next words?_
 
-Let's try create a solution from that problem statement. What if we make a list of initial phrases, mapped to a list of likely next words? Then, if we type in a phrase, we can look it up in our list and pick out a word that is likely to follow. If we represented it in a Javascript object, it could have a structure that looks something like this:
+Let's try to create a solution from that problem statement. What if we make a list of initial phrases, mapped to a list of likely next words? Then, if we type in a phrase, we can look it up in our list and pick out a word that is likely to follow. If we represented it in a Javascript object, it could have a structure that looks something like this:
 
 ```
 {
@@ -50,13 +50,13 @@ We can account for this by adding a probability, or _weight_ for each of the lik
 
 ```
 
-Now when we look for a possible next word for a given phrase, we can choose the ones with a larger weight more ofter, so it is closer to the word distribution in real language.
+Now when we look for a possible next word for a given phrase, we can choose the one with a larger weight more often, so it is closer to the word distribution in real language.
 
 This looks like it could work! Now, we just need to figure out how to populate this data structure from example text. 
 
 Here's the main tasks we'll need to figure out and code:
 
-- Get example, or training text, read it in, and split it into initial phrases and the words that can come next
+- Get example, or training text, read it in, and split it into initial phrases, and the words that can come next
 - Populate our data structure with this data
 - Make a function that uses the populated data structure, along with an initial phrase, to generate possible choices for the next word. 
 
@@ -70,7 +70,7 @@ You should see a new `index.js` file, where we can start adding our code.
 
 ## Finding training text
 
-Our task now is to find some training text. Normally, your phone or Gmail would use your previous texts or emails as its training text. We're going to try something a little different, and see if our text engine can learn from reading books. They are easiliy availalble online at places like [Project Gutenburg](http://www.gutenberg.org). You can just download some books in plain text (marked Plain Text UTF-8) from them. A good place to start is on the [Top Downloaded Page](http://www.gutenberg.org/browse/scores/top). 
+Our task now is to find some training text. Normally, your phone or Gmail would use your previous texts or emails as its training text. We're going to try something a little different, and see if our text engine can learn from reading books. They are easily available online at places like [Project Gutenberg](http://www.gutenberg.org). You can just download some books in plain text (marked Plain Text UTF-8) from them. A good place to start is on the [Top Downloaded Page](http://www.gutenberg.org/browse/scores/top). 
 
 Choose 3 or 4 books to download. This should give a good amount of text to learn from. Our autocomplete will choose words in the style of the books used, but this could be quite interesting You can get your texts written the way your favorite author would write them :). 
 
@@ -86,9 +86,9 @@ Great, now we have something for our engine to learn from.
 
 ## Reading in the books
 
-We need to add a reference to the filesystem library to access the books. In the `index.js` file in your new repl, add a reference to `fs`, which is node's built in filesystem module. 
+We need to add a reference to the filesystem library to access the books. In the `index.js` file in your new repl, add a reference to `fs`, which is Node's built in filesystem module. 
 
-```
+```javascript
 const fs = require('fs'); 
 ```
 
@@ -121,7 +121,7 @@ replacements.forEach((value)=>{
 }); 
 ```
 
-The line `data = data.replace(/\r?\n|\r/g, " ");` uses a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) to look for the newline markers [`\r\n` (on windows) and `\n`](https://devhints.io/regexp) on Unix, Linux and MacOS. 
+The line `data = data.replace(/\r?\n|\r/g, " ");` uses a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) to look for the newline markers [`\r\n` (on windows) and `\n`](https://devhints.io/regexp) on Unix, Linux and macOS. 
 
 The next few lines define all the punctuation we expect in our sources. Then, it searches the books for each punctuation mark, and replaces it with a leading space. So a question mark at the end of a sentence _"is this working?"_ would be modified to look like _"is this working ? "_ ,for example.
 
@@ -162,7 +162,7 @@ Now, lets think a bit about the algorithm we'll need to devise to do the work of
 
  We'll look in our structure to see if that phrase is already there - if not we'll add it. Next we'll look at the word immediately after the phrase, and check if it is in the list of likely words for that phrase. If it is already there, increment its weight. If it's not already there, add it and set its weight to 1.
 
-In psuedo-code, this could be expressed as: 
+In pseudo-code, this could be expressed as: 
 
 ```
 for each entry in the tokens
@@ -208,7 +208,7 @@ for (let index = 0; index < tokens.length - depth; index++) {
     // if it does exist, just increment the weight
     let next_word_list = map[phrase]; 
     if (!next_word_list[next_word]){
-        next_word_list[next_word] = 1
+        next_word_list[next_word] = 1;
     } else
     {
         next_word_list[next_word] ++; 
@@ -223,7 +223,7 @@ In **line 1**, we create an empty object using the [literal notation](https://de
 
 In **line 4**, we setup a for loop to run through each token. Notice that we only run up to the tokens array length less the phrase depth. This is because we need to take into account that we have to get a word _after_ the last phrase, so we must stop getting phrases before the end of the token array. 
 
-The rest of the code implements our psuedo code. The comments match the place in the psudeo code that the real code implements. 
+The rest of the code implements our pseudo code. The comments match the place in the pseudo code that the real code implements. 
 
 Now we have a way to build up our data structure for example text. 
 
@@ -234,7 +234,7 @@ Now we come to the part where we use the data structure, along with an initial p
 1. Find the matching phrase, and likely following words in our map
 2. Pick one of the likely words to follow the phrase
 
-To find the matching phrase, and retrieve the likley word list, we can use the indexer functionality of Javascript. Let's create a method to hold this logic. We'll need as inputs the phrase to autocomplete, along with a populated map. 
+To find the matching phrase, and retrieve the likely word list, we can use the indexer functionality of Javascript. Let's create a method to hold this logic. We'll need as inputs the phrase to autocomplete, along with a populated map. 
 
 ```javascript
 function suggest_word(start_phrase, word_map){
@@ -446,7 +446,7 @@ Run the project by clicking the big **RUN >** button at the top centre of the re
 
 This is pretty good for an engine, which we could integrate into a text / chat app, or perhaps a word processor or another project. But can we do something else right now just for fun? 
 
-What if we keep feeding the last `depth` number of words in the phrase back into the autocomplete, to try see if it can come up with not just one next word, but a complete sentence? This would kind of be like the game where you just keep selecting autocomplete words your phone suggests to come up with a nonsense sentence. 
+What if we keep feeding the last `depth` number of words in the phrase back into the autocomplete, to try see if it can come up with not just one next word, but a complete sentence? This would kind of be like the game where you just keep selecting autocomplete words your phone suggests, to come up with a nonsense sentence. 
 
 Let's create a new function, `create_sentence` that does this: 
 
@@ -469,13 +469,13 @@ function create_sentence(start_phrase, word_map, sentence_length, depth){
 ```
 As for the `suggest_word` function, we have parameters for the `start_phrase` and for the populated `word_map`. Then there is also an input for `sentence_length`, which is basically how many rounds to run the autocomplete. We also pass in `depth`, so that this function knows how many words it must use as an initial phrase for each autocomplete round. 
 
-The function then sets up a loop to run the autocomplete for `sentence_length` times. It starts off the same as `suggest_word` function by calling `choose_weighted_word` to get the next word for the given phrase. Then it concatanates that word to a `sentence` string/ 
+The function then sets up a loop to run the autocomplete for `sentence_length` times. It starts off the same as `suggest_word` function by calling `choose_weighted_word` to get the next word for the given phrase. Then it concatenates that word to a `sentence` string. 
 
-The next few lines then splits up the the initial phrase into individual tokens, and the takes the last `depth-1` words/tokens, and then appends the newly chosen word to the end, to make a new initial phrase of `depth` length. Then the cycle starts again, until we have generated a bit of text `sentence_length` long. 
+The next few lines then splits up the initial phrase into individual tokens, and then takes the last `depth-1` words/tokens, and then appends the newly chosen word to the end, to make a new initial phrase of `depth` length. Then the cycle starts again, until we have generated a bit of text `sentence_length` long. 
 
 This is going to give some interesting results! Add the function above to your code, and then modify the initial code to call it: 
 
-```
+```javascript
 let initial_phrase = "and then I"; 
 let sentence = create_sentence(initial_phrase, map, 50, depth);
 console.log(initial_phrase + ': ' + sentence);
@@ -485,21 +485,21 @@ This is an example output.
 
 ![sentence generation output](/images/tutorials/17-predictive-text-engine/sentence-example.png)
 
-It seems like real language, but it still completely nonsensical. Its quite fun to generate random stories with.  Try with varying parameters - intial phrases, sentence length and parameters. 
+It seems like real language, but it's still completely nonsensical. Its quite fun to generate random stories with.  Try with varying parameters - initial phrases, sentence length and parameters. 
 
 ## What else can we use this engine for?
 
 The engine or model we created is known as a type of [Markov Chain](https://en.wikipedia.org/wiki/Markov_chain). A Markov chain is used as a model when we have an environmental 'state', which can transition to other states through a variety of actions. It has the property of being 'Markovian' when the probability of each action, or event, can be sufficiently modelled by only knowing the current state, and not taking into account previous states, or history. 
 
-In our case, a state is a phrase of a certain length, and the the action is the likely word to pick, leading to a new 'state', or phrase. 
+In our case, a state is a phrase of a certain length, and the action is the likely word to pick, leading to a new 'state', or phrase. 
 
-Other things that can be modelled quite well with Markov chains include games like Tic-Tac-Toe, or chess, where the current state is easy to define, and there is a finite list of possible actions for each state (although in Chess, this can get rather large). 
+Other things that can be modelled quite well with Markov chains include games like Tic-Tac-Toe, or Chess, where the current state is easy to define, and there is a finite list of possible actions for each state (although in Chess, this can get rather large). 
 
 ## Things to try next
 
 There are some things to improve this engine: 
 - If it hasn't seen a particular initial phrase, the code will crash. It would be good to add a check to see if the phrase doesn't exist and return an error code, or empty suggestion rather than crashing
-- It could be cool to make interactive. Try adding a console interface like [readline module](https://nodejs.org/api/readline.html) to prompt for a phrase / input and show the output, allowing you to try multiple phrases in one session. 
+- It could be cool to make it interactive. Try adding a console interface like [readline module](https://nodejs.org/api/readline.html) to prompt for a phrase / input and show the output, allowing you to try multiple phrases in one session. 
 - Perhaps try save the populated map to a data store, so it doesn't have to be re-trained every time you run the program. This would allow you to add new books and language examples continually to make the engine even better. There is a [repl.it database](https://docs.repl.it/misc/database) you can use for this. 
 
 
