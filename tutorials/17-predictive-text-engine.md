@@ -4,6 +4,7 @@ Have you ever wondered how your phone knows what to sugggest in the autocomplete
 
 In this tutorial, we'll make a predictive text engine that learns by example. Newer text prediction engines, like [GPT3](https://en.wikipedia.org/wiki/GPT-3) use neural networks, but we'll use more standard coding for this project. 
 
+![Example sentence construction](/images/tutorials/17-predictive-text-engine/test_run.gif)
 
 ## Overview and requirements
 
@@ -63,7 +64,7 @@ Here's the main tasks we'll need to figure out and code:
 
 First thing - let's head over to [repl.it](https://repl.it) and create a new Repl.  Choose **Node.js** as your language. Now, give this Repl a name, like "text-autocomplete". 
 
-![create new node.js repl with name text-autocomplete](/images/tutorials/17-predictive-text-engine/new-repl.gif)
+![create new node.js repl with name text-autocomplete](/images/tutorials/17-predictive-text-engine/new-repl.png)
 
 You should see a new `index.js` file, where we can start adding our code. 
 
@@ -502,5 +503,5 @@ There are some things to improve this engine:
 - Perhaps try save the populated map to a data store, so it doesn't have to be re-trained every time you run the program. This would allow you to add new books and language examples continually to make the engine even better. There is a [repl.it database](https://docs.repl.it/misc/database) you can use for this. 
 
 
-
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/text-autocomplete?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
