@@ -151,7 +151,7 @@ Back in our `main` function, let's pass `content_strings` to the `load_content_i
     content = load_content_items(content_strings)
 ```
 
-Now let's create a template string below the content strings. This is just some HTML with Jinja code in `{{ }}` and `{% %}` blocks. Add this code block beneath the definition of `content_strings` in the `main` function.
+Now let's create a template string below the content strings. This is just some HTML with Jinja code in `{‎{ }}` and `{‎% %}` blocks. Add this code block beneath the definition of `content_strings` in the `main` function.
 
 ```python
     template_string = """
