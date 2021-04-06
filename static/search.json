@@ -475,63 +475,105 @@
   },
   {
     "category": "Get Started",
-    "name": "Storing Secrets (.env)",
+    "name": ".env file (deprecated)",
     "heading": null,
     "slug": "repls/secret-keys"
   },
   {
     "category": "Get Started",
-    "name": "Storing Secrets (.env)",
+    "name": ".env file (deprecated)",
     "heading": "Storing Secrets in .env",
     "slug": "/repls/secret-keys#storing-secrets-in-env"
   },
   {
     "category": "Get Started",
-    "name": "Storing Secrets (.env)",
+    "name": ".env file (deprecated)",
     "heading": "`.env` Files",
     "slug": "/repls/secret-keys#env-files"
   },
   {
     "category": "Get Started",
-    "name": "Storing Secrets (.env)",
+    "name": ".env file (deprecated)",
     "heading": "super secret token",
     "slug": "/repls/secret-keys#super-secret-token"
   },
   {
     "category": "Get Started",
-    "name": "Storing Secrets (.env)",
+    "name": ".env file (deprecated)",
     "heading": "Reading .env Files",
     "slug": "/repls/secret-keys#reading-env-files"
   },
   {
     "category": "Get Started",
-    "name": "Storing Secrets (.env)",
+    "name": ".env file (deprecated)",
     "heading": "super secret token",
     "slug": "/repls/secret-keys#super-secret-token"
   },
   {
     "category": "Get Started",
-    "name": "Storing Secrets (.env)",
+    "name": ".env file (deprecated)",
     "heading": "Python",
     "slug": "/repls/secret-keys#python"
   },
   {
     "category": "Get Started",
-    "name": "Storing Secrets (.env)",
+    "name": ".env file (deprecated)",
     "heading": "prints 'admin'",
     "slug": "/repls/secret-keys#prints-admin"
   },
   {
     "category": "Get Started",
-    "name": "Storing Secrets (.env)",
+    "name": ".env file (deprecated)",
     "heading": "JavaScript",
     "slug": "/repls/secret-keys#java-script"
   },
   {
     "category": "Get Started",
-    "name": "Storing Secrets (.env)",
+    "name": ".env file (deprecated)",
     "heading": "Example",
     "slug": "/repls/secret-keys#example"
+  },
+  {
+    "category": "Get Started",
+    "name": "Secrets & environment variables",
+    "heading": null,
+    "slug": "repls/secrets-environment-variables"
+  },
+  {
+    "category": "Get Started",
+    "name": "Secrets & environment variables",
+    "heading": "Secrets in environment variables ",
+    "slug": "/repls/secrets-environment-variables#secrets-in-environment-variables"
+  },
+  {
+    "category": "Get Started",
+    "name": "Secrets & environment variables",
+    "heading": "Adding, viewing and editing environment variables, secrets",
+    "slug": "/repls/secrets-environment-variables#adding-viewing-and-editing-environment-variables-secrets"
+  },
+  {
+    "category": "Get Started",
+    "name": "Secrets & environment variables",
+    "heading": "Using environment variables in your code",
+    "slug": "/repls/secrets-environment-variables#using-environment-variables-in-your-code"
+  },
+  {
+    "category": "Get Started",
+    "name": "Secrets & environment variables",
+    "heading": "Python",
+    "slug": "/repls/secrets-environment-variables#python"
+  },
+  {
+    "category": "Get Started",
+    "name": "Secrets & environment variables",
+    "heading": "prints 'admin'",
+    "slug": "/repls/secrets-environment-variables#prints-admin"
+  },
+  {
+    "category": "Get Started",
+    "name": "Secrets & environment variables",
+    "heading": "JavaScript",
+    "slug": "/repls/secrets-environment-variables#java-script"
   },
   {
     "category": "Get Started",
@@ -972,6 +1014,48 @@
     "slug": "/repls/UnitTesting#example-team-projects"
   },
   {
+    "category": "Get Started",
+    "name": "Native Graphics using VNC",
+    "heading": null,
+    "slug": "repls/vnc"
+  },
+  {
+    "category": "Get Started",
+    "name": "Native Graphics using VNC",
+    "heading": "Native Graphics using VNC ",
+    "slug": "/repls/vnc#native-graphics-using-vnc"
+  },
+  {
+    "category": "Get Started",
+    "name": "Native Graphics using VNC",
+    "heading": "What is VNC?",
+    "slug": "/repls/vnc#what-is-vnc"
+  },
+  {
+    "category": "Get Started",
+    "name": "Native Graphics using VNC",
+    "heading": "How can I use VNC?",
+    "slug": "/repls/vnc#how-can-i-use-vnc"
+  },
+  {
+    "category": "Get Started",
+    "name": "Native Graphics using VNC",
+    "heading": "Securing your repl ",
+    "slug": "/repls/vnc#securing-your-repl"
+  },
+  {
+    "category": "Get Started",
+    "name": "Native Graphics using VNC",
+    "heading": "How can I use fullscreen VNC?",
+    "slug": "/repls/vnc#how-can-i-use-fullscreen-vnc"
+  },
+  {
+    "category": "Get Started",
+    "name": "Native Graphics using VNC",
+    "heading": "Examples",
+    "slug": "/repls/vnc#examples"
+  },
+  {
     "category": "Teams for Education",
     "name": "Introduction to Teams For Education",
     "heading": null,
@@ -1234,6 +1318,30 @@
     "name": "Example Homework Assignments",
     "heading": "Python Shopping List",
     "slug": "/Teams/HomeworkAssignments#python-shopping-list"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Embedding Projects",
+    "heading": null,
+    "slug": "Teams/EmbedProjects"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Embedding Projects",
+    "heading": "Embed Projects",
+    "slug": "/Teams/EmbedProjects#embed-projects"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Team and Project Sharing",
+    "heading": null,
+    "slug": "Teams/projectCopying"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Team and Project Sharing",
+    "heading": "Team and Project Sharing",
+    "slug": "/Teams/projectCopying#team-and-project-sharing"
   },
   {
     "category": "Repl.it Classrooms",
@@ -1940,32 +2048,32 @@
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Welcome to Code with Repl.it",
-    "slug": "/tutorials/00-overview#welcome-to-code-with-repl-it"
+    "heading": "Welcome to Code with Replit",
+    "slug": "/tutorials/00-overview#welcome-to-code-with-replit"
   },
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Part 1: The basics of Repl.it",
-    "slug": "/tutorials/00-overview#part-1-the-basics-of-repl-it"
+    "heading": "Part 1: The basics of Replit",
+    "slug": "/tutorials/00-overview#part-1-the-basics-of-replit"
   },
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Lesson 1: Introduction to Repl.it and using the IDE",
-    "slug": "/tutorials/00-overview#lesson-1-introduction-to-repl-it-and-using-the-ide"
+    "heading": "Lesson 1: Introduction to Replit and using the IDE",
+    "slug": "/tutorials/00-overview#lesson-1-introduction-to-replit-and-using-the-ide"
   },
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Lesson 2: Working with files using Repl.it",
-    "slug": "/tutorials/00-overview#lesson-2-working-with-files-using-repl-it"
+    "heading": "Lesson 2: Working with files using Replit",
+    "slug": "/tutorials/00-overview#lesson-2-working-with-files-using-replit"
   },
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Lesson 3: Managing dependencies with Repl.it",
-    "slug": "/tutorials/00-overview#lesson-3-managing-dependencies-with-repl-it"
+    "heading": "Lesson 3: Managing dependencies with Replit",
+    "slug": "/tutorials/00-overview#lesson-3-managing-dependencies-with-replit"
   },
   {
     "category": "Tutorials",
@@ -1982,8 +2090,8 @@
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Part 2: advanced Repl.it use",
-    "slug": "/tutorials/00-overview#part-2-advanced-repl-it-use"
+    "heading": "Part 2: advanced Replit use",
+    "slug": "/tutorials/00-overview#part-2-advanced-replit-use"
   },
   {
     "category": "Tutorials",
@@ -2018,8 +2126,8 @@
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Lesson 11: Keeping your data in check with the Repl.it database",
-    "slug": "/tutorials/00-overview#lesson-11-keeping-your-data-in-check-with-the-repl-it-database"
+    "heading": "Lesson 11: Keeping your data in check with the Replit database",
+    "slug": "/tutorials/00-overview#lesson-11-keeping-your-data-in-check-with-the-replit-database"
   },
   {
     "category": "Tutorials",
@@ -2036,8 +2144,20 @@
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Lesson 14: 2D platform game with PyGame and Repl.it",
-    "slug": "/tutorials/00-overview#lesson-14-2-d-platform-game-with-py-game-and-repl-it"
+    "heading": "Lesson 14: 2D platform game with PyGame and Replit",
+    "slug": "/tutorials/00-overview#lesson-14-2-d-platform-game-with-py-game-and-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 15: Building a Chat App with Node.js and Replit",
+    "slug": "/tutorials/00-overview#lesson-15-building-a-chat-app-with-node-js-and-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 16: Build a static site generator in Python",
+    "slug": "/tutorials/00-overview#lesson-16-build-a-static-site-generator-in-python"
   },
   {
     "category": "Tutorials",
@@ -2048,38 +2168,38 @@
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Beginner web scraping with Python and Repl.it",
-    "slug": "/tutorials/00-overview#beginner-web-scraping-with-python-and-repl-it"
+    "heading": "Beginner web scraping with Python and Replit",
+    "slug": "/tutorials/00-overview#beginner-web-scraping-with-python-and-replit"
   },
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Building news word clouds using Python and Repl.it",
-    "slug": "/tutorials/00-overview#building-news-word-clouds-using-python-and-repl-it"
+    "heading": "Building news word clouds using Python and Replit",
+    "slug": "/tutorials/00-overview#building-news-word-clouds-using-python-and-replit"
   },
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Building a Discord Bot with Python and Repl.it",
-    "slug": "/tutorials/00-overview#building-a-discord-bot-with-python-and-repl-it"
+    "heading": "Building a Discord Bot with Python and Replit",
+    "slug": "/tutorials/00-overview#building-a-discord-bot-with-python-and-replit"
   },
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Building a Discord bot with Node.js and Repl.it",
-    "slug": "/tutorials/00-overview#building-a-discord-bot-with-node-js-and-repl-it"
+    "heading": "Building a Discord bot with Node.js and Replit",
+    "slug": "/tutorials/00-overview#building-a-discord-bot-with-node-js-and-replit"
   },
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Creating and hosting a basic web application with Django and Repl.it",
-    "slug": "/tutorials/00-overview#creating-and-hosting-a-basic-web-application-with-django-and-repl-it"
+    "heading": "Creating and hosting a basic web application with Django and Replit",
+    "slug": "/tutorials/00-overview#creating-and-hosting-a-basic-web-application-with-django-and-replit"
   },
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Building a CRM app with NodeJS, Repl.it, and MongoDB",
-    "slug": "/tutorials/00-overview#building-a-crm-app-with-node-js-repl-it-and-mongo-db"
+    "heading": "Building a CRM app with NodeJS, Replit, and MongoDB",
+    "slug": "/tutorials/00-overview#building-a-crm-app-with-node-js-replit-and-mongo-db"
   },
   {
     "category": "Tutorials",
@@ -3073,6 +3193,276 @@
   },
   {
     "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": null,
+    "slug": "tutorials/15-repl-chat"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Building a Replit to Replit Chat App Using Node.js",
+    "slug": "/tutorials/15-repl-chat#building-a-replit-to-replit-chat-app-using-node-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Overview and Requirements",
+    "slug": "/tutorials/15-repl-chat#overview-and-requirements"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Create a Chat Server",
+    "slug": "/tutorials/15-repl-chat#create-a-chat-server"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Add a web framework",
+    "slug": "/tutorials/15-repl-chat#add-a-web-framework"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Add a web server",
+    "slug": "/tutorials/15-repl-chat#add-a-web-server"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Extend the server with Socket.io",
+    "slug": "/tutorials/15-repl-chat#extend-the-server-with-socket-io"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Listen for new connections and messages",
+    "slug": "/tutorials/15-repl-chat#listen-for-new-connections-and-messages"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Start up and test the server",
+    "slug": "/tutorials/15-repl-chat#start-up-and-test-the-server"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Complete server code",
+    "slug": "/tutorials/15-repl-chat#complete-server-code"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Building the Chat Client",
+    "slug": "/tutorials/15-repl-chat#building-the-chat-client"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Add the Socket client and readline modules",
+    "slug": "/tutorials/15-repl-chat#add-the-socket-client-and-readline-modules"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Create a new connection to the chat server",
+    "slug": "/tutorials/15-repl-chat#create-a-new-connection-to-the-chat-server"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Setup a console interface",
+    "slug": "/tutorials/15-repl-chat#setup-a-console-interface"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "User and message variables",
+    "slug": "/tutorials/15-repl-chat#user-and-message-variables"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Handle Socket events",
+    "slug": "/tutorials/15-repl-chat#handle-socket-events"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Getting the user chat handle",
+    "slug": "/tutorials/15-repl-chat#getting-the-user-chat-handle"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Waiting and sending user messages",
+    "slug": "/tutorials/15-repl-chat#waiting-and-sending-user-messages"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Showing messages from other users",
+    "slug": "/tutorials/15-repl-chat#showing-messages-from-other-users"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Complete client code ",
+    "slug": "/tutorials/15-repl-chat#complete-client-code"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Running the client app",
+    "slug": "/tutorials/15-repl-chat#running-the-client-app"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Chatting With a Friend ",
+    "slug": "/tutorials/15-repl-chat#chatting-with-a-friend"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Make it Your Own",
+    "slug": "/tutorials/15-repl-chat#make-it-your-own"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Chat server",
+    "slug": "/tutorials/15-repl-chat#chat-server"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Chat client",
+    "slug": "/tutorials/15-repl-chat#chat-client"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Chat app using Node.js",
+    "heading": "Things to Try Next",
+    "slug": "/tutorials/15-repl-chat#things-to-try-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": null,
+    "slug": "tutorials/16-static-site-generator"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Create a static site generator with Python and Replit",
+    "slug": "/tutorials/16-static-site-generator#create-a-static-site-generator-with-python-and-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Building a proof of concept",
+    "slug": "/tutorials/16-static-site-generator#building-a-proof-of-concept"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Setting up and defining the flow",
+    "slug": "/tutorials/16-static-site-generator#setting-up-and-defining-the-flow"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Parsing content and templates",
+    "slug": "/tutorials/16-static-site-generator#parsing-content-and-templates"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Rendering the site",
+    "slug": "/tutorials/16-static-site-generator#rendering-the-site"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Blog generator",
+    "slug": "/tutorials/16-static-site-generator#blog-generator"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Creating input files",
+    "slug": "/tutorials/16-static-site-generator#creating-input-files"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Ingesting input files",
+    "slug": "/tutorials/16-static-site-generator#ingesting-input-files"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Ingesting site configuration",
+    "slug": "/tutorials/16-static-site-generator#ingesting-site-configuration"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Ingesting posts",
+    "slug": "/tutorials/16-static-site-generator#ingesting-posts"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Ingesting templates",
+    "slug": "/tutorials/16-static-site-generator#ingesting-templates"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Writing output files",
+    "slug": "/tutorials/16-static-site-generator#writing-output-files"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Generic site generator",
+    "slug": "/tutorials/16-static-site-generator#generic-site-generator"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Expanding the config file",
+    "slug": "/tutorials/16-static-site-generator#expanding-the-config-file"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Ingesting user-defined content",
+    "slug": "/tutorials/16-static-site-generator#ingesting-user-defined-content"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Rendering user-defined content",
+    "slug": "/tutorials/16-static-site-generator#rendering-user-defined-content"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Adding a new content type",
+    "slug": "/tutorials/16-static-site-generator#adding-a-new-content-type"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Static Site Generator",
+    "heading": "Where to next?",
+    "slug": "/tutorials/16-static-site-generator#where-to-next"
+  },
+  {
+    "category": "Tutorials",
     "name": "Pinboard Project Part 1: HTML & CSS",
     "heading": null,
     "slug": "tutorials/PinboardProjectPart1"
@@ -3550,6 +3940,48 @@
     "name": "Spotify API tutorials",
     "heading": "Spotify API project 2: Song seeder and analytics web app",
     "slug": "/tutorials/spotify-tutorials#spotify-api-project-2-song-seeder-and-analytics-web-app"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Kaboom Editor",
+    "heading": null,
+    "slug": "tutorials/kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Kaboom Editor",
+    "heading": "Kaboom Editor",
+    "slug": "/tutorials/kaboom#kaboom-editor"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Kaboom Editor",
+    "heading": "Scene Manager",
+    "slug": "/tutorials/kaboom#scene-manager"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Kaboom Editor",
+    "heading": "Sprite Manager & Editor",
+    "slug": "/tutorials/kaboom#sprite-manager-editor"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Kaboom Editor",
+    "heading": "Sound Manager",
+    "slug": "/tutorials/kaboom#sound-manager"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Kaboom Editor",
+    "heading": "Debug",
+    "slug": "/tutorials/kaboom#debug"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Kaboom Editor",
+    "heading": "Settings",
+    "slug": "/tutorials/kaboom#settings"
   },
   {
     "category": "Teaching Curriculum",

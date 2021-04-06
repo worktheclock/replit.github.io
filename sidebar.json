@@ -44,8 +44,8 @@
         "slug": "secret-keys"
       },
       {
-        "name": "Environment variables",
-        "slug": "environment-variables"
+        "name": "Secrets & environment variables",
+        "slug": "secrets-environment-variables"
       },
       {
         "name": "Creating Interactive Python Plots",

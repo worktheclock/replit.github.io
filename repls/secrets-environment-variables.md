@@ -1,4 +1,4 @@
-# Configuring environment variables
+# Secrets & environment variables 
 
 Sensitive information such as credentials and API keys should be separate from your codebase so that you can share your code with others but ensure that they cannot access your services, such as your user database.
 
@@ -10,7 +10,7 @@ To access your own private environment variables, navigate to the padlock icon i
 
 ![The environment variables panel](/images/repls/env-variables.png)
 
-## Adding, viewing and editing environment variables
+## Adding, viewing and editing environment variables, secrets
 
 To configure certain software and services, you'll need to add environment variables with specific keys and unique values given to you by your service provider (e.g. Stripe).
 
