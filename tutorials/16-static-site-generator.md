@@ -188,7 +188,7 @@ We'll also change the `load_templates` function invocation in the `main` functio
 
 ### Rendering the site
 
-Now let's populate the template with our config and content data. We'll do this using the template's `render()` method. This method takes a list of keyword arguments which it will use to resolve the variable references template's `{{ }}` and `{%‎ %}` blocks.
+Now let's populate the template with our config and content data. We'll do this using the template's `render()` method. This method takes a list of keyword arguments which it will use to resolve the variable references template's `{{ }}` and `{‎% %}` blocks.
 
 In the `render_site` function, add the following code:
 
