@@ -42,6 +42,11 @@ const render = async (res, category, slug) => {
 	res.render('index.ejs');
 }
 
+app.use((req, res, next) => {
+	console.log(req.method, req.path)
+	return next()
+})
+
 app.get('/', (req, res) => {
 	render(res, 'repls', 'intro');
 });

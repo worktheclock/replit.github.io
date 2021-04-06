@@ -294,6 +294,10 @@
       {
           "name": "Spotify API tutorials",
           "slug": "spotify-tutorials"
+      },
+      {
+          "name": "Kaboom Editor",
+          "slug": "kaboom"
       }
     ]
   },
