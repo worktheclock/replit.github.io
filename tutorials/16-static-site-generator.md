@@ -151,7 +151,7 @@ Back in our `main` function, let's pass `content_strings` to the `load_content_i
     content = load_content_items(content_strings)
 ```
 
-Now let's create a template string below the content strings. This is just some HTML with Jinja code in `{‎{ }}` and `{‎% %}` blocks. Add this code block beneath the definition of `content_strings` in the `main` function.
+Now let's create a template string below the content strings. This is just some HTML with Jinja code in `{{ }}` and `{% %}` blocks. Add this code block beneath the definition of `content_strings` in the `main` function.
 
 ```python
     template_string = """
@@ -188,7 +188,7 @@ We'll also change the `load_templates` function invocation in the `main` functio
 
 ### Rendering the site
 
-Now let's populate the template with our config and content data. We'll do this using the template's `render()` method. This method takes a list of keyword arguments which it will use to resolve the variable references template's `{{ }}` and `{‎% %}` blocks.
+Now let's populate the template with our config and content data. We'll do this using the template's `render()` method. This method takes a list of keyword arguments which it will use to resolve the variable references template's `{{ }}` and `{% %}` blocks.
 
 In the `render_site` function, add the following code:
 
