@@ -40,12 +40,8 @@
         "slug": "repl-auth"
       },
       {
-        "name": ".env file (deprecated)",
+        "name": "Storing Secrets (.env)",
         "slug": "secret-keys"
-      },
-      {
-        "name": "Environment variables",
-        "slug": "environment-variables"
       },
       {
         "name": "Creating Interactive Python Plots",
