@@ -1,4 +1,4 @@
-# Playing Audio on Replit [BETA]
+# Playing Audio on Replit
 
 ###### Note that audio is currently only enabled for explorers. Learn to become an explorer [here](https://replit.com/talk/announcements/Become-an-Explorer/6180)
 
