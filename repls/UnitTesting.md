@@ -1,16 +1,16 @@
 # Unit Testing
 
-Repl unit testing allows a Repl author to create code driven tests that compare actual function output with expected output. 
+Repl unit testing allows a repl author to create code-driven tests that compare actual function output with expected output. 
 
-## Supported languages & testing frameworks
+## Supported Languages and Testing Frameworks
 
-- Java - [JUnit](https://junit.org/junit5/docs/current/user-guide/)
-- Python - [unittest](https://docs.python.org/3/library/unittest.html)
-- Node.js - [Jest](https://jestjs.io/docs/en/getting-started)
+- Java – [JUnit](https://junit.org/junit5/docs/current/user-guide/)
+- Python – [unittest](https://docs.python.org/3/library/unittest.html)
+- Node.js – [Jest](https://jestjs.io/docs/en/getting-started)
 
-## Why use Unit Testing?
+## Why Use Unit Testing?
 
-Unit testing is ideal for complex testing scenarios oriented around specific function return values given parameters. 
+Unit testing is great for more complicated testing scenarios. For example, when you need to test that functions return specific values based on their (dynamic) inputs.
 
 Each test is itself a function that follows a pattern:
 
@@ -26,9 +26,11 @@ double area = calculateRectArea(3.0, 4.0);
 assertEqual(12.0, actual);
 ```
 
-Unit testing is not ideal for testing that involves using Standard In (`System.in`) and Standard Out (`System.out`). Input/Outupt testing is ideal for testing the relies on precise usage of `println()`. 
+Unit testing is not ideal for testing that involves using Standard In (`System.in`) and Standard Out (`System.out`). Input/Outupt testing is ideal for testing that relies on precise usage of `println()`. 
 
-## Using the testing pane
+## Using the Testing Pane
+
+The testing pane can be found in your left-hand sidebar in your repl. It is your hub for creating tests. Read on to find out more about how to use this helpful feature. 
 
 ### Defining a test function
 
@@ -36,11 +38,11 @@ Open the testing pane within a project.
 
 ![unit testing pane](/images/unit-testing/unit-testing-pane.png)
 
-If prompted, select Unit testing.
+If prompted, select "Unit tests".
 
 <img src="/images/unit-testing/testing-method.png" style="width: 200px;">
 
-Write a function within the main file that easy to test: accepts parameters and returns a single result. This example includes an `add` function which simply returns the result of adding two numbers.
+Write a function within the main file that's easy to test: something which accepts parameters and returns a single result. Our example includes an `add` function which simply returns the result of adding two numbers.
 
 ![unit testing main py](/images/unit-testing/unit-testing-add-py.png)
 
@@ -65,31 +67,33 @@ Test results will appear in the Console.
 
 ### Importing libraries
 
-If your Repl has library dependencies or you would like to include any other library just for testing purposes, imports can be configured in the "Setup" for the test suite.
+Imports can be configured in the "Setup" for the test suite, which is helpful if:
+* Your repl has library dependencies.
+* You would like to include any other library just for testing purposes. 
 
-For example you can import [NumPy](https://numpy.org/) for all tests. Keep in mind that this will affect all test functions within your test suite (you will not need to import more than once):
+For example, you can import [NumPy](https://numpy.org/) for all tests. Keep in mind that this will affect all test functions within your test suite (you will not need to import more than once):
 
 ![unit test setup](/images/unit-testing/unit-testing-import.png)
 
-Given an example function using NumPy:
+Here is an example function using NumPy:
 
 ![unit test numpy](/images/unit-testing/unit-testing-np-example.png)
 
-Every test you write can also use NumPy:
+Every other test you write can also use NumPy:
 
 ![unit test numpy](/images/unit-testing/unit-testing-np-test.png)
 
 ### Importing modules
 
-If you would like to test multiple modules or files within your Repl, you must manually import then in the "Setup".
+If you would like to test multiple modules or files within your repl, you must manually import them in the "Setup".
 
 ![unit test import module](/images/unit-testing/unit-testing-import-module.png)
 
-## Advanced setup and teardown
+## Advanced Setup and Teardown
 
 Sometimes tests require specific setup and teardown steps to configure and destroy global state. 
 
-Consider a Repl that relies on Repl Database and loads specific data by key.
+Consider a repl that relies on Repl Database and loads specific data by key.
 
 ![unit testing database](/images/unit-testing/unit-testing-database.png)
 
@@ -110,16 +114,16 @@ Use the teardown to delete the test data:
 
 ![unit testing teardown](/images/unit-testing/unit-testing-teardown.png)
 
-## Assertion documentation
+## Assertion Documentation
 
-Use these links to read about the supported assert function for each unit testing library.
+Read about the supported assert function for each unit testing library:
 
-- [Java JUnit](https://junit.org/junit4/javadoc/latest/org/junit/Assert.html)
-- [Python unittest assert methods](https://docs.python.org/3/library/unittest.html#assert-methods)
-- [Node.js Jest expect functions](https://jestjs.io/docs/en/expect)
+- Java – [JUnit](https://junit.org/junit4/javadoc/latest/org/junit/Assert.html)
+- Python – [unittest assert methods](https://docs.python.org/3/library/unittest.html#assert-methods)
+- Node.js – [Jest expect functions](https://jestjs.io/docs/en/expect)
 
 
-## Tips for writing good tests
+## Tips for Writing Good Tests
 
 1. Only test one expected output at a time.
 1. Avoid relying on external libraries when possible.
@@ -127,17 +131,17 @@ Use these links to read about the supported assert function for each unit testin
 1. Avoid testing functions that are not crucial portions of the program.
 1. Avoid testing functions that are part of external libraries. 
 
-## Tips for writing "testable" functions
+## Tips for Writing "Testable" Functions
 
 1. Decompose your program into discrete functions.
 1. Keep functions concise and descriptive. 
-1. Design predictable inputs (params) and outputs (return).
+1. Design predictable inputs (parameters) and outputs (return).
 
-## Teams For Education
+## Teams for Education
 
-Unit testing is a supported in [Teams for Education](https://teamsforeducationresources.obaidaa.repl.co/), if you don't have a team yet you can create one [here](https://repl.it/teams).
+Unit testing is supported in [Teams for Education](https://teamsforeducationresources.obaidaa.repl.co/). If you don't have a team yet, create one [here](https://repl.it/teams).
 
-### Creating a Project
+### Creating a project
 
 If you are new to projects, you can find more info on creating a project [here](./Projects). 
 
