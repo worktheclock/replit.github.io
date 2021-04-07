@@ -1,7 +1,5 @@
 # Managing Your Repls
 
-## Repls Dashboard
-
 To manage and keep track of all your repls, head to your Repls Dashboard. You can find it on your account by clicking on the 'My Repls' tab on the left-hand side.
 
 Repls are listed in order of when they were created, with the most recent first. Each repl has its own three-dot menu at the far right. Bringing up this menu will allow you to:
@@ -14,7 +12,7 @@ Repls are listed in order of when they were created, with the most recent first.
 * Delete the repl
 * Toggle privacy settings (subscribers only)
 
-### Starring Repls
+## Starring Repls
 
 You can "star" a repl to mark it as a favorite. This means you can then easily filter your dashboard to show only your starred repls by clicking on the star slider at the top of your dashboard. There is no limit to how many repls you can star. Only you can see which repls you have starred; this info will not appear in your profile.
 
