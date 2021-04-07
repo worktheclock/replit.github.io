@@ -20,15 +20,13 @@ Below is an example of the JavaScript library. Generated docs can be found [here
 
 <iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@turbio/audio-js-demo?lite=true"></iframe>
 
+Below is an example using the Python library. Generated docs can be found with the Python Replit package documented [here](https://replit-docs-python.allawesome497.repl.co/).
+
+<iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@AllAwesome497/py-audio-demo?lite=true"></iframe>
+
 ### Community Contributed Libraries
 
 If you prefer to use Rust, you can see how [here](https://github.com/Daniel-Liu-c0deb0t/replit_audio)
-
-## Developing an Audio Library for Replit
-
-If you are new to Python or JavaScript, you can follow our steps below to make a library.
-
-### Step 1: Add an audio source
 
 ## Developing an Audio Library for Replit
 
