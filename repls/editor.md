@@ -1,13 +1,13 @@
 
 # Editor Shortcuts
 
-Be more productive with Replit by learning the code editor’s powerful shortcuts for editing, writing, and inspecting code.
+Be more productive in the Replit code editor by learning the code editor’s powerful shortcuts for editing, writing, and inspecting code.
 
 ## Command Palette
 
 The command palette allows you to view all available commands based on your current context. 
 
-To access the command palette, press `F1` or `Ctrl+Shift+P` (`cmd+shift+P` on a Mac). **Note:** If you are using Firefox, `Ctrl+Shift+P` will open an incognito window, so use the `F1` option instead.
+To access the command palette press `F1` or `Ctrl+Shift+P` (`cmd+shift+P` on macOS). **Note:** if you are using Firefox, the second option will open an incognito window, so use the `F1` option instead.
 
 ![command palette](/images/repls/editor/command_palette.gif)
 
@@ -15,9 +15,10 @@ To access the command palette, press `F1` or `Ctrl+Shift+P` (`cmd+shift+P` on a 
 
 The following keyboard shortcuts can be used in a variety of ways. If you forget a keyboard shortcut, check the command palette.
 
+
 ### Moving the Current Line
 
-On a Mac, press `option+up` or `option+down`to move the current line up or down. 
+Press `option+up` or `option+down` on a Mac to move the current line up or down. 
 
 On other computers, press `alt+up` or `alt+down`.
 
@@ -25,7 +26,7 @@ On other computers, press `alt+up` or `alt+down`.
 
 ### Clone the Current Line
 
-On a Mac, press `shift+option+up` or `shift+option+down` to clone the current line above or below.
+Press `shift+option+up` or `shift+option+down` on a Mac to clone the current line above or below.
 
 On other computers, press `shift+alt+up` or `shift+alt+down`.
 
@@ -33,7 +34,7 @@ On other computers, press `shift+alt+up` or `shift+alt+down`.
 
 ### Selecting Lines
 
-On a Mac, press `cmd+I` to select a line. 
+Press `cmd+I` on a Mac to select a line. 
 
 On other computers, press `ctrl+I`.
 
@@ -41,7 +42,7 @@ On other computers, press `ctrl+I`.
 
 ### Deleting Lines
 
-On a Mac, press `shift+cmd+K` to delete a line.
+Press `shift+cmd+K` on a Mac to delete a line.
 
 On other computers, press `ctrl+shift+K`.
 
@@ -57,7 +58,7 @@ On other computers, press `ctrl+shift+enter`.
 
 ### Adding Cursors
 
-On a Mac, press `cmd+option+up` or `cmd+option+down` to add cursors above or below your current line. 
+Press `cmd+option+up` or `cmd+option+down` on a Mac to add cursors above or below your current line. 
 
 On other computers, press `ctrl+alt+up` or `ctrl+alt+down`.
 
@@ -65,7 +66,7 @@ On other computers, press `ctrl+alt+up` or `ctrl+alt+down`.
 
 ### Find
 
-On a Mac, press `cmd+F` to find.
+Press `cmd+F` on a Mac to find.
 
 On other computers, press `ctrl+F`.
 
@@ -73,7 +74,7 @@ On other computers, press `ctrl+F`.
 
 ### Replace
 
-On a Mac, press `option+cmd+F` to replace.
+Press `option+cmd+F` on a Mac to replace.
 
 On other computers, press `ctrl+H`.
 
@@ -89,7 +90,7 @@ On other computers, press `F3` to find next or `shift+F3` to find previous.
 
 ### Adding Selections to Next Find Match
 
-On a Mac, press `cmd+D` to add a selection to the next find match.
+Press `cmd+D` on a Mac to add a selection to the next find match.
 
 On other computers, press `ctrl+D`.
 
@@ -101,7 +102,7 @@ Use the following shortcuts to navigate the editor.
 
 ### Open Files
 
-On a Mac, press `cmd+P` to quickly open files.
+Press `cmd+P` on a Mac to quickly open files.
 
 On other computers, press `ctrl+P`.
 
@@ -109,9 +110,7 @@ On other computers, press `ctrl+P`.
 
 ### Go to Line
 
-On a Mac, press `cmd+G` to go to a specified line.
-
-On other computers, press `ctrl+G`.
+Press `ctrl+G` to go to a specified line.
 
 ![go to line](/images/repls/editor/go_to_line.gif)
 

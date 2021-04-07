@@ -1,7 +1,5 @@
 # Embedding Repls
 
-If you want to embed a repl in another platform. This guide will show you how it can be done using iframe, on WordPress, and on Medium. You will also learn what happens if you want to edit an embedded repl. 
-
 ## Embedding a Repl via `iframe`
 
 You can embed repls in an iframe. This is useful if you want to integrate Replit into your app. If your app supports [OEmbed](https://oembed.com/), we already
