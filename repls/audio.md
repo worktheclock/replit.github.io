@@ -1,4 +1,4 @@
-# Playing Audio on Replit [BETA]
+# Playing Audio on Replit
 
 ###### Note that audio is currently only enabled for explorers. Learn to become an explorer [here](https://replit.com/talk/announcements/Become-an-Explorer/6180)
 
@@ -27,7 +27,6 @@ Below is an example using the Python library. Generated docs can be found with t
 ### Community Contributed Libraries
 
 If you prefer to use Rust, you can see how [here](https://github.com/Daniel-Liu-c0deb0t/replit_audio)
-
 
 ## Developing an Audio Library for Replit
 

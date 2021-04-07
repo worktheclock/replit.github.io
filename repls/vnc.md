@@ -41,7 +41,7 @@ You must complete the "Securing your repl" section to proceed with these steps.
 
    <img style="width:200px" src="https://docs.replit.com/images/vnc/host.png"/>
 
-6. Use the `runner` username and the password configured above (ETA: Apr 7) when asked for credentials.
+6. Use the `runner` username and the password configured above when asked for credentials.
 
 ## Examples
 
