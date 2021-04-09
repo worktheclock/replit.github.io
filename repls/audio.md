@@ -1,5 +1,22 @@
 # Playing Audio on Replit
 
+There are two ways to enable audio:
+
+## System-wide audio
+[System-wide audio](https://blog.replit.com/system-audio) allows the PulseAudio audio stream to be delivered to the browser through the [VNC](https://novnc.com) client, and is an opt-in feature. In order to opt-in, all you need to do is create [a secret](https://docs.replit.com/repls/secret-keys) called `VNC_ENABLE_EXPERIMENTAL_AUDIO` with a value of `1` and restart your repl by running `kill 1` on the shell. Once that's done, a checkbox with headphones will appear in the lower right corner of the VNC output window:
+
+![look for the headphones](https://blog.replit.com/images/system-audio/system-audio.png "look for the headphones")
+
+Due to restrictions in the browser security model, there needs to be an explicit user interaction when enabling the audio, which means that the checkbox needs to be manually toggled every time the repl is opened.
+
+### Known limitations
+
+* There is a 100-300 msec latency introduced by the browser.
+* There are known issues with Safari's browser security model.
+* Since this relies on secrets, it's not supported in Spotlight or Embed modes for the time being.
+
+## Audio service
+
 ###### Note that audio is currently only enabled for explorers. Learn to become an explorer [here](https://replit.com/talk/announcements/Become-an-Explorer/6180)
 
 You can play audio in your repl without creating a website.
