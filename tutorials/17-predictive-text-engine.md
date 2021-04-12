@@ -2,7 +2,7 @@
 
 Have you ever wondered how your phone knows what to suggest in the autocomplete box when you are texting? Or how Gmail suggests phrases to you in the middle of typing an email? Predictive text can be a helpful tool for typing quickly. 
 
-In this tutorial, we'll make a predictive text engine that learns by example. Newer text prediction engines, like [GPT3](https://en.wikipedia.org/wiki/GPT-3) use neural networks, but we'll use more standard coding for this project. 
+In this tutorial, we'll make a predictive text engine that learns by example. Newer text prediction engines, like [GPT3](https://en.wikipedia.org/wiki/GPT-3), use neural networks, but we'll use more standard coding for this project. 
 
 ![Example sentence construction](/images/tutorials/17-predictive-text-engine/test_run.gif)
 
@@ -72,7 +72,7 @@ You should see a new `index.js` file, where we can start adding our code.
 
 ## Finding Training Text
 
-To train our engine on what words to predict after an ititial phrase, we need to first find some training text. Normally, your phone or Gmail would use your previous texts or emails as its training text. We're going to try something a little different, and see if our text engine can learn from reading books. Free books are easily available online at places like [Project Gutenberg](http://www.gutenberg.org). Head to the site and download three or four books in plain text (marked Plain Text UTF-8). A good place to start is on the [Top Downloaded Page](http://www.gutenberg.org/browse/scores/top).
+To train our engine on what words to predict after an initial phrase, we need to first find some training text. Normally, your phone or Gmail would use your previous texts or emails as its training text. We're going to try something a little different, and see if our text engine can learn from reading books. Free books are easily available online at places like [Project Gutenberg](http://www.gutenberg.org). Head to the site and download three or four books in plain text (marked Plain Text UTF-8). A good place to start is on the [Top Downloaded Page](http://www.gutenberg.org/browse/scores/top).
 
 We should now have a fair amount of text for our engine to learn from. Our autocomplete will choose words in the style of the books used, rather than in our own natural style like Gmail would, but this could be quite interesting. You can get your texts written the way your favorite author would write them! 
 
@@ -158,7 +158,7 @@ function buildMap(tokens, depth){
 
 The parameter `tokens` accepts, as an argument, the output of the file parsing function we created above. `depth` refers to how many tokens long the initial phrases should be. 
 
-Now, lets think a bit about the algorithm we'll need to devise to extract the initial phrases, and the words that are likely to follow from our tokens. We need to go through the tokens, at `depth` amount at a time, in a kind of sliding window fashion to extract the initial phrases. You could visualize it like this: 
+Now, let's think a bit about the algorithm we'll need to devise to extract the initial phrases, and the words that are likely to follow from our tokens. We need to go through the tokens, at `depth` amount at a time, in a kind of sliding window fashion to extract the initial phrases. You could visualize it like this:
 
 ![sliding window over text](/images/tutorials/17-predictive-text-engine/build-map.gif)
 
