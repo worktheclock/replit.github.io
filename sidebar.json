@@ -284,6 +284,10 @@
         "slug": "17-predictive-text-engine"
       },
       {
+        "name": "Telegram Bot",
+        "slug": "18-telegram-bot"
+      },
+      {
           "name": "Pinboard Project Part 1: HTML & CSS",
           "slug": "PinboardProjectPart1"
       },
