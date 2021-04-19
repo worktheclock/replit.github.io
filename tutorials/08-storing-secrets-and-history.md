@@ -89,6 +89,6 @@ You can make a copy of the new repl below. If you fork it, the `.env` file will 
 
 ## Where next?
 
-There's a lot more that you can do with `.env` files. In a later tutorial, we'll use it to store database credentials (which are more important to keep safe than a free API key).
+There's a lot more that you can do with environment variables. In a later tutorial, we'll use it to store database credentials (which are more important to keep safe than a free API key).
 
 You could also keep other private information in environment variables. For example, if you code a hangman game, you could keep the word that people need to guess in there so that you can share your code without spoiling the game.
