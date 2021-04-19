@@ -35,4 +35,4 @@ console.log(process.env.TOKEN)
 // prints '38zdJSDF48fKJSD4824fN'
 ```
 
-Note that you cannot set environment variables for repls that have only a frontend, e.g. HTML repls.
+Note that you cannot set environment variables for repls that have only a frontend, e.g. HTML repls. Also note that environment variables set through the UI are not available in the Replit shell (e.g. with `echo $MY_VARIABLE`).

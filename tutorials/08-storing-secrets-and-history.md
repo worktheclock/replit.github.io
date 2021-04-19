@@ -4,27 +4,15 @@ While developing software fully in public has many benefits, it also means that 
 
 Even if you're coding offline or only in private repls, it's good practice to keep your code separate from any private information in any case.
 
-In this tutorial, we'll look at how to use the special `.env` file that Repl.it provides to set [environment variables](https://en.wikipedia.org/wiki/Environment_variable). We can use these to store sensitive information and Repl.it will make sure that this file isn't included when others fork our repl.
+In this tutorial, we'll look at how to set [environment variables](https://en.wikipedia.org/wiki/Environment_variable) for our repls. We can use these to store sensitive information and Replit will make sure that this data isn't included when others fork our repl.
 
-## Understanding `.env` files
+## Understanding the Environment Variables pane
 
-Similarly to the `.replit` file that we saw in a previous tutorial, the `.env` file is a special Repl.it file. If you call a file exactly `.env`, Repl.it will
+In the sidebar, the icon with a padlock will take you to a pane where you can set and view your environment variables. Each environment variable has a *key* and a *value*. The key is public information and you code can refer to it directly, while the value is secret, and shouldn't be shared with others.
 
-* Not include this file in any forks of the repl
-* Attempt to parse key-value pairs out of this file and make them available to the underlying operating system.
+You can set any variable to an arbitrary value, and this is often how you will store secrets such as API keys, database credentials, or configuration inforation for your projects.
 
-This can be used to store all kinds of configuration, but it's commonly used for passwords, API keys, and database credentials.
-
-### The structure of a `.env` file
-
-A `.env` file consists of keys-value pairs, one per line, separated by an `=` sign. Environment variables are traditionally in ALL_CAPS and separated by underscores. For example, you might have a `.env` file with the following.
-
-```bash
-SECRET_PASSWORD=ThisIsMySuperSecretP@ssword!!
-```
-With this file present, your scripts can load the variable `SECRET_PASSWORD` from the operating system environment directly.
-
-Unlike in Python, where `x = 1` and `x= 1` are the same, in `.env` files, spaces matter and you should be careful to not add any extra ones.
+You can read more about how Replit integrates with environment variables [here](/repls/secrets-environment-variables).
 
 ## Refactoring our weather project to keep our API key secure
 
@@ -32,29 +20,19 @@ In the [working with files tutorial](http://www.codewithrepl.it/02-managing-file
 
 Let's refactor the WeatherStack project to prevent our key from being made public.
 
-Visit [https://repl.it/@GarethDwyer1/cwr-02-weather-report](https://repl.it/@GarethDwyer1/cwr-02-weather-report) (or your own version of this if you followed along previously) and create a new fork by pressing the pencil icon and then `fork`. 
+Visit [https://repl.it/@ritza-co/cwr-02-weather-report](https://repl.it/@GarethDwyer1/cwr-02-weather-report) (or your own version of this if you followed along previously) and create a new fork by pressing the pencil icon and then `fork`. 
 
 ![**Image 1:** *Forking our repl before refactoring it.*](/images/tutorials/08-storing-secrets/08-01-fork-repl.png)
 
-We have `API_KEY` defined near the top of `main.py`, and this is the value that we want to keep secret. Let's move it to a `.env` file instead.
+We have `API_KEY` defined near the top of `main.py`, and this is the value that we want to keep secret. Let's add it as an environment variable instead. In the environment variables pane, add a new variable called `API_KEY` and the API key as a value.
 
-Click on the add file icon and call your new file `.env`. Be sure to add the initial full stop and don't add any spaces.
+![**Image 2:** *Adding an environment variable*](/images/tutorials/08-storing-secrets/08-saving-env-var.png)
 
-![**Image 2:** *Creating the `.env` file to store sensitive information.*](/images/tutorials/08-storing-secrets/08-02-add-env-file.png)
-
-Now remove the API_KEY variable from the `main.py` file and add it to the `.env` file, removing all quotation marks (`"`) and spaces.
-
-Your `.env` file should look as follows (but use your own WeatherStack API instead of the example given here).
-
-```bash
-API_KEY=baaf201731c0cbc4af2c519cb578f907
-```
+Save the new variable and remove the API_KEY variable from the `main.py.
 
 ## Testing that the file is not copied into others' forks
 
-If you copy your project's URL into an incognito window (or use a separate browser), you'll see all of the other files as usual, but the `.env` file will not be there. Your API key, and the entire `.env` file, can only be seen when you're logged into the Repl.it accout that created it.
-
-![**Image 3:** *Checking that the `.env` file isn't included in public versions of our repl.*](/images/tutorials/08-storing-secrets/08-03-test-env-privacy.png)
+If you copy your project's URL into an incognito window (or use a separate browser), you'll see all of the other files as usual, but when you navigate to the environment variables pane, you'll see they are all blank. If you want to share a functioning version of your project, you'll have to explain to your users how to add their own API key to their fork.
 
 ## Using environment variables in our script
 
@@ -77,7 +55,7 @@ There are many other environment variables that make various parts of an operati
 
 ## Time travelling to find secrets
 
-We removed the sensitive information from our project, but it's not actually completely gone. It's securely placed in our `.env` file, but it's also still saved in the repl's history.
+We removed the sensitive information from our project, but it's not actually completely gone. It's securely placed in our environment variables pane, but it's also still saved in the repl's history.
 
 Repl.it saves every change you make to a project so that you can always go back to previous versions if you make a mistake or need to check what has changed.
 
@@ -97,7 +75,7 @@ In our case, the worst case scenario is that someone finds our WeatherStack API 
 
 Even if there's a small chance that your API key has been exposed, it's important to rotate it. This involves creating a new key, ensuring the new key works with your service, and then disabling the old one.
 
-In the case of WeatherStack, there is no option to create a new key while keeping the old one active, so we need to reset it and then copy the new key to our `.env` file (meaning that our app can't function between the time that we disable the old key and replace it with the new one).
+In the case of WeatherStack, there is no option to create a new key while keeping the old one active, so we need to reset it and then copy the new key to our environment variables pane (meaning that our app can't function between the time that we disable the old key and replace it with the new one).
 
 ![**Image 7:** *Rotating our WeatherStack API key.*](/images/tutorials/08-storing-secrets/08-07-weatherstack-reset-api.png)
 
