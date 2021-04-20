@@ -1,11 +1,8 @@
-# Keeping Notes in Repls
 
-To help you communicate with students and team members about what is required from them, you can add documents and notes to your repl. Use the below options for instructions, helpful tips, suggestions, or even just some encouragement! 
+## Homework Instructions
 
-## Leaving Instructions
-
-You can add any supplementary material or arbitrary files to your repl, which means you can add PDFs, images, or plain text notes. However, to leave instructions for your students, we recommend that you start with a README.md file. This is the standard documentation and entry-point file for code repositories and when Replit sees that file, it will display it first. Here is an [example repl with a README](https://repl.it/@amasad/python-with-readme).
+You can add arbitrary files to your repl, which means you can add PDFs, images, or any supplemental material. However, we recommend to start your students off with a README.md a file. It's the standard documentation and entry-point file for code repositories and when Repl.it sees that file, it will display it first. Here is an [example repl with a README](https://repl.it/@amasad/python-with-readme).
 
 ## Classroom Lessons
 
-A handy way to create classroom lessons is by creating a private repl on your team, which can only be accessed by those on the team. You can also create folders and store the associated lessons in each. The repls that are created can have notes from the class in markdown files or in commented out code. Remember that you can also upload images, videos, etc. into a repl, so your options for communicating are basically limitless!
+You are able to create private repls on a team where only those on the team have access. You can also create folders and store the associated lessons in each. The repls that are created can have notes from the class in markdown files or in commented out code. You are also able to upload images videos, etc. into a repl.

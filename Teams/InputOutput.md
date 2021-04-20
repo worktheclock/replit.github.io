@@ -1,16 +1,16 @@
 # Input/Output Testing
 
-Repl input/output testing allows a teacher to create simple tests that automatically match input values to expected output in student projects. Students can also easily test their code before submitting projects, which improves persistence. You can even use regular expressions (regex) for complex, flexible pattern matching.
+Repl input/output testing allows a teacher to create simple tests that automatically match input values to expected output in student projects. Students can also easily test their code before submitting projects which improves persistence. You can even use regular expressions (regex) for complex, flexible pattern matching.
 
 There is also a video explanation available [here](https://www.loom.com/share/a8664cccb66342419f7d1b9d8f33c0ed).
 
-## Teams for Education
+## Teams For Education
 
-Input/output testing is a feature of [Teams for Education](https://teamsforeducationresources.obaidaa.repl.co/). If you don't have a team yet you can create one [here](https://repl.it/teams).
+Input/output testing is a feature of [Teams for Education](https://teamsforeducationresources.obaidaa.repl.co/), if you don't have a team yet you can create one [here](https://repl.it/teams)
 
 ## Creating a Project
 
-If you are new to projects, you can find more info on creating a project [here](./Projects).
+If you are new to projects, you can find more info on creating a project [here](./Projects)
 
 ## Input/Output Tests
 
@@ -20,18 +20,18 @@ Once your project is created, you'll find the "Input/Output Tests" window by cli
 
 ## Creating a Project with Input/Output Tests
 
-Ideally, after creating your project, you should:
+Ideally after creating your project you should:
 
-1. Add instructions for the student.
-2. Write some skeleton code for the student.
-3. Configure the Input/Output tests (we will explain how shortly).
-4. Publish the project for students to start.
+1. Add instructions for the student
+2. Write some skeleton code for the student 
+3. Configure the Input/Output tests (we will explain how shortly)
+4. Publish the project for students to start
 
 Let's look at the different testing options, each following the above sequence.
 
 ## Match Tests
 
-A match test is passed if the expected output is in (or equal to) the actual output. In other words, the actual output does not have to be identical to the expected output, it must just include it. The JavaScript equivalent is `actualOutput.includes(expectedOutput)`. 
+The test is passed if the expected output is in (or equal to) the actual output. In other words, the actual output does not have to be identical to the expected output, it must just include it. The JavaScript equivalent is `actualOutput.includes(expectedOutput)`. 
 
 Let's say we have a test on string formatting in Python. 
 
@@ -55,12 +55,12 @@ A modal window will pop up where you can configure the input and output of the t
 
 Above, we create the test with the following steps:
 
-1. Give the test a name.
-2. Leave the input blank as it's not needed for this test.
-3. Specify "John Smith" for the output.
-4. Select "match" for the test type.
+1. Give the test a name
+2. Leave the input blank as it's not needed for this test
+3. Specify "John Smith" for the output
+4. Select "match" for the test type
 
-We are selecting "match" for this test because we don't want an exact match. Students can write their own welcome message, however, the full name "John Smith" must be part of the output string. 
+We are selecting "match" for this test because we don't want an exact match. Students can write their own welcome message, however, the full name "John Smith" has to be part of the output string. 
 
 Once the test is created, it'll be listed under "Input/Output Tests" and you can delete or modify it from there. To edit the test, click on the pencil icon next to the test name.
 
@@ -74,7 +74,7 @@ Slide the unpublished slider to the right and assign groups or individuals – t
 
 ![Image showing publish slider](/images/teamsForEducation/input-output-tests/published-slider.png)
 
-Once published, the students will get a notification that a new project has been published. Clicking on the notification opens the team's projects page where they can find the new project. They will click on "Start project" to open it.
+Once published, the students will get a notification that a new project has been published. Clicking on the notification opens the team's projects page where they can find the new project and click on "Start project" to open it.
 
 ![Student Notification](/images/teamsForEducation/input-output-tests/student-notification.png)
 
@@ -94,7 +94,7 @@ Let's add some code to make the test pass. We'll change the code to print the fu
 
 ![Image showing string-code](/images/teamsForEducation/input-output-tests/match-test-passed.png)
 
-Checking the "passed" results now, you'll see that the expected output only has the full name "John Smith", whereas the actual output has a string with some other words in it. With match tests, this will pass because the expected output is present within the actual output. If the name was incorrectly printed ie. "Smith John", then this test would fail. If you want an exact match, you can use "exact" for the input/output test type.
+Checking the "passed" results now, you'll see that the expected output only has the full name "John Smith", whereas the actual output has a string with some other words in it. With the "match" test, this will pass because the expected output is present within the actual output. If the name was incorrectly printed ie. "Smith John" then this test would fail. If you want an exact match, you can use "exact" for the input/output test type. 
 
 ![Image showing the passed results](/images/teamsForEducation/input-output-tests/match-passed-results.png)
 
@@ -102,39 +102,39 @@ Checking the "passed" results now, you'll see that the expected output only has 
 
 Exact tests pass only if the expected output is equal to the actual output (although we allow a trailing newline). The equivalent to this in JavaScript is `expectedOutput === actualOutput || expectedOutput + '\n' === actualOutput`.
 
-Creating an exact test is similar to the match test created above. 
+Creating an "exact" test is similar to the "match" test created above. 
 
-As an example, we'll create an assignement where students have to write the formula to calculate the area of a circle using the `math` module. To test that the student uses `math.pi` instead of some variable like `pi=3.14`, we will use the exact input/output test.
+As an example, we'll create an assignement where students have to write the formula to calculate the area of a circle using the `math` module. To test that the student uses `math.pi` instead of some variable like `pi=3.14`, we will use the "exact" input/output test.
 
-We have already created the skeleton code and README.md file, so now we'll create the test.
+We have already created the skeleton code and readme file so next we'll create the test.
 
 ![Image showing the exact test config](/images/teamsForEducation/input-output-tests/exact-test-config.png)
 
 Above, we create an exact test that will check for exactly the areas specified within the expected output. Follow the below steps to create an exact test.
 
-1. Open the "Input/Output Tests" pain.
-2. Click on "+ Create test".
-3. Name the test.
-4. Add the exact expected output.
-5. Choose "exact" as the test type and click the save button.
+1. Open the "Input/Output Tests" pain
+2. Click on "Create test"
+3. Name the test
+4. Add the exact expected output
+5. Choose "exact" as the test type and click the save button
 
 You can now publish the project and assign students or groups to it. Students will get a notification that the project is published.
 
 From the students' perspective, they'll have the skeleton code and the README.md file with instructions to complete the project.
 
-If they run the test, it will fail because we haven't added any code to the skeleton yet. Students can check the expected output by checking the test results.
+If they run the test, it will fail because we haven't added any of the code to the skeleton yet. Students can check the expected output by checking the test results.
 
 The student can then add their code to the main.py file with the skeleton code and run the test again to see if they passed.
 
-Below we have code that uses the incorrect representation of `pi` and because we are using exact tests, the test is failing. 
+Below we have code that uses the incorrect representation of `pi` and because we are using "exact" tests, the test is failing. 
 
 ![Image showing incorrect pi test fail](/images/teamsForEducation/input-output-tests/exact-failed-pi-results.png)
 
-Then, when we import the math module and use `math.pi`, we get the correct answer that matches exactly with the expected output, so our test passes and it is safe for the student to submit their code.
+Then, when we import the math module and use `math.pi`, we get the correct answer that matches exactly with the expected output so our test passes and it is safe for the student to submit their code.
 
 ![Image showing exact test passing ](/images/teamsForEducation/input-output-tests/exact-test-pass.png)
 
-When a student submits a project without running the tests first, they will get a notification asking them to run tests first or submit anyway. This is a reminder for students to test their work before submitting as it will give them a good inidcation whether the work they did is correct.
+When students submit a project without running the tests first, they will get a notification asking them to run tests first or submit anyway. This is a reminder for students to test their work before submitting as it will give them a good inidcation whether the work they did is correct.
 
 ![Image showing submit without running test](/images/teamsForEducation/input-output-tests/submit-without-testing.png)
 
@@ -156,11 +156,11 @@ For the test, we'll set up a regex test to check that the student's email addres
 
 To create the test seen above:
 
-1. Open the "Input/Output Tests" window.
-2. Create a new test.
-3. Give the test a name.
-4. Add the regex expression to the "Expected output".
-5. Choose "regex" as the test type and click save.
+1. Open the "Input/Output Tests" window 
+2. Create a new test
+3. Give the test a name
+4. Add the regex expression to the "Expected output"
+5. Choose "regex" as the test type and click save
 
 When we add the code to compile the email address and run the test, we get the following results.
 

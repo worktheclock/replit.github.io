@@ -5,7 +5,7 @@ From your team dashboard, create a new project.
 
 <img style="max-width: 350px" src="/images/teamsForEducation/project-create-button.png" />
 
-Select the project language, title, description, and whether this will be a group project. You'll be redirected to the IDE to add any comments, tests, and initial coding blocks you'd like your students to start from.
+**Select project language, title, description, and whether this will be a group project.** You'll be redirected to the IDE to add any comments, tests, and initial coding blocks you'd like your students to start from.
 
 <img style="max-width: 600px" src="/images/teamsForEducation/project-create.png" />
 
@@ -27,16 +27,16 @@ Click "Save" to finalize any changes, or "Cancel" to discard changes.
 
 ## Submitting
 
-When students have completed their work on the project, they click "Submit" in the IDE header, which will notify all teachers of the student's submission. Students can only submit once for each project.
+When students have completed their work on the project, they click "Submit" in the IDE header, which will notify all teachers of their submission. Students may have access to only one submission for each project.
 
 <img style="max-width: 100px" src="/images/teamsForEducation/project-submit.png" />
 
 ## Reviewing Submissions
 
-Teachers can view project submissions from the team dashboard. Click "View submissions" on the project.
+Teachers are able to view project submissions from the team dashboard. Click "View submissions" on the project.
 
 <img src="/images/teamsForEducation/project-list.png" />
 
-Submissions show which student submitted the project, or all participants on group projects. Click "View Repl" to see student code.
+Submissions show the student project submitter, or all group participants on group projects. Click "View Repl" to see student code.
 
 <img src="/images/teamsForEducation/project-submissions.png" />
