@@ -1,8 +1,10 @@
-# Inviting People to your Team
+# Inviting People to Your Team
 
-Follow the steps during team creation to invite people with their Repl.it username or email addresses.
 
-If you've already created a team, navigate to your [team dashboard](https://repl.it/teams) and click "Manage team members" in the header.
+To invite people with their Replit username or email address, follow the steps during [team creation](https://docs.replit.com/Teams/Intro). 
+
+
+If you've already created a team, navigate to your [team dashboard](https://replit.com/teams), click on your chosen team username, and then click "Manage team members".
 
 <img style="width: 300px" src="/images/teamsForEducation/manageTeamMembers.png" />
 
@@ -14,9 +16,9 @@ You may add team members by:
 
 ## Invite Anonymous Members to Maintain Privacy
 
-In order to protect the privacy of students and remain compliant with privacy regulations, you can invite your sudents to Repl.it and your education team anonymously. This privacy invite method only works when signing up via a team invite link.
+To protect the privacy of students and remain compliant with privacy regulations, you can anonymously invite your sudents to Replit and to your education team. This privacy invite method only works when signing up via a team invite link.
 
-1. Go to your team dashboard, click "Add more" and click "Generate a team invite link".
+1. Go to your team, click "Add more" and click "Generate a team invite link".
 2. Check the box next to "Do not collect names/emails".
 
 <img src="/images/teamsForEducation/privacy-invite.png" />
