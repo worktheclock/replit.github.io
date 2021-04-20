@@ -40,6 +40,7 @@ When students have completed their work on the project, they click "Submit" in t
 
 ## Reviewing Submissions
 
+
 Teachers can view project submissions from their team dashboard by clicking "View submissions" next to the project name.
 
 <img src="/images/teamsForEducation/project-list.png" />

@@ -5,13 +5,13 @@
  * Set up your Team 
  * Get started with extra curriculum and teacher resources.
 
-## Creating a Team
+## More About Teams
 
 A team is a collaborative workspace for teachers and students. The platform is based around projects, which give students real-world experience. Each project can have multiple versions (often, one for each student or group), so students can all start from the same point, but extend the base project in different ways.
 
-### Signing up
+## How to Sign Up
 
-If you don't already have an account, sign up at [Replit.com](https://repl.it). Now click on [Teams](https://replit.com/teams) in the sidebar on the left and choose the "Education" plan.
+If you don't already have an account, sign up at [Replit](https://replit.com). Now click on [Teams](https://replit.com/teams) in the sidebar on the left and choose the "Education" plan.
 
 ![](https://i.ritzastatic.com/images/d0ec5bfad4d24b299236083894aaec25/choose-plan.png)
 
@@ -26,6 +26,5 @@ Now click on "Create team" and choose a username for your team.
 Add a team profile picture and [invite some users](https://docs.replit.com/Teams/Invitations). 
 
 ![](https://i.ritzastatic.com/images/9d314c5d5861488897ec9525258a4627/upload-pic.png)
-
 
 Now you can start [building out your classroom materials](./Projects)! 
