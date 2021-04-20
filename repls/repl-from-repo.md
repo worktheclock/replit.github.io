@@ -14,4 +14,4 @@ After configuring a run command for your repl, you can add a badge to your repos
 
 ### Generate a badge
 
-<iframe style="border:0;" src="https://run-on-replit-replitjeremy.util.repl.co" />
+<iframe style="border:0;" src="https://run-on-replit.util.repl.co" />

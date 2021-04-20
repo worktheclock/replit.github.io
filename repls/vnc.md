@@ -37,11 +37,11 @@ You must complete the "Securing your repl" section to proceed with these steps.
 
    <img style="width:50px" src="https://docs.replit.com/images/vnc/settings.png"/>
 
-5. Expand the WebSockets field. Enter your connection URL (`<REPL_ID>.id.repl.co`) in the `host` field.
+5. Expand the WebSockets field. Enter your connection URL (`<REPL_ID>.id.repl.co`) in the `host` field, and leave the `path` field empty.
 
    <img style="width:200px" src="https://docs.replit.com/images/vnc/host.png"/>
 
-6. Use the `runner` username and the password configured above (ETA: Apr 7) when asked for credentials.
+6. Use the `runner` username and the password configured above when asked for credentials.
 
 ## Examples
 

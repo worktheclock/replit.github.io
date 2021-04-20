@@ -5,13 +5,15 @@ This course is designed for students with some programming experience but not wi
 
 Feel free to use the curriculum as is or modify to fit your needs. If you share these materials (as is or with modifications), please provide attribution to Repl.it and Alfonso Torres, who created the curriculum.
 
-You can find more information and a lesson plan [here](https://docs.google.com/document/d/16phDT0r-OB9ZfF3JlWiMCE1jEvLzZNBpfHga-IG4_Gw/edit).
+You can find more information and a lesson plan [here](https://docs.google.com/document/d/16phDT0r-OB9ZfF3JlWiMCE1jEvLzZNBpfHga-IG4_Gw/edit). You can copy all the assignments into your Replit team [here](https://replit.com/teams/import/afurhdoyyeyvpxbo-SeaPlusPlus).
 
 ## **The Full Curriculum**
 
 We’ve split this course into six sessions plus a bonus seventh lesson and a project, each designed to take a few hours with practice repls and homework assignments.
 
 [Lesson plan + link to problems and homework](https://docs.google.com/document/d/16phDT0r-OB9ZfF3JlWiMCE1jEvLzZNBpfHga-IG4_Gw/edit). 
+
+[Link to copy all the assignments into your Replit team](https://replit.com/teams/import/afurhdoyyeyvpxbo-SeaPlusPlus).
 
 Lesson slides:
 1. [Basics](https://docs.google.com/presentation/d/1HmJzuvLpCqdgOA_1jsQg4FwrgBdGeGOqZpPLm2YPHpQ/edit?usp=sharing)

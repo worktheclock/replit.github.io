@@ -55,6 +55,8 @@ The exact steps will vary between services. Here's an example of how it might lo
 
 ![screenshot of cname instructions](/images/repls/google-setup-custom-domain.png)
 
+![screenshot of Cloudflare cname instructions](/images/repls/cloudflare-setup-custom-domain.png)
+
 It may take some time for the DNS record to be updated. Once connected, click the big green button to finish and your domain should be linked!
 
 You can unlink your domain at any time by clicking on the pencil icon and clicking "Unlink".

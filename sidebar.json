@@ -280,6 +280,10 @@
         "slug": "16-static-site-generator"
       },
       {
+        "name": "Predictive text engine",
+        "slug": "17-predictive-text-engine"
+      },
+      {
           "name": "Pinboard Project Part 1: HTML & CSS",
           "slug": "PinboardProjectPart1"
       },
