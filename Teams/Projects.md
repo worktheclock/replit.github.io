@@ -54,7 +54,7 @@ To review student work in bulk:
 <img src="/images/teamsForEducation/project-overview.png" width="200px"/>
 <img src="/images/teamsForEducation/project-overview-grid.png" />
 * You can also navigate easily from one project to the next by clicking "View Repl" for any project, clicking on the book icon in the left bar, and using the Navigation pane to move between projects. 
-<img src="/images/teamsForEducation/project-overview-grid.png" height="300px" />
+<img src="/images/teamsForEducation/project-review.png" max-width="200px" />
 
 
 Next Up:

@@ -1,6 +1,6 @@
 # Team and Project Sharing
 
-Teachers can bulk copy and share projects to any Team. This feature is useful for a single teacher managing mulitple classes or for sharing curricula with your colleagues. Sharing and bulk copying is managed using a secure private link that is created by the team admin. 
+Teachers can bulk copy and share projects to any Team. This feature is useful for a single teacher managing multiple classes or for sharing curricula with your colleagues. Sharing and bulk copying is managed using a secure private link that is created by the team admin. 
 
 Follow the steps below:
 
