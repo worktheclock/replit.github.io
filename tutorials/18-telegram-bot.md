@@ -2,29 +2,28 @@
 
 If you've ever used an online forum, you may have seen that there are sometimes ways to post messages other than doing it straight on the forum, like posting by email.
 
-In this tutorial we will build a public message board and instead of users posting messages directly on the site, they will send them to a Telegram bot.
+In this tutorial, we'll build a public message board and instead of users posting messages directly on the site, they'll send them to a Telegram bot.
 
-The messages will simply contain the message text, but we will provide further information on how to use other data, such as the usernames of users. We will leave it as an exercise for you to expand the functionality.
+The messages will simply contain the message text, but we'll provide further information on how to use other data, such as the usernames of users. We will leave it as an exercise for you to expand the functionality.
 
 ![Bot functionality](/images/tutorials/18-telegram-bot/bot_functionality.gif)
 
 ## Prerequisites
-You should be familiar with basic Python programming.
+To follow along in this tutorial:
+- You should be familiar with basic Python programming.
+- You will need to have [Telegram downloaded](https://telegram.org/), and an account. 
+- You will also need a Replit account, so [create one now](https://replit.com/signup) if you haven't already. 
 
-It would be helpful to have a familiarity with the [Replit database](https://docs.repl.it/tutorials/11-using-the-replit-database) but it's not a necessity.
+It would be helpful if you are familiar with the [Replit database](https://docs.replit.com/tutorials/11-using-the-replit-database), but it's not a necessity.
 
-## Generating credentials
+## Registering a Bot
+We need to register our bot on Telegram to generate the credentials we'll use to connect to the Telegram API. Each bot requires a user account to be responsible for it. This can be done using Telegram's official management bot called the "BotFather".
 
-### Registering a Bot
-We need to register a bot to generate the credentials that we will use to connect to the Telegram API. Each bot requires a user account to be responsible over it. This can be done using Telegram's official management bot called "BotFather".
-
-To do this, start by signing into your Telegram client and searching for "@bot" in the chat-search.
-
-Warning: We must be sure to select the verified account (the one with the checkmark beside it), otherwise we may end up talking to someone impersonating the official BotFather.
+To do this, start by signing into your Telegram client and searching for "@bot" in the chat search. **Be sure to select the verified account** (the one with the checkmark beside it), otherwise we may end up talking to someone impersonating the official BotFather.
 
 ![BotFather search](/images/tutorials/18-telegram-bot/bot_father.png)
 
-To activate BotFather, click on "start".
+To activate the BotFather, click on "start".
 
 ![Activating BotFather](/images/tutorials/18-telegram-bot/bot_father_start.png)
 
@@ -32,33 +31,34 @@ We can send BotFather the command "/newbot" to begin the bot creation workflow.
 
 It will ask us for:
 
-* the name of the bot which will be displayed on the top of the new bot's chat, for example, "Replit Quick-start Tutorial".
+* The name of the bot which will be displayed on the top of the new bot's chat, for example, "Replit Quick-start Tutorial".
 
-* the username, which will be used to reference the bot uniquely, for example, "@replit_tutorialbot"
+* The username, which will be used to reference the bot uniquely, for example, "@replit_tutorialbot".
 
-Note: it is useful to have a short username to make it easier for users to type it out – especially if you plan on adding an inline mode.
+Note: It is useful to have a short username to make it easier for users to type it out – especially if you plan on adding an inline mode.
 
 ![Generating bot token](/images/tutorials/18-telegram-bot/token.png)
 
-Once we have answered all the questions, the BotFather will send us our authentication token that will look something like this `110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw`.
+Once we have answered all the questions, the BotFather will send us our authentication token which will look something like this: `110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw`.
 
-Note: the whole string (the colon and both strings on either side of it) is the token.
+Note that the whole string (the colon and both strings on either side of it) is the token.
 
-## Make a Bot Interface
+## Making a Bot Interface
 
 We can now begin writing the part of the program that handles requests from Telegram. Create a new repl and select Python from the language dropdown.
 
 ![Creating a new Repl](/images/tutorials/18-telegram-bot/new_repl.png)
 
-Our bot needs to interact with Telegram. We will need to access the Telegram REST API. There are many ways of doing this, but for the sake of this tutorial, we will use a convenience library that wraps around the API.
-Before we can go any further, we will need to make our Token accessible for our bot to use later on. Create a `TOKEN` environment variable by clicking the lock icon in the sidebar as shown below and paste your bot token that you noted earlier, something like `110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw`:
+Our bot needs to interact with Telegram. We will need to access the Telegram REST API. There are many ways of doing this, but for the sake of this tutorial, we'll use a convenience library that wraps around the API.
+
+Before we can go any further, we need to make our token accessible for our bot to use later on. Create a `TOKEN` environment variable by clicking the lock icon in the sidebar as shown below, and paste your bot token that you noted earlier, something like `110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw`:
 
 ![Creating a new environment variables](/images/tutorials/18-telegram-bot/env_variables.png)
 
-This will ensure that our token is available as an environment variable and that it cannot be accessed by people viewing the repl publicly.
+This will ensure that our token is available as an environment variable and that it cannot be accessed by people publicly viewing the repl.
 
-### Barebones Bot
-We will start with the following in our `main.py` file:
+### Creating a barebones bot
+Now that we're all set up, we can get coding! We will start with the following in our `main.py` file:
 
 ```python
 import os
@@ -93,13 +93,13 @@ if __name__ == '__main__':
 
 At the top, we import `os` so that we can get our token from the environment variable.
 
-We then import classes from the telegram library.
+We then import classes from the Telegram library.
 
 The comments starting with `#upm` are not optional. They are used by Replit to download the correct package. It is not needed in general, but it is needed here because there are a lot of similar Telegram libraries.
 
-The function `help_command` , is run whenever the user sends us a "/start" or "/help" command. "/start" is also automatically run when a new user joins your bot (like we did earlier with BotFather). The bot knows to use this function because we tell it later in the `main` function's body.
+The `help_command` function is run whenever the user sends us a "/start" or "/help" command. "/start" is also automatically run when a new user joins your bot (like we did earlier with the BotFather). The bot knows to use this function because we tell it later in the `main` function's body.
 
-The `main` function initialises an updater for us using our token.
+The `main` function initialises an updater for us, using our token.
 
 ```python
 updater = Updater(os.getenv("TOKEN"))
@@ -118,8 +118,7 @@ and
 ```python
 dispatcher.add_handler(CommandHandler("help", help_command))
 ```
-
-Sometimes you may want to have a different function for handling the "/start" command from the one that handles the "/help" command but to keep it simple, they will both use the same handler here.
+To keep it simple, the "/start" command and the "/help" command have the same handler here, but you could decide to have a different function for handling each if you wanted. 
 
 We then need to actually tell the updater to start checking for new messages. We accomplish that with this line:
 
@@ -131,13 +130,13 @@ It's important to know that `start_polling` is a non-blocking function. That mea
 In other words, if we left this as our last line of the `main` function, the code would execute and then immediately exit because there was nothing else blocking it. So to keep our bot listening, we use the line `updater.idle()` to block the script while we are listening.
 
 
-### Logging Functionality
+### Logging functionality
 
 According to the help text, there are two things the bot should do.
 
 1. If you send a message to the bot, it should store it somehow.
 
-2. If you send it the "/fetch" command, it should send you back the latest message.
+2. If you send the bot the "/fetch" command, it should send you back the latest message.
 
 To accomplish this, we will use Replit's key-value database. Start by importing the API.
 
@@ -167,7 +166,7 @@ def log(update: Update, context: CallbackContext) -> None:
     db[str(latest_key() + 1)] = update.message.text
 ```
 
-It gets the latest key from the database, increments it by one and sets a new key-pair with the message.
+This gets the latest key from the database, increments it by one, and sets a new key-pair with the message.
 
 However, this will not be run until we register the handler, so add the following line after the other `dispatcher.add_handler(...)` lines:
 
@@ -177,7 +176,7 @@ dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, log))
 
 You may notice that `MessageHandler` is used instead of `CommandHandler`. This is a more general handler that selects messages based off flags that you supply. In this case, it handles messages that contain text but aren't commands.
 
-We can now log messages, but we can't see them yet. Let's add a handler that lets a user fetch the latest message. Add this function after the definition of the `log` function
+We can now log messages, but we can't see them yet. Let's add a handler that lets a user fetch the latest message. Add this function after the definition of the `log` function:
 
 ```python
 def fetch(update: Update, context: CallbackContext) -> None:
@@ -192,7 +191,7 @@ dispatcher.add_handler(CommandHandler("fetch", fetch))
 
 ## Make a Web UI
 
-Now that we have a functional bot, we may want to add a web interface for it. The tool we will use is Flask. We can include the following code after our other imports and before our `latest_key` function definition.
+Now that we have a functional bot, we want to add a web interface for it. The tool we'll use is Flask. We can include the following code after our other imports and before our `latest_key` function definition.
 
 ```python
 from math import ceil
@@ -222,13 +221,13 @@ def home(page=None):
     return render_template('home.html', messages=messages, next_page=next_page, page=page, prev_page=prev_page)
 ```
 
-This defines a small flask app. Replit takes care of our Flask import. For this tutorial, we'll only make a single page.
+This defines a small Flask app. Replit takes care of our Flask import. For this tutorial, we'll only make a single page.
 
-We tell Flask how the page should be reachable with special decorators. `@app.route('/')` says that when the user accesses at https://example.com it will serve this handler. In this case, the variable "page" will default to None.
+We tell Flask how the page should be reachable with special decorators. `@app.route('/')` says that when the user accesses at https://example.com, it will serve this handler. In this case, the variable "page" will default to None.
 
 `@app.route('/<int:page>')` says that when a user accesses something like https://example.com/4 then it will open to page 4 of the logged messages. In this case, the variable "page" will be set to 4.
 
-This won't work yet, because our template `home.html` doesn't exist. Let us create that now in a folder called "templates" (i.e. templates/home.html)
+This won't work yet, because our template `home.html` doesn't exist. Let's create that now in a folder called "templates" (i.e. templates/home.html):
 
 ```python
 <!doctype html>
@@ -266,28 +265,28 @@ We know that the last messages will be the "latest" because we sorted them in as
 "prev_page" and "next_page" are the current page either decremented or incremented if they are a valid page numbers (otherwise set to None so that the template doesn't display them).
 
 
-### Putting it all Together
+## Putting it All Together
 
-If we run our program now, the flask web-app won’t work yet. Flask needs to listen for requests in a similar way to the Telegram library. We might normally end the program with `app.run()` to start the Flask server.
+If we run our program now, the Flask web app won’t work yet. Flask needs to listen for requests in a similar way to the Telegram library. We might normally end the program with `app.run()` to start the Flask server.
 
-The problem is that this line of code would never be reached in normal circumstances because we have the line `updater.idle()` blocking our code before that. To solve this, we can replace this line with the line that starts our Flask server in the foreground. This is because the only reason we had the line was to stop the program from quitting prematurely and Flask accomplishes the same anyway. So let us change it to this:
+The problem is that this line of code would never be reached in normal circumstances because we have the line `updater.idle()` blocking our code before that. To solve this, we can replace this line with the line that starts our Flask server in the foreground. This is because the only reason we had the line was to stop the program from quitting prematurely and Flask accomplishes the same anyway. So, let's change it to this:
 
 ```python
 #updater.idle()
 app.run(host='0.0.0.0', port=8080)
 ```
 
-The parameters, host and port, set to these values allow Replit to access the server and should normally display a window with our page’s content. We can now browse through messages sent to this bot by users.
+The parameters, host and port set to these values allow Replit to access the server and should normally display a window with our page’s content. We can now browse through messages sent to this bot by users.
 
-## Make it your own
+## Make it Your Own
 
 If you've followed along, you'll have your own version of the repl to extend. Otherwise, start from ours.
 
 <iframe height="400px" width="100%" src="https://replit.com/@ritza/telegram-bot?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-## Where next?
+## Where Next?
 
-Try using the "/setcommands" command in BotFather to add a quick-menu for the commands in your bot. Usage is described [here](https://core.telegram.org/bots#6-botfather)
+Try using the "/setcommands" command in the BotFather to add a quick-menu for the commands in your bot. Usage is described [here](https://core.telegram.org/bots#6-botfather).
 
 If we wanted access to the username of a person sending a message, we could access it in a similar way that we would access the message's text:
 
