@@ -1,4 +1,23 @@
-## Leaving Feedback on Projects
+## Reviewing Submissions
+
+[Leaving Feedback on Projects Using Annotations](#leaving-feedback-on-projects-using-annotations)
+
+Teachers can view project submissions from their team dashboard by clicking "View submissions" next to the project name.
+
+<img src="/images/teamsForEducation/project-list.png" />
+
+Submissions will show all student projects submitted and in progress. Click "View Repl" to review each student or groups' code.
+
+<img src="/images/teamsForEducation/project-submissions.png" />
+
+To review student work in bulk: 
+* You can open the Projects Overview from your Team homepage to see all projects and student progress at-a-glance. 
+<img src="/images/teamsForEducation/project-overview.png" max-width="200px"/>
+<img src="/images/teamsForEducation/project-overview-grid.png" />
+* You can also navigate easily from one project to the next by clicking "View Repl" for any project, clicking on the book icon in the left bar, and using the Navigation pane to move between projects. 
+<img src="/images/teamsForEducation/project-review.png" max-width="200px" />
+
+## Leaving Feedback on Projects Using Annotations
 
 To leave feedback on your students' work, you can use threads. Threads can be added on projects and team repls, and are an easy way to leave comments on a specific word or line of code.
 

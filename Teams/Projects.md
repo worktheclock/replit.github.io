@@ -38,26 +38,3 @@ When students have completed their work on the project, they click "Submit" in t
 
 <img style="max-width: 100px" src="/images/teamsForEducation/project-submit.png" />
 
-## Reviewing Submissions
-
-
-Teachers can view project submissions from their team dashboard by clicking "View submissions" next to the project name.
-
-<img src="/images/teamsForEducation/project-list.png" />
-
-Submissions will show all student projects submitted and in progress. Click "View Repl" to review each student or groups' code.
-
-<img src="/images/teamsForEducation/project-submissions.png" />
-
-To review student work in bulk: 
-* You can open the Projects Overview from your Team homepage to see all projects and student progress at-a-glance. 
-<img src="/images/teamsForEducation/project-overview.png" width="200px"/>
-<img src="/images/teamsForEducation/project-overview-grid.png" />
-* You can also navigate easily from one project to the next by clicking "View Repl" for any project, clicking on the book icon in the left bar, and using the Navigation pane to move between projects. 
-<img src="/images/teamsForEducation/project-review.png" max-width="200px" />
-
-
-Next Up:
-* [Annotations: Leaving Feedback on Projects
-](https://docs.replit.com/Teams/Annotations)
-* [Classroom Materials](https://docs.replit.com/Teams/Notes)
