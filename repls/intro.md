@@ -79,7 +79,7 @@ Leave comments on your students' code, or let them peer review each other, using
 Imagine if you had a robot to grade your students' homework. You can set up simple or advanced automated tests for your students' assignments and homework.
 
 #### [Comply with Local Privacy Regulations](../Teams/privacyFAQs)
-We will help you keep your students and their work safe online, while complying with privacy laws such as FERPA, COPPA, GDPR, CCPA, and many others.
+We will help you keep your students and their work safe online, while complying with various privacy laws and regulations such as FERPA, COPPA, GDPR, CCPA, and many others.
 
 <a name="learners"></a>
 ## Learning Code: Replit for Students
