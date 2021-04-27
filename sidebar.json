@@ -284,6 +284,10 @@
         "slug": "17-predictive-text-engine"
       },
       {
+        "name": "Snake game with PyGame",
+        "slug": "19-snake-pygame"
+      },
+      {
           "name": "Pinboard Project Part 1: HTML & CSS",
           "slug": "PinboardProjectPart1"
       },
