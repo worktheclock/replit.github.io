@@ -1,18 +1,23 @@
 # Welcome to _Code with Replit_
 
-In a series of 13 tutorials, you'll go from beginner to expert in coding with Replit. While these lessons are designed to be taken in order, they each make sense on their own too, so feel free to jump in wherever looks the most interesting to you.
+In this series of tutorials, you'll go from beginner to expert in coding with Replit. While these lessons are designed to be taken in order, they each make sense on their own too, so feel free to jump in wherever looks the most interesting to you.
 
-Part 1 covers the basics of using Replit: how to create projects, work with files, use third party dependencies, do plotting and graphing, and use multiplayer to code as part of a team. 
+### [Part 1 - beginner tutorials - Replit features](#part1)
 
-Part 2 covers more advanced use. You'll see how to pull projects from GitHub and collaborate on open source software, build a game, and keep your code secure. You'll build a full web application using Test Driven Development (TDD), and find out how to be an elite hacker by using the shortcuts offered by Replit.
+The first part of the series teaches you to use specific Replit features. You'll learn how to use Replit for everything from solving basic maths problems to building production grade software, integrating with other tools like GitHub.
 
-Once you've completed Part 1 and Part 2, you'll be able to build nearly any project that you want, and deploy it for the world to use. If you're stuck for ideas, you can go through the examples given in Part 3, which consists of practical tutorials to build everything from web scrapers to chat bots.
+### [Part 2 - intermediate tutorials - building fun and useful projects](#part2)
 
-Note that this set of lessons does not focus on teaching you to code, though we will explain some key concepts along the way. If you don't already know how to code, it's best to take this course in conjunction with a more traditional course. If you're not sure what to do next, jump right in and see if you can keep up. We're beginner friendly.
+In the second part of the series, you'll work through a set of projects, including chatbots, games, and more. We are constantly expanding these, so feel free to let us know if there are any topics you want to see included.
+
+### Video introduction
+
+You can also see the very first tutorial - an introduction to Replit - in video-form below.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SDlrhS8O3kI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Part 1: The basics of Replit
+<a name="part1"></a>
+## Part 1: beginner tutorials - Replit features
 
 In this section of the course, you'll learn the basic of Replit. But that doesn't mean you won't build some fun stuff along the way.
 
@@ -35,10 +40,6 @@ Data is only useful if it can be easily understood. Plots, charts, and graphs ar
 #### [Lesson 5: Pair programming and using multiplayer](./05-pair-programming-using-multiplayer-with-repl-it)
 
 Did we mention that no one is an island? Coders don't have to work alone. You can invite your friends to code along with you, a technique used by beginners and experts alike. Learn how to code collaboratively, as if you were using a Google Doc.
-
-## Part 2: advanced Replit use
-
-Once you know the basics, it's time to build larger and more complicated projects and keep them secure.
 
 #### [Lesson 6: Running projects from GitHub](./06-github-and-run-button)
 
@@ -70,6 +71,9 @@ Find, download, play, and control the volume of your music, all in code. If that
 
 This is the part where you realize that the possibilities are endless while you learn how to control your music with code.
 
+<a name="part2"></a>
+## Part 2 - Build your own projects
+
 #### [Lesson 13: Steganography - hiding messages in images](./13-steganography)
 
 Share secret messages with your friends by hiding them inside images with steganography, Python and Replit.
@@ -86,9 +90,21 @@ Build a Replit-to-Replit chat app - one server will coordinate between multiple 
 
 Build your own static site generator to build a custom blog from scratch.
 
-## Part 3: building your own projects
+#### [Lesson 17: Build a predictive text engine](./17-predictive-text-engine)
 
-Once you've gone through everything, you might think "but what should I build?". It's a common problem and we've got you covered. Choose your favourite projects from a list (or turn on the coffee machine, order some pizza, and get through them all). Once you've gone through the step-by-step guides you can easily modify or extend the projects to make them your own.
+Build an autocomplete bot that can generate its own sentences.
+
+#### [Lesson 18: Telegram Notes Bot](./18-telegram-bot)
+
+Take notes on Telegram and have a bot automatically publish them to a web application.
+
+#### [Lesson 19: Build a Snake Game with PyGame](./19-build-snake-with-pygame)
+
+Revisit PyGame again to build the classic Snake game.
+
+## Other tutorials
+
+Here are some other tutorials hosted on third-party sites.
 
 #### [Beginner web scraping with Python and Replit](https://ritza.co/showcase/repl.it/beginner-web-scraping-with-python-and-repl-it)
 Learn more about what web scraping is, how websites are built, and how to automatically scrape data from websites.
@@ -113,8 +129,6 @@ Build a machine-learning based text classifier. We skip the maths but show how y
 
 #### [Quicksort tutorial: Python implementation with line by line explanation](https://ritza.co/showcase/repl.it/quicksort-tutorial-python-implementation-with-line-by-line-explanation)
 Whether you're applying for jobs or just like algorithms, it's useful to understand how sorting works. In real projects, most of the time you'll just call `.sort()`, but here you'll build a sorter from scratch and understand how it works.
-
-## More tutorials 
 
 #### [Spotify API project 1: Simple online mixtape](https://mixtape-tutorial.datadesigns.repl.co/)
 
