@@ -98,52 +98,52 @@
         "slug": "Intro"
       },
       {
-        "name": "Privacy FAQs",
-        "slug": "privacyFAQs"
-      },
-      {
-        "name": "IT Admin Toolkit",
-        "slug": "IT_Toolkit"
-      },
-      {
-        "name": "Invite Teachers & Students",
+        "name": "Inviting Teachers & Students",
         "slug": "Invitations"
+      },
+      {
+        "name": "User Roles",
+        "slug": "Roles"
       },
       {
         "name": "Project Workflow",
         "slug": "Projects"
       },
       {
-        "name": "Annotations and Feedback",
-        "slug": "Annotations"
+        "name": "Team and Project Sharing",
+        "slug": "projectCopying"
       },
       {
         "name": "Classroom Material",
         "slug": "Notes"
       },
       {
-        "name": "Different Roles",
-        "slug": "Roles"
+        "name": "Example Homework Assignments",
+        "slug": "HomeworkAssignments"
       },
-      {
-        "name": "Input/Output Testing",
-        "slug": "InputOutput"
+       {
+        "name": "Reviewing Student Work",
+        "slug": "Annotations"
       },
       {
         "name": "Tests and Autograding",
         "slug": "Testing"
       },
       {
-        "name": "Example Homework Assignments",
-        "slug": "HomeworkAssignments"
+        "name": "Input/Output Testing",
+        "slug": "InputOutput"
       },
       {
         "name": "Embedding Projects",
         "slug": "EmbedProjects"
       },
       {
-        "name": "Team and Project Sharing",
-        "slug": "projectCopying"
+        "name": "Privacy FAQs",
+        "slug": "privacyFAQs"
+      },
+      {
+        "name": "IT Admin Toolkit",
+        "slug": "IT_Toolkit"
       }
     ]
   },
@@ -282,6 +282,10 @@
       {
         "name": "Predictive text engine",
         "slug": "17-predictive-text-engine"
+      },
+      {
+        "name": "Telegram Bot",
+        "slug": "18-telegram-bot"
       },
       {
         "name": "Snake game with PyGame",
