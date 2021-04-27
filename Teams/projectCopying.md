@@ -18,5 +18,8 @@ Follow the steps below:
 
 4. This is the final link that you can share with others (you can edit it). You can also create new links as needed; the old ones will not be removed. This is useful if you want to share different projects with different people/teams. You can also delete the link so that it can no longer be used.
 
+
+5. To import the projects into a new team, open the link you created, then select the team you'd like to update as well as the projects you want to import into the team. 
+
 ![Project Copying](/images/teamsForEducation/copyProjectFour.png)
 
