@@ -292,6 +292,10 @@
         "slug": "19-build-snake-with-pygame"
       },
       {
+        "name": "Online store checkout with Stripe",
+        "slug": "20-online-store-checkout-process"
+      },
+      {
           "name": "Pinboard Project Part 1: HTML & CSS",
           "slug": "PinboardProjectPart1"
       },
