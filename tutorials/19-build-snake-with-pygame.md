@@ -1,5 +1,7 @@
 # Build the Snake Game with Pygame
 
+![](/images/tutorials/19-snake-pygame/snake-game-cover.jpg)
+
 Snake was an incredibly popular game, mostly remembered from the 1990s era cell phones. For many people, it was the only game on their phone at that time. In the most basic form, it's a super simple game, but still strangely entertaining. It's also a great game to learn the basics of game making from.
 
 In this tutorial, we'll implement the most basic form of Snake in [pygame](https://www.pygame.org/)
