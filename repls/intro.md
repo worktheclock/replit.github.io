@@ -24,26 +24,26 @@ Each repl is its own Docker container running in a VM, so you can run shell comm
 
 If you already know how to code and are interested in seeing how you can use Replit, go through the following pages:
 
-#### [Introduction to the IDE](./tutorials/01-introduction-to-the-repl-it-ide)
+#### [Introduction to the IDE](/tutorials/01-introduction-to-the-repl-it-ide)
 This guide shows you how the IDE works. If you've used VS Code before, everything should feel familiar as
 our editor also uses [Monaco](https://microsoft.github.io/monaco-editor/).
 
-#### [Working with Files](./tutorials/02-managing-files-using-repl-it)
+#### [Working with Files](/tutorials/02-managing-files-using-repl-it)
 Each repl has a built-in file system, so you can upload existing files or create new ones, manually or programmatically.
 
-#### [Storing Secrets](./repls/secret-keys)
+#### [Storing Secrets](/repls/secrets-environment-variables)
 You can easily add environment variables to keep others from viewing sensitive data such as API credentials.
 
-#### [Configuring the Run Button](./repls/dot-replit)
+#### [Configuring the Run Button](/repls/dot-replit)
 In many cases, Replit will figure out how to run your project for you, but you can also customize exactly what you want to happen when you press the run button.
 
-#### [Integrating with GitHub](./tutorials/06-github-and-run-button)
+#### [Integrating with GitHub](/tutorials/06-github-and-run-button)
 You can also link Replit to your GitHub to push changes up or bring in new changes that were made externally.
 
-#### [Using History](./repls/history)
+#### [Using History](/repls/history)
 We also have time-travel features built-in so you can view previous versions of your code.
 
-#### [Pair Programming](./tutorials/05-pair-programming-using-multiplayer-with-repl-it)
+#### [Pair Programming](/tutorials/05-pair-programming-using-multiplayer-with-repl-it)
 You can invite your friends or colleagues to help you with problems or hack on stuff together.
 
 <a name="hosting"></a>
@@ -54,16 +54,16 @@ We also offer a full Key-Value store database, built-in authentication, and temp
 
 If you want to host your project on Replit, take a look at the following articles:
 
-#### [Web Hosting](./repls/web-hosting)
+#### [Web Hosting](/repls/web-hosting)
 See how to host a front-end website for your homepage, landing page or portfolio.
 
-#### [Deploying HTTP servers](./repls/http-servers)
+#### [Deploying HTTP servers](/repls/http-servers)
 Deploy a full-blown web application written in nearly any back-end language or framework.
 
-#### [Always On Repls](./repls/always-on)
+#### [Always On Repls](/repls/always-on)
 Keep your repl alive 24/7.
 
-#### [The Replit Database](./misc/database)
+#### [The Replit Database](/misc/database)
 Store data persistently between Replit runs in a simple Key-Value store that feels like using a local dictionary or hashset.
 
 <a name="teachers"></a>
@@ -72,13 +72,13 @@ If you're a teacher or professor who spends significant time teaching coding eit
 
 Take a look at the following:
 
-#### [Threads and Feedback](../Teams/Annotations)
+#### [Threads and Feedback](/Teams/Annotations)
 Leave comments on your students' code, or let them peer review each other, using in-line discussion threads.
 
-#### [Automatic Testing and Grading](../Teams/Testing)
+#### [Automatic Testing and Grading](/Teams/Testing)
 Imagine if you had a robot to grade your students' homework. You can set up simple or advanced automated tests for your students' assignments and homework.
 
-#### [Comply with Local Privacy Regulations](../Teams/privacyFAQs)
+#### [Comply with Local Privacy Regulations](/Teams/privacyFAQs)
 We will help you keep your students and their work safe online, while complying with various privacy laws and regulations such as FERPA, COPPA, GDPR, CCPA, and many others.
 
 <a name="learners"></a>
@@ -86,7 +86,7 @@ We will help you keep your students and their work safe online, while complying 
 
 If you're learning to code, whether as a self-taught programmer or as part of another course, you'll find our learning resources useful.
 
-You can work through our [project-based tutorials](./tutorials/00-overview) to learn how to code, or download them all as [an ebook](https://codewithrepl.it).
+You can work through our [project-based tutorials](/tutorials/00-overview) to learn how to code, or download them all as [an ebook](https://codewithrepl.it).
 
 If you're learning a specific language, we probably cover it in one of our teacher-contributed [open curricula](./curriculum/Intro).
 
