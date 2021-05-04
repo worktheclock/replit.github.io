@@ -88,6 +88,6 @@ If you're learning to code, whether as a self-taught programmer or as part of an
 
 You can work through our [project-based tutorials](/tutorials/00-overview) to learn how to code, or download them all as [an ebook](https://codewithrepl.it).
 
-If you're learning a specific language, we probably cover it in one of our teacher-contributed [open curricula](./curriculum/Intro).
+If you're learning a specific language, we probably cover it in one of our teacher-contributed [open curricula](/curriculum/Intro).
 
 We also have a beginner-friendly [Discord server](https://replit.com/discord) where you can get (and give) help on nearly anything.
