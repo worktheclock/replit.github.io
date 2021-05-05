@@ -104,7 +104,7 @@ Exact tests pass only if the expected output is equal to the actual output (alth
 
 Creating an exact test is similar to the match test created above. 
 
-As an example, we'll create an assignement where students have to write the formula to calculate the area of a circle using the `math` module. To test that the student uses `math.pi` instead of some variable like `pi=3.14`, we will use the exact input/output test.
+As an example, we'll create an assignment where students have to write the formula to calculate the area of a circle using the `math` module. To test that the student uses `math.pi` instead of some variable like `pi=3.14`, we will use the exact input/output test.
 
 We have already created the skeleton code and README.md file, so now we'll create the test.
 
@@ -134,7 +134,7 @@ Then, when we import the math module and use `math.pi`, we get the correct answe
 
 ![Image showing exact test passing ](/images/teamsForEducation/input-output-tests/exact-test-pass.png)
 
-When a student submits a project without running the tests first, they will get a notification asking them to run tests first or submit anyway. This is a reminder for students to test their work before submitting as it will give them a good inidcation whether the work they did is correct.
+When a student submits a project without running the tests first, they will get a notification asking them to run tests first or submit anyway. This is a reminder for students to test their work before submitting as it will give them a good indication whether the work they did is correct.
 
 ![Image showing submit without running test](/images/teamsForEducation/input-output-tests/submit-without-testing.png)
 

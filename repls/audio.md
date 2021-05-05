@@ -178,7 +178,7 @@ Edit requests are formatted as shown below:
 
 All fields **must** be provided, with the exception of `LoopCount` when `DoesLoop` is `false`.
 
-For editing a source, you could do the following (or the equivelent in other languages):
+For editing a source, you could do the following (or the equivalent in other languages):
 
 ```py
 import json

@@ -151,4 +151,4 @@ If you followed along, you'll already have your own version of the repl to exten
 
 You've learned how to make some basic plots using Python and Repl.it. There are millions of freely available data sets on the internet, waiting for people to explore them. You can find many of these using [Google's Dataset Search](https://datasetsearch.research.google.com/) service. Pick a topic that you're interested in and try to find out more about it through data visualisations.
 
-Next up, we'll explore the mutiplayer functionality of Repl.it in more detail so that you can code collaboratively with friends or colleagues.
+Next up, we'll explore the multiplayer functionality of Repl.it in more detail so that you can code collaboratively with friends or colleagues.

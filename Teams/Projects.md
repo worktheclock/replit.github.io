@@ -5,7 +5,7 @@ Teams for Education include both Team Projects and Team Repls.
 
 * **Team Projects** are visible and editable only by the teacher and each individual student or student group. These are great for assignments and group projects in which each student/group needs to work independently. 
 
-* **Team Repls** are visible and editable to everyone on the Team. These are great for collaborative coding exercises such as pair programming challenges and code alongs. 
+* **Team Repls** are visible and editable to everyone on the Team. These are great for collaborative coding exercises such as pair programming challenges and code-alongs. 
 
 ## Creating Team Projects
 From your team dashboard, create a new project.

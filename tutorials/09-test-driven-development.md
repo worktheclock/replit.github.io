@@ -84,7 +84,7 @@ pytest.main()
 
 Press the `Run` button. `pytest` does automatic test discovery so you don't need to tell it which tests to run. It will look for files that start with `test` and for functions that start with `test_` and assume these are tests. (You can read more about exactly how test discovery works and can be configured [here](https://docs.pytest.org/en/reorganize-docs/new-docs/user/naming_conventions.html).)
 
-You should see some scary looking red failures, as shown below. (`pytest` uses dividors such as `======` and `------` to format sections and these can get messy if your output pane is too narrow. If things look a bit wonky try making it wider and rerunning.)
+You should see some scary looking red failures, as shown below. (`pytest` uses dividers such as `======` and `------` to format sections and these can get messy if your output pane is too narrow. If things look a bit wonky try making it wider and rerunning.)
 
 ![**Image 2:** *Reading the `pytest` error messages.*](/images/tutorials/09-TDD/09-02-run-pytest.png)
 

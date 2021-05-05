@@ -16,7 +16,7 @@ You may add team members by:
 
 ## Invite Anonymous Members to Maintain Privacy
 
-To protect the privacy of students and remain compliant with privacy regulations, you can anonymously invite your sudents to Replit and to your education team. This privacy invite method only works when signing up via a team invite link.
+To protect the privacy of students and remain compliant with privacy regulations, you can anonymously invite your students to Replit and to your education team. This privacy invite method only works when signing up via a team invite link.
 
 1. Go to your team, click "Add more" and click "Generate a team invite link".
 2. Check the box next to "Do not collect names/emails".

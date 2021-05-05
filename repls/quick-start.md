@@ -36,7 +36,7 @@ The right repl name and discription will help with organizing your repls, and ma
 2. Click the three-dot icon native to that repl. 
 3. Click "edit" from the drop-down menu. 
 4. Edit the text fields to change the name and add a description. 
-5. Once you are satisifed, click "save". 
+5. Once you are satisfied, click "save". 
 
 ![Renaming repls](/images/repls/quickstart/renaming_repl.gif)
 
@@ -157,7 +157,7 @@ So far, your repl is public to everyone (unless you have a paid plan) and they c
 
 Create a new file by clicking on the "Add file" icon in your filetree. Name it `.env`.
 
-`.env` files contain key-value pairs like the following. In the concole, type:
+`.env` files contain key-value pairs like the following. In the console, type:
 
 ```
 PASSWORD=pass1234
