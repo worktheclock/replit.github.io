@@ -191,7 +191,7 @@ play_note("C", 2)
 
 Above we set up a convenience function to play specific notes for a specific duration. It includes a dictionary mapping the names of notes to their frequencies. We've only done one octave and no sharps or flats, but you can easily extend this to add the other notes.
 
-It then plays the tone of the note passed in for the specified duration. We sleep for that duration too, as othewise the next note will be played before the previous note is finished. We also pass a `0` to `play_tone` which specifies the default sine waveform. You can change it to `1`, `2`, or `3` for triangle, saw, or square, which you can [read about in more detail](https://www.perfectcircuit.com/signal/difference-between-waveforms).
+It then plays the tone of the note passed in for the specified duration. We sleep for that duration too, as otherwise the next note will be played before the previous note is finished. We also pass a `0` to `play_tone` which specifies the default sine waveform. You can change it to `1`, `2`, or `3` for triangle, saw, or square, which you can [read about in more detail](https://www.perfectcircuit.com/signal/difference-between-waveforms).
 
 Test that you can play a single note as expected. Now you can play the first part of "Twinkle Twinkle Little Star" by defining all of the notes and durations, and then looping through them, calling `play_note` on each in turn.
 

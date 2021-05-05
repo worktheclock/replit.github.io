@@ -195,7 +195,7 @@ This method gets the "head" of the snake, which is the last element of our `body
 
 After we get the head of the snake, we check which direction the snake is heading in. If it is going up or down, we append a new block by copying the x co-ordinate of the current head, and adding or subtracting (depending on if the snake is going up or down) one grid `block_size` to the y co-ordinate. Similarly, if the snake is heading left or right, we append a new block to the `body` list, using the y co-ordinate of the current head, but modifying the x co-ordinate by one `block_size`.
 
-Once that is done, we remove a block at the tail end of the snake, using the code `self.body.pop(0)`. We have a condition before that though: `if self.length < len(self.body)`. This is important for when we get to the snake eating, or growing. Everytime the snake eats, we will increment the `length` property of the snake. Then, we can use that `length` property to determine if we should actually remove the tail segment from the snake when it moves. 
+Once that is done, we remove a block at the tail end of the snake, using the code `self.body.pop(0)`. We have a condition before that though: `if self.length < len(self.body)`. This is important for when we get to the snake eating, or growing. Every time the snake eats, we will increment the `length` property of the snake. Then, we can use that `length` property to determine if we should actually remove the tail segment from the snake when it moves. 
 
 Now let's add a call to this `move` method in our game loop. In the `main.py` file, modify the game loop to call this method: 
 
