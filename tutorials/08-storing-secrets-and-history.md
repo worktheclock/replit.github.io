@@ -10,7 +10,7 @@ In this tutorial, we'll look at how to set [environment variables](https://en.wi
 
 In the sidebar, the icon with a padlock will take you to a pane where you can set and view your environment variables. Each environment variable has a *key* and a *value*. The key is public information and you code can refer to it directly, while the value is secret, and shouldn't be shared with others.
 
-You can set any variable to an arbitrary value, and this is often how you will store secrets such as API keys, database credentials, or configuration inforation for your projects.
+You can set any variable to an arbitrary value, and this is often how you will store secrets such as API keys, database credentials, or configuration information for your projects.
 
 You can read more about how Replit integrates with environment variables [here](/repls/secrets-environment-variables).
 

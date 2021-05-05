@@ -69,7 +69,7 @@ ax = sns.scatterplot(`
 ax.set(xlabel="GDP per capita", ylabel="Life expectancy")
 ```
 
-![**Image 8:** *In our new plot, we can see that African countries tend to have low life expectency and low GDP, but the correlation looks weaker for the other continents*](/images/tutorials/05-multiplayer/05-08-figure-one.png)
+![**Image 8:** *In our new plot, we can see that African countries tend to have low life expectancy and low GDP, but the correlation looks weaker for the other continents*](/images/tutorials/05-multiplayer/05-08-figure-one.png)
 
 ## Make it your own
 

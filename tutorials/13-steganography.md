@@ -63,13 +63,13 @@ This first encodes our text as [base64](https://en.wikipedia.org/wiki/Base64) an
 
 The base64 step is not strictly necessary, but it is useful as any file or data can be encoded as base64. This opens our project up to future extensions such as hiding other kinds of files within image files instead of just text strings.
 
-## Adding an 'end of message' delimeter
+## Adding an 'end of message' delimiter
 
-We'll assume that our message will always 'fit' in our image. We can fit three binary digits per pixel (one for each of the RGB values), so our resulting binary string should be shorter than the the number of pixels in the image multiplied by three.
+We'll assume that our message will always 'fit' in our image. We can fit three binary digits per pixel (one for each of the RGB values), so our resulting binary string should be shorter than the number of pixels in the image multiplied by three.
 
 We'll also need to know when the message *ends*. The message will only be encoded in the beginning of the image file, but if we don't know how long the message is, we'll keep looking at normal pixels and trying to encode them as text data. Let's add an "end of string" delimiter to the end of our message: this should be something that wouldn't appear half way through our actual message by chance. We'll use the binary representation of '!ENDOFMESSAGE!' for this.
 
-Modify your function to look as follows, which adds this delimeter at the end.
+Modify your function to look as follows, which adds this delimiter at the end.
 
 ```python
 import base64
@@ -171,7 +171,7 @@ Play around with these functions to make sure you understand how they work. Befo
  
 ## Decoding messages from image files
 
-First we need a function that can turn a binary string back into readable text. As before, we'll go via base64 for better compatability. Add the following function to the bottom of the `main.py` file.
+First we need a function that can turn a binary string back into readable text. As before, we'll go via base64 for better compatibility. Add the following function to the bottom of the `main.py` file.
 
 ```python
 def decode_message_from_bytestring(bytestring):

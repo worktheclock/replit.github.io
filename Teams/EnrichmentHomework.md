@@ -94,7 +94,7 @@ Apart from checking that the basic and optional features that your students have
 
 ### Plagiarism
 
-It is likely that your students will be able to find similar projects online, so as always plagiarism is likely to be a problem. A good example of this game with all of the features implemented is at [InventWithPython's memory game](https://inventwithpython.com/pygame/chapter3.html) whic you can run on Repl.it from [this repl](https://repl.it/@ritza/memorypuzzle-iwp).
+It is likely that your students will be able to find similar projects online, so as always plagiarism is likely to be a problem. A good example of this game with all of the features implemented is at [InventWithPython's memory game](https://inventwithpython.com/pygame/chapter3.html) which you can run on Repl.it from [this repl](https://repl.it/@ritza/memorypuzzle-iwp).
 
 ![](https://i.ritzastatic.com/06106c5cfa97444aa1f67f743b94a022/iwp-advancedsolution.png)
 

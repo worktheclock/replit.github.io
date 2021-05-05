@@ -80,7 +80,7 @@ Share secret messages with your friends by hiding them inside images with stegan
 
 #### [Lesson 14: 2D platform game with PyGame and Replit](./14-2d-platform-game)
 
-Build a fun 2D platform game while learning all about Python game development. It's is easily expandible with endless possibilities so let your imagination run wild!
+Build a fun 2D platform game while learning all about Python game development. It's is easily expandable with endless possibilities so let your imagination run wild!
 
 #### [Lesson 15: Building a Chat App with Node.js and Replit](./15-repl-chat)
 
@@ -125,7 +125,7 @@ Build a django web application and host it with Replit. You'll use geolocation a
 Another web application, but using NodeJS instead of Django. This is a different application where you'll build a basic app to manage customer information.
 
 #### [Introduction to Machine Learning with Python and repl.it](https://ritza.co/showcase/repl.it/introduction-to-machine-learning-with-python-and-repl-it)
-Build a machine-learning based text classifier. We skip the maths but show how you can use machine learning libraries to implement useful solutions without in-depth theoretical knoweldge.
+Build a machine-learning based text classifier. We skip the maths but show how you can use machine learning libraries to implement useful solutions without in-depth theoretical knowledge.
 
 #### [Quicksort tutorial: Python implementation with line by line explanation](https://ritza.co/showcase/repl.it/quicksort-tutorial-python-implementation-with-line-by-line-explanation)
 Whether you're applying for jobs or just like algorithms, it's useful to understand how sorting works. In real projects, most of the time you'll just call `.sort()`, but here you'll build a sorter from scratch and understand how it works.

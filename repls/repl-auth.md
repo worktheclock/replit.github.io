@@ -128,7 +128,7 @@ Run the application and you should see `Hello, <username>! Your user id is <user
 
 ## Warning 
 
-Be aware that if you're going to use an acccounts system, **PLEASE** do all the specific logic for checking users on the **BACK END**, *do not* do it with JavaScript in your HTML.
+Be aware that if you're going to use an accounts system, **PLEASE** do all the specific logic for checking users on the **BACK END**, *do not* do it with JavaScript in your HTML.
 
 ## Closing Notes
 

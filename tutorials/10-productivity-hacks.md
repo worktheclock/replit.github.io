@@ -73,7 +73,7 @@ As an example, below you can see how we might use this to first delete one of th
 
 It's also common to need to add a new line of code above or below the current one. Instead of using your mouse or arrow keys to get to the right place and then pressing `Enter`, you can instead use an "insert line" operation.
 
-Press `Ctrl+Shift+Enter` (`cmd+shift+enter` on MacOS) to insert a blank line directly above the current one and move the cursor to the start of it (Repl.it will even maintain the current level of indentatin for you).
+Press `Ctrl+Shift+Enter` (`cmd+shift+enter` on MacOS) to insert a blank line directly above the current one and move the cursor to the start of it (Repl.it will even maintain the current level of indentation for you).
 
 ![**Image 6:** *Inserting lines.*](/images/tutorials/10-productivity/10-06-GIF-insert-blank-lines.gif)
 

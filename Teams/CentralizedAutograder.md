@@ -60,7 +60,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 ```
 
-This brings in the imports that we need and initialses a Flask application.
+This brings in the imports that we need and initialises a Flask application.
 
 Immediately below this, add three helper functions that we'll use in the main submission process.
 

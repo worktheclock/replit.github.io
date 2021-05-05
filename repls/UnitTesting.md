@@ -26,7 +26,7 @@ double area = calculateRectArea(3.0, 4.0);
 assertEqual(12.0, actual);
 ```
 
-Unit testing is not ideal for testing that involves using Standard In (`System.in`) and Standard Out (`System.out`). Input/Outupt testing is ideal for testing that relies on precise usage of `println()`. 
+Unit testing is not ideal for testing that involves using Standard In (`System.in`) and Standard Out (`System.out`). Input/Output testing is ideal for testing that relies on precise usage of `println()`. 
 
 ## Using the Testing Pane
 

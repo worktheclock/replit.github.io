@@ -19,7 +19,7 @@ Here is an example:
 
 <iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@amasad/PitifulLastingWhoopingcrane?lite=true"></iframe>
 
-And the html snippet for this:
+And the HTML snippet for this:
 
 ```html
 <iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@amasad/PitifulLastingWhoopingcrane?lite=true"></iframe>

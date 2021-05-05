@@ -45,6 +45,6 @@ ignoredPackages=["twitter", "discord"]
 
 ## HTML
 
-For html projects, you can keep the run command empty and we will serve the project for you automatically. As per web standards, the entrypoint file is `index.html`. If you want to serve a different file, you can roll your own webserver in one of the languages that we support. 
+For HTML projects, you can keep the run command empty and we will serve the project for you automatically. As per web standards, the entrypoint file is `index.html`. If you want to serve a different file, you can roll your own webserver in one of the languages that we support. 
 
 We created an [example](https://repl.it/@amasad/run-html-non-index-file) for you in NodeJS that serves `foo.html` instead of `index.html`. Otherwise it works like any other HTML project.
