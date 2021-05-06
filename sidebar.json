@@ -106,6 +106,10 @@
                 "slug": "Invitations"
             },
             {
+                "name": "Assigning Nicknames",
+                "slug": "Nicknames"
+            },
+            {
                 "name": "User Roles",
                 "slug": "Roles"
             },
