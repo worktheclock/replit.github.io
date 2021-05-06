@@ -134,12 +134,6 @@
   {
     "category": "Get Started",
     "name": "Managing Your Repls",
-    "heading": "Repls Dashboard",
-    "slug": "/repls/dashboard#repls-dashboard"
-  },
-  {
-    "category": "Get Started",
-    "name": "Managing Your Repls",
     "heading": "Starring Repls",
     "slug": "/repls/dashboard#starring-repls"
   },
@@ -416,12 +410,6 @@
   {
     "category": "Get Started",
     "name": "Deploying HTTP Servers",
-    "heading": "Deploying an HTTP Server",
-    "slug": "/repls/http-servers#deploying-an-http-server"
-  },
-  {
-    "category": "Get Started",
-    "name": "Deploying HTTP Servers",
     "heading": "Persistence and Takedown Requests",
     "slug": "/repls/http-servers#persistence-and-takedown-requests"
   },
@@ -542,14 +530,14 @@
   {
     "category": "Get Started",
     "name": "Secrets & environment variables",
-    "heading": "Secrets in environment variables ",
-    "slug": "/repls/secrets-environment-variables#secrets-in-environment-variables"
+    "heading": "Secrets & environment variables",
+    "slug": "/repls/secrets-environment-variables#secrets-environment-variables"
   },
   {
     "category": "Get Started",
     "name": "Secrets & environment variables",
-    "heading": "Adding, viewing and editing environment variables, secrets",
-    "slug": "/repls/secrets-environment-variables#adding-viewing-and-editing-environment-variables-secrets"
+    "heading": "Adding, viewing and editing environment variables",
+    "slug": "/repls/secrets-environment-variables#adding-viewing-and-editing-environment-variables"
   },
   {
     "category": "Get Started",
@@ -734,7 +722,7 @@
   {
     "category": "Get Started",
     "name": "Configuring the Run Button",
-    "heading": "Configuring the Run Button",
+    "heading": "Configuring the \"Run\" Button",
     "slug": "/repls/dot-replit#configuring-the-run-button"
   },
   {
@@ -782,8 +770,8 @@
   {
     "category": "Get Started",
     "name": "Repl From Repo",
-    "heading": "Adding a \"Run on Repl.it\" Badge",
-    "slug": "/repls/repl-from-repo#adding-a-run-on-repl-it-badge"
+    "heading": "Adding a \"Run on Replit\" Badge",
+    "slug": "/repls/repl-from-repo#adding-a-run-on-replit-badge"
   },
   {
     "category": "Get Started",
@@ -805,74 +793,68 @@
   },
   {
     "category": "Get Started",
-    "name": "Using Multiplayer with Anonymous Users",
-    "heading": "1. First, click share button in your repl.",
-    "slug": "/repls/multiplayer-anon#1-first-click-share-button-in-your-repl"
-  },
-  {
-    "category": "Get Started",
-    "name": "Using Multiplayer with Anonymous Users",
-    "heading": "2. Copy the join link in your repl.",
-    "slug": "/repls/multiplayer-anon#2-copy-the-join-link-in-your-repl"
-  },
-  {
-    "category": "Get Started",
-    "name": "Using Multiplayer with Anonymous Users",
-    "heading": "3. Send your collaborator the join link.",
-    "slug": "/repls/multiplayer-anon#3-send-your-collaborator-the-join-link"
-  },
-  {
-    "category": "Get Started",
-    "name": "Using Multiplayer with Anonymous Users",
-    "heading": "4. After they sign in, they'll be redirected to back to repl as a collaborator!",
-    "slug": "/repls/multiplayer-anon#4-after-they-sign-in-theyll-be-redirected-to-back-to-repl-as-a-collaborator"
-  },
-  {
-    "category": "Get Started",
-    "name": "Playing Audio on Repl.it",
+    "name": "Playing Audio on Replit",
     "heading": null,
     "slug": "repls/audio"
   },
   {
     "category": "Get Started",
-    "name": "Playing Audio on Repl.it",
-    "heading": "Playing Audio on Repl.it BETA]",
-    "slug": "/repls/audio#playing-audio-on-repl-it-beta"
+    "name": "Playing Audio on Replit",
+    "heading": "Playing Audio on Replit",
+    "slug": "/repls/audio#playing-audio-on-replit"
   },
   {
     "category": "Get Started",
-    "name": "Playing Audio on Repl.it",
+    "name": "Playing Audio on Replit",
+    "heading": "System-wide audio",
+    "slug": "/repls/audio#system-wide-audio"
+  },
+  {
+    "category": "Get Started",
+    "name": "Playing Audio on Replit",
+    "heading": "Known limitations",
+    "slug": "/repls/audio#known-limitations"
+  },
+  {
+    "category": "Get Started",
+    "name": "Playing Audio on Replit",
+    "heading": "Audio service",
+    "slug": "/repls/audio#audio-service"
+  },
+  {
+    "category": "Get Started",
+    "name": "Playing Audio on Replit",
     "heading": "Note that audio is currently only enabled for explorers. Learn to become an explorer here",
     "slug": "/repls/audio#note-that-audio-is-currently-only-enabled-for-explorers-learn-to-become-an-explorer-here"
   },
   {
     "category": "Get Started",
-    "name": "Playing Audio on Repl.it",
+    "name": "Playing Audio on Replit",
     "heading": "Community Contributed Libraries",
     "slug": "/repls/audio#community-contributed-libraries"
   },
   {
     "category": "Get Started",
-    "name": "Playing Audio on Repl.it",
-    "heading": "Developing an Audio Library for Repl.it",
-    "slug": "/repls/audio#developing-an-audio-library-for-repl-it"
+    "name": "Playing Audio on Replit",
+    "heading": "Developing an Audio Library for Replit",
+    "slug": "/repls/audio#developing-an-audio-library-for-replit"
   },
   {
     "category": "Get Started",
-    "name": "Playing Audio on Repl.it",
-    "heading": "Step 1: Add an Audio Source",
+    "name": "Playing Audio on Replit",
+    "heading": "Step 1: Add an audio source",
     "slug": "/repls/audio#step-1-add-an-audio-source"
   },
   {
     "category": "Get Started",
-    "name": "Playing Audio on Repl.it",
-    "heading": "Step 2: Getting the Sstatus of Playing Audio.",
-    "slug": "/repls/audio#step-2-getting-the-sstatus-of-playing-audio"
+    "name": "Playing Audio on Replit",
+    "heading": "Step 2: Get the status of playing audio",
+    "slug": "/repls/audio#step-2-get-the-status-of-playing-audio"
   },
   {
     "category": "Get Started",
-    "name": "Playing Audio on Repl.it",
-    "heading": "Step 3: Managing Current Sources",
+    "name": "Playing Audio on Replit",
+    "heading": "Step 3: Managing current sources",
     "slug": "/repls/audio#step-3-managing-current-sources"
   },
   {
@@ -920,19 +902,19 @@
   {
     "category": "Get Started",
     "name": "Unit Testing",
-    "heading": "Supported languages & testing frameworks",
-    "slug": "/repls/UnitTesting#supported-languages-testing-frameworks"
+    "heading": "Supported Languages and Testing Frameworks",
+    "slug": "/repls/UnitTesting#supported-languages-and-testing-frameworks"
   },
   {
     "category": "Get Started",
     "name": "Unit Testing",
-    "heading": "Why use Unit Testing?",
+    "heading": "Why Use Unit Testing?",
     "slug": "/repls/UnitTesting#why-use-unit-testing"
   },
   {
     "category": "Get Started",
     "name": "Unit Testing",
-    "heading": "Using the testing pane",
+    "heading": "Using the Testing Pane",
     "slug": "/repls/UnitTesting#using-the-testing-pane"
   },
   {
@@ -956,7 +938,7 @@
   {
     "category": "Get Started",
     "name": "Unit Testing",
-    "heading": "Advanced setup and teardown",
+    "heading": "Advanced Setup and Teardown",
     "slug": "/repls/UnitTesting#advanced-setup-and-teardown"
   },
   {
@@ -980,31 +962,31 @@
   {
     "category": "Get Started",
     "name": "Unit Testing",
-    "heading": "Assertion documentation",
+    "heading": "Assertion Documentation",
     "slug": "/repls/UnitTesting#assertion-documentation"
   },
   {
     "category": "Get Started",
     "name": "Unit Testing",
-    "heading": "Tips for writing good tests",
+    "heading": "Tips for Writing Good Tests",
     "slug": "/repls/UnitTesting#tips-for-writing-good-tests"
   },
   {
     "category": "Get Started",
     "name": "Unit Testing",
-    "heading": "Tips for writing \"testable\" functions",
+    "heading": "Tips for Writing \"Testable\" Functions",
     "slug": "/repls/UnitTesting#tips-for-writing-testable-functions"
   },
   {
     "category": "Get Started",
     "name": "Unit Testing",
-    "heading": "Teams For Education",
+    "heading": "Teams for Education",
     "slug": "/repls/UnitTesting#teams-for-education"
   },
   {
     "category": "Get Started",
     "name": "Unit Testing",
-    "heading": "Creating a Project",
+    "heading": "Creating a project",
     "slug": "/repls/UnitTesting#creating-a-project"
   },
   {
@@ -1056,6 +1038,48 @@
     "slug": "/repls/vnc#examples"
   },
   {
+    "category": "Get Started",
+    "name": "Explore and Publish",
+    "heading": null,
+    "slug": "repls/explore-and-publish"
+  },
+  {
+    "category": "Get Started",
+    "name": "Explore and Publish",
+    "heading": "Explore",
+    "slug": "/repls/explore-and-publish#explore"
+  },
+  {
+    "category": "Get Started",
+    "name": "Explore and Publish",
+    "heading": "Publishing guidelines",
+    "slug": "/repls/explore-and-publish#publishing-guidelines"
+  },
+  {
+    "category": "Get Started",
+    "name": "Explore and Publish",
+    "heading": "How to publish",
+    "slug": "/repls/explore-and-publish#how-to-publish"
+  },
+  {
+    "category": "Get Started",
+    "name": "Explore and Publish",
+    "heading": "Requirements for publishing",
+    "slug": "/repls/explore-and-publish#requirements-for-publishing"
+  },
+  {
+    "category": "Get Started",
+    "name": "Explore and Publish",
+    "heading": "Publishing updates",
+    "slug": "/repls/explore-and-publish#publishing-updates"
+  },
+  {
+    "category": "Get Started",
+    "name": "Explore and Publish",
+    "heading": "Unpublishing",
+    "slug": "/repls/explore-and-publish#unpublishing"
+  },
+  {
     "category": "Teams for Education",
     "name": "Introduction to Teams For Education",
     "heading": null,
@@ -1070,56 +1094,50 @@
   {
     "category": "Teams for Education",
     "name": "Introduction to Teams For Education",
-    "heading": "Creating a Team",
-    "slug": "/Teams/Intro#creating-a-team"
+    "heading": "More About Teams",
+    "slug": "/Teams/Intro#more-about-teams"
   },
   {
     "category": "Teams for Education",
     "name": "Introduction to Teams For Education",
-    "heading": "Signing up",
-    "slug": "/Teams/Intro#signing-up"
+    "heading": "How to Sign Up",
+    "slug": "/Teams/Intro#how-to-sign-up"
   },
   {
     "category": "Teams for Education",
-    "name": "Privacy FAQs",
-    "heading": null,
-    "slug": "Teams/privacyFAQs"
+    "name": "Introduction to Teams For Education",
+    "heading": "Inviting Teammates",
+    "slug": "/Teams/Intro#inviting-teammates"
   },
   {
     "category": "Teams for Education",
-    "name": "Privacy FAQs",
-    "heading": "Privacy FAQs",
-    "slug": "/Teams/privacyFAQs#privacy-fa-qs"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "IT Admin Toolkit",
-    "heading": null,
-    "slug": "Teams/IT_Toolkit"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "IT Admin Toolkit",
-    "heading": "IT Administrators Toolkit",
-    "slug": "/Teams/IT_Toolkit#it-administrators-toolkit"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Invite Teachers & Students",
+    "name": "Inviting Teachers & Students",
     "heading": null,
     "slug": "Teams/Invitations"
   },
   {
     "category": "Teams for Education",
-    "name": "Invite Teachers & Students",
-    "heading": "Inviting People to your Team",
+    "name": "Inviting Teachers & Students",
+    "heading": "Inviting People to Your Team",
     "slug": "/Teams/Invitations#inviting-people-to-your-team"
   },
   {
     "category": "Teams for Education",
-    "name": "Invite Teachers & Students",
+    "name": "Inviting Teachers & Students",
     "heading": "Invite Anonymous Members to Maintain Privacy",
     "slug": "/Teams/Invitations#invite-anonymous-members-to-maintain-privacy"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "User Roles",
+    "heading": null,
+    "slug": "Teams/Roles"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "User Roles",
+    "heading": "Team Roles",
+    "slug": "/Teams/Roles#team-roles"
   },
   {
     "category": "Teams for Education",
@@ -1130,8 +1148,14 @@
   {
     "category": "Teams for Education",
     "name": "Project Workflow",
-    "heading": "Project Creation and Submission",
-    "slug": "/Teams/Projects#project-creation-and-submission"
+    "heading": "Creating Projects and Assignments",
+    "slug": "/Teams/Projects#creating-projects-and-assignments"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Project Workflow",
+    "heading": "Creating Team Projects",
+    "slug": "/Teams/Projects#creating-team-projects"
   },
   {
     "category": "Teams for Education",
@@ -1142,26 +1166,20 @@
   {
     "category": "Teams for Education",
     "name": "Project Workflow",
-    "heading": "Submitting",
-    "slug": "/Teams/Projects#submitting"
+    "heading": "Submitting Student Work ",
+    "slug": "/Teams/Projects#submitting-student-work"
   },
   {
     "category": "Teams for Education",
-    "name": "Project Workflow",
-    "heading": "Reviewing Submissions",
-    "slug": "/Teams/Projects#reviewing-submissions"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Annotations and Feedback",
+    "name": "Copying Projects to Other Teams",
     "heading": null,
-    "slug": "Teams/Annotations"
+    "slug": "Teams/projectCopying"
   },
   {
     "category": "Teams for Education",
-    "name": "Annotations and Feedback",
-    "heading": "Annotations: Leaving Feedback on Projects",
-    "slug": "/Teams/Annotations#annotations-leaving-feedback-on-projects"
+    "name": "Copying Projects to Other Teams",
+    "heading": "Copying Projects to Other Teams",
+    "slug": "/Teams/projectCopying#copying-projects-to-other-teams"
   },
   {
     "category": "Teams for Education",
@@ -1172,8 +1190,14 @@
   {
     "category": "Teams for Education",
     "name": "Classroom Material",
-    "heading": "Homework Instructions",
-    "slug": "/Teams/Notes#homework-instructions"
+    "heading": "Keeping Notes in Repls",
+    "slug": "/Teams/Notes#keeping-notes-in-repls"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Classroom Material",
+    "heading": "Leaving Instructions",
+    "slug": "/Teams/Notes#leaving-instructions"
   },
   {
     "category": "Teams for Education",
@@ -1183,15 +1207,93 @@
   },
   {
     "category": "Teams for Education",
-    "name": "Different Roles",
+    "name": "Example Homework Assignments",
     "heading": null,
-    "slug": "Teams/Roles"
+    "slug": "Teams/HomeworkAssignments"
   },
   {
     "category": "Teams for Education",
-    "name": "Different Roles",
-    "heading": "Team Roles",
-    "slug": "/Teams/Roles#team-roles"
+    "name": "Example Homework Assignments",
+    "heading": "Example Homework Assignments",
+    "slug": "/Teams/HomeworkAssignments#example-homework-assignments"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Example Homework Assignments",
+    "heading": "Guides and Tutorials",
+    "slug": "/Teams/HomeworkAssignments#guides-and-tutorials"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Example Homework Assignments",
+    "heading": "Create a Pinboard Project",
+    "slug": "/Teams/HomeworkAssignments#create-a-pinboard-project"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Example Homework Assignments",
+    "heading": "How to create a good enrichment coding assignment using Replit",
+    "slug": "/Teams/HomeworkAssignments#how-to-create-a-good-enrichment-coding-assignment-using-replit"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Example Homework Assignments",
+    "heading": "Teach your kid to code",
+    "slug": "/Teams/HomeworkAssignments#teach-your-kid-to-code"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Example Homework Assignments",
+    "heading": "Example Repls",
+    "slug": "/Teams/HomeworkAssignments#example-repls"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Example Homework Assignments",
+    "heading": "Harry Potter game with PyGame",
+    "slug": "/Teams/HomeworkAssignments#harry-potter-game-with-py-game"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Example Homework Assignments",
+    "heading": "Harry Potter game with Python Play",
+    "slug": "/Teams/HomeworkAssignments#harry-potter-game-with-python-play"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Example Homework Assignments",
+    "heading": "Python Shopping List",
+    "slug": "/Teams/HomeworkAssignments#python-shopping-list"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Reviewing Student Work",
+    "heading": null,
+    "slug": "Teams/Annotations"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Reviewing Student Work",
+    "heading": "Reviewing Submissions",
+    "slug": "/Teams/Annotations#reviewing-submissions"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Reviewing Student Work",
+    "heading": "Leaving Feedback on Projects Using Annotations",
+    "slug": "/Teams/Annotations#leaving-feedback-on-projects-using-annotations"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Tests and Autograding",
+    "heading": null,
+    "slug": "Teams/Testing"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Tests and Autograding",
+    "heading": "Testing, Assessments, and Autograding",
+    "slug": "/Teams/Testing#testing-assessments-and-autograding"
   },
   {
     "category": "Teams for Education",
@@ -1208,7 +1310,7 @@
   {
     "category": "Teams for Education",
     "name": "Input/Output Testing",
-    "heading": "Teams For Education",
+    "heading": "Teams for Education",
     "slug": "/Teams/InputOutput#teams-for-education"
   },
   {
@@ -1249,78 +1351,6 @@
   },
   {
     "category": "Teams for Education",
-    "name": "Tests and Autograding",
-    "heading": null,
-    "slug": "Teams/Testing"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Tests and Autograding",
-    "heading": "Testing, Assessments, and Autograding",
-    "slug": "/Teams/Testing#testing-assessments-and-autograding"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Example Homework Assignments",
-    "heading": null,
-    "slug": "Teams/HomeworkAssignments"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Example Homework Assignments",
-    "heading": "Example homework assignments",
-    "slug": "/Teams/HomeworkAssignments#example-homework-assignments"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Example Homework Assignments",
-    "heading": "Guides and tutorials",
-    "slug": "/Teams/HomeworkAssignments#guides-and-tutorials"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Example Homework Assignments",
-    "heading": "Create a Pinboard Project",
-    "slug": "/Teams/HomeworkAssignments#create-a-pinboard-project"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Example Homework Assignments",
-    "heading": "How to create a good enrichment coding assignment using Repl.it",
-    "slug": "/Teams/HomeworkAssignments#how-to-create-a-good-enrichment-coding-assignment-using-repl-it"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Example Homework Assignments",
-    "heading": "Teach your kid to code",
-    "slug": "/Teams/HomeworkAssignments#teach-your-kid-to-code"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Example Homework Assignments",
-    "heading": "Example repls",
-    "slug": "/Teams/HomeworkAssignments#example-repls"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Example Homework Assignments",
-    "heading": "Harry Potter game with Python Play",
-    "slug": "/Teams/HomeworkAssignments#harry-potter-game-with-python-play"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Example Homework Assignments",
-    "heading": "Harry Potter game with PyGame",
-    "slug": "/Teams/HomeworkAssignments#harry-potter-game-with-py-game"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Example Homework Assignments",
-    "heading": "Python Shopping List",
-    "slug": "/Teams/HomeworkAssignments#python-shopping-list"
-  },
-  {
-    "category": "Teams for Education",
     "name": "Embedding Projects",
     "heading": null,
     "slug": "Teams/EmbedProjects"
@@ -1333,15 +1363,105 @@
   },
   {
     "category": "Teams for Education",
-    "name": "Team and Project Sharing",
+    "name": "Privacy FAQs",
     "heading": null,
-    "slug": "Teams/projectCopying"
+    "slug": "Teams/privacyFAQs"
   },
   {
     "category": "Teams for Education",
-    "name": "Team and Project Sharing",
-    "heading": "Team and Project Sharing",
-    "slug": "/Teams/projectCopying#team-and-project-sharing"
+    "name": "Privacy FAQs",
+    "heading": "Privacy FAQs",
+    "slug": "/Teams/privacyFAQs#privacy-fa-qs"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "IT Admin Toolkit",
+    "heading": null,
+    "slug": "Teams/IT_Toolkit"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "IT Admin Toolkit",
+    "heading": "IT Administrators Toolkit",
+    "slug": "/Teams/IT_Toolkit#it-administrators-toolkit"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "IT Admin Toolkit",
+    "heading": "URLs",
+    "slug": "/Teams/IT_Toolkit#ur-ls"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "IT Admin Toolkit",
+    "heading": "Protocols",
+    "slug": "/Teams/IT_Toolkit#protocols"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "IT Admin Toolkit",
+    "heading": "Whitelist/Network Security Vendor Guides",
+    "slug": "/Teams/IT_Toolkit#whitelist-network-security-vendor-guides"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "IT Admin Toolkit",
+    "heading": "Data Retention and Usage",
+    "slug": "/Teams/IT_Toolkit#data-retention-and-usage"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Introduction to Teams Pro",
+    "heading": null,
+    "slug": "pro/intro"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Introduction to Teams Pro",
+    "heading": "Teams Pro",
+    "slug": "/pro/intro#teams-pro"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Introduction to Teams Pro",
+    "heading": "Questions? Need help?",
+    "slug": "/pro/intro#questions-need-help"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Team Management",
+    "heading": null,
+    "slug": "pro/teamManagement"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Team Management",
+    "heading": "Inviting People to your Team",
+    "slug": "/pro/teamManagement#inviting-people-to-your-team"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Repl Management",
+    "heading": null,
+    "slug": "pro/replManagement"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Repl Management",
+    "heading": "Different Types",
+    "slug": "/pro/replManagement#different-types"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Guest Mode",
+    "heading": null,
+    "slug": "pro/guests"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Guest Mode",
+    "heading": "Interviewing Candidates",
+    "slug": "/pro/guests#interviewing-candidates"
   },
   {
     "category": "Repl.it Classrooms",
@@ -2054,8 +2174,26 @@
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Part 1: The basics of Replit",
-    "slug": "/tutorials/00-overview#part-1-the-basics-of-replit"
+    "heading": "Part 1 - beginner tutorials - Replit features",
+    "slug": "/tutorials/00-overview#part-1-beginner-tutorials-replit-features"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Part 2 - intermediate tutorials - building fun and useful projects",
+    "slug": "/tutorials/00-overview#part-2-intermediate-tutorials-building-fun-and-useful-projects"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Video introduction",
+    "slug": "/tutorials/00-overview#video-introduction"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Part 1: beginner tutorials - Replit features",
+    "slug": "/tutorials/00-overview#part-1-beginner-tutorials-replit-features"
   },
   {
     "category": "Tutorials",
@@ -2086,12 +2224,6 @@
     "name": "Overview",
     "heading": "Lesson 5: Pair programming and using multiplayer",
     "slug": "/tutorials/00-overview#lesson-5-pair-programming-and-using-multiplayer"
-  },
-  {
-    "category": "Tutorials",
-    "name": "Overview",
-    "heading": "Part 2: advanced Replit use",
-    "slug": "/tutorials/00-overview#part-2-advanced-replit-use"
   },
   {
     "category": "Tutorials",
@@ -2138,6 +2270,12 @@
   {
     "category": "Tutorials",
     "name": "Overview",
+    "heading": "Part 2 - Build your own projects",
+    "slug": "/tutorials/00-overview#part-2-build-your-own-projects"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
     "heading": "Lesson 13: Steganography - hiding messages in images",
     "slug": "/tutorials/00-overview#lesson-13-steganography-hiding-messages-in-images"
   },
@@ -2162,8 +2300,26 @@
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Part 3: building your own projects",
-    "slug": "/tutorials/00-overview#part-3-building-your-own-projects"
+    "heading": "Lesson 17: Build a predictive text engine",
+    "slug": "/tutorials/00-overview#lesson-17-build-a-predictive-text-engine"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 18: Telegram Notes Bot",
+    "slug": "/tutorials/00-overview#lesson-18-telegram-notes-bot"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 19: Build a Snake Game with PyGame",
+    "slug": "/tutorials/00-overview#lesson-19-build-a-snake-game-with-py-game"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Other tutorials",
+    "slug": "/tutorials/00-overview#other-tutorials"
   },
   {
     "category": "Tutorials",
@@ -2212,12 +2368,6 @@
     "name": "Overview",
     "heading": "Quicksort tutorial: Python implementation with line by line explanation",
     "slug": "/tutorials/00-overview#quicksort-tutorial-python-implementation-with-line-by-line-explanation"
-  },
-  {
-    "category": "Tutorials",
-    "name": "Overview",
-    "heading": "More tutorials ",
-    "slug": "/tutorials/00-overview#more-tutorials"
   },
   {
     "category": "Tutorials",
@@ -2630,14 +2780,8 @@
   {
     "category": "Tutorials",
     "name": "Keeping secrets",
-    "heading": "Understanding `.env` files",
-    "slug": "/tutorials/08-storing-secrets-and-history#understanding-env-files"
-  },
-  {
-    "category": "Tutorials",
-    "name": "Keeping secrets",
-    "heading": "The structure of a `.env` file",
-    "slug": "/tutorials/08-storing-secrets-and-history#the-structure-of-a-env-file"
+    "heading": "Understanding the Environment Variables pane",
+    "slug": "/tutorials/08-storing-secrets-and-history#understanding-the-environment-variables-pane"
   },
   {
     "category": "Tutorials",
@@ -3056,8 +3200,8 @@
   {
     "category": "Tutorials",
     "name": "Steganography: hiding messages in images",
-    "heading": "Adding an 'end of message' delimeter",
-    "slug": "/tutorials/13-steganography#adding-an-end-of-message-delimeter"
+    "heading": "Adding an 'end of message' delimiter",
+    "slug": "/tutorials/13-steganography#adding-an-end-of-message-delimiter"
   },
   {
     "category": "Tutorials",
@@ -3460,6 +3604,318 @@
     "name": "Static Site Generator",
     "heading": "Where to next?",
     "slug": "/tutorials/16-static-site-generator#where-to-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Predictive text engine",
+    "heading": null,
+    "slug": "tutorials/17-predictive-text-engine"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Predictive text engine",
+    "heading": "Building a Predictive Text Engine with Node.js",
+    "slug": "/tutorials/17-predictive-text-engine#building-a-predictive-text-engine-with-node-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Predictive text engine",
+    "heading": "Overview and Requirements",
+    "slug": "/tutorials/17-predictive-text-engine#overview-and-requirements"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Predictive text engine",
+    "heading": "Creating a New Project",
+    "slug": "/tutorials/17-predictive-text-engine#creating-a-new-project"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Predictive text engine",
+    "heading": "Finding Training Text",
+    "slug": "/tutorials/17-predictive-text-engine#finding-training-text"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Predictive text engine",
+    "heading": "Reading in the Books",
+    "slug": "/tutorials/17-predictive-text-engine#reading-in-the-books"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Predictive text engine",
+    "heading": "Creating the Data Structure",
+    "slug": "/tutorials/17-predictive-text-engine#creating-the-data-structure"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Predictive text engine",
+    "heading": "Completing a Phrase",
+    "slug": "/tutorials/17-predictive-text-engine#completing-a-phrase"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Predictive text engine",
+    "heading": "Putting it All Together",
+    "slug": "/tutorials/17-predictive-text-engine#putting-it-all-together"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Predictive text engine",
+    "heading": "Can We Do More?",
+    "slug": "/tutorials/17-predictive-text-engine#can-we-do-more"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Predictive text engine",
+    "heading": "Other Engine Applications",
+    "slug": "/tutorials/17-predictive-text-engine#other-engine-applications"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Predictive text engine",
+    "heading": "Things to Try Next",
+    "slug": "/tutorials/17-predictive-text-engine#things-to-try-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Telegram Bot",
+    "heading": null,
+    "slug": "tutorials/18-telegram-bot"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Telegram Bot",
+    "heading": "Quick-start Telegram Bot",
+    "slug": "/tutorials/18-telegram-bot#quick-start-telegram-bot"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Telegram Bot",
+    "heading": "Prerequisites",
+    "slug": "/tutorials/18-telegram-bot#prerequisites"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Telegram Bot",
+    "heading": "Registering a Bot",
+    "slug": "/tutorials/18-telegram-bot#registering-a-bot"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Telegram Bot",
+    "heading": "Making a Bot Interface",
+    "slug": "/tutorials/18-telegram-bot#making-a-bot-interface"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Telegram Bot",
+    "heading": "Creating a barebones bot",
+    "slug": "/tutorials/18-telegram-bot#creating-a-barebones-bot"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Telegram Bot",
+    "heading": "Logging functionality",
+    "slug": "/tutorials/18-telegram-bot#logging-functionality"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Telegram Bot",
+    "heading": "Make a Web UI",
+    "slug": "/tutorials/18-telegram-bot#make-a-web-ui"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Telegram Bot",
+    "heading": "Putting it All Together",
+    "slug": "/tutorials/18-telegram-bot#putting-it-all-together"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Telegram Bot",
+    "heading": "updater.idle()",
+    "slug": "/tutorials/18-telegram-bot#updater-idle"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Telegram Bot",
+    "heading": "Make it Your Own",
+    "slug": "/tutorials/18-telegram-bot#make-it-your-own"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Telegram Bot",
+    "heading": "Where Next?",
+    "slug": "/tutorials/18-telegram-bot#where-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": null,
+    "slug": "tutorials/19-build-snake-with-pygame"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": "Build the Snake Game with Pygame",
+    "slug": "/tutorials/19-build-snake-with-pygame#build-the-snake-game-with-pygame"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": "Overview and Requirements",
+    "slug": "/tutorials/19-build-snake-with-pygame#overview-and-requirements"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": "Creating a New Project",
+    "slug": "/tutorials/19-build-snake-with-pygame#creating-a-new-project"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": "Getting Started with Pygame",
+    "slug": "/tutorials/19-build-snake-with-pygame#getting-started-with-pygame"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": "Creating the Snake Class",
+    "slug": "/tutorials/19-build-snake-with-pygame#creating-the-snake-class"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": "Drawing the Snake",
+    "slug": "/tutorials/19-build-snake-with-pygame#drawing-the-snake"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": "Moving the Snake",
+    "slug": "/tutorials/19-build-snake-with-pygame#moving-the-snake"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": "Steering the Snake",
+    "slug": "/tutorials/19-build-snake-with-pygame#steering-the-snake"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": "Adding Food ",
+    "slug": "/tutorials/19-build-snake-with-pygame#adding-food"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": "Adding Collision Detection for Food",
+    "slug": "/tutorials/19-build-snake-with-pygame#adding-collision-detection-for-food"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": "Tail and Bound Collision Detection",
+    "slug": "/tutorials/19-build-snake-with-pygame#tail-and-bound-collision-detection"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": "Adding the \"Game Over\" Screen",
+    "slug": "/tutorials/19-build-snake-with-pygame#adding-the-game-over-screen"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with PyGame",
+    "heading": "Things to Try Next",
+    "slug": "/tutorials/19-build-snake-with-pygame#things-to-try-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": null,
+    "slug": "tutorials/20-online-store-checkout-process"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": "Build Your Online Store's Checkout Process with Stripe on Replit",
+    "slug": "/tutorials/20-online-store-checkout-process#build-your-online-stores-checkout-process-with-stripe-on-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": "Requirements",
+    "slug": "/tutorials/20-online-store-checkout-process#requirements"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": "Part 1: Start Your Replit Stripe Server",
+    "slug": "/tutorials/20-online-store-checkout-process#part-1-start-your-replit-stripe-server"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": "A brief explanation:",
+    "slug": "/tutorials/20-online-store-checkout-process#a-brief-explanation"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": "Part 2: Buying Bricks With a Repl Frontend",
+    "slug": "/tutorials/20-online-store-checkout-process#part-2-buying-bricks-with-a-repl-frontend"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": "1. Making BrickSite",
+    "slug": "/tutorials/20-online-store-checkout-process#1-making-brick-site"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": "Part 3: Connecting the Parts",
+    "slug": "/tutorials/20-online-store-checkout-process#part-3-connecting-the-parts"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": "Back to BrickSite",
+    "slug": "/tutorials/20-online-store-checkout-process#back-to-brick-site"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": "Let's Get Testing!",
+    "slug": "/tutorials/20-online-store-checkout-process#lets-get-testing"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": "Debugging",
+    "slug": "/tutorials/20-online-store-checkout-process#debugging"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": "Buying a Brick",
+    "slug": "/tutorials/20-online-store-checkout-process#buying-a-brick"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": "Stripe Server",
+    "slug": "/tutorials/20-online-store-checkout-process#stripe-server"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with Stripe",
+    "heading": "BrickSite",
+    "slug": "/tutorials/20-online-store-checkout-process#brick-site"
   },
   {
     "category": "Tutorials",

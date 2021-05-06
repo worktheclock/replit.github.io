@@ -150,7 +150,28 @@
                 "slug": "IT_Toolkit"
             }
         ]
-    },
+    },{
+        "name": "Teams Pro (beta)",
+        "slug": "pro",
+        "contents": [
+          {
+            "name": "Introduction to Teams Pro",
+            "slug": "intro"
+          },
+          {
+            "name": "Team Management",
+            "slug": "teamManagement"
+          },
+          {
+            "name": "Repl Management",
+            "slug": "replManagement"
+          },
+          {
+            "name": "Guest Mode",
+            "slug": "guests"
+          }
+        ]
+      },
     {
         "name": "Repl.it Classrooms",
         "slug": "classrooms",
