@@ -30,25 +30,40 @@ You can publish either directly from the workspace or from your repl's spotlight
 
 *Disclaimer: currently, you can't publish repls to Explore if you're a student or trying to publish a team repl.*
 
-TODO: gifs
-- Clicking publish from Workspace
-- Clicking publish from Spotlight
+### Publish from Workspace
+![Clicking publish from Workspace](https://docs.repl.it/images/explore/workspace-publish.png)
+
+### Publish from Spotlight
+![Clicking publish from Spotlight](https://docs.repl.it/images/explore/spotlight-publish.png)
+
+### When you click on either, you'll be able to add a description, cover image, and tags to your repl.
+
+![Filling out publish details](https://docs.repl.it/images/explore/workspace-publish.gif)
+
 
 ## Requirements for publishing
-The main requirements for publishing are:
-
 - **Your repl must be renamed**. We provide default names for your repls, but if you want to publish, you have to rename it to something more descriptive.
-- **Your repl must have a description**. It's really important for other people to read what your repl is.
-- **Your repl must have a cover image**. Since we present repls visually, you need a cover image for it to stand out.
-- **Your repl must have tags**. When you publish, you can add tags that let people easily find your repl on explore.
+- **Your repl must have a description**. It's really important for other people to understand what your repl does.
+- **Your repl must have a cover image**. Since we present repls visually, we recommend an eye-catching, high-resolution cover image for it to stand out.
+- **Your repl must have tags**. Tags are how repls are discovered on Replit and allow replers to find related repls more easily!
 
 ## Publishing updates
-Once your repl is published, if you want to edit the description, tags, or cover image, press `Publish update` in either the workspace or on your Spotlight page.
+Once your repl is published, if you want to edit the description, tags, or cover image, press `Publish update` in either the Workspace or on your Spotlight page.
 
-[Publishing update image]
+### Publish update from Workspace
+![Clicking publish from Workspace](https://docs.repl.it/images/explore/workspace-publish-update.png)
+
+### Publish update from Spotlight
+![Clicking publish from Spotlight](https://docs.repl.it/images/explore/spotlight-publish-update.png)
+
 
 ## Unpublishing
-If you want to unpublish your repl, go to the `...` menu in the top right corner of your Spotlight page or in the workspace, and click `Unpublish`
+If you want to unpublish your repl, go to the `...` menu in the top right corner of your Spotlight page or in the Workspace, and click `Unpublish`
 
-[Spotlight image]
-[Workspace image]
+### Unpublishing from Workspace
+![Clicking publish from Workspace](https://docs.repl.it/images/explore/workspace-unpublish.png)
+
+### Unpublishing from Spotlight
+![Clicking publish from Unpublish](https://docs.repl.it/images/explore/spotlight-unpublish.png)
+
+
