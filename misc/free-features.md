@@ -1,42 +1,45 @@
-# Using Repl.it for Free
+# Using Replit for Free
 
-Repl.it offers a number of features that every user can access and utilize for free:
+Replit offers a number of helpful features which you don't need to pay for. A free account gives you access to: 
 
-- The best no-setup online [IDE](https://repl.it/site/ide) for beginners with autocomplete and free [automatic hosting](https://repl.it/site/hosting)
-- Teach remotely to the whole class and help your students 1-1 with [multiplayer](https://repl.it/site/multiplayer)
-- Support for Python, Java, HTML/CSS/JavaScript, and 50+ other [languages](https://repl.it/languages)
-- Support for games, graphics, audio and an easy-to-use database
+- A user-friendly, no-setup online [integrated development environment (IDE)](https://replit.com/site/ide) for beginners with autocomplete and free [automatic hosting](https://replit.com/site/hosting).
+- Remote teaching capabilities, allowing teachers to connect with their whole class and help students 1-1 with [multiplayer](https://repl.it/site/multiplayer).
+- Support for Python, Java, HTML/CSS/JavaScript, and 50+ other [languages](https://repl.it/languages).
+- Support for games, graphics, audio and an easy-to-use database.
 
-Here, we'll show you how to take advantage of our free features.  Everything shown on this post can be done with a free account.
+Read on to learn how to take advantage of our free features. Everything mentioned in this post can be done with a free account.
 
 ## Repls
 
-Repls are the core of the Repl.it service, and they will always be available for all users. You can create as many repls as you like, and in any language. Start by logging into your account (or [signing up for a free account](https://repl.it/signup)).
+Repls are the core of the Replit service, and they will always be available for all users. You can create as many repls as you like, and in any of the 50+ languages we support. Start by logging into your account, or [signing up for a free account](https://replit.com/signup).
 
-You can access your repls and create new ones in the "My Repls" view, found at the top of your page once logged in.
+Once logged in, you can create new repls and access your existing ones by navigating to the "My Repls" tab found in the left side-bar menu.
 
-You can create a new repl on this page by clicking on the big green button. You'll be prompted to choose a language - pick any language you like by typing a name in the search, or by browsing the available languages by category.
+Create a new repl by clicking the blue "+" button in the top-right of your screen. You'll be prompted to choose a language and name your repl. Pick any language you like by typing a name in the search, or by browsing the available languages by category.
 
-Once you've selected a language, you'll be greeted with your IDE - Integrated Development Environment. Click on the pencil icon[0] next to the repl name to edit the name and description of the repl. Repls belonging to free accounts are public.
+Select the owner of the repl, and then click "Create repl". You will notice that repls belonging to free accounts are public.
 
-Learn more on how to leverage the full power of repls [here](https://docs.repl.it/tutorials/01-introduction-to-the-repl-it-ide).
+Learn more about [managing your repls here](https://docs.replit.com/repls/dashboard). 
+
+For a practical intro to using repls, follow [this tutorial](https://docs.replit.com/tutorials/01-introduction-to-the-repl-it-ide).
 
 ## Multiplayer
 
-Repl.it is the first fully multiplayer programming environment, meaning you can invite other people to code and collaborate with you. You can use that to pair program with others, teach your classroom, create collaborative projects for your students, or simply present your work to others. 
+Replit is the first fully multiplayer programming environment, meaning you can invite other people to code and collaborate with you. You can use this function to pair program with others, teach your classroom, create collaborative projects for your students, or simply present your work to others. 
 
-Learn more about multiplayer [here](https://docs.repl.it/tutorials/05-pair-programming-using-multiplayer-with-repl-it)
+For a practical intro to using the multiplayer feature, follow [this tutorial](https://docs.replit.com/tutorials/05-pair-programming-using-multiplayer-with-repl-it).
 
 ## Teams
 
-While Teams is not necessary for teaching, learning, or collaboration on Repl.it, it can make it easier to work with others because it allows you to share all your repls and folders by default. 
+The Teams feature allows you to share all your repls and folders by default. It isn't necessary for teaching, learning, or collaboration on Replit, but it can make it much easier to work with others. 
 
-Teams has a free version that allows for up to 10 collaborators. Learn more about Teams for Education [here](https://docs.repl.it/classrooms/teams_for_education).
+Teams has a free version that allows for up to ten collaborators. If you need more than this, check out [Teams for Education](https://docs.repl.it/classrooms/teams_for_education).
 
 ## Compliance
 
-We take user privacy very seriously and only collect data insofar as it's important to provide our service (you can read more about our [privacy policy](https://repl.it/site/privacy)).
+We take user privacy very seriously and only collect data insofar as it's important to provide our service. You can read more about our privacy policy [here](https://repl.it/site/privacy),) and go through our privacy FAQs [here](https://docs.replit.com/Teams/privacyFAQs).
 
-As a small, team we're unable to comply with the various ed-tech regulations around the world. However, you can use Repl.it completely anonymously without providing any identifiable information - choose a language from our [languages page](https://repl.it/languages) and start coding.
+As a small, team we're unable to comply with the various ed-tech regulations around the world. However, you can use Replit completely anonymously without providing any identifiable information; just choose a language from our [languages page](https://replit.com/languages) and start coding.
 
 If you're teacher, one anonymous workflow you can use is to create a repl with the instructions and starter code, and then have your students fork the repl, work on the assignment, and send the link back.
+

@@ -1,6 +1,6 @@
-# Automatically Get Metadata about a repl (username and project slug)
+# Getting Repl Metadata
 
-In some cases it's useful to automatically retrieve metadata about a repl from within that repl.
+In some cases, it's useful to automatically retrieve metadata about a repl from within that repl.
 
 You can find **owner** and **project name** of the current repl in environment variables `REPL_OWNER` and `REPL_SLUG` respectively.
 
@@ -18,7 +18,7 @@ print(os.getenv("REPL_SLUG"))
 # repl-environment-variables
 ```
 
-**Note:** The '@' is not included in the environment variable so to build the full project URL you need to manually include it, for example:
+**Note:** The '@' is not included in the environment variable so, to build the full project URL, you need to manually include it. For example:
 
 ```python
 import os

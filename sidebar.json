@@ -186,7 +186,7 @@
         "slug": "basic"
       },
       {
-        "name": "Change your username",
+        "name": "Change Your Username",
         "slug": "change-username"
       },
       {
@@ -202,7 +202,7 @@
         "slug": "database"
       },
       {
-        "name": "Repl Environment Variables",
+        "name": "Getting Repl Metadata",
         "slug": "repl-environment-variables"
       }
     ]

@@ -2,9 +2,9 @@
 
 Our users' privacy is of utmost importance to us. Here, you will find information about how your repls are licensed.
 
-## Public Repls and Classrooms
+## Public Repls and Teams
 
-Content published to a public repl or a Classroom are automatically published under an MIT license. The full text of the MIT license reads as follows:
+Content published to a public repl or a Team are automatically published under an MIT license. The full text of the MIT license reads as follows:
 
 > Copyright <YEAR> <COPYRIGHT HOLDER> <URL TO REPL>
 
@@ -16,6 +16,8 @@ Content published to a public repl or a Classroom are automatically published un
 
 We do not take down content from public repls unless it is in violation of our Terms and Conditions.  Please be careful of what you add to anonymous repls, as they cannot be deleted!
 
-## Private Repls and Classrooms
+## Private Repls and Teams
 
-Content published to a private repl and private classrooms are unlicensed and therefore still belongs to you, provided it does not violate our [Terms and Conditions](https://repl.it/site/terms).  If you would like to attach your own license to the code, we recommend you include the license as a (code) comment as part of the repl.
+Content published to a private repl and private Team are unlicensed and therefore still belongs to you, provided it does not violate our [Terms and Conditions](https://replit.com/site/terms). 
+
+If you would like to attach your own license to the code, we recommend you include the license as a (code) comment, as part of the repl.

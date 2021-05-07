@@ -1,17 +1,16 @@
-## Classic Basic on Repl.it (in beta)
+# Classic Basic on Replit (in beta)
 
 - Simple syntax based on Classic Basic
 - A 50x50 pixel display for graphics and games
 - A console for input/output
 
-[Start here](https://repl.it/languages/basic).
+[Start here](https://replit.com/new/basic).
 
 ![basic environment](/images/basic.png)
 
 ## Syntax
 
-Every line starts with a command. 
-Every line starts with a line number followed by a command.
+Every line starts with a command, or a line number followed by a command.
 
 ```
 PRINT "Hello world"
@@ -26,21 +25,21 @@ GOTO 10
 
 Each basic command has its own syntax. 
 
-### Commands
+## Commands
 
-#### REM
+### REM
 
 `REM` allows us to add comments to our programs. Comments are for you or other people to read. Computers ignore them.
 
 Example: `REM this is a comment`
 
-#### PRINT
+### PRINT
 
 `PRINT` puts variables, strings, or numbers on the console. The console is the input/output area of Basic, where the program shows you useful information and asks you for input.
 
-#### LET (optional)
+### LET (optional)
 
-`LET` lets us declare variables. Variables are single letters that hold values. Values could be either strings or numbers. Note that `LET` is optional and can be left out of an assignement expression.
+`LET` lets us declare variables. Variables are single letters that hold values. Values could be either strings or numbers. Note that `LET` is optional and can be left out of an assignment expression.
 
 Example using a number:
 ```
@@ -60,9 +59,9 @@ Example without `LET`:
 20 PRINT X
 ```
 
-#### ARRAY
+### ARRAY
 
-`ARRAY` also lets us declare an array. Arrays can be thought of as lists of values. 
+`ARRAY` lets us declare an array. Arrays can be thought of as lists of values. 
 
 Example:
 ```
@@ -90,7 +89,7 @@ If we want to create a multi-dimensional array, which is an array of arrays, we 
 80 print a
 ```
 
-#### INPUT
+### INPUT
 
 `INPUT` lets you communicate with the program by typing into the console. Whatever you typed will be stored into a variable that you can then use in your program. 
 
@@ -101,7 +100,7 @@ Example:
 20 PRINT "Hello " + A
 ```
 
-#### END
+### END
 
 `END` ends the program. 
 
@@ -111,34 +110,34 @@ Example:
 20 PRINT "We never reach this statement"
 ```
 
-#### GOTO
+### GOTO
 
-`GOTO` tells which line number is executed next. Normally, lines are executed from the lowest to the highest number, but `GOTO` allows us to "jump" to a specific line.
+`GOTO` advises which line number is executed next. Normally, lines are executed from the lowest to the highest number, but `GOTO` allows us to jump to a specific line.
 
 Example:
 ```
 10 GOTO 30
-20 PRINT "this line never executes"
+20 PRINT "This line never executes"
 30 PRINT "Jumped here from 10"
 ```
 
 `GOTO` can be used to create a loop. Loops are when programs repeatedly execute a set of lines. 
 
-The following examples prints "hello" for ever:
+The following examples prints "hello" forever:
 ```
 10 PRINT "hello"
 20 GOTO 10
 ```
 
-#### IF...THEN
+### IF...THEN
 
-`IF...THEN` is like `GOTO` in that it allows to influence the execution of the program but it's different in that it all happens on the same line. If the mathematical or relational test is true we execute the command that comes after `THEN`. If it's untrue, we simply proceed to the next line.
+`IF...THEN` is like `GOTO` in that it influences the execution of the program, but it's different in that it all happens on the same line. If the mathematical or relational test is true, we execute the command that comes after `THEN`. If it's untrue, we simply proceed to the next line.
 
 ```
 10 IF X > Y THEN PRINT "X is larger than Y"
 ```
 
-#### IF...THEN...ELSE 
+### IF...THEN...ELSE 
 
 This is the same as `IF...THEN` except we execute the command following the `ELSE` command.
 
@@ -146,9 +145,9 @@ This is the same as `IF...THEN` except we execute the command following the `ELS
 10 IF X > 0 THEN PRINT "X is positive" ELSE PRINT "X is negative"
 ```
 
-#### FOR...TO...STEP...NEXT
+### FOR...TO...STEP...NEXT
 
-It's often useful to repeatedly execute a number of lines. This is called "looping," and `FOR` statements allows to create loops between ranges of numbers. 
+It's often useful to repeatedly execute a number of lines. This is called "looping", and `FOR` statements allow us to create loops between ranges of numbers. 
 
 For example, we can print numbers from 1 to 10:
 ```
@@ -171,7 +170,7 @@ Output:
 10
 ```
 
-But what if we only want to print even numbers between 1 and 10? This is where `STEP` steps in. `STEPS` tells the computer how much to add to the variable (in this case `I`) with each loop. 
+But what if we only want to print even numbers between 1 and 10? This is where `STEP` comes in. `STEPS` tells the computer how much to add to the variable (in this case `I`) with each loop. 
 
 ```
 10 FOR I = 2 TO 30 STEP 2
@@ -190,33 +189,33 @@ Output:
 
 Remember to call `NEXT` with the variable name after the last line of the loop. 
 
-#### GOSUB...RETURN
+### GOSUB...RETURN
 
-A subroutine is a group of statements that you wish to use repeatedly in a program. They're similar to loops in that they can be executed repeatedly, but you have to use `GOSUB` to call (move the program to) the subroutine's first line number. After the subroutine finishes executing you can use `RETURN` to go back to where you used `GOSUB`.
+A subroutine is a group of statements that you wish to use repeatedly in a program. They're similar to loops in that they can be executed repeatedly, but you have to use `GOSUB` to call (move the program to) the subroutine's first line number. After the subroutine finishes executing, you can use `RETURN` to go back to where you used `GOSUB`.
 
 Example:
 ```
 10 GOSUB 40
 20 PRINT "This is the end of the program"
 30 END
-40 PRINT "this is the start of the subroutine"
-50 PRINT "we can easily call it as many times"
+40 PRINT "This is the start of the subroutine"
+50 PRINT "We can easily call it as many times"
 60 PRINT "as we'd like"
 70 RETURN
 ```
 
-#### PLOT
+### PLOT
 
-`PLOT` lights a pixel with an x,y coordinates on the display with a certain color. 
+`PLOT` lights a pixel with x, y coordinates on the display with a certain color. 
 
 Example:
 ```
 10 PLOT 0, 0, "red"
 ```
 
-Colors can be any of the these [colors](https://www.w3schools.com/cssref/css_colors.asp).
+Colors can be any of the [these colors](https://www.w3schools.com/cssref/css_colors.asp).
 
-#### DISPLAY
+### DISPLAY
 
 `DISPLAY` changes the display size (rows, columns) and lets us turn off pixel borders. 
 
@@ -240,9 +239,9 @@ OUTPUT:
 100
 ```
 
-#### DRAW
+### DRAW
 
-`DRAW` is like `PLOT` excepts it lights up multiple pixels on the display. It takes a two-dimensional array of colors.
+`DRAW` is like `PLOT` except it lights up multiple pixels on the display. It takes a two-dimensional array of colors.
 
 Example:
 ```
@@ -252,20 +251,20 @@ Example:
 40 DRAW a
 ```
 
-#### TEXT
+### TEXT
 
-`TEXT` draws text on the display at an x,y coordinates. Optional text size and color parameters can be passed in.
+`TEXT` draws text on the display at an x, y coordinate. Optional text size and color parameters can be passed in.
 
 Example:
 ```
 10 TEXT 0, 0, "hello world", 25, "red"
 ```
 
-Colors can be any of the these [colors](https://www.w3schools.com/cssref/css_colors.asp).
+Colors can be any of the [these colors](https://www.w3schools.com/cssref/css_colors.asp).
 
-#### PAUSE
+### PAUSE
 
-`PAUSE` pauses the program for a number of milliseconds. Milliseconds are 1/1000 of a second.
+`PAUSE` pauses the program for a number of milliseconds. Milliseconds are 1/1000th of a second.
 
 Example:
 ```
@@ -274,7 +273,7 @@ Example:
 30 PRINT "end"
 ```
 
-#### CLS
+### CLS
 
 `CLS` clears the console and the display.
 
@@ -283,7 +282,7 @@ Example:
 10 CLS
 ```
 
-#### CLT
+### CLT
 
 `CLT` clears the console.
 
@@ -292,7 +291,7 @@ Example:
 10 CLT
 ```
 
-#### CLC
+### CLC
 
 `CLC` clears the display.
 
@@ -301,7 +300,7 @@ Example:
 10 CLC
 ```
 
-#### SOUND
+### SOUND
 
 `SOUND` lets us play a frequency for a duration in seconds.
 
@@ -312,7 +311,7 @@ Example:
 
 Duration is optional and will default to 1 second.
 
-#### PLAY
+### PLAY
 
 `PLAY` lets us play a note in an octave for a duration in seconds.
 
@@ -325,11 +324,11 @@ Example:
 - Duration is optional and will default to `1`
 - Notes can be one of: `C C# D D# E F F# G G# A A# B`
 
-### Functions
+## Functions
 
-You can think of functions as builtin subroutines you can call. It's important to differentiate between functions and commands. Lines should start with commands, while functions can be used as part of other commands but not on their own. 
+You can think of functions as built-in subroutines you can call. It's important to differentiate between functions and commands. Lines should start with commands, while functions can be used as part of other commands but not on their own. 
 
-#### ABS
+### ABS
 
 `ABS` returns the absolute value of a number. The sign of the number will always be positive after this function is executed. 
 
@@ -344,7 +343,7 @@ Output:
 11
 ```
 
-#### COS
+### COS
 
 `COS` returns the trigonometric cosine of a number.
 
@@ -358,7 +357,7 @@ Output:
 0.5403023058681398
 ```
 
-#### SIN
+### SIN
 
 `SIN` returns the trigonometric sine of a number.
 
@@ -372,7 +371,7 @@ Output:
 0.8414709848078965
 ```
 
-#### TAN
+### TAN
 
 `TAN` returns the trigonometric tangent of a number.
 
@@ -386,7 +385,7 @@ Output:
 1.5574077246549023
 ```
 
-#### ATAN
+### ATAN
 
 `ATAN` returns the trigonometric arctangent of a number.
 
@@ -400,7 +399,7 @@ Output:
 0.7853981633974483
 ```
 
-#### EXP
+### EXP
 
 `EXP` returns Euler's number (e) raised to the power of a number.
 
@@ -414,7 +413,7 @@ Output:
 7.38905609893065
 ```
 
-#### INT
+### INT
 
 `INT` returns the lowest closest integer of a number.
 
@@ -430,7 +429,7 @@ Output:
 
 Alias: `FLOOR`
 
-#### ROUND
+### ROUND
 
 `ROUND` rounds a number to the closest integer.
 
@@ -444,7 +443,7 @@ Output:
 3
 ```
 
-#### LOG
+### LOG
 
 `LOG` returns the natural logarithm of a number.
 
@@ -458,7 +457,7 @@ Output:
 1.6094379124341003
 ```
 
-#### SGN
+### SGN
 
 `SGN` returns the sign of a number. The sign is +1 if the number is positive, 0 if the number is 0, and -1 if the number is negative.
 
@@ -471,7 +470,7 @@ Output:
 ```
 -1
 ```
-#### SQR
+### SQR
 
 `SQR` returns the square root of a number.
 
@@ -485,7 +484,7 @@ Output:
 5
 ```
 
-#### VAL
+### VAL
 
 `VAL` converts a string to a number, and `0` if it cannot be converted. 
 
@@ -499,7 +498,7 @@ Output:
 33
 ```
 
-#### RND
+### RND
 
 `RND` returns a random number between 0 and 1.
 
@@ -513,7 +512,7 @@ Output:
 0.54232
 ```
 
-If passed a number between parenthesis then it will return a random bumber between 1 and that number. ht 
+If a number is placed between the parenthesis, then the command will return a random number between 1 and that number.
 
 Example:
 ```
@@ -525,7 +524,7 @@ Output:
 7
 ```
 
-#### ASC
+### ASC
 
 `ASC` returns the ASCII representation of a letter. 
 
@@ -539,7 +538,7 @@ Output:
 115
 ```
 
-#### LEFT
+### LEFT
 
 `LEFT` returns the first `n` number of letters from a string. 
 
@@ -553,7 +552,7 @@ Output:
 ba
 ```
 
-#### MID
+### MID
 
 `MID` returns a substring as defined by a starting and ending position in the string. 
 
@@ -567,7 +566,7 @@ Output
 as
 ```
 
-#### RIGHT
+### RIGHT
 
 `RIGHT` returns the last `n` number of letters from a string. 
 
@@ -581,7 +580,7 @@ Output:
 ic
 ```
 
-#### CHR
+### CHR
 
 `CHR` returns the ASCII letter from a number.
 
@@ -597,7 +596,7 @@ s
 
 Aliases: `STR`
 
-#### LEN
+### LEN
 
 `LEN` returns the length of a string.
 
@@ -611,7 +610,7 @@ Output:
 5
 ```
 
-#### SPC
+### SPC
 
 `SPC` returns a number of spaces.
 
@@ -625,7 +624,7 @@ Output:
 hello     world
 ```
 
-#### UPPERCASE
+### UPPERCASE
 
 `UPPERCASE` returns the uppercase string.
 
@@ -639,7 +638,7 @@ Output:
 BASIC
 ```
 
-#### LOWERCASE
+### LOWERCASE
 
 `LOWERCASE` returns the lowercase string.
 
@@ -653,9 +652,9 @@ Output:
 basic
 ```
 
-#### COLOR
+### COLOR
 
-`COLOR` returns the color of a pixel at an x, y coordinates.
+`COLOR` returns the color of a pixel at x, y coordinates.
 
 Example:
 ```
@@ -668,9 +667,9 @@ Output:
 red
 ```
 
-#### GETCHAR
+### GETCHAR
 
-`GETCHAR` returns a single character of user input. The program maintains a first-in-first-put queue of user inputs. If there are no user inputs in the queue, it will return an empty string `""`. 
+`GETCHAR` returns a single character of user input. The program maintains a first-in-first-out queue of user inputs. If there are no user inputs in the queue, it will return an empty string `""`. 
 
 Example:
 ```
@@ -678,7 +677,7 @@ Example:
 20 IF I = "" THEN PRINT "no input" else PRINT "input: " + I
 ```
 
-#### GETCLICK
+### GETCLICK
 
 `GETCLICK` returns an array of x, y coordinates of user mouse clicks. The program maintains a queue of clicks. If there are no user clicks in the queue, it will return an empty string `""`.
 
@@ -687,7 +686,7 @@ Example:
 PRINT GETCLICK()
 ```
 
-#### TIME
+### TIME
 
 `TIME` returns the current milliseconds elapsed since the UNIX epoch.
 
