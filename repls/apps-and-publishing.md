@@ -1,5 +1,5 @@
 # Apps
-Apps is a brand new part of Replit where you can discover and share repls to run, comment, and fork
+Apps is a brand new part of Replit where you can easily browse and publish repls for others to run, comment, and fork.
 
 To read more about Apps, check out the blog post [here](https://blog.replit.com/apps).
 
@@ -15,9 +15,9 @@ To read more about Apps, check out the blog post [here](https://blog.replit.com/
 
 **Content rules**:
 
-There are a few requirements to publishing which mainly revolve around content quality and moderation. Many of these rules are similar or identical to the rules on Repl Talk. If you violate any of the rules, your repl may be removed or your account may be banned temporarily from using Apps.
+There are a few requirements to publishing to Apps which mainly revolve around content quality and moderation. Many of these rules are similar or identical to the rules on Repl Talk. If you violate any of the rules, your repl may be removed or your account may be banned temporarily from using Apps.
 
-- **Keep it SFW**. Keep it clean, or SFW (safe for work). No swearing, nudity, or other inappropriate content is allowed on the platform.
+- **Keep it SFW**. Keep it clean, or SFW (safe for work). No swearing, nudity, or other profanity is allowed on the platform.
 
 - **No bullying**. We have zero tolerance for bullying, trolling, hate speech, racism, sexism, or prejudice of any form. Violation of this rule will result in an immediate ban.
 
@@ -38,11 +38,11 @@ You can publish either directly from the workspace or from your repl's spotlight
 
 ### When you click on either, you'll be able to add a description, cover image, and tags to your repl.
 
-![Filling out publish details](https://docs.repl.it/images/apps/workspace-publish.gif)
+![Filling out publish details](https://docs.repl.it/images/apps/publish-demo.gif)
 
 
 ## Requirements for publishing
-- **Your repl must be renamed**. We provide default names for your repls, but if you want to publish, you have to rename it. This allows you to really make your repl your own and help other replers identify your published repls too.
+- **Your repl must be renamed**. We provide default names for your repls, but if you want to publish, you have to rename it to something more descriptive.
 - **Your repl must have a description**. It's really important for other people to understand what your repl does.
 - **Your repl must have a cover image**. Since we present repls visually, we recommend an eye-catching, high-resolution cover image for it to stand out.
 - **Your repl must have tags**. Tags are how repls are discovered on Replit and allow replers to find related repls more easily!
