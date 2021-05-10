@@ -2,7 +2,7 @@
 
 Multiplayer can only be used if you're signed into Replit. We are working on some solutions to allow for anonymous multiplayer functionality but, in the meantime, follow these steps if you have an anonymous user who wants to collaborate with you. 
 
-1. Click the "Share" button in your repl.
+1. Click the "invite" button in your repl.
 ![Multiplayer invite button](/images/repls/multiplayer-invite-button.png)
 
 2. Copy the join link in your repl. 
