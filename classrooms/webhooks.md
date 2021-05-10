@@ -39,7 +39,7 @@ I can then test this by having a student submit an assignment:
 
 ![screenshot of the event logged to my console](https://replit.github.io/static/images/classrooms/webhook-result.png)
 
-This data can then be saved to a database, or it can trigger another POST request, or anything else.  The world is your oyster with webhooks!  Do note that if your repl is public and you need to store private database keys or API keys, you can do so securely by using [.env files](/repls/secret-keys).
+This data can then be saved to a database, or it can trigger another POST request, or anything else.  The world is your oyster with webhooks!  Do note that if your repl is public and you need to store private database keys or API keys, you can do so securely by using the [secrets](/repls/secrets-environment-variables) manager.
 
 ## Security
 
