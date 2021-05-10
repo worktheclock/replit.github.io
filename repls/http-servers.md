@@ -15,7 +15,7 @@ Below is an example of a simple HTTP server running Flask in Python3, displaying
 
 Our [package manager](https://github.com/replit/upm) will automatically handle dependency files in your repls. See our documentation on [packages](/repls/packages) for more information on how to install and manage dependencies.
 
-Private keys to external services or APIs can be kept in an `.env` file. See our documentation on [secret keys](/repls/secret-keys).
+Private keys to external services or APIs can be kept as environment variables in the secrets manager. See our documentation on [secrets](/repls/secrets-environment-variables).
 
 If you are using Django and you need access to specific bash commands to configure the server, please see [this Django template](https://repl.it/@masfrost/Django-Boilerplate).
 

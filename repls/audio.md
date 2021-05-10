@@ -3,7 +3,7 @@
 There are two ways to enable audio:
 
 ## System-wide audio
-[System-wide audio](https://blog.replit.com/system-audio) allows the PulseAudio audio stream to be delivered to the browser through the [VNC](https://novnc.com) client, and is an opt-in feature. In order to opt-in, all you need to do is create [a secret](https://docs.replit.com/repls/secret-keys) called `VNC_ENABLE_EXPERIMENTAL_AUDIO` with a value of `1` and restart your repl by running `kill 1` on the shell. Once that's done, a checkbox with headphones will appear in the lower right corner of the VNC output window:
+[System-wide audio](https://blog.replit.com/system-audio) allows the PulseAudio audio stream to be delivered to the browser through the [VNC](https://novnc.com) client, and is an opt-in feature. In order to opt-in, all you need to do is create [a secret](https://docs.replit.com/repls/secrets-environment-variables) called `VNC_ENABLE_EXPERIMENTAL_AUDIO` with a value of `1` and restart your repl by running `kill 1` on the shell. Once that's done, a checkbox with headphones will appear in the lower right corner of the VNC output window:
 
 ![look for the headphones](https://blog.replit.com/images/system-audio/system-audio.png "look for the headphones")
 

@@ -153,17 +153,13 @@ Hit run, and you'll see that a new pane has appeared with the URL for your repl'
 
 ## Adding Secret Keys
 
-So far, your repl is public to everyone (unless you have a paid plan) and they can see the code that you put here. If you need to add some private information, such as an API key or a database password, you can use `.env` files.
+So far, your repl is public to everyone (unless you have a paid plan) and they can see the code that you put here. If you need to add some private information, such as an API key or a database password, you can use the repl [secrets](https://docs.replit.com/repls/secrets-environment-variables) manager.
 
-Create a new file by clicking on the "Add file" icon in your filetree. Name it `.env`.
+Create a new environment variable by clicking the "padlock" icon on the side panel
 
-`.env` files contain key-value pairs like the following. In the console, type:
+Add a key-value pair for the environment variable setting the "key" as `PASSWORD` and "value" as `pass1234`.
 
-```
-PASSWORD=pass1234
-```
-
-This `.env` file is special because it is only visible to you.  Anyone who is visiting your repl won't be able to see the contents of this file.
+This secrets configuration will only be visible to you.  Anyone who is visiting your repl won't be able to see the configured environment variables.
 
 Now let's edit `main.py` to include the following in the console:
 
@@ -188,13 +184,13 @@ if __name__ == '__main__':
   app.run(host='0.0.0.0', port=8080)
 ```
 
-We're creating a new page where we look for a query parameter `secret` and we check to see if it matches our `.env` secret. The gif below demonstrates the results.
+We're creating a new page where we look for a query parameter `secret` and we check to see if it matches with the secret stored in our environment variable. The gif below demonstrates the results.
 
 ![Secret keys](/images/repls/quickstart/secret_keys.gif)
 
 Note that this isn't a very secure way of handling secret tokens, since the URL including the query parameter can be cached. This is just a simple demonstration.
 
-[Learn more about .env files](/repls/secret-keys)
+[Learn more about secrets & environment variables](/repls/secrets-environment-variables)
 
 ## Sharing Your Repl
 
