@@ -38,7 +38,7 @@ You can publish either directly from the workspace or from your repl's spotlight
 
 ### When you click on either, you'll be able to add a description, cover image, and tags to your repl.
 
-![Filling out publish details](https://docs.repl.it/images/apps/publish-demo.gif)
+![Filling out publish details](https://docs.repl.it/images/apps/publish.gif)
 
 
 ## Requirements for publishing
