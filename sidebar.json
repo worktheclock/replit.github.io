@@ -90,6 +90,10 @@
             {
                 "name": "Apps and Publishing",
                 "slug": "apps-and-publishing"
+            },            
+            {
+                "name": "Strike System",
+                "slug": "strike-system-apps"
             }
         ]
     },
