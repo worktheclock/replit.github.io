@@ -1,31 +1,19 @@
-## Different Types
+# Public and Private Repls
+When you create a repl, it can either be public or private. 
 
-**Private repls:**
-
-- These can only be accessed via people in your team that are members (and guests directly invited to these repls)
-- You can make a repl private when you initially create it.
+**Private repls** can only be accessed by people in your team that are members, and by guests who are directly invited to these repls.  You can make a repl private when you initially create it.
 
 <img src="/images/teamsPro/privateRepl.png" />
 
-**Public repls:**
-
-- Can be accessed by anyone who has the url to the repl.
-- They can fork and copy everything on the repl, so a great way to share code with people outside of the team.
-- No one can edit the original repl unless they are on the team.
+**Public repls** can be accessed by anyone who has the repl URL, allowing them to fork and copy everything on the repl. This is a great way to share code with people outside of the team. Only team members can edit the original repl.
 
 <img src="/images/teamsPro/publicRepl.png" />
 
-
-**Toggle inside repl**
-
-- You can toggle between private and public inside of a repl as many times as you want by clicking on the repl in the top left.
+You can toggle between "private" and "public" from inside a repl, as many times as you want, by clicking on the repl name in the top left of your screen.
 
 <img src="/images/teamsPro/toggleRepl.png" />
 
-**Fork a repl**
-
-- You can fork any repl private or public by clicking on the top left.
-- Then click on the three dotted menu.
+You can fork any repl, private or public, by clicking on the same repl name and then clicking on the three-dot menu, and selecting "Fork".
 
 <img src="/images/teamsPro/forkRepl.png" />
 
