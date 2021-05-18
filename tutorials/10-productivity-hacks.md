@@ -22,7 +22,7 @@ The keyboard shortcut indicated to the right of each option shows how to activat
 
 Of course, with only six files it might be faster to reach for my mouse, but as the find searches through all files in all directories this method can be significantly faster for larger projects.
 
-Opening up the multiplayer, version control, and settings panes using this method is also faster once the habit is ingrained compared to moving the mouse to the small icons on the left bar. And while pressing `Ctrl+Enter` or `Cmd+Enter` to run your code is faster than choosing "Run" from this global command ette, `Ctrl+K` is only a single shortcut to remember and it will remind you of any other shortcuts you can't recall.
+Opening up the multiplayer, version control, and settings panes using this method is also faster once the habit is ingrained compared to moving the mouse to the small icons on the left bar. And while pressing `Ctrl+Enter` or `Cmd+Enter` to run your code is faster than choosing "Run" from this global command palette, `Ctrl+K` is only a single shortcut to remember and it will remind you of any other shortcuts you can't recall.
 
 ## Using the code editing command palette
 

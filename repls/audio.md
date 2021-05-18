@@ -11,7 +11,7 @@ Due to restrictions in the browser security model, there needs to be an explicit
 
 ### Known limitations
 
-* There is a 100-300 msec latency introduced by the browser.
+* There is a 100-300 millisecond latency introduced by the browser.
 * There are known issues with Safari's browser security model.
 * Since this relies on secrets, it's not supported in Spotlight or Embed modes for the time being.
 
@@ -53,7 +53,7 @@ If you are new to Python or JavaScript, you can follow our steps below to make a
 
 Files are played in mono/single channel mode. Files with multiple channels will be read and converted into single channel data.
 
-To make this as light as possible on your repl's resources, audio files are played via a request system. To make a request, simply write to a named pype, `/tmp/audio`. 
+To make this as light as possible on your repl's resources, audio files are played via a request system. To make a request, simply write to a named pipe, `/tmp/audio`. 
 
 An example request might look like this:
 ```json
