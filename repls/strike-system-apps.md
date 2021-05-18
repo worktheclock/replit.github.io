@@ -7,7 +7,7 @@ Hey there! If you're on this page, that probably means you received a notificati
 
 A: 🐝 A warning is a reminder to be a creative, constructive, and kind member of our Apps community. 
 
-Mods will send you a warning when we feel that you have violated a part of the [Apps and Publishing Guidelines](https://replit.com/@util/replit-docs#repls/explore-and-publish.md), which you agreed to way back when you published your first repl. 
+Mods will send you a warning when we feel that you have violated a part of the [Apps and Publishing Guidelines](https://docs.replit.com/repls/apps-and-publishing), which you agreed to way back when you published your first repl. 
 
 In addition to giving you a warning, we took action in one of the following ways: 
 
@@ -22,7 +22,7 @@ A: ⚠️ If you receive **3+ warnings**, we may have to take action and tempora
 
 ### **Q: My repl just got unpublished. Am I allowed to republish?** 
 
-A: Yes, we encourage you to revise your repl so that it abides by the [Apps and Publishing Guidelines](https://replit.com/@util/replit-docs#repls/explore-and-publish.md). After that, you may republish your repl. No hard feelings. 🤝
+A: Yes, we encourage you to revise your repl so that it abides by the [Apps and Publishing Guidelines](https://docs.replit.com/repls/apps-and-publishing). After that, you may republish your repl. No hard feelings. 🤝
 
 ### **Q: I think there's been a mistake. Can I talk to someone about this decision?**
 
