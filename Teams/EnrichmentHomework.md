@@ -38,7 +38,7 @@ To set this project as a homework assignment, you should give the student enough
 
 We've created an example starter Repl that you can fork (and adapt if necessary before giving to your students) [here](https://repl.it/@ritza/memory-game-starter-project). It demonstrates how to lay out the cards using random colours, and how to detect which card a user clicked on.
 
-![](https://i.ritzastatic.com/712083f34fd24286b370091de159d07e/memory-starter.png)
+![](/images/teamsForEducation/enrichment/memory-starter.png)
 
 ## Example instructions for a student
 
@@ -96,13 +96,13 @@ Apart from checking that the basic and optional features that your students have
 
 It is likely that your students will be able to find similar projects online, so as always plagiarism is likely to be a problem. A good example of this game with all of the features implemented is at [InventWithPython's memory game](https://inventwithpython.com/pygame/chapter3.html) which you can run on Repl.it from [this repl](https://repl.it/@ritza/memorypuzzle-iwp).
 
-![](https://i.ritzastatic.com/06106c5cfa97444aa1f67f743b94a022/iwp-advancedsolution.png)
+![](/images/teamsForEducation/enrichment/iwp-advancedsolution.png)
 
 It should be easy to spot if your students borrowed too heavily from that example without understanding what they were doing, as it is significantly different from the starter code provided here. If you are concerned about plagiarism, copying a few 10-40 character snippets of your students' code into Google in double quotation marks usually brings up their source fairly quickly.
 
 For example, the Google search shown below shows many sources that use exactly the same code:
 
-![](https://i.ritzastatic.com/0ba14ad01e64430bb64137b89d21e9fd/plagiarism.png)
+![](/images/teamsForEducation/enrichment/plagiarism.png)
 ### Reusable code
 
 Games like this one are a great example to introduce your students to the idea of DRY (don't repeat yourself) in software engineering. Because the entire screen has to be completely redrawn even when only one card is changed, it's likely that your students will be tempted to copy-paste the same code into different places (for example, to set up the board, and to update it after a click).
