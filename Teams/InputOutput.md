@@ -6,7 +6,7 @@ There is also a video explanation available [here](https://www.loom.com/share/a8
 
 ## Teams for Education
 
-Input/output testing is a feature of [Teams for Education](https://teamsforeducationresources.obaidaa.repl.co/). If you don't have a team yet you can create one [here](https://repl.it/teams).
+Input/output testing is a feature of [Teams for Education](https://teamsforeducationresources.util.repl.co). If you don't have a team yet you can create one [here](https://repl.it/teams).
 
 ## Creating a Project
 
