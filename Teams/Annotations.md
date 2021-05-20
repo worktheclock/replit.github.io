@@ -12,7 +12,8 @@ Submissions will show all student projects submitted and in progress. Click "Vie
 
 To review student work in bulk: 
 * You can open the Projects Overview from your Team homepage to see all projects and student progress at-a-glance. 
-<img src="/images/teamsForEducation/project-overview.png" max-width="200px"/>
+<img src="/images/teamsForEducation/project-overview.png" max-width="100px"/>
+* Hover over the student project to see whether their tests have passed. (Students must run their tests for this to appear.)
 <img src="/images/teamsForEducation/project-overview-grid.png" />
 * You can also navigate easily from one project to the next by clicking "View Repl" for any project, clicking on the book icon in the left bar, and using the Navigation pane to move between projects. 
 <img src="/images/teamsForEducation/project-review.png" max-width="200px" />
