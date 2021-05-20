@@ -1,24 +1,20 @@
-# **Intro SQL Curriculum**
+# Intro to SQL Curriculum
 
+Welcome to our SQL course. Our free set of pick up and play materials include: course timeline, course outline, a high quality set of teaching slides, teacher notes and engaging activities with premade Replit tasks and teacher solutions. 
 
+Learners will be introduced to the basics of SQL through a set of practical lessons that cover everything from creating a database, running simple and complex queries as well as how to use the like wildcard. Each lesson builds learner knowledge of SQL. We have made three levels of lessons with fun challenges along the way, allowing learners to apply the SQL knowledge they’ve learnt in previous lessons.
 
-## **Overview of Course**
-
-Welcome to our SQL course. Our free set of pick up and play materials include; course timeline, course outline, a high quality set of teaching slides, teacher notes and engaging activities with premade repl.it tasks and teacher solutions. 
-
-Learners will be introduced to the basics of SQL through a set of practical lessons that cover everything from creating a database, running simple and complex queries as well as how to use the like wildcard.  Each lesson builds learner knowledge of SQL. We have made three levels of lessons with fun challenges along the way allowing learners to apply the SQL knowledge they’ve learnt in previous lessons.
-
-Feel free to use the curriculum as is or modify to fit your needs. If you share these materials (as is or with modifications), please provide attribution to Repl.it and Toni Scullion, who created the curriculum.
+Feel free to use the curriculum as is, or modify it to fit your needs. If you share these materials (as is or with modifications), please provide attribution to Replit and Toni Scullion, who created the curriculum.
 
 You can find more information and an in-depth overview [here](https://docs.google.com/document/d/1ubXn_wfWlvfN_UN0yiv5_9aNmnjO3FpNF13FFkl7on4/edit?usp=sharing).
 
-## **The Full Curriculum**
+## The Full Curriculum
 
 In this set of lessons, learners will explore the most commonly used language to access and manipulate data: SQL. Learners will be introduced to and explore basic SQL while also completing challenges. 
 
-You can find the entire curriculum, including Repl.it assignments, [here](https://drive.google.com/drive/folders/1JcaorHEA8tTiubK0igmb7_D2yl8jHya1)
+You can find the entire curriculum, including Replit assignments, [here](https://drive.google.com/drive/folders/1JcaorHEA8tTiubK0igmb7_D2yl8jHya1).
 
-### **More Resources**
+### More Resources
 
 - [Here](https://drive.google.com/file/d/1iQffSlt4VF2-usWgf2KdDXcfIMMpCc4Y/view?usp=sharing) is a video overview of this course.
 - Bronze level
@@ -36,11 +32,13 @@ You can find the entire curriculum, including Repl.it assignments, [here](https:
 - [SQL Cheat Sheet](https://docs.google.com/presentation/d/1-vY3QibA6nFm40k6tuNBvFUNNwjttpjX9Jl1YA-xazs/edit?usp=sharing)
 
 
-## **Our Awesome Creator**
+## Our Awesome Creator
 
 <img class="profile_pic" src="/images/curriculumImg/TScullion.jpg" width="300px"/>
 
-Toni Scullion is a Computing Science teacher and founder of dressCode, a non-profit charity, aspiring to make a dent in the Computing Science gender gap. She is extremely passionate about teaching Computing Science and getting more young people into the subject, particularly more girls. Toni works to raise the profile of Computing Science as a subject in schools to ultimately help inspire the next generation and get more young people into the work of tech.
+This course was created by **Toni Scullion**.
+
+Toni Scullion is a computing science teacher and founder of dressCode, a non-profit charity aspiring to make a dent in the computing science gender gap. She is extremely passionate about teaching computing science and getting more young people into the subject, particularly more girls. Toni works to raise the profile of computing science as a subject in schools, to ultimately help inspire the next generation and get more young people into the work of tech.
 
 - [dresscode Website](https://www.dresscode.org.uk)
 - dressCode Twitter: [@dresscodehq](https://twitter.com/dresscodehq)
