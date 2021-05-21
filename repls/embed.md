@@ -29,6 +29,9 @@ You can also manually embed repls by using your own custom `iframe` tags. These 
 
 Example: `https://replit.com/@timmy_i_chen/flask-boilerplate?lite=1&outputonly=1`
 
+
+Note: To embed the spotlight view, use `?embed=true` instead of `?lite=true`.
+
 ## Embedding on WordPress
 
 WordPress supports OEmbed but can only embed content from an approved whitelist of websites. Check out the [WordPress documentation](https://wordpress.org/support/article/embeds/#adding-support-for-an-oembed-enabled-site) for instructions to add Replit to the whitelist. Once Replit is added, a repl URL formatted as https://replit.com/@username/repltitle will automatically embed an interactive copy of the repl into your WordPress site.
