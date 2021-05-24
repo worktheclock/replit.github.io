@@ -90,7 +90,7 @@
             {
                 "name": "Apps and Publishing",
                 "slug": "apps-and-publishing"
-            },            
+            },
             {
                 "name": "Strike System",
                 "slug": "strike-system-apps"
@@ -323,6 +323,10 @@
             {
                 "name": "Snake game with PyGame",
                 "slug": "19-build-snake-with-pygame"
+            },
+            {
+                "name": "Snake game with Kaboom.js",
+                "slug": "21-build-snake-with-kaboom"
             },
             {
                 "name": "Online store checkout with Stripe",
