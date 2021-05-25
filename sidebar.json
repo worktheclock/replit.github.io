@@ -95,10 +95,10 @@
                 "name": "Strike System",
                 "slug": "strike-system-apps"
             },
-						{
-							  "name": "Getting Started With Nix",
-								"slug": "nix"
-						}
+            {
+                "name": "Getting Started With Nix",
+                "slug": "nix"
+            }
         ]
     },
     {
