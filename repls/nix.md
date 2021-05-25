@@ -38,6 +38,7 @@ Once both those files are configured and you add files for your language, you ca
 
 If you'd like to learn more about Nix, here are some great resources:
 
-* [Nix Pills](https://nixos.org/guides/nix-pills/)
-* [Nixology](https://www.youtube.com/playlist?list=PLRGI9KQ3_HP_OFRG6R-p4iFgMSK1t5BHs)
-* [Nix Package Manager Guide](https://nixos.org/manual/nix/stable/)
+* [Nix Pills](https://nixos.org/guides/nix-pills/) - Guided introduction to Nix
+* [Nixology](https://www.youtube.com/playlist?list=PLRGI9KQ3_HP_OFRG6R-p4iFgMSK1t5BHs) - A series of videos introducing Nix in a practical way
+* [Nix Package Manager Guide](https://nixos.org/manual/nix/stable/) - A comprehensive guide of the Nix Package Manager
+* [A tour of Nix](https://nixcloud.io/tour) - Learn the nix language itself
