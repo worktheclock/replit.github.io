@@ -34,3 +34,10 @@ This file should look something like the example below. The `deps` array specifi
 
 Once both those files are configured and you add files for your language, you can run you repl like normal, with the run button.
 
+## Learn More About Nix
+
+If you'd like to learn more about Nix, here are some great resources:
+
+* [Nix Pills](https://nixos.org/guides/nix-pills/)
+* [Nixology](https://www.youtube.com/playlist?list=PLRGI9KQ3_HP_OFRG6R-p4iFgMSK1t5BHs)
+* [Nix Package Manager Guide](https://nixos.org/manual/nix/stable/)
