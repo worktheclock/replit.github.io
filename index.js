@@ -64,7 +64,7 @@ app.get('/:category/:slug', async (req, res) => {
 		.catch(err => {
 			res.send(`
       <h1>Something went wrong!</h1 >
-      <p>maybe you can <a href="https://replit.com/@turbio/replit-docs">help fix it</a></p>
+      <p>maybe you can <a href="https://replit.com/@util/replit-docs">help fix it</a></p>
 `);
 		});
 });
