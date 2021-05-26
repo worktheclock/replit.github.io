@@ -1,6 +1,6 @@
 # Storing Secrets in .env
 
-⚠️  **Note** - the `.env` file is deprecated in favour of our [new UI for setting environment variables](./secrets-environment-variables). The new UI is slowly rolling out to users. If you don't see it yet, you can continue to use the `.env` file as described below and your data will be automatically migrated to the UI soon. ⚠️
+⚠️  **Note:** The `.env` file is deprecated in favour of our [new UI for setting environment variables](./secrets-environment-variables). The new UI is slowly rolling out to users. If you don't see it yet, you can continue to use the `.env` file as described below and your data will be automatically migrated to the UI soon. ⚠️
 
 Building an app that uses an external service usually requires a key or password. Sharing these secret keys (via public repls) would allow other users to access your services. With Replit, you can create an `.env` file to safely store your secrets. This means you can safely share your code, without sharing your secrets.
 
