@@ -18,6 +18,12 @@ Even if you are on `replit.com` (e.g. on a Spotlight page), if you are viewing a
 
 Blocking `repl.co` will prevent web applications from running on Replit, but still allow coding (e.g. in Java, Python, and many other languages) on Replit. Blocking web applications breaks the experience for students learning HTML/CSS/Javascript and frameworks like NodeJS, Flask, etc.
 
+Blocking the following IPs will also prevent web applications and the use of VNC on Replit, including those using custom domains that are not under `repl.co`:
+- proxy.global.replit.com: 35.186.245.55
+- proxy.hacker.replit.com: 34.120.194.28
+- proxy.teams.replit.com: 34.120.57.62
+- 35.241.26.246
+
 ## Protocols
 
 The Replit application is delivered over the following protocols:
