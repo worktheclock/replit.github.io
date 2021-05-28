@@ -1,22 +1,24 @@
-# Build a personal stock market dashboard
+# Build a personal Stock market dashboard
 
 In this tutorial, we will be building a single-page web dashboard for tracking a real or imaginary stock portfolio. This dashboard will:
 
-* Allow the user record stock purchases.
+* Allow the user to record stock purchases.
 * Track the current price of all stocks held through web scraping.
 * Show the user the percentage gain or loss on their holdings, for each stock and in total.
+
+![Dashboard functionality](/images/tutorials/22-stock-market/dashboard_functionality.png)
 
 After going through this tutorial, you'll:
 
 * Be able to build a single-page application with Flask and JavaScript.
-* Understand webscraping with Requests and Beautiful Soup.
-* Know how to manage persistent data with Replit's Database.
+* Understand web scraping with `Requests` and `Beautiful Soup`.
+* Know how to manage persistent data with Replit's database.
 
 ## Creating the dashboard
 
-We're going to build our dashboard using Python (plus a bit of JavaScript), so create a Python repl now.
+We're going to build our dashboard using Python (plus a bit of JavaScript). Sign in to [Replit](https://replit.com) and create a new Python repl.
 
-![](/images/tutorials/22-stock-market/create-python-repl.png)
+![Creating a Python repl](/images/tutorials/22-stock-market/create-python-repl.png)
 
 Our dashboard will need to have three functions:
 
@@ -26,9 +28,9 @@ Our dashboard will need to have three functions:
 
 Let's start by creating an HTML frontend with the basic data and form elements necessary to enable this functionality. In your repl's file pane, create a directory named `templates`, and in that folder, create a file called `index.html` (this file structure is necessary for building Flask applications).
 
-![](/images/tutorials/22-stock-market/create-files.png)
+![Creating the file structure](/images/tutorials/22-stock-market/create-files.png)
 
-Then enter the following HTML into the file:
+Then enter the following HTML into the `index.html` file:
 
 ```html
 <!DOCTYPE html>
@@ -43,10 +45,10 @@ Then enter the following HTML into the file:
     </style>
     <body>
         <form action="/buy" method="post">
-            <input type="text" placeholder="ticker" name="ticker"></input>
-            <input type="text" placeholder="# shares" name="shares"></input>
-            <input type="text" placeholder="price" name="price"></input>
-            <input type="submit" value="Buy"></input>
+            <input type="text" placeholder="ticker" name="ticker"/>
+            <input type="text" placeholder="# shares" name="shares"/>
+            <input type="text" placeholder="price" name="price"/>
+            <input type="submit" value="Buy"/>
         </form>
 
         <table id="portfolio">
@@ -85,7 +87,7 @@ site.run(host='0.0.0.0', port=8080)
 
 Now run your repl. The resulting page should look like this:
 
-![](/images/tutorials/22-stock-market/initial-dashboard.png)
+![Initial dashboard](/images/tutorials/22-stock-market/initial-dashboard.png)
 
 The first thing we need to implement to get this page functional is the share purchase form. Let's do that now.
 
@@ -93,7 +95,7 @@ The first thing we need to implement to get this page functional is the share pu
 
 We can allow users to "buy" stock by entering the [ticker symbol](https://en.wikipedia.org/wiki/Ticker_symbol), the number of shares purchased, and the price per share. While it would also make sense to record the purchase time, we will leave that out for the sake of simplicity (but you can add it later on your own).
 
-We will record these purchases by adding them to the [Replit Database](https://docs.replit.com/misc/database). This is a simple key-value store that you can think of as a big Python dictionary that retains its state between runs of your repl. Using this database will save us from having to re-enter all of our stock information every time we restart our dashboard.
+We will record these purchases by adding them to the [Replit database](https://docs.replit.com/misc/database). This is a simple key-value store that you can think of as a big Python dictionary which retains its state between runs of a repl. Using this database will save us from having to re-enter all of our stock information every time we restart our dashboard.
 
 To use the Replit Database, all we have to do is add the following import statement at the top of `main.py`:
 
@@ -103,9 +105,9 @@ from replit import db
 
 Now we can use the globally scoped variable `db` like a Python dictionary, keeping in mind that whatever we store in it will persist between executions of our application. A cheat sheet for using the database is available from your repl's database tab on the sidebar. 
 
-![](/images/tutorials/22-stock-market/database-sidebar.png)
+![Database sidebar](/images/tutorials/22-stock-market/database-sidebar.png)
 
-Let's give it a spin and write the function for buying shares. Add the following code just above the line beginning `site.run`:
+Let's give it a spin and write the function for buying shares. Add the following code just above the line beginning with `site.run`:
 
 ```python
 @site.route('/buy', methods=['POST'])
@@ -134,9 +136,9 @@ def buy():
     return redirect(url_for("index"))
 ```
 
-First, if necessary, we create an empty dictionary at the "shares" key of our `db` dictionary. This code will only need to run the first time we buy shares.
+First, if necessary, we create an empty dictionary at the "shares" key of our `db` database. This code will only need to run the first time we buy shares.
 
-Then, we extract the ticker, price and number of shares from the form data, coercing each one into an appropriate format. We want stock tickers to be uppercase and [a maximum of five characters long](https://www.investopedia.com/terms/s/stocksymbol.asp), prices to include fractional amounts, and numbers of shares to be integers (though you could change that later to support [fractional shares](https://www.investopedia.com/terms/f/fractionalshare.asp)).
+Then, we extract the ticker, price and number of shares from the form data, coercing each one into an appropriate format. We want stock tickers to be uppercase and [a maximum of five characters long](https://www.investopedia.com/terms/s/stocksymbol.asp), prices to include fractional amounts, and number of shares to be integers (though you could change that later to support [fractional shares](https://www.investopedia.com/terms/f/fractionalshare.asp)).
 
 Finally, we add our share purchase to the "shares" dictionary. This dictionary is made up of ticker symbol keys mapped to inner dictionaries, which in turn contain the following information:
 
@@ -159,7 +161,7 @@ This may seem like a complicated structure, but it is necessary to allow users t
             {
                 "shares": 5,
                 "price": 110 
-            },
+            }
         ]
     },
     "MSFT": {
@@ -202,7 +204,7 @@ Test this new functionality out by flushing your database before moving on to th
 
 We want our dashboard to be a live display that fetches new stock prices periodically, without us having to refresh the page. It would also be nice to unload calculations such as percentage gain or loss to the client's web browser, so we can reduce load on our server. To this end, we will be structuring our portfolio viewing functionality as an API endpoint that is queried by JavaScript code, rather than using Jinja templates to build it on the server-side. 
 
-The first thing we need to do to achieve this is create a Flask endpoint that returns the user's portfolio. We'll do this at `/portfolio`. Add the following code to `main.py`, below the `buy` function:
+The first thing we need to do to achieve this is to create a Flask endpoint that returns the user's portfolio. We'll do this at `/portfolio`. Add the following code to `main.py`, below the `buy` function:
 
 ```python
 @site.route('/portfolio')
@@ -223,7 +225,7 @@ def portfolio():
 
 The purpose of this function is to serve a [JSON object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) of the shares portfolio to the client. Later, we'll write JavaScript for our dashboard which will use this object to construct a table showing our portfolio information.
 
-In the above code, if no stocks have been added, we return an empty JSON object. Otherwise, we set `portfolio` to a copy of the `shares` dictionary in our Replit DB. The Python Replit library uses custom list and dictionary types that cannot be directly serialized into JSON, so we use [`db.get_raw`](https://replit-py.readthedocs.io/en/latest/db_tutorial.html#advanced-usage) to convert the whole thing into a string and `json.loads` to convert that string into a standard Python dictionary.
+In the above code, if no stocks have been added, we return an empty JSON object. Otherwise, we set `portfolio` to a copy of the `shares` dictionary in our Replit database. The Python Replit library uses custom list and dictionary types that cannot be directly serialized into JSON, so we use [`db.get_raw`](https://replit-py.readthedocs.io/en/latest/db_tutorial.html#advanced-usage) to convert the whole thing into a string and `json.loads` to convert that string into a standard Python dictionary.
 
 Then we need to get the current values for each of our stock holdings. To do so, we loop through `portfolio.keys()`, call `get_price(ticker)` and multiply the return value by the total shares we're holding for this stock. We then add this value under the new `current_value` key in our stock's dictionary.
 
@@ -235,7 +237,7 @@ There's just one problem: we haven't implemented `get_price` yet! Let's do that 
 
 We'll fetch the current prices of our stocks by [scraping](https://en.wikipedia.org/wiki/Web_scraping) the [Yahoo Finance](https://finance.yahoo.com/) website. While the more traditional and foolproof way of consuming structured data such as share prices is to use an [API](https://en.wikipedia.org/wiki/API) that provides structured data in a computer-ready format, this is not always feasible, as the relevant APIs may be limited or even non-existent. For these and other reasons, web scraping is a useful skill to know.
 
-A quick disclaimer before we jump in: copyright law and web scraping laws are complex and differ by country. As long as you aren't blatantly copying their content or doing web scraping for commercial gain, people generally don't mind web scaping. However, there have been some legal cases involving scraping data from LinkedIn and media attention from scraping data from OKCupid. Web scraping can violate the law, go against a particular website's terms of service, or breach ethical guidelines – so take care with where you apply this skill.
+A quick disclaimer before we jump in: copyright law and web scraping laws are complex and differ by country. As long as you aren't blatantly copying their content or doing web scraping for commercial gain, people generally don't mind web scraping. However, there have been some legal cases involving scraping data from LinkedIn and media attention from scraping data from OKCupid. Web scraping can violate the law, go against a particular website's terms of service, or breach ethical guidelines – so take care with where you apply this skill.
 
 Additionally, from a practical perspective, web scraping code is usually brittle and likely to break in the event that a scraped site changes its appearance.
 
@@ -265,7 +267,7 @@ The first line fetches the page on Yahoo Finance that shows information about ou
 
 [https://finance.yahoo.com/quote/AAPL](https://finance.yahoo.com/quote/AAPL)
 
-We then load the page into a Beautiful Soup object, parsing it as HTML 5 content. Finally, we need to find the price. If you visit the above page in our browser, right-click on the price near the top of the page and select "Inspect", you'll notice that it's inside a `span` element with a class value containing `Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)`. If the market is open and the price is changing, additional classes may be added and removed as you watch, but the previously mentioned value should still be sufficient. 
+We then load the page into a Beautiful Soup object, parsing it as HTML5 content. Finally, we need to find the price. If you visit the above page in your browser, right-click on the price near the top of the page and select "Inspect", you'll notice that it's inside a `span` element with a class value containing `Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)`. If the market is open, and the price is changing, additional classes may be added and removed as you watch, but the previously mentioned value should still be sufficient. 
 
 We use Beautiful Soup's [`find`](https://www.crummy.com/software/BeautifulSoup/bs3/documentation.html#find(name,%20attrs,%20recursive,%20text,%20**kwargs)) method to locate this `span`. The `text` attribute of the object returned is the price we want. Before returning it, we remove any comma thousands separators to avoid float conversion errors later on.
 
@@ -316,7 +318,7 @@ def buy():
     return redirect(url_for("index"))
 ```
 
-The first change we've made to this function is to strip leading $s on ticker symbols, in case users include those. Then, by calling `get_price` in this function, we both can prevent users from adding invalid stock tickers and allow users to record purchases at the current price by leaving the price field blank. Additionally, we'll assume users want to buy just one share if they leave the number of shares field blank.
+The first change we've made to this function is to strip leading `$`s on ticker symbols, in case users include those. Then, by calling `get_price` in this function, we both can prevent users from adding invalid stock tickers and allow users to record purchases at the current price by leaving the price field blank. Additionally, we'll assume users want to buy just one share if they leave the number of shares field blank.
 
 We can now test our code out. Run your repl, add some stocks, and then, in a separate tab, navigate to this URL (replacing the two ALL-CAPS values first):
 
@@ -333,75 +335,75 @@ We will need to write some JavaScript to fetch our portfolio information, assemb
 Add the following code just above the closing `</body>` tag in `templates/index.html`:
 
 ```html
-        <script>
-        function getPortfolio() {
-            fetch("/portfolio")
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                });
-            
-        }
+<script>
+function getPortfolio() {
+    fetch("/portfolio")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        });
+    
+}
 
-        getPortfolio();
-        </script>
+getPortfolio();
+</script>
 ```
 
 This code uses the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to query our `/portfolio` endpoint and returns a [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), which we feed into two [`then`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) methods. The first one extracts the JSON data from the response, and the second one logs the data to JavaScript console. This is a common pattern in JavaScript, which provides a lot of [asynchronous](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts) functionality.
 
 Run your repl and open its web page in a new tab.
 
-![](/images/tutorials/22-stock-market/replit-browser-open-in-new-tab)
+![Opn in new tab](/images/tutorials/22-stock-market/replit-browser-open-in-new-tab.png)
 
-Then open your browser's devtools with F12 and you should see your portfolio JSON object in the console. If you don't, give it a few seconds.
+Then open your browser's devtools with F12, and you should see your portfolio JSON object in the console. If you don't, give it a few seconds.
 
-![](/images/tutorials/22-stock-market/json-portfolio-in-browser-console)
+![In browser console](/images/tutorials/22-stock-market/json-portfolio-in-browser-console.png)
 
 Now let's add the rest of our JavaScript code. Delete `console.log(data);` and add the following code in its place:
 
 ```javascript
-                    var table = document.getElementById("portfolio");
-                    var tableHTML = `<tr>
-                        <th>Ticker</th>
-                        <th>Number of shares</th>
-                        <th>Total cost</th>
-                        <th>Current value</th>
-                        <th>Percent change</th>
-                    </tr>`;
+var table = document.getElementById("portfolio");
+var tableHTML = `<tr>
+    <th>Ticker</th>
+    <th>Number of shares</th>
+    <th>Total cost</th>
+    <th>Current value</th>
+    <th>Percent change</th>
+</tr>`;
 
-                    var portfolioCost = 0;
-                    var portfolioCurrent = 0;
-    
-                    for (var ticker in data) {
-                        var totalShares = data[ticker]['total_shares'];
-                        var totalCost = data[ticker]['total_cost'];
-                        var currentValue = data[ticker]['current_value'];
-                        var percentChange = percentChangeCalc(totalCost, currentValue); 
+var portfolioCost = 0;
+var portfolioCurrent = 0;
 
-                        row = "<tr>";
-                        row += "<td>$" + ticker + "</td>";
-                        row += "<td>" + totalShares + "</td>";
-                        row += "<td>$" + totalCost.toFixed(2)  + "</td>";
-                        row += "<td>$" + currentValue.toFixed(2) + "</td>";
-                        row += percentChangeRow(percentChange);
-                        row += "</tr>";
-                        tableHTML += row;
+for (var ticker in data) {
+    var totalShares = data[ticker]['total_shares'];
+    var totalCost = data[ticker]['total_cost'];
+    var currentValue = data[ticker]['current_value'];
+    var percentChange = percentChangeCalc(totalCost, currentValue); 
 
-                        portfolioCost += totalCost;
-                        portfolioCurrent += currentValue;
-                    }
+    row = "<tr>";
+    row += "<td>$" + ticker + "</td>";
+    row += "<td>" + totalShares + "</td>";
+    row += "<td>$" + totalCost.toFixed(2)  + "</td>";
+    row += "<td>$" + currentValue.toFixed(2) + "</td>";
+    row += percentChangeRow(percentChange);
+    row += "</tr>";
+    tableHTML += row;
 
-                    portfolioPercentChange = percentChangeCalc(portfolioCost, portfolioCurrent);
+    portfolioCost += totalCost;
+    portfolioCurrent += currentValue;
+}
 
-                    tableHTML += "<tr>";
-                    tableHTML += "<th>Total</th>";
-                    tableHTML += "<th>&nbsp;</th>";
-                    tableHTML += "<th>$" + portfolioCost.toFixed(2) + "</th>";
-                    tableHTML += "<th>$" + portfolioCurrent.toFixed(2) + "</th>";
-                    tableHTML += percentChangeRow(portfolioPercentChange);
-                    tableHTML += "</tr>"
-    
-                    table.innerHTML = tableHTML;
+portfolioPercentChange = percentChangeCalc(portfolioCost, portfolioCurrent);
+
+tableHTML += "<tr>";
+tableHTML += "<th>Total</th>";
+tableHTML += "<th>&nbsp;</th>";
+tableHTML += "<th>$" + portfolioCost.toFixed(2) + "</th>";
+tableHTML += "<th>$" + portfolioCurrent.toFixed(2) + "</th>";
+tableHTML += percentChangeRow(portfolioPercentChange);
+tableHTML += "</tr>"
+
+table.innerHTML = tableHTML;
 ```
 
 This code constructs an [HTML table](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) containing the values queried from our portfolio endpoint, as well as the extra calculated values we mentioned above. We use the [`toFixed`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) method to cap the number of decimal places for financial values to two.
@@ -409,43 +411,43 @@ This code constructs an [HTML table](https://developer.mozilla.org/en-US/docs/We
 We also use a couple of helper functions for calculating and displaying percentage changes. Add the code for these above the `getPortfolio` function declaration:
 
 ```javascript
-        function percentChangeCalc(x, y) {
-            return (x != 0 ? (y - x) * 100 / x : 0)
-        }
+function percentChangeCalc(x, y) {
+    return (x != 0 ? (y - x) * 100 / x : 0);
+}
 
-        function percentChangeRow(percentChange) {
-            if (percentChange > 0) {
-                return "<td class='positive'>" + percentChange.toFixed(2) + "%</td>";
-            }
-            else if (percentChange < 0) {
-                return "<td class='negative'>" + percentChange.toFixed(2) + "%</td>";
-            }
-            else {
-                return "<td>" + percentChange.toFixed(2) + "%</td>";
-            }
-        }
+function percentChangeRow(percentChange) {
+    if (percentChange > 0) {
+        return "<td class='positive'>" + percentChange.toFixed(2) + "%</td>";
+    }
+    else if (percentChange < 0) {
+        return "<td class='negative'>" + percentChange.toFixed(2) + "%</td>";
+    }
+    else {
+        return "<td>" + percentChange.toFixed(2) + "%</td>";
+    }
+}
 ```
 
-The `percentChangeCalc` function calculates the percentage difference between two numbers, avoiding division by zero. The `percentChangeRow` function allows us to style gains and losses differently by adding classes that we've already styled in the page's CSS. 
+The `percentChangeCalc` function calculates the percentage difference between two numbers, avoiding division by zero. The `percentChangeRow` function allows us to style gains and losses differently by adding classes that we've already declared in the page's CSS. 
 
-Finally, we need to add some code to periodically refetch our portfolio, so that we can see the newest price data. We'll use JavaScript's [`setInterval`](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals#setinterval) function for this. Add the following code just above `</script>`.
+Finally, we need to add some code to periodically refetch our portfolio, so that we can see the newest price data. We'll use JavaScript's [`setInterval`](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals#setinterval) function for this. Add the following code just above the closing `</script>` tag.
 
 ```javascript
-        // refresh portfolio every 60 seconds
-        setInterval(function() {
-            getPortfolio()
-        }, 60000)
+// refresh portfolio every 60 seconds
+setInterval(function() {
+    getPortfolio()
+}, 60000)
 ```
 
 Run your repl, add some stocks if you haven't, and you should see something like this:
 
-![](/images/tutorials/22-stock-market/dashboard-with-portfolio.png)
+![Dashboard with portfolio](/images/tutorials/22-stock-market/dashboard-with-portfolio.png)
 
 From this point on, we highly recommend viewing your application in a new browser tab rather than Replit's in-page browser, to get the full-page dashboard experience.
 
 ## Caching
 
-Our dashboard is feature-complete, but a bit slow. As we're rendering it with client-side JavaScript that has to execute in the user's browser, we won't be able make it load instantly, with the rest of the page, but we can do some server-side caching to speed it up a little and reduce the load on our repl.
+Our dashboard is feature-complete, but a bit slow. As we're rendering it with client-side JavaScript that has to execute in the user's browser, we won't be able to make it load instantly, with the rest of the page, but we can do some server-side caching to speed it up a little and reduce the load on our repl.
 
 Currently, whenever we send a request to the `/portfolio` endpoint, we execute `get_price` on each of our stocks and rescrape Yahoo Finance to find their prices. Under normal conditions, stock prices are unlikely to change significantly moment-to-moment, and our dashboard is not a [high-frequency trading](https://www.investopedia.com/ask/answers/09/high-frequency-trading.asp) platform, so we should write some logic to store the current share price and only renew it if it's more than 60 seconds old. Let's do this now.
 
@@ -457,7 +459,7 @@ First, we'll import the `time` module, near the top of `main.py`.
 import time
 ```
 
-This allows us to use `time.time()`, which returns the current [Unix Epoch](https://www.epochconverter.com/), a useful value for counting elasped time in seconds. Add the following code to the `buy` function, just above the `return` statement:
+This allows us to use `time.time()`, which returns the current [Unix Epoch](https://www.epochconverter.com/), a useful value for counting elapsed time in seconds. Add the following code to the `buy` function, just above the `return` statement:
 
 ```python
     db['shares'][ticker]['current_price'] = current_price
@@ -506,6 +508,7 @@ Our stock dashboard is functional, and even useful to an extent, but there's sti
 * The ability to create multiple portfolios or user accounts.
 * Graphs.
 
-You can find our code for this tutorial in the repl below:
+You can find the code for this tutorial in the repl below:
 
-!!!REPL EMBED
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/personal-finance-dashboard?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
