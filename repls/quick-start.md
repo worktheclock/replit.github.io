@@ -127,7 +127,7 @@ Run the code. You'll see that the newly generated image, `plot.png`, shows up in
 
 Let's create a new Python3 repl. (Save time and use [this shortcut](https://repl.it/languages/python3)). Let's call this one "python flask server".
 
-Our first step is to add the `flask` package. Go through the [steps above]((#adding-packages)) except this time, choose the package called `flask`.
+Our first step is to add the `flask` package. Go through the [steps above](#adding-packages)) except this time, choose the package called `flask`.
 
 ![Starting a server](/images/repls/quickstart/flask_server.gif)
 
