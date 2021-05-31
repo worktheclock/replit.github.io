@@ -337,6 +337,10 @@
                 "slug": "20-online-store-checkout-process"
             },
             {
+                "name": "Stock Market Dashboard",
+                "slug": "22-personal-stock-market-dashboard"
+            },
+            {
                 "name": "Pinboard Project Part 1: HTML & CSS",
                 "slug": "PinboardProjectPart1"
             },
