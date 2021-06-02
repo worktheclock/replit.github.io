@@ -35,7 +35,7 @@ The Replit application is delivered over the following protocols:
 
 Please refer to these guides to get Replit working under your whitelist/network security vendor:
 - [Lightspeed Systems](https://help.lightspeedsystems.com/s/article/Repl-it-Domains?language=en_US)
- (setup support available via chat on [help.lightspeedsystems.com](http://help.lightspeedsystems.com/)
+ (setup support available via chat on [help.lightspeedsystems.com](http://help.lightspeedsystems.com/))
 - (more to come)
 
 ## Data Retention and Usage
