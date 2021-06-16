@@ -11,3 +11,6 @@ Students may export their project submissions into their personal Replit account
 
  ![Export submissions button at the top of a Team member's dashboard](/images/teamsForEducation/exportsubmissions.png)
 
+ ![Export button followed by the name of the folder where student submissions will export to](/images/teamsForEducation/exportsubmissions2.png)
+
+
