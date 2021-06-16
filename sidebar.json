@@ -154,6 +154,10 @@
                 "slug": "EmbedProjects"
             },
             {
+                "name": "Exporting Student Submissions",
+                "slug": "exportSubmissions"
+            },
+            {
                 "name": "Privacy FAQs",
                 "slug": "privacyFAQs"
             },

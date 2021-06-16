@@ -34,7 +34,7 @@ If you hit the `run` button, you should see the app start. As you can see, the w
 
 Some GitHub projects are very large and complicated, and you might not be able to run everything you need directly on Repl.it, but in many cases it just works. Open-source projects can be read and run by anyone, but still have restrictions on who can push changes to them. Next we'll improve this project and request that the owner merges our changes into the original.
 
-## Looking at the version control panel in Repl.it
+## Looking at the version control panel in Replit
 
 Repl.it includes a version control tab which shows you information about the GitHub repository and in some cases allows you to push your changes made in Repl.it back to GitHub.
 

@@ -12,7 +12,7 @@ The platform it is built around four cornerstones which we used to inform its fe
 
 
 ## 2. Collaborate
- - *Threads* allow you to have asynrchonous conversations across all repls so that feedback and conversations are never lost. You can highlight specific lines of code or writing, and assign a comment.
+ - *Threads* allow you to have asynchronous conversations across all repls so that feedback and conversations are never lost. You can highlight specific lines of code or writing, and assign a comment.
 
    <img src="https://blog.repl.it/images/threads/annotations.gif?" alt="Our existing annotations feature"/>
 
@@ -40,7 +40,7 @@ The platform it is built around four cornerstones which we used to inform its fe
 <img src="https://blog.replit.com/images/draw/draw.gif" alt="Example drawing" style="width: 100%;"/>
 
    - You can create design docs and brainstorming sessions by combining .md and .draw files. 
-   - You can also use it as a knowledebase (one source of truth for the whole team).
+   - You can also use it as a knowledge base (one source of truth for the whole team).
 
 ## Questions? Need help?
 
