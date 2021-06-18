@@ -14,7 +14,10 @@ To review student work in bulk:
 * You can open the Projects Overview from your Team homepage to see all projects and student progress at-a-glance. 
 <img src="/images/teamsForEducation/project-overview.png" max-width="100px"/>
 * Hover over the student project to see whether their tests have passed. (Students must run their tests for this to appear.)
-<img src="/images/teamsForEducation/project-overview-grid.png" />
+* The Progress column shows percentage of projects submitted.
+* To export the Projects Overview as a csv file, click on "Export" at the top right of the page.
+<img src="/images/teamsForEducation/projects-overview-export.png" max-width="300px" />
+
 * You can also navigate easily from one project to the next by clicking "View Repl" for any project, clicking on the book icon in the left bar, and using the Navigation pane to move between projects. 
 <img src="/images/teamsForEducation/project-review.png" max-width="200px" />
 
