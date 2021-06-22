@@ -1,395 +1,410 @@
 [
-    {
-        "name": "Get Started",
-        "slug": "repls",
-        "contents": [
-            {
-                "name": "Introduction to Repls",
-                "slug": "intro"
-            },
-            {
-                "name": "Managing Your Repls",
-                "slug": "dashboard"
-            },
-            {
-                "name": "Creating Files",
-                "slug": "files"
-            },
-            {
-                "name": "Using History",
-                "slug": "history"
-            },
-            {
-                "name": "Quick Start Guide",
-                "slug": "quick-start"
-            },
-            {
-                "name": "Installing Packages",
-                "slug": "packages"
-            },
-            {
-                "name": "Web Hosting",
-                "slug": "web-hosting"
-            },
-            {
-                "name": "Deploying HTTP Servers",
-                "slug": "http-servers"
-            },
-            {
-                "name": "Authenticating Users",
-                "slug": "repl-auth"
-            },
-            {
-                "name": ".env file (deprecated)",
-                "slug": "secret-keys"
-            },
-            {
-                "name": "Secrets & environment variables",
-                "slug": "secrets-environment-variables"
-            },
-            {
-                "name": "Creating Interactive Python Plots",
-                "slug": "python-plots"
-            },
-            {
-                "name": "Embedding Repls",
-                "slug": "embed"
-            },
-            {
-                "name": "Editor Shortcuts",
-                "slug": "editor"
-            },
-            {
-                "name": "Configuring the Run Button",
-                "slug": "dot-replit"
-            },
-            {
-                "name": "Repl From Repo",
-                "slug": "repl-from-repo"
-            },
-            {
-                "name": "Using Multiplayer with Anonymous Users",
-                "slug": "multiplayer-anon"
-            },
-            {
-                "name": "Playing Audio on Replit",
-                "slug": "audio"
-            },
-            {
-                "name": "Always-on",
-                "slug": "always-on"
-            },
-            {
-                "name": "Unit Testing",
-                "slug": "UnitTesting"
-            },
-            {
-                "name": "Native Graphics using VNC",
-                "slug": "vnc"
-            },
-            {
-                "name": "Apps and Publishing",
-                "slug": "apps-and-publishing"
-            },            
-            {
-                "name": "Strike System",
-                "slug": "strike-system-apps"
-            }
-        ]
-    },
-    {
-        "name": "Teams for Education",
-        "slug": "Teams",
-        "contents": [
-            {
-                "name": "Introduction to Teams For Education",
-                "slug": "Intro"
-            },
-            {
-                "name": "Inviting Teachers & Students",
-                "slug": "Invitations"
-            },
-            {
-                "name": "Assigning Nicknames",
-                "slug": "Nicknames"
-            },
-            {
-                "name": "User Roles",
-                "slug": "Roles"
-            },
-            {
-                "name": "Project Workflow",
-                "slug": "Projects"
-            },
-            {
-                "name": "Copying Projects to Other Teams",
-                "slug": "projectCopying"
-            },
-            {
-                "name": "Classroom Material",
-                "slug": "Notes"
-            },
-            {
-                "name": "Example Homework Assignments",
-                "slug": "HomeworkAssignments"
-            },
-            {
-                "name": "Reviewing Student Work",
-                "slug": "Annotations"
-            },
-            {
-                "name": "Tests and Autograding",
-                "slug": "Testing"
-            },
-            {
-                "name": "Input/Output Testing",
-                "slug": "InputOutput"
-            },
-            {
-                "name": "Embedding Projects",
-                "slug": "EmbedProjects"
-            },
-            {
-                "name": "Privacy FAQs",
-                "slug": "privacyFAQs"
-            },
-            {
-                "name": "IT Admin Toolkit",
-                "slug": "IT_Toolkit"
-            }
-        ]
-    },{
-        "name": "Teams Pro (beta)",
-        "slug": "pro",
-        "contents": [
-          {
-            "name": "Introduction to Teams Pro",
-            "slug": "intro"
-          },
-          {
-            "name": "Team Management",
-            "slug": "teamManagement"
-          },
-          {
-            "name": "Public and Private Repls",
-            "slug": "replManagement"
-          },
-          {
-            "name": "Guest Mode",
-            "slug": "guests"
-          }
-        ]
+  {
+    "name": "Getting started",
+    "slug": "getting-started",
+    "contents": [
+      {
+        "name": "Introduction to Replit",
+        "slug": "intro-replit"
       },
-    {
-        "name": "Repl.it Classrooms",
-        "slug": "classrooms",
-        "contents": [
-            {
-                "name": "Exporting Classrooms",
-                "slug": "exports"
-            }
-        ]
-    },
-    {
-        "name": "Miscellaneous",
-        "slug": "misc",
-        "contents": [
-            {
-                "name": "Using Repl.it for Free",
-                "slug": "free-features"
-            },
-            {
-                "name": "CLUI Graphical CLI",
-                "slug": "clui"
-            },
-            {
-                "name": "Security",
-                "slug": "security"
-            },
-            {
-                "name": "Licensing Info",
-                "slug": "licensing"
-            },
-            {
-                "name": "Copyright Claims",
-                "slug": "copyright"
-            },
-            {
-                "name": "Basic (Language) Docs",
-                "slug": "basic"
-            },
-            {
-                "name": "Change your username",
-                "slug": "change-username"
-            },
-            {
-                "name": "Favorite Languages",
-                "slug": "favorite-languages"
-            },
-            {
-                "name": "General FAQ",
-                "slug": "General-FAQ"
-            },
-            {
-                "name": "Database",
-                "slug": "database"
-            },
-            {
-                "name": "Repl Environment Variables",
-                "slug": "repl-environment-variables"
-            }
-        ]
-    },
-    {
-        "name": "Tutorials",
-        "slug": "tutorials",
-        "contents": [
-            {
-                "name": "Overview",
-                "slug": "00-overview"
-            },
-            {
-                "name": "Introduction to the IDE",
-                "slug": "01-introduction-to-the-repl-it-ide"
-            },
-            {
-                "name": "Working with files",
-                "slug": "02-managing-files-using-repl-it"
-            },
-            {
-                "name": "Managing dependencies and using NLP",
-                "slug": "03-handling-dependencies-with-repl-it"
-            },
-            {
-                "name": "Data science",
-                "slug": "04-data-science-and-visualisation-with-repl-it"
-            },
-            {
-                "name": "Multiplayer",
-                "slug": "05-pair-programming-using-multiplayer-with-repl-it"
-            },
-            {
-                "name": "GitHub and the Run Button",
-                "slug": "06-github-and-run-button"
-            },
-            {
-                "name": "Juggling with PyGame",
-                "slug": "07-building-a-game-with-pygame"
-            },
-            {
-                "name": "Keeping secrets",
-                "slug": "08-storing-secrets-and-history"
-            },
-            {
-                "name": "Test driven development",
-                "slug": "09-test-driven-development"
-            },
-            {
-                "name": "Productivity hacks",
-                "slug": "10-productivity-hacks"
-            },
-            {
-                "name": "Databases: build a phonebook",
-                "slug": "11-using-the-replit-database"
-            },
-            {
-                "name": "Audio: create a media player",
-                "slug": "12-audio"
-            },
-            {
-                "name": "Steganography: hiding messages in images",
-                "slug": "13-steganography"
-            },
-            {
-                "name": "2D platform game with PyGame",
-                "slug": "14-2d-platform-game"
-            },
-            {
-                "name": "Chat app using Node.js",
-                "slug": "15-repl-chat"
-            },
-            {
-                "name": "Static Site Generator",
-                "slug": "16-static-site-generator"
-            },
-            {
-                "name": "Predictive text engine",
-                "slug": "17-predictive-text-engine"
-            },
-            {
-                "name": "Telegram Bot",
-                "slug": "18-telegram-bot"
-            },
-            {
-                "name": "Snake game with PyGame",
-                "slug": "19-build-snake-with-pygame"
-            },
-            {
-                "name": "Online store checkout with Stripe",
-                "slug": "20-online-store-checkout-process"
-            },
-            {
-                "name": "Pinboard Project Part 1: HTML & CSS",
-                "slug": "PinboardProjectPart1"
-            },
-            {
-                "name": "Pinboard Project Part 2: JavaScript",
-                "slug": "PinboardProjectPart2"
-            },
-            {
-                "name": "GraphQL Part 1: setting up endpoints",
-                "slug": "graphql-project-part-1"
-            },
-            {
-                "name": "GraphQL Part 2: creating a web application",
-                "slug": "graphql-project-part-2"
-            },
-            {
-                "name": "Spotify API tutorials",
-                "slug": "spotify-tutorials"
-            },
-            {
-                "name": "Kaboom Editor",
-                "slug": "kaboom"
-            }
-        ]
-    },
-    {
-        "name": "Teaching Curriculum",
-        "slug": "curriculum",
-        "contents": [
-            {
-                "name": "How this works",
-                "slug": "Intro"
-            },
-            {
-                "name": "Intro to Java Teaching Curriculum",
-                "slug": "introJava"
-            },
-            {
-                "name": "Intro to Python Teaching Curriculum",
-                "slug": "introPython"
-            },
-            {
-                "name": "Intermediate Python Teaching Curriculum",
-                "slug": "intermediatePython"
-            },
-            {
-                "name": "Intro to HTML/CSS Teaching Curriculum",
-                "slug": "introHTMLCSS"
-            },
-            {
-                "name": "Intro to SQL Teaching Curriculum",
-                "slug": "introSQL"
-            },
-            {
-                "name": "Abstract Data Types Curriculum",
-                "slug": "abstractData"
-            },
-            {
-                "name": "Intro to C++",
-                "slug": "introCpp"
-            }
-        ]
-    }
+      {
+        "name": "Using Replit for free",
+        "slug": "using-replit-free"
+      },
+      {
+        "name": "Managing your repls",
+        "slug": "managing-repls"
+      },
+      {
+        "name": "Creating files",
+        "slug": "creating-files"
+      },
+      {
+        "name": "FAQ",
+        "slug": "faq"
+      }
+    ]
+  },
+  {
+    "name": "Programming & IDE",
+    "slug": "programming-ide",
+    "contents": [
+      {
+        "name": "Using repl history",
+        "slug": "using-repl-history"
+      },
+      {
+        "name": "Working with shortcuts",
+        "slug": "working-shortcuts"
+      },
+      {
+        "name": "Installing packages",
+        "slug": "installing-packages"
+      },
+      {
+        "name": "Getting repl metadata",
+        "slug": "getting-repl-metadata"
+      },
+      {
+        "name": "Storing sensitive information in environment variables",
+        "slug": "storing-sensitive-information-environment-variables"
+      },
+      {
+        "name": "Configuring the Run button",
+        "slug": "cofiguring-run-button"
+      },
+      {
+        "name": "Running GitHub repositories on Replit",
+        "slug": "running-github-repositories-replit"
+      },
+      {
+        "name": "Getting started with Nix",
+        "slug": "getting-started-nix"
+      }
+    ]
+  },
+  {
+    "name": "Hosting",
+    "slug": "hosting",
+    "contents": [
+      {
+        "name": "Hosting web pages",
+        "slug": "hosting-web-pages"
+      },
+      {
+        "name": "Deploying HTTP servers",
+        "slug": "deploying-http-servers"
+      },
+      {
+        "name": "Authenticating users with Repl Auth",
+        "slug": "authenticating-users-repl-auth"
+      },
+      {
+        "name": "Embedding repls",
+        "slug": "embedding-repls"
+      },
+      {
+        "name": "Enabling Always-on",
+        "slug": "enabling-always-on"
+      },
+      {
+        "name": "Streaming native graphics using VNC",
+        "slug": "steaming-native-graphics-vnc"
+      },
+      {
+        "name": "Browsing and publishing repls",
+        "slug": "browsing-publishing-repls"
+      },
+      {
+        "name": "Strike system FAQ",
+        "slug": "strike-system-faq"
+      },
+      {
+        "name": "Database FAQ",
+        "slug": "database-faq"
+      }
+    ]
+  },
+  {
+    "name": "Settings",
+    "slug": "settings",
+    "contents": [
+      {
+        "name": "Changing your username",
+        "slug": "change-username"
+      },
+      {
+        "name": "Selecting your favorite languages",
+        "slug": "favorite-languages"
+      }
+    ]
+  },
+  {
+    "name": "Legal and security information",
+    "slug": "legal-and-security",
+    "contents": [
+      {
+        "name": "Security",
+        "slug": "security"
+      },
+      {
+        "name": "Licensing info",
+        "slug": "licensing-info"
+      },
+      {
+        "name": "Copyright claims and takedown requests",
+        "slug": "copyright-claims-takedown-requests"
+      }
+    ]
+  },
+  {
+    "name": "Miscellaneous",
+    "slug": "misc",
+    "contents": [
+      {
+        "name": "CLUI, the graphical CLI",
+        "slug": "clui-graphical-cli"
+      },
+      {
+        "name": "Playing audio on Replit",
+        "slug": "playing-audio-replit"
+      },
+      {
+        "name": "Classic Basic on Replit",
+        "slug": "classic-basic-replit"
+      }
+    ]
+  },
+  {
+    "name": "Teams for Education",
+    "slug": "teams",
+    "contents": [
+      {
+        "name": "Introduction to Teams for Education",
+        "slug": "intro-teams-education"
+      },
+      {
+        "name": "Inviting teachers and students",
+        "slug": "invitations-teachers-students"
+      },
+      {
+        "name": "Using multiplayer with anonymous users",
+        "slug": "using-multiplayer-anonymous-users"
+      },
+      {
+        "name": "Assigning nicknames",
+        "slug": "assigning-nicknames"
+      },
+      {
+        "name": "Assigning user roles",
+        "slug": "assigning-user-roles"
+      },
+      {
+        "name": "Creating projects and assignments",
+        "slug": "creating-projects-assignments"
+      },
+      {
+        "name": "Copying projects to other teams",
+        "slug": "copying-projects-other-teams"
+      },
+      {
+        "name": "Keeping notes in repls",
+        "slug": "keeping-notes-repls"
+      },
+      {
+        "name": "Example homework assignments",
+        "slug": "example-homework-assignments"
+      },
+      {
+        "name": "Reviewing submissions",
+        "slug": "reviewing-submissions"
+      },
+      {
+        "name": "Testing, assessments, and autograding",
+        "slug": "testing-assessments-autograding"
+      },
+      {
+        "name": "Input/output testing",
+        "slug": "input-output-testing"
+      },
+      {
+        "name": "Unit testing",
+        "slug": "unit-testing"
+      },
+      {
+        "name": "Embedding projects",
+        "slug": "embedding-projects"
+      },
+      {
+        "name": "Privacy FAQ",
+        "slug": "privacy-faq"
+      },
+      {
+        "name": "IT administrators toolkit",
+        "slug": "it-administrators-toolkit"
+      }
+    ]
+  },
+  {
+    "name": "Teams Pro (beta)",
+    "slug": "teams-pro",
+    "contents": [
+      {
+        "name": "Introduction to Teams Pro",
+        "slug": "intro-teams-pro"
+      },
+      {
+        "name": "Managing teams",
+        "slug": "managing-teams"
+      },
+      {
+        "name": "Managing public and private repls",
+        "slug": "managing-public-private-repls"
+      },
+      {
+        "name": "Interviewing candidates with guest mode",
+        "slug": "interviewing-candidates-guest-mode"
+      }
+    ]
+  },
+  {
+    "name": "Tutorials",
+    "slug": "tutorials",
+    "contents": [
+      {
+        "name": "Overview",
+        "slug": "00-overview"
+      },
+      {
+        "name": "Introduction to the IDE",
+        "slug": "01-introduction-to-the-repl-it-ide"
+      },
+      {
+        "name": "Working with files",
+        "slug": "02-managing-files-using-repl-it"
+      },
+      {
+        "name": "Managing dependencies and using NLP",
+        "slug": "03-handling-dependencies-with-repl-it"
+      },
+      {
+        "name": "Data science",
+        "slug": "04-data-science-and-visualisation-with-repl-it"
+      },
+      {
+        "name": "Multiplayer",
+        "slug": "05-pair-programming-using-multiplayer-with-repl-it"
+      },
+      {
+        "name": "GitHub and the Run button",
+        "slug": "06-github-and-run-button"
+      },
+      {
+        "name": "Juggling with PyGame",
+        "slug": "07-building-a-game-with-pygame"
+      },
+      {
+        "name": "Keeping secrets",
+        "slug": "08-storing-secrets-and-history"
+      },
+      {
+        "name": "Test driven development",
+        "slug": "09-test-driven-development"
+      },
+      {
+        "name": "Productivity hacks",
+        "slug": "10-productivity-hacks"
+      },
+      {
+        "name": "Databases: build a phonebook",
+        "slug": "11-using-the-replit-database"
+      },
+      {
+        "name": "Audio: create a media player",
+        "slug": "12-audio"
+      },
+      {
+        "name": "Steganography: hiding messages in images",
+        "slug": "13-steganography"
+      },
+      {
+        "name": "2D platform game with PyGame",
+        "slug": "14-2d-platform-game"
+      },
+      {
+        "name": "Chat app using Node.js",
+        "slug": "15-repl-chat"
+      },
+      {
+        "name": "Static site generator",
+        "slug": "16-static-site-generator"
+      },
+      {
+        "name": "Predictive text engine",
+        "slug": "17-predictive-text-engine"
+      },
+      {
+        "name": "Telegram bot",
+        "slug": "18-telegram-bot"
+      },
+      {
+        "name": "Snake game with PyGame",
+        "slug": "19-build-snake-with-pygame"
+      },
+      {
+        "name": "Snake game with Kaboom.js",
+        "slug": "21-build-snake-with-kaboom"
+      },
+      {
+        "name": "Online store checkout with stripe",
+        "slug": "20-online-store-checkout-process"
+      },
+      {
+        "name": "Pinboard project part 1: HTML & CSS",
+        "slug": "pinboard-project-part-1"
+      },
+      {
+        "name": "Pinboard project part 2: JavaScript",
+        "slug": "pinboard-project-part-2"
+      },
+      {
+        "name": "GraphQL part 1: setting up endpoints",
+        "slug": "graphql-project-part-1"
+      },
+      {
+        "name": "GraphQL part 2: creating a web application",
+        "slug": "graphql-project-part-2"
+      },
+      {
+        "name": "Spotify API tutorials",
+        "slug": "spotify-api-tutorials"
+      },
+      {
+        "name": "Kaboom editor",
+        "slug": "kaboom-editor"
+      },
+      {
+        "name": "Creating interactive Python plots with matplotlib",
+        "slug": "creating-interactive-python-plots-matplotlib"
+      }
+    ]
+  },
+  {
+    "name": "Teaching Curriculum",
+    "slug": "teaching-curriculum",
+    "contents": [
+      {
+        "name": "Introduction to Teaching Curriculum",
+        "slug": "intro-teaching-curriculum"
+      },
+      {
+        "name": "Intro to C++",
+        "slug": "intro-cpp"
+      },
+      {
+        "name": "Intro to HTML/CSS",
+        "slug": "intro-html-css"
+      },
+      {
+        "name": "Intro to Java",
+        "slug": "intro-java"
+      },
+      {
+        "name": "Intro to Python",
+        "slug": "intro-python"
+      },
+      {
+        "name": "Intro to SQL",
+        "slug": "intro-sql"
+      },
+      {
+        "name": "Intermediate Python",
+        "slug": "intermediate-python"
+      },
+      {
+        "name": "Abstract data types",
+        "slug": "abstract-data-types"
+      }
+    ]
+  }
 ]

@@ -1,4 +1,4 @@
-# GraphQL Project: Part 2
+# GraphQL project: part 2
 
 [Part 1](./graphql-project-part-1) of this project showed us how to set up the initial GraphQL endpoint and create our queries. The remaining step is to transform the data into a fully functional website.
 

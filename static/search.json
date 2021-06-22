@@ -1039,45 +1039,129 @@
   },
   {
     "category": "Get Started",
-    "name": "Explore and Publish",
+    "name": "Apps and Publishing",
     "heading": null,
-    "slug": "repls/explore-and-publish"
+    "slug": "repls/apps-and-publishing"
   },
   {
     "category": "Get Started",
-    "name": "Explore and Publish",
-    "heading": "Explore",
-    "slug": "/repls/explore-and-publish#explore"
+    "name": "Apps and Publishing",
+    "heading": "Apps",
+    "slug": "/repls/apps-and-publishing#apps"
   },
   {
     "category": "Get Started",
-    "name": "Explore and Publish",
+    "name": "Apps and Publishing",
     "heading": "Publishing guidelines",
-    "slug": "/repls/explore-and-publish#publishing-guidelines"
+    "slug": "/repls/apps-and-publishing#publishing-guidelines"
   },
   {
     "category": "Get Started",
-    "name": "Explore and Publish",
+    "name": "Apps and Publishing",
     "heading": "How to publish",
-    "slug": "/repls/explore-and-publish#how-to-publish"
+    "slug": "/repls/apps-and-publishing#how-to-publish"
   },
   {
     "category": "Get Started",
-    "name": "Explore and Publish",
+    "name": "Apps and Publishing",
+    "heading": "Publish from Workspace",
+    "slug": "/repls/apps-and-publishing#publish-from-workspace"
+  },
+  {
+    "category": "Get Started",
+    "name": "Apps and Publishing",
+    "heading": "Publish from Spotlight",
+    "slug": "/repls/apps-and-publishing#publish-from-spotlight"
+  },
+  {
+    "category": "Get Started",
+    "name": "Apps and Publishing",
+    "heading": "When you click on either, you'll be able to add a description, cover image, and tags to your repl.",
+    "slug": "/repls/apps-and-publishing#when-you-click-on-either-youll-be-able-to-add-a-description-cover-image-and-tags-to-your-repl"
+  },
+  {
+    "category": "Get Started",
+    "name": "Apps and Publishing",
     "heading": "Requirements for publishing",
-    "slug": "/repls/explore-and-publish#requirements-for-publishing"
+    "slug": "/repls/apps-and-publishing#requirements-for-publishing"
   },
   {
     "category": "Get Started",
-    "name": "Explore and Publish",
+    "name": "Apps and Publishing",
     "heading": "Publishing updates",
-    "slug": "/repls/explore-and-publish#publishing-updates"
+    "slug": "/repls/apps-and-publishing#publishing-updates"
   },
   {
     "category": "Get Started",
-    "name": "Explore and Publish",
+    "name": "Apps and Publishing",
+    "heading": "Publish update from Workspace",
+    "slug": "/repls/apps-and-publishing#publish-update-from-workspace"
+  },
+  {
+    "category": "Get Started",
+    "name": "Apps and Publishing",
+    "heading": "Publish update from Spotlight",
+    "slug": "/repls/apps-and-publishing#publish-update-from-spotlight"
+  },
+  {
+    "category": "Get Started",
+    "name": "Apps and Publishing",
     "heading": "Unpublishing",
-    "slug": "/repls/explore-and-publish#unpublishing"
+    "slug": "/repls/apps-and-publishing#unpublishing"
+  },
+  {
+    "category": "Get Started",
+    "name": "Apps and Publishing",
+    "heading": "Unpublishing from Workspace",
+    "slug": "/repls/apps-and-publishing#unpublishing-from-workspace"
+  },
+  {
+    "category": "Get Started",
+    "name": "Apps and Publishing",
+    "heading": "Unpublishing from Spotlight",
+    "slug": "/repls/apps-and-publishing#unpublishing-from-spotlight"
+  },
+  {
+    "category": "Get Started",
+    "name": "Strike System",
+    "heading": null,
+    "slug": "repls/strike-system-apps"
+  },
+  {
+    "category": "Get Started",
+    "name": "Strike System",
+    "heading": "FAQ: Strike System on Apps ",
+    "slug": "/repls/strike-system-apps#faq-strike-system-on-apps"
+  },
+  {
+    "category": "Get Started",
+    "name": "Strike System",
+    "heading": "Q: I got a warning. What is that about? ",
+    "slug": "/repls/strike-system-apps#q-i-got-a-warning-what-is-that-about"
+  },
+  {
+    "category": "Get Started",
+    "name": "Strike System",
+    "heading": "Q: How does the strike system work? ",
+    "slug": "/repls/strike-system-apps#q-how-does-the-strike-system-work"
+  },
+  {
+    "category": "Get Started",
+    "name": "Strike System",
+    "heading": "Q: My repl just got unpublished. Am I allowed to republish? ",
+    "slug": "/repls/strike-system-apps#q-my-repl-just-got-unpublished-am-i-allowed-to-republish"
+  },
+  {
+    "category": "Get Started",
+    "name": "Strike System",
+    "heading": "Q: I think there's been a mistake. Can I talk to someone about this decision?",
+    "slug": "/repls/strike-system-apps#q-i-think-theres-been-a-mistake-can-i-talk-to-someone-about-this-decision"
+  },
+  {
+    "category": "Get Started",
+    "name": "Strike System",
+    "heading": "Q: I just got banned. What now?",
+    "slug": "/repls/strike-system-apps#q-i-just-got-banned-what-now"
   },
   {
     "category": "Teams for Education",
@@ -1126,6 +1210,36 @@
     "name": "Inviting Teachers & Students",
     "heading": "Invite Anonymous Members to Maintain Privacy",
     "slug": "/Teams/Invitations#invite-anonymous-members-to-maintain-privacy"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Assigning Nicknames",
+    "heading": null,
+    "slug": "Teams/Nicknames"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Assigning Nicknames",
+    "heading": "Team Nicknames",
+    "slug": "/Teams/Nicknames#team-nicknames"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Assigning Nicknames",
+    "heading": "Common Uses",
+    "slug": "/Teams/Nicknames#common-uses"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Assigning Nicknames",
+    "heading": "How to use",
+    "slug": "/Teams/Nicknames#how-to-use"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Assigning Nicknames",
+    "heading": "Where nicknames will appear",
+    "slug": "/Teams/Nicknames#where-nicknames-will-appear"
   },
   {
     "category": "Teams for Education",
@@ -1424,6 +1538,30 @@
   {
     "category": "Teams Pro (beta)",
     "name": "Introduction to Teams Pro",
+    "heading": "1. Build",
+    "slug": "/pro/intro#1-build"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Introduction to Teams Pro",
+    "heading": "2. Collaborate",
+    "slug": "/pro/intro#2-collaborate"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Introduction to Teams Pro",
+    "heading": "3. Host",
+    "slug": "/pro/intro#3-host"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Introduction to Teams Pro",
+    "heading": "4. Fun",
+    "slug": "/pro/intro#4-fun"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Introduction to Teams Pro",
     "heading": "Questions? Need help?",
     "slug": "/pro/intro#questions-need-help"
   },
@@ -1436,20 +1574,20 @@
   {
     "category": "Teams Pro (beta)",
     "name": "Team Management",
-    "heading": "Inviting People to your Team",
-    "slug": "/pro/teamManagement#inviting-people-to-your-team"
+    "heading": "Team Management",
+    "slug": "/pro/teamManagement#team-management"
   },
   {
     "category": "Teams Pro (beta)",
-    "name": "Repl Management",
+    "name": "Public and Private Repls",
     "heading": null,
     "slug": "pro/replManagement"
   },
   {
     "category": "Teams Pro (beta)",
-    "name": "Repl Management",
-    "heading": "Different Types",
-    "slug": "/pro/replManagement#different-types"
+    "name": "Public and Private Repls",
+    "heading": "Public and Private Repls",
+    "slug": "/pro/replManagement#public-and-private-repls"
   },
   {
     "category": "Teams Pro (beta)",
@@ -1460,8 +1598,8 @@
   {
     "category": "Teams Pro (beta)",
     "name": "Guest Mode",
-    "heading": "Interviewing Candidates",
-    "slug": "/pro/guests#interviewing-candidates"
+    "heading": "Interviewing Candidates with Guest Mode",
+    "slug": "/pro/guests#interviewing-candidates-with-guest-mode"
   },
   {
     "category": "Repl.it Classrooms",
@@ -1508,8 +1646,8 @@
   {
     "category": "Miscellaneous",
     "name": "Using Repl.it for Free",
-    "heading": "Using Repl.it for Free",
-    "slug": "/misc/free-features#using-repl-it-for-free"
+    "heading": "Using Replit for Free",
+    "slug": "/misc/free-features#using-replit-for-free"
   },
   {
     "category": "Miscellaneous",
@@ -1574,8 +1712,8 @@
   {
     "category": "Miscellaneous",
     "name": "Security",
-    "heading": "Repl.it Security",
-    "slug": "/misc/security#repl-it-security"
+    "heading": "Replit Security",
+    "slug": "/misc/security#replit-security"
   },
   {
     "category": "Miscellaneous",
@@ -1604,14 +1742,14 @@
   {
     "category": "Miscellaneous",
     "name": "Licensing Info",
-    "heading": "Public Repls and Classrooms",
-    "slug": "/misc/licensing#public-repls-and-classrooms"
+    "heading": "Public Repls and Teams",
+    "slug": "/misc/licensing#public-repls-and-teams"
   },
   {
     "category": "Miscellaneous",
     "name": "Licensing Info",
-    "heading": "Private Repls and Classrooms",
-    "slug": "/misc/licensing#private-repls-and-classrooms"
+    "heading": "Private Repls and Teams",
+    "slug": "/misc/licensing#private-repls-and-teams"
   },
   {
     "category": "Miscellaneous",
@@ -1622,8 +1760,8 @@
   {
     "category": "Miscellaneous",
     "name": "Copyright Claims",
-    "heading": "Copyright Claims / Takedown Requests",
-    "slug": "/misc/copyright#copyright-claims-takedown-requests"
+    "heading": "Copyright Claims and Takedown Requests",
+    "slug": "/misc/copyright#copyright-claims-and-takedown-requests"
   },
   {
     "category": "Miscellaneous",
@@ -1634,8 +1772,8 @@
   {
     "category": "Miscellaneous",
     "name": "Basic (Language) Docs",
-    "heading": "Classic Basic on Repl.it (in beta)",
-    "slug": "/misc/basic#classic-basic-on-repl-it-in-beta"
+    "heading": "Classic Basic on Replit (in beta)",
+    "slug": "/misc/basic#classic-basic-on-replit-in-beta"
   },
   {
     "category": "Miscellaneous",
@@ -1976,7 +2114,7 @@
   {
     "category": "Miscellaneous",
     "name": "General FAQ",
-    "heading": "What is Teams for Education? ",
+    "heading": "What is Teams for Education?",
     "slug": "/misc/General-FAQ#what-is-teams-for-education"
   },
   {
@@ -1994,14 +2132,14 @@
   {
     "category": "Miscellaneous",
     "name": "General FAQ",
-    "heading": "Why is my repl having display issues ",
+    "heading": "Why is my repl having display issues?",
     "slug": "/misc/General-FAQ#why-is-my-repl-having-display-issues"
   },
   {
     "category": "Miscellaneous",
     "name": "General FAQ",
-    "heading": "What if my repl/s have been deleted? ",
-    "slug": "/misc/General-FAQ#what-if-my-repl-s-have-been-deleted"
+    "heading": "How do I recover a deleted repl?",
+    "slug": "/misc/General-FAQ#how-do-i-recover-a-deleted-repl"
   },
   {
     "category": "Miscellaneous",
@@ -2024,26 +2162,20 @@
   {
     "category": "Miscellaneous",
     "name": "General FAQ",
-    "heading": "How do I use repls in Keeper Upper? ",
-    "slug": "/misc/General-FAQ#how-do-i-use-repls-in-keeper-upper"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
     "heading": "Account",
     "slug": "/misc/General-FAQ#account"
   },
   {
     "category": "Miscellaneous",
     "name": "General FAQ",
-    "heading": "I logged in with Gmail/Github etc. but want to change my email",
+    "heading": "I logged in with Gmail/Github etc., but want to change my email.",
     "slug": "/misc/General-FAQ#i-logged-in-with-gmail-github-etc-but-want-to-change-my-email"
   },
   {
     "category": "Miscellaneous",
     "name": "General FAQ",
-    "heading": "Can you/we merge accounts?",
-    "slug": "/misc/General-FAQ#can-you-we-merge-accounts"
+    "heading": "Can accounts be merged?",
+    "slug": "/misc/General-FAQ#can-accounts-be-merged"
   },
   {
     "category": "Miscellaneous",
@@ -2056,6 +2188,12 @@
     "name": "Database",
     "heading": "Replit Database",
     "slug": "/misc/database#replit-database"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Database",
+    "heading": "FAQs",
+    "slug": "/misc/database#fa-qs"
   },
   {
     "category": "Miscellaneous",
@@ -2120,7 +2258,7 @@
   {
     "category": "Miscellaneous",
     "name": "Database",
-    "heading": "Is my database private?",
+    "heading": "Is my Database private?",
     "slug": "/misc/database#is-my-database-private"
   },
   {
@@ -2138,8 +2276,8 @@
   {
     "category": "Miscellaneous",
     "name": "Repl Environment Variables",
-    "heading": "Automatically Get Metadata about a repl (username and project slug)",
-    "slug": "/misc/repl-environment-variables#automatically-get-metadata-about-a-repl-username-and-project-slug"
+    "heading": "Getting Repl Metadata",
+    "slug": "/misc/repl-environment-variables#getting-repl-metadata"
   },
   {
     "category": "Miscellaneous",
