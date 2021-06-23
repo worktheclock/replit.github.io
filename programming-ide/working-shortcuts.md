@@ -16,7 +16,7 @@ The following keyboard shortcuts can be used in a variety of ways. If you forget
 
 ### Moving the Current Line
 
-On a Mac, press `option+up` or `option+down`to move the current line up or down. 
+On a Mac, press `option+up` or `option+down` to move the current line up or down. 
 
 On other computers, press `alt+up` or `alt+down`.
 

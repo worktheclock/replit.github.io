@@ -51,7 +51,7 @@
       },
       {
         "name": "Configuring the Run button",
-        "slug": "cofiguring-run-button"
+        "slug": "configuring-run-button"
       },
       {
         "name": "Running GitHub repositories on Replit",
@@ -111,17 +111,17 @@
     "contents": [
       {
         "name": "Changing your username",
-        "slug": "change-username"
+        "slug": "changing-username"
       },
       {
         "name": "Selecting your favorite languages",
-        "slug": "favorite-languages"
+        "slug": "selecting-favorite-languages"
       }
     ]
   },
   {
     "name": "Legal and security information",
-    "slug": "legal-and-security",
+    "slug": "legal-and-security-info",
     "contents": [
       {
         "name": "Security",
@@ -165,7 +165,7 @@
       },
       {
         "name": "Inviting teachers and students",
-        "slug": "invitations-teachers-students"
+        "slug": "inviting-teachers-students"
       },
       {
         "name": "Using multiplayer with anonymous users",

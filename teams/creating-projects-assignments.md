@@ -1,4 +1,4 @@
-## Creating projects and assignments
+# Creating projects and assignments
 
 Teams for Education include both Team Projects and Team Repls. 
 
