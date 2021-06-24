@@ -363,6 +363,10 @@
             {
                 "name": "Kaboom Editor",
                 "slug": "kaboom"
+            },
+            {
+                "name": "Asteroids game with Kaboom.js",
+                "slug": "23-build-asteroids-with-kaboom"
             }
         ]
     },
