@@ -1,4 +1,4 @@
-# Steaming native graphics using VNC 
+# Streaming native graphics using VNC 
 
 ## What is VNC?
 
