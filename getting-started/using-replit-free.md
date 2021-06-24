@@ -1,4 +1,4 @@
-# Using replit for free
+# Using Replit for free
 
 Replit offers a number of helpful features which you don't need to pay for. A free account gives you access to: 
 
