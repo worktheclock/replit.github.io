@@ -10,9 +10,9 @@ Following on from our [previous tutorial on building Snake](https://docs.replit.
 
 Our finished game will look like this:
 
-![](ASTEROIDS-GIF)
+![Complete game](/images/tutorials/23-asteroids-kaboom/asteroids-game.gif)
 
-We will use [these Asteroids sprites](https://opengameart.org/content/asteroids-game-sprites-atlas) and this [space background](https://opengameart.org/content/space-background) from OpenGameArt.org, and the following sounds from FreeSound.org:
+We will use these [Asteroids sprites](https://opengameart.org/content/asteroids-game-sprites-atlas) and this [space background](https://opengameart.org/content/space-background) from OpenGameArt.org, and the following sounds from FreeSound.org:
 
 * [Laser](https://freesound.org/people/Daleonfire/sounds/376694/)
 * [Explosion](https://freesound.org/people/deleted_user_5405837/sounds/399303/)
@@ -20,25 +20,27 @@ We will use [these Asteroids sprites](https://opengameart.org/content/asteroids-
 
 We will also be using [music by Eric Matyas of Soundimage.org](https://soundimage.org/sci-fi/).
 
-We've created a single ZIP file with the sprites and sounds you will need for this tutorial, which you can download [here](ZIP FILE!!!).
+We've created a single ZIP file with the sprites and sounds you will need for this tutorial, which you can download [here](/tutorial-files/asteroids-kaboom/asteroids-resources.zip).
 
 ## Creating a new project and loading assets
 
-First create a new Kaboom repl. 
+Log into your [Replit](https://replit.com) account and create a new repl. Choose **Kaboom** as your project type. Now, give this repl a name, like "asteroids".
 
-![](/images/tutorials/23-asteroids-kaboom/create-repl.png)
+![Creating an REPL](/images/tutorials/23-asteroids-kaboom/create-repl.png)
 
-Kaboom repls are quite different from other kinds of repls you may have seen before: instead of dealing directly with files in folders, you'll be dealing with scenes, sounds and sprites. Replit will do some work on the backend to initialize Kaboom and make sure everything you add gets loaded, so you can focus on developing games.
+Kaboom repls are quite different from other kinds of repls you may have seen before: instead of dealing directly with files in folders, you'll be dealing with scenes, sounds and sprites. Replit will do some work in the background to initialize Kaboom and make sure everything you add gets loaded, so you can focus on game development.
 
-Before we can start coding, we need to upload our sprites and sounds. Download [this ZIP file](ZIP FILE!!!) and extract it on your computer. Then, upload everything in Sounds folder to the Sounds section of your repl, and everything in the Sprites folder to the Sprites section of your repl.
+Before we can start coding, we need to upload our sprites and sounds. Download [this ZIP file](/tutorial-files/asteroids-kaboom/asteroids-resources.zip) and extract it on your computer. Then, upload everything in Sounds folder to the Sounds section of your repl, and everything in the Sprites folder to the Sprites section of your repl.
+
+![Uploading files](/images/tutorials/23-asteroids-kaboom/upload-sprites.gif)
 
 Once you've uploaded everything, click on "main" under Scenes, and we'll start writing some code.
 
 ## Setting the scene
 
-A Kaboom game is made up of scenes, which you can think of as different screens, levels or stages. You can use scenes for game levels, menus, cut-scenes and any other screens your game might contain. In this tutorial, we'll just use one scene, which will contain the entire game.
+A Kaboom.js game is made up of scenes, which you can think of as different screens, levels or stages. You can use scenes for game levels, menus, cut-scenes and any other screens your game might contain. In this tutorial, we'll just use one scene, which will contain the entire game.
 
-Scenes are further divided into layers, which are populated by game objects (also called sprites). Which layer an object is on will determine when it gets drawn and which other objects it can collide with. In this game, we'll use three layers: the background layer (`bg`), the object layer (`obj`), and UI layer (`ui`). Add the following code to your main scene now to initialize these layers:
+Scenes are further divided into layers, which are populated by game objects (also called sprites). The layer an object is on will determine when it gets drawn and which other objects it can collide with. In this game, we'll use three layers: the background layer (`bg`), the object layer (`obj`), and UI layer (`ui`). Add the following code to your main scene now to initialize these layers:
 
 ```javascript
 layers([
@@ -48,7 +50,7 @@ layers([
 ], "obj");
 ```
 
-These layers will be drawn in the order declared. The majority of gameplay will happen in the `obj` layer, so we've set that as the default layer, which means that any objects we create will be placed in this layer if we don't explicitly specify a different layer in object creation.
+These layers will be drawn in the order declared. The majority of gameplay will happen in the `obj` layer, so we've set that as the default layer, which means that any objects we create will be placed in this layer if we don't explicitly specify a different layer upon object creation.
 
 The `bg` layer will be drawn first, beneath everything else, and we'll use that to specify a background image for our game. Do that now by adding the following code to your scene:
 
@@ -91,7 +93,7 @@ Callbacks are a key concept in JavaScript and Kaboom makes heavy use of them. So
 
 Run your repl now and marvel at the vast emptiness of space.
 
-![](/images/tutorials/23-asteroids-kaboom/empty-with-score.png)
+![Empty with score](/images/tutorials/23-asteroids-kaboom/empty-with-score.png)
 
 ## The player's ship
 
@@ -137,7 +139,7 @@ Finally, we assign a number of custom properties to our player object. We'll use
 
 If you run your repl now, you should see the ship sprite in the middle of a blank screen. In the next section, we'll implement movement controls.
 
-![](/images/tutorials/23-asteroids-kaboom/ship-in-space.png)
+![Ship in space](/images/tutorials/23-asteroids-kaboom/ship-in-space.png)
 
 ### Movement controls
 
@@ -153,9 +155,9 @@ keyDown("right", () => {
 });
 ```
 
-Run your repl now and you should be able to turn the ship to the left and right by pressing the respective arrow keys. If you think it turns too fast or too slowly, change the value of `turn_speed` in the player creation code. 
+Run your repl now, and you should be able to turn the ship to the left and right by pressing the respective arrow keys. If you think it turns too fast or too slowly, change the value of `turn_speed` in the player creation code. 
 
-Now let's implement the up and down keys so the player can move around the scene. Enter the following beneath the turning code.
+Now let's implement the up and down keys, so the player can move around the scene. Enter the following code beneath the player turning code.
 
 ```javascript
 keyDown("up", () => {
@@ -171,7 +173,7 @@ Rather than having the spaceship go from zero to max speed immediately, we want 
 
 Additionally, we want to [play](https://kaboomjs.com/#play) our rocket thrust sound while accelerating. Kaboom allows us to manipulate sounds in a few different ways, such as changing their speed and volume.
 
-We'll handle deceleration by doing the opposite, using [Math.max()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max) to choose the maximum between the player's speed minus their deceleration and their maximum speed in reverse (i.e. negative). Add the following code below the acceleration controls.
+We'll handle deceleration by doing the opposite, using [Math.max()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max) to choose the maximum between the player's speed minus their deceleration, and their maximum speed in reverse (i.e. negative). Add the following code below the acceleration controls.
 
 ```javascript
 keyDown("down", () => {
@@ -187,7 +189,7 @@ If you run your repl now and try to accelerate or decelerate, the sound will pla
 
 ### Movement
 
-Movement in Kaboom and most other 2D game development systems is handled using X and Y coordinates on a plane. To move an object left, you subtract from its X coordinate, and to move it right, you add to its X coordinate. To move an object up, you subtract from its Y coordinate, and to move it down, you add to its Y co-ordinate. Therefore, basic four-directional movement in a game like Snake or Pacman is quite straightforward, but the directional movement we need for Asteroids (commonly called [tank controls](https://en.wikipedia.org/wiki/Tank_controls)) is more complex, requiring some calculations.
+Movement in Kaboom and most other 2D game development systems is handled using X and Y coordinates on a plane. To move an object left, you subtract from its X coordinate, and to move it right, you add to its X coordinate. To move an object up, you subtract from its Y coordinate, and to move it down, you add to its Y coordinate. Therefore, basic four-directional movement in a game like Snake or Pacman is quite straightforward, but the directional movement we need for Asteroids (commonly called [tank controls](https://en.wikipedia.org/wiki/Tank_controls)) is more complex, requiring some calculations.
 
 At a high level, we want to move a given distance (`player.speed`) in a given direction (`player.angle`). As a first step, let's create an `action` callback for our `mobile` tag. This code, like our UI drawing code above, will be run by every object with the "mobile" tag on every frame of the game, so we can use it for more than just the player object. Add the following code at the bottom of your main scene:
 
@@ -203,13 +205,13 @@ First, we move our object, using the function `pointAt()`, which takes a speed a
 
 After moving, we invoke Kaboom's [`resolve()`](https://kaboomjs.com/#solid) method, which is necessary to determine collisions with solid objects. This will become relevant later on, when we create our asteroids.
 
-Right now, we need to create the `pointAt()` function. Before we jump into the code, let's think about the problem. Our movement can be drawn as angled line on a plane, and its X and Y coordinates as horizontal and vertical lines connected to it, giving us a right-angled triangle.
+Right now, we need to create the `pointAt()` function. Before we jump into the code, let's think about the problem. Our movement can be drawn as an angled line on a plane, and its X and Y coordinates as horizontal and vertical lines connected to it, giving us a right-angled triangle.
 
-![](/images/tutorials/23-asteroids-kaboom/triangle.png)
+![Triangle](/images/tutorials/23-asteroids-kaboom/triangle.png)
 
 We know the values of the triangle's angles: one is 90 degrees, and the other two are equal to `player.angle`. The length of the triangle's hypotenuse (the red line in the diagram above) is `player.speed`: this is the *distance* our ship will be travelling.
 
-We now need to calculate the lengths of the other two sides to get the X and Y values for our movement vector. We can do this using [the trignometric sine and cosine functions](https://www2.clarku.edu/faculty/djoyce/trig/formulas.html), like so:
+We now need to calculate the lengths of the other two sides to get the X and Y values for our movement vector. We can do this using [the trigonometric sine and cosine functions](https://www2.clarku.edu/faculty/djoyce/trig/formulas.html), like so:
 
 ```
 sine(angle) = y / distance
@@ -219,7 +221,7 @@ cosine(angle) = x / distance
 x = distance * cos(angle)
 ```
 
-Remember, in Kaboom and most other 2D game development platforms, the Y axis is inverted, so we have to make it negative. Add the `pointAt()` function below at the top of the main scene code.
+Remember, in Kaboom and most other 2D game development platforms, the Y axis is inverted, so we have to make it negative. Add the `pointAt()` function below, at the top of the main scene code.
 
 ```javascript
 function pointAt(distance, angle) {
@@ -253,9 +255,9 @@ This is a fairly straightforward piece of code that checks whether an object's p
 
 ### Rocket animation
 
-Our ship can move now, but it would be nice to see its rockets firing when the player presses the up arrow key, as well as hear them. Reactive animations like this make games feel more responsive and look more dynamic.
+Our ship can move now, but it would be nice to see its rockets firing when the player presses the up arrow key, as well as hear them. Reactive animations like these make games feel more responsive and look more dynamic.
 
-Kaboom has methods for handling animation when a game object uses an animated sprite (i.e. one with multiple images), but this isn't quite what we want here. Rather than animating the player's ship, we need to animate the rocket thrust that appears behind it when a thrusting key is pressed, so we'll need to handle all the animation code ourselves. Luckily, Kaboom makes this fairly simple.
+Kaboom has methods for handling animations when a game object uses an animated sprite (i.e. one with multiple images), but this isn't quite what we want here. Rather than animating the player's ship, we need to animate the rocket thrust that appears behind it when a thrusting key is pressed, so we'll need to handle all the animation code ourselves. Luckily, Kaboom makes this fairly simple.
 
 First, let's create an array with our four rocket sprites. Add the following code at the bottom of your main scene:
 
@@ -265,8 +267,6 @@ const thrust_animation = ["rocket1", "rocket2", "rocket3", "rocket4"];
 ```
 
 Then we need some way to indicate when to start and stop the animation. We can use Kaboom's [`keyPress`](https://kaboomjs.com/#keyPress) and [keyRelease](https://kaboomjs.com/#keyRelease) events for this, as well as two of the properties we defined for our player (`thrusting` and `animation_frame`). Add the following code:
-
-!!! link the above
 
 ```javascript
 // rocket animation helpers
@@ -313,7 +313,7 @@ loop(0.1, () => {
 
 That's it! Run your repl and move your ship around.
 
-![](/images/tutorials/23-asteroids-kaboom/ship-thrusting.png)
+![Ship thrusting](/images/tutorials/23-asteroids-kaboom/ship-thrusting.png)
 
 ### Shooting
 
@@ -338,11 +338,11 @@ keyDown("space", () => {
 });
 ```
 
-Here we're creating a bullet object at the tip of the ship's nose. We calculate the position of the tip by running our `pointAt()` function with a distance of half the ship sprite's width and the sprite's angle. We use half the sprite's width because the ship's sprite origin is in its center. Additionally, we rotate the bullet according to the ship's angle (again using center as the origin) and assign a number of tags to it. Note that because we're tagging it with "mobile" and giving it both a `rotate` component and a speed property, it will use the same movement code we wrote for our player object.
+Here we're creating a bullet object at the tip of the ship's nose. We calculate the position of the tip by running our `pointAt()` function with a distance of half the ship sprite's width, and the sprite's angle. We use half the sprite's width because the ship sprite's origin is at its center. Additionally, we rotate the bullet according to the ship's angle (again using center as the origin) and assign a number of tags to it. Note that because we're tagging it with "mobile" and giving it both a `rotate` component and a speed property, it will use the same movement code we wrote for our player object.
 
 Try the game out now, and hold down the spacebar to shoot. Do you notice anything about your ship's firing rate?
 
-![](/images/tutorials/23-asteroids-kaboom/too-many-bullets.png)
+![Too many bullets](/images/tutorials/23-asteroids-kaboom/too-many-bullets.png)
 
 At the moment, a bullet object will be created in every frame while space is down. That's a lot of bullets, and might make the game too easy, as well as slowing it to a crawl on less capable devices. We need to add a cooldown period, and we can do so by altering our shooting code to look like this:
 
@@ -375,7 +375,7 @@ Here, we use two of the properties we defined in the player object above, `can_s
 
 Run your repl and test whether the ship's laser fires at the expected intervals.
 
-![](/images/tutorials/23-asteroids-kaboom/laser.png)
+![Laser rate](/images/tutorials/23-asteroids-kaboom/laser.png)
 
 ## The asteroids
 
@@ -383,7 +383,7 @@ Now that we've added shooting, we need to add something to shoot at. It's time t
 
 ### Creation
 
-Add the following code at the bottom of the scene:
+Add the following code at the bottom of the main scene:
 
 ```javascript
 // Asteroids
@@ -402,11 +402,11 @@ for (let i = 0; i < NUM_ASTERIODS; i++) {
         "wraps",
         {
             speed: rand(5, 10),
-            prevPos: spawnPoint,
             initializing: true
         }
     ]);
-
+    
+    a.resolve();
 }
 ```
 
@@ -416,18 +416,19 @@ The one custom property that's unique to asteroids is `initializing`. Because we
 
 One approach to avoiding this might be to ensure we don't spawn any two asteroids at the same coordinates, but we might still end up spawning them close enough to overlap with each other. We would then need to take into account the size of asteroids and prevent asteroids from spawning at any of those coordinates, and our code would quickly become complicated.
 
-Instead of doing that, we can leverage Kaboom's collision detection to achieve the same effect. Right after we create the asteroid, we can check if it's overlapping with another "mobile"-tagged object (i.e. another asteroid or the player's ship), and if so, we randomise its position again. We can use a while loop to repeat this action until our asteroid lands up in a free space. Add the following code inside the asteroid creation for-loop, below the `add` function.
+Instead of doing that, we can leverage Kaboom's collision detection to achieve the same effect. Right after we create the asteroid, we can check if it's overlapping with another "mobile"-tagged object (i.e. another asteroid, or the player's ship), and if so, we randomise its position again. We can use a while loop to repeat this action until our asteroid lands up in a free space. Add the following code inside the asteroid creation for-loop, below the `add` function.
 
 ```javascript
     while (a.isOverlapped("mobile")) {
         spawnPoint = asteroidSpawnPoint();
         a.pos = spawnPoint;
+        a.resolve();
     }
 
     a.initializing = false;
 ```
 
-We want the asteroid to be in an "initializing" state while we're finding it's starting position. When we implement its actions later on, we'll check the value of its `initializing` property to prevent it from harming the player or affecting other asteroids while it's still spawning.
+We want the asteroid to be in an "initializing" state while we're finding its starting position. When we implement its actions later on, we'll check the value of its `initializing` property to prevent it from harming the player or affecting other asteroids while it's still spawning.
 
 But before we move on, let's implement the `asteroidSpawnPoint()` function. Add the following code near the top of the main scene, just beneath the `pointAt()` function:
 
@@ -445,7 +446,7 @@ This function uses Kaboom's [`choose()`](https://kaboomjs.com/#choose) and [`ran
 
 ### Collisions
 
-If you've seen any movies set in outer space, you'll know that the main thing asteroids do is crash into spaceships and each other, even though the [real-life asteroid belt](https://en.wikipedia.org/wiki/Asteroid_belt) in our solar system is not nearly dense enough for asteroid collisions to be a frequent occurence.
+If you've seen any movies set in outer space, you'll know that the main thing asteroids do is crash into spaceships and each other, even though the [real-life asteroid belt](https://en.wikipedia.org/wiki/Asteroid_belt) in our solar system is not nearly dense enough for asteroid collisions to be a frequent occurrence.
 
 There are three types of collisions we need to account for:
 
@@ -453,7 +454,7 @@ There are three types of collisions we need to account for:
 * Bullet and asteroid, which destroys the asteroid.
 * Asteroid and asteroid, which causes both asteroids to bounce off each other.
 
-Let's go through the code for each of these, adding it to our Main scene just below the code we wrote to make objects wrap around the screen. First, player and asteroid:
+Let's go through the code for each of these, adding it to our main scene just below the code we wrote to make objects wrap around the screen. First, player and asteroid:
 
 ```javascript
 // Collisions
@@ -496,11 +497,11 @@ This code makes the asteroids appear to bounce off each other by reversing their
 
 Run the game now and see what happens when you ram your ship into some asteroids!
 
-![](/images/tutorials/23-asteroids-kaboom/asteroids.png)
+![Asteroids](/images/tutorials/23-asteroids-kaboom/asteroids.png)
 
 ## Ending the game
 
-The player's ship can now lose lives by crashing into asteroids, but this doesn't mean much at the moment, as we haven't added any code to end the game if the player runs out of lives, or even to display the lives remaining. Let's do that now. First, let's change the code in the player–asteroid collison to [trigger](https://kaboomjs.com/#obj.trigger) a custom "damage" event instead of just subtracting a life.
+The player's ship can now lose lives by crashing into asteroids, but this doesn't mean much at the moment, as we haven't added any code to end the game if the player runs out of lives, or even to display the lives remaining. Let's do that now. First, let's change the code in the player–asteroid collision to [trigger](https://kaboomjs.com/#obj.trigger) a custom "damage" event instead of just subtracting a life.
 
 ```javascript
 // Collisions
@@ -525,7 +526,7 @@ player.on("damage", () => {
 });
 ```
 
-When objects are destroyed in Kaboom, the "destroy" event is triggered. We'll use this event show a game over screen with the player's score by adding the following code:
+When objects are destroyed in Kaboom, the "destroy" event is triggered. We'll use this event to show a game over screen with the player's score by adding the following code:
 
 ```javascript
 // End game on player destruction
@@ -547,9 +548,9 @@ keyPress("r", () => {
 });
 ```
 
-The `go` function is a Kaboom built-in for moving between scenes. As this game only has one scene, we can use it to reset the scene and thus the game to its starting condition.
+The `go` function is a Kaboom built-in for moving between scenes. As this game only has one scene, we can use it to reset the scene and thus the game to its initial state.
 
-Lastly, we need to add the player's lives to the game UI so they know how much more damage they can afford to take. Find the `ui` object code near the top of the main scene and alter it to resemble the below:
+Lastly, we need to add the player's lives to the game UI, so they know how much more damage they can afford to take. Find the `ui` object code near the top of the main scene and alter it to resemble the below:
 
 ```javascript
 ui.on("draw", () => {
@@ -574,7 +575,7 @@ ui.on("draw", () => {
 
 This code draws a number of scaled down player spaceships equal to the number of remaining lives.
 
-![](/images/tutorials/23-asteroids-kaboom/lives.png)
+![Lives](/images/tutorials/23-asteroids-kaboom/lives.png)
 
 ## Final touches
 
@@ -649,7 +650,7 @@ collides("bullet", "asteroid", (b, a) => {
 });
 ```
 
-![](/images/tutorials/23-asteroids-kaboom/small-asteroids.png)
+![Small asteroids](/images/tutorials/23-asteroids-kaboom/small-asteroids.png)
 
 ### Temporary invulnerability
 
@@ -689,7 +690,7 @@ loop(0.1, () => {
 });
 ```
 
-## Where next?
+## Where to next?
 
 We've covered a lot of ground in this tutorial and touched on a lot of Kaboom's features. From here, you can start making your own games with Kaboom, or if you want to extend this one, here are some ideas:
 
@@ -698,6 +699,7 @@ We've covered a lot of ground in this tutorial and touched on a lot of Kaboom's 
 * A third, even smaller size of asteroid.
 * More animations, for explosions and laser firing.
 
-You can find out game repl below:
+You can find the game repl below:
 
-!!! repl embed
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/asteroids?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
