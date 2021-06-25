@@ -48,7 +48,7 @@ app.use((req, res, next) => {
 })
 
 app.get('/', (req, res) => {
-	render(res, 'repls', 'intro');
+	render(res, 'getting-started', 'intro-replit');
 });
 
 app.use(express.static('static'))
