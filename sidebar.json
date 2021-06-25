@@ -106,56 +106,6 @@
     ]
   },
   {
-    "name": "Settings",
-    "slug": "settings",
-    "contents": [
-      {
-        "name": "Changing your username",
-        "slug": "changing-username"
-      },
-      {
-        "name": "Selecting your favorite languages",
-        "slug": "selecting-favorite-languages"
-      }
-    ]
-  },
-  {
-    "name": "Legal and security information",
-    "slug": "legal-and-security-info",
-    "contents": [
-      {
-        "name": "Security",
-        "slug": "security"
-      },
-      {
-        "name": "Licensing info",
-        "slug": "licensing-info"
-      },
-      {
-        "name": "Copyright claims and takedown requests",
-        "slug": "copyright-claims-takedown-requests"
-      }
-    ]
-  },
-  {
-    "name": "Miscellaneous",
-    "slug": "misc",
-    "contents": [
-      {
-        "name": "CLUI, the graphical CLI",
-        "slug": "clui-graphical-cli"
-      },
-      {
-        "name": "Playing audio on Replit",
-        "slug": "playing-audio-replit"
-      },
-      {
-        "name": "Classic Basic on Replit",
-        "slug": "classic-basic-replit"
-      }
-    ]
-  },
-  {
     "name": "Teams for Education",
     "slug": "teams",
     "contents": [
@@ -255,7 +205,57 @@
       }
     ]
   },
+   {
+    "name": "Settings",
+    "slug": "settings",
+    "contents": [
+      {
+        "name": "Changing your username",
+        "slug": "changing-username"
+      },
+      {
+        "name": "Selecting your favorite languages",
+        "slug": "selecting-favorite-languages"
+      }
+    ]
+  },
   {
+    "name": "Legal and security information",
+    "slug": "legal-and-security-info",
+    "contents": [
+      {
+        "name": "Security",
+        "slug": "security"
+      },
+      {
+        "name": "Licensing info",
+        "slug": "licensing-info"
+      },
+      {
+        "name": "Copyright claims and takedown requests",
+        "slug": "copyright-claims-takedown-requests"
+      }
+    ]
+  },
+  {
+    "name": "Miscellaneous",
+    "slug": "misc",
+    "contents": [
+      {
+        "name": "CLUI, the graphical CLI",
+        "slug": "clui-graphical-cli"
+      },
+      {
+        "name": "Playing audio on Replit",
+        "slug": "playing-audio-replit"
+      },
+      {
+        "name": "Classic Basic on Replit",
+        "slug": "classic-basic-replit"
+      }
+    ]
+  },
+ {
     "name": "Tutorials",
     "slug": "tutorials",
     "contents": [
