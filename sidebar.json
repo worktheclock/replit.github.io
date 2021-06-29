@@ -378,6 +378,10 @@
       {
         "name": "Creating interactive Python plots with matplotlib",
         "slug": "creating-interactive-python-plots-matplotlib"
+      },
+      {
+        "name": "Space Shooter with Kaboom.js",
+        "slug": "24-build-space-shooter-with-kaboom"
       }
     ]
   },
