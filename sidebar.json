@@ -341,6 +341,14 @@
                 "slug": "22-personal-stock-market-dashboard"
             },
             {
+                "name": "Asteroids game with Kaboom.js",
+                "slug": "23-build-asteroids-with-kaboom"
+            },
+            {
+                "name": "Space Shooter with Kaboom.js",
+                "slug": "24-build-space-shooter-with-kaboom"
+            },
+            {
                 "name": "Pinboard Project Part 1: HTML & CSS",
                 "slug": "PinboardProjectPart1"
             },
