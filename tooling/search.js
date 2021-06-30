@@ -1,4 +1,4 @@
-const fs = require('fs/promises');
+const fs = require('fs').promises;
 const { kebabCase, flatten } = require('lodash')
 
 const updateSearch = async () => {

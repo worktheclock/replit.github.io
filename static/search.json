@@ -1,2301 +1,2139 @@
 [
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": null,
-    "slug": "repls/intro"
+    "slug": "getting-started/intro-replit"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Introduction to Replit",
-    "slug": "/repls/intro#introduction-to-replit"
+    "slug": "/getting-started/intro-replit#introduction-to-replit"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Writing Code: Replit for Software Developers",
-    "slug": "/repls/intro#writing-code-replit-for-software-developers"
+    "slug": "/getting-started/intro-replit#writing-code-replit-for-software-developers"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Introduction to the IDE",
-    "slug": "/repls/intro#introduction-to-the-ide"
+    "slug": "/getting-started/intro-replit#introduction-to-the-ide"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Working with Files",
-    "slug": "/repls/intro#working-with-files"
+    "slug": "/getting-started/intro-replit#working-with-files"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Storing Secrets",
-    "slug": "/repls/intro#storing-secrets"
+    "slug": "/getting-started/intro-replit#storing-secrets"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Configuring the Run Button",
-    "slug": "/repls/intro#configuring-the-run-button"
+    "slug": "/getting-started/intro-replit#configuring-the-run-button"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Integrating with GitHub",
-    "slug": "/repls/intro#integrating-with-git-hub"
+    "slug": "/getting-started/intro-replit#integrating-with-git-hub"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Using History",
-    "slug": "/repls/intro#using-history"
+    "slug": "/getting-started/intro-replit#using-history"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Pair Programming",
-    "slug": "/repls/intro#pair-programming"
+    "slug": "/getting-started/intro-replit#pair-programming"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Hosting Code: Replit for Startups and Indiehackers",
-    "slug": "/repls/intro#hosting-code-replit-for-startups-and-indiehackers"
+    "slug": "/getting-started/intro-replit#hosting-code-replit-for-startups-and-indiehackers"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Web Hosting",
-    "slug": "/repls/intro#web-hosting"
+    "slug": "/getting-started/intro-replit#web-hosting"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Deploying HTTP servers",
-    "slug": "/repls/intro#deploying-http-servers"
+    "slug": "/getting-started/intro-replit#deploying-http-servers"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Always On Repls",
-    "slug": "/repls/intro#always-on-repls"
+    "slug": "/getting-started/intro-replit#always-on-repls"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "The Replit Database",
-    "slug": "/repls/intro#the-replit-database"
+    "slug": "/getting-started/intro-replit#the-replit-database"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Teaching Code: Replit for Teachers",
-    "slug": "/repls/intro#teaching-code-replit-for-teachers"
+    "slug": "/getting-started/intro-replit#teaching-code-replit-for-teachers"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Threads and Feedback",
-    "slug": "/repls/intro#threads-and-feedback"
+    "slug": "/getting-started/intro-replit#threads-and-feedback"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Automatic Testing and Grading",
-    "slug": "/repls/intro#automatic-testing-and-grading"
+    "slug": "/getting-started/intro-replit#automatic-testing-and-grading"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Comply with Local Privacy Regulations",
-    "slug": "/repls/intro#comply-with-local-privacy-regulations"
+    "slug": "/getting-started/intro-replit#comply-with-local-privacy-regulations"
   },
   {
-    "category": "Get Started",
-    "name": "Introduction to Repls",
+    "category": "Getting started",
+    "name": "Introduction to Replit",
     "heading": "Learning Code: Replit for Students",
-    "slug": "/repls/intro#learning-code-replit-for-students"
+    "slug": "/getting-started/intro-replit#learning-code-replit-for-students"
   },
   {
-    "category": "Get Started",
-    "name": "Managing Your Repls",
+    "category": "Getting started",
+    "name": "Using Replit for free",
     "heading": null,
-    "slug": "repls/dashboard"
+    "slug": "getting-started/using-replit-free"
   },
   {
-    "category": "Get Started",
-    "name": "Managing Your Repls",
-    "heading": "Managing Your Repls",
-    "slug": "/repls/dashboard#managing-your-repls"
+    "category": "Getting started",
+    "name": "Using Replit for free",
+    "heading": "Using Replit for free",
+    "slug": "/getting-started/using-replit-free#using-replit-for-free"
   },
   {
-    "category": "Get Started",
-    "name": "Managing Your Repls",
+    "category": "Getting started",
+    "name": "Using Replit for free",
+    "heading": "Repls",
+    "slug": "/getting-started/using-replit-free#repls"
+  },
+  {
+    "category": "Getting started",
+    "name": "Using Replit for free",
+    "heading": "Multiplayer",
+    "slug": "/getting-started/using-replit-free#multiplayer"
+  },
+  {
+    "category": "Getting started",
+    "name": "Using Replit for free",
+    "heading": "Teams",
+    "slug": "/getting-started/using-replit-free#teams"
+  },
+  {
+    "category": "Getting started",
+    "name": "Using Replit for free",
+    "heading": "Compliance",
+    "slug": "/getting-started/using-replit-free#compliance"
+  },
+  {
+    "category": "Getting started",
+    "name": "Managing your repls",
+    "heading": null,
+    "slug": "getting-started/managing-repls"
+  },
+  {
+    "category": "Getting started",
+    "name": "Managing your repls",
+    "heading": "Managing your repls",
+    "slug": "/getting-started/managing-repls#managing-your-repls"
+  },
+  {
+    "category": "Getting started",
+    "name": "Managing your repls",
     "heading": "Starring Repls",
-    "slug": "/repls/dashboard#starring-repls"
+    "slug": "/getting-started/managing-repls#starring-repls"
   },
   {
-    "category": "Get Started",
-    "name": "Managing Your Repls",
+    "category": "Getting started",
+    "name": "Managing your repls",
     "heading": "Searching",
-    "slug": "/repls/dashboard#searching"
+    "slug": "/getting-started/managing-repls#searching"
   },
   {
-    "category": "Get Started",
-    "name": "Managing Your Repls",
+    "category": "Getting started",
+    "name": "Managing your repls",
     "heading": "Basic Search",
-    "slug": "/repls/dashboard#basic-search"
+    "slug": "/getting-started/managing-repls#basic-search"
   },
   {
-    "category": "Get Started",
-    "name": "Managing Your Repls",
+    "category": "Getting started",
+    "name": "Managing your repls",
     "heading": "Search by Language",
-    "slug": "/repls/dashboard#search-by-language"
+    "slug": "/getting-started/managing-repls#search-by-language"
   },
   {
-    "category": "Get Started",
-    "name": "Managing Your Repls",
+    "category": "Getting started",
+    "name": "Managing your repls",
     "heading": "Search by Title",
-    "slug": "/repls/dashboard#search-by-title"
+    "slug": "/getting-started/managing-repls#search-by-title"
   },
   {
-    "category": "Get Started",
-    "name": "Creating Files",
+    "category": "Getting started",
+    "name": "Creating files",
     "heading": null,
-    "slug": "repls/files"
+    "slug": "getting-started/creating-files"
   },
   {
-    "category": "Get Started",
-    "name": "Creating Files",
-    "heading": "Creating Files",
-    "slug": "/repls/files#creating-files"
+    "category": "Getting started",
+    "name": "Creating files",
+    "heading": "Creating files",
+    "slug": "/getting-started/creating-files#creating-files"
   },
   {
-    "category": "Get Started",
-    "name": "Creating Files",
+    "category": "Getting started",
+    "name": "Creating files",
     "heading": "Uploading Files and Assets",
-    "slug": "/repls/files#uploading-files-and-assets"
+    "slug": "/getting-started/creating-files#uploading-files-and-assets"
   },
   {
-    "category": "Get Started",
-    "name": "Creating Files",
+    "category": "Getting started",
+    "name": "Creating files",
     "heading": "File Changes",
-    "slug": "/repls/files#file-changes"
+    "slug": "/getting-started/creating-files#file-changes"
   },
   {
-    "category": "Get Started",
-    "name": "Using History",
+    "category": "Getting started",
+    "name": "FAQ",
     "heading": null,
-    "slug": "repls/history"
+    "slug": "getting-started/faq"
   },
   {
-    "category": "Get Started",
-    "name": "Using History",
-    "heading": "Using Repl History",
-    "slug": "/repls/history#using-repl-history"
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "FAQ",
+    "slug": "/getting-started/faq#faq"
   },
   {
-    "category": "Get Started",
-    "name": "Using History",
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "Teachers",
+    "slug": "/getting-started/faq#teachers"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "What is Teams for Education?",
+    "slug": "/getting-started/faq#what-is-teams-for-education"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "Repls",
+    "slug": "/getting-started/faq#repls"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "Why isn't my repl loading?",
+    "slug": "/getting-started/faq#why-isnt-my-repl-loading"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "Why is my repl having display issues?",
+    "slug": "/getting-started/faq#why-is-my-repl-having-display-issues"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "How do I recover a deleted repl?",
+    "slug": "/getting-started/faq#how-do-i-recover-a-deleted-repl"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "How do I fork a private repl?",
+    "slug": "/getting-started/faq#how-do-i-fork-a-private-repl"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "What if I have two repls in different folders and am unable to give them the same name?",
+    "slug": "/getting-started/faq#what-if-i-have-two-repls-in-different-folders-and-am-unable-to-give-them-the-same-name"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "How do I keep my repls to always stay on?",
+    "slug": "/getting-started/faq#how-do-i-keep-my-repls-to-always-stay-on"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "Account",
+    "slug": "/getting-started/faq#account"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "I logged in with Gmail/Github etc., but want to change my email.",
+    "slug": "/getting-started/faq#i-logged-in-with-gmail-github-etc-but-want-to-change-my-email"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "Can accounts be merged?",
+    "slug": "/getting-started/faq#can-accounts-be-merged"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Using repl history",
+    "heading": null,
+    "slug": "programming-ide/using-repl-history"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Using repl history",
+    "heading": "Using repl history",
+    "slug": "/programming-ide/using-repl-history#using-repl-history"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Using repl history",
     "heading": "How to Access History",
-    "slug": "/repls/history#how-to-access-history"
+    "slug": "/programming-ide/using-repl-history#how-to-access-history"
   },
   {
-    "category": "Get Started",
-    "name": "Using History",
+    "category": "Programming & IDE",
+    "name": "Using repl history",
     "heading": "Using History",
-    "slug": "/repls/history#using-history"
+    "slug": "/programming-ide/using-repl-history#using-history"
   },
   {
-    "category": "Get Started",
-    "name": "Using History",
+    "category": "Programming & IDE",
+    "name": "Using repl history",
     "heading": "Demo",
-    "slug": "/repls/history#demo"
+    "slug": "/programming-ide/using-repl-history#demo"
   },
   {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": null,
-    "slug": "repls/quick-start"
+    "slug": "programming-ide/working-shortcuts"
   },
   {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "Quick Start Guide",
-    "slug": "/repls/quick-start#quick-start-guide"
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
+    "heading": "Working with shortcuts",
+    "slug": "/programming-ide/working-shortcuts#working-with-shortcuts"
   },
   {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "Creating a New Python 3 Repl",
-    "slug": "/repls/quick-start#creating-a-new-python-3-repl"
-  },
-  {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "Renaming and Describing your Repl",
-    "slug": "/repls/quick-start#renaming-and-describing-your-repl"
-  },
-  {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "The Repl Environment",
-    "slug": "/repls/quick-start#the-repl-environment"
-  },
-  {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "Hello, World!",
-    "slug": "/repls/quick-start#hello-world"
-  },
-  {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "Creating a Simple Input Program",
-    "slug": "/repls/quick-start#creating-a-simple-input-program"
-  },
-  {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "Adding Packages",
-    "slug": "/repls/quick-start#adding-packages"
-  },
-  {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "Creating Python Plots",
-    "slug": "/repls/quick-start#creating-python-plots"
-  },
-  {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "Starting a Web Server",
-    "slug": "/repls/quick-start#starting-a-web-server"
-  },
-  {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "Adding Secret Keys",
-    "slug": "/repls/quick-start#adding-secret-keys"
-  },
-  {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "Sharing Your Repl",
-    "slug": "/repls/quick-start#sharing-your-repl"
-  },
-  {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "Sample Repls",
-    "slug": "/repls/quick-start#sample-repls"
-  },
-  {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "More from our Community",
-    "slug": "/repls/quick-start#more-from-our-community"
-  },
-  {
-    "category": "Get Started",
-    "name": "Quick Start Guide",
-    "heading": "Moving Forward",
-    "slug": "/repls/quick-start#moving-forward"
-  },
-  {
-    "category": "Get Started",
-    "name": "Installing Packages",
-    "heading": null,
-    "slug": "repls/packages"
-  },
-  {
-    "category": "Get Started",
-    "name": "Installing Packages",
-    "heading": "Installing Packages",
-    "slug": "/repls/packages#installing-packages"
-  },
-  {
-    "category": "Get Started",
-    "name": "Installing Packages",
-    "heading": "Searching For and Adding Packages",
-    "slug": "/repls/packages#searching-for-and-adding-packages"
-  },
-  {
-    "category": "Get Started",
-    "name": "Installing Packages",
-    "heading": "Direct Imports",
-    "slug": "/repls/packages#direct-imports"
-  },
-  {
-    "category": "Get Started",
-    "name": "Installing Packages",
-    "heading": "Guessing Failures",
-    "slug": "/repls/packages#guessing-failures"
-  },
-  {
-    "category": "Get Started",
-    "name": "Installing Packages",
-    "heading": "Spec Files",
-    "slug": "/repls/packages#spec-files"
-  },
-  {
-    "category": "Get Started",
-    "name": "Installing Packages",
-    "heading": "Python",
-    "slug": "/repls/packages#python"
-  },
-  {
-    "category": "Get Started",
-    "name": "Installing Packages",
-    "heading": "JavaScript",
-    "slug": "/repls/packages#java-script"
-  },
-  {
-    "category": "Get Started",
-    "name": "Web Hosting",
-    "heading": null,
-    "slug": "repls/web-hosting"
-  },
-  {
-    "category": "Get Started",
-    "name": "Web Hosting",
-    "heading": "Web Hosting",
-    "slug": "/repls/web-hosting#web-hosting"
-  },
-  {
-    "category": "Get Started",
-    "name": "Web Hosting",
-    "heading": "URL Format",
-    "slug": "/repls/web-hosting#url-format"
-  },
-  {
-    "category": "Get Started",
-    "name": "Web Hosting",
-    "heading": "Updating Websites",
-    "slug": "/repls/web-hosting#updating-websites"
-  },
-  {
-    "category": "Get Started",
-    "name": "Web Hosting",
-    "heading": "Custom Domains",
-    "slug": "/repls/web-hosting#custom-domains"
-  },
-  {
-    "category": "Get Started",
-    "name": "Web Hosting",
-    "heading": "Example",
-    "slug": "/repls/web-hosting#example"
-  },
-  {
-    "category": "Get Started",
-    "name": "Web Hosting",
-    "heading": "Takedown Requests",
-    "slug": "/repls/web-hosting#takedown-requests"
-  },
-  {
-    "category": "Get Started",
-    "name": "Deploying HTTP Servers",
-    "heading": null,
-    "slug": "repls/http-servers"
-  },
-  {
-    "category": "Get Started",
-    "name": "Deploying HTTP Servers",
-    "heading": "Deploying HTTP Servers",
-    "slug": "/repls/http-servers#deploying-http-servers"
-  },
-  {
-    "category": "Get Started",
-    "name": "Deploying HTTP Servers",
-    "heading": "Persistence and Takedown Requests",
-    "slug": "/repls/http-servers#persistence-and-takedown-requests"
-  },
-  {
-    "category": "Get Started",
-    "name": "Authenticating Users",
-    "heading": null,
-    "slug": "repls/repl-auth"
-  },
-  {
-    "category": "Get Started",
-    "name": "Authenticating Users",
-    "heading": "Authenticating users with Repl Auth",
-    "slug": "/repls/repl-auth#authenticating-users-with-repl-auth"
-  },
-  {
-    "category": "Get Started",
-    "name": "Authenticating Users",
-    "heading": "Setup",
-    "slug": "/repls/repl-auth#setup"
-  },
-  {
-    "category": "Get Started",
-    "name": "Authenticating Users",
-    "heading": "Creating the Basic Flask App",
-    "slug": "/repls/repl-auth#creating-the-basic-flask-app"
-  },
-  {
-    "category": "Get Started",
-    "name": "Authenticating Users",
-    "heading": "The Authentication Script ",
-    "slug": "/repls/repl-auth#the-authentication-script"
-  },
-  {
-    "category": "Get Started",
-    "name": "Authenticating Users",
-    "heading": "Retrieving Information from the Authenticated Account",
-    "slug": "/repls/repl-auth#retrieving-information-from-the-authenticated-account"
-  },
-  {
-    "category": "Get Started",
-    "name": "Authenticating Users",
-    "heading": "Warning ",
-    "slug": "/repls/repl-auth#warning"
-  },
-  {
-    "category": "Get Started",
-    "name": "Authenticating Users",
-    "heading": "Closing Notes",
-    "slug": "/repls/repl-auth#closing-notes"
-  },
-  {
-    "category": "Get Started",
-    "name": ".env file (deprecated)",
-    "heading": null,
-    "slug": "repls/secret-keys"
-  },
-  {
-    "category": "Get Started",
-    "name": ".env file (deprecated)",
-    "heading": "Storing Secrets in .env",
-    "slug": "/repls/secret-keys#storing-secrets-in-env"
-  },
-  {
-    "category": "Get Started",
-    "name": ".env file (deprecated)",
-    "heading": "`.env` Files",
-    "slug": "/repls/secret-keys#env-files"
-  },
-  {
-    "category": "Get Started",
-    "name": ".env file (deprecated)",
-    "heading": "super secret token",
-    "slug": "/repls/secret-keys#super-secret-token"
-  },
-  {
-    "category": "Get Started",
-    "name": ".env file (deprecated)",
-    "heading": "Reading .env Files",
-    "slug": "/repls/secret-keys#reading-env-files"
-  },
-  {
-    "category": "Get Started",
-    "name": ".env file (deprecated)",
-    "heading": "super secret token",
-    "slug": "/repls/secret-keys#super-secret-token"
-  },
-  {
-    "category": "Get Started",
-    "name": ".env file (deprecated)",
-    "heading": "Python",
-    "slug": "/repls/secret-keys#python"
-  },
-  {
-    "category": "Get Started",
-    "name": ".env file (deprecated)",
-    "heading": "prints 'admin'",
-    "slug": "/repls/secret-keys#prints-admin"
-  },
-  {
-    "category": "Get Started",
-    "name": ".env file (deprecated)",
-    "heading": "JavaScript",
-    "slug": "/repls/secret-keys#java-script"
-  },
-  {
-    "category": "Get Started",
-    "name": ".env file (deprecated)",
-    "heading": "Example",
-    "slug": "/repls/secret-keys#example"
-  },
-  {
-    "category": "Get Started",
-    "name": "Secrets & environment variables",
-    "heading": null,
-    "slug": "repls/secrets-environment-variables"
-  },
-  {
-    "category": "Get Started",
-    "name": "Secrets & environment variables",
-    "heading": "Secrets & environment variables",
-    "slug": "/repls/secrets-environment-variables#secrets-environment-variables"
-  },
-  {
-    "category": "Get Started",
-    "name": "Secrets & environment variables",
-    "heading": "Adding, viewing and editing environment variables",
-    "slug": "/repls/secrets-environment-variables#adding-viewing-and-editing-environment-variables"
-  },
-  {
-    "category": "Get Started",
-    "name": "Secrets & environment variables",
-    "heading": "Using environment variables in your code",
-    "slug": "/repls/secrets-environment-variables#using-environment-variables-in-your-code"
-  },
-  {
-    "category": "Get Started",
-    "name": "Secrets & environment variables",
-    "heading": "Python",
-    "slug": "/repls/secrets-environment-variables#python"
-  },
-  {
-    "category": "Get Started",
-    "name": "Secrets & environment variables",
-    "heading": "prints 'admin'",
-    "slug": "/repls/secrets-environment-variables#prints-admin"
-  },
-  {
-    "category": "Get Started",
-    "name": "Secrets & environment variables",
-    "heading": "JavaScript",
-    "slug": "/repls/secrets-environment-variables#java-script"
-  },
-  {
-    "category": "Get Started",
-    "name": "Creating Interactive Python Plots",
-    "heading": null,
-    "slug": "repls/python-plots"
-  },
-  {
-    "category": "Get Started",
-    "name": "Creating Interactive Python Plots",
-    "heading": "Creating Interactive Python Plots",
-    "slug": "/repls/python-plots#creating-interactive-python-plots"
-  },
-  {
-    "category": "Get Started",
-    "name": "Embedding Repls",
-    "heading": null,
-    "slug": "repls/embed"
-  },
-  {
-    "category": "Get Started",
-    "name": "Embedding Repls",
-    "heading": "Embedding Repls",
-    "slug": "/repls/embed#embedding-repls"
-  },
-  {
-    "category": "Get Started",
-    "name": "Embedding Repls",
-    "heading": "Embedding a Repl via `iframe`",
-    "slug": "/repls/embed#embedding-a-repl-via-iframe"
-  },
-  {
-    "category": "Get Started",
-    "name": "Embedding Repls",
-    "heading": "Embedding on WordPress",
-    "slug": "/repls/embed#embedding-on-word-press"
-  },
-  {
-    "category": "Get Started",
-    "name": "Embedding Repls",
-    "heading": "Embedding on Medium via Embedly",
-    "slug": "/repls/embed#embedding-on-medium-via-embedly"
-  },
-  {
-    "category": "Get Started",
-    "name": "Embedding Repls",
-    "heading": "Editing an Embedded Repl",
-    "slug": "/repls/embed#editing-an-embedded-repl"
-  },
-  {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
-    "heading": null,
-    "slug": "repls/editor"
-  },
-  {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
-    "heading": "Editor Shortcuts",
-    "slug": "/repls/editor#editor-shortcuts"
-  },
-  {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Command Palette",
-    "slug": "/repls/editor#command-palette"
+    "slug": "/programming-ide/working-shortcuts#command-palette"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Frequently Used Keyboard Shortcuts",
-    "slug": "/repls/editor#frequently-used-keyboard-shortcuts"
+    "slug": "/programming-ide/working-shortcuts#frequently-used-keyboard-shortcuts"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Moving the Current Line",
-    "slug": "/repls/editor#moving-the-current-line"
+    "slug": "/programming-ide/working-shortcuts#moving-the-current-line"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Clone the Current Line",
-    "slug": "/repls/editor#clone-the-current-line"
+    "slug": "/programming-ide/working-shortcuts#clone-the-current-line"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Selecting Lines",
-    "slug": "/repls/editor#selecting-lines"
+    "slug": "/programming-ide/working-shortcuts#selecting-lines"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Deleting Lines",
-    "slug": "/repls/editor#deleting-lines"
+    "slug": "/programming-ide/working-shortcuts#deleting-lines"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Inserting Lines",
-    "slug": "/repls/editor#inserting-lines"
+    "slug": "/programming-ide/working-shortcuts#inserting-lines"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Adding Cursors",
-    "slug": "/repls/editor#adding-cursors"
+    "slug": "/programming-ide/working-shortcuts#adding-cursors"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Find",
-    "slug": "/repls/editor#find"
+    "slug": "/programming-ide/working-shortcuts#find"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Replace",
-    "slug": "/repls/editor#replace"
+    "slug": "/programming-ide/working-shortcuts#replace"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Find Next/Previous",
-    "slug": "/repls/editor#find-next-previous"
+    "slug": "/programming-ide/working-shortcuts#find-next-previous"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Adding Selections to Next Find Match",
-    "slug": "/repls/editor#adding-selections-to-next-find-match"
+    "slug": "/programming-ide/working-shortcuts#adding-selections-to-next-find-match"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Navigation",
-    "slug": "/repls/editor#navigation"
+    "slug": "/programming-ide/working-shortcuts#navigation"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Open Files",
-    "slug": "/repls/editor#open-files"
+    "slug": "/programming-ide/working-shortcuts#open-files"
   },
   {
-    "category": "Get Started",
-    "name": "Editor Shortcuts",
+    "category": "Programming & IDE",
+    "name": "Working with shortcuts",
     "heading": "Go to Line",
-    "slug": "/repls/editor#go-to-line"
+    "slug": "/programming-ide/working-shortcuts#go-to-line"
   },
   {
-    "category": "Get Started",
-    "name": "Configuring the Run Button",
+    "category": "Programming & IDE",
+    "name": "Installing packages",
     "heading": null,
-    "slug": "repls/dot-replit"
+    "slug": "programming-ide/installing-packages"
   },
   {
-    "category": "Get Started",
-    "name": "Configuring the Run Button",
-    "heading": "Configuring the \"Run\" Button",
-    "slug": "/repls/dot-replit#configuring-the-run-button"
+    "category": "Programming & IDE",
+    "name": "Installing packages",
+    "heading": "Installing packages",
+    "slug": "/programming-ide/installing-packages#installing-packages"
   },
   {
-    "category": "Get Started",
-    "name": "Configuring the Run Button",
+    "category": "Programming & IDE",
+    "name": "Installing packages",
+    "heading": "Searching For and Adding Packages",
+    "slug": "/programming-ide/installing-packages#searching-for-and-adding-packages"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Installing packages",
+    "heading": "Direct Imports",
+    "slug": "/programming-ide/installing-packages#direct-imports"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Installing packages",
+    "heading": "Guessing Failures",
+    "slug": "/programming-ide/installing-packages#guessing-failures"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Installing packages",
+    "heading": "Spec Files",
+    "slug": "/programming-ide/installing-packages#spec-files"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Installing packages",
+    "heading": "Python",
+    "slug": "/programming-ide/installing-packages#python"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Installing packages",
+    "heading": "JavaScript",
+    "slug": "/programming-ide/installing-packages#java-script"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Getting repl metadata",
+    "heading": null,
+    "slug": "programming-ide/getting-repl-metadata"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Getting repl metadata",
+    "heading": "Getting repl metadata",
+    "slug": "/programming-ide/getting-repl-metadata#getting-repl-metadata"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Getting repl metadata",
+    "heading": "Output",
+    "slug": "/programming-ide/getting-repl-metadata#output"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Getting repl metadata",
+    "heading": "ritza",
+    "slug": "/programming-ide/getting-repl-metadata#ritza"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Getting repl metadata",
+    "heading": "repl-environment-variables",
+    "slug": "/programming-ide/getting-repl-metadata#repl-environment-variables"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Storing sensitive information in environment variables",
+    "heading": null,
+    "slug": "programming-ide/storing-sensitive-information-environment-variables"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Storing sensitive information in environment variables",
+    "heading": "Secrets & Environment Variables",
+    "slug": "/programming-ide/storing-sensitive-information-environment-variables#secrets-environment-variables"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Storing sensitive information in environment variables",
+    "heading": "Adding, Viewing and Editing Environment Variables",
+    "slug": "/programming-ide/storing-sensitive-information-environment-variables#adding-viewing-and-editing-environment-variables"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Storing sensitive information in environment variables",
+    "heading": "Using Environment Variables in Your Code",
+    "slug": "/programming-ide/storing-sensitive-information-environment-variables#using-environment-variables-in-your-code"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Storing sensitive information in environment variables",
+    "heading": "Python",
+    "slug": "/programming-ide/storing-sensitive-information-environment-variables#python"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Storing sensitive information in environment variables",
+    "heading": "prints 'admin'",
+    "slug": "/programming-ide/storing-sensitive-information-environment-variables#prints-admin"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Storing sensitive information in environment variables",
+    "heading": "JavaScript",
+    "slug": "/programming-ide/storing-sensitive-information-environment-variables#java-script"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Configuring the Run button",
+    "heading": null,
+    "slug": "programming-ide/configuring-run-button"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Configuring the Run button",
+    "heading": "Configuring the \"Run\" button",
+    "slug": "/programming-ide/configuring-run-button#configuring-the-run-button"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Configuring the Run button",
     "heading": "Configuring a Cloned Repl",
-    "slug": "/repls/dot-replit#configuring-a-cloned-repl"
+    "slug": "/programming-ide/configuring-run-button#configuring-a-cloned-repl"
   },
   {
-    "category": "Get Started",
-    "name": "Configuring the Run Button",
+    "category": "Programming & IDE",
+    "name": "Configuring the Run button",
     "heading": "Other Configuration",
-    "slug": "/repls/dot-replit#other-configuration"
+    "slug": "/programming-ide/configuring-run-button#other-configuration"
   },
   {
-    "category": "Get Started",
-    "name": "Configuring the Run Button",
+    "category": "Programming & IDE",
+    "name": "Configuring the Run button",
     "heading": "Example .replit File",
-    "slug": "/repls/dot-replit#example-replit-file"
+    "slug": "/programming-ide/configuring-run-button#example-replit-file"
   },
   {
-    "category": "Get Started",
-    "name": "Configuring the Run Button",
+    "category": "Programming & IDE",
+    "name": "Configuring the Run button",
     "heading": "HTML",
-    "slug": "/repls/dot-replit#html"
+    "slug": "/programming-ide/configuring-run-button#html"
   },
   {
-    "category": "Get Started",
-    "name": "Repl From Repo",
+    "category": "Programming & IDE",
+    "name": "Running GitHub repositories on Replit",
     "heading": null,
-    "slug": "repls/repl-from-repo"
+    "slug": "programming-ide/running-github-repositories-replit"
   },
   {
-    "category": "Get Started",
-    "name": "Repl From Repo",
-    "heading": "Repl from Repo",
-    "slug": "/repls/repl-from-repo#repl-from-repo"
+    "category": "Programming & IDE",
+    "name": "Running GitHub repositories on Replit",
+    "heading": "Running GitHub repositories on Replit",
+    "slug": "/programming-ide/running-github-repositories-replit#running-git-hub-repositories-on-replit"
   },
   {
-    "category": "Get Started",
-    "name": "Repl From Repo",
+    "category": "Programming & IDE",
+    "name": "Running GitHub repositories on Replit",
     "heading": "Configuring your Repo",
-    "slug": "/repls/repl-from-repo#configuring-your-repo"
+    "slug": "/programming-ide/running-github-repositories-replit#configuring-your-repo"
   },
   {
-    "category": "Get Started",
-    "name": "Repl From Repo",
+    "category": "Programming & IDE",
+    "name": "Running GitHub repositories on Replit",
     "heading": "Adding a \"Run on Replit\" Badge",
-    "slug": "/repls/repl-from-repo#adding-a-run-on-replit-badge"
+    "slug": "/programming-ide/running-github-repositories-replit#adding-a-run-on-replit-badge"
   },
   {
-    "category": "Get Started",
-    "name": "Repl From Repo",
+    "category": "Programming & IDE",
+    "name": "Running GitHub repositories on Replit",
     "heading": "Generate a badge",
-    "slug": "/repls/repl-from-repo#generate-a-badge"
+    "slug": "/programming-ide/running-github-repositories-replit#generate-a-badge"
   },
   {
-    "category": "Get Started",
-    "name": "Using Multiplayer with Anonymous Users",
+    "category": "Programming & IDE",
+    "name": "Getting started with Nix",
     "heading": null,
-    "slug": "repls/multiplayer-anon"
+    "slug": "programming-ide/getting-started-nix"
   },
   {
-    "category": "Get Started",
-    "name": "Using Multiplayer with Anonymous Users",
-    "heading": "Using Multiplayer with Anonymous Users",
-    "slug": "/repls/multiplayer-anon#using-multiplayer-with-anonymous-users"
+    "category": "Programming & IDE",
+    "name": "Getting started with Nix",
+    "heading": "Nix: Getting started with Nix",
+    "slug": "/programming-ide/getting-started-nix#nix-getting-started-with-nix"
   },
   {
-    "category": "Get Started",
-    "name": "Playing Audio on Replit",
+    "category": "Programming & IDE",
+    "name": "Getting started with Nix",
+    "heading": "Learn More About Nix",
+    "slug": "/programming-ide/getting-started-nix#learn-more-about-nix"
+  },
+  {
+    "category": "Hosting",
+    "name": "Hosting web pages",
     "heading": null,
-    "slug": "repls/audio"
+    "slug": "hosting/hosting-web-pages"
   },
   {
-    "category": "Get Started",
-    "name": "Playing Audio on Replit",
-    "heading": "Playing Audio on Replit",
-    "slug": "/repls/audio#playing-audio-on-replit"
+    "category": "Hosting",
+    "name": "Hosting web pages",
+    "heading": "Hosting web pages",
+    "slug": "/hosting/hosting-web-pages#hosting-web-pages"
   },
   {
-    "category": "Get Started",
-    "name": "Playing Audio on Replit",
-    "heading": "System-wide audio",
-    "slug": "/repls/audio#system-wide-audio"
+    "category": "Hosting",
+    "name": "Hosting web pages",
+    "heading": "URL Format",
+    "slug": "/hosting/hosting-web-pages#url-format"
   },
   {
-    "category": "Get Started",
-    "name": "Playing Audio on Replit",
-    "heading": "Known limitations",
-    "slug": "/repls/audio#known-limitations"
+    "category": "Hosting",
+    "name": "Hosting web pages",
+    "heading": "Updating Websites",
+    "slug": "/hosting/hosting-web-pages#updating-websites"
   },
   {
-    "category": "Get Started",
-    "name": "Playing Audio on Replit",
-    "heading": "Audio service",
-    "slug": "/repls/audio#audio-service"
+    "category": "Hosting",
+    "name": "Hosting web pages",
+    "heading": "Custom Domains",
+    "slug": "/hosting/hosting-web-pages#custom-domains"
   },
   {
-    "category": "Get Started",
-    "name": "Playing Audio on Replit",
-    "heading": "Note that audio is currently only enabled for explorers. Learn to become an explorer here",
-    "slug": "/repls/audio#note-that-audio-is-currently-only-enabled-for-explorers-learn-to-become-an-explorer-here"
+    "category": "Hosting",
+    "name": "Hosting web pages",
+    "heading": "Example",
+    "slug": "/hosting/hosting-web-pages#example"
   },
   {
-    "category": "Get Started",
-    "name": "Playing Audio on Replit",
-    "heading": "Community Contributed Libraries",
-    "slug": "/repls/audio#community-contributed-libraries"
+    "category": "Hosting",
+    "name": "Hosting web pages",
+    "heading": "Takedown Requests",
+    "slug": "/hosting/hosting-web-pages#takedown-requests"
   },
   {
-    "category": "Get Started",
-    "name": "Playing Audio on Replit",
-    "heading": "Developing an Audio Library for Replit",
-    "slug": "/repls/audio#developing-an-audio-library-for-replit"
-  },
-  {
-    "category": "Get Started",
-    "name": "Playing Audio on Replit",
-    "heading": "Step 1: Add an audio source",
-    "slug": "/repls/audio#step-1-add-an-audio-source"
-  },
-  {
-    "category": "Get Started",
-    "name": "Playing Audio on Replit",
-    "heading": "Step 2: Get the status of playing audio",
-    "slug": "/repls/audio#step-2-get-the-status-of-playing-audio"
-  },
-  {
-    "category": "Get Started",
-    "name": "Playing Audio on Replit",
-    "heading": "Step 3: Managing current sources",
-    "slug": "/repls/audio#step-3-managing-current-sources"
-  },
-  {
-    "category": "Get Started",
-    "name": "Always-on",
+    "category": "Hosting",
+    "name": "Deploying HTTP servers",
     "heading": null,
-    "slug": "repls/always-on"
+    "slug": "hosting/deploying-http-servers"
   },
   {
-    "category": "Get Started",
-    "name": "Always-on",
-    "heading": "Always-on",
-    "slug": "/repls/always-on#always-on"
+    "category": "Hosting",
+    "name": "Deploying HTTP servers",
+    "heading": "Deploying HTTP Servers",
+    "slug": "/hosting/deploying-http-servers#deploying-http-servers"
   },
   {
-    "category": "Get Started",
-    "name": "Always-on",
-    "heading": "Enabling Always-on",
-    "slug": "/repls/always-on#enabling-always-on"
+    "category": "Hosting",
+    "name": "Deploying HTTP servers",
+    "heading": "Persistence and Takedown Requests",
+    "slug": "/hosting/deploying-http-servers#persistence-and-takedown-requests"
   },
   {
-    "category": "Get Started",
-    "name": "Always-on",
-    "heading": "What does Always-on do?",
-    "slug": "/repls/always-on#what-does-always-on-do"
-  },
-  {
-    "category": "Get Started",
-    "name": "Always-on",
-    "heading": "Feedback",
-    "slug": "/repls/always-on#feedback"
-  },
-  {
-    "category": "Get Started",
-    "name": "Unit Testing",
+    "category": "Hosting",
+    "name": "Authenticating users with Repl Auth",
     "heading": null,
-    "slug": "repls/UnitTesting"
+    "slug": "hosting/authenticating-users-repl-auth"
   },
   {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Unit Testing",
-    "slug": "/repls/UnitTesting#unit-testing"
+    "category": "Hosting",
+    "name": "Authenticating users with Repl Auth",
+    "heading": "Authenticating users with Repl Auth",
+    "slug": "/hosting/authenticating-users-repl-auth#authenticating-users-with-repl-auth"
   },
   {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Supported Languages and Testing Frameworks",
-    "slug": "/repls/UnitTesting#supported-languages-and-testing-frameworks"
-  },
-  {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Why Use Unit Testing?",
-    "slug": "/repls/UnitTesting#why-use-unit-testing"
-  },
-  {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Using the Testing Pane",
-    "slug": "/repls/UnitTesting#using-the-testing-pane"
-  },
-  {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Defining a test function",
-    "slug": "/repls/UnitTesting#defining-a-test-function"
-  },
-  {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Importing libraries",
-    "slug": "/repls/UnitTesting#importing-libraries"
-  },
-  {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Importing modules",
-    "slug": "/repls/UnitTesting#importing-modules"
-  },
-  {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Advanced Setup and Teardown",
-    "slug": "/repls/UnitTesting#advanced-setup-and-teardown"
-  },
-  {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Import",
-    "slug": "/repls/UnitTesting#import"
-  },
-  {
-    "category": "Get Started",
-    "name": "Unit Testing",
+    "category": "Hosting",
+    "name": "Authenticating users with Repl Auth",
     "heading": "Setup",
-    "slug": "/repls/UnitTesting#setup"
+    "slug": "/hosting/authenticating-users-repl-auth#setup"
   },
   {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Teardown",
-    "slug": "/repls/UnitTesting#teardown"
+    "category": "Hosting",
+    "name": "Authenticating users with Repl Auth",
+    "heading": "Creating the Basic Flask App",
+    "slug": "/hosting/authenticating-users-repl-auth#creating-the-basic-flask-app"
   },
   {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Assertion Documentation",
-    "slug": "/repls/UnitTesting#assertion-documentation"
+    "category": "Hosting",
+    "name": "Authenticating users with Repl Auth",
+    "heading": "The Authentication Script ",
+    "slug": "/hosting/authenticating-users-repl-auth#the-authentication-script"
   },
   {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Tips for Writing Good Tests",
-    "slug": "/repls/UnitTesting#tips-for-writing-good-tests"
+    "category": "Hosting",
+    "name": "Authenticating users with Repl Auth",
+    "heading": "Retrieving Information from the Authenticated Account",
+    "slug": "/hosting/authenticating-users-repl-auth#retrieving-information-from-the-authenticated-account"
   },
   {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Tips for Writing \"Testable\" Functions",
-    "slug": "/repls/UnitTesting#tips-for-writing-testable-functions"
+    "category": "Hosting",
+    "name": "Authenticating users with Repl Auth",
+    "heading": "Warning ",
+    "slug": "/hosting/authenticating-users-repl-auth#warning"
   },
   {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Teams for Education",
-    "slug": "/repls/UnitTesting#teams-for-education"
+    "category": "Hosting",
+    "name": "Authenticating users with Repl Auth",
+    "heading": "Closing Notes",
+    "slug": "/hosting/authenticating-users-repl-auth#closing-notes"
   },
   {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Creating a project",
-    "slug": "/repls/UnitTesting#creating-a-project"
-  },
-  {
-    "category": "Get Started",
-    "name": "Unit Testing",
-    "heading": "Example Team projects",
-    "slug": "/repls/UnitTesting#example-team-projects"
-  },
-  {
-    "category": "Get Started",
-    "name": "Native Graphics using VNC",
+    "category": "Hosting",
+    "name": "Embedding repls",
     "heading": null,
-    "slug": "repls/vnc"
+    "slug": "hosting/embedding-repls"
   },
   {
-    "category": "Get Started",
-    "name": "Native Graphics using VNC",
-    "heading": "Native Graphics using VNC ",
-    "slug": "/repls/vnc#native-graphics-using-vnc"
+    "category": "Hosting",
+    "name": "Embedding repls",
+    "heading": "Embedding a Repl via `iframe`",
+    "slug": "/hosting/embedding-repls#embedding-a-repl-via-iframe"
   },
   {
-    "category": "Get Started",
-    "name": "Native Graphics using VNC",
-    "heading": "What is VNC?",
-    "slug": "/repls/vnc#what-is-vnc"
+    "category": "Hosting",
+    "name": "Embedding repls",
+    "heading": "Embedding on WordPress",
+    "slug": "/hosting/embedding-repls#embedding-on-word-press"
   },
   {
-    "category": "Get Started",
-    "name": "Native Graphics using VNC",
-    "heading": "How can I use VNC?",
-    "slug": "/repls/vnc#how-can-i-use-vnc"
+    "category": "Hosting",
+    "name": "Embedding repls",
+    "heading": "Embedding on Medium via Embedly",
+    "slug": "/hosting/embedding-repls#embedding-on-medium-via-embedly"
   },
   {
-    "category": "Get Started",
-    "name": "Native Graphics using VNC",
-    "heading": "Securing your repl ",
-    "slug": "/repls/vnc#securing-your-repl"
+    "category": "Hosting",
+    "name": "Embedding repls",
+    "heading": "Editing an Embedded Repl",
+    "slug": "/hosting/embedding-repls#editing-an-embedded-repl"
   },
   {
-    "category": "Get Started",
-    "name": "Native Graphics using VNC",
-    "heading": "How can I use fullscreen VNC?",
-    "slug": "/repls/vnc#how-can-i-use-fullscreen-vnc"
+    "category": "Hosting",
+    "name": "Enabling Always-on",
+    "heading": null,
+    "slug": "hosting/enabling-always-on"
   },
   {
-    "category": "Get Started",
-    "name": "Native Graphics using VNC",
+    "category": "Hosting",
+    "name": "Enabling Always-on",
+    "heading": "Enabling Always-on",
+    "slug": "/hosting/enabling-always-on#enabling-always-on"
+  },
+  {
+    "category": "Hosting",
+    "name": "Enabling Always-on",
+    "heading": "Enabling Always-on",
+    "slug": "/hosting/enabling-always-on#enabling-always-on"
+  },
+  {
+    "category": "Hosting",
+    "name": "Enabling Always-on",
+    "heading": "What does Always-on do?",
+    "slug": "/hosting/enabling-always-on#what-does-always-on-do"
+  },
+  {
+    "category": "Hosting",
+    "name": "Enabling Always-on",
+    "heading": "Feedback",
+    "slug": "/hosting/enabling-always-on#feedback"
+  },
+  {
+    "category": "Hosting",
+    "name": "Streaming native graphics using VNC",
+    "heading": null,
+    "slug": "hosting/streaming-native-graphics-vnc"
+  },
+  {
+    "category": "Hosting",
+    "name": "Streaming native graphics using VNC",
+    "heading": "Streaming native graphics using VNC ",
+    "slug": "/hosting/streaming-native-graphics-vnc#streaming-native-graphics-using-vnc"
+  },
+  {
+    "category": "Hosting",
+    "name": "Streaming native graphics using VNC",
+    "heading": "How Can I Use VNC?",
+    "slug": "/hosting/streaming-native-graphics-vnc#how-can-i-use-vnc"
+  },
+  {
+    "category": "Hosting",
+    "name": "Streaming native graphics using VNC",
+    "heading": "Securing Your Repl ",
+    "slug": "/hosting/streaming-native-graphics-vnc#securing-your-repl"
+  },
+  {
+    "category": "Hosting",
+    "name": "Streaming native graphics using VNC",
+    "heading": "How Can I Use Fullscreen VNC?",
+    "slug": "/hosting/streaming-native-graphics-vnc#how-can-i-use-fullscreen-vnc"
+  },
+  {
+    "category": "Hosting",
+    "name": "Streaming native graphics using VNC",
     "heading": "Examples",
-    "slug": "/repls/vnc#examples"
+    "slug": "/hosting/streaming-native-graphics-vnc#examples"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
     "heading": null,
-    "slug": "repls/apps-and-publishing"
+    "slug": "hosting/browsing-publishing-repls"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
-    "heading": "Apps",
-    "slug": "/repls/apps-and-publishing#apps"
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
+    "heading": "Browsing and publishing repls",
+    "slug": "/hosting/browsing-publishing-repls#browsing-and-publishing-repls"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
     "heading": "Publishing guidelines",
-    "slug": "/repls/apps-and-publishing#publishing-guidelines"
+    "slug": "/hosting/browsing-publishing-repls#publishing-guidelines"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
     "heading": "How to publish",
-    "slug": "/repls/apps-and-publishing#how-to-publish"
+    "slug": "/hosting/browsing-publishing-repls#how-to-publish"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
     "heading": "Publish from Workspace",
-    "slug": "/repls/apps-and-publishing#publish-from-workspace"
+    "slug": "/hosting/browsing-publishing-repls#publish-from-workspace"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
     "heading": "Publish from Spotlight",
-    "slug": "/repls/apps-and-publishing#publish-from-spotlight"
+    "slug": "/hosting/browsing-publishing-repls#publish-from-spotlight"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
     "heading": "When you click on either, you'll be able to add a description, cover image, and tags to your repl.",
-    "slug": "/repls/apps-and-publishing#when-you-click-on-either-youll-be-able-to-add-a-description-cover-image-and-tags-to-your-repl"
+    "slug": "/hosting/browsing-publishing-repls#when-you-click-on-either-youll-be-able-to-add-a-description-cover-image-and-tags-to-your-repl"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
     "heading": "Requirements for publishing",
-    "slug": "/repls/apps-and-publishing#requirements-for-publishing"
+    "slug": "/hosting/browsing-publishing-repls#requirements-for-publishing"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
     "heading": "Publishing updates",
-    "slug": "/repls/apps-and-publishing#publishing-updates"
+    "slug": "/hosting/browsing-publishing-repls#publishing-updates"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
     "heading": "Publish update from Workspace",
-    "slug": "/repls/apps-and-publishing#publish-update-from-workspace"
+    "slug": "/hosting/browsing-publishing-repls#publish-update-from-workspace"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
     "heading": "Publish update from Spotlight",
-    "slug": "/repls/apps-and-publishing#publish-update-from-spotlight"
+    "slug": "/hosting/browsing-publishing-repls#publish-update-from-spotlight"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
     "heading": "Unpublishing",
-    "slug": "/repls/apps-and-publishing#unpublishing"
+    "slug": "/hosting/browsing-publishing-repls#unpublishing"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
     "heading": "Unpublishing from Workspace",
-    "slug": "/repls/apps-and-publishing#unpublishing-from-workspace"
+    "slug": "/hosting/browsing-publishing-repls#unpublishing-from-workspace"
   },
   {
-    "category": "Get Started",
-    "name": "Apps and Publishing",
+    "category": "Hosting",
+    "name": "Browsing and publishing repls",
     "heading": "Unpublishing from Spotlight",
-    "slug": "/repls/apps-and-publishing#unpublishing-from-spotlight"
+    "slug": "/hosting/browsing-publishing-repls#unpublishing-from-spotlight"
   },
   {
-    "category": "Get Started",
-    "name": "Strike System",
+    "category": "Hosting",
+    "name": "Strike system FAQ",
     "heading": null,
-    "slug": "repls/strike-system-apps"
+    "slug": "hosting/strike-system-faq"
   },
   {
-    "category": "Get Started",
-    "name": "Strike System",
-    "heading": "FAQ: Strike System on Apps ",
-    "slug": "/repls/strike-system-apps#faq-strike-system-on-apps"
+    "category": "Hosting",
+    "name": "Strike system FAQ",
+    "heading": "Strike system FAQ ",
+    "slug": "/hosting/strike-system-faq#strike-system-faq"
   },
   {
-    "category": "Get Started",
-    "name": "Strike System",
+    "category": "Hosting",
+    "name": "Strike system FAQ",
     "heading": "Q: I got a warning. What is that about? ",
-    "slug": "/repls/strike-system-apps#q-i-got-a-warning-what-is-that-about"
+    "slug": "/hosting/strike-system-faq#q-i-got-a-warning-what-is-that-about"
   },
   {
-    "category": "Get Started",
-    "name": "Strike System",
+    "category": "Hosting",
+    "name": "Strike system FAQ",
     "heading": "Q: How does the strike system work? ",
-    "slug": "/repls/strike-system-apps#q-how-does-the-strike-system-work"
+    "slug": "/hosting/strike-system-faq#q-how-does-the-strike-system-work"
   },
   {
-    "category": "Get Started",
-    "name": "Strike System",
+    "category": "Hosting",
+    "name": "Strike system FAQ",
     "heading": "Q: My repl just got unpublished. Am I allowed to republish? ",
-    "slug": "/repls/strike-system-apps#q-my-repl-just-got-unpublished-am-i-allowed-to-republish"
+    "slug": "/hosting/strike-system-faq#q-my-repl-just-got-unpublished-am-i-allowed-to-republish"
   },
   {
-    "category": "Get Started",
-    "name": "Strike System",
+    "category": "Hosting",
+    "name": "Strike system FAQ",
     "heading": "Q: I think there's been a mistake. Can I talk to someone about this decision?",
-    "slug": "/repls/strike-system-apps#q-i-think-theres-been-a-mistake-can-i-talk-to-someone-about-this-decision"
+    "slug": "/hosting/strike-system-faq#q-i-think-theres-been-a-mistake-can-i-talk-to-someone-about-this-decision"
   },
   {
-    "category": "Get Started",
-    "name": "Strike System",
+    "category": "Hosting",
+    "name": "Strike system FAQ",
     "heading": "Q: I just got banned. What now?",
-    "slug": "/repls/strike-system-apps#q-i-just-got-banned-what-now"
+    "slug": "/hosting/strike-system-faq#q-i-just-got-banned-what-now"
   },
   {
-    "category": "Teams for Education",
-    "name": "Introduction to Teams For Education",
+    "category": "Hosting",
+    "name": "Database FAQ",
     "heading": null,
-    "slug": "Teams/Intro"
+    "slug": "hosting/database-faq"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "Database FAQ",
+    "slug": "/hosting/database-faq#database-faq"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "FAQs",
+    "slug": "/hosting/database-faq#fa-qs"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "Where can I find my database?",
+    "slug": "/hosting/database-faq#where-can-i-find-my-database"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "How can I access my database?",
+    "slug": "/hosting/database-faq#how-can-i-access-my-database"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "How do I use my database?",
+    "slug": "/hosting/database-faq#how-do-i-use-my-database"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "Set",
+    "slug": "/hosting/database-faq#set"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "Get",
+    "slug": "/hosting/database-faq#get"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "Delete",
+    "slug": "/hosting/database-faq#delete"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "List",
+    "slug": "/hosting/database-faq#list"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "What is REPLITDBURL?",
+    "slug": "/hosting/database-faq#what-is-replitdburl"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "What limits does Database have?",
+    "slug": "/hosting/database-faq#what-limits-does-database-have"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "How can I tell how much storage I'm using?",
+    "slug": "/hosting/database-faq#how-can-i-tell-how-much-storage-im-using"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "Is my Database private?",
+    "slug": "/hosting/database-faq#is-my-database-private"
+  },
+  {
+    "category": "Hosting",
+    "name": "Database FAQ",
+    "heading": "How do I share a database across repls?",
+    "slug": "/hosting/database-faq#how-do-i-share-a-database-across-repls"
   },
   {
     "category": "Teams for Education",
-    "name": "Introduction to Teams For Education",
-    "heading": "Teams for Education",
-    "slug": "/Teams/Intro#teams-for-education"
+    "name": "Introduction to Teams for Education",
+    "heading": null,
+    "slug": "teams/intro-teams-education"
   },
   {
     "category": "Teams for Education",
-    "name": "Introduction to Teams For Education",
+    "name": "Introduction to Teams for Education",
+    "heading": "Introduction to Teams for Education",
+    "slug": "/teams/intro-teams-education#introduction-to-teams-for-education"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Introduction to Teams for Education",
     "heading": "More About Teams",
-    "slug": "/Teams/Intro#more-about-teams"
+    "slug": "/teams/intro-teams-education#more-about-teams"
   },
   {
     "category": "Teams for Education",
-    "name": "Introduction to Teams For Education",
+    "name": "Introduction to Teams for Education",
     "heading": "How to Sign Up",
-    "slug": "/Teams/Intro#how-to-sign-up"
+    "slug": "/teams/intro-teams-education#how-to-sign-up"
   },
   {
     "category": "Teams for Education",
-    "name": "Introduction to Teams For Education",
+    "name": "Introduction to Teams for Education",
     "heading": "Inviting Teammates",
-    "slug": "/Teams/Intro#inviting-teammates"
+    "slug": "/teams/intro-teams-education#inviting-teammates"
   },
   {
     "category": "Teams for Education",
-    "name": "Inviting Teachers & Students",
+    "name": "Inviting teachers and students",
     "heading": null,
-    "slug": "Teams/Invitations"
+    "slug": "teams/inviting-teachers-students"
   },
   {
     "category": "Teams for Education",
-    "name": "Inviting Teachers & Students",
-    "heading": "Inviting People to Your Team",
-    "slug": "/Teams/Invitations#inviting-people-to-your-team"
+    "name": "Inviting teachers and students",
+    "heading": "Inviting teachers and students",
+    "slug": "/teams/inviting-teachers-students#inviting-teachers-and-students"
   },
   {
     "category": "Teams for Education",
-    "name": "Inviting Teachers & Students",
+    "name": "Inviting teachers and students",
     "heading": "Invite Anonymous Members to Maintain Privacy",
-    "slug": "/Teams/Invitations#invite-anonymous-members-to-maintain-privacy"
+    "slug": "/teams/inviting-teachers-students#invite-anonymous-members-to-maintain-privacy"
   },
   {
     "category": "Teams for Education",
-    "name": "Assigning Nicknames",
+    "name": "Using multiplayer with anonymous users",
     "heading": null,
-    "slug": "Teams/Nicknames"
+    "slug": "teams/using-multiplayer-anonymous-users"
   },
   {
     "category": "Teams for Education",
-    "name": "Assigning Nicknames",
-    "heading": "Team Nicknames",
-    "slug": "/Teams/Nicknames#team-nicknames"
+    "name": "Using multiplayer with anonymous users",
+    "heading": "Using multiplayer with anonymous users",
+    "slug": "/teams/using-multiplayer-anonymous-users#using-multiplayer-with-anonymous-users"
   },
   {
     "category": "Teams for Education",
-    "name": "Assigning Nicknames",
+    "name": "Assigning nicknames",
+    "heading": null,
+    "slug": "teams/assigning-nicknames"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Assigning nicknames",
+    "heading": "Assigning nicknames",
+    "slug": "/teams/assigning-nicknames#assigning-nicknames"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Assigning nicknames",
     "heading": "Common Uses",
-    "slug": "/Teams/Nicknames#common-uses"
+    "slug": "/teams/assigning-nicknames#common-uses"
   },
   {
     "category": "Teams for Education",
-    "name": "Assigning Nicknames",
+    "name": "Assigning nicknames",
     "heading": "How to use",
-    "slug": "/Teams/Nicknames#how-to-use"
+    "slug": "/teams/assigning-nicknames#how-to-use"
   },
   {
     "category": "Teams for Education",
-    "name": "Assigning Nicknames",
+    "name": "Assigning nicknames",
     "heading": "Where nicknames will appear",
-    "slug": "/Teams/Nicknames#where-nicknames-will-appear"
+    "slug": "/teams/assigning-nicknames#where-nicknames-will-appear"
   },
   {
     "category": "Teams for Education",
-    "name": "User Roles",
+    "name": "Assigning user roles",
     "heading": null,
-    "slug": "Teams/Roles"
+    "slug": "teams/assigning-user-roles"
   },
   {
     "category": "Teams for Education",
-    "name": "User Roles",
-    "heading": "Team Roles",
-    "slug": "/Teams/Roles#team-roles"
+    "name": "Assigning user roles",
+    "heading": "Assigning user roles",
+    "slug": "/teams/assigning-user-roles#assigning-user-roles"
   },
   {
     "category": "Teams for Education",
-    "name": "Project Workflow",
+    "name": "Creating projects and assignments",
     "heading": null,
-    "slug": "Teams/Projects"
+    "slug": "teams/creating-projects-assignments"
   },
   {
     "category": "Teams for Education",
-    "name": "Project Workflow",
-    "heading": "Creating Projects and Assignments",
-    "slug": "/Teams/Projects#creating-projects-and-assignments"
+    "name": "Creating projects and assignments",
+    "heading": "Creating projects and assignments",
+    "slug": "/teams/creating-projects-assignments#creating-projects-and-assignments"
   },
   {
     "category": "Teams for Education",
-    "name": "Project Workflow",
+    "name": "Creating projects and assignments",
     "heading": "Creating Team Projects",
-    "slug": "/Teams/Projects#creating-team-projects"
+    "slug": "/teams/creating-projects-assignments#creating-team-projects"
   },
   {
     "category": "Teams for Education",
-    "name": "Project Workflow",
+    "name": "Creating projects and assignments",
     "heading": "Publishing",
-    "slug": "/Teams/Projects#publishing"
+    "slug": "/teams/creating-projects-assignments#publishing"
   },
   {
     "category": "Teams for Education",
-    "name": "Project Workflow",
+    "name": "Creating projects and assignments",
     "heading": "Submitting Student Work ",
-    "slug": "/Teams/Projects#submitting-student-work"
+    "slug": "/teams/creating-projects-assignments#submitting-student-work"
   },
   {
     "category": "Teams for Education",
-    "name": "Copying Projects to Other Teams",
+    "name": "Copying projects to other teams",
     "heading": null,
-    "slug": "Teams/projectCopying"
+    "slug": "teams/copying-projects-other-teams"
   },
   {
     "category": "Teams for Education",
-    "name": "Copying Projects to Other Teams",
-    "heading": "Copying Projects to Other Teams",
-    "slug": "/Teams/projectCopying#copying-projects-to-other-teams"
+    "name": "Copying projects to other teams",
+    "heading": "Copying projects to other teams",
+    "slug": "/teams/copying-projects-other-teams#copying-projects-to-other-teams"
   },
   {
     "category": "Teams for Education",
-    "name": "Classroom Material",
+    "name": "Keeping notes in repls",
     "heading": null,
-    "slug": "Teams/Notes"
+    "slug": "teams/keeping-notes-repls"
   },
   {
     "category": "Teams for Education",
-    "name": "Classroom Material",
-    "heading": "Keeping Notes in Repls",
-    "slug": "/Teams/Notes#keeping-notes-in-repls"
+    "name": "Keeping notes in repls",
+    "heading": "Keeping notes in repls",
+    "slug": "/teams/keeping-notes-repls#keeping-notes-in-repls"
   },
   {
     "category": "Teams for Education",
-    "name": "Classroom Material",
+    "name": "Keeping notes in repls",
     "heading": "Leaving Instructions",
-    "slug": "/Teams/Notes#leaving-instructions"
+    "slug": "/teams/keeping-notes-repls#leaving-instructions"
   },
   {
     "category": "Teams for Education",
-    "name": "Classroom Material",
+    "name": "Keeping notes in repls",
     "heading": "Classroom Lessons",
-    "slug": "/Teams/Notes#classroom-lessons"
+    "slug": "/teams/keeping-notes-repls#classroom-lessons"
   },
   {
     "category": "Teams for Education",
-    "name": "Example Homework Assignments",
+    "name": "Example homework assignments",
     "heading": null,
-    "slug": "Teams/HomeworkAssignments"
+    "slug": "teams/example-homework-assignments"
   },
   {
     "category": "Teams for Education",
-    "name": "Example Homework Assignments",
-    "heading": "Example Homework Assignments",
-    "slug": "/Teams/HomeworkAssignments#example-homework-assignments"
+    "name": "Example homework assignments",
+    "heading": "Example homework assignments",
+    "slug": "/teams/example-homework-assignments#example-homework-assignments"
   },
   {
     "category": "Teams for Education",
-    "name": "Example Homework Assignments",
+    "name": "Example homework assignments",
     "heading": "Guides and Tutorials",
-    "slug": "/Teams/HomeworkAssignments#guides-and-tutorials"
+    "slug": "/teams/example-homework-assignments#guides-and-tutorials"
   },
   {
     "category": "Teams for Education",
-    "name": "Example Homework Assignments",
+    "name": "Example homework assignments",
     "heading": "Create a Pinboard Project",
-    "slug": "/Teams/HomeworkAssignments#create-a-pinboard-project"
+    "slug": "/teams/example-homework-assignments#create-a-pinboard-project"
   },
   {
     "category": "Teams for Education",
-    "name": "Example Homework Assignments",
+    "name": "Example homework assignments",
     "heading": "How to create a good enrichment coding assignment using Replit",
-    "slug": "/Teams/HomeworkAssignments#how-to-create-a-good-enrichment-coding-assignment-using-replit"
+    "slug": "/teams/example-homework-assignments#how-to-create-a-good-enrichment-coding-assignment-using-replit"
   },
   {
     "category": "Teams for Education",
-    "name": "Example Homework Assignments",
+    "name": "Example homework assignments",
     "heading": "Teach your kid to code",
-    "slug": "/Teams/HomeworkAssignments#teach-your-kid-to-code"
+    "slug": "/teams/example-homework-assignments#teach-your-kid-to-code"
   },
   {
     "category": "Teams for Education",
-    "name": "Example Homework Assignments",
+    "name": "Example homework assignments",
     "heading": "Example Repls",
-    "slug": "/Teams/HomeworkAssignments#example-repls"
+    "slug": "/teams/example-homework-assignments#example-repls"
   },
   {
     "category": "Teams for Education",
-    "name": "Example Homework Assignments",
+    "name": "Example homework assignments",
     "heading": "Harry Potter game with PyGame",
-    "slug": "/Teams/HomeworkAssignments#harry-potter-game-with-py-game"
+    "slug": "/teams/example-homework-assignments#harry-potter-game-with-py-game"
   },
   {
     "category": "Teams for Education",
-    "name": "Example Homework Assignments",
+    "name": "Example homework assignments",
     "heading": "Harry Potter game with Python Play",
-    "slug": "/Teams/HomeworkAssignments#harry-potter-game-with-python-play"
+    "slug": "/teams/example-homework-assignments#harry-potter-game-with-python-play"
   },
   {
     "category": "Teams for Education",
-    "name": "Example Homework Assignments",
+    "name": "Example homework assignments",
     "heading": "Python Shopping List",
-    "slug": "/Teams/HomeworkAssignments#python-shopping-list"
+    "slug": "/teams/example-homework-assignments#python-shopping-list"
   },
   {
     "category": "Teams for Education",
-    "name": "Reviewing Student Work",
+    "name": "Reviewing submissions",
     "heading": null,
-    "slug": "Teams/Annotations"
+    "slug": "teams/reviewing-submissions"
   },
   {
     "category": "Teams for Education",
-    "name": "Reviewing Student Work",
-    "heading": "Reviewing Submissions",
-    "slug": "/Teams/Annotations#reviewing-submissions"
+    "name": "Reviewing submissions",
+    "heading": "Reviewing submissions",
+    "slug": "/teams/reviewing-submissions#reviewing-submissions"
   },
   {
     "category": "Teams for Education",
-    "name": "Reviewing Student Work",
+    "name": "Reviewing submissions",
     "heading": "Leaving Feedback on Projects Using Annotations",
-    "slug": "/Teams/Annotations#leaving-feedback-on-projects-using-annotations"
+    "slug": "/teams/reviewing-submissions#leaving-feedback-on-projects-using-annotations"
   },
   {
     "category": "Teams for Education",
-    "name": "Tests and Autograding",
+    "name": "Testing, assessments, and autograding",
     "heading": null,
-    "slug": "Teams/Testing"
+    "slug": "teams/testing-assessments-autograding"
   },
   {
     "category": "Teams for Education",
-    "name": "Tests and Autograding",
-    "heading": "Testing, Assessments, and Autograding",
-    "slug": "/Teams/Testing#testing-assessments-and-autograding"
+    "name": "Testing, assessments, and autograding",
+    "heading": "Testing, assessments, and autograding",
+    "slug": "/teams/testing-assessments-autograding#testing-assessments-and-autograding"
   },
   {
     "category": "Teams for Education",
-    "name": "Input/Output Testing",
+    "name": "Input/output testing",
     "heading": null,
-    "slug": "Teams/InputOutput"
+    "slug": "teams/input-output-testing"
   },
   {
     "category": "Teams for Education",
-    "name": "Input/Output Testing",
-    "heading": "Input/Output Testing",
-    "slug": "/Teams/InputOutput#input-output-testing"
+    "name": "Input/output testing",
+    "heading": "Input/output testing",
+    "slug": "/teams/input-output-testing#input-output-testing"
   },
   {
     "category": "Teams for Education",
-    "name": "Input/Output Testing",
+    "name": "Input/output testing",
     "heading": "Teams for Education",
-    "slug": "/Teams/InputOutput#teams-for-education"
+    "slug": "/teams/input-output-testing#teams-for-education"
   },
   {
     "category": "Teams for Education",
-    "name": "Input/Output Testing",
+    "name": "Input/output testing",
     "heading": "Creating a Project",
-    "slug": "/Teams/InputOutput#creating-a-project"
+    "slug": "/teams/input-output-testing#creating-a-project"
   },
   {
     "category": "Teams for Education",
-    "name": "Input/Output Testing",
+    "name": "Input/output testing",
     "heading": "Input/Output Tests",
-    "slug": "/Teams/InputOutput#input-output-tests"
+    "slug": "/teams/input-output-testing#input-output-tests"
   },
   {
     "category": "Teams for Education",
-    "name": "Input/Output Testing",
+    "name": "Input/output testing",
     "heading": "Creating a Project with Input/Output Tests",
-    "slug": "/Teams/InputOutput#creating-a-project-with-input-output-tests"
+    "slug": "/teams/input-output-testing#creating-a-project-with-input-output-tests"
   },
   {
     "category": "Teams for Education",
-    "name": "Input/Output Testing",
+    "name": "Input/output testing",
     "heading": "Match Tests",
-    "slug": "/Teams/InputOutput#match-tests"
+    "slug": "/teams/input-output-testing#match-tests"
   },
   {
     "category": "Teams for Education",
-    "name": "Input/Output Testing",
+    "name": "Input/output testing",
     "heading": "Exact Tests ",
-    "slug": "/Teams/InputOutput#exact-tests"
+    "slug": "/teams/input-output-testing#exact-tests"
   },
   {
     "category": "Teams for Education",
-    "name": "Input/Output Testing",
+    "name": "Input/output testing",
     "heading": "Regex Tests",
-    "slug": "/Teams/InputOutput#regex-tests"
+    "slug": "/teams/input-output-testing#regex-tests"
   },
   {
     "category": "Teams for Education",
-    "name": "Embedding Projects",
+    "name": "Unit testing",
     "heading": null,
-    "slug": "Teams/EmbedProjects"
+    "slug": "teams/unit-testing"
   },
   {
     "category": "Teams for Education",
-    "name": "Embedding Projects",
-    "heading": "Embed Projects",
-    "slug": "/Teams/EmbedProjects#embed-projects"
+    "name": "Unit testing",
+    "heading": "Unit testing",
+    "slug": "/teams/unit-testing#unit-testing"
   },
   {
     "category": "Teams for Education",
-    "name": "Privacy FAQs",
+    "name": "Unit testing",
+    "heading": "Supported Languages and Testing Frameworks",
+    "slug": "/teams/unit-testing#supported-languages-and-testing-frameworks"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Why Use Unit Testing?",
+    "slug": "/teams/unit-testing#why-use-unit-testing"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Using the Testing Pane",
+    "slug": "/teams/unit-testing#using-the-testing-pane"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Defining a test function",
+    "slug": "/teams/unit-testing#defining-a-test-function"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Importing libraries",
+    "slug": "/teams/unit-testing#importing-libraries"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Importing modules",
+    "slug": "/teams/unit-testing#importing-modules"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Advanced Setup and Teardown",
+    "slug": "/teams/unit-testing#advanced-setup-and-teardown"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Import",
+    "slug": "/teams/unit-testing#import"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Setup",
+    "slug": "/teams/unit-testing#setup"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Teardown",
+    "slug": "/teams/unit-testing#teardown"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Assertion Documentation",
+    "slug": "/teams/unit-testing#assertion-documentation"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Tips for Writing Good Tests",
+    "slug": "/teams/unit-testing#tips-for-writing-good-tests"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Tips for Writing \"Testable\" Functions",
+    "slug": "/teams/unit-testing#tips-for-writing-testable-functions"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Teams for Education",
+    "slug": "/teams/unit-testing#teams-for-education"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Creating a project",
+    "slug": "/teams/unit-testing#creating-a-project"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Unit testing",
+    "heading": "Example Team projects",
+    "slug": "/teams/unit-testing#example-team-projects"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Embedding projects",
     "heading": null,
-    "slug": "Teams/privacyFAQs"
+    "slug": "teams/embedding-projects"
   },
   {
     "category": "Teams for Education",
-    "name": "Privacy FAQs",
-    "heading": "Privacy FAQs",
-    "slug": "/Teams/privacyFAQs#privacy-fa-qs"
+    "name": "Embedding projects",
+    "heading": "Embedding projects",
+    "slug": "/teams/embedding-projects#embedding-projects"
   },
   {
     "category": "Teams for Education",
-    "name": "IT Admin Toolkit",
+    "name": "Exporting Student Submissions",
     "heading": null,
-    "slug": "Teams/IT_Toolkit"
+    "slug": "teams/exportSubmissions"
   },
   {
     "category": "Teams for Education",
-    "name": "IT Admin Toolkit",
-    "heading": "IT Administrators Toolkit",
-    "slug": "/Teams/IT_Toolkit#it-administrators-toolkit"
+    "name": "Exporting Student Submissions",
+    "heading": "Export Student Submissions",
+    "slug": "/teams/exportSubmissions#export-student-submissions"
   },
   {
     "category": "Teams for Education",
-    "name": "IT Admin Toolkit",
+    "name": "Archiving Teams",
+    "heading": null,
+    "slug": "teams/Archiving"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Archiving Teams",
+    "heading": "Archiving Teams",
+    "slug": "/teams/Archiving#archiving-teams"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Privacy FAQ",
+    "heading": null,
+    "slug": "teams/privacy-faq"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Privacy FAQ",
+    "heading": "Privacy FAQ",
+    "slug": "/teams/privacy-faq#privacy-faq"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "IT administrators toolkit",
+    "heading": null,
+    "slug": "teams/it-administrators-toolkit"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "IT administrators toolkit",
+    "heading": "IT administrators toolkit",
+    "slug": "/teams/it-administrators-toolkit#it-administrators-toolkit"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "IT administrators toolkit",
     "heading": "URLs",
-    "slug": "/Teams/IT_Toolkit#ur-ls"
+    "slug": "/teams/it-administrators-toolkit#ur-ls"
   },
   {
     "category": "Teams for Education",
-    "name": "IT Admin Toolkit",
+    "name": "IT administrators toolkit",
     "heading": "Protocols",
-    "slug": "/Teams/IT_Toolkit#protocols"
+    "slug": "/teams/it-administrators-toolkit#protocols"
   },
   {
     "category": "Teams for Education",
-    "name": "IT Admin Toolkit",
+    "name": "IT administrators toolkit",
     "heading": "Whitelist/Network Security Vendor Guides",
-    "slug": "/Teams/IT_Toolkit#whitelist-network-security-vendor-guides"
+    "slug": "/teams/it-administrators-toolkit#whitelist-network-security-vendor-guides"
   },
   {
     "category": "Teams for Education",
-    "name": "IT Admin Toolkit",
+    "name": "IT administrators toolkit",
     "heading": "Data Retention and Usage",
-    "slug": "/Teams/IT_Toolkit#data-retention-and-usage"
+    "slug": "/teams/it-administrators-toolkit#data-retention-and-usage"
   },
   {
     "category": "Teams Pro (beta)",
     "name": "Introduction to Teams Pro",
     "heading": null,
-    "slug": "pro/intro"
+    "slug": "teams-pro/intro-teams-pro"
   },
   {
     "category": "Teams Pro (beta)",
     "name": "Introduction to Teams Pro",
-    "heading": "Teams Pro",
-    "slug": "/pro/intro#teams-pro"
+    "heading": "Introduction to Teams Pro",
+    "slug": "/teams-pro/intro-teams-pro#introduction-to-teams-pro"
   },
   {
     "category": "Teams Pro (beta)",
     "name": "Introduction to Teams Pro",
     "heading": "1. Build",
-    "slug": "/pro/intro#1-build"
+    "slug": "/teams-pro/intro-teams-pro#1-build"
   },
   {
     "category": "Teams Pro (beta)",
     "name": "Introduction to Teams Pro",
     "heading": "2. Collaborate",
-    "slug": "/pro/intro#2-collaborate"
+    "slug": "/teams-pro/intro-teams-pro#2-collaborate"
   },
   {
     "category": "Teams Pro (beta)",
     "name": "Introduction to Teams Pro",
     "heading": "3. Host",
-    "slug": "/pro/intro#3-host"
+    "slug": "/teams-pro/intro-teams-pro#3-host"
   },
   {
     "category": "Teams Pro (beta)",
     "name": "Introduction to Teams Pro",
     "heading": "4. Fun",
-    "slug": "/pro/intro#4-fun"
+    "slug": "/teams-pro/intro-teams-pro#4-fun"
   },
   {
     "category": "Teams Pro (beta)",
     "name": "Introduction to Teams Pro",
     "heading": "Questions? Need help?",
-    "slug": "/pro/intro#questions-need-help"
+    "slug": "/teams-pro/intro-teams-pro#questions-need-help"
   },
   {
     "category": "Teams Pro (beta)",
-    "name": "Team Management",
+    "name": "Managing teams",
     "heading": null,
-    "slug": "pro/teamManagement"
+    "slug": "teams-pro/managing-teams"
   },
   {
     "category": "Teams Pro (beta)",
-    "name": "Team Management",
-    "heading": "Team Management",
-    "slug": "/pro/teamManagement#team-management"
+    "name": "Managing teams",
+    "heading": "Managing teams",
+    "slug": "/teams-pro/managing-teams#managing-teams"
   },
   {
     "category": "Teams Pro (beta)",
-    "name": "Public and Private Repls",
+    "name": "Managing public and private repls",
     "heading": null,
-    "slug": "pro/replManagement"
+    "slug": "teams-pro/managing-public-private-repls"
   },
   {
     "category": "Teams Pro (beta)",
-    "name": "Public and Private Repls",
-    "heading": "Public and Private Repls",
-    "slug": "/pro/replManagement#public-and-private-repls"
+    "name": "Managing public and private repls",
+    "heading": "Managing public and private repls",
+    "slug": "/teams-pro/managing-public-private-repls#managing-public-and-private-repls"
   },
   {
     "category": "Teams Pro (beta)",
-    "name": "Guest Mode",
+    "name": "Interviewing candidates with guest mode",
     "heading": null,
-    "slug": "pro/guests"
+    "slug": "teams-pro/interviewing-candidates-guest-mode"
   },
   {
     "category": "Teams Pro (beta)",
-    "name": "Guest Mode",
-    "heading": "Interviewing Candidates with Guest Mode",
-    "slug": "/pro/guests#interviewing-candidates-with-guest-mode"
+    "name": "Interviewing candidates with guest mode",
+    "heading": "Interviewing candidates with guest mode",
+    "slug": "/teams-pro/interviewing-candidates-guest-mode#interviewing-candidates-with-guest-mode"
   },
   {
-    "category": "Repl.it Classrooms",
-    "name": "Exporting Classrooms",
+    "category": "Settings",
+    "name": "Changing your username",
     "heading": null,
-    "slug": "classrooms/exports"
+    "slug": "settings/changing-username"
   },
   {
-    "category": "Repl.it Classrooms",
-    "name": "Exporting Classrooms",
-    "heading": "Exporting Classroom Data",
-    "slug": "/classrooms/exports#exporting-classroom-data"
+    "category": "Settings",
+    "name": "Changing your username",
+    "heading": "Changing your username (once!)",
+    "slug": "/settings/changing-username#changing-your-username-once"
   },
   {
-    "category": "Repl.it Classrooms",
-    "name": "Exporting Classrooms",
-    "heading": "Student Exports",
-    "slug": "/classrooms/exports#student-exports"
-  },
-  {
-    "category": "Repl.it Classrooms",
-    "name": "Exporting Classrooms",
-    "heading": "Teacher Exports",
-    "slug": "/classrooms/exports#teacher-exports"
-  },
-  {
-    "category": "Repl.it Classrooms",
-    "name": "Exporting Classrooms",
-    "heading": "Exporting Submission Data",
-    "slug": "/classrooms/exports#exporting-submission-data"
-  },
-  {
-    "category": "Repl.it Classrooms",
-    "name": "Exporting Classrooms",
-    "heading": "Exporting Assignments",
-    "slug": "/classrooms/exports#exporting-assignments"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Using Repl.it for Free",
+    "category": "Settings",
+    "name": "Selecting your favorite languages",
     "heading": null,
-    "slug": "misc/free-features"
+    "slug": "settings/selecting-favorite-languages"
   },
   {
-    "category": "Miscellaneous",
-    "name": "Using Repl.it for Free",
-    "heading": "Using Replit for Free",
-    "slug": "/misc/free-features#using-replit-for-free"
+    "category": "Settings",
+    "name": "Selecting your favorite languages",
+    "heading": "Selecting your favorite languages",
+    "slug": "/settings/selecting-favorite-languages#selecting-your-favorite-languages"
   },
   {
-    "category": "Miscellaneous",
-    "name": "Using Repl.it for Free",
-    "heading": "Repls",
-    "slug": "/misc/free-features#repls"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Using Repl.it for Free",
-    "heading": "Multiplayer",
-    "slug": "/misc/free-features#multiplayer"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Using Repl.it for Free",
-    "heading": "Teams",
-    "slug": "/misc/free-features#teams"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Using Repl.it for Free",
-    "heading": "Compliance",
-    "slug": "/misc/free-features#compliance"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "CLUI Graphical CLI",
-    "heading": null,
-    "slug": "misc/clui"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "CLUI Graphical CLI",
-    "heading": "CLUI, the Graphical CLI",
-    "slug": "/misc/clui#clui-the-graphical-cli"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "CLUI Graphical CLI",
-    "heading": "Accessing CLUI",
-    "slug": "/misc/clui#accessing-clui"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "CLUI Graphical CLI",
-    "heading": "Commands",
-    "slug": "/misc/clui#commands"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "CLUI Graphical CLI",
-    "heading": "Further Reading",
-    "slug": "/misc/clui#further-reading"
-  },
-  {
-    "category": "Miscellaneous",
+    "category": "Legal and security information",
     "name": "Security",
     "heading": null,
-    "slug": "misc/security"
+    "slug": "legal-and-security-info/security"
   },
   {
-    "category": "Miscellaneous",
+    "category": "Legal and security information",
     "name": "Security",
-    "heading": "Replit Security",
-    "slug": "/misc/security#replit-security"
+    "heading": "Security",
+    "slug": "/legal-and-security-info/security#security"
   },
   {
-    "category": "Miscellaneous",
+    "category": "Legal and security information",
     "name": "Security",
     "heading": "Reporting a Vulnerability",
-    "slug": "/misc/security#reporting-a-vulnerability"
+    "slug": "/legal-and-security-info/security#reporting-a-vulnerability"
   },
   {
-    "category": "Miscellaneous",
+    "category": "Legal and security information",
     "name": "Security",
     "heading": "Responsible Disclosure",
-    "slug": "/misc/security#responsible-disclosure"
+    "slug": "/legal-and-security-info/security#responsible-disclosure"
   },
   {
-    "category": "Miscellaneous",
-    "name": "Licensing Info",
+    "category": "Legal and security information",
+    "name": "Licensing info",
     "heading": null,
-    "slug": "misc/licensing"
+    "slug": "legal-and-security-info/licensing-info"
   },
   {
-    "category": "Miscellaneous",
-    "name": "Licensing Info",
-    "heading": "Licensing Information",
-    "slug": "/misc/licensing#licensing-information"
+    "category": "Legal and security information",
+    "name": "Licensing info",
+    "heading": "Licensing information",
+    "slug": "/legal-and-security-info/licensing-info#licensing-information"
   },
   {
-    "category": "Miscellaneous",
-    "name": "Licensing Info",
+    "category": "Legal and security information",
+    "name": "Licensing info",
     "heading": "Public Repls and Teams",
-    "slug": "/misc/licensing#public-repls-and-teams"
+    "slug": "/legal-and-security-info/licensing-info#public-repls-and-teams"
   },
   {
-    "category": "Miscellaneous",
-    "name": "Licensing Info",
+    "category": "Legal and security information",
+    "name": "Licensing info",
     "heading": "Private Repls and Teams",
-    "slug": "/misc/licensing#private-repls-and-teams"
+    "slug": "/legal-and-security-info/licensing-info#private-repls-and-teams"
   },
   {
-    "category": "Miscellaneous",
-    "name": "Copyright Claims",
+    "category": "Legal and security information",
+    "name": "Copyright claims and takedown requests",
     "heading": null,
-    "slug": "misc/copyright"
+    "slug": "legal-and-security-info/copyright-claims-takedown-requests"
+  },
+  {
+    "category": "Legal and security information",
+    "name": "Copyright claims and takedown requests",
+    "heading": "Copyright claims and takedown requests",
+    "slug": "/legal-and-security-info/copyright-claims-takedown-requests#copyright-claims-and-takedown-requests"
   },
   {
     "category": "Miscellaneous",
-    "name": "Copyright Claims",
-    "heading": "Copyright Claims and Takedown Requests",
-    "slug": "/misc/copyright#copyright-claims-and-takedown-requests"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "CLUI, the graphical CLI",
     "heading": null,
-    "slug": "misc/basic"
+    "slug": "misc/clui-graphical-cli"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
-    "heading": "Classic Basic on Replit (in beta)",
-    "slug": "/misc/basic#classic-basic-on-replit-in-beta"
+    "name": "CLUI, the graphical CLI",
+    "heading": "CLUI, the Graphical CLI",
+    "slug": "/misc/clui-graphical-cli#clui-the-graphical-cli"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
-    "heading": "Syntax",
-    "slug": "/misc/basic#syntax"
+    "name": "CLUI, the graphical CLI",
+    "heading": "Accessing CLUI",
+    "slug": "/misc/clui-graphical-cli#accessing-clui"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "CLUI, the graphical CLI",
     "heading": "Commands",
-    "slug": "/misc/basic#commands"
+    "slug": "/misc/clui-graphical-cli#commands"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "CLUI, the graphical CLI",
+    "heading": "Further Reading",
+    "slug": "/misc/clui-graphical-cli#further-reading"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Playing audio on Replit",
+    "heading": null,
+    "slug": "misc/playing-audio-replit"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Playing audio on Replit",
+    "heading": "Playing audio on Replit",
+    "slug": "/misc/playing-audio-replit#playing-audio-on-replit"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Playing audio on Replit",
+    "heading": "System-wide audio",
+    "slug": "/misc/playing-audio-replit#system-wide-audio"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Playing audio on Replit",
+    "heading": "Known limitations",
+    "slug": "/misc/playing-audio-replit#known-limitations"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Playing audio on Replit",
+    "heading": "Audio service",
+    "slug": "/misc/playing-audio-replit#audio-service"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Playing audio on Replit",
+    "heading": "Note that audio is currently only enabled for explorers. Learn to become an explorer here",
+    "slug": "/misc/playing-audio-replit#note-that-audio-is-currently-only-enabled-for-explorers-learn-to-become-an-explorer-here"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Playing audio on Replit",
+    "heading": "Community Contributed Libraries",
+    "slug": "/misc/playing-audio-replit#community-contributed-libraries"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Playing audio on Replit",
+    "heading": "Developing an Audio Library for Replit",
+    "slug": "/misc/playing-audio-replit#developing-an-audio-library-for-replit"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Playing audio on Replit",
+    "heading": "Step 1: Add an audio source",
+    "slug": "/misc/playing-audio-replit#step-1-add-an-audio-source"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Playing audio on Replit",
+    "heading": "Step 2: Get the status of playing audio",
+    "slug": "/misc/playing-audio-replit#step-2-get-the-status-of-playing-audio"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Playing audio on Replit",
+    "heading": "Step 3: Managing current sources",
+    "slug": "/misc/playing-audio-replit#step-3-managing-current-sources"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Classic Basic on Replit",
+    "heading": null,
+    "slug": "misc/classic-basic-replit"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Classic Basic on Replit",
+    "heading": "Classic Basic on Replit (in beta)",
+    "slug": "/misc/classic-basic-replit#classic-basic-on-replit-in-beta"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Classic Basic on Replit",
+    "heading": "Syntax",
+    "slug": "/misc/classic-basic-replit#syntax"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Classic Basic on Replit",
+    "heading": "Commands",
+    "slug": "/misc/classic-basic-replit#commands"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Classic Basic on Replit",
     "heading": "REM",
-    "slug": "/misc/basic#rem"
+    "slug": "/misc/classic-basic-replit#rem"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "PRINT",
-    "slug": "/misc/basic#print"
+    "slug": "/misc/classic-basic-replit#print"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "LET (optional)",
-    "slug": "/misc/basic#let-optional"
+    "slug": "/misc/classic-basic-replit#let-optional"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "ARRAY",
-    "slug": "/misc/basic#array"
+    "slug": "/misc/classic-basic-replit#array"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "INPUT",
-    "slug": "/misc/basic#input"
+    "slug": "/misc/classic-basic-replit#input"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "END",
-    "slug": "/misc/basic#end"
+    "slug": "/misc/classic-basic-replit#end"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "GOTO",
-    "slug": "/misc/basic#goto"
+    "slug": "/misc/classic-basic-replit#goto"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "IF...THEN",
-    "slug": "/misc/basic#if-then"
+    "slug": "/misc/classic-basic-replit#if-then"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "IF...THEN...ELSE ",
-    "slug": "/misc/basic#if-then-else"
+    "slug": "/misc/classic-basic-replit#if-then-else"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "FOR...TO...STEP...NEXT",
-    "slug": "/misc/basic#for-to-step-next"
+    "slug": "/misc/classic-basic-replit#for-to-step-next"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "GOSUB...RETURN",
-    "slug": "/misc/basic#gosub-return"
+    "slug": "/misc/classic-basic-replit#gosub-return"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "PLOT",
-    "slug": "/misc/basic#plot"
+    "slug": "/misc/classic-basic-replit#plot"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "DISPLAY",
-    "slug": "/misc/basic#display"
+    "slug": "/misc/classic-basic-replit#display"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "DRAW",
-    "slug": "/misc/basic#draw"
+    "slug": "/misc/classic-basic-replit#draw"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "TEXT",
-    "slug": "/misc/basic#text"
+    "slug": "/misc/classic-basic-replit#text"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "PAUSE",
-    "slug": "/misc/basic#pause"
+    "slug": "/misc/classic-basic-replit#pause"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "CLS",
-    "slug": "/misc/basic#cls"
+    "slug": "/misc/classic-basic-replit#cls"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "CLT",
-    "slug": "/misc/basic#clt"
+    "slug": "/misc/classic-basic-replit#clt"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "CLC",
-    "slug": "/misc/basic#clc"
+    "slug": "/misc/classic-basic-replit#clc"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "SOUND",
-    "slug": "/misc/basic#sound"
+    "slug": "/misc/classic-basic-replit#sound"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "PLAY",
-    "slug": "/misc/basic#play"
+    "slug": "/misc/classic-basic-replit#play"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "Functions",
-    "slug": "/misc/basic#functions"
+    "slug": "/misc/classic-basic-replit#functions"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "ABS",
-    "slug": "/misc/basic#abs"
+    "slug": "/misc/classic-basic-replit#abs"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "COS",
-    "slug": "/misc/basic#cos"
+    "slug": "/misc/classic-basic-replit#cos"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "SIN",
-    "slug": "/misc/basic#sin"
+    "slug": "/misc/classic-basic-replit#sin"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "TAN",
-    "slug": "/misc/basic#tan"
+    "slug": "/misc/classic-basic-replit#tan"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "ATAN",
-    "slug": "/misc/basic#atan"
+    "slug": "/misc/classic-basic-replit#atan"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "EXP",
-    "slug": "/misc/basic#exp"
+    "slug": "/misc/classic-basic-replit#exp"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "INT",
-    "slug": "/misc/basic#int"
+    "slug": "/misc/classic-basic-replit#int"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "ROUND",
-    "slug": "/misc/basic#round"
+    "slug": "/misc/classic-basic-replit#round"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "LOG",
-    "slug": "/misc/basic#log"
+    "slug": "/misc/classic-basic-replit#log"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "SGN",
-    "slug": "/misc/basic#sgn"
+    "slug": "/misc/classic-basic-replit#sgn"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "SQR",
-    "slug": "/misc/basic#sqr"
+    "slug": "/misc/classic-basic-replit#sqr"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "VAL",
-    "slug": "/misc/basic#val"
+    "slug": "/misc/classic-basic-replit#val"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "RND",
-    "slug": "/misc/basic#rnd"
+    "slug": "/misc/classic-basic-replit#rnd"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "ASC",
-    "slug": "/misc/basic#asc"
+    "slug": "/misc/classic-basic-replit#asc"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "LEFT",
-    "slug": "/misc/basic#left"
+    "slug": "/misc/classic-basic-replit#left"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "MID",
-    "slug": "/misc/basic#mid"
+    "slug": "/misc/classic-basic-replit#mid"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "RIGHT",
-    "slug": "/misc/basic#right"
+    "slug": "/misc/classic-basic-replit#right"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "CHR",
-    "slug": "/misc/basic#chr"
+    "slug": "/misc/classic-basic-replit#chr"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "LEN",
-    "slug": "/misc/basic#len"
+    "slug": "/misc/classic-basic-replit#len"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "SPC",
-    "slug": "/misc/basic#spc"
+    "slug": "/misc/classic-basic-replit#spc"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "UPPERCASE",
-    "slug": "/misc/basic#uppercase"
+    "slug": "/misc/classic-basic-replit#uppercase"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "LOWERCASE",
-    "slug": "/misc/basic#lowercase"
+    "slug": "/misc/classic-basic-replit#lowercase"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "COLOR",
-    "slug": "/misc/basic#color"
+    "slug": "/misc/classic-basic-replit#color"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "GETCHAR",
-    "slug": "/misc/basic#getchar"
+    "slug": "/misc/classic-basic-replit#getchar"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "GETCLICK",
-    "slug": "/misc/basic#getclick"
+    "slug": "/misc/classic-basic-replit#getclick"
   },
   {
     "category": "Miscellaneous",
-    "name": "Basic (Language) Docs",
+    "name": "Classic Basic on Replit",
     "heading": "TIME",
-    "slug": "/misc/basic#time"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Change your username",
-    "heading": null,
-    "slug": "misc/change-username"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Change your username",
-    "heading": "Change Your Username (once!)",
-    "slug": "/misc/change-username#change-your-username-once"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Favorite Languages",
-    "heading": null,
-    "slug": "misc/favorite-languages"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": null,
-    "slug": "misc/General-FAQ"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": "FAQs",
-    "slug": "/misc/General-FAQ#fa-qs"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": "Teachers",
-    "slug": "/misc/General-FAQ#teachers"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": "What is Teams for Education?",
-    "slug": "/misc/General-FAQ#what-is-teams-for-education"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": "Repls",
-    "slug": "/misc/General-FAQ#repls"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": "Why isn't my repl loading?",
-    "slug": "/misc/General-FAQ#why-isnt-my-repl-loading"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": "Why is my repl having display issues?",
-    "slug": "/misc/General-FAQ#why-is-my-repl-having-display-issues"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": "How do I recover a deleted repl?",
-    "slug": "/misc/General-FAQ#how-do-i-recover-a-deleted-repl"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": "How do I fork a private repl?",
-    "slug": "/misc/General-FAQ#how-do-i-fork-a-private-repl"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": "What if I have two repls in different folders and am unable to give them the same name?",
-    "slug": "/misc/General-FAQ#what-if-i-have-two-repls-in-different-folders-and-am-unable-to-give-them-the-same-name"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": "How do I keep my repls to always stay on?",
-    "slug": "/misc/General-FAQ#how-do-i-keep-my-repls-to-always-stay-on"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": "Account",
-    "slug": "/misc/General-FAQ#account"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": "I logged in with Gmail/Github etc., but want to change my email.",
-    "slug": "/misc/General-FAQ#i-logged-in-with-gmail-github-etc-but-want-to-change-my-email"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "General FAQ",
-    "heading": "Can accounts be merged?",
-    "slug": "/misc/General-FAQ#can-accounts-be-merged"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": null,
-    "slug": "misc/database"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "Replit Database",
-    "slug": "/misc/database#replit-database"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "FAQs",
-    "slug": "/misc/database#fa-qs"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "Where can I find my database?",
-    "slug": "/misc/database#where-can-i-find-my-database"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "How can I access my database?",
-    "slug": "/misc/database#how-can-i-access-my-database"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "How do I use my database?",
-    "slug": "/misc/database#how-do-i-use-my-database"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "Set",
-    "slug": "/misc/database#set"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "Get",
-    "slug": "/misc/database#get"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "Delete",
-    "slug": "/misc/database#delete"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "List",
-    "slug": "/misc/database#list"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "What is REPLITDBURL?",
-    "slug": "/misc/database#what-is-replitdburl"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "What limits does Database have?",
-    "slug": "/misc/database#what-limits-does-database-have"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "How can I tell how much storage I'm using?",
-    "slug": "/misc/database#how-can-i-tell-how-much-storage-im-using"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "Is my Database private?",
-    "slug": "/misc/database#is-my-database-private"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Database",
-    "heading": "How do I share a database across repls?",
-    "slug": "/misc/database#how-do-i-share-a-database-across-repls"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Repl Environment Variables",
-    "heading": null,
-    "slug": "misc/repl-environment-variables"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Repl Environment Variables",
-    "heading": "Getting Repl Metadata",
-    "slug": "/misc/repl-environment-variables#getting-repl-metadata"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Repl Environment Variables",
-    "heading": "Output",
-    "slug": "/misc/repl-environment-variables#output"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Repl Environment Variables",
-    "heading": "ritza",
-    "slug": "/misc/repl-environment-variables#ritza"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Repl Environment Variables",
-    "heading": "repl-environment-variables",
-    "slug": "/misc/repl-environment-variables#repl-environment-variables"
+    "slug": "/misc/classic-basic-replit#time"
   },
   {
     "category": "Tutorials",
@@ -2803,43 +2641,43 @@
   },
   {
     "category": "Tutorials",
-    "name": "GitHub and the Run Button",
+    "name": "GitHub and the Run button",
     "heading": null,
     "slug": "tutorials/06-github-and-run-button"
   },
   {
     "category": "Tutorials",
-    "name": "GitHub and the Run Button",
+    "name": "GitHub and the Run button",
     "heading": "Repl.it and GitHub: Using and contributing to open-source projects",
     "slug": "/tutorials/06-github-and-run-button#repl-it-and-git-hub-using-and-contributing-to-open-source-projects"
   },
   {
     "category": "Tutorials",
-    "name": "GitHub and the Run Button",
+    "name": "GitHub and the Run button",
     "heading": "Importing a project from GitHub and running it on Repl.it",
     "slug": "/tutorials/06-github-and-run-button#importing-a-project-from-git-hub-and-running-it-on-repl-it"
   },
   {
     "category": "Tutorials",
-    "name": "GitHub and the Run Button",
+    "name": "GitHub and the Run button",
     "heading": "Looking at the version control panel in Replit",
     "slug": "/tutorials/06-github-and-run-button#looking-at-the-version-control-panel-in-replit"
   },
   {
     "category": "Tutorials",
-    "name": "GitHub and the Run Button",
+    "name": "GitHub and the Run button",
     "heading": "Forking the project to your own GitHub account",
     "slug": "/tutorials/06-github-and-run-button#forking-the-project-to-your-own-git-hub-account"
   },
   {
     "category": "Tutorials",
-    "name": "GitHub and the Run Button",
+    "name": "GitHub and the Run button",
     "heading": "Make it your own",
     "slug": "/tutorials/06-github-and-run-button#make-it-your-own"
   },
   {
     "category": "Tutorials",
-    "name": "GitHub and the Run Button",
+    "name": "GitHub and the Run button",
     "heading": "Where next?",
     "slug": "/tutorials/06-github-and-run-button#where-next"
   },
@@ -3631,115 +3469,115 @@
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": null,
     "slug": "tutorials/16-static-site-generator"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Create a static site generator with Python and Replit",
     "slug": "/tutorials/16-static-site-generator#create-a-static-site-generator-with-python-and-replit"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Building a proof of concept",
     "slug": "/tutorials/16-static-site-generator#building-a-proof-of-concept"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Setting up and defining the flow",
     "slug": "/tutorials/16-static-site-generator#setting-up-and-defining-the-flow"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Parsing content and templates",
     "slug": "/tutorials/16-static-site-generator#parsing-content-and-templates"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Rendering the site",
     "slug": "/tutorials/16-static-site-generator#rendering-the-site"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Blog generator",
     "slug": "/tutorials/16-static-site-generator#blog-generator"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Creating input files",
     "slug": "/tutorials/16-static-site-generator#creating-input-files"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Ingesting input files",
     "slug": "/tutorials/16-static-site-generator#ingesting-input-files"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Ingesting site configuration",
     "slug": "/tutorials/16-static-site-generator#ingesting-site-configuration"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Ingesting posts",
     "slug": "/tutorials/16-static-site-generator#ingesting-posts"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Ingesting templates",
     "slug": "/tutorials/16-static-site-generator#ingesting-templates"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Writing output files",
     "slug": "/tutorials/16-static-site-generator#writing-output-files"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Generic site generator",
     "slug": "/tutorials/16-static-site-generator#generic-site-generator"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Expanding the config file",
     "slug": "/tutorials/16-static-site-generator#expanding-the-config-file"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Ingesting user-defined content",
     "slug": "/tutorials/16-static-site-generator#ingesting-user-defined-content"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Rendering user-defined content",
     "slug": "/tutorials/16-static-site-generator#rendering-user-defined-content"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Adding a new content type",
     "slug": "/tutorials/16-static-site-generator#adding-a-new-content-type"
   },
   {
     "category": "Tutorials",
-    "name": "Static Site Generator",
+    "name": "Static site generator",
     "heading": "Where to next?",
     "slug": "/tutorials/16-static-site-generator#where-to-next"
   },
@@ -3817,73 +3655,73 @@
   },
   {
     "category": "Tutorials",
-    "name": "Telegram Bot",
+    "name": "Telegram bot",
     "heading": null,
     "slug": "tutorials/18-telegram-bot"
   },
   {
     "category": "Tutorials",
-    "name": "Telegram Bot",
+    "name": "Telegram bot",
     "heading": "Quick-start Telegram Bot",
     "slug": "/tutorials/18-telegram-bot#quick-start-telegram-bot"
   },
   {
     "category": "Tutorials",
-    "name": "Telegram Bot",
+    "name": "Telegram bot",
     "heading": "Prerequisites",
     "slug": "/tutorials/18-telegram-bot#prerequisites"
   },
   {
     "category": "Tutorials",
-    "name": "Telegram Bot",
+    "name": "Telegram bot",
     "heading": "Registering a Bot",
     "slug": "/tutorials/18-telegram-bot#registering-a-bot"
   },
   {
     "category": "Tutorials",
-    "name": "Telegram Bot",
+    "name": "Telegram bot",
     "heading": "Making a Bot Interface",
     "slug": "/tutorials/18-telegram-bot#making-a-bot-interface"
   },
   {
     "category": "Tutorials",
-    "name": "Telegram Bot",
+    "name": "Telegram bot",
     "heading": "Creating a barebones bot",
     "slug": "/tutorials/18-telegram-bot#creating-a-barebones-bot"
   },
   {
     "category": "Tutorials",
-    "name": "Telegram Bot",
+    "name": "Telegram bot",
     "heading": "Logging functionality",
     "slug": "/tutorials/18-telegram-bot#logging-functionality"
   },
   {
     "category": "Tutorials",
-    "name": "Telegram Bot",
+    "name": "Telegram bot",
     "heading": "Make a Web UI",
     "slug": "/tutorials/18-telegram-bot#make-a-web-ui"
   },
   {
     "category": "Tutorials",
-    "name": "Telegram Bot",
+    "name": "Telegram bot",
     "heading": "Putting it All Together",
     "slug": "/tutorials/18-telegram-bot#putting-it-all-together"
   },
   {
     "category": "Tutorials",
-    "name": "Telegram Bot",
+    "name": "Telegram bot",
     "heading": "updater.idle()",
     "slug": "/tutorials/18-telegram-bot#updater-idle"
   },
   {
     "category": "Tutorials",
-    "name": "Telegram Bot",
+    "name": "Telegram bot",
     "heading": "Make it Your Own",
     "slug": "/tutorials/18-telegram-bot#make-it-your-own"
   },
   {
     "category": "Tutorials",
-    "name": "Telegram Bot",
+    "name": "Telegram bot",
     "heading": "Where Next?",
     "slug": "/tutorials/18-telegram-bot#where-next"
   },
@@ -3973,541 +3811,673 @@
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Snake game with Kaboom.js",
+    "heading": null,
+    "slug": "tutorials/21-build-snake-with-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with Kaboom.js",
+    "heading": "Building Snake in Kaboom.js",
+    "slug": "/tutorials/21-build-snake-with-kaboom#building-snake-in-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with Kaboom.js",
+    "heading": "Overview and Requirements",
+    "slug": "/tutorials/21-build-snake-with-kaboom#overview-and-requirements"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with Kaboom.js",
+    "heading": "Creating a New Project",
+    "slug": "/tutorials/21-build-snake-with-kaboom#creating-a-new-project"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with Kaboom.js",
+    "heading": "Getting Started with Kaboom.js",
+    "slug": "/tutorials/21-build-snake-with-kaboom#getting-started-with-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with Kaboom.js",
+    "heading": "Creating the Game Map",
+    "slug": "/tutorials/21-build-snake-with-kaboom#creating-the-game-map"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with Kaboom.js",
+    "heading": "Adding the Snake ",
+    "slug": "/tutorials/21-build-snake-with-kaboom#adding-the-snake"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with Kaboom.js",
+    "heading": "Moving the Snake",
+    "slug": "/tutorials/21-build-snake-with-kaboom#moving-the-snake"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with Kaboom.js",
+    "heading": "Adding Snake Food",
+    "slug": "/tutorials/21-build-snake-with-kaboom#adding-snake-food"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with Kaboom.js",
+    "heading": "Detecting Collisions",
+    "slug": "/tutorials/21-build-snake-with-kaboom#detecting-collisions"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with Kaboom.js",
+    "heading": "Improving the Graphics",
+    "slug": "/tutorials/21-build-snake-with-kaboom#improving-the-graphics"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Snake game with Kaboom.js",
+    "heading": "Things to Try",
+    "slug": "/tutorials/21-build-snake-with-kaboom#things-to-try"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Online store checkout with stripe",
     "heading": null,
     "slug": "tutorials/20-online-store-checkout-process"
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Online store checkout with stripe",
     "heading": "Build Your Online Store's Checkout Process with Stripe on Replit",
     "slug": "/tutorials/20-online-store-checkout-process#build-your-online-stores-checkout-process-with-stripe-on-replit"
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Online store checkout with stripe",
     "heading": "Requirements",
     "slug": "/tutorials/20-online-store-checkout-process#requirements"
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Online store checkout with stripe",
     "heading": "Part 1: Start Your Replit Stripe Server",
     "slug": "/tutorials/20-online-store-checkout-process#part-1-start-your-replit-stripe-server"
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Online store checkout with stripe",
     "heading": "A brief explanation:",
     "slug": "/tutorials/20-online-store-checkout-process#a-brief-explanation"
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Online store checkout with stripe",
     "heading": "Part 2: Buying Bricks With a Repl Frontend",
     "slug": "/tutorials/20-online-store-checkout-process#part-2-buying-bricks-with-a-repl-frontend"
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Online store checkout with stripe",
     "heading": "1. Making BrickSite",
     "slug": "/tutorials/20-online-store-checkout-process#1-making-brick-site"
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Online store checkout with stripe",
     "heading": "Part 3: Connecting the Parts",
     "slug": "/tutorials/20-online-store-checkout-process#part-3-connecting-the-parts"
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Online store checkout with stripe",
     "heading": "Back to BrickSite",
     "slug": "/tutorials/20-online-store-checkout-process#back-to-brick-site"
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Online store checkout with stripe",
     "heading": "Let's Get Testing!",
     "slug": "/tutorials/20-online-store-checkout-process#lets-get-testing"
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Online store checkout with stripe",
     "heading": "Debugging",
     "slug": "/tutorials/20-online-store-checkout-process#debugging"
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Online store checkout with stripe",
     "heading": "Buying a Brick",
     "slug": "/tutorials/20-online-store-checkout-process#buying-a-brick"
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Online store checkout with stripe",
     "heading": "Stripe Server",
     "slug": "/tutorials/20-online-store-checkout-process#stripe-server"
   },
   {
     "category": "Tutorials",
-    "name": "Online store checkout with Stripe",
+    "name": "Online store checkout with stripe",
     "heading": "BrickSite",
     "slug": "/tutorials/20-online-store-checkout-process#brick-site"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Stock Market Dashboard",
     "heading": null,
-    "slug": "tutorials/PinboardProjectPart1"
+    "slug": "tutorials/22-personal-stock-market-dashboard"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Stock Market Dashboard",
+    "heading": "How to Build a Personal Stock Market Dashboard",
+    "slug": "/tutorials/22-personal-stock-market-dashboard#how-to-build-a-personal-stock-market-dashboard"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Stock Market Dashboard",
+    "heading": "Creating the Dashboard",
+    "slug": "/tutorials/22-personal-stock-market-dashboard#creating-the-dashboard"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Stock Market Dashboard",
+    "heading": "Accessing the Database and Recording Purchases",
+    "slug": "/tutorials/22-personal-stock-market-dashboard#accessing-the-database-and-recording-purchases"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Stock Market Dashboard",
+    "heading": "Flushing the Database",
+    "slug": "/tutorials/22-personal-stock-market-dashboard#flushing-the-database"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Stock Market Dashboard",
+    "heading": "Serving Our Portfolio Data",
+    "slug": "/tutorials/22-personal-stock-market-dashboard#serving-our-portfolio-data"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Stock Market Dashboard",
+    "heading": "Fetching Current Prices",
+    "slug": "/tutorials/22-personal-stock-market-dashboard#fetching-current-prices"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Stock Market Dashboard",
+    "heading": "Showing Our Portfolio",
+    "slug": "/tutorials/22-personal-stock-market-dashboard#showing-our-portfolio"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Stock Market Dashboard",
+    "heading": "Caching",
+    "slug": "/tutorials/22-personal-stock-market-dashboard#caching"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Stock Market Dashboard",
+    "heading": "Where Next?",
+    "slug": "/tutorials/22-personal-stock-market-dashboard#where-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Pinboard project part 1: HTML & CSS",
+    "heading": null,
+    "slug": "tutorials/pinboard-project-part-1"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Pinboard Project: Part 1",
-    "slug": "/tutorials/PinboardProjectPart1#pinboard-project-part-1"
+    "slug": "/tutorials/pinboard-project-part-1#pinboard-project-part-1"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Creating Your Own Project on Repl.it",
-    "slug": "/tutorials/PinboardProjectPart1#creating-your-own-project-on-repl-it"
+    "slug": "/tutorials/pinboard-project-part-1#creating-your-own-project-on-repl-it"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Basic Structure and Styling",
-    "slug": "/tutorials/PinboardProjectPart1#basic-structure-and-styling"
+    "slug": "/tutorials/pinboard-project-part-1#basic-structure-and-styling"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Markup",
-    "slug": "/tutorials/PinboardProjectPart1#markup"
+    "slug": "/tutorials/pinboard-project-part-1#markup"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Head",
-    "slug": "/tutorials/PinboardProjectPart1#head"
+    "slug": "/tutorials/pinboard-project-part-1#head"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Datalist",
-    "slug": "/tutorials/PinboardProjectPart1#datalist"
+    "slug": "/tutorials/pinboard-project-part-1#datalist"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Header",
-    "slug": "/tutorials/PinboardProjectPart1#header"
+    "slug": "/tutorials/pinboard-project-part-1#header"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Sections",
-    "slug": "/tutorials/PinboardProjectPart1#sections"
+    "slug": "/tutorials/pinboard-project-part-1#sections"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Dialog",
-    "slug": "/tutorials/PinboardProjectPart1#dialog"
+    "slug": "/tutorials/pinboard-project-part-1#dialog"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Styling",
-    "slug": "/tutorials/PinboardProjectPart1#styling"
+    "slug": "/tutorials/pinboard-project-part-1#styling"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Universal selector",
-    "slug": "/tutorials/PinboardProjectPart1#universal-selector"
+    "slug": "/tutorials/pinboard-project-part-1#universal-selector"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Scrolling",
-    "slug": "/tutorials/PinboardProjectPart1#scrolling"
+    "slug": "/tutorials/pinboard-project-part-1#scrolling"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Positioning",
-    "slug": "/tutorials/PinboardProjectPart1#positioning"
+    "slug": "/tutorials/pinboard-project-part-1#positioning"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Pseudo-classes",
-    "slug": "/tutorials/PinboardProjectPart1#pseudo-classes"
+    "slug": "/tutorials/pinboard-project-part-1#pseudo-classes"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Media queries",
-    "slug": "/tutorials/PinboardProjectPart1#media-queries"
+    "slug": "/tutorials/pinboard-project-part-1#media-queries"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Transition",
-    "slug": "/tutorials/PinboardProjectPart1#transition"
+    "slug": "/tutorials/pinboard-project-part-1#transition"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Object-fit",
-    "slug": "/tutorials/PinboardProjectPart1#object-fit"
+    "slug": "/tutorials/pinboard-project-part-1#object-fit"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Fixed overlay",
-    "slug": "/tutorials/PinboardProjectPart1#fixed-overlay"
+    "slug": "/tutorials/pinboard-project-part-1#fixed-overlay"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 1: HTML & CSS",
+    "name": "Pinboard project part 1: HTML & CSS",
     "heading": "Next steps",
-    "slug": "/tutorials/PinboardProjectPart1#next-steps"
+    "slug": "/tutorials/pinboard-project-part-1#next-steps"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": null,
-    "slug": "tutorials/PinboardProjectPart2"
+    "slug": "tutorials/pinboard-project-part-2"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Pinboard Project: Part 2",
-    "slug": "/tutorials/PinboardProjectPart2#pinboard-project-part-2"
+    "slug": "/tutorials/pinboard-project-part-2#pinboard-project-part-2"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Updating HTML and CSS",
-    "slug": "/tutorials/PinboardProjectPart2#updating-html-and-css"
+    "slug": "/tutorials/pinboard-project-part-2#updating-html-and-css"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "JavaScript Code",
-    "slug": "/tutorials/PinboardProjectPart2#java-script-code"
+    "slug": "/tutorials/pinboard-project-part-2#java-script-code"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Handling Data",
-    "slug": "/tutorials/PinboardProjectPart2#handling-data"
+    "slug": "/tutorials/pinboard-project-part-2#handling-data"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Local Storage",
-    "slug": "/tutorials/PinboardProjectPart2#local-storage"
+    "slug": "/tutorials/pinboard-project-part-2#local-storage"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "HTML DOM Nodes",
-    "slug": "/tutorials/PinboardProjectPart2#html-dom-nodes"
+    "slug": "/tutorials/pinboard-project-part-2#html-dom-nodes"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Functions",
-    "slug": "/tutorials/PinboardProjectPart2#functions"
+    "slug": "/tutorials/pinboard-project-part-2#functions"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Updating Displayed HTML",
-    "slug": "/tutorials/PinboardProjectPart2#updating-displayed-html"
+    "slug": "/tutorials/pinboard-project-part-2#updating-displayed-html"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Updating Saved Pins",
-    "slug": "/tutorials/PinboardProjectPart2#updating-saved-pins"
+    "slug": "/tutorials/pinboard-project-part-2#updating-saved-pins"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Filtering Displayed Pins",
-    "slug": "/tutorials/PinboardProjectPart2#filtering-displayed-pins"
+    "slug": "/tutorials/pinboard-project-part-2#filtering-displayed-pins"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Event Specific Functions",
-    "slug": "/tutorials/PinboardProjectPart2#event-specific-functions"
+    "slug": "/tutorials/pinboard-project-part-2#event-specific-functions"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Handling Input Events",
-    "slug": "/tutorials/PinboardProjectPart2#handling-input-events"
+    "slug": "/tutorials/pinboard-project-part-2#handling-input-events"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Handling Click Events",
-    "slug": "/tutorials/PinboardProjectPart2#handling-click-events"
+    "slug": "/tutorials/pinboard-project-part-2#handling-click-events"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Handling Submit Events",
-    "slug": "/tutorials/PinboardProjectPart2#handling-submit-events"
+    "slug": "/tutorials/pinboard-project-part-2#handling-submit-events"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Executing Code",
-    "slug": "/tutorials/PinboardProjectPart2#executing-code"
+    "slug": "/tutorials/pinboard-project-part-2#executing-code"
   },
   {
     "category": "Tutorials",
-    "name": "Pinboard Project Part 2: JavaScript",
+    "name": "Pinboard project part 2: JavaScript",
     "heading": "Where next",
-    "slug": "/tutorials/PinboardProjectPart2#where-next"
+    "slug": "/tutorials/pinboard-project-part-2#where-next"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": null,
     "slug": "tutorials/graphql-project-part-1"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "An Introduction to GraphQL (part 1)",
     "slug": "/tutorials/graphql-project-part-1#an-introduction-to-graph-ql-part-1"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Creating your own project with Replit",
     "slug": "/tutorials/graphql-project-part-1#creating-your-own-project-with-replit"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Our GraphQL Goals For This Guide",
     "slug": "/tutorials/graphql-project-part-1#our-graph-ql-goals-for-this-guide"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "What is GraphQL?",
     "slug": "/tutorials/graphql-project-part-1#what-is-graph-ql"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "GraphQL as an alternative to REST",
     "slug": "/tutorials/graphql-project-part-1#graph-ql-as-an-alternative-to-rest"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "\"Hello World\" in GraphQL",
     "slug": "/tutorials/graphql-project-part-1#hello-world-in-graph-ql"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Using a GraphQL Explorer",
     "slug": "/tutorials/graphql-project-part-1#using-a-graph-ql-explorer"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Creating an API",
     "slug": "/tutorials/graphql-project-part-1#creating-an-api"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "GraphQL as a Service",
     "slug": "/tutorials/graphql-project-part-1#graph-ql-as-a-service"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Adding GraphQL to JavaScript",
     "slug": "/tutorials/graphql-project-part-1#adding-graph-ql-to-java-script"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Custom GraphQL Function",
     "slug": "/tutorials/graphql-project-part-1#custom-graph-ql-function"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Defining an Information Architecture",
     "slug": "/tutorials/graphql-project-part-1#defining-an-information-architecture"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "GraphQL FM Website",
     "slug": "/tutorials/graphql-project-part-1#graph-ql-fm-website"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Episodes Page (Default Landing Page)",
     "slug": "/tutorials/graphql-project-part-1#episodes-page-default-landing-page"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Single Episode Page",
     "slug": "/tutorials/graphql-project-part-1#single-episode-page"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Guests Page",
     "slug": "/tutorials/graphql-project-part-1#guests-page"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Topics Page",
     "slug": "/tutorials/graphql-project-part-1#topics-page"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Resources Page",
     "slug": "/tutorials/graphql-project-part-1#resources-page"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Sponsors Page",
     "slug": "/tutorials/graphql-project-part-1#sponsors-page"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 1: setting up endpoints",
+    "name": "GraphQL part 1: setting up endpoints",
     "heading": "Loading the Data",
     "slug": "/tutorials/graphql-project-part-1#loading-the-data"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": null,
     "slug": "tutorials/graphql-project-part-2"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
-    "heading": "GraphQL Project: Part 2",
+    "name": "GraphQL part 2: creating a web application",
+    "heading": "GraphQL project: part 2",
     "slug": "/tutorials/graphql-project-part-2#graph-ql-project-part-2"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Understanding the App Shell Model",
     "slug": "/tutorials/graphql-project-part-2#understanding-the-app-shell-model"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Adding Some Global Configurations",
     "slug": "/tutorials/graphql-project-part-2#adding-some-global-configurations"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Adding routing",
     "slug": "/tutorials/graphql-project-part-2#adding-routing"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Adding styling",
     "slug": "/tutorials/graphql-project-part-2#adding-styling"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Making our web app responsive",
     "slug": "/tutorials/graphql-project-part-2#making-our-web-app-responsive"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Creating Reusable Blocks",
     "slug": "/tutorials/graphql-project-part-2#creating-reusable-blocks"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Adding a hero image",
     "slug": "/tutorials/graphql-project-part-2#adding-a-hero-image"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Adding a grid of cards",
     "slug": "/tutorials/graphql-project-part-2#adding-a-grid-of-cards"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Adding some details",
     "slug": "/tutorials/graphql-project-part-2#adding-some-details"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Adding a divider to separate sections",
     "slug": "/tutorials/graphql-project-part-2#adding-a-divider-to-separate-sections"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Adding a loader",
     "slug": "/tutorials/graphql-project-part-2#adding-a-loader"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Adding Some Final Touches",
     "slug": "/tutorials/graphql-project-part-2#adding-some-final-touches"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Doing date conversion",
     "slug": "/tutorials/graphql-project-part-2#doing-date-conversion"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Adding reusable block functions",
     "slug": "/tutorials/graphql-project-part-2#adding-reusable-block-functions"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Adding page-level functions",
     "slug": "/tutorials/graphql-project-part-2#adding-page-level-functions"
   },
   {
     "category": "Tutorials",
-    "name": "GraphQL Part 2: creating a web application",
+    "name": "GraphQL part 2: creating a web application",
     "heading": "Where Next?",
     "slug": "/tutorials/graphql-project-part-2#where-next"
   },
@@ -4515,348 +4485,360 @@
     "category": "Tutorials",
     "name": "Spotify API tutorials",
     "heading": null,
-    "slug": "tutorials/spotify-tutorials"
+    "slug": "tutorials/spotify-api-tutorials"
   },
   {
     "category": "Tutorials",
     "name": "Spotify API tutorials",
-    "heading": "Spotify Tutorials",
-    "slug": "/tutorials/spotify-tutorials#spotify-tutorials"
+    "heading": "Spotify API tutorials",
+    "slug": "/tutorials/spotify-api-tutorials#spotify-api-tutorials"
   },
   {
     "category": "Tutorials",
     "name": "Spotify API tutorials",
     "heading": "Spotify API project 1: Simple online mixtape",
-    "slug": "/tutorials/spotify-tutorials#spotify-api-project-1-simple-online-mixtape"
+    "slug": "/tutorials/spotify-api-tutorials#spotify-api-project-1-simple-online-mixtape"
   },
   {
     "category": "Tutorials",
     "name": "Spotify API tutorials",
     "heading": "Spotify API project 2: Song seeder and analytics web app",
-    "slug": "/tutorials/spotify-tutorials#spotify-api-project-2-song-seeder-and-analytics-web-app"
+    "slug": "/tutorials/spotify-api-tutorials#spotify-api-project-2-song-seeder-and-analytics-web-app"
   },
   {
     "category": "Tutorials",
-    "name": "Kaboom Editor",
+    "name": "Kaboom editor",
     "heading": null,
-    "slug": "tutorials/kaboom"
+    "slug": "tutorials/kaboom-editor"
   },
   {
     "category": "Tutorials",
-    "name": "Kaboom Editor",
-    "heading": "Kaboom Editor",
-    "slug": "/tutorials/kaboom#kaboom-editor"
+    "name": "Kaboom editor",
+    "heading": "Kaboom editor",
+    "slug": "/tutorials/kaboom-editor#kaboom-editor"
   },
   {
     "category": "Tutorials",
-    "name": "Kaboom Editor",
+    "name": "Kaboom editor",
     "heading": "Scene Manager",
-    "slug": "/tutorials/kaboom#scene-manager"
+    "slug": "/tutorials/kaboom-editor#scene-manager"
   },
   {
     "category": "Tutorials",
-    "name": "Kaboom Editor",
+    "name": "Kaboom editor",
     "heading": "Sprite Manager & Editor",
-    "slug": "/tutorials/kaboom#sprite-manager-editor"
+    "slug": "/tutorials/kaboom-editor#sprite-manager-editor"
   },
   {
     "category": "Tutorials",
-    "name": "Kaboom Editor",
+    "name": "Kaboom editor",
     "heading": "Sound Manager",
-    "slug": "/tutorials/kaboom#sound-manager"
+    "slug": "/tutorials/kaboom-editor#sound-manager"
   },
   {
     "category": "Tutorials",
-    "name": "Kaboom Editor",
+    "name": "Kaboom editor",
     "heading": "Debug",
-    "slug": "/tutorials/kaboom#debug"
+    "slug": "/tutorials/kaboom-editor#debug"
   },
   {
     "category": "Tutorials",
-    "name": "Kaboom Editor",
+    "name": "Kaboom editor",
     "heading": "Settings",
-    "slug": "/tutorials/kaboom#settings"
+    "slug": "/tutorials/kaboom-editor#settings"
   },
   {
-    "category": "Teaching Curriculum",
-    "name": "How this works",
+    "category": "Tutorials",
+    "name": "Creating interactive Python plots with matplotlib",
     "heading": null,
-    "slug": "curriculum/Intro"
+    "slug": "tutorials/creating-interactive-python-plots-matplotlib"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Creating interactive Python plots with matplotlib",
+    "heading": "Creating interactive Python plots with matplotlib",
+    "slug": "/tutorials/creating-interactive-python-plots-matplotlib#creating-interactive-python-plots-with-matplotlib"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "How this works",
-    "heading": "Free Curriculum For Educators",
-    "slug": "/curriculum/Intro#free-curriculum-for-educators"
+    "name": "Introduction to Teaching Curriculum",
+    "heading": null,
+    "slug": "teaching-curriculum/intro-teaching-curriculum"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "How this works",
+    "name": "Introduction to Teaching Curriculum",
+    "heading": "Free Curricula for Educators",
+    "slug": "/teaching-curriculum/intro-teaching-curriculum#free-curricula-for-educators"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Introduction to Teaching Curriculum",
     "heading": "Curricula",
-    "slug": "/curriculum/Intro#curricula"
+    "slug": "/teaching-curriculum/intro-teaching-curriculum#curricula"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "How this works",
+    "name": "Introduction to Teaching Curriculum",
     "heading": "Why are we doing this?",
-    "slug": "/curriculum/Intro#why-are-we-doing-this"
+    "slug": "/teaching-curriculum/intro-teaching-curriculum#why-are-we-doing-this"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "How this works",
-    "heading": "How does this work?",
-    "slug": "/curriculum/Intro#how-does-this-work"
+    "name": "Introduction to Teaching Curriculum",
+    "heading": "Get Started",
+    "slug": "/teaching-curriculum/intro-teaching-curriculum#get-started"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "How this works",
+    "name": "Introduction to Teaching Curriculum",
+    "heading": "Curricula",
+    "slug": "/teaching-curriculum/intro-teaching-curriculum#curricula"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Introduction to Teaching Curriculum",
     "heading": "Additional Resources",
-    "slug": "/curriculum/Intro#additional-resources"
+    "slug": "/teaching-curriculum/intro-teaching-curriculum#additional-resources"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to Java Teaching Curriculum",
+    "name": "Introduction to Teaching Curriculum",
+    "heading": "Get in Touch ",
+    "slug": "/teaching-curriculum/intro-teaching-curriculum#get-in-touch"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intro to C++",
     "heading": null,
-    "slug": "curriculum/introJava"
+    "slug": "teaching-curriculum/intro-cpp"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to Java Teaching Curriculum",
-    "heading": "Intro Java Curriculum",
-    "slug": "/curriculum/introJava#intro-java-curriculum"
+    "name": "Intro to C++",
+    "heading": "Intro C++ curriculum",
+    "slug": "/teaching-curriculum/intro-cpp#intro-c-curriculum"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to Java Teaching Curriculum",
-    "heading": "Overview of Course",
-    "slug": "/curriculum/introJava#overview-of-course"
+    "name": "Intro to C++",
+    "heading": "The Full Curriculum",
+    "slug": "/teaching-curriculum/intro-cpp#the-full-curriculum"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to Java Teaching Curriculum",
+    "name": "Intro to C++",
+    "heading": "Our Awesome Creator",
+    "slug": "/teaching-curriculum/intro-cpp#our-awesome-creator"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intro to HTML/CSS",
+    "heading": null,
+    "slug": "teaching-curriculum/intro-html-css"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intro to HTML/CSS",
+    "heading": "Intro HTML and CSS curriculum",
+    "slug": "/teaching-curriculum/intro-html-css#intro-html-and-css-curriculum"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intro to HTML/CSS",
+    "heading": "The Full Curriculum",
+    "slug": "/teaching-curriculum/intro-html-css#the-full-curriculum"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intro to HTML/CSS",
+    "heading": "More Resources",
+    "slug": "/teaching-curriculum/intro-html-css#more-resources"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intro to HTML/CSS",
+    "heading": "Our Awesome Creator",
+    "slug": "/teaching-curriculum/intro-html-css#our-awesome-creator"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intro to Java",
+    "heading": null,
+    "slug": "teaching-curriculum/intro-java"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intro to Java",
+    "heading": "Intro Java curriculum",
+    "slug": "/teaching-curriculum/intro-java#intro-java-curriculum"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intro to Java",
+    "heading": "The Full Curriculum",
+    "slug": "/teaching-curriculum/intro-java#the-full-curriculum"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intro to Java",
     "heading": "Unit 1",
-    "slug": "/curriculum/introJava#unit-1"
+    "slug": "/teaching-curriculum/intro-java#unit-1"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to Java Teaching Curriculum",
+    "name": "Intro to Java",
     "heading": "Unit 2",
-    "slug": "/curriculum/introJava#unit-2"
+    "slug": "/teaching-curriculum/intro-java#unit-2"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to Java Teaching Curriculum",
+    "name": "Intro to Java",
     "heading": "Unit 3",
-    "slug": "/curriculum/introJava#unit-3"
+    "slug": "/teaching-curriculum/intro-java#unit-3"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to Java Teaching Curriculum",
+    "name": "Intro to Java",
     "heading": "Our Awesome Creator",
-    "slug": "/curriculum/introJava#our-awesome-creator"
+    "slug": "/teaching-curriculum/intro-java#our-awesome-creator"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to Python Teaching Curriculum",
+    "name": "Intro to Python",
     "heading": null,
-    "slug": "curriculum/introPython"
+    "slug": "teaching-curriculum/intro-python"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to Python Teaching Curriculum",
-    "heading": "Intro Python Curriculum",
-    "slug": "/curriculum/introPython#intro-python-curriculum"
+    "name": "Intro to Python",
+    "heading": "Intro Python curriculum",
+    "slug": "/teaching-curriculum/intro-python#intro-python-curriculum"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to Python Teaching Curriculum",
-    "heading": "Overview of Course",
-    "slug": "/curriculum/introPython#overview-of-course"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to Python Teaching Curriculum",
+    "name": "Intro to Python",
     "heading": "The Full Curriculum",
-    "slug": "/curriculum/introPython#the-full-curriculum"
+    "slug": "/teaching-curriculum/intro-python#the-full-curriculum"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to Python Teaching Curriculum",
+    "name": "Intro to Python",
     "heading": "Testimonials",
-    "slug": "/curriculum/introPython#testimonials"
+    "slug": "/teaching-curriculum/intro-python#testimonials"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to Python Teaching Curriculum",
+    "name": "Intro to Python",
     "heading": "Our Awesome Creator",
-    "slug": "/curriculum/introPython#our-awesome-creator"
+    "slug": "/teaching-curriculum/intro-python#our-awesome-creator"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intermediate Python Teaching Curriculum",
+    "name": "Intro to SQL",
     "heading": null,
-    "slug": "curriculum/intermediatePython"
+    "slug": "teaching-curriculum/intro-sql"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intermediate Python Teaching Curriculum",
-    "heading": "Intermediate Python Curriculum",
-    "slug": "/curriculum/intermediatePython#intermediate-python-curriculum"
+    "name": "Intro to SQL",
+    "heading": "Intro to SQL curriculum",
+    "slug": "/teaching-curriculum/intro-sql#intro-to-sql-curriculum"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intermediate Python Teaching Curriculum",
+    "name": "Intro to SQL",
+    "heading": "The Full Curriculum",
+    "slug": "/teaching-curriculum/intro-sql#the-full-curriculum"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intro to SQL",
+    "heading": "More Resources",
+    "slug": "/teaching-curriculum/intro-sql#more-resources"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intro to SQL",
+    "heading": "Our Awesome Creator",
+    "slug": "/teaching-curriculum/intro-sql#our-awesome-creator"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intermediate Python",
+    "heading": null,
+    "slug": "teaching-curriculum/intermediate-python"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intermediate Python",
+    "heading": "Intermediate Python curriculum",
+    "slug": "/teaching-curriculum/intermediate-python#intermediate-python-curriculum"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intermediate Python",
     "heading": "How To Use This Course",
-    "slug": "/curriculum/intermediatePython#how-to-use-this-course"
+    "slug": "/teaching-curriculum/intermediate-python#how-to-use-this-course"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intermediate Python Teaching Curriculum",
-    "heading": "Resources For This Course",
-    "slug": "/curriculum/intermediatePython#resources-for-this-course"
+    "name": "Intermediate Python",
+    "heading": "The Full Curriculum",
+    "slug": "/teaching-curriculum/intermediate-python#the-full-curriculum"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intermediate Python Teaching Curriculum",
+    "name": "Intermediate Python",
+    "heading": "Intro Video",
+    "slug": "/teaching-curriculum/intermediate-python#intro-video"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intermediate Python",
+    "heading": "Materials",
+    "slug": "/teaching-curriculum/intermediate-python#materials"
+  },
+  {
+    "category": "Teaching Curriculum",
+    "name": "Intermediate Python",
     "heading": "Pedagogy",
-    "slug": "/curriculum/intermediatePython#pedagogy"
+    "slug": "/teaching-curriculum/intermediate-python#pedagogy"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intermediate Python Teaching Curriculum",
+    "name": "Intermediate Python",
     "heading": "Our Awesome Creator",
-    "slug": "/curriculum/intermediatePython#our-awesome-creator"
+    "slug": "/teaching-curriculum/intermediate-python#our-awesome-creator"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to HTML/CSS Teaching Curriculum",
+    "name": "Abstract data types",
     "heading": null,
-    "slug": "curriculum/introHTMLCSS"
+    "slug": "teaching-curriculum/abstract-data-types"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to HTML/CSS Teaching Curriculum",
-    "heading": "Intro HTML and CSS Curriculum",
-    "slug": "/curriculum/introHTMLCSS#intro-html-and-css-curriculum"
+    "name": "Abstract data types",
+    "heading": "Abstract Data Types curriculum",
+    "slug": "/teaching-curriculum/abstract-data-types#abstract-data-types-curriculum"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to HTML/CSS Teaching Curriculum",
-    "heading": "Overview of Course",
-    "slug": "/curriculum/introHTMLCSS#overview-of-course"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to HTML/CSS Teaching Curriculum",
-    "heading": "The Full Curriculum",
-    "slug": "/curriculum/introHTMLCSS#the-full-curriculum"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to HTML/CSS Teaching Curriculum",
-    "heading": "More Resources",
-    "slug": "/curriculum/introHTMLCSS#more-resources"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to HTML/CSS Teaching Curriculum",
-    "heading": "Our Awesome Creator",
-    "slug": "/curriculum/introHTMLCSS#our-awesome-creator"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to SQL Teaching Curriculum",
-    "heading": null,
-    "slug": "curriculum/introSQL"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to SQL Teaching Curriculum",
-    "heading": "Intro SQL Curriculum",
-    "slug": "/curriculum/introSQL#intro-sql-curriculum"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to SQL Teaching Curriculum",
-    "heading": "Overview of Course",
-    "slug": "/curriculum/introSQL#overview-of-course"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to SQL Teaching Curriculum",
-    "heading": "The Full Curriculum",
-    "slug": "/curriculum/introSQL#the-full-curriculum"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to SQL Teaching Curriculum",
-    "heading": "More Resources",
-    "slug": "/curriculum/introSQL#more-resources"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to SQL Teaching Curriculum",
-    "heading": "Our Awesome Creator",
-    "slug": "/curriculum/introSQL#our-awesome-creator"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Abstract Data Types Curriculum",
-    "heading": null,
-    "slug": "curriculum/abstractData"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Abstract Data Types Curriculum",
-    "heading": "Abstract Data Types Curriculum",
-    "slug": "/curriculum/abstractData#abstract-data-types-curriculum"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Abstract Data Types Curriculum",
+    "name": "Abstract data types",
     "heading": "Course Overview",
-    "slug": "/curriculum/abstractData#course-overview"
+    "slug": "/teaching-curriculum/abstract-data-types#course-overview"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Abstract Data Types Curriculum",
-    "heading": "The Curriculum",
-    "slug": "/curriculum/abstractData#the-curriculum"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Abstract Data Types Curriculum",
-    "heading": "About",
-    "slug": "/curriculum/abstractData#about"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to C++",
-    "heading": null,
-    "slug": "curriculum/introCpp"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to C++",
-    "heading": "Intro C++ Curriculum",
-    "slug": "/curriculum/introCpp#intro-c-curriculum"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to C++",
-    "heading": "Overview of Course",
-    "slug": "/curriculum/introCpp#overview-of-course"
-  },
-  {
-    "category": "Teaching Curriculum",
-    "name": "Intro to C++",
+    "name": "Abstract data types",
     "heading": "The Full Curriculum",
-    "slug": "/curriculum/introCpp#the-full-curriculum"
+    "slug": "/teaching-curriculum/abstract-data-types#the-full-curriculum"
   },
   {
     "category": "Teaching Curriculum",
-    "name": "Intro to C++",
+    "name": "Abstract data types",
     "heading": "Our Awesome Creator",
-    "slug": "/curriculum/introCpp#our-awesome-creator"
+    "slug": "/teaching-curriculum/abstract-data-types#our-awesome-creator"
   }
 ]

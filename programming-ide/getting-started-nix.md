@@ -1,4 +1,4 @@
-# Getting started with Nix
+# Nix: Getting started with Nix
 
 > Warning: Nix support on Replit is still under heavy development and is subject to change.
 
