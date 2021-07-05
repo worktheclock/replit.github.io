@@ -6,13 +6,15 @@ Repls that are written in the following languages can use a built-in, multiplaye
 * Java
 * JavaScript (Node.js)
 * Python
-* With more coming soon (through [nix](/programming-ide/getting-started-nix)).
+* With more coming soon (through [Nix](/programming-ide/getting-started-nix)).
 
 To get started with the debugger, click on the Debugger icon on the sidebar:
 
-![Debugger panel](https://docs.replit.com/images/programming-ide/debugging/debugger_panel.png)
+![Debugger panel](/images/programming-ide/debugging/debugger_panel.png)
 
-Now you can start adding [breakpoints](https://en.wikipedia.org/wiki/Breakpoint) to your repl: breakpoints are lines of the code where the program will be paused during execution while debugging. Breakpoints don't affect the program when run normally. When the program is paused, the Debugger sidebar will show the values of all variables, avoiding the need for adding print / log statements.
+Now you can start adding [breakpoints](https://en.wikipedia.org/wiki/Breakpoint) to your repl. Breakpoints are lines of the code where the program will be paused during execution while debugging. Breakpoints don't affect the program when run normally. When the program is paused, the Debugger sidebar will show the values of all variables, avoiding the need for adding print / log statements.
+
+You can add breakpoints by clicking to the left of any line number.
 
 When the program is paused, the other buttons will be enabled:
 
@@ -22,13 +24,13 @@ When the program is paused, the other buttons will be enabled:
 
 # Multiplayer features
 
-When debugging a program in a repl, all participants will see all the actions that any other participant does. This means that the debugging experience will be shared by all the participants in a repl. This includes:
+When debugging a program in a repl, all participants will see all the actions of every other participant. This means that the debugging experience will be shared by all the participants in a repl. This includes:
 
 * The breakpoints.
 * The place / time where the program is paused.
 * The contents of the variables.
 * The output of the console.
 
-# Adding support for other languages through nix
+# Adding support for other languages through Nix
 
 Coming soon!
