@@ -1,15 +1,16 @@
 # **Introduction to Teaching Curriculum**
 
 ## Curricula
-- [Intro to C++](https://docs.repl.it/teaching-curriculum/intro-cpp)
-- [Intro to HTML/CSS](https://docs.repl.it/curriculum/intro-html-css)
-- [Intro to Java](https://docs.repl.it/curriculum/intro-java)
-- [Intro to Python](https://docs.repl.it/curriculum/intro-python)
-- [Intro to SQL](https://docs.repl.it/curriculum/intro-sql)
-- [Intermediate Python](https://docs.repl.it/curriculum/intermediate-python)
-- [Abstract Data Types](https://docs.repl.it/curriculum/abstract-data-types)
 
-- More to come! 
+- [Intro to C++](https://docs.repl.it/teaching-curriculum/intro-cpp)
+- [Intro to HTML/CSS](https://docs.repl.it/teaching-curriculum/intro-html-css)
+- [Intro to Java](https://docs.repl.it/teaching-curriculum/intro-java)
+- [Intro to Python](https://docs.repl.it/teaching-curriculum/intro-python)
+- [Intro to SQL](https://docs.repl.it/teaching-curriculum/intro-sql)
+- [Intermediate Python](https://docs.repl.it/teaching-curriculum/intermediate-python)
+- [Abstract Data Types](https://docs.repl.it/teaching-curriculum/abstract-data-types)
+
+- More to come!
 
 *Email us at contact@repl.it if you'd like to write curriculum for us. We have some budget available.*
 
