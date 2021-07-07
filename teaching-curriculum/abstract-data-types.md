@@ -1,4 +1,4 @@
-# Abstract Data Types curriculum
+# Abstract data types curriculum
 
 ## Course Overview
 

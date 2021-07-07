@@ -2,12 +2,14 @@
 
 Kaboom.js is a game programming library that makes it fun and easy to build games! 
 
-This doc explains the tools provided by the kaboom editor on Replit. To learn the kaboom library, check out the docs, guides and examples on the [kaboom website](https://kaboomjs.com/).
+this doc is mainly explaining the tools provided by the kaboom editor on replit, to learn the kaboom library, it's recommended to check out the docs, guides and examples on the kaboom website:
+
+https://kaboomjs.com/
 
 
 ## Scene Manager
 
-In plain kaboom.js, you would write each scene's content inside each scene block:
+in plain kaboom.js, you would write each scene's content inside each scene block:
 
 ```js
 scene("start", () => {
@@ -21,54 +23,54 @@ scene("game", () => {
 });
 ```
 
-In the Replit kaboom editor, scenes are treated as files and there's no need to wrap everything in a scene block.
+in replit kaboom editor, scenes are treated as files and you don't have to wrap everything in a scene block
 
 ![scene](/images/tutorials/kaboom/scene.png)
 
-Each scene will receive a `args` argument which contains the argument that you pass from, e.g. `go("win", { score: 18, })`.
+each scene will receive a `args` argument which contains the argument that you pass from e.g. `go("win", { score: 18, })`
 
 ## Sprite Manager & Editor
 
-The editor will take care of `loadSprite()` calls, so you can directly use these with the `sprite('name')` component.
+a nice list of sprites 
 
-There're two ways to add sprites right now:
+the editor will take care of `loadSprite()` calls, so you can directly use these with the `sprite('name')` component!
 
-1. Drag to upload your own files.
+There're 2 ways to add sprites right now:
+
+1. drag to upload your own files
 
 ![drag](/images/tutorials/kaboom/drag.png)
 
-2. Click '+' to create a sprite with the sprite editor.
+2. click '+' to create a sprite with the sprite editor!
 
 ![addsprite](/images/tutorials/kaboom/addsprite.png)
 
-The edited sprites will be saved automatically, and can be directly used from the game.
+the sprites edited will be automatically saved, and can be directly used from the game!
 
 ![pedit](/images/tutorials/kaboom/pedit2.png)
 ![workspace](/images/tutorials/kaboom/workspace.png)
 
-(Right now, the sprite editor is not optimized for big sized sprites.)
+(right now the sprite editor is not optimized for big sized sprites)
 
 ## Sound Manager
 
-Sound manager is currently just a place similar to sprite manager that lists your sounds. You can drag your sound files here and don't have to call `loadSound`. A built-in sound/music editor is in the works. 
+right now it's just a place like sprite manager that lists your sounds, you can drag your sound files here and don't have to call `loadSound`, a built-in sound / music editor will come in the future!
 
 ## Debug
 
-The debug menu contains some handy tools to help you inspect game states.
+the debug menu contains some handy helper tools to help you inspect game states
 
 ![debug](/images/tutorials/kaboom/debug.png)
 
 
 ## Settings
 
-The settings menu contains some game-related configs, including:
+the settings menu contains some game related configs, including
 
-- Size of the game canvas.
-- If fullscreen or not (ignores the size setting).
-- Pixel scale (try scale it up if you're making pixelated games).
-- Starting scene.
-- Library version. 
-
-New kaboom repls defaults to the latest version. If a newer version comes out after you created the repl, you need to manually select it, unless you're on `dev` version, in which case you'll always be on the latest version and breaking change is possible.
+- size of the game canvas
+- if fullscreen or not (ignores the size setting)
+- pixel scale (try scale it up if you're making pixelated games)
+- starting scene
+- library version (new kaboom repls defaults to the latest version, if newer version comes out after you created the repl, you need to manually select it, unless you're on `dev` version, in that case you'll always be on the latest version and breaking change is possible)
 
 ![settings](/images/tutorials/kaboom/settings.png)
