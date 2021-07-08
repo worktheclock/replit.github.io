@@ -31,7 +31,7 @@ const render = async (res, category, slug) => {
 	res.locals.active = category + '/' + slug;
 
 	const cobj = t.find(c => c.slug === category);
-	const dobj = cobj.contents.find(d => d.slug === slug)
+	const dobj = cobj? cobj.contents.find(d => d.slug === slug) : {"name": slug}
 
   if (category === 'repls' && slug === 'intro') {
     // landing page gets a short title for search engine visibility
