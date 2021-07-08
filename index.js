@@ -220,6 +220,9 @@ app.get('/Teams/privacyFAQs', async (req, res) => {
 app.get('/Teams/IT_Toolkit', async (req, res) => {
     res.redirect(301, '/teams/it-administrators-toolkit');
 });
+app.get('/Teams/US_Student_DPA', async (req, res) => {
+    res.redirect(301, '/teams/us-student-dpa');
+});
 app.get('/pro/intro', async (req, res) => {
     res.redirect(301, '/teams-pro/intro-teams-pro');
 });
