@@ -68,11 +68,7 @@ Once the test is created, it'll be listed under "Input/Output Tests" and you can
 
 We now have a complete project for students to work on. Let's publish the project and look at the testing from the student's perspective.
 
-![Image showing the publishing button](/images/teamsForEducation/input-output-tests/publish-unpublished.png)
-
-Slide the unpublished slider to the right and assign groups or individuals – those students to be notified of the new project. Students can be assigned the project separately or in groups, for example classes or group projects. They will be able to work together if they are in the same group.
-
-![Image showing publish slider](/images/teamsForEducation/input-output-tests/published-slider.png)
+![Image showing the publishing button](/images/teamsForEducation/input-output-tests/publish-unpublished.gif)
 
 Once published, the students will get a notification that a new project has been published. Clicking on the notification opens the team's projects page where they can find the new project. They will click on "Start project" to open it.
 
@@ -80,7 +76,7 @@ Once published, the students will get a notification that a new project has been
 
 The student will be greeted with the project instructions `README.md file` added earlier. 
 
-The `main.py` file has the skeleton code we added and they can start working from there. 
+The `main.py` file has the skeleton code we added, and they can start working from there. 
 
 Let's open the input/output tests and run the String-Formatting test as a student. It will fail now, because we haven't added any code.
 
@@ -112,15 +108,15 @@ We have already created the skeleton code and README.md file, so now we'll creat
 
 Above, we create an exact test that will check for exactly the areas specified within the expected output. Follow the below steps to create an exact test.
 
-1. Open the "Input/Output Tests" pain.
+1. Open the "Input/Output Tests" pane.
 2. Click on "+ Create test".
 3. Name the test.
 4. Add the exact expected output.
 5. Choose "exact" as the test type and click the save button.
 
-You can now publish the project and assign students or groups to it. Students will get a notification that the project is published.
+You can now publish the project. Students will get a notification that the project is published.
 
-From the students' perspective, they'll have the skeleton code and the README.md file with instructions to complete the project.
+From the students' perspective, they'll have the skeleton code, and the README.md file with instructions to complete the project.
 
 If they run the test, it will fail because we haven't added any code to the skeleton yet. Students can check the expected output by checking the test results.
 
@@ -130,7 +126,7 @@ Below we have code that uses the incorrect representation of `pi` and because we
 
 ![Image showing incorrect pi test fail](/images/teamsForEducation/input-output-tests/exact-failed-pi-results.png)
 
-Then, when we import the math module and use `math.pi`, we get the correct answer that matches exactly with the expected output, so our test passes and it is safe for the student to submit their code.
+Then, when we import the math module and use `math.pi`, we get the correct answer that matches exactly with the expected output, so our test passes, and it is safe for the student to submit their code.
 
 ![Image showing exact test passing ](/images/teamsForEducation/input-output-tests/exact-test-pass.png)
 
@@ -156,7 +152,7 @@ For the test, we'll set up a regex test to check that the student's email addres
 
 To create the test seen above:
 
-1. Open the "Input/Output Tests" window.
+1. Open the "Input/Output Tests" pane.
 2. Create a new test.
 3. Give the test a name.
 4. Add the regex expression to the "Expected output".
@@ -166,6 +162,6 @@ When we add the code to compile the email address and run the test, we get the f
 
 ![Image showing regex passed results](/images/teamsForEducation/input-output-tests/regex-pass-results.png)
 
-If you don't want to be lenient of an extra newline and prefer to have a truly exact match with the expected output and actual output, you can use the `regex` with a `^` at the start and `$` at the end. Keep in mind though, that you'll have to escape other regex characters.
+If you don't want to be lenient of an extra newline and prefer to have a truly exact match with the expected output and actual output, you can use the `regex` with a `^` at the start and `$` at the end. Keep in mind though, that you'll have to escape the other regex characters.
 
-Tests cases can be added, edited, and deleted at any time – even after the project has been published. This added flexibility allows you to get started with testing right away. 
+Test cases can be added, edited, and deleted at any time – even after the project has been published. This added flexibility allows you to get started with testing right away. 
