@@ -11,7 +11,7 @@ The best way to get started with Nix on Replit is to fork one of the existing te
 
 Once you have forked one of the templates, there are 2 config files that you can use to customize the environment:
 
-* `replit.nix` - Configures the nix environment
+* `replit.nix` - Configures the Nix environment
 
 This file should look something like the example below. The `deps` array specifies which Nix packages you would like to be available in your environment. You can search for Nix packages here: https://search.nixos.org/packages
 
@@ -32,9 +32,9 @@ The run command in this file should look something like this. You can use any bi
 run = "cowsay Welcome to nix on Replit!"
 ```
 
-Once both those files are configured and you add files for your language, you can run you repl like normal, with the run button.
+Once both those files are configured and you add files for your language, you can run your repl with the run button.
 
-Both the Console and Shell will pick up changes made to your `replit.nix` file. However, once you open the Shell tab, the environment will not update until you run `exit`. This will close out the existing `shell` process and start a new one that includes any changes that you made to your `replit.nix` file.
+Both the console and shell will pick up changes made to your `replit.nix` file. However, once you open the shell tab, the environment will not update until you run `exit`. This will close out the existing `shell` process and start a new one that includes any changes that you made to your `replit.nix` file.
 
 ## Learn More About Nix
 
@@ -43,4 +43,4 @@ If you'd like to learn more about Nix, here are some great resources:
 * [Nix Pills](https://nixos.org/guides/nix-pills/) - Guided introduction to Nix
 * [Nixology](https://www.youtube.com/playlist?list=PLRGI9KQ3_HP_OFRG6R-p4iFgMSK1t5BHs) - A series of videos introducing Nix in a practical way
 * [Nix Package Manager Guide](https://nixos.org/manual/nix/stable/) - A comprehensive guide of the Nix Package Manager
-* [A tour of Nix](https://nixcloud.io/tour) - Learn the nix language itself
+* [A tour of Nix](https://nixcloud.io/tour) - Learn the Nix language itself
