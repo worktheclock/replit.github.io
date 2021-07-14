@@ -6,7 +6,7 @@ Repls that are written in the following languages can use a built-in, multiplaye
 * Java
 * JavaScript (Node.js)
 * Python
-* With more coming soon (through [nix](/programming-ide/getting-started-nix)).
+* With more coming soon (through [Nix](/programming-ide/getting-started-nix)).
 
 To get started with the debugger, click on the Debugger icon on the sidebar:
 
@@ -16,7 +16,7 @@ Now you can start adding [breakpoints](https://en.wikipedia.org/wiki/Breakpoint)
 
 When the program is paused, the other buttons will be enabled:
 
-* "Next Step" will advance the program to the next possible line where the program can be stopped inside your source code. For instance, if the current line is calling a function, "Next Step" will go inside the function. If it is the last line in a function, the "Next Step" will return to where that function was called.
+* "Next Step" will advance the program to the next possible line where the program can be stopped inside your source code. For instance, if the current line is calling a function, "Next Step" will go inside the function. If it is the last line in a function, "Next Step" will return to where that function was called.
 * "Next Breakpoint" will advance the program to the next breakpoint, or until the program finishes if there are no more breakpoints after the current one.
 * "Stop" terminates the debugging session and kills the process that is being debugged.
 
@@ -29,6 +29,6 @@ When debugging a program in a repl, all participants will see all the actions th
 * The contents of the variables.
 * The output of the console.
 
-## Adding support for other languages through nix
+## Adding support for other languages through Nix
 
 Coming soon!
