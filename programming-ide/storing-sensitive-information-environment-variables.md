@@ -1,4 +1,4 @@
-# Secrets & Environment Variables
+# Secrets and environment variables
 
 Sensitive information such as credentials and API keys should be separate from your codebase so that you can share your code with others while ensuring that they cannot access your services, such as your user database.
 

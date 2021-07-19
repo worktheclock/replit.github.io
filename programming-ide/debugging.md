@@ -20,7 +20,7 @@ When the program is paused, the other buttons will be enabled:
 * "Next Breakpoint" will advance the program to the next breakpoint, or until the program finishes if there are no more breakpoints after the current one.
 * "Stop" terminates the debugging session and kills the process that is being debugged.
 
-# Multiplayer features
+## Multiplayer features
 
 When debugging a program in a repl, all participants will see all the actions that any other participant does. This means that the debugging experience will be shared by all the participants in a repl. This includes:
 
@@ -29,6 +29,6 @@ When debugging a program in a repl, all participants will see all the actions th
 * The contents of the variables.
 * The output of the console.
 
-# Adding support for other languages through nix
+## Adding support for other languages through nix
 
 Coming soon!
