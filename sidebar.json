@@ -46,7 +46,7 @@
         "slug": "getting-repl-metadata"
       },
       {
-        "name": "Storing sensitive information in environment variables",
+        "name": "Secrets and environment variables",
         "slug": "storing-sensitive-information-environment-variables"
       },
       {
