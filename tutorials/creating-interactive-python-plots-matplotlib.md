@@ -25,6 +25,6 @@ plt.show()
 Running the code should then generate a new pane with your generated plot. Changing the plot and rerunning will update the graph in the display pane.
 
 You can see the above example here:
-[here](https://repl.it/@amasad/docs-matplotlib).
+[here](https://replit.com/@amasad/docs-matplotlib).
 
-<iframe height="400px" width="100%" src="https://repl.it/@amasad/docs-matplotlib?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@amasad/docs-matplotlib?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>

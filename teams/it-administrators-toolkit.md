@@ -40,4 +40,4 @@ Please refer to these guides to get Replit working under your whitelist/network 
 
 ## Data Retention and Usage
 
-Please refer to our [Privacy FAQs](https://docs.repl.it/Teams/privacyFAQs) and [US Student Data Protection Addendum](https://docs.repl.it/Teams/US_Student_DPA) for more details.
+Please refer to our [Privacy FAQs](https://docs.replit.com/Teams/privacyFAQs) and [US Student Data Protection Addendum](https://docs.replit.com/Teams/US_Student_DPA) for more details.

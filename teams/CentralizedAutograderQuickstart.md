@@ -2,7 +2,7 @@
 
 This is the shortcut guide to the [full walkthrough on how to set up a centralized autograder](./CentralizedAutograder). Follow that guide to get step by step instructions and explanations about how it works. Follow this guide if you just want to get it up and running.
 
-**Note:** ⚠️ ⚠️ This guide shows you how to set up a basic fully automated homework grader. It is intended as a proof-of-concept to showcase how to build similar projects on top of Repl.it. **It should not be used as-is in cases where data is important or sensitive. For example, it offers no protection against malicious students who could submit code similar to `import os; os.system("rm -rf /")` to break the server and delete or modify other students' submissions or grades.** Stay tuned for updated guides and sample repls that resolve these issues. ⚠️⚠️
+**Note:** ⚠️ ⚠️ This guide shows you how to set up a basic fully automated homework grader. It is intended as a proof-of-concept to showcase how to build similar projects on top of Replit. **It should not be used as-is in cases where data is important or sensitive. For example, it offers no protection against malicious students who could submit code similar to `import os; os.system("rm -rf /")` to break the server and delete or modify other students' submissions or grades.** Stay tuned for updated guides and sample repls that resolve these issues. ⚠️⚠️
 
 ## Creating the grading server
 1. Create a new project for the server in your Team account. Make sure that you **do not** publish this project, as it will host students' work.

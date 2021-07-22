@@ -1,6 +1,6 @@
 # Autograding Assignments
 
-In [Repl.it Classroom](https://repl.it/classrooms) you can automatically correct
+In [Replit Classroom](https://replit.com/classrooms) you can automatically correct
 and grade your student's assignment submissions by implementing
 **Unit tests** or **Input/output matching tests**.
 
@@ -19,7 +19,7 @@ Nearly every programming language has a way for interacting with standard
 streams. You can find documentation for this by simply googling the language
 name with "stdin" and/or "stdout". In this tutorial we'll use Python as our language.
 
-Many of the teachers using repl.it like to ask their students to write programs
+Many of the teachers using Replit like to ask their students to write programs
 that takes input from the user and do something with it. That could be anything
 from text-based games, to calculators. Let's take a simple example: a program
 that takes two numbers, multiplies them, and prints the result.
@@ -33,7 +33,7 @@ print('{0} * {1} = {2}'.format(str_a, str_b, int(str_a) * int(str_b)))
 This program will run then stop to wait for the first number. The user then
 inputs the number in the console followed by the enter key. This is repeated for
 the second number. Then the program will print the formatted result. You can see
-it running live [on repl.it](https://repl.it/Cl6j).
+it running live [on Replit](https://replit.com/Cl6j).
 
 Now if you have a class of, say, thirty students, it becomes labor-intensive
 to run every student program to check that it takes the right input, does the

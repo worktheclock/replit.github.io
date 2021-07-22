@@ -1,24 +1,24 @@
-# Repl.it Audio
+# Replit Audio
 
 ![](/images/tutorials/12-audio/12-01-audio-heading.png)
 
-Most people control their music players manually, pressing the pause button to pause a track or hitting a volume up control to raise the volume. With Repl.it, you can automate your media experience using code.
+Most people control their music players manually, pressing the pause button to pause a track or hitting a volume up control to raise the volume. With Replit, you can automate your media experience using code.
 
 In this tutorial, we'll build a media player that can play audio files programmatically, allowing the user to pause playback, change the track, change the volume, or get looping information by giving text commands.
 
 We'll also outline how this could be integrated into other applications, such as a chatbot, but we'll leave the implementation of that as an exercise for the reader.
 
-## Understanding how audio works on Repl.it
+## Understanding how audio works on Replit
 
-In Unix systems, including the ones that Repl.it is built on, [everything is a file](https://en.wikipedia.org/wiki/Everything_is_a_file). You might think of file types like PDFs, text files, image files or audio files, but in fact even things like printers are often "seen" as files by the underlying operating system.
+In Unix systems, including the ones that Replit is built on, [everything is a file](https://en.wikipedia.org/wiki/Everything_is_a_file). You might think of file types like PDFs, text files, image files or audio files, but in fact even things like printers are often "seen" as files by the underlying operating system.
 
-Repl.it uses a special file at `/tmp/audio` to control media output. There are more details on how to manipulate this file directly in the [audio docs](https://docs.repl.it/repls/audio), but Repl.it also provides a higher level Python library that gives us some higher level functions like "play_audio". We'll be using the library in this tutorial.
+Replit uses a special file at `/tmp/audio` to control media output. There are more details on how to manipulate this file directly in the [audio docs](https://docs.replit.com/repls/audio), but Replit also provides a higher level Python library that gives us some higher level functions like "play_audio". We'll be using the library in this tutorial.
 
 ## Getting a free audio file from the Free Music Archive
 
 You can use your own mp3 files if you prefer, but as most music is under copy protection, we'll use a file from the [Free Music Arhive](https://freemusicarchive.org/search) for demo purposes. 
 
-Let's grab the URL of a file we want so that we can use code to download it to our Repl.it project.
+Let's grab the URL of a file we want so that we can use code to download it to our Replit project.
 
 Search for a song that you like, right-click on the download link and press "copy link location", as shown below.
 
@@ -229,11 +229,11 @@ Here we added a `volume` argument to our `play_note()` function so that we can p
 
 If you followed along you'll have your own version to extend, otherwise you can fork the media player repl below.
 
-*Note: Playing audio from the embedded repl below is not supported. To test out this repl, click "open in repl.it" at the top right of the embed window. The repl will open in a new window with a pop-up asking you to confirm audio activation.* 
+*Note: Playing audio from the embedded repl below is not supported. To test out this repl, click "open in Replit" at the top right of the embed window. The repl will open in a new window with a pop-up asking you to confirm audio activation.* 
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-12-audio-player?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@GarethDwyer1/cwr-12-audio-player?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-The "Twinkle Twinkle Little Star" repl can be found at [https://repl.it/@GarethDwyer1/cwr-12-audio-twinkle-twinkle](https://repl.it/@GarethDwyer1/cwr-12-audio-twinkle-twinkle). 
+The "Twinkle Twinkle Little Star" repl can be found at [https://replit.com/@GarethDwyer1/cwr-12-audio-twinkle-twinkle](https://replit.com/@GarethDwyer1/cwr-12-audio-twinkle-twinkle). 
 
 ## Where next
 

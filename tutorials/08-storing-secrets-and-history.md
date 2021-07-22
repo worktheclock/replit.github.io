@@ -20,7 +20,7 @@ In the [working with files tutorial](http://www.codewithrepl.it/02-managing-file
 
 Let's refactor the WeatherStack project to prevent our key from being made public.
 
-Visit [https://repl.it/@ritza-co/cwr-02-weather-report](https://repl.it/@GarethDwyer1/cwr-02-weather-report) (or your own version of this if you followed along previously) and create a new fork by pressing the pencil icon and then `fork`. 
+Visit [https://replit.com/@ritza-co/cwr-02-weather-report](https://replit.com/@GarethDwyer1/cwr-02-weather-report) (or your own version of this if you followed along previously) and create a new fork by pressing the pencil icon and then `fork`. 
 
 ![**Image 1:** *Forking our repl before refactoring it.*](/images/tutorials/08-storing-secrets/08-01-fork-repl.png)
 
@@ -49,7 +49,7 @@ API_KEY = os.getenv("API_KEY")
 
 The `getenv` function looks for an environment variable of a specific name. Now our code (and anyone who sees it) only needs to know the name of the key that stores our private API key, instead of the API key itself. You should be able to run your code again at this point to verify that new weather entries are correctly added to the relevant files.
 
-There are many other environment variables that make various parts of an operating system work correctly. For example, you could also take a look at the `LANG` and `PATH` environment variables, which will show you that Repl.it has their servers configured to use US English and 8-bit unicode character encoding, and have some default places where the system looks for executable programs.
+There are many other environment variables that make various parts of an operating system work correctly. For example, you could also take a look at the `LANG` and `PATH` environment variables, which will show you that Replit has their servers configured to use US English and 8-bit unicode character encoding, and have some default places where the system looks for executable programs.
 
 ![**Image 4:** *Looking at other environment variables.*](/images/tutorials/08-storing-secrets/08-04-using-env-variables.png)
 
@@ -57,7 +57,7 @@ There are many other environment variables that make various parts of an operati
 
 We removed the sensitive information from our project, but it's not actually completely gone. It's securely placed in our environment variables pane, but it's also still saved in the repl's history.
 
-Repl.it saves every change you make to a project so that you can always go back to previous versions if you make a mistake or need to check what has changed.
+Replit saves every change you make to a project so that you can always go back to previous versions if you make a mistake or need to check what has changed.
 
 Click on the history button in the top bar, as shown below.
 
@@ -85,7 +85,7 @@ Visit your WeatherStack account and press the `reset` button to get your new API
 
 You can make a copy of the new repl below. If you fork it, you'll need to create an `API_KEY` environment variable and add your WeatherStack API key before it will run.
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-08-secrets-env?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@GarethDwyer1/cwr-08-secrets-env?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Where next?
 

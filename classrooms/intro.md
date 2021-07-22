@@ -1,8 +1,8 @@
 # Introduction to Classrooms
 
-## What are Repl.it Classrooms?
+## What are Replit Classrooms?
 
-A Repl.it classroom is a collection of assignments with additional autograding functionality.  It can
+A Replit classroom is a collection of assignments with additional autograding functionality.  It can
 be used as a sole learner who wants to practice programming in a specific language, or it can be used
 by teachers and instructors to deliver programming instructional material to their students.
 
@@ -33,10 +33,10 @@ can also not see who has enrolled in the class as a self-learner, only the numbe
 
 ## Becoming a Student / Teacher
 
-You can become a student or teacher by going to your [account](https://repl.it/account), going to 'roles',
+You can become a student or teacher by going to your [account](https://replit.com/account), going to 'roles',
 and checking the box next to 'student' or 'teacher'.  Once you've updated your roles, you should see new
 navigation links in your header.
 
-You can also become a student or teacher by going to the [classroom community](https://repl.it/community)
+You can also become a student or teacher by going to the [classroom community](https://replit.com/community)
 and importing a classroom.  "Taking and Learning" a classroom will automatically make you a student, while
 "Importing and Teaching" a classroom will automatically make you a teacher.

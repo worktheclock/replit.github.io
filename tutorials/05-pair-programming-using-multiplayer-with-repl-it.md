@@ -1,4 +1,4 @@
-# Multiplayer: Pair programming with Repl.it
+# Multiplayer: Pair programming with Replit
 
 Software developers have a reputation for being loners, but they don't always code by themselves. [Pair programming](https://en.wikipedia.org/wiki/Pair_programming) is used by many programmers to
 
@@ -8,7 +8,7 @@ Software developers have a reputation for being loners, but they don't always co
 
 Pair programming intuitively sounds like it would be inefficient: after all, the two developers could instead be working on different projects simultaneously. But on top of catching more bugs, two people working together often display more creativity as well. You might think of an idea based on something your buddy said that wouldn't have come to you alone.
 
-If you have a friend handy, work through this tutorial together to gain real pair programming experience. If you're alone, fire up two browsers (or use incognito mode) to sign into two Repl.it accounts simultaneously.
+If you have a friend handy, work through this tutorial together to gain real pair programming experience. If you're alone, fire up two browsers (or use incognito mode) to sign into two Replit accounts simultaneously.
 
 ## Extending our data science article using pair programming: Getting help
 
@@ -16,7 +16,7 @@ Imagine that you are a developer who has come across the [previous tutorial on p
 
 In this scenario, you are "@Lean3Viljoen94" and the friend that you're asking for help is "@GarethDwyer1".
 
-Start by forking [the data science repl](https://repl.it/@GarethDwyer1/04-data-science-and-visualisation-with-replit) and making sure that you can run it.
+Start by forking [the data science repl](https://replit.com/@GarethDwyer1/04-data-science-and-visualisation-with-replit) and making sure that you can run it.
 
 ![**Image 1:** *Forking another user's project*](/images/tutorials/05-multiplayer/05-01-fork-repl.png)
 
@@ -28,7 +28,7 @@ Copy the invite link, and note that this is different from the normal link to yo
 
 ![**Image 3:** *Sharing options modal*](/images/tutorials/05-multiplayer/05-03-share-link.png)
 
-If you knew your friend's Repl.it username or the email associated with the Repl.it account, you could instead use the `Invite` box at the top. Share the link with your friend and wait for them to join.
+If you knew your friend's Replit username or the email associated with the Replit account, you could instead use the `Invite` box at the top. Share the link with your friend and wait for them to join.
 
 As soon as they do, you will see that a chat box pops up in the bottom right corner. Their profile picture or letter will be at the top of the chat box, so you can always know who is currently active.
 
@@ -75,13 +75,13 @@ ax.set(xlabel="GDP per capita", ylabel="Life expectancy")
 
 If you followed along, you'll already have your own version of the repl to extend. If not, start from ours. Fork it from the embed below.
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-05-multiplayer?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@GarethDwyer1/cwr-05-multiplayer?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Where next?
 
 Getting help on a single file in a program is only one use for multiplayer, but there are many scenarios where it can be useful to see your teammates' changes in real time. For example, if you're a back-end developer you could work closely with a front-end developer, ironing out any issues with data communication between the back- and front-end in real time, instead of waiting for multiple iterations of several days.
 
-That brings us to the end of part 1 of this series and you should now be familiar with all of the basic features of Repl.it.
+That brings us to the end of part 1 of this series and you should now be familiar with all of the basic features of Replit.
 
 In part 2, we'll cover more advanced features, such as running projects from GitHub, storing secrets securely, and productivity hacks. 
 

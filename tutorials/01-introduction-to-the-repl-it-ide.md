@@ -1,4 +1,4 @@
-# Understanding the Repl.it IDE: a practical guide to building your first project with Repl.it
+# Understanding the Replit IDE: a practical guide to building your first project with Replit
 
 This tutorial is also available [as a video](https://www.youtube.com/watch?v=SDlrhS8O3kI).
 
@@ -6,7 +6,7 @@ Software developers can get pretty attached to their Integrated Development Envi
 
 In the end, an IDE is just a glorified text editor. It lets you type text into files and save those files, functionality that has been present in nearly all computers since those controlled by punch cards.
 
-In this lesson, you'll learn how to use the Repl.it IDE. It has some features you won't find in many other IDEs, namely:
+In this lesson, you'll learn how to use the Replit IDE. It has some features you won't find in many other IDEs, namely:
 
 * It's fully online. You can use it from any computer that can connect to the internet and run a web browser, including a phone or tablet.
 * It'll fully manage your environment for building and running code: you won't need to mess around with making sure you have the right version of Python or the correct NodeJS libraries.
@@ -16,23 +16,23 @@ In the first part of this guide, we'll cover the basics and also show you how mu
 
 ## Introduction: creating an account and starting a project
 
-Although you don't need an account to use Repl.it (you can just navigate to [repl.it](https://repl.it/) and press the "start coding" button), let's set one up in order to have access to all of the features.
+Although you don't need an account to use Replit (you can just navigate to [Replit](https://replit.com/) and press the "start coding" button), let's set one up in order to have access to all of the features.
 
-Visit [https://repl.it/signup](https://repl.it/signup) and follow the prompts to create a user account, either by entering a username and password or by logging in with Google, GitHub, or Facebook.
+Visit [https://replit.com/signup](https://replit.com/signup) and follow the prompts to create a user account, either by entering a username and password or by logging in with Google, GitHub, or Facebook.
 
-Once you're done, hit the `+ new repl` button in the top right. In the example below, we choose to create a new Python project. Repl.it will automatically choose a random name for your project, or you can pick one yourself. Note that by default your repl will be public to anyone on the internet; this is great for sharing and collaboration, but we'll have to be careful to not include passwords or other sensitive information in any of our projects.
+Once you're done, hit the `+ new repl` button in the top right. In the example below, we choose to create a new Python project. Replit will automatically choose a random name for your project, or you can pick one yourself. Note that by default your repl will be public to anyone on the internet; this is great for sharing and collaboration, but we'll have to be careful to not include passwords or other sensitive information in any of our projects.
 
 ![**Image 1:** *Creating a new Python project*](/images/tutorials/01-introduction/01-01-new-repl.png)
 
-You'll also notice an "Import from GitHub" option. Repl.it allows you to import existing software projects directly from GitHub, but we'll create our own for now. Once your project is created, you'll be taken to a new view with several panes. Let's take a look at what these are.
+You'll also notice an "Import from GitHub" option. Replit allows you to import existing software projects directly from GitHub, but we'll create our own for now. Once your project is created, you'll be taken to a new view with several panes. Let's take a look at what these are.
 
-### Understanding the Repl.it panes
+### Understanding the Replit panes
 
-You'll soon see how configurable Repl.it is and how most things can be moved around to suit your fancy. However, by default, you'll get the following layout.
+You'll soon see how configurable Replit is and how most things can be moved around to suit your fancy. However, by default, you'll get the following layout.
 
-![**Image 2:** *The Repl.it panes*](/images/tutorials/01-introduction/01-02-repl-panes.png)
+![**Image 2:** *The Replit panes*](/images/tutorials/01-introduction/01-02-repl-panes.png)
 
-1. **Left pane: files and configuration.** This, by default, shows all the files that make up your project. Because we chose a Python project, Repl.it has gone ahead and created a `main.py` file.
+1. **Left pane: files and configuration.** This, by default, shows all the files that make up your project. Because we chose a Python project, Replit has gone ahead and created a `main.py` file.
 2. **Middle pane: code editor.** You'll probably spend most of your time using this pane. It's a text editor where you can write code. In the screenshot, we've added two lines of Python code, which we'll run in a bit.
 3. **Right pane: output sandbox.** This is where you'll see your code in action. All output that your program produces will appear in this pane, and it also acts as a quick sandbox to run small pieces of code, which we'll look at more later.
 4. **Run button.** If you click the big green `run` button, your code will be executed and the output will appear on the right.
@@ -55,9 +55,9 @@ Your script will run and the output it generates will appear on the right pane (
 
 You probably won't be able to turn this script into the next startup unicorn quite yet, but let's keep going.
 
-### Running code from Repl.it's REPL
+### Running code from Replit's REPL
 
-In computer programming, a REPL is a [read-eval-print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop), and a REPL interface is often the simplest way to run short computer programs (and where Repl.it got its name).
+In computer programming, a REPL is a [read-eval-print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop), and a REPL interface is often the simplest way to run short computer programs (and where Replit got its name).
 
 While in the previous example we saved our code to a file and then executed the file, it's sometimes quicker to execute code directly.
 
@@ -116,9 +116,9 @@ Congratulations! You've written your first useful program.
 
 ## Sharing your application with others
 
-Coding is more fun with friends or as part of a team. If you want to share your code with others, it's as easy as copying the URL and sending it. In this case, the URL is `https://repl.it/@GarethDwyer1/demoproject`, but yours will be different based on your Repl.it username and the project name you chose.
+Coding is more fun with friends or as part of a team. If you want to share your code with others, it's as easy as copying the URL and sending it. In this case, the URL is `https://replit.com/@GarethDwyer1/demoproject`, but yours will be different based on your Replit username and the project name you chose.
 
-You can copy the link and open it in an incognito tab (or a different web browser) to see how others would experience your project if you were to share it. By default, they'll be able to see all of your files and code and run your code, but not make any changes. If someone else tries to make changes to your repl, it'll automatically get copied ("forked") to their account, or an anonymous account if they haven't signed up for Repl.it. Any changes your friends make will only happen in their copies, and won't affect your code at all.
+You can copy the link and open it in an incognito tab (or a different web browser) to see how others would experience your project if you were to share it. By default, they'll be able to see all of your files and code and run your code, but not make any changes. If someone else tries to make changes to your repl, it'll automatically get copied ("forked") to their account, or an anonymous account if they haven't signed up for Replit. Any changes your friends make will only happen in their copies, and won't affect your code at all.
 
 To understand this, compare the three versions of the same repl below.
 
@@ -136,13 +136,13 @@ What does this mean? Because no one else can edit your repl, you can share it fa
 
 ## Sharing write-access: Multiplayer
 
-Of course, sometimes you might _want_ others to have write access to your repl so that they can contribute, or help you out with a problem. In these cases, you can use Repl.it's "multiplayer" functionality.
+Of course, sometimes you might _want_ others to have write access to your repl so that they can contribute, or help you out with a problem. In these cases, you can use Replit's "multiplayer" functionality.
 
-If you invite someone to your repl, it's different from sharing the URL with them. You can invite someone by clicking `Share` in the top right and sending them the secret link that starts with "https://repl.it/join". This link will give people _edit_ access to your repl.
+If you invite someone to your repl, it's different from sharing the URL with them. You can invite someone by clicking `Share` in the top right and sending them the secret link that starts with "https://replit.com/join". This link will give people _edit_ access to your repl.
 
 ![**Image 11**: *Inviting someone to your repl*](/images/tutorials/01-introduction/01-11-multiplayer-invite.png)
 
-If you have a friend handy, send it to them to try it out. If not, you can try out multiplayer anyway using a separate incognito window again. Below is our main Repl.it account on the left and a second account which opened the multiplayer invite link on the right. As you can see, all keystrokes can be seen by all parties in real time.
+If you have a friend handy, send it to them to try it out. If not, you can try out multiplayer anyway using a separate incognito window again. Below is our main Replit account on the left and a second account which opened the multiplayer invite link on the right. As you can see, all keystrokes can be seen by all parties in real time.
 
 ![**Image 12**: *Using multiplayer*](/images/tutorials/01-introduction/01-12-working-together.gif)
 
@@ -150,11 +150,11 @@ If you have a friend handy, send it to them to try it out. If not, you can try o
 
 If you followed along, you'll already have your own version of the repl to extend. If not, start from ours. Fork it from the embed below.
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-01-quadratic-equations?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@GarethDwyer1/cwr-01-quadratic-equations?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Where next?
 
-You can now create basic programs on your own or with friends, and you are familiar with the most important Repl.it features. There's a lot more to learn though. In the next nine lessons, you'll work through a series of projects that will teach you more about Repl.it features and programming concepts along the way.
+You can now create basic programs on your own or with friends, and you are familiar with the most important Replit features. There's a lot more to learn though. In the next nine lessons, you'll work through a series of projects that will teach you more about Replit features and programming concepts along the way.
 
-If you get stuck, you can get help from the [Repl.it community](https://repl.it/talk/all) or on the [Repl.it Discord server](https://repl.it/discord).
+If you get stuck, you can get help from the [Replit community](https://replit.com/talk/all) or on the [Replit Discord server](https://replit.com/discord).
 

@@ -2,14 +2,14 @@
 
 There is also a [Java version of this guide](./SimpleAutograding-java).
 
-**Note: you need a subscription to Repl.it's [Teams for Education](https://repl.it/teams) as well as a team where you have owner or admin privileges in order to follow this guide.**
+**Note: you need a subscription to Replit's [Teams for Education](https://replit.com/teams) as well as a team where you have owner or admin privileges in order to follow this guide.**
 
 If you teach a programming course and wish that you could build a robot to grade your students' homework for you, you can! In this guide, you'll see exactly how to set it up with some real-world examples. 
 
 Autograding is done by having unit tests automatically execute your students' code with pre-specified inputs and check if the outputs are as expected. 
 
 Specifically, we'll cover:
-* Setting up projects and permissions on Repl.it Teams for Education  
+* Setting up projects and permissions on Replit Teams for Education  
 * Creating a skeleton assignment for your students to work on
 * Creating tests to check your students' submissions automatically
 * Running these tests with PyTest.
@@ -26,10 +26,10 @@ In this guide, we'll show you how to set up partial auto-grading: you'll execute
 
 In theory, students could receive their grade automatically too, minutes after they submit. In the version we build though, only you, the teacher, will get the summary of grades, so that you can check these, add any personalised comments, and then share with your students at your convenience.
 
-## Understanding Repl.it teams: Admins, members and projects
-Before we get started with building the autograded solution, you should have a good understanding of some concepts from Repl.it teams. Specifically, we'll be using different roles (admin and member) and **projects**. You can skip this section if you're already familiar with how these work.
+## Understanding Replit teams: Admins, members and projects
+Before we get started with building the autograded solution, you should have a good understanding of some concepts from Replit teams. Specifically, we'll be using different roles (admin and member) and **projects**. You can skip this section if you're already familiar with how these work.
 
-### The admin and member roles in Repl.it teams
+### The admin and member roles in Replit teams
 
 If you're using Teams for Education, you should make sure that you're added as an 'owner' or 'admin' while all of your students are 'members'.
 
@@ -82,7 +82,7 @@ If you need to provide more comprehensive instructions you can create a [markdow
 
 ![](/images/teamsForEducation/simple-autograding-python/03-instructions-readme.png)
 
-If you already have the instructions in a different format such as PDF, you can upload the file from your local machine and students will be able to view it directly within the Repl.it interface.
+If you already have the instructions in a different format such as PDF, you can upload the file from your local machine and students will be able to view it directly within the Replit interface.
 
 ![](/images/teamsForEducation/simple-autograding-python/04-upload-instruction-file.png)
 
@@ -142,7 +142,7 @@ Before students can see and submit this homework you need to 'publish' it. Do th
 
 ![](/images/teamsForEducation/simple-autograding-python/09-publish-project-button.png)
 
-Now slide the button across to 'published' and your students can access the project. They will also get a notification in Repl.it that a new project has been published, and you will similarly see a notification once they start and submit.
+Now slide the button across to 'published' and your students can access the project. They will also get a notification in Replit that a new project has been published, and you will similarly see a notification once they start and submit.
 
 ![](/images/teamsForEducation/simple-autograding-python/10-publish-project-slider.png)
 
@@ -176,9 +176,9 @@ Open the submission, open the command shell and run `pytest` again. You should s
 
 Once your students have each started and submitted an assignment, you can open each of the students' submissions and run `pytest` to easily see a summary of how many tests they passed and what mistakes they made. If you want, you can simply use the percentage of the tests passed as a grade (for example, our imaginary student would be awarded 50% for passing 1/2 tests), but because you can see exactly what went wrong you can also decide if some tests are more important than others.
 
-You can also select a piece of code from your student's submission and click on the annotate button to leave a message. This makes it easy to ask for clarification or give advice. You can read more on the annotation feature [here](https://docs.repl.it/Teams/Annotations)
+You can also select a piece of code from your student's submission and click on the annotate button to leave a message. This makes it easy to ask for clarification or give advice. You can read more on the annotation feature [here](https://docs.replit.com/Teams/Annotations)
 
-While this is a semi-automated solution, you are still required to open each solution manually in order to kick off the tests. In [Creating a centralised grading application with Repl.it](./CentralizedAutograder), we show you how to take autograding a step further to avoid this.
+While this is a semi-automated solution, you are still required to open each solution manually in order to kick off the tests. In [Creating a centralised grading application with Replit](./CentralizedAutograder), we show you how to take autograding a step further to avoid this.
 
 ## Conclusion
 

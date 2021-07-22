@@ -1,4 +1,4 @@
-# An introduction to `pytest` and doing test-driven development with Repl.it
+# An introduction to `pytest` and doing test-driven development with Replit
 
 In this tutorial we'll introduce test-driven development and you'll see how to use [`pytest`](https://docs.pytest.org/en/stable/) to ensure that your code is working as expected. 
 
@@ -67,13 +67,13 @@ from namesplitter.utils import name_helper
 def test_two_names():
     assert name_helper.split_name("John Smith") == ["John", "Smith"]
 ```
-Note that the `namesplitter` in the first line is taken from the name of your Repl.it project, which defines the names of the parent module. If you called your project something else, you'll need to use that name in the import line. It's important to not include special characters in the project name (including a hyphen, so names like `my-tdd-demo` are out) or the import won't work.
+Note that the `namesplitter` in the first line is taken from the name of your Replit project, which defines the names of the parent module. If you called your project something else, you'll need to use that name in the import line. It's important to not include special characters in the project name (including a hyphen, so names like `my-tdd-demo` are out) or the import won't work.
 
 The `assert` keyword simply checks that a specific statement evaluates to `True`. In this case, we call our function on the left-hand side and give the expected value on the right-hand side, and ask `assert` to check if they are the same.
 
 This is our most basic case: we have two names and we simply split them on the single space. Of course, we haven't written the `split_name` function anywhere yet, so we expect this test to fail. Let's check.
 
-Usually you would run your tests by typing `py.test` into your terminal, but using Repl.it things work better if we import `pytest` into our code base and run it from there. This is because a) our terminal is always already activated into a Python environment and b) caching gets updated when we press the `Run` button, so invoking our tests from outside of this means that they could run on old versions of our code, causing confusion.
+Usually you would run your tests by typing `py.test` into your terminal, but using Replit things work better if we import `pytest` into our code base and run it from there. This is because a) our terminal is always already activated into a Python environment and b) caching gets updated when we press the `Run` button, so invoking our tests from outside of this means that they could run on old versions of our code, causing confusion.
 
 Let's run them from our `main.py` file for now as we aren't using it for anything else yet. Add the following to this file.
 
@@ -226,7 +226,7 @@ Because you're using the `main.py` file now, you can also invoke `pytest` direct
 
 We've written a name splitter that can handle some names more complicated than just "John Smith". It's not perfect though: for example, if you put in a name with two consecutive spaces it will crash our program. You could fork the project and fix this by first writing a test with consecutive spaces and then modifying the code to handle this (and any other edge cases you can think of).
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/namesplitter?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@GarethDwyer1/namesplitter?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Where next
 
@@ -234,4 +234,4 @@ You've learned to do TDD in this project. It's a popular style of programming, b
 
 Take a look at the [big list of naughty strings](https://github.com/minimaxir/big-list-of-naughty-strings) for a project that collects inputs that often cause software to break. You could also read [How SQLite Is Tested](https://www.sqlite.org/testing.html) which explains how SQLite, a popular lightweight database, has 150 thousand lines of code and nearly 100 million(!) lines of tests.
 
-In the next tutorial, we'll show you how to become a Repl.it poweruser by taking advantage of the productivity features it offers.
+In the next tutorial, we'll show you how to become a Replit poweruser by taking advantage of the productivity features it offers.

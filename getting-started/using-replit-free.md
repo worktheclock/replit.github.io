@@ -3,8 +3,8 @@
 Replit offers a number of helpful features which you don't need to pay for. A free account gives you access to: 
 
 - A user-friendly, no-setup online [integrated development environment (IDE)](https://replit.com/site/ide) for beginners with autocomplete and free [automatic hosting](https://replit.com/site/hosting).
-- Remote teaching capabilities, allowing teachers to connect with their whole class and help students 1-1 with [multiplayer](https://repl.it/site/multiplayer).
-- Support for Python, Java, HTML/CSS/JavaScript, and 50+ other [languages](https://repl.it/languages).
+- Remote teaching capabilities, allowing teachers to connect with their whole class and help students 1-1 with [multiplayer](https://replit.com/site/multiplayer).
+- Support for Python, Java, HTML/CSS/JavaScript, and 50+ other [languages](https://replit.com/languages).
 - Support for games, graphics, audio and an easy-to-use database.
 
 Read on to learn how to take advantage of our free features. Everything mentioned in this post can be done with a free account.
@@ -37,7 +37,7 @@ Teams has a free version that allows for up to ten collaborators. If you need mo
 
 ## Compliance
 
-We take user privacy very seriously and only collect data insofar as it's important to provide our service. You can read more about our privacy policy [here](https://repl.it/site/privacy),) and go through our privacy FAQs [here](https://docs.replit.com/Teams/privacyFAQs).
+We take user privacy very seriously and only collect data insofar as it's important to provide our service. You can read more about our privacy policy [here](https://replit.com/site/privacy),) and go through our privacy FAQs [here](https://docs.replit.com/Teams/privacyFAQs).
 
 As a small, team we're unable to comply with the various ed-tech regulations around the world. However, you can use Replit completely anonymously without providing any identifiable information; just choose a language from our [languages page](https://replit.com/languages) and start coding.
 

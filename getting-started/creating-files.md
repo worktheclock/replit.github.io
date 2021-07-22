@@ -8,7 +8,7 @@ Then, you can import the files by referencing the file name. Every language will
 
 Here is an example in Python:
 
-<iframe height="400px" width="100%" src="https://repl.it/@amasad/modules?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@amasad/modules?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Uploading Files and Assets
 
@@ -17,7 +17,7 @@ You can upload files by either dragging and dropping them into the "Files" sideb
 ![Uploading files](/images/repls/upload.png)
 
 We support any file type including images, video, and audio files. These will be displayed correctly in the browser. These files can also be programmatically generated. For example, you can upload an image, alter it programmatically, and save the result to a new image.
-Like this (which you can try out [here](https://repl.it/@masonclayton/rotatify)):
+Like this (which you can try out [here](https://replit.com/@masonclayton/rotatify)):
 
 You can edit a file's name or delete it if you wish by clicking on the
 <img
@@ -33,9 +33,9 @@ Two things to note about files:
 2. Files will be placed in the current working directory; generally you'd access it through the relative path './filename.ext'.
 
 Here's a few examples on files in different languages:
-- Ruby: [Word frequency in a file](https://repl.it/@masonclayton/Word-frequency-in-a-file)
-- Java: [Classes in different files](https://repl.it/@masfrost/Classes-in-different-files)
-- Python: [Reading from CSV](https://repl.it/@amasad/CSV-Example)
+- Ruby: [Word frequency in a file](https://replit.com/@masonclayton/Word-frequency-in-a-file)
+- Java: [Classes in different files](https://replit.com/@masfrost/Classes-in-different-files)
+- Python: [Reading from CSV](https://replit.com/@amasad/CSV-Example)
 
 ## File Changes
 

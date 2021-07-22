@@ -1,6 +1,6 @@
 # Installing packages
 
-With Replit, you can use most packages available in Python and JavaScript. Replit will install many packages on the fly just by importing them in code. You can read more about how we do this using [a universal package manager](https://blog.repl.it/upm).
+With Replit, you can use most packages available in Python and JavaScript. Replit will install many packages on the fly just by importing them in code. You can read more about how we do this using [a universal package manager](https://blog.replit.com/upm).
 
 ## Searching For and Adding Packages
 
@@ -39,7 +39,7 @@ When you add a package by importing, we attempt to guess what package you want b
 import twitter #upm package(python-twitter)
 ```
 
-You can configure additional options for package guessing by reading about the [.replit](https://docs.repl.it/repls/dot-replit) file.
+You can configure additional options for package guessing by reading about the [.replit](https://docs.replit.com/repls/dot-replit) file.
 
 ## Spec Files
 
@@ -65,7 +65,7 @@ This will tell the packager that your project requires at least Python version 3
 ### JavaScript
 
 Note that `package.json` files are only for Nodejs/Express repls (they do not work in HTML/CSS/JS repls). A `package.json` file contains more information about the project, but also lists the dependencies. As an example, here is the `package.json` file included in our
-[express template](https://repl.it/languages/express):
+[express template](https://replit.com/languages/express):
 
 ```json
 {

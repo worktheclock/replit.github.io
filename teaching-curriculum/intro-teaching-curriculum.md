@@ -4,13 +4,13 @@ At Replit, our mission is to make programming more accessible to all. We aim to 
 
 ## Curricula
 
-- [Intro to C++](https://docs.repl.it/teaching-curriculum/intro-cpp)
-- [Intro to HTML/CSS](https://docs.repl.it/teaching-curriculum/intro-html-css)
-- [Intro to Java](https://docs.repl.it/teaching-curriculum/intro-java)
-- [Intro to Python](https://docs.repl.it/teaching-curriculum/intro-python)
-- [Intro to SQL](https://docs.repl.it/teaching-curriculum/intro-sql)
-- [Intermediate Python](https://docs.repl.it/teaching-curriculum/intermediate-python)
-- [Abstract Data Types](https://docs.repl.it/teaching-curriculum/abstract-data-types)
+- [Intro to C++](https://docs.replit.com/teaching-curriculum/intro-cpp)
+- [Intro to HTML/CSS](https://docs.replit.com/teaching-curriculum/intro-html-css)
+- [Intro to Java](https://docs.replit.com/teaching-curriculum/intro-java)
+- [Intro to Python](https://docs.replit.com/teaching-curriculum/intro-python)
+- [Intro to SQL](https://docs.replit.com/teaching-curriculum/intro-sql)
+- [Intermediate Python](https://docs.replit.com/teaching-curriculum/intermediate-python)
+- [Abstract Data Types](https://docs.replit.com/teaching-curriculum/abstract-data-types)
 
 - More to come!
 
@@ -18,7 +18,7 @@ At Replit, our mission is to make programming more accessible to all. We aim to 
 
 ## **Why are we doing this?**
 
-Our mission at Repl.it is to make programming more accessible to all. We know this can be accomplished through multiple avenues and in partnership with the inredibly talented educators in our community, which is why we are now providing free curricula that educators are free to use, modify, and share alike when they are teaching Computer Science and Programming.
+Our mission at Replit is to make programming more accessible to all. We know this can be accomplished through multiple avenues and in partnership with the inredibly talented educators in our community, which is why we are now providing free curricula that educators are free to use, modify, and share alike when they are teaching Computer Science and Programming.
 >>>>>>> 98a1242 (wip - renaming and moving):teaching-curriculum/intro-teaching-curriculum.md
 
 Check this page regularly, as we aim to update it often with a wide variety of curricula across multiple disciplines.

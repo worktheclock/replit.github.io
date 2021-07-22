@@ -21,7 +21,7 @@ In this tutorial, we will:
 2. Choose **Node.js** as your language.
 3. Name your repl something like "repl-chat-server".
 
-![create new server repl.it instance](/images/tutorials/15-replit-chat/new-server-project.png)
+![create new server Replit instance](/images/tutorials/15-replit-chat/new-server-project.png)
 
 
 ### Add a web framework
@@ -121,7 +121,7 @@ server.listen(3000, function() {
 
 Create a _new_ repl with **Node.js** as the chosen language. Give this repl a name, like "repl-chat-client".
 
-![create new client repl.it instance](/images/tutorials/15-replit-chat/new-client-project.png)
+![create new client Replit instance](/images/tutorials/15-replit-chat/new-client-project.png)
 
 
 ### Add the Socket client and readline modules

@@ -1,4 +1,4 @@
-# Hiding messages in images: steganography with Python and Repl.it
+# Hiding messages in images: steganography with Python and Replit
  
 In this tutorial, we'll build a steganography tool in Python. Steganography is the practice of hiding information within other data. Unlike encryption, where the goal is to secure *the contents* of communication between two parties, steganography aims to obscure the fact that the parties are communicating at all.
 
@@ -33,9 +33,9 @@ The image would look almost identical in any image viewer (we have just added or
 
 Using this technique but extending it over an entire image (millions of pixels), we can hide a large amount of text data in any image.
 
-## Creating the project on Repl.it
+## Creating the project on Replit
 
-If you were serious about keeping your messages as secret as possible, you'd want to do all of these steps on an offline computer that you fully control. As a learning exercise though, we'll set the project up on [repl.it](https://repl.it). Navigate to their site and sign up for an account if you don't have one.
+If you were serious about keeping your messages as secret as possible, you'd want to do all of these steps on an offline computer that you fully control. As a learning exercise though, we'll set the project up on [Replit](https://replit.com). Navigate to their site and sign up for an account if you don't have one.
 
 Create a new project, choosing "Python" as the language, and give your project a name.
 
@@ -249,6 +249,6 @@ The `main()` function above creates a prompt flow for the user to interact with 
 
 ## Where next?
  
-If you have followed along you'll have your own repl to expand; if not you can fork [our repl](https://repl.it/@ritza/python-steganography) and work from there or test it out below.
+If you have followed along you'll have your own repl to expand; if not you can fork [our repl](https://replit.com/@ritza/python-steganography) and work from there or test it out below.
  
-<iframe height="400px" width="100%" src="https://repl.it/@ritza/python-steganography?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/python-steganography?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>

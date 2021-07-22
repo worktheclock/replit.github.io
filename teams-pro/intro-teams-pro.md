@@ -14,7 +14,7 @@ The platform it is built around four cornerstones which we used to inform its fe
 ## 2. Collaborate
  - *Threads* allow you to have asynchronous conversations across all repls so that feedback and conversations are never lost. You can highlight specific lines of code or writing, and assign a comment.
 
-   <img src="https://blog.repl.it/images/threads/annotations.gif?" alt="Our existing annotations feature"/>
+   <img src="https://blog.replit.com/images/threads/annotations.gif?" alt="Our existing annotations feature"/>
 
  - *Multiplayer* allows your team to work together on any repl, all at once or at different times. This is a great way to knowledge share and debug, or just build!
 

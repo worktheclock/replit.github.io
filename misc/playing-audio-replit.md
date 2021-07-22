@@ -35,11 +35,11 @@ Currently, we have JavaScript and Python libraries for audio.
 
 Below is an example of the JavaScript library. Generated docs can be found [here](https://audio-js-docs--allawesome497.repl.co/).
 
-<iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@turbio/audio-js-demo?lite=true"></iframe>
+<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@turbio/audio-js-demo?lite=true"></iframe>
 
 Below is an example using the Python library. Generated docs can be found with the Python Replit package documented [here](https://replit-docs-python.allawesome497.repl.co/).
 
-<iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@AllAwesome497/py-audio-demo?lite=true"></iframe>
+<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@AllAwesome497/py-audio-demo?lite=true"></iframe>
 
 ### Community Contributed Libraries
 

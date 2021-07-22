@@ -23,13 +23,13 @@ You can access your webhook settings for a classroom by clicking on the three-do
 
 ## How do you use webhooks?
 
-**Warning: By using webhooks, you are potentially exposing student data to services outside of Repl.it.  Please be aware of where you are sending and storing the data and the security of those places/services.**
+**Warning: By using webhooks, you are potentially exposing student data to services outside of Replit.  Please be aware of where you are sending and storing the data and the security of those places/services.**
 
 Webhooks can be used by services such as [Zapier](https://zapier.com/apps/webhook/integrations), or you can [create your own server](/repls/http-servers) to handle the data.
 
 Here's an example of a simple server repls that will receive and log webhooks:
 
-<iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@timmy_i_chen/class-webhook-example?lite=true"></iframe>
+<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@timmy_i_chen/class-webhook-example?lite=true"></iframe>
 
 The URL that can receive webhooks is `https://class-webhook-example.timmy-i-chen.repl.co/data`.  I can then set up my webhook settings as follows:
 
@@ -101,4 +101,4 @@ This event is fired anytime a student submits an assignment.  The event is in th
 
 # More with Webhooks
 
-We'd love to hear about how you're using webhooks on our [feedback post](https://repl.it/feedback/p/feedback-for-classroom-webhooks).  Additionally, if you have more ideas for webhook events, please share them with us there as well.
+We'd love to hear about how you're using webhooks on our [feedback post](https://replit.com/feedback/p/feedback-for-classroom-webhooks).  Additionally, if you have more ideas for webhook events, please share them with us there as well.

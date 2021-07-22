@@ -2,7 +2,7 @@
 
 Both students and teachers are capable of exporting data - teachers can export their classroom grade data, whereas students can export their assignments to repls.
 
-_Note: Classroom will be fully deprecated on 1/31/2021 and you can [migrate your Classroom to a Team for free for 4 months](https://repl.it/classroom-migration)_
+_Note: Classroom will be fully deprecated on 1/31/2021 and you can [migrate your Classroom to a Team for free for 4 months](https://replit.com/classroom-migration)_
 
 ## Student Exports
 
@@ -28,4 +28,4 @@ Each submission has one of the following statuses:
 
 ### Exporting Assignments
 
-Currently there is no place to export all of a classroom's assignments.  If this is something you would like to see, please let us know on our [feedback forums](https://repl.it/feedback).
+Currently there is no place to export all of a classroom's assignments.  If this is something you would like to see, please let us know on our [feedback forums](https://replit.com/feedback).

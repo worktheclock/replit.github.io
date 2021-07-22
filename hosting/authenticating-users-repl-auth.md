@@ -41,7 +41,7 @@ Above, we have a basic Flask app that will render the `index.html` page which we
 
 By default, Flask will check for HTML pages to render within a directory called `templates`. Create a new folder in the root directory and name it `templates`. Now create a new file within the `templates` directory and name it `index.html`.
 
-Let's add some basic HTML to display `Hello, Repl.it!` on the landing page.
+Let's add some basic HTML to display `Hello, Replit!` on the landing page.
 
 Copy the following HTML to the `index.html` file:
 
@@ -59,7 +59,7 @@ Copy the following HTML to the `index.html` file:
 
 That's it for the Flask app. Run the code and you should see the browser window display 'Hello, Replit!'.
 
-![Hello Repl.it](/images/repls/repl-auth/hello-replit.png)
+![Hello Replit](/images/repls/repl-auth/hello-replit.png)
 
 ## The Authentication Script 
 
@@ -73,17 +73,17 @@ To add authentication to our Flask app, add the following within the **body** of
 
 This script can be placed anywhere in the document **body** and will create an iframe within its parent element. Additionally, any JavaScript placed in the `authed` attribute will be executed when the user finishes authenticating. Currently, our app will just reload once the user authenticates. 
 
-If we run our application now, we'll see a `Login with Repl.it` button. 
+If we run our application now, we'll see a `Login with Replit` button. 
 
 ![Login button](/images/repls/repl-auth/login-button.png)
 
 If you click the button, an authorization window will pop up with **Let (your site url) know who you are?**, a profile summary and an `Authorize` button. Clicking the button doesn't do anything at this stage; we'll add some functionality next. 
 
-![Repl.it authentication window](/images/repls/repl-auth/authentication-window.png)
+![Replit authentication window](/images/repls/repl-auth/authentication-window.png)
 
 ## Retrieving Information from the Authenticated Account
 
-We can retrieve the user's data by requesting information from the Repl.it specific headers and extracting data from them. The headers we want for this tutorial are `X-Replit-User-Id`, `X-Replit-User-Name` and `X-Replit-User-Roles`.
+We can retrieve the user's data by requesting information from the Replit specific headers and extracting data from them. The headers we want for this tutorial are `X-Replit-User-Id`, `X-Replit-User-Name` and `X-Replit-User-Roles`.
 
 Let's get these from the header and pass them to our HTML template. 
 
@@ -100,7 +100,7 @@ def hello_world():
 	)
 ```
 
-Above, we use `request` to get the Repl.it headers and place them into variables.
+Above, we use `request` to get the Replit headers and place them into variables.
 
 Next we should update our `index.html` page to use the headers passed to it and display them back to the user if they are authenticated. 
 
@@ -132,7 +132,7 @@ Be aware that if you're going to use an accounts system, **PLEASE** do all the s
 
 ## Closing Notes
 
-If you followed along, you'll have your own repl to expand. If not, you can [fork our repl](https://repl.it/@ritza/replit-auth) or test it out below.
+If you followed along, you'll have your own repl to expand. If not, you can [fork our repl](https://replit.com/@ritza/replit-auth) or test it out below.
 
-<iframe height="400px" width="100%" src="https://repl.it/@ritza/replit-auth?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/replit-auth?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 

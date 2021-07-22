@@ -8,7 +8,7 @@ During this hands-on tutorial you'll learn how to use Python to:
  - collect data from web-based APIs
  - create a data-driven web application
 
-You'll be working with the [Spotify API](https://developer.spotify.com/documentation/web-api/) to complete your own web app, using the [MixTape template](https://mixtape.datadesigns.repl.co/) and [Repl.it database](https://docs.repl.it/misc/database). Here's a [completed example](https://mixtape-example.datadesigns.repl.co/).
+You'll be working with the [Spotify API](https://developer.spotify.com/documentation/web-api/) to complete your own web app, using the [MixTape template](https://mixtape.datadesigns.repl.co/) and [Replit database](https://docs.replit.com/misc/database). Here's a [completed example](https://mixtape-example.datadesigns.repl.co/).
 
 ## [Spotify API project 2: Song seeder and analytics web app](https://seeder-tutorial.datadesigns.repl.co/)
 

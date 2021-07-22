@@ -1,6 +1,6 @@
 # Annotations
 
-Annotations enable you to have conversations over code, within repl.it
+Annotations enable you to have conversations over code, within Replit
 
 > We're still in the process of rolling out annotations. If you don't see them yet, you may need to enable [explorer mode](/misc/explorer)
 
