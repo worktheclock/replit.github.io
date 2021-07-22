@@ -14,7 +14,7 @@ At Replit, our mission is to make programming more accessible to all. We aim to 
 
 - More to come!
 
-*Email us at contact@repl.it if you'd like to write curriculum for us. We have some budget available.*
+*Email us at contact@replit.com if you'd like to write curriculum for us. We have some budget available.*
 
 ## **Why are we doing this?**
 

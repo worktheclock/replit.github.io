@@ -30,4 +30,4 @@ Though markdown is preferred whenever possible.  Most of these tags are used whe
 
 # Contact
 
-If you need anything, feel free to reach out to us at [contact@repl.it](mailto:contact@repl.it) or open an issue on this repo.
+If you need anything, feel free to reach out to us at [contact@replit.com](mailto:contact@replit.com) or open an issue on this repo.
