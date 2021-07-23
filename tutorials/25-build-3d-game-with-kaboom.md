@@ -41,7 +41,7 @@ Kaboom also works on the idea of "Scenes". Scenes are like levels, or different 
 
 ## Setting up the Kaboom Environment
 
-To set up the game play environment, click the dropdown next to the Kaboom menu. Uncheck "Full Screen", and set the Width to 320 and Height to 200. Then choose a dark blue or black as the "Clear Color".
+To set up the game play environment, click the dropdown next to the Kaboom menu. Uncheck "Full Screen", and set the Width to 320 and Height to 200. Then choose dark blue or black as the "Clear Color".
 
 ![Set up Kaboom environment](/images/tutorials/25-3d-game-kaboom/setup.gif)
 
