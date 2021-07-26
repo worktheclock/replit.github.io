@@ -1,4 +1,4 @@
-# Managing dependencies using Repl.it
+# Managing dependencies using Replit
 
 Nearly all useful programs rely to some extent on pre-existing code in various forms. The existing code that your code relies on is known as a _dependency_. You have already come across some dependencies in previous tutorials: you used the `math` module to calculate quadratic equations in the first tutorial and you used the `requests` module to fetch weather data in the second tutorial.
 
@@ -14,7 +14,7 @@ In this tutorial, you'll gain more experience with all three categories of depen
 
 Dependency management is a hugely complicated area, and there is a large ecosystem of related tools to help manage packaging and installing Python programs. We won't be covering all of the options and background, but you can read an overview of the different tools [here](https://modelpredict.com/python-dependency-management-tools).
 
-## Understanding Repl.it's magic import tool and the universal package manager
+## Understanding Replit's magic import tool and the universal package manager
 
 In nearly all programming environments, you have to explicitly install third-party dependencies. Let's say you wanted to use the `requests` library (which is not included in Python by default) on your local machine. If you try to import it, you would get a `ModuleNotFound` error, as shown below.
 
@@ -22,7 +22,7 @@ In nearly all programming environments, you have to explicitly install third-par
 
 In order to use this library, you would first have to install it using a command similar to `pip install requests`, and only then would the import statement run correctly.
 
-Repl.it, by contrast, can often do the installation for you completely automatically, using the [Universal Package Manager](https://blog.repl.it/upm). The moment you run the `import requests` line of code, the package manager will go find the correct package and install it, or in some cases Repl.it will even have pre-installed the package. Either way, your code will "just work".
+Replit, by contrast, can often do the installation for you completely automatically, using the [Universal Package Manager](https://blog.replit.com/upm). The moment you run the `import requests` line of code, the package manager will go find the correct package and install it, or in some cases Replit will even have pre-installed the package. Either way, your code will "just work".
 
 ![**Image 2:** *Seamless external package use on a new repl*](/images/tutorials/03-handling-dependecies/03-02-import-module.png)
 
@@ -30,7 +30,7 @@ This is super convenient, but sometimes you need more control. For example, you 
 
 ## Installing packages through the GUI 
 
-If you're not sure exactly which package you need, you can use Repl.it's built-in package manager GUI to search for packages. In the example below, we are looking for a package called `beautifulsoup4`.
+If you're not sure exactly which package you need, you can use Replit's built-in package manager GUI to search for packages. In the example below, we are looking for a package called `beautifulsoup4`.
 
 To use this, you need to 
 
@@ -59,7 +59,7 @@ print([x.get("title") for x in soup.findAll("input") if x.get("title")])
 
 This code uses the `requests` library to scrape the HTML from google.com and then uses the `beautifulsoup4` library to get the title of the button off the page and print it to the console. 
 
-Because `requests` is one of the most commonly used Python libraries, Repl.it probably installed it in a slightly different way from most packages. However, `beautifulsoup4` is less common and this will have been installed in the standard way using [poetry](https://python-poetry.org/docs/basic-usage/). 
+Because `requests` is one of the most commonly used Python libraries, Replit probably installed it in a slightly different way from most packages. However, `beautifulsoup4` is less common and this will have been installed in the standard way using [poetry](https://python-poetry.org/docs/basic-usage/). 
 
 If you go back to the files tab, you'll see two new files `poetry.lock` and `pyproject.toml` which were created automatically by the installer. Take a look inside the `pyproject.toml` file.
 
@@ -69,11 +69,11 @@ In this case, line 9 says that our project relies on the `beautifulsoup4` packag
 
 ## Building an NLP project using `spaCy`
 
-So far, we have installed packages that are easy for the Repl.it universal dependency manager to install automatically, behind the scenes. Some packages are more complicated though. [`spaCy`](https://spacy.io/), for example, is an NLP library that relies on a large external data file. When installing this library, you usually have to install this data file as a separate step.
+So far, we have installed packages that are easy for the Replit universal dependency manager to install automatically, behind the scenes. Some packages are more complicated though. [`spaCy`](https://spacy.io/), for example, is an NLP library that relies on a large external data file. When installing this library, you usually have to install this data file as a separate step.
 
 ### Installing the `spaCy` language model
 
-To get this to work on Repl.it, we'll have to manually modify the `pyproject.toml` file.
+To get this to work on Replit, we'll have to manually modify the `pyproject.toml` file.
 
 Create a new repl, `SpacyExample`, then click on the `Packages` icon and search for "spacy".
 
@@ -146,13 +146,13 @@ The GitHub page also lets us know what version of `spaCy` is needed to make sure
 
 Here we see that `spaCy` version should be greater than or equal to *2.3.0*, but less than *2.4.0*. We should make a note of this for later, so we can check that we have pinned an appropriate `spaCy` version.
 
-If we scroll right to the bottom of the page, you will see an "Assets" section, and under this you will see the same `Package` icon we used in Repl.it with "en_core_web_sm-2.3.1.tar.gz" next to it. This is what we have been looking for: the file containing the model.
+If we scroll right to the bottom of the page, you will see an "Assets" section, and under this you will see the same `Package` icon we used in Replit with "en_core_web_sm-2.3.1.tar.gz" next to it. This is what we have been looking for: the file containing the model.
 
 ![**Image 10:** *The model can be found under the "Assets" heading*](/images/tutorials/03-handling-dependecies/03-10-assets.png)
 
 Right-click on this file and select `copy link address`. We will need this shortly, as this is the URL of the file.
 
-We now need to modify our `pyproject.toml` file in Repl.it. Open this file and add the following section to it 
+We now need to modify our `pyproject.toml` file in Replit. Open this file and add the following section to it 
 
 ```
 [tool.poetry.dependencies.en_core_web_sm]
@@ -213,10 +213,10 @@ If you run this code, you should see a list of people making headlines today. At
 
 If you followed along, you'll already have your own version of the repl to extend. If not, start from ours. Fork it from the embed below.
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-03-nlp-spacy?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@GarethDwyer1/cwr-03-nlp-spacy?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Where next?
 
 `spaCy` is a very powerful NLP library and it can do far more than simply extract people's names. See what other interesting insights you can automatically extract from today's news.
 
-Now you can use the Repl.it IDE, write programs that use files, and install third-party dependencies. Next up, we'll be taking a look at doing data science with Repl.it by visualising data using `matplotlib` and `seaborn`.
+Now you can use the Replit IDE, write programs that use files, and install third-party dependencies. Next up, we'll be taking a look at doing data science with Replit by visualising data using `matplotlib` and `seaborn`.

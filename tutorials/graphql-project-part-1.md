@@ -5,7 +5,7 @@ In this project, we will create a website that fetches data from a [GraphQL](htt
 
 ![](/images/tutorials/graphql-project/graphql-project-0.gif)
 
-You can take a look at the final project at [https://repl.it/@ritza/GraphQL-FM](https://repl.it/@ritza/GraphQL-FM). You can also view it as a standalone page by pressing the `Open in a new tab` button (at the top right of the former link) or by going straight to [https://graphql-fm.ritza.repl.co](https://graphql-fm.ritza.repl.co/).
+You can take a look at the final project at [https://replit.com/@ritza/GraphQL-FM](https://replit.com/@ritza/GraphQL-FM). You can also view it as a standalone page by pressing the `Open in a new tab` button (at the top right of the former link) or by going straight to [https://graphql-fm.ritza.repl.co](https://graphql-fm.ritza.repl.co/).
 
 We will create the above example in two separate steps. Part 1 (this article) covers the basics of GraphQL and setting up our API. [Part 2](./graphql-project-part-2) will show how we can turn the data from the GraphQL API into a fully functional website. We will start with the following:
 
@@ -24,7 +24,7 @@ We will create the above example in two separate steps. Part 1 (this article) co
 
 ## Creating your own project with Replit
 
-If you haven't already, head to the [signup page](https://repl.it/signup) and create a Replit account. Once created, set up a new project by:
+If you haven't already, head to the [signup page](https://replit.com/signup) and create a Replit account. Once created, set up a new project by:
 
 1. Clicking on the `+ New repl` button.
 2. Choosing the "HTML, CSS, JS" language. 

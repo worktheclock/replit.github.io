@@ -9,7 +9,7 @@ Being a small startup with limited resources, we unfortunately can't run a bug b
 
 ## Responsible Disclosure
 
-Pursuant to our [terms of service](https://repl.it/site/terms), you should not take any actions
+Pursuant to our [terms of service](https://replit.com/site/terms), you should not take any actions
 that interfere or disrupt the service. If you are in doubt, and think there might be a risk of service
 disruption, then don't try to verify the bug yourself – email us and we'll work with you to verify it.
 

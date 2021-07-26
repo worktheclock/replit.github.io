@@ -17,12 +17,12 @@ If you'd like to embed specific code, you must:
 
 Here is an example:
 
-<iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@amasad/PitifulLastingWhoopingcrane?lite=true"></iframe>
+<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@amasad/PitifulLastingWhoopingcrane?lite=true"></iframe>
 
 And the HTML snippet for this:
 
 ```html
-<iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@amasad/PitifulLastingWhoopingcrane?lite=true"></iframe>
+<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@amasad/PitifulLastingWhoopingcrane?lite=true"></iframe>
 ```
 
 You can also manually embed repls by using your own custom `iframe` tags. These repls must have `?lite=true` as a query parameter to be embedded. You can also include `outputonly=1` as a query parameter if you want to hide the editor in the embed. Note that the code is still accessible if the user opens the repl on Replit.

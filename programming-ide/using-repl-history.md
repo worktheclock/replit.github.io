@@ -2,8 +2,8 @@
 To help ensure you never lose work, Replit auto-saves your code as you write. If you ever lose an edit to your code that you'd like to recover, repl history is there to help.
 
 ## How to Access History
-A repl's history is located at `https://repl.it/@username/repltitle/history`, but you can reach the same page by:
-  - Choosing "History" from the three-dot menu for that specific repl (from the [My Repls](https://repl.it/repls) page) or
+A repl's history is located at `https://replit.com/@username/repltitle/history`, but you can reach the same page by:
+  - Choosing "History" from the three-dot menu for that specific repl (from the [My Repls](https://replit.com/repls) page) or
   - Clicking on the rewind button located in the top navigation bar inside the repl.
 
 ## Using History

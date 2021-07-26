@@ -101,7 +101,7 @@ We'll go over the contents of this request in **Part 3** of this tutorial.
 
 You may have noticed that the integration builder has hardcoded our API key. This isn’t great.
 
-Luckily, Replit supports environment variables, and these are stored under secrets on the repl. [Check out the Replit .env tutorial here](https://docs.repl.it/tutorials/08-storing-secrets-and-history).
+Luckily, Replit supports environment variables, and these are stored under secrets on the repl. [Check out the Replit .env tutorial here](https://docs.replit.com/tutorials/08-storing-secrets-and-history).
 
 To create an environment variable for the API key, click on the lock icon on the left side panel of the repl. Set the key as `STRIPE_KEY` and enter the value for your Stripe key. It will be something like:
 

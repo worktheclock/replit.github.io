@@ -1,4 +1,4 @@
-# Building a game with PyGame and Repl.it
+# Building a game with PyGame and Replit
 
 ![](/images/tutorials/07-pygame/07-01-heading.png)
 
@@ -11,11 +11,11 @@ The basic premise of the game is as follows. You're a juggler, learning to juggl
 
 ## Creating a PyGame repl
 
-Although [PyGame](https://en.wikipedia.org/wiki/Pygame) is a standard Python library, Repl.it provides it installed as a separate language. Create a new repl and select PyGame from the language dropdown.
+Although [PyGame](https://en.wikipedia.org/wiki/Pygame) is a standard Python library, Replit provides it installed as a separate language. Create a new repl and select PyGame from the language dropdown.
 
 ![**Image 2:** *Choosing PyGame from the `Create New Repl` screen.*](/images/tutorials/07-pygame/07-02-new-pygame-repl.png)
 
-You'll see "Python3 with PyGame" displayed in the default console and a separate pane in the Repl.it IDE where you will be able to see and interact with the game you will create.
+You'll see "Python3 with PyGame" displayed in the default console and a separate pane in the Replit IDE where you will be able to see and interact with the game you will create.
 
 The first thing we need is a so-called "sprite", which is a basic image file that we will use in our game. Download the tennis ball file available [here](/tutorial-files/build-pygame/small_tennis.png) and save it to your local machine.
 
@@ -284,7 +284,7 @@ Now the game is to see how many balls you can juggle with. If it's too easy, mod
 
 If you followed along, you'll already have your own version of the repl to extend. If not, start from ours. Fork it from the embed below.
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-07-juggling-with-pygame?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@GarethDwyer1/cwr-07-juggling-with-pygame?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Where next?
 

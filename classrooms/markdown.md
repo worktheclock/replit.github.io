@@ -117,9 +117,9 @@ Italics only uses *one asterisk*
 **Markdown:**
 
 ```
-[Repl.it Landing Page!](https://repl.it/)
+[Replit Landing Page!](https://replit.com/)
 ```
 
 **Result:**
 
-[Repl.it Landing Page!](https://repl.it/)
+[Replit Landing Page!](https://replit.com/)

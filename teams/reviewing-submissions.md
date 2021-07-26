@@ -43,6 +43,6 @@ You can also use familiar markdown syntax in threads and chat.
 
 Here's a quick guide to markdown syntax available in annotation threads:
 
-<img src="https://blog.repl.it/images/annotations/annotations-formatting-2.png" alt="Markdown syntax in Annotations" width="100"/>
+<img src="https://blog.replit.com/images/annotations/annotations-formatting-2.png" alt="Markdown syntax in Annotations" width="100"/>
 
 

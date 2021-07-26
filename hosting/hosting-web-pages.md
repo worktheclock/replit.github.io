@@ -28,7 +28,7 @@ Note that a repl's public link will persist, even after the repl has been delete
 
 ## Custom Domains
 
-Any hosted repl can be linked to a domain that you own. This includes both [static sites](#hosting-a-web-site) and [HTTP servers](/repls/http-servers). To get started, you'll need a domain to link with your repl. If you don't already have a domain, [Dotcomboom](https://repl.it/@dotcomboom) has created a [great tutorial on getting a free domain from Freenom](https://repl.it/talk/learn/How-to-use-a-custom-domain/8834).
+Any hosted repl can be linked to a domain that you own. This includes both [static sites](#hosting-a-web-site) and [HTTP servers](/repls/http-servers). To get started, you'll need a domain to link with your repl. If you don't already have a domain, [Dotcomboom](https://replit.com/@dotcomboom) has created a [great tutorial on getting a free domain from Freenom](https://replit.com/talk/learn/How-to-use-a-custom-domain/8834).
 
 Once you have your domain link, we can get to work linking it with your repl: 
 
@@ -65,7 +65,7 @@ You can unlink your domain at any time by clicking on the pencil icon and clicki
 
 Here's an example of a hosted webpage using p5.js. The live, full-screen version can be found [here](https://p5-demo--timmy_i_chen.repl.co).
 
-<iframe height="800px" width="100%" src="https://repl.it/@timmy_i_chen/p5-demo?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="800px" width="100%" src="https://replit.com/@timmy_i_chen/p5-demo?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Takedown Requests
 

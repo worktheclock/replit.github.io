@@ -2,7 +2,7 @@
 
 [There is also a Java version of this guide](./CentralizedAutograder-java)
 
-**Note:** ⚠️ ⚠️ This guide shows you how to set up a basic fully automated homework grader. It is intended as a proof-of-concept to showcase how to build similar projects on top of Repl.it. **It should not be used as-is in cases where data is important or sensitive. For example, it offers no protection against malicious students who could submit code similar to `import os; os.system("rm -rf /")` to break the server and delete or modify other students' submissions or grades.** Stay tuned for updated guides and sample repls that resolve these issues. ⚠️⚠️
+**Note:** ⚠️ ⚠️ This guide shows you how to set up a basic fully automated homework grader. It is intended as a proof-of-concept to showcase how to build similar projects on top of Replit. **It should not be used as-is in cases where data is important or sensitive. For example, it offers no protection against malicious students who could submit code similar to `import os; os.system("rm -rf /")` to break the server and delete or modify other students' submissions or grades.** Stay tuned for updated guides and sample repls that resolve these issues. ⚠️⚠️
 
 In a [previous guide](./SimpleAutograding) we built a basic autograding solution that could automatically run and test your students' assignments. However, there were still some manual steps involved: you needed to navigate to each student's submission of the assignment and kick off the tests manually.
 
@@ -10,7 +10,7 @@ In this guide, we'll show you how to take it a step further and build a centrali
 
 This guide shows you how to build the solution step-by-step. If you just want to get it up and running as quickly as possible, you can follow the [quickstart guide](./CentralizedAutograderQuickstart) instead which shows you how to get started from our template repls.
 
-Note that you'll need a subscription to [Teams for Education](https://repl.it/teams) to follow this guide as it is presented, but you should also be able to adapt it to run using a normal Repl.it account if you need.
+Note that you'll need a subscription to [Teams for Education](https://replit.com/teams) to follow this guide as it is presented, but you should also be able to adapt it to run using a normal Replit account if you need.
 
 We assume that your students are learning Python. We'll give an example Python assignment and an example testing suite using [PyTest](https://docs.pytest.org/en/stable/). We'll use [Flask](https://flask.palletsprojects.com) to create the centralised grading server.
 
@@ -100,7 +100,7 @@ def run_tests(subdir):
 
 The first function, `extract_student_number` reads the first line of the submitted code file and looks for a student number. In the assignment project we prepare later, we'll show students how to format this correctly.
 
-*This can be adapted to automatically use the student's Repl.it username by retrieving the "REPL_OWNER" environment variable. You'll have to retrieve the username through the student's `submit.py` file and modify the `extract_student_number` function from the server's `main.py` file to use the username instead.  You can read [Repl Environment Variables](/misc/repl-environment-variables) for more information.*
+*This can be adapted to automatically use the student's Replit username by retrieving the "REPL_OWNER" environment variable. You'll have to retrieve the username through the student's `submit.py` file and modify the `extract_student_number` function from the server's `main.py` file to use the username instead.  You can read [Repl Environment Variables](/misc/repl-environment-variables) for more information.*
 
 The second function `save_submission` creates a new directory on the server using the student number and populates it with the following files:
 
@@ -350,7 +350,7 @@ In each of these folders, you can see the code that was submitted.
 
 You can also see `report.md` has been generated, with details of the two submissions (who submitted them and when) and their calculated grades.
 
-If you want to discuss the submitted code with the student, you can navigate to the grading-project submissions page and view the submission in question. From there you can select a piece of code from your student's submission and click on the annotate button to leave a message. This makes it easy to ask for clarification or give advice. You can read more on the annotation feature [here](https://docs.repl.it/Teams/Annotations)
+If you want to discuss the submitted code with the student, you can navigate to the grading-project submissions page and view the submission in question. From there you can select a piece of code from your student's submission and click on the annotate button to leave a message. This makes it easy to ask for clarification or give advice. You can read more on the annotation feature [here](https://docs.replit.com/Teams/Annotations)
 
 ![](/images/teamsForEducation/centralized-autograder-python/08-report-serverside.png)
 
@@ -367,7 +367,7 @@ Leave the grading server running (don't press the "Stop" button) so that the stu
 Now you have a robot to take care of most of your grading for you which should save you a bunch of time! In this guide, we showed you how to set up an autograder, but you might like to extend it on your own with some additional features. For example, you could
 
 * Create a more sophisticated directory and reporting structure so that different assignments can be submitted to the same server without all being mixed up into a single directory and single report.
-* Set up a service like [UpTimerRobot](https://uptimerobot.com/) to keep an eye on your grading server and notify you if it becomes unavailable (this also stops Repl.it shutting it down from inactivity).
+* Set up a service like [UpTimerRobot](https://uptimerobot.com/) to keep an eye on your grading server and notify you if it becomes unavailable (this also stops Replit shutting it down from inactivity).
 * Return the grades to students so that they see "You scored 75%" after submitting instead of just "Your code has been submitted".
 
 We've focused on Python in this guide, but you should be able to adapt it to testing and grading submissions in JavaScript, Java, or other languages, with some work. In future guides, we'll give examples of how to do this.

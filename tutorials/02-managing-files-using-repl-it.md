@@ -1,10 +1,10 @@
-# Working with Files using Repl.it
+# Working with Files using Replit
 
-In this lesson, you'll gain experience with using and manipulating files using Repl.it. In the previous lesson you saw how to add new files to a project, but there's a lot more you can do. 
+In this lesson, you'll gain experience with using and manipulating files using Replit. In the previous lesson you saw how to add new files to a project, but there's a lot more you can do. 
 
 Files can be used for many different things. In programming, you'll primarily use them to store data or code. Instead of manually creating files and entering data, you can also use your programs to create files and automatically write data to these.
 
-Repl.it also offers functionality to mass import or export files from or to the IDE; this is useful in cases when your program writes data to multiple files and you want to export all of these for use in another program.
+Replit also offers functionality to mass import or export files from or to the IDE; this is useful in cases when your program writes data to multiple files and you want to export all of these for use in another program.
 
 ## Working with files using Python
 
@@ -53,7 +53,7 @@ Run the code again and you should see a new file pop up in the files pane. If yo
 
 ![**Image 4:** Writing data to a file and viewing it](/images/tutorials/02-managing-files/02-04-write-file.png)
 
-## Building a weather logging system using Python and Repl.it
+## Building a weather logging system using Python and Replit
 
 Now that you can read from files and write to them, let's build a mini-project that records historical weather temperatures. Our program will
 
@@ -189,9 +189,9 @@ and run the script again. If you open one of the city files again, you'll see it
 
 ## Exporting our weather data files
 
-If you run this script every day for a few months, you'll have a nice data set that could be useful in other contexts too. If you want to download all of the data from Repl.it, you can use the `Download as zip` functionality to export all of the files in a repl (including the code and data files).
+If you run this script every day for a few months, you'll have a nice data set that could be useful in other contexts too. If you want to download all of the data from Replit, you can use the `Download as zip` functionality to export all of the files in a repl (including the code and data files).
 
-![**Image 12:** *Downloading all of our files from Repl.it*](/images/tutorials/02-managing-files/02-12-export-files.png)
+![**Image 12:** *Downloading all of our files from Replit*](/images/tutorials/02-managing-files/02-12-export-files.png)
 
 Once you've downloaded the `.zip` file you can extract it in your local file system and find all of the data files which can now be opened with other programs as required.
 
@@ -199,7 +199,7 @@ Once you've downloaded the `.zip` file you can extract it in your local file sys
 
 From the same menu, you can also choose `upload file` or `upload folder` to import files into your repl. For example, if you cleaned the files using external software and then wanted your repl to start appending new data to the cleaned versions, you could re-import them.
 
-Repl.it will warn you about overwriting your existing files if you haven't changed the names.
+Replit will warn you about overwriting your existing files if you haven't changed the names.
 
 ![**Image 14:** *Be careful about overwriting your precious data*](/images/tutorials/02-managing-files/02-14-upload-files.png)
 
@@ -207,11 +207,11 @@ Repl.it will warn you about overwriting your existing files if you haven't chang
 
 If you followed along, you'll already have your own version of the repl to extend. If not, start from ours. Fork it from the embed below.
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-02-weather-report?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@GarethDwyer1/cwr-02-weather-report?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Where next?
 
-That's it for our weather reporting project. You learned how to work with files in Python and Repl.it, including different modes (read, write, or append) in which files can be opened.
+That's it for our weather reporting project. You learned how to work with files in Python and Replit, including different modes (read, write, or append) in which files can be opened.
 
 You also worked with an external library, `requests`, for fetching data over the internet. This module is not actually part of Python, and in the next article you'll learn more about how to manage external modules or dependencies.
 

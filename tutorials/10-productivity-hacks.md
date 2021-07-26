@@ -1,6 +1,6 @@
 # Productivity hacks
 
-After coding for a while, you may find that there are some repetitive things that take up unnecessary time. For example, searching for and updating a variable name can seem laborious. Luckily, Repl.it has some built-in productivity tools that we'll take a look at in this tutorial.
+After coding for a while, you may find that there are some repetitive things that take up unnecessary time. For example, searching for and updating a variable name can seem laborious. Luckily, Replit has some built-in productivity tools that we'll take a look at in this tutorial.
 
 Specifically, you'll see how to:
 
@@ -12,7 +12,7 @@ Similarly to learning to touch type, there is often a steep *learning curve* whe
 
 ## Using the global command palette
 
-If you hit `Ctrl+K` (`Cmd+K` on MacOS) you'll see the following modal pop up, which lets you navigate through different parts of Repl.it at lightning speed using only your keyboard. If you have a lot of files, it's often useful to open them like this rather than scrolling through the directory structure in the files pane (the `find` option searches through files by their *name* while the `search` option searches through files by their *contents*.)
+If you hit `Ctrl+K` (`Cmd+K` on MacOS) you'll see the following modal pop up, which lets you navigate through different parts of Replit at lightning speed using only your keyboard. If you have a lot of files, it's often useful to open them like this rather than scrolling through the directory structure in the files pane (the `find` option searches through files by their *name* while the `search` option searches through files by their *contents*.)
 
 ![**Image 1:** *Using the global command palette.*](/images/tutorials/10-productivity/10-01-global-cmd-palette.png)
 
@@ -34,9 +34,9 @@ You can use the shortcuts directly from the command palette by selecting the cod
 
 ![**Image 3:** *Opening the command palette.*](/images/tutorials/10-productivity/10-03-dropdown-menu.png)
 
-Let's take a look at how these work by editing the [PyGame juggling project](https://repl.it/@GarethDwyer1/cwr-07-juggling-with-pygame) that we covered in a [previous tutorial](http://www.codewithrepl.it/07-building-a-game-with-pygame.html).
+Let's take a look at how these work by editing the [PyGame juggling project](https://replit.com/@GarethDwyer1/cwr-07-juggling-with-pygame) that we covered in a [previous tutorial](http://www.codewithrepl.it/07-building-a-game-with-pygame.html).
 
-Instead of carrying out the suggested operations as you usually would, use Repl.it's productivity features instead. 
+Instead of carrying out the suggested operations as you usually would, use Replit's productivity features instead. 
 
 ## Duplicating entire lines
 
@@ -73,7 +73,7 @@ As an example, below you can see how we might use this to first delete one of th
 
 It's also common to need to add a new line of code above or below the current one. Instead of using your mouse or arrow keys to get to the right place and then pressing `Enter`, you can instead use an "insert line" operation.
 
-Press `Ctrl+Shift+Enter` (`cmd+shift+enter` on MacOS) to insert a blank line directly above the current one and move the cursor to the start of it (Repl.it will even maintain the current level of indentation for you).
+Press `Ctrl+Shift+Enter` (`cmd+shift+enter` on MacOS) to insert a blank line directly above the current one and move the cursor to the start of it (Replit will even maintain the current level of indentation for you).
 
 ![**Image 6:** *Inserting lines.*](/images/tutorials/10-productivity/10-06-GIF-insert-blank-lines.gif)
 
@@ -130,7 +130,7 @@ Once you get hooked on keyboard shortcuts, you might wonder if you ever need to 
 
 The two main keyboard-focused text editors are called [Vim](https://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/). They both have steep learning curves (and there's a long-standing tradition that users of either fiercely argue about which is superior), but once you've put in the time to master them you can get rid of your mouse for good.
 
-If you've gotten used to either, you can emulate the experience in Repl.it by switching your keybinds. Go to the "Settings" tab and scroll down to where you can toggle between "default", "emacs" and "vim".
+If you've gotten used to either, you can emulate the experience in Replit by switching your keybinds. Go to the "Settings" tab and scroll down to where you can toggle between "default", "emacs" and "vim".
 
 ![**Image 13:** *Setting your keybinds to vim or emacs.*](/images/tutorials/10-productivity/10-13-vim-emacs.png)
 
@@ -138,10 +138,10 @@ If you've gotten used to either, you can emulate the experience in Repl.it by sw
 
 If you want to keep hacking on the PyGame project using your new keyboard prowess, you can continue from where we left off below.
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-10-productivity?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@GarethDwyer1/cwr-10-productivity?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Where next?
 
-You've reached the end of this collection of tutorials that teach you the ins and outs of Repl.it, and you should be able to build any project that you can imagine now.
+You've reached the end of this collection of tutorials that teach you the ins and outs of Replit, and you should be able to build any project that you can imagine now.
 
-If you're stuck for ideas, continue on to [Part 3](https://www.codewithrepl.it/#part-3) where we'll walk you through eight practical projects, focusing more on coding concepts than Repl.it features.
+If you're stuck for ideas, continue on to [Part 3](https://www.codewithrepl.it/#part-3) where we'll walk you through eight practical projects, focusing more on coding concepts than Replit features.

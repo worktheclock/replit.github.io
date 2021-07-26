@@ -3,7 +3,7 @@
 
 Replit Database is a simple, user-friendly key-value store inside of every repl. No configuration is required; you can get started right away!
 
-Read on for answers to Database FAQs, or jump right in and follow [this basic phone book tutorial](https://docs.repl.it/tutorials/11-using-the-replit-database) where you'll learn how to perform the fundamental "CRUD" (Create, Read, Update, Delete) operations with Replit Database.
+Read on for answers to Database FAQs, or jump right in and follow [this basic phone book tutorial](https://docs.replit.com/tutorials/11-using-the-replit-database) where you'll learn how to perform the fundamental "CRUD" (Create, Read, Update, Delete) operations with Replit Database.
 
  
 ## FAQs

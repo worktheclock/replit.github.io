@@ -124,7 +124,7 @@ Build a django web application and host it with Replit. You'll use geolocation a
 #### [Building a CRM app with NodeJS, Replit, and MongoDB](https://ritza.co/showcase/repl.it/building-a-crm-app-with-nodejs-repl-it-and-mongo-db)
 Another web application, but using NodeJS instead of Django. This is a different application where you'll build a basic app to manage customer information.
 
-#### [Introduction to Machine Learning with Python and repl.it](https://ritza.co/showcase/repl.it/introduction-to-machine-learning-with-python-and-repl-it)
+#### [Introduction to Machine Learning with Python and Replit](https://ritza.co/showcase/repl.it/introduction-to-machine-learning-with-python-and-repl-it)
 Build a machine-learning based text classifier. We skip the maths but show how you can use machine learning libraries to implement useful solutions without in-depth theoretical knowledge.
 
 #### [Quicksort tutorial: Python implementation with line by line explanation](https://ritza.co/showcase/repl.it/quicksort-tutorial-python-implementation-with-line-by-line-explanation)
@@ -136,7 +136,7 @@ During this hands-on tutorial you'll learn how to use Python to:
  - collect data from web-based APIs
  - create a data-driven web application
 
-You'll be working with the [Spotify API](https://developer.spotify.com/documentation/web-api/) to complete your own web app, using the [MixTape template](https://mixtape.datadesigns.repl.co/) and [Replit database](https://docs.repl.it/misc/database). Here's a [completed example](https://mixtape-example.datadesigns.repl.co/).
+You'll be working with the [Spotify API](https://developer.spotify.com/documentation/web-api/) to complete your own web app, using the [MixTape template](https://mixtape.datadesigns.repl.co/) and [Replit database](https://docs.replit.com/misc/database). Here's a [completed example](https://mixtape-example.datadesigns.repl.co/).
  
 #### [Spotify API project 2: Song seeder and analytics web app](https://seeder-tutorial.datadesigns.repl.co/)
 

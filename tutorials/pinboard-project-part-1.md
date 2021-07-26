@@ -8,7 +8,7 @@ In this project, you'll create a 'Pinboard': a web application to save, categori
 
 ![Example of the Moodboard functionality](/images/teamsForEducation/pinboard-project/pinboard.gif)
 
-You can take a look at the final code that we will have at the end of this project by going to [https://repl.it/@ritza/Pinboard-Project](https://repl.it/@ritza/Pinboard-Project). In addition, you can view it as a standalone page by pressing the `Open in a new tab` button (at the top right of the repl) or by going straight to the following URL: [https://pinboard-project.ritza.repl.co](https://pinboard-project.ritza.repl.co/)
+You can take a look at the final code that we will have at the end of this project by going to [https://replit.com/@ritza/Pinboard-Project](https://replit.com/@ritza/Pinboard-Project). In addition, you can view it as a standalone page by pressing the `Open in a new tab` button (at the top right of the repl) or by going straight to the following URL: [https://pinboard-project.ritza.repl.co](https://pinboard-project.ritza.repl.co/)
 
 We'll walk through the creation of the final pinboard in two parts.
 
@@ -17,7 +17,7 @@ We'll walk through the creation of the final pinboard in two parts.
 
 In part 1, we'll work through
 
-- [Creating Your Own Project on Repl.it](#creating-your-own-project-on-replit)
+- [Creating Your Own Project on Replit](#creating-your-own-project-on-replit)
 - [Basic Structure and Styling](#basic-structure-and-styling)
 - [Markup](#markup)
   - [Head](#head)
@@ -37,9 +37,9 @@ In part 1, we'll work through
 - [Next Steps](#next-steps)
 
 
-## Creating Your Own Project on Repl.it
+## Creating Your Own Project on Replit
 
-If you haven't already, head to the [signup page](https://repl.it/signup) and create a Repl.it account. Once created, set up a new project by:
+If you haven't already, head to the [signup page](https://replit.com/signup) and create a Replit account. Once created, set up a new project by:
 
 1. Clicking on the `+ New repl` button.
 2. Choosing the "HTML, CSS, JS" language. 
@@ -48,7 +48,7 @@ If you haven't already, head to the [signup page](https://repl.it/signup) and 
 
 ![Creating a new Repl](/images/teamsForEducation/pinboard-project/image-1.png)
 
-Because we selected "HTML, CSS, JS" as our repl language, Repl.it has created the basic files needed for our front-end project, which should be:
+Because we selected "HTML, CSS, JS" as our repl language, Replit has created the basic files needed for our front-end project, which should be:
 
 - `index.html`
 - `style.css`

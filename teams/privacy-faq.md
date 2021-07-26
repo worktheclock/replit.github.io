@@ -49,7 +49,7 @@ In addition, and consistent with COPPA, we do not disclose student data to third
 
 **Can Replit be used in compliance with FERPA?**
 
-Yes, when we contract with schools to use Teams for Education, we do not collect information about students that can be used to identify or contact them, such as a name and email address. We only collect student’s Log Information (as defined in our [privacy policy](https://repl.it/site/privacy)) and use this limited data for the purposes for which it was provided to us; that is, to perform services for the school and support our internal operations. We do not disclose data to third parties other than our own subprocessors.
+Yes, when we contract with schools to use Teams for Education, we do not collect information about students that can be used to identify or contact them, such as a name and email address. We only collect student’s Log Information (as defined in our [privacy policy](https://replit.com/site/privacy)) and use this limited data for the purposes for which it was provided to us; that is, to perform services for the school and support our internal operations. We do not disclose data to third parties other than our own subprocessors.
 
 **Is Replit compliant with the GDPR?**
 
@@ -74,10 +74,10 @@ This list is **not exhaustive** and we will continue to update it over time, how
 
 **Will Replit sign our university's, school's or district's Data Security or Privacy Agreement?**
 
-Yes. If you would like us to review your local privacy regulation or sign your organization's specific privacy policy, please email [sales@replit.com](mailto:sales@repl.it). 
+Yes. If you would like us to review your local privacy regulation or sign your organization's specific privacy policy, please email [sales@replit.com](mailto:sales@replit.com). 
 
-If you are a Local Educational Agency in the United States, our [U.S. Student Data Protection Addendum](https://docs.repl.it/Teams/US_Student_DPA) also applies. We are happy to send you a copy for comments/edits if you'd like.
+If you are a Local Educational Agency in the United States, our [U.S. Student Data Protection Addendum](https://docs.replit.com/Teams/US_Student_DPA) also applies. We are happy to send you a copy for comments/edits if you'd like.
 
 **Is all of the above information reflected in the Replit Privacy Policy?**
 
-Yes, our [Privacy Policy](https://repl.it/site/privacy) reflects all of this information.
+Yes, our [Privacy Policy](https://replit.com/site/privacy) reflects all of this information.

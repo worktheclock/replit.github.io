@@ -1,10 +1,10 @@
-# Teaching your kid to code with Repl.it
+# Teaching your kid to code with Replit
 
 If you're a parent who wants to teach your child how to code from scratch, this guide is for you. We've put together some examples that are easy to get started with, don't require any setup, and are fun from the start.
 
 <hr>
 
-**A note on privacy:** Especially if your child is young, you're probably worried about privacy and data protection. In many countries, storing and processing personal data of minors is treated differently. In the USA, there are regulations concerning anyone under the age of 13. You can use our Teams for Education package from [repl.it teams](https://repl.it/teams) which includes an anonymous invite feature. This allows you to invite your child to create a fully anonymous account. You can find more information on invitations and the privacy invite links [here](https://docs.repl.it/Teams/Invitations).
+**A note on privacy:** Especially if your child is young, you're probably worried about privacy and data protection. In many countries, storing and processing personal data of minors is treated differently. In the USA, there are regulations concerning anyone under the age of 13. You can use our Teams for Education package from [Replit teams](https://replit.com/teams) which includes an anonymous invite feature. This allows you to invite your child to create a fully anonymous account. You can find more information on invitations and the privacy invite links [here](https://docs.replit.com/Teams/Invitations).
 <hr>
 
 ## The benefits of teaching children to code
@@ -17,7 +17,7 @@ Start with showing them how coding can be **fun** and how they can **create** th
 
 ## Getting started
 
-In this guide, we'll show some basic examples focused on graphical programming. We'll show you how to use different libraries for basic game development, including standard libraries and some custom Repl.it ones. We'll look at examples using:
+In this guide, we'll show some basic examples focused on graphical programming. We'll show you how to use different libraries for basic game development, including standard libraries and some custom Replit ones. We'll look at examples using:
 
 * Python Turtle
 * PyGame
@@ -30,7 +30,7 @@ We built Python Play on top of PyGame as a compromise in the simplicity/power tr
 
 Each of the examples is a starting point for you and your child to play with and develop your own unique extensions.
 
-If you do not have a Repl.it Teams account yet, read this [introduction to Teams](https://docs.repl.it/Teams/Intro) and sign up. The free account will be sufficient to follow along, but you may choose a premium option for more powerful repls and heightened privacy.
+If you do not have a Replit Teams account yet, read this [introduction to Teams](https://docs.replit.com/Teams/Intro) and sign up. The free account will be sufficient to follow along, but you may choose a premium option for more powerful repls and heightened privacy.
 
 ## Drawing with Python Turtle
 
@@ -44,7 +44,7 @@ You can draw the maze and explain to your child how you did it and ask them to w
 
 The idea is that you (the parent) draw the maze showing the kid how you do it and then allow them to look at your code and write code that will make their turtle navigate the maze and "escape".
 
-Create a new Python repl or [fork ours](https://repl.it/@ritza/coding-for-kids-turtle#main.py) and start by adding the following code to the `main.py` file.
+Create a new Python repl or [fork ours](https://replit.com/@ritza/coding-for-kids-turtle#main.py) and start by adding the following code to the `main.py` file.
 
 ```python
 import turtle
@@ -106,7 +106,7 @@ If you want something almost as simple as Turtle, but with more advanced options
 
 ![](/images/teamsForEducation/teach-your-kid/python-play-example.gif)
 
-Fork [this repl](https://repl.it/@ritza/coding-for-kids-python-play) which is a simple game that shows how to process mouse input. 
+Fork [this repl](https://replit.com/@ritza/coding-for-kids-python-play) which is a simple game that shows how to process mouse input. 
 
 The cat moves randomly around the screen, and the player has to click on the cat within 15 flashes to win.
 
@@ -148,7 +148,7 @@ Once you're both comfortable with the Python Play syntax that makes up this game
 
 PyGame is more complicated than Python Play, but it also has a larger community and many [pre-built examples](https://www.pygame.org/docs/ref/examples.html) that you can use as a starting point.
 
-It's likely that your child will benefit from starting out with some easier libraries and moving up to Python Play over time. But if you want to jump in the deep end, we also have a [detailed tutorial](https://docs.repl.it/tutorials/07-building-a-game-with-pygame) on how to build a juggling game in PyGame.
+It's likely that your child will benefit from starting out with some easier libraries and moving up to Python Play over time. But if you want to jump in the deep end, we also have a [detailed tutorial](https://docs.replit.com/tutorials/07-building-a-game-with-pygame) on how to build a juggling game in PyGame.
 
 ## Drawing on a blank canvas with Basic
 
@@ -156,7 +156,7 @@ Programming used to look pretty different. Older languages like BASIC relied hea
 
 However, these constructs are also "closer to the metal" and they can help beginners understand how things like program flow actually work under the hood.
 
-[Classic Basic on Repl.it](https://docs.repl.it/misc/basic) combines the syntax of BASIC with some more modern features for the best of both worlds.
+[Classic Basic on Replit](https://docs.replit.com/misc/basic) combines the syntax of BASIC with some more modern features for the best of both worlds.
 
 At its simplest, it can be used like Microsoft Paint: to draw pixel by pixel on a canvas, but using code instead of your mouse.
 
@@ -164,13 +164,13 @@ At its simplest, it can be used like Microsoft Paint: to draw pixel by pixel on 
 
 Here's a starter example showing how to draw a dog pixel by pixel and then add a line using a `for` loop.
 
-Fork this [repl](https://repl.it/@ritza/coding-for-kids-basic) so that you and your child can draw together using code.
+Fork this [repl](https://replit.com/@ritza/coding-for-kids-basic) so that you and your child can draw together using code.
 
-Basic is definitely not limited to only drawing static pictures. For more inspiration, take a look at this repl of a [full snake game](https://repl.it/@ritza/BASIC-Kids-SnakeGame#program.bas).
+Basic is definitely not limited to only drawing static pictures. For more inspiration, take a look at this repl of a [full snake game](https://replit.com/@ritza/BASIC-Kids-SnakeGame#program.bas).
 
 ## Where next?
 
-Once your child understands the basics of programming they can move on to work through [our tutorials](https://docs.repl.it/tutorials/00-overview). 
+Once your child understands the basics of programming they can move on to work through [our tutorials](https://docs.replit.com/tutorials/00-overview). 
 
 While games are often a good way to get children hooked on programming, many children also prefer building non-game programs. See whether they are most interested in games, web application development or even something like data visualisation and then double down on finding more examples that match their interests.
 

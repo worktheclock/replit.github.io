@@ -2,7 +2,7 @@
 
 Repls typically go to sleep after a period of inactivity. To make sure that your repl is restarted, you can use our Always-on functionality.
 
-Note that this function is currently only available on our [Hacker plan](https://repl.it/site/pricing).
+Note that this function is currently only available on our [Hacker plan](https://replit.com/site/pricing).
 
 ## Enabling Always-on
 

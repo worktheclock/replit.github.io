@@ -4,7 +4,7 @@ To help you communicate with students and team members about what is required fr
 
 ## Leaving Instructions
 
-You can add any supplementary material or arbitrary files to your repl, which means you can add PDFs, images, or plain text notes. However, to leave instructions for your students, we recommend that you start with a README.md file. This is the standard documentation and entry-point file for code repositories and when Replit sees that file, it will display it first. Here is an [example repl with a README](https://repl.it/@amasad/python-with-readme).
+You can add any supplementary material or arbitrary files to your repl, which means you can add PDFs, images, or plain text notes. However, to leave instructions for your students, we recommend that you start with a README.md file. This is the standard documentation and entry-point file for code repositories and when Replit sees that file, it will display it first. Here is an [example repl with a README](https://replit.com/@amasad/python-with-readme).
 
 ## Classroom Lessons
 

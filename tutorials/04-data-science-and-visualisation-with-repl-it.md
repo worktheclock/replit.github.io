@@ -1,8 +1,8 @@
-# Data science with Repl.it: Plots and graphs
+# Data science with Replit: Plots and graphs
 
 So far, all the programs we have looked at have been entirely **text based**. They have taken text input and produced text output, on the console or saved to files.
 
-While text is flexible and powerful, sometimes a picture is worth a thousand words. Especially when analysing data, you'll often want to produce plots and graphs. There are three main ways of achieving this using Repl.it.
+While text is flexible and powerful, sometimes a picture is worth a thousand words. Especially when analysing data, you'll often want to produce plots and graphs. There are three main ways of achieving this using Replit.
 
 1. Creating a front-end only project and using only JavaScript, HTML and CSS.
 2. Creating a full web application with something like [Flask](https://flask.palletsprojects.com/), analysing the data in Python and passing the results to a front end to be visualised.
@@ -14,7 +14,7 @@ Here, we'll demonstrate how to do option 3, using Python and [`Matplotlib`](http
 
 ## Installing `Matplotlib` and creating a basic line plot
 
-`Matplotlib` is a third-party library for doing all kinds of plots and graphs in Python. We can install it by using Repl.it's "magic import" functionality. `Matplotlib` is a large and powerful library with a lot of functionality, but we only need `pyplot` for now: the module for plotting.
+`Matplotlib` is a third-party library for doing all kinds of plots and graphs in Python. We can install it by using Replit's "magic import" functionality. `Matplotlib` is a large and powerful library with a lot of functionality, but we only need `pyplot` for now: the module for plotting.
 
 Create a new Python repl and add the following code.
 
@@ -27,7 +27,7 @@ plt.show()
 
 There are many traditions in the Python data science world about how to import libraries. Many of the libraries have long names and get imported as easier-to-type shortcuts. You'll see that nearly all examples import `pyplot` as the shorter `plt` before using it, as we do above. We can then generate a basic line plot by passing two arrays to `plt.plot()` for X and Y values. In this example, the first point that we plot is `(1,6)` (the first value from each array). We then add all of the plotted points joined into a line graph.
 
-Repl.it knows that it needs an `X` server to display this plot (triggered when you call `plt.show()`), so after running this code you'll see "Starting X" in the main output console and a new graphical window will appear.
+Replit knows that it needs an `X` server to display this plot (triggered when you call `plt.show()`), so after running this code you'll see "Starting X" in the main output console and a new graphical window will appear.
 
 ![**Image 1:** *We can plot a basic line plot by passing in the X and Y values*](/images/tutorials/04-data-science/04-01-matplotlib.png)
 
@@ -145,10 +145,10 @@ Rerun the code. Instead of seeing the plot appear in the right-hand pane, you'll
 
 If you followed along, you'll already have your own version of the repl to extend. If not, start from ours. Fork it from the embed below.
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-04-matplotlib-plotting?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@GarethDwyer1/cwr-04-matplotlib-plotting?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Where next?
 
-You've learned how to make some basic plots using Python and Repl.it. There are millions of freely available data sets on the internet, waiting for people to explore them. You can find many of these using [Google's Dataset Search](https://datasetsearch.research.google.com/) service. Pick a topic that you're interested in and try to find out more about it through data visualisations.
+You've learned how to make some basic plots using Python and Replit. There are millions of freely available data sets on the internet, waiting for people to explore them. You can find many of these using [Google's Dataset Search](https://datasetsearch.research.google.com/) service. Pick a topic that you're interested in and try to find out more about it through data visualisations.
 
-Next up, we'll explore the multiplayer functionality of Repl.it in more detail so that you can code collaboratively with friends or colleagues.
+Next up, we'll explore the multiplayer functionality of Replit in more detail so that you can code collaboratively with friends or colleagues.

@@ -1,6 +1,6 @@
 # Copyright claims and takedown requests
 
-It is against our [Terms and Conditions](https://repl.it/site/terms) for users to publish any content that violates privacy rights, publicity rights, copyrights, or contract rights. We will immediately remove a repl at your request in the case of either of the following:
+It is against our [Terms and Conditions](https://replit.com/site/terms) for users to publish any content that violates privacy rights, publicity rights, copyrights, or contract rights. We will immediately remove a repl at your request in the case of either of the following:
 
 * You hold a copyright to content contained within a public/private repl, or a public/private classroom assignment.
 * Personal/private information is contained within a public/private repl, or a public/private classroom assignment.

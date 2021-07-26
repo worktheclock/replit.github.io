@@ -139,7 +139,7 @@ Read about the supported assert function for each unit testing library:
 
 ## Teams for Education
 
-Unit testing is supported in [Teams for Education](https://teamsforeducationresources.util.repl.co). If you don't have a team yet, create one [here](https://repl.it/teams).
+Unit testing is supported in [Teams for Education](https://teamsforeducationresources.util.repl.co). If you don't have a team yet, create one [here](https://replit.com/teams).
 
 ### Creating a project
 

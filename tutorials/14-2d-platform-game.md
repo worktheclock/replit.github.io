@@ -1,4 +1,4 @@
-# Build a 2D Platform Game with PyGame and Repl.it
+# Build a 2D Platform Game with PyGame and Replit
 
 In a [previous tutorial](./07-building-a-game-with-pygame) we introduced graphical game development with PyGame, covering how to develop a 2D game with animated sprites and user interaction. In this tutorial, we'll go a step further and create a 2D platformer, where you can have an alien walk and jump around a room full of boxes. The previous PyGame tutorial is not a prerequisite for trying this one.
 
@@ -10,7 +10,7 @@ Create a new repl and select "PyGame" from the language dropdown.
 
 ![](/images/tutorials/14-2d-platform-game/14-01-new-pygame-repl.png)
 
-You'll see "Python3 with PyGame" displayed in the default console and a separate pane in the Repl.it IDE where you will be able to see and interact with the game you will create.
+You'll see "Python3 with PyGame" displayed in the default console and a separate pane in the Replit IDE where you will be able to see and interact with the game you will create.
 
 Before we start writing code, we're going to need a few sprites, which we've made available [here](/tutorial-files/2d-platform-game/2d-platform-game-sprites.zip). Extract this ZIP file and add the files inside to your repl using the `upload file` function. You can select multiple files to upload at once. Your repl's file pane should now look like this:
 
@@ -682,4 +682,4 @@ If you'd like to continue working on this game, you can find a large number of m
 
 You can find our game repl below:
 
-<iframe height="800px" width="100%" src="https://repl.it/@ritza/2D-platform-game?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="800px" width="100%" src="https://replit.com/@ritza/2D-platform-game?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>

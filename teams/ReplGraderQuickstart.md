@@ -2,7 +2,7 @@
 
 **Note: replgrader.com is currently in beta and has some limitations. It is actively being worked on. If you have any feedback or need help getting started, feel free to email gareth@ritza.co.**
 
-[ReplGrader.com](https://replgrader.com) is a free third-party grading service partnered with Repl.it. It provides very simple autograding of Python assignments. Here is a quickstart guide on how to use it, or head over to their site for more details.
+[ReplGrader.com](https://replgrader.com) is a free third-party grading service partnered with Replit. It provides very simple autograding of Python assignments. Here is a quickstart guide on how to use it, or head over to their site for more details.
 
 ## Create the grader repl
 Create a new Python project under your Teams account.
@@ -60,7 +60,7 @@ There's no need to keep the grading project running, as grades will be submitted
 
 ![](/images/teamsForEducation/replgrader-com-grades.png)
 
-In the example above, one student submitted twice. If the students joined your team using an [anonymous invitation](https://docs.repl.it/Teams/Invitations) you will not see their personal information - only their randomly generated username. If they signed up for a normal repl account, you will see their repl username. If a student submitted more than once, you can see the most recent submission by inspecting the timestamps.
+In the example above, one student submitted twice. If the students joined your team using an [anonymous invitation](https://docs.replit.com/Teams/Invitations) you will not see their personal information - only their randomly generated username. If they signed up for a normal repl account, you will see their repl username. If a student submitted more than once, you can see the most recent submission by inspecting the timestamps.
 
 ## Example assignments
 

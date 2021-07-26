@@ -24,6 +24,6 @@ In the subscription form, we ask you to enter the number of student seats you an
 
 ## Can I use it for free?
 
-Repl.it has an awesome free plan that allows anyone to write, execute, build, and even host websites and apps. Learn more [here](http://docs.repl.it/misc/free-features).
+Replit has an awesome free plan that allows anyone to write, execute, build, and even host websites and apps. Learn more [here](https://docs.replit.com/misc/free-features).
 
-If you're a k-12 public school teacher you can use it for free by [applying](https://repl.it/k12-form) for our k-12 plan. You can apply [online](https://repl.it/k12-form).
+If you're a k-12 public school teacher you can use it for free by [applying](https://replit.com/k12-form) for our k-12 plan. You can apply [online](https://replit.com/k12-form).

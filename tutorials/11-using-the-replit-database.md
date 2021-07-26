@@ -1,12 +1,12 @@
-# Using the Repl.it database
+# Using the Replit database
 
 ![](/images/tutorials/11-database/11-01-db-heading.png)
 
 In previous tutorials we used the file system to store data persistently. This works fine for smaller projects, but there are some limitations to storing data directly in a file system. A more advanced way to store data which is used by nearly any production application is a database.
 
-Another advantage of storing data in a database instead of in files is that it separates our code and data cleanly. If we build an application on Repl.it that processes any kind of data, it's likely that we'll want to share the code with other people but **not** the data. Having our data cleanly separated into a private database allows us to do exactly this.
+Another advantage of storing data in a database instead of in files is that it separates our code and data cleanly. If we build an application on Replit that processes any kind of data, it's likely that we'll want to share the code with other people but **not** the data. Having our data cleanly separated into a private database allows us to do exactly this.
 
-In this tutorial, you'll see how to store data from a Repl.it project directly in the Repl.it key-value store, one of the simplest varieties of database, similar to a Python dictionary and more scalable.
+In this tutorial, you'll see how to store data from a Replit project directly in the Replit key-value store, one of the simplest varieties of database, similar to a Python dictionary and more scalable.
 
 As a demonstration project, we'll build a basic phone book application, storing contact information about friends and family and a command line application to allow users to:
 
@@ -19,7 +19,7 @@ This will cover the so-called "CRUD" (Create, Read, Update, Delete) operations t
 
 Now create a new Python repl called "phonebook".
 
-## Adding and reading data using the Repl.it database
+## Adding and reading data using the Replit database
 
 In the `main.py` file import the database driver with this code:
 
@@ -29,7 +29,7 @@ from replit import db
 
 Databases usually store data on a separate physical server from where your code is running, so your code needs to know how to find the database and how to authenticate (to prove that you are authorised to access a specific database to stop other people reading your data).
 
-Usually we would have to supply some kind of credentials for this (e.g. a username and password), as well as an endpoint to indicate where the database can be found. In this case, Repl.it handles everything automatically (as long as you are signed in), so you can start storing data straight away.
+Usually we would have to supply some kind of credentials for this (e.g. a username and password), as well as an endpoint to indicate where the database can be found. In this case, Replit handles everything automatically (as long as you are signed in), so you can start storing data straight away.
 
 The `db` object works very similarly to a global Python dictionary but any data is persistently stored. You can associate a specific value with a given key in the same way. Add the following to your `main.py` file.
 
@@ -83,7 +83,7 @@ print(d["Smith, John"])
 
 In this case, the first print still works as the data has persisted in the database. However the dictionary has been cleared between runs so we get the error `NameError: name 'd' is not defined`.
 
-Because each Repl.it project has its own unique database which needs a secret key to access, you can add as much data to your database and still share your project without sharing any of your data.
+Because each Replit project has its own unique database which needs a secret key to access, you can add as much data to your database and still share your project without sharing any of your data.
 
 The database also has some functionality that Python dictionaries do not, such as searching keys by prefix, which we will take a closer look at soon.
 
@@ -245,7 +245,7 @@ Below our `main()` function, we have an infinite loop so that the user can keep 
 
 We already allow users to find contacts by entering their exact name, but it's useful to be able to do partial matches too. If our user inputs "Smith" and we have a "Smith, John" and a "Smith, Mary", we should be able to show the user both of these contacts.
 
-The Repl.it database has a `prefix` function that can find all keys that start with a specific string. Giving "Smi" to this prefix function would match "Smith", "Smith, John" and "Smith, Mary", but **not** "John Smith", as it only matches from the **start** of each key. 
+The Replit database has a `prefix` function that can find all keys that start with a specific string. Giving "Smi" to this prefix function would match "Smith", "Smith, John" and "Smith, Mary", but **not** "John Smith", as it only matches from the **start** of each key. 
 
 You can use this by calling, for example, `db.prefix("Smi")` which will return all of the *keys* that match the "Smi" prefix. Note that this does not return the values (in our case, the phone numbers), so once we have our matches we still need to look up each phone number individually.
 
@@ -420,11 +420,11 @@ It may be a bit inconvenient to type out the whole name of a contact that you wa
 
 If you've followed along, you'll have your own version of the repl to extend. Otherwise start from ours below.
 
-<iframe height="400px" width="100%" src="https://repl.it/@GarethDwyer1/cwr-11-phonebook?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@GarethDwyer1/cwr-11-phonebook?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Where next
 
-You've learned how basic databases work. Databases are a complicated topic on their own and it can take years or decades to master the more advanced aspects of them, but they can also do more than the simple operations that we've covered here. Spend some time reading about [PostgreSQL](https://www.postgresql.org/) and [relational databases](https://en.wikipedia.org/wiki/Relational_database) in general, or other [key-value stores](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) like the Repl.it database.
+You've learned how basic databases work. Databases are a complicated topic on their own and it can take years or decades to master the more advanced aspects of them, but they can also do more than the simple operations that we've covered here. Spend some time reading about [PostgreSQL](https://www.postgresql.org/) and [relational databases](https://en.wikipedia.org/wiki/Relational_database) in general, or other [key-value stores](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) like the Replit database.
 
 Even without further research, the basic Create, Read, Update, and Delete (CRUD) operations that we covered here will get you far and you can build nearly any app you can imagine with just these.
 
