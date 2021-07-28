@@ -2,7 +2,7 @@
 
 This tutorial is also available [as a video](https://www.youtube.com/watch?v=SDlrhS8O3kI).
 
-Software developers can get pretty attached to their Integrated Development Environments (IDEs) and if you look for advice on which one to use, you'll find no end of people advocating strongly for one over another: VS Code, Sublime Text, IntelliJ, Atom, Vim, Emacs, and no shortage of others.
+Software developers can get pretty attached to their Integrated Development Environments (IDEs) and if you look for advice on which one to use, you'll find quite a lot of developers advocating strongly for one over another: VS Code, Sublime Text, IntelliJ, Atom, Vim, Emacs, and no shortage of others.
 
 In the end, an IDE is just a glorified text editor. It lets you type text into files and save those files, functionality that has been present in nearly all computers since those controlled by punch cards.
 
@@ -16,11 +16,9 @@ In the first part of this guide, we'll cover the basics and also show you how mu
 
 ## Introduction: creating an account and starting a project
 
-Although you don't need an account to use Replit (you can just navigate to [Replit](https://replit.com/) and press the "start coding" button), let's set one up in order to have access to all of the features.
-
 Visit [https://replit.com/signup](https://replit.com/signup) and follow the prompts to create a user account, either by entering a username and password or by logging in with Google, GitHub, or Facebook.
 
-Once you're done, hit the `+ new repl` button in the top right. In the example below, we choose to create a new Python project. Replit will automatically choose a random name for your project, or you can pick one yourself. Note that by default your repl will be public to anyone on the internet; this is great for sharing and collaboration, but we'll have to be careful to not include passwords or other sensitive information in any of our projects.
+Once you're done, hit the `+ new repl` button in the top left. In the example below, we choose to create a new Python project. Replit will automatically choose a random name for your project, or you can pick one yourself. Note that by default your repl will be public to anyone on the internet; this is great for sharing and collaboration, but we'll have to be careful to not include passwords or other sensitive information in any of our project files.
 
 ![**Image 1:** *Creating a new Python project*](/images/tutorials/01-introduction/01-01-new-repl.png)
 
@@ -49,9 +47,9 @@ print("Hello World")
 print(1+2)
 ```
 
-![**Image 3**: *Your first program*](/images/tutorials/01-introduction/01-03-code-from-file.png)
+![**Image 3**: *Your first program*](/images/tutorials/01-introduction/01-03-code-from-file.gif)
 
-Your script will run and the output it generates will appear on the right pane (pane 3). Our code output the phrase "Hello World" (it's a long-standing tradition that when you learn something new the first thing you do is build a 'hello world' project), and then output the answer to the sum `1 + 2`.
+Your script will run and the output it generates will appear on the right pane (pane 3). Our code outputs the phrase "Hello World" (it's a long-standing tradition that when you learn something new the first thing you do is build a 'hello world' project), and then output the answer to the sum `1 + 2`.
 
 You probably won't be able to turn this script into the next startup unicorn quite yet, but let's keep going.
 
@@ -81,7 +79,7 @@ Let's make Python do the repetitive steps for us by creating a program called "s
 
 Add a new file to your project by clicking on the `new file` button, as shown below. Call the file `solver.py`. You now have two files in your project: `main.py` and `solver.py`. You can switch between your files by clicking on them.
 
-![**Image 6**: *Adding a new file*](/images/tutorials/01-introduction/01-06-add-file.png)
+![**Image 6**: *Adding a new file*](/images/tutorials/01-introduction/01-06-add-file.gif)
 
 Open the `solver.py` file and add the following code to it.
 
@@ -116,21 +114,19 @@ Congratulations! You've written your first useful program.
 
 ## Sharing your application with others
 
-Coding is more fun with friends or as part of a team. If you want to share your code with others, it's as easy as copying the URL and sending it. In this case, the URL is `https://replit.com/@GarethDwyer1/demoproject`, but yours will be different based on your Replit username and the project name you chose.
+Coding is more fun with friends or as part of a team. If you want to share your code with others, it's as easy as copying the URL and sending it. In this case, the URL is `https://replit.com/@ritza/demoproject`, but yours will be different based on your Replit username and the project name you chose.
 
-You can copy the link and open it in an incognito tab (or a different web browser) to see how others would experience your project if you were to share it. By default, they'll be able to see all of your files and code and run your code, but not make any changes. If someone else tries to make changes to your repl, it'll automatically get copied ("forked") to their account, or an anonymous account if they haven't signed up for Replit. Any changes your friends make will only happen in their copies, and won't affect your code at all.
+You can copy the link and open it in an incognito tab (or a different web browser) to see how others would experience your project if you were to share it. By default, they'll be able to see all of your files and code and run your code, but not make any changes. To be able to make changes they would need to fork the repl to create their own copy. Any changes your friends make will only happen in their copies, and won't affect your code at all.
 
-To understand this, compare the three versions of the same repl below.
+To understand this, compare the two versions of the same repl below.
 
 * As you see it, with all of the controls
-* As your friend would see it, a read-only version
-* As your friend would see it after forking it, on an anonymous account
+* As your friend or an anonymous user would see it without forking the repl, a read-only version
 
 ![**Image 8**: *The owner's view of a repl*](/images/tutorials/01-introduction/01-08-ownrepl.png)
 
 ![**Image 9**: *A guest's 'read-only' view of a repl*](/images/tutorials/01-introduction/01-09-readonly.png)
 
-![**Image 10**: *An anonymous owner's view of a copy of a repl*](/images/tutorials/01-introduction/01-10-anonymousfork.png)
 
 What does this mean? Because no one else can edit your repl, you can share it far and wide. But because anyone can _read_ your repl, you should be careful that you don't share anything private or secret in it.
 
@@ -138,7 +134,7 @@ What does this mean? Because no one else can edit your repl, you can share it fa
 
 Of course, sometimes you might _want_ others to have write access to your repl so that they can contribute, or help you out with a problem. In these cases, you can use Replit's "multiplayer" functionality.
 
-If you invite someone to your repl, it's different from sharing the URL with them. You can invite someone by clicking `Share` in the top right and sending them the secret link that starts with "https://replit.com/join". This link will give people _edit_ access to your repl.
+If you invite someone to your repl, it's different from sharing the URL with them. You can invite someone by clicking `Invite` in the top right and sending them the secret link that starts with "https://replit.com/join". This link will give people _edit_ access to your repl.
 
 ![**Image 11**: *Inviting someone to your repl*](/images/tutorials/01-introduction/01-11-multiplayer-invite.png)
 
@@ -154,7 +150,7 @@ If you followed along, you'll already have your own version of the repl to exten
 
 ## Where next?
 
-You can now create basic programs on your own or with friends, and you are familiar with the most important Replit features. There's a lot more to learn though. In the next nine lessons, you'll work through a series of projects that will teach you more about Replit features and programming concepts along the way.
+You can now create basic programs on your own or with friends, and you are familiar with the most important Replit features. There's a lot more to learn though. In the next lessons, you'll work through a series of projects that will teach you more about Replit features and programming concepts along the way.
 
 If you get stuck, you can get help from the [Replit community](https://replit.com/talk/all) or on the [Replit Discord server](https://replit.com/discord).
 
