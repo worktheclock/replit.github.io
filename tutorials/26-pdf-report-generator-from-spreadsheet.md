@@ -2,7 +2,7 @@
 
 In this tutorial, we'll be building a simple web application that will take in data from spreadsheets and use it to create slick PDF reports. We'll cover the following topics:
 
-* Reading and processing spreadsheet data with Python's [Pandas](https://pandas.pydata.org/) library.
+* Reading and processing spreadsheet data with Python's [pandas](https://pandas.pydata.org/) library.
 * Creating data visualizations with [Matplotlib](https://matplotlib.org/).
 * Creating PDFs with Python, using [PyFPDF](https://pyfpdf.readthedocs.io/en/latest/index.html).
 * Handling file uploads and downloads with [Flask](https://flask.palletsprojects.com/en/2.0.x/).
@@ -138,7 +138,7 @@ import numpy as np
 import openpyxl
 ```
 
-[Pandas](https://pandas.pydata.org/) is a widely used Python data analysis library, commonly used by data scientists. It provides a number of useful functions and objects for working with series and tabular data, most notably the [`DataFrame` object](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html). [NumPy](https://numpy.org) provides mathematical functions for use with arrays and matrices, and is often used together with Pandas. Finally, [openpyxl](https://openpyxl.readthedocs.io/en/stable/) is the library Pandas uses for reading spreadsheet files – we won't use this library directly, but we need to include it in our imports so that our repl installs it.
+[Pandas](https://pandas.pydata.org/) is a widely used Python data analysis library, commonly used by data scientists. It provides a number of useful functions and objects for working with series and tabular data, most notably the [DataFrame object](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html). [NumPy](https://numpy.org) provides mathematical functions for use with arrays and matrices, and is often used together with pandas. Finally, [openpyxl](https://openpyxl.readthedocs.io/en/stable/) is the library pandas uses for reading spreadsheet files – we won't use this library directly, but we need to include it in our imports so that our repl installs it.
 
 Define the `process_spreadsheet()` function above the `index()` function definition. Use the following code:
 
@@ -150,24 +150,24 @@ def process_spreadsheet(filename):
     item_data = spreadsheet["Inventory"]
 ```
 
-Here we use pandas' [`read_excel`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html#pandas.read_excel) function to import each worksheet in our spreadsheet as a `DataFrame` object. The `DataFrame`, being a tabular structure, shares a number of similarities with spreadsheets, as well as tables in an SQL database.
+Here we use pandas's [`read_excel`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html#pandas.read_excel) function to import each worksheet in our spreadsheet as a DataFrame object. The DataFrame, being a tabular structure, shares a number of similarities with spreadsheets, as well as tables in an SQL database.
 
-Speaking of SQL tables, the next thing we're going to do is [`join`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.join.html#pandas.DataFrame.join) `sale_data` with `item_data`, using the item code column. Add the line below to the bottom of `process_spreadsheet()`.
+Speaking of SQL tables, the next thing we're going to do is [`join`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.join.html#pandas.DataFrame.join) `sale_data` with `item_data`, using the item code column. Add the line below to the bottom of `process_spreadsheet()`:
 
 ```python
     # Join item data to sale data
     sale_data = sale_data.join(item_data.set_index("Code"), on="Item Code", how="inner")
 ```
 
-This code will give each row of our sales data the appropriate item information, including the item's name, cost price and sale price. If you'd like to learn more about combining `DataFrames`, [this RealPython tutorial](https://realpython.com/pandas-merge-join-and-concat/) provides an overview.
+This code will give each row of our sales data the appropriate item information, including the item's name, cost price and sale price. If you'd like to learn more about combining DataFrames, [this RealPython tutorial](https://realpython.com/pandas-merge-join-and-concat/) provides an overview.
 
-To see what the newly joined sales `DataFrame` looks like, add the following line below the definition of `sale_data`:
+To see what the newly joined sales DataFrame looks like, add the following line below the definition of `sale_data`:
 
 ```python
     print(sale_data)
 ```
 
-Then run your repl, upload the `sales-july-2021.xlsx` spreadsheet, by clicking "Generate report" after selecting the spreadsheet and watch the replit console. You should see something like this:
+Then run your repl, upload the `sales-july-2021.xlsx` spreadsheet, click "Generate report" after selecting the spreadsheet, and watch the Replit console. You should see something like this:
 
 ![Sales dataframe](/images/tutorials/26-pdf-report-generator/sales_dataframe.png)
 
@@ -180,7 +180,7 @@ Now that we've integrated our data, let's generate some insights to report on. W
 3. What was our most discounted item on average?
 4. How much of each item do we have left in stock?
 
-To answer the first two questions, we'll need to group our data by sales person. To answer the last two questions, we'll need to group our data by item. Let's do this now, using `DataFrame`'s [`groupby`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html#pandas.DataFrame.groupby) method. Add the below code to the bottom of `process_spreadsheet()`:
+To answer the first two questions, we'll need to group our data by sales person. To answer the last two questions, we'll need to group our data by item. Let's do this now, using DataFrame's [`groupby`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html#pandas.DataFrame.groupby) method. Add the below code to the bottom of `process_spreadsheet()`:
 
 ```python
     # Group data
@@ -198,7 +198,7 @@ We can get the revenue for each sale with the below calculation:
 Sale Revenue = Quantity Sold * (Sale Price * (1 - Discount))
 ```
 
-By making use of the `DataFrame`'s operator overloading, we can apply this calculation to every column at once. Add the following code to the bottom of your `process_spreadsheet()` function:
+By making use of the DataFrame's operator overloading, we can apply this calculation to every column at once. Add the following code to the bottom of your `process_spreadsheet()` function:
 
 ```python
     # 1. Which sales person brought in the most revenue?
@@ -241,7 +241,7 @@ Finally, we'll use our `sales_by_salesperson` grouping to calculate each sales p
         ascending=False)
 ```
 
-Note that `sales_by_salesperson` recognises the Sales Revenue column even though we defined it before that column was added. We can think of objects returned by `groupby` as filters or views on `DataFrames` rather than as `DataFrames` in and of themselves.
+Note that `sales_by_salesperson` recognises the Sales Revenue column even though we defined it before that column was added. We can think of objects returned by `groupby` as filters or views on DataFrames, rather than as DataFrames in and of themselves.
 
 ### Profit by salesperson
 
@@ -313,7 +313,7 @@ Now run your repl and upload the `sales-july-2021.xlsx` spreadsheet you download
 
 ## Plotting graphs
 
-Now that we've got our data ready, we need to put it into some nice visualizations. Pandas includes methods for generating charts and graphs from `DataFrames` and other data objects. These methods are thin wrappers over [Matplotlib](https://matplotlib.org/), Python's most widely used data visualization library.
+Now that we've got our data ready, we need to put it into some nice visualizations. Pandas includes methods for generating charts and graphs from DataFrames and other data objects. These methods are thin wrappers over [Matplotlib](https://matplotlib.org/), Python's most widely used data visualization library.
 
 Although we won't be using it directly, we'll need to import Matplotlib so that we can configure it to run in the background, otherwise Replit will open a Tkinter window to render our plots in. Add the following lines to the top of `main.py` to do this:
 
@@ -322,7 +322,7 @@ import matplotlib as mpl
 mpl.use('Agg')
 ```
 
-We're going to create two pie charts, for our sales data, and one bar chart, for our discount data. We'll leave our stock data as a table.
+We're going to create two pie charts for our sales data, and one bar chart for our discount data. We'll leave our stock data as a table.
 
 ### Sales pie charts
 
@@ -349,10 +349,10 @@ Because we're creating two pie charts, let's start by defining an internal funct
 
 There's a lot happening here, so let's go through it step by step:
 
-1. Our new inner function takes three parameters, a `DataFrame` to plot, the name of the column to use as the y-axis, and a filename to save the finished plot to. We will be passing `revenue_by_salesperson` and `profit_by_salesperson` into it.
-2. Before drawing our graph, we create an array `explode`, which is a [numpy array of zeros](https://numpy.org/doc/stable/reference/generated/numpy.zeros.html#numpy-zeros) of the same length as our `DataFrame` (`DataFrame.shape[0]` is a handy way of getting the number of rows). We then replace the first value with 0.1. This will allow us to pull out the largest slice of the pie, improving the visualization.
+1. Our new inner function takes three parameters, a DataFrame to plot, the name of the column to use as the y-axis, and a filename to save the finished plot to. We will be passing `revenue_by_salesperson` and `profit_by_salesperson` into it.
+2. Before drawing our graph, we create an array `explode`, which is a [numpy array of zeros](https://numpy.org/doc/stable/reference/generated/numpy.zeros.html#numpy-zeros) of the same length as our DataFrame (`DataFrame.shape[0]` is a handy way of getting the number of rows). We then replace the first value with 0.1. This will allow us to pull out the largest slice of the pie, improving the visualization.
 3. We then plot the pie chart, using the specified `yaxis`.
-4. The `autopct` argument allows us to specify how we would like to display the numeric labels on each slice. Pie charts in Matplotlib default to showing percentages, but we want to see currency values, so we pass in an anonymous function that multiplies each percentage by the sum of our `DataFrame`'s second column. We also use our `floor_currency()` function and Python string formatting to make our values display as currency values.
+4. The `autopct` argument allows us to specify how we would like to display the numeric labels on each slice. Pie charts in Matplotlib default to showing percentages, but we want to see currency values, so we pass in an anonymous function that multiplies each percentage by the sum of our DataFrame's second column. We also use our `floor_currency()` function and Python string formatting to make our values display as currency values.
 5. We then remove the y-axis label, use [`tight_layout()`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.tight_layout.html) to avoid excess white space, and save our figure to a file.
 6. Finally, we call our plot's [`clf()`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.clf.html) method. This clears the current plot, so we can start drawing a new one. Because of the way Matplotlib works, if we don't do this, we'll end up drawing plots on top of each other.
 
@@ -415,9 +415,9 @@ Now return to the bottom of `process_spreadsheet()`, and add the following code 
     pdf.set_font('arial', '', 12) # 12pt Arial text
 ```
 
-The FPDF class provides a few different ways to insert text and images into our PDF. We will be using the [`cell()`](https://pyfpdf.readthedocs.io/en/latest/reference/cell/index.html) and [`image()`](https://pyfpdf.readthedocs.io/en/latest/reference/image/index.html) methods, for inserting table cells and images.
+The FPDF class provides a few different ways to insert text and images into our PDF. We will be using the [`cell()`](https://pyfpdf.readthedocs.io/en/latest/reference/cell/index.html) and [`image()`](https://pyfpdf.readthedocs.io/en/latest/reference/image/index.html) methods for inserting table cells and images.
 
-Calls to `cell` and `image` will insert elements at the current position on the page. We'll call this position the *cursor*. The `cell` method includes a parameter which specifies where to place the *cursor* following the insertion of each cell. The cursor can also be set manually using x and y co-ordinates. These two factors, especially the former, can make it difficult to mentally model FPDF code, so it's good practice to leave a lot of comments.
+Calls to `cell` and `image` will insert elements at the current position on the page. We'll call this position the *cursor*. The `cell` method includes a parameter which specifies where to place the *cursor* following the insertion of each cell. The cursor can also be set manually using x and y coordinates. These two factors, especially the former, can make it difficult to mentally model FPDF code, so it's good practice to leave a lot of comments.
 
 The first thing we'll add to our page is a heading for our revenue pie chart. Add the following code below the line where you set the font.
 
@@ -452,7 +452,7 @@ Now we can place our first pie chart:
                 "revenue_by_salesperson.png"), w=110)
 ```
 
-And our second one, using [`set_xy()`](https://pyfpdf.readthedocs.io/en/latest/reference/set_xy/index.html) to move the cursor to a position next to our first pie chart.
+And our second one, using [`set_xy()`](https://pyfpdf.readthedocs.io/en/latest/reference/set_xy/index.html) to move the cursor to a position next to our first pie chart:
 
 ```python
     pdf.set_xy(start_x + 110 + 2, start_y)
@@ -510,7 +510,7 @@ Our report is now complete. End the `process_spreadsheet()` function with the fo
                         "report.pdf"), "F")
 ```
 
-To ensure that your PDF opens correctly, open your Repl's website in a new tab.
+To ensure that your PDF opens correctly, open your repl's website in a new tab.
 
 ![Replit browser open in new tab](/images/tutorials/26-pdf-report-generator/replit-browser-open-in-new-tab.png)
 
@@ -524,7 +524,7 @@ We've covered a number of methods for working and displaying tabular data in thi
 
 * Some of our other tutorials delve into other aspects of Flask, such as this [stock market dashboard tutorial](https://docs.replit.com/tutorials/22-personal-stock-market-dashboard). The web application interface we've built above is minimal and may benefit from additional functionality.
 * We also have [another tutorial on Matplotlib](https://docs.replit.com/tutorials/04-data-science-and-visualisation-with-repl-it). Additionally, Matplotlib provides [a number of tutorials on their website](https://matplotlib.org/stable/tutorials/index.html).
-* The Pandas community has written a number of tutorials, [linked here](https://pandas.pydata.org/pandas-docs/stable/getting_started/tutorials.html).
+* The pandas community has written a number of tutorials, [linked here](https://pandas.pydata.org/pandas-docs/stable/getting_started/tutorials.html).
 * Finally, [the FPDF documentation is available here](https://pyfpdf.readthedocs.io/en/latest/index.html).
 
 You can find the code for this tutorial in the repl below:
