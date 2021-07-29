@@ -364,8 +364,12 @@
         "slug": "24-build-space-shooter-with-kaboom"
       },
       {
-        "name": "Pseudo 3D Game with Kaboom.js",
+        "name": "3D Game with Kaboom.js",
         "slug": "25-build-3d-game-with-kaboom"
+      },
+      {
+        "name": "PDF report generator from spreadsheet",
+        "slug": "26-pdf-report-generator-from-spreadsheet"
       },
       {
         "name": "Pinboard project part 1: HTML & CSS",
