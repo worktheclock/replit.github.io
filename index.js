@@ -259,6 +259,9 @@ app.get('/classrooms/exports', async (req, res) => {
 app.get('/repls/quick-start', async (req, res) => {
     res.redirect(301, '/archive/quick-start');
 });
+app.get('/misc/quick-start', async (req, res) => {
+    res.redirect(301, '/archive/quick-start');
+});
 
 app.get('/:category/:slug', async (req, res) => {
 	const { category, slug } = req.params;
