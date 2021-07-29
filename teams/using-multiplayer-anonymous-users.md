@@ -1,6 +1,6 @@
 # Using multiplayer with anonymous users
 
-Multiplayer can only be used if you're signed in to Replit. We are working on some solutions to allow for anonymous multiplayer functionality but, in the meantime, follow these steps if you have an anonymous user who wants to collaborate with you. 
+Multiplayer can only be used if you're signed into Replit. We are working on some solutions to allow for anonymous multiplayer functionality but, in the meantime, follow these steps if you have an anonymous user who wants to collaborate with you. 
 
 1. Click the "invite" button in your repl.
 
