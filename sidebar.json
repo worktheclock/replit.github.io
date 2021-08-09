@@ -372,6 +372,10 @@
         "slug": "26-pdf-report-generator-from-spreadsheet"
       },
       {
+        "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+        "slug": "27-build-tictactoe-with-websockets-kaboom"
+      },
+      {
         "name": "Pinboard project part 1: HTML & CSS",
         "slug": "pinboard-project-part-1"
       },
