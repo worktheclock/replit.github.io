@@ -1,8 +1,8 @@
-# Building Tic-tac-toe with WebSockets and Kaboom.js
+# Building tic-tac-toe with WebSocket and Kaboom.js
 
-Tic-tac-toe, or noughts and crosses, or Xs and Os, is a classic simple game for two players. It's usually played with paper and pen, but it also makes a good first game to write for network multiplayer. 
+Tic-tac-toe, or noughts and crosses, or Xs and Os, is a simple classic game for 2 players. It's usually played with paper and pen, but it also makes a good first game to write for networked multiplayer. 
 
-In this tutorial, we will create an online tic-tac-toe, 2 player game, using a [Node.js](https://nodejs.org/en/) server and [Socket.io](https://socket.io) to enable real time game play across the internet. We'll also use Kaboom.js to create the game interface. 
+In this tutorial, we'll create a 2-player online tic-tac-toe game using a [Node.js](https://nodejs.org/en/) server. [Socket.IO](https://socket.io) will enable realtime gameplay across the internet. We'll use Kaboom.js to create the game interface. 
 
 ![Game play](/images/tutorials/27-tictactoe-kaboom/gameplay.gif)
 
@@ -12,26 +12,27 @@ Multiplayer games have an architecture that typically looks something like this:
 
 ![Game server architecture](/images/tutorials/27-tictactoe-kaboom/architecture.png)
 
-Players (clients) connect to a _game server_ over the internet. The game will run on the game server - all the game rules and score etc are calculated on the game server. The player's computers render the graphics for the game, and send player commands (from keyboard, mouse, gamepad, etc) back to the game server. The game server can check if these commands are valid, and then update the _game state_. The game state is a representation of all the variables, players, data and information about the game. This game state is then transmitted back to all the players, so they can all update the graphics. 
+Players (clients) connect to a _game server_ over the internet. The game runs on the game server, where all the game rules, scores and other data are processed. The players' computers render the graphics for the game, and send player commands (from the keyboard, mouse, gamepad, or other input device) back to the game server. The game server checks if these commands are valid, and then updates the _game state_. The game state is a representation of all the variables, players, data and information about the game. This game state is then transmitted back to all the players and the graphics are updated. 
 
-From this, we can see that there is quite a lot of communication that needs to happen between a player's computer and the game server. Games generally need a two-way, or _bidirectional_ link, so that the game server can send and notify the players of updates to the game state. Games also need a quick link, so a more permanent connection is better. With the [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) protocol that websites usually use, a browser opens a connection to a server, then makes a request to the server, and the server sends back data, and closes the connection. There is no way for the server to initiate sending data to the browser. It also has a lot of overhead to open and close a connection each time data is requested and sent. 
-[WebSockets](https://en.wikipedia.org/wiki/WebSocket) are an advanced internet protocol that allows us to create a two-way, persistent connection between a browser and a server. We'll use the [Socket.io](https://socket.io) package to help us manage WebSocket connections in this project. 
+A lot of communication needs to happen between a player's computer and the game server in online multiplayer games. This generally requires a 2-way, or _bidirectional_, link so that the game server can send data and notify players of updates to the game state. This link should ideally be quick too, so a more permanent connection is better.
 
+With the [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) protocol that websites usually use, a browser opens a connection to a server, then makes a request to the server, and the server sends back data, and closes the connection. There is no way for the server to initiate sending data to the browser. HTTP is also heavy on overhead, since it opens and closes a connection each time data is requested and sent. 
+
+[WebSocket](https://en.wikipedia.org/wiki/WebSocket) is an advanced internet protocol that allows us to create a 2-way, persistent connection between a browser and a server. We'll use the [Socket.IO](https://socket.io) package to help us manage WebSocket connections in this project. 
 
 ## Creating a new project
 
-For this project, we'll need to create two repls - one for the game server, and one for the players. The game server will use Node.js, and the player project will use Kaboom. Head over to [Replit](https://replit.com) and create a two new repls: 
-
-- To create the player project, choose "Kaboom" as your project type. Give this repl a name, like "tic-tac-toe".
-  ![New Player repl](/images/tutorials/27-tictactoe-kaboom/player-new-repl.png)
+For this project, we'll need to create 2 repls - 1 using Node.js for the game server, and 1 using Kaboom for the players. Head over to [Replit](https://replit.com) and create a two new repls:
 - To create the server project, choose "Node.js" as your project type. Give this repl a name, like "tic-tac-toe-server".
   ![Server repl](/images/tutorials/27-tictactoe-kaboom/server-new-repl.png)
+- To create the player project, choose "Kaboom" as your project type. Give this repl a name, like "tic-tac-toe".
+  ![New Player repl](/images/tutorials/27-tictactoe-kaboom/player-new-repl.png)
 
 We'll code in the server repl to start, and then switch between repls as we build the game. 
 
-## Setting up Socket.io on the server
+## Setting up Socket.IO on the server
 
-In the server project, you should have a file called `index.js`. To import and setup [Socket.io](https://socket.io), add the following code: 
+Add the following code to the file called `index.hs` in the server project to import Socket.IO: 
 
 ```js
 const http = require('http');
@@ -53,9 +54,9 @@ server.listen(3000, function() {
 
 In the first 2 lines, we import the built-in node [`http`](https://nodejs.org/api/http.html) package and the [`socket.io`](https://socket.io) package. The `http` package enables us to run a simple HTTP server. The `socket.io` package extends that server to add [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) functionality. 
 
-To create the HTTP server, we use the `http.createServer();` method. Then we set up the Socket.io part, by creating a new `io` object. To do this, we pass in the HTTP server object along with some configuration for [CORS](https://developer.mozilla.org/en-US/docs/Glossary/CORS). CORS stands for "Cross Origin Resource Sharing" - which tells the server which other sites are allowed to connect to it and access it. We set the `origin` to allow our player repl to connect. Replace the `origin` value with the URL of the player project repl you set up earlier. 
+To create the HTTP server, we use the `http.createServer();` method. Then we set up Socket.IO by creating a new `io` object. We pass in the HTTP server object along with some configuration for [CORS](https://developer.mozilla.org/en-US/docs/Glossary/CORS). CORS stands for "Cross Origin Resource Sharing", and it's a system that tells the server which other sites are allowed to connect to it and access it. We set `origin` to allow our player repl to connect. Replace the `origin` value with the URL of the player project repl you set up earlier. 
 
-Lastly, we start the server up by calling its `listen` method, along with a port to listen on. We use 3000 as this is a standard for Node.js. If it starts successfully, we write a message to the console to let us know.
+In the last 2 lines, we start the server up by calling its `listen` method, along with a port to listen on. We use 3000, as this is a standard for Node.js. If it starts successfully, we write a message to the console to let us know.
 
 We'll add the rest of the server code above the `server.listen` line, as we only want to start the server up after all the other code is ready. 
 
@@ -65,11 +66,11 @@ Now that we have a server, lets think a bit about how we will represent, or mode
 
 - The status of the game: What is currently happening? Are we waiting for players to join, are the players playing, or is the game over?
 - The current positions on the tic-tac-toe board. Is there a player in a grid block, or is it empty?
-- All the players. What are their names, and which symbol are they using, `X`, or `O`?
-- The current player - Whose turn is it to go?
+- All the players. What are their names, and which symbol are they using, X or O?
+- The current player. Whose turn is it to go?
 - If the game ends in a win, who won it?
 
-For the status of the game, we'll add an [enumeration](https://masteringjs.io/tutorials/fundamentals/enum) of the possible states we can expect. This makes it easier to track and use them as we go through different phases of the game. 
+For the status of the game, we'll add an [enumeration](https://masteringjs.io/tutorials/fundamentals/enum) of the possible states we can expect. This makes it easier to track and use them as we go through the different phases of the game. 
 
 ```js
 const Statuses = {
@@ -98,28 +99,28 @@ let gameState = {
 }
 ```
 
-First, we have a representation of the tic-tac-toe board as an array, with 9 elements. This is how the array elements are mapped to the board:
+First, we have a representation of the tic-tac-toe board as an array with 9 elements. This is how the array elements are mapped to the board:
 
 ![Tic Tac Toe board mapped to array indices](/images/tutorials/27-tictactoe-kaboom/board.png)
 
 
-Each number in the blocks represents the index at which the board position is represented in the array. Initially, we fill all the elements of the array with `null` to indicate that the space is open. When players make a move to occupy an open space, we'll add a reference to the player instead. That way we can keep track of which blocks are empty, and which are occupied by which player. 
+Each number in the blocks represents the index at which the board position is represented in the array. Initially, we fill all the elements of the array with `null` to indicate that the block is open. When players make a move to occupy an open space, we'll add a reference to the player instead. That way we can keep track of which blocks are empty, and which are occupied by which player. 
 
-Next, we have `currentPlayer`, which we will alternately set to each player, when it is their turn to move. 
+Next, we have `currentPlayer`, which we will alternately set to each player when it's their turn to move. 
 
-Then there is an array called `players`, which will hold references to both of the players playing the game. This will allow us to show the names of the players on screen, as well as generally keep track of the players. 
+Then there is an array called `players`, which will hold references to both of the players in the game. This will allow us to show the names of the players on screen, as well as generally keep track of the players. 
 
-Then we have the `result` field, which is updated after every move. This field will contain the status of the game (as we defined above). As it is represented as an object, it will also be able to hold extra fields. We'll use that functionality to add a reference to the winner of the game, if the game ends in a win. 
+The `result` field is updated after every move. This field will contain the status of the game (as we defined above). As it's represented as an object, it will also be able to hold extra fields. We'll use that functionality to add a reference to the winner of the game, if the game ends in a win. 
 
 ## Accepting connections
 
-When a player connects via WebSockets, Sockets.io will fire a [`connection`](https://socket.io/docs/v4/server-instance/#connection) event. We can listen for this event, and handle tracking the connection, as well as creating listeners for other custom events. There are a few [custom events](https://socket.io/docs/v4/emitting-events/) we can define here, that our players will emit: 
+When a player connects via WebSocket, Sockets.IO will fire a [`connection`](https://socket.io/docs/v4/server-instance/#connection) event. We can listen for this event and handle tracking the connection, as well as creating listeners for other custom events. There are a few [custom events](https://socket.io/docs/v4/emitting-events/) we can define here, that our players will emit: 
 
-- `addPlayer`. We'll use this event for a player to request joining the game. 
-- `action`. This is used when a player wants to make a move. 
-- `rematch`. Used when a game is over, but the players want to play again. 
+- `addPlayer`: We'll use this event for a player to request joining the game. 
+- `action`: This is used when a player wants to make a move. 
+- `rematch`: Used when a game is over, but the players want to play again. 
 
-We can also listen for the built-in [`disconnect`](https://socket.io/docs/v4/server-socket-instance/#disconnect) event as well, which will alert us if a player leaves the game (eg. closes the browser window or loses internet connection etc.). 
+We can also listen for the built-in [`disconnect`](https://socket.io/docs/v4/server-socket-instance/#disconnect) event, which will alert us if a player leaves the game (for example, by closing the browser window or if their internet connection is lost). 
 
 Let's add the code that will hook up our listeners to the events:
 
@@ -132,9 +133,9 @@ io.on('connection', function (connection) {
 }); 
 ```
 
-Now let's implement each of these listener functions, starting with `addPlayer`. 
+Next we'll implement each of these listener functions, starting with `addPlayer`. 
 
-**Side Note:** Normally, in examples for the custom listeners you'll see the handler code added immediately with an anonymous function, like this:
+**Side Note:** Normally in examples for custom listeners, you'll see the handler code added immediately with an anonymous function, like this:
 
 ```js
 io.on('connection', function (connection) {
@@ -150,7 +151,9 @@ io.on('connection', function (connection) {
 });
 ```
 
-This is convenient, especially when there are a couple of handlers, each with only a small amount of code. It's also handy, because in each of the handler functions, you still have access to the `connection` object, which is not passed on each event. However, it can get a little messy and unwieldy if there are many event handlers, with more complex logic in each. We are doing it differently, so that we can separate the handlers into functions elsewhere in the code base. We do have one problem to solve though - if they are separate functions, how will they access the `connection` parameter, such that we can tell which player send the command? With the concept of [_closures_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures) which are well-supported in Javascript, we can make functions that return another function. Using this method, we can pass in the `connection.id` parameter to the first wrapping function, and it can return another function that takes the data arguments from the Socket.io event caller. Because the second function is within the _closure_ of the first, it will have access to the `connection.id` parameter. The pattern looks like this: 
+This is convenient, especially when there are a couple of handlers, each with only a small amount of code. It's also handy because in each of the handler functions, you still have access to the `connection` object, which is not passed on each event. However, it can get a little messy and unwieldy if there are many event handlers, with more complex logic in each.
+
+We're doing it differently so that we can separate the handlers into functions elsewhere in the code base. We do have one problem to solve though: if they are separate functions, how will they access the `connection` parameter in such a way that we can tell which player sent the command? With the concept of [_closures_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures), which are well-supported in Javascript, we can make functions that return another function. In this way, we can pass in the `connection.id` parameter to the first wrapping function, and it can return another function that takes the data arguments from the Socket.IO event caller. Because the second function is within the _closure_ of the first, it will have access to the `connection.id` parameter. The pattern looks like this: 
 
 ```js
 io.on('connection', function (connection) {
@@ -211,16 +214,16 @@ function addPlayer(socketId){
 ```
 This function does quite a bit. Let's go through the main features. 
 
-- It checks to see how many players are already in the game. If there are already two, it returns early, without changing anything. If this check passes, then it goes on to add the new player. Note that even though there is no space in the game for the new player, we don't disconnect them - they will still get updates and will be able to watch the match, like a spectator. 
-- The function figures out which symbol, _X_ or _O_, the new player should be. It will assign _X_ to the first player. If there is already a player, and the existing player's symbol is _X_, then it will assign _O_ to the new player. Note that there is a possible case where there is only one player, and their symbol is _O_. This case occurs if there are 2 players, and the player with the _X_ symbol disconnects from the game, leaving only the player with the _O_ symbol. This is why we always check what symbol the existing player in the game has. 
-- Then the function constructs a new player object, with some identifying information, including the name that the player sends through, the socketId they connected on, and their symbol. When a new player requests to join, we expect them to send an object with a field `playerName` to tell us their handle. 
-- Now we add the new player to the player array in our `gameState` object, so that they are now part of the game. 
-- We check if we now have 2 players. If we do, we can start playing! To start, we update the status of the game to `PLAYING`, and set the `currentPlayer`, i.e, the player who is first to go, as the latest player to have joined. 
-- Finally, we use the Socket.io [`emit`](https://socket.io/docs/v4/emitting-events/) function to send the updated `gameState` to all connections. This will allow them to update the player's display.
+- First it checks to see how many players are already in the game. If there are already 2 players, it returns early without changing anything. If this check passes, it goes on to add a new player. Note that even when there is no space in the game for a new player, we don't disconnect the player - they still get updates and can watch the match. 
+- Next, the function figures out which symbol, _X_ or _O_, the new player should be. It will assign _X_ to the first player. If there is already a player, and the existing player's symbol is _X_, then it will assign _O_ to the new player. Note that there is a possible case where there is only one player, and their symbol is _O_. This would occur if there are 2 players, and the player with the _X_ symbol disconnects from the game, leaving only the player with the _O_ symbol. This is why we always check what symbol the existing player in the game has.
+- Then the function constructs a new player object with some identifying information, including the name that the player sends through, the `socketId` they connected on, and their symbol. When a new player requests to join, we expect them to send an object with a field `playerName` to tell us their handle. 
+- Now we add the new player to the player array in our `gameState` object, so that they are part of the game. 
+- We go on to check if we have 2 players, and start playing if we do. We begin by updating the status of the game to `PLAYING`, and set the `currentPlayer`, i.e. the player who is first to go, as the latest player to have joined. 
+- Finally, we use the Socket.IO [`emit`](https://socket.io/docs/v4/emitting-events/) function to send the updated `gameState` to all connections. This will allow them to update the players' displays.
 
 ## Handling player actions
 
-The next handler takes care of moves that player's want to make. We expect that the incoming data from the player will have a property called `gridIndex` to indicate which block on the board the player wants to mark. This should be a number that maps to the numbers for each block in the board, as in the picture earlier on. 
+The next handler takes care of the moves players make. We expect that the incoming data from the player will have a property called `gridIndex` to indicate which block on the board the player wants to mark. This should be a number that maps to the numbers for each block in the board, as in the picture earlier on. 
 
 ```js
 function action(socketId){
@@ -238,21 +241,23 @@ function action(socketId){
 }
 ```
 
-In this function we check a couple of things first: 
+In this function, we check a couple of things first: 
 - The game status must be `PLAYING` - players can't make moves if the game is in any other state. 
-- We check that the player attempting to make the move is the `currentPlayer`, i.e. the player whose turn it is to go. 
+- The player attempting to make the move must be the `currentPlayer`, i.e. the player whose turn it is to go. 
 
-If these conditions are met, then we find the player in the `gameState.players` array, using the built in [`find`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method on arrays, by looking for the player by their `socketId`. 
+If these conditions are met, we find the player in the `gameState.players` array using the built-in [`find`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method on arrays, by looking for the player by their `socketId`. 
 
-Now we can check if the board position (`gridIndex`) requested by the player is available, by checking that the value for that position in the `gameState.board` array is `null`. If it is available, we assign the player to that board position. Since the player has made a successful move, we need to give the other player a turn. We switch the `gameState.currentPlayer` to the other player, by using the array [`find`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method again to get the player who _does not_ match the current player. 
+Now we can check if the board position (`gridIndex`) requested by the player is available. We check that the value for that position in the `gameState.board` array is `null`, and if it is, we assign the player to it.
+
+The player has made a successful move, so we give the other player a turn. We switch the `gameState.currentPlayer` to the other player by using the array [`find`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method again, to get the player who _does not_ match the current player. 
 
 We also need to check if the move the player made changed the status of the game. Did that move make them win the game, or is it a draw, or is the game still in play? We call out to a function `checkForEndOfGame` to check for this. We'll implement this function a little later, after we're done with all the handlers. 
 
-Finally, we send out the latest `gameState` to all the players (and spectators) again, so they can update the game UI. 
+Finally, we send out the latest `gameState` to all the players (and spectators) to update the game UI. 
 
 ## Handling a rematch request
 
-When the game has ended, it's likely that the players would want to play again. Perhaps they want to play for best of 5. 
+Let's make it possible for a player to challenge their opponent to a rematch when the game has ended:
 
 ```js
 function rematch(socketId){
@@ -268,9 +273,9 @@ function rematch(socketId){
 
 This function first checks if the connection sending the rematch request is actually one of the players, and not just a spectator. If we can't find a match for a player, we return immediately, making no changes. 
 
-Then we check if the game is in one of the final states, either `WIN` or `DRAW`. If it is, we call out to a function `resetGame` to set up the game again. Finally, we send out the latest `gameState` to all the players again. 
+Then we check if the game is in one of the final states, either `WIN` or `DRAW`. If it is, we call out to a function `resetGame` to set up the game again. Finally, we send out the latest `gameState` to all the players. 
 
-Let's implement the `resetGame` function.
+Let's implement the `resetGame` function:
 
 ```js
 function resetGame(){
@@ -286,12 +291,12 @@ function resetGame(){
   }
 }
 ```
-This function does a few things: 
+Let's take a look at what we're doing here: 
 
-- It creates a new array for the `gamestate` board. This effectively clears the board, setting all the positions back to `null`, or empty. 
-- Then it checks that there are still 2 players connected. If there are, it can immediately set the game status back to `PLAYING`. It then also chooses at random which player's turn it is to go. We do this randomly, so that there isn't one player getting an advantage or disadvantage by going first every time. 
+- First, our function creates a new array for the `gameState` board. This effectively clears the board, setting all the positions back to `null`, or empty. 
+- Then it checks that there are still 2 players connected. If there are, it sets the game status back to `PLAYING` and chooses at random which player's turn it is to go. We choose the first player randomly so that there isn't one player getting an advantage by going first every time. 
 
-If there is only one player remaining, we set the game status to `WAITING` instead, so that we listen for any new players who want to join. We also set the `currentPlayer` to null, as we will choose which player should go once the new player has joined. 
+If there is only one player remaining, we set the game status to `WAITING` instead, and listen for any new players who want to join. We also set the `currentPlayer` to null, as we will choose which player should go once the new player has joined. 
 
 ## Handling disconnects
 
@@ -308,15 +313,15 @@ function disconnect(socketId){
   }
 }
 ```
-This function uses the built in array [`filter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) function to remove the player that disconnected from the server. It could be possible that the disconnect event isn't from a player, but from a spectator. We account for this possibility by checking the number of players left after filtering the disconnecting socket from the player list. Only if there is not 2 players remaining after filtering do we then reset the game, and send out the updated game state. 
+This function uses the built-in array [`filter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) function to remove the player that disconnected from the server. Since it's possible that the disconnect event isn't from a player but from a spectator, we check the number of players left after filtering the disconnecting socket from the player list. If there aren't 2 players remaining after filtering, we reset the game and send out the updated game state. 
 
 ## Checking for the end of the game
 
 Now we can get back to implementing the `checkForEndOfGame()` function we referenced in the `action` handler. 
 
-There are 2 cases we are interested in detecting: A win, or a draw. 
+We're only interested in detecting 2 cases: A win or a draw. 
 
-There are a few patterns that determine if a player has won at tic-tac-toe. Let's map them to our board with its indexed blocks: 
+There are just 8 patterns that determine if a player has won at tic-tac-toe. Let's map them to our board with its indexed blocks: 
 
 ![All possible win lines](/images/tutorials/27-tictactoe-kaboom/allwins.png) 
 
@@ -337,7 +342,7 @@ const winPatterns = [
 
 Now that we have each winning pattern in an array, we can loop through each of them to see if there is a player that has positions that match any of the patterns. 
 
-Since the players are also in an array in `gameState.players`, we can loop through that array, and then check each player against the winning pattern array. If a player matches any of these patterns, we can change the game status to `WIN` and set that player as the winner in the results.
+Since the players are also in an array in `gameState.players`, we can loop through that array, and check each player against the winning pattern array. If a player matches any of these patterns, we can change the game status to `WIN` and set that player as the winner in the results.
 
 Here is the code to do that:
 
@@ -368,15 +373,15 @@ function checkForEndOfGame(){
 
 We also check for a draw in this function. A draw is defined as when all the blocks are occupied (no more moves can be made), but no player has matched one of the win patterns. To check if there are no more empty blocks, we use the array method [`indexOf`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) to find any `null` values in `gameState.board` array. Remember that `null` means an empty block here. The `indexOf` method will return `-1` if it can't find any `null` values. In that case, we set the game status to `DRAW`, ending the game. 
 
-We have all the functionality we need now on the server. Let's move on to build the Kaboom website that the players will use to play the game. 
+Now we have all the functionality we need on the server, let's move on to building the Kaboom website the players will use to play the game. 
 
-## Setting up Kaboom with Socket.io
+## Setting up Kaboom with Socket.IO
 
-The first thing we need to do is create an opening scene in Kaboom that will prompt for the player's name, and setup Socket.io so we can attempt to connect to the server. Head over to the Kaboom repl we created earlier, and add a new scene called `startGame`: 
+The first thing we need to do is create an opening scene in Kaboom that will prompt for the player's name, and setup Socket.IO so we can connect to the server. Head over to the Kaboom repl we created earlier, and add a new scene called `startGame`: 
 
 ![add new scene](/images/tutorials/27-tictactoe-kaboom/startGameScene.gif)
 
-Now we can add a reference to Socket.io. Normally in a plain HTML project, we could add a [`<script>`](https://www.w3schools.com/tags/tag_script.asp) tag and reference the Socket.io [client script, hosted automatically on our game server](https://socket.io/docs/v4/client-installation/#Installation). However, in the Kaboom.js project type on Replit, we don't have direct access to change the underlying HTML files. Therefore, we need to add the script programmatically. We can do it by accessing the [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document) object available in every browser, and insert a new element with our script. 
+Now we can add a reference to Socket.IO. Normally, in a plain HTML project, we could add a [`<script>`](https://www.w3schools.com/tags/tag_script.asp) tag and reference the Socket.IO [client script](https://socket.io/docs/v4/client-installation/#Installation), hosted automatically on our game server. However, in the Kaboom project type on Replit, we don't have direct access to change the underlying HTML files. Therefore, we need to add the script programmatically. We can do it by accessing the [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document) object available in every browser, and insert a new element with our script.
 
 ```js 
 let script = document.createElement("script");  
@@ -414,25 +419,25 @@ keyRelease("enter", ()=>{
 
 To keep the calculations for the UI layout simpler, we'll use a fixed size for the screen. That's where the 2 constants for the screen width and height come in. 
 
-Then we use the Kaboom [`add`](https://kaboomjs.com/#add) function to display the prompt "What's your name?" on the screen, using the  [`text`](https://kaboomjs.com/#text) component. We choose a position halfway across the screen, `SCREEN_WIDTH / 2`, and about a third of the way down the screen, `SCREE_HEIGHT / 3`. We add the [`origin`](https://kaboomjs.com/#origin) component, set to `center`, to indicate that the positions we set must be in the center of the text field. 
+We use the Kaboom [`add`](https://kaboomjs.com/#add) function to display the prompt "What's your name?" on the screen, using the  [`text`](https://kaboomjs.com/#text) component. We choose a position halfway across the screen, `SCREEN_WIDTH / 2`, and about a third of the way down the screen, `SCREEN_HEIGHT / 3`. We add the [`origin`](https://kaboomjs.com/#origin) component, set to `center`, to indicate that the positions we set must be in the center of the text field. 
 
-Then we add another object, with an empty `""` text component. This will display the character the player types in. We position it exactly halfway down and across the screen. We also hold a reference to the object in the constant `nameField`
+Then we add another object with an empty `""` text component. This will display the characters the player types in. We position it exactly halfway down and across the screen. We also hold a reference to the object in the constant `nameField`.
 
-To get the user keyboard input, we use the Kaboom function [`charInput`](https://kaboomjs.com/#charInput). This function calls an event handler each time a key on the keyboard is pressed. We take that character and append it to the text in the `nameField` object. Now, when a player presses a key to enter their name, it will show up on the screen. 
+To get the user's keyboard input, we use the Kaboom function [`charInput`](https://kaboomjs.com/#charInput). This function calls an event handler each time a key on the keyboard is pressed. We take that character and append it to the text in the `nameField` object. Now, when a player presses a key to enter their name, it will show up on the screen. 
 
-Finally, we use the Kaboom function [`keyRelease`](https://kaboomjs.com/#keyRelease) to listen when the player pushed the `enter` key. We'll take that as meaning they have finished entering their name and want to start the game. In the handler, we use the Kaboom [`go`](https://kaboomjs.com/#go) to redirect to the main scene of the game. 
+Finally, we use the Kaboom function [`keyRelease`](https://kaboomjs.com/#keyRelease) to listen for when the player pushes the `enter` key. We'll take that as meaning they have finished entering their name and want to start the game. In the handler, we use the Kaboom [`go`](https://kaboomjs.com/#go) function to redirect to the main scene of the game. 
 
 ## Setting Kaboom parameters
 
-We've created a new starting scene, and we want to have a fixed size for the game window. We need to update the Kaboom settings so that the game play environment reflects those choices. 
+We've created a new starting scene, and we have a fixed size for the game window. Now we need to update the Kaboom settings so that the game play environment reflects those choices. 
 
-To set up the game play environment, click the dropdown next to the Kaboom menu. Set the "Start Scene" to "StartGame". Uncheck "Full Screen", and set the Width to 1000 and Height to 600. Set the scale to "1". Then choose dark blue or black as the "Clear Color". 
+Click the dropdown next to the Kaboom menu. Set the "Start Scene" to "StartGame". Uncheck "Full Screen", and set the Width to 1000 and Height to 600. Set the scale to "1". Then choose dark blue or black as the "Clear Color". 
 
 ![Kaboom setup](/images/tutorials/27-tictactoe-kaboom/kaboomSettings.gif)
 
 ## Adding the game board 
 
-Now we can add the UI elements for the game itself. Open the "main" scene in your Kaboom repl, and add the following code to draw the tic-tac-toe board. 
+Now we can add the UI elements for the game itself. Open the "main" scene in your Kaboom repl, and add the following code to draw the tic-tac-toe board: 
 
 ```js
         // Board
@@ -457,13 +462,13 @@ Now we can add the UI elements for the game itself. Open the "main" scene in you
         ]); 
 ```
 
-This adds 4 rectangles, of width 1 pixel and length 400 pixels to the screen, which actually makes each rectangle more like a line. We use this to draw thin lines to create the classic tic-tac-toe board shape. The first 2 rectangles are the vertical lines, and the second 2 are the horizontal lines. We place them closer to the left side of the screen, instead of the center, as we'll have game information on the right hand side of the screen. 
+This adds 4 rectangles with a width of 1 pixel and length of 400 pixels to the screen - each rectangle is more like a line. This is how we draw the lines that create the classic tic-tac-toe board shape. The first 2 rectangles are the vertical lines, and the second 2 are the horizontal lines. We place the board closer to the left side of the screen, instead of the center, to save space for game information to be displayed on the right hand side of the screen. 
 
 If you run the game, and enter your name, you should see the board layout like this:
 
 ![board layout](/images/tutorials/27-tictactoe-kaboom/boardLayout.png)
 
-We have the outline of the board, but we need to add a way to draw the _X_ and _O_ symbols in each block. To do this, we'll add objects with text components in each block of the board. First, we'll make an array containing the location and size of each block: 
+Now we need to add a way to draw the _X_ and _O_ symbols in each block. To do this, we'll add objects with text components in each block of the board. First, we'll make an array containing the location and size of each block: 
 
 ```js
 const boardSquares = [
@@ -479,7 +484,7 @@ const boardSquares = [
 ];
 ```
 
-Then we can run through this array, and create a text object that we can write to when we want to update the symbols on the board. Let's create a function to do that. 
+We can run through this array and create a text object that we can write to when we want to update the symbols on the board. Let's create a function to do that. 
 
 ```js
 function createTextBoxesForGrid(){
@@ -502,7 +507,7 @@ Finally, we call the function to create the text boxes.
 
 ## Adding player names and game status
 
-Now let's add some areas for the player's names and for the current status of the game (eg, who's turn it is to play, if someone has won, or if it's a draw etc). 
+Now let's add some areas for the player's names and for the current status of the game (whose turn it is to play, if someone has won, or if it's a draw). 
 
 ```js
 // Players and game status elements
@@ -527,7 +532,7 @@ Here we add 3 objects with [`text`](https://kaboomjs.com/#text) components. The 
 
 ## Connecting to the server
 
-To connect to the game server, we need to initialize the Socket.io library we dynamically added earlier. We need to provide the URL to the server repl, so copy that and add this code along with the server URL: 
+To connect to the game server, we need to initialize the Socket.IO library we dynamically added earlier. We need to provide the URL to the server repl, so copy that and add this code along with the server URL: 
 
 ```js
 var socket = io('https://tic-tac-toe-server.<YOUR_USER_NAME>.repl.co'); 
@@ -538,13 +543,13 @@ socket.on('connect', function(){
   });
 }); 
 ```
-In the first line, we initialize the [socket.io client library](https://socket.io/docs/v4/client-initialization/) to connect to the server. Then we add a listener to the [`connect`](https://socket.io/docs/v4/client-socket-instance/#Socket-connected) event. This lets us know when we have established a connection to the server. 
+In the first line, we initialize the [Socket.IO client library](https://socket.io/docs/v4/client-initialization/) to connect to the server. Then we add a listener to the [`connect`](https://socket.io/docs/v4/client-socket-instance/#Socket-connected) event. This lets us know when we have established a connection to the server. 
 
 If we have a connection, we then [`emit`](https://socket.io/docs/v4/emitting-events/) an event to the server, with our custom event type `addPlayer`. We also add in the player name, which we passed to this scene from the `startGame` scene. Any arguments passed between scenes are accessible through the `args` parameter within the scene. Emitting the `addPlayer` event to the server will cause the `addPlayer` event handler to fire on the server side, adding the player to the game, and emitting back the game state. 
 
 ## Handling updated game state
 
-Recall that our server emits a `gameState` event whenever something changes in the game. We'll listen for that event, and update all the UI elements in an event handler. 
+Remember that our server emits a `gameState` event whenever something changes in the game. We'll listen for that event, and update all the UI elements in an event handler. 
 
 First, we need to add the definitions of each status as we have done on the server side, so that we can easily reference them in the code: 
 
@@ -602,24 +607,25 @@ socket.on('gameState', function(state){
 });
 ```
 
-This function looks quite large, but it is mainly just updating the text boxes we added. 
-First, we loop through the board positions array that is passed from the server on the `state` payload. We check if there is a player in each block position. If there is a player, we write that player's symbol to the corresponding text box, found in the `boardSquares` array we created above. If there is no player in the block, i.e it's a `null` value, we write an empty string to the text block.
+This function looks quite long, but it's mainly just updating the text boxes we added.
 
-Then we update the `statusLabel`, to show what is currently happening in the game. We use a [`switch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) statement to create logic for each of the possibilities. We write a different message, drawing from different data in the gameState object to the `statusLabel` text box depending on the status. 
+First, we loop through the board positions array that is passed from the server on the `state` payload, to check each block for a player positioned on it. If there is a player on a block, we write that player's symbol to the corresponding text box, found in the `boardSquares` array we created above. If there is no player in the block, i.e it's a `null` value, we write an empty string to the text block.
 
-Then we update the player's name text boxes. First we reset them, if any of the players has dropped out etc. Then we update the text boxes with the player's symbol and name. Note that we first check if there are the corresponding players in the array. 
+Then we update the `statusLabel` to show what is currently happening in the game. We use a [`switch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) statement to create logic for each of the possibilities. We write a different message to the `statusLabel` text box depending on the status, drawing from data in the `gameState` object.
 
-Now we are done with updating from the game state. If you run the game again and enter your name (make sure the server is also running), you should see something like this: **Note** Open the game window in a new tab so that requests to the repl server don't get blocked by the browser due CORS header 'Access-Control-Allow-Origin' not matching in the embedded window.
+Next we update the player name text boxes. First we reset them, in case one of the players has dropped out. Then we update the text boxes with the players' symbols and names. Note that we first check if there are the corresponding players in the array. 
+
+Now that we're done with updating from the game state, let's try running the game again. Open the game window in a new tab so that requests to the repl server don't get blocked by the browser due to the CORS header 'Access-Control-Allow-Origin' not matching in the embedded window. Make sure the server is also running, and enter your name. You should see something like this:
 
 ![Open in new tab](/images/tutorials/27-tictactoe-kaboom/open-in-new-tab.png)
 
 ![Waiting for another player](/images/tutorials/27-tictactoe-kaboom/waiting.png)
 
-You can connect to your game in another browser tab, and enter another name. Then you should see both names come up, and the status message change to allow a player to make a move. Of course, we haven't yet implement the code to enable making a move from the UI, so let's do that now. 
+You can connect to your game in another browser tab, and enter another name. Then you should see both names come up, and the status message change to allow a player to make a move. Of course, we haven't yet implemented the code to enable making a move from the UI, so let's do that now. 
 
 ## Handling player moves
 
-We want a player to be able to click on a block to place their move. Kaboom has a function [`mouseRelease`](https://kaboomjs.com/#mouseRelease) which we can use to handle mouse click events. All we'll need then is the position the mouse cursor is at, and map that to one of the board positions, using our `boardSquares` array to do the lookup. We can use the Kaboom function [`mousePos`](https://kaboomjs.com/#mousePos) to get the coordinates of the mouse. Let's implement that now: 
+We want a player to be able to click on a block to place their move. Kaboom has a function [`mouseRelease`](https://kaboomjs.com/#mouseRelease) that we can use to handle mouse click events. All we need then is the position the mouse cursor is at, and we can map that to one of the board positions using our `boardSquares` array to do the lookup. We'll use the Kaboom function [`mousePos`](https://kaboomjs.com/#mousePos) to get the coordinates of the mouse: 
 
 ```js
 mouseRelease(() => {
@@ -639,7 +645,7 @@ mouseRelease(() => {
   }
 });
 ```
-If we find a 'hit' on one of the board squares, we emit our `action` event, and pass as the payload data, the index of the square that was clicked on. The server listens for this event, and runs the logic we added for the `action` event on the server side. If the action changes the game state, the server will send back the new game state, which we can update. 
+If we find a 'hit' on one of the board squares, we emit our `action` event. We pass the index of the square that was clicked on as the payload data. The server listens for this event, and runs the logic we added for the `action` event on the server side. If the action changes the game state, the server will send back the new game state, and the UI elements update. 
 
 The only other input we need to implement is to check if the player wants a rematch. To do that, we'll assign the `r` key as the rematch command. We can use the Kaboom function [`charInput`](https://kaboomjs.com/#charInput) to listen for key press events. We'll check if the key is `r`, or `R`, then emit the `rematch` event. We don't have any data to pass with that, so we'll just pass `null`. 
 
@@ -651,13 +657,13 @@ charInput((ch) => {
 });
 ```
 
-Now if you run the game (and the server), and open the game in another tab, you should be able to play tic-tac-toe against yourself! You can send a link of the game to a friend, and see if they can join and play against you. 
+Now you can run the game (and the server), and open the game in another tab, and you should be able to play tic-tac-toe against yourself! Send a link to the game to a friend, and see if they can join and play against you. 
 
 ![playing tic tac toe](/images/tutorials/27-tictactoe-kaboom/playing.png) 
 
 ## Next Steps
 
-Congratulations, you've completed making a multi-player game! Now that you know the basics of creating an internet game, maybe you can try different games, like checkers or chess or go. 
+Now that you know the basics of creating a multiplayer online game, try your hand at making some different games, like checkers or chess or go. 
 
 Happy coding!
 
