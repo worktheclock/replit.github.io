@@ -534,7 +534,7 @@ Here we add 3 objects with [`text`](https://kaboomjs.com/#text) components. The 
 
 To connect to the game server, we need to initialize the Socket.IO library we dynamically added earlier. We need to provide the URL to the server repl, so copy that from the output window:
 
-
+![Copying server url](/images/tutorials/27-tictactoe-kaboom/server-url.png)
 
 Now add this code along with the server URL: 
 
