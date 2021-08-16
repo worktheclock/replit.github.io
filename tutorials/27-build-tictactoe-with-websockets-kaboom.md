@@ -532,7 +532,11 @@ Here we add 3 objects with [`text`](https://kaboomjs.com/#text) components. The 
 
 ## Connecting to the server
 
-To connect to the game server, we need to initialize the Socket.IO library we dynamically added earlier. We need to provide the URL to the server repl, so copy that and add this code along with the server URL: 
+To connect to the game server, we need to initialize the Socket.IO library we dynamically added earlier. We need to provide the URL to the server repl, so copy that from the output window:
+
+
+
+Now add this code along with the server URL: 
 
 ```js
 var socket = io('https://tic-tac-toe-server.<YOUR_USER_NAME>.repl.co'); 
