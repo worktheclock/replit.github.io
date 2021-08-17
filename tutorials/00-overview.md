@@ -102,6 +102,34 @@ Take notes on Telegram and have a bot automatically publish them to a web applic
 
 Revisit PyGame again to build the classic Snake game.
 
+#### [Lesson 20: Build Your Online Store's Checkout Process with Stripe](./20-online-store-checkout-process)
+
+Build an online store and integrate Stripe's checkout process.
+
+#### [Lesson 21: Build a Snake Game with Kaboom.js](./21-build-snake-with-kaboom)
+
+Build the classic Snake game while learning all about Kaboom.js game development.
+
+#### [Lesson 22: Build a Personal Stock Market dashboard](./22-personal-stock-market-dashboard)
+
+Build a single-page web dashboard for tracking your stock portfolio.
+
+#### [Lesson 23: Building Asteroids Game with Kaboom.js](./23-build-asteroids-with-kaboom)
+
+Revisit Kaboom.js again to build the classic Asteroids game.
+
+#### [Lesson 24: Build a Space Shooter Game with Kaboom.js](./24-build-space-shooter-with-kaboom)
+
+Continue to learn about Kaboom.js by building a Space Shooter game with a platformer feel.
+
+#### [Lesson 25: Building a pseudo-3D game with Kaboom.js](./25-build-3d-game-with-kaboom)
+
+Learn how to leverage early game design techniques to build a pseudo-3D game in a 2D game engine like Kaboom.js
+
+#### [Lesson 26: Generate PDF reports from spreadsheet data](./26-pdf-report-generator-from-spreadsheet)
+
+Build a web application that takes in data from spreadsheets and use it to create slick PDF reports
+
 ## Other tutorials
 
 Here are some other tutorials hosted on third-party sites.

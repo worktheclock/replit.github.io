@@ -28,7 +28,7 @@ There are a few requirements to publishing to Apps which mainly revolve around c
 ## How to publish
 You can publish either directly from the workspace or from your repl's spotlight page.
 
-*Disclaimer: currently, you can't publish repls to Apps if you're a student or trying to publish a team repl.*
+*Disclaimer: currently, you can't publish repls to Apps if you're a student.*
 
 ### Publish from Workspace
 ![Clicking publish from Workspace](https://docs.replit.com/images/apps/workspace-publish.png)
