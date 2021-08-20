@@ -170,6 +170,11 @@
         "slug": "embedding-projects"
       },
       {
+        "name": "Google Classroom Integration",
+        "slug": "google-classroom"
+      },
+
+      {
         "name": "Exporting Student Submissions",
         "slug": "exporting-student-submissions"
       },
