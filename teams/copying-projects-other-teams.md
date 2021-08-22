@@ -4,7 +4,7 @@ Teachers can bulk copy and share projects to any Team. This feature is useful fo
 
 Follow the steps below:
 
-1. Click on "Share project" found right next to "+ Create project":
+1. Click on "Share projects" :
 
 ![Project Copying](/images/teamsForEducation/copyProjectOne.png)
 
