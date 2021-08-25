@@ -1,8 +1,10 @@
-# Build a team technical challenge website with replit.web
+# Build a Team technical challenge website with replit.web
 
 Code competitions and hackathons are a fun way to expand your programming skills, get exposed to new ideas, and work together to solve difficult challenges. The time-limited, competitive nature of these competitions provides an additional challenge.
 
-In this tutorial, we'll use the replit.web framework to build a leaderboard website for an online technical challenge in the vein of [Advent of Code](https://adventofcode.com/) or [Hackasat](https://www.hackasat.com/). We'll focus on the generic aspects of the site, such as teams, challenges and scores, so once we're done, you can use the site for a competition of your own.
+In this tutorial, we'll use the Replit.web framework to build a leaderboard website for an online technical challenge in the vein of [Advent of Code](https://adventofcode.com/) or [Hackasat](https://www.hackasat.com/). We'll focus on the generic aspects of the site, such as teams, challenges and scores, so once we're done, you can use the site for your own competition.
+
+![Challenge site functionality](/images/tutorials/28-technical-challenge-site/site-functionality.gif)
 
 By the end of this tutorial, you'll be able to:
 
@@ -12,9 +14,9 @@ By the end of this tutorial, you'll be able to:
 
 ## Getting started
 
-To get started, create a Python repl.
+To get started, sign into [Replit](https://replit.com) or [create an account](https://replit.com/signup) if you haven't already. Once logged in, create a Python repl.
 
-![](/images/tutorials/28-technical-challenge-site/create-python-repl.png)
+![Creating a new repl](/images/tutorials/28-technical-challenge-site/create-python-repl.png)
 
 Our competition website will have the following functionality:
 
@@ -29,7 +31,7 @@ from flask import Flask, render_template, flash, redirect, url_for, request
 from replit import db, web
 ```
 
-Here we're importing a number of Flask features we'll need. We could just use `import flask` to import everything, but we'll be using most of these functions often enough that having to prepend them with `flask.` would quickly become tiresome. We're also importing Replit's DB and web modules, which will give us data persistence and user authentication.
+Here we're importing a number of Flask features we'll need. We could just use `import flask` to import everything, but we'll be using most of these functions often enough that having to prepend them with `flask.` would quickly become tiresome. We're also importing Replit's `db` and `web` modules, which will give us data persistence and user authentication.
 
 Now let's create our app and initialize its database. Add the following code just below the import statements in `main.py`:
 
@@ -53,11 +55,11 @@ import random, string
 ''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(20))
 ```
 
-![](/images/tutorials/28-technical-challenge-site/randomstring.png)
+![Generating a random string](/images/tutorials/28-technical-challenge-site/randomstring.png)
 
-You'll notice that `db_init()` is undefined. As this is going to be a fairly large codebase, we're going to put it in a separate file. Create the file `db_init.py` in your repl's files tab now:
+You'll notice that `db_init()` is undefined. As this is going to be a fairly large codebase, we're going to put it in a separate file. Create the file `db_init.py` in your repl's files tab:
 
-![](/images/tutorials/28-technical-challenge-site/dbinit.png)
+![Database init file](/images/tutorials/28-technical-challenge-site/dbinit.png)
 
 Add the following code to this file:
 
@@ -77,13 +79,13 @@ def db_init():
 
 [Replit's Database](https://docs.replit.com/hosting/database-faq) can be thought of and used as one big Python dictionary that we can access with [`db`](https://replit-py.readthedocs.io/en/latest/api.html#module-replit.database). Any values we store in `db` will persist between repl restarts.
 
-To import this file in `main.py`, we can use an `import` statement in much the same way as we would for a module. Add this line in `main.py` below your other imports:
+To import this file in `main.py`, we can use an `import` statement in much the same way as we would for a module. Add this line in `main.py`, below your other imports:
 
 ```python
 from db_init import db_init
 ```
 
-We've also defined a secondary database in `users`. While `db` only contains what we put into it, `users` is a [UserStore](https://replit-py.readthedocs.io/en/latest/api.html) that will automatically have the names of users who sign into our application added as keys, so we can easily store information about them.
+We've also defined a secondary database `users` in `main.py`. While `db` only contains what we put into it, `users` is a [UserStore](https://replit-py.readthedocs.io/en/latest/api.html) that will automatically have the names of users who sign into our application added as keys, so we can easily store and retrieve information about them.
 
 Now let's create some test content and run our app. Add the following code, and then run your repl.
 
@@ -97,13 +99,15 @@ def index():
 web.run(app)
 ```
 
-Because we've added the `@web.authenticated` [function decorator](https://realpython.com/primer-on-python-decorators/) to our index page, it will only be available to logged in users. You should see this now, as your app will show a login button. Click on that button now, and authorize your application to use Replit authentication in the window that pops up.
+Because we've added the `@web.authenticated` [function decorator](https://realpython.com/primer-on-python-decorators/) to our index page, it will only be available to logged in users. You should see this now, as your app will show a login button. Click on that button, and authorize your application to use Replit authentication in the window that pops up.
 
-Having done that, you should now see the greeting we implemented above. If you send your repl to a friend, they will also be able to log in, and see their own Replit username.
+![Login Button](/images/tutorials/28-technical-challenge-site/login-button.png)
+
+Having done that, you should now see the greeting we implemented above. If you send your repl to a friend, they will also be able to log in, and see their own Replit username on the greeting message.
 
 ## Creating user roles
 
-Function decorators like `@web.authenticated`, which prevent a function from executing unless certain conditions are met, are very useful for web applications like this one, in which we want to restrict certain pages based on who's attempting to view them. `@web.authenticated` restricts users based on *authentication* -- who a user is -- we will now create our own decorators to restrict users based on *authorization* -- what a user is allowed to do. 
+Function decorators like `@web.authenticated`, which prevent a function from executing unless certain conditions are met, are very useful for web applications like this one, in which we want to restrict certain pages based on who's attempting to view them. `@web.authenticated` restricts users based on *authentication* -- who a user is. We can now create our own decorators to restrict users based on *authorization* -- what a user is allowed to do. 
 
 For this site, we're concerned about three things:
 
@@ -123,7 +127,7 @@ def in_team(username):
         return users[username]["team"]
 ```
 
-`is_admin()` will return `True` if the provided user is an admin and `False` otherwise. The second will return the name of the team the user is in, or `None` if they aren't in a team.
+`is_admin()` will return `True` if the provided user is an admin or `False` otherwise. `in_team()` will return the name of the team the user is in, or `None` if they aren't in a team.
 
 Now we can create our authorization function decorators. Add the following import function to the top of `main.py`:
 
@@ -148,7 +152,7 @@ def admin_only(f):
     return decorated_function
 ```
 
-This code may look a bit strange if you haven't written your own decorators before. Here's how it works: `admin_only` is the name of our decorator. You can think of decorators as functions which take other functions as arguments. Therefore, the following
+This code may look a bit strange if you haven't written your own decorators before. Here's how it works: `admin_only` is the name of our decorator. You can think of decorators as functions which take other functions as arguments. Therefore, if we write the following
 
 ```python
 @admin_only
@@ -158,7 +162,7 @@ def admin_function():
 admin_function()
 ```
 
-is roughly equivalent to:
+it will be roughly equivalent to:
 
 ```python
 def admin_function():
@@ -167,9 +171,9 @@ def admin_function():
 admin_only(admin_function)
 ```
 
-So whenever `admin_function` gets called, the code we've defined in `decorated_function` will execute before anything we define in `admin_function`. This means we don't have include an `if not is_admin` check in every piece of admin functionality. As per the code, if a non-admin attempts to access restricted functionality, our app with [flash](https://flask.palletsprojects.com/en/2.0.x/patterns/flashing/) a warning message and redirect them to the home page.
+So whenever `admin_function` gets called, the code we've defined in `decorated_function` will execute before anything we define in `admin_function`. This means we don't have to include an `if not is_admin` check in every piece of admin functionality. As per the code, if a non-admin attempts to access restricted functionality, our app will [flash](https://flask.palletsprojects.com/en/2.0.x/patterns/flashing/) a warning message and redirect them to the home page.
 
-We also need to define a decorator for the opposite case, where we need to ensure that the current user is not an admin. Add the following code just blow the code you added above.
+We also need to define a decorator for the opposite case, where we need to ensure that the current user is not an admin. Add the following code just below the code you added above.
 
 ```python
 def not_admin_only(f):
@@ -185,7 +189,7 @@ def not_admin_only(f):
     return decorated_function
 ```
 
-We can do much the same thing for `team_only` and `not_team_only`:
+We will do much the same thing for `team_only` and `not_team_only`:
 
 ```python
 def team_only(f):
@@ -213,7 +217,7 @@ def not_team_only(f):
     return decorated_function
 ```
 
-Finally, we need to add a decorator to check whether our competition is running. This is mainly for challenge description pages, so we'll add an exception for admin users:
+Finally, we need to add a decorator to check whether our competition is running. This is mainly for challenge description pages, so we'll add an exception for non admin users:
 
 ```python
 def competition_running(f):
@@ -229,7 +233,7 @@ def competition_running(f):
     return decorated_function
 ```
 
-Now that we've added our authorization controls, it's time to give them something to authorize. In the next couple of sections, we'll define all of our app's functionality and build its front-end.
+Now that we've added our authorization controls, it's time to give them something to authorize. In the next sections, we'll define all of our app's functionality and build its front-end.
 
 ## Building forms
 
@@ -240,11 +244,11 @@ The bulk of interactivity in our application will be enabled through forms. User
 * How do we give feedback on data that doesn't pass our validations?
 * Security concerns around user input, such as [SQL injection](https://owasp.org/www-community/attacks/SQL_Injection), [cross-site scripting](https://owasp.org/www-community/attacks/xss/) and [cross-site request forgery](https://owasp.org/www-community/attacks/csrf). While the first one won't be relevant to our app, the second two are.
 
-We could build all of this ourselves using Flask's `request.form` as a basis, but fortunately someone else has already done the hard work and built the [WTForms](https://wtforms.readthedocs.io/en/2.3.x/) library, as well as [Flask WTF](https://flask-wtf.readthedocs.io/en/0.15.x/), which integrates it with Flask. We'll be using both of those to construct our application's various forms.
+We could build all of this ourselves using Flask's `request.form` as a basis, but fortunately someone else has already done the hard work and built the [WTForms](https://wtforms.readthedocs.io/en/2.3.x/) library, as well as [Flask WTF](https://flask-wtf.readthedocs.io/en/0.15.x/), which integrates `WTForms` with Flask. We'll be using both of these to construct our application's various forms.
 
 To keep our codebase navigable, we'll put all our form code in a separate file, like we did with our database initialization code. Create `forms.py` in your repl's files tab now:
 
-![](/images/tutorials/28-technical-challenge-site/forms.png)
+![Building forms](/images/tutorials/28-technical-challenge-site/forms.png)
 
 We'll start this file off with some imports:
 
@@ -259,7 +263,7 @@ Here we import our Replit database, which we'll need for uniqueness validations,
 
 Before we get started with our forms, it's worth thinking about how we're going to lay out the data structures they'll be used to create and modify. In `db_init.py`, we've defined two dictionaries -- "challenges" and "teams". Each of these will contain a dictionary for each challenge or team, keyed by an ID. Our data structure will look something like this:
 
-```
+```json
 {
     "challenges": {
         "ID": {
@@ -268,21 +272,21 @@ Before we get started with our forms, it's worth thinking about how we're going 
             "points": 10,
             "code": "CHALLENGE SOLUTION CODE"
         }
-    }
+    },
     "teams": {
         "ID": {
             "name": "NAME",
             "team_leader": "LEADER NAME",
-            "team_members": ["LEADER NAME", "ADDITIONAL MEMBER"]
+            "team_members": ["LEADER NAME", "ADDITIONAL MEMBER"],
             "score": 0,
-            "password": "TEAM PASSWORD"
+            "password": "TEAM PASSWORD",
             "challenges_solved": ["CHALLENGE ID", "ANOTHER CHALLENGE ID"]
         }
     }
 }
 ```
 
-The ID value for both our challenges and teams will be challenge or team name in all-lowercase, with spaces replaced by hyphens, so we can use it in our app's URLs. Let's create a function that turns names into IDs, in `forms.py`, just below our imports:
+The ID value for both our challenges and teams will be the challenge or team name, all-lowercase, with spaces replaced by hyphens, so we can use it in our app's URLs. Let's create a function that turns names into IDs, in `forms.py`, just below our imports:
 
 ```python
 def name_to_id(name):
@@ -408,7 +412,7 @@ Now that we have our form logic, we need to integrate them into both the applica
 
 ## Building back-end functionality
 
-Back-end functionality is the heart of our application. Below, we'll define our application's routes and build the logic for creating and joining teams, and creating and solving challenges
+Back-end functionality is the heart of our application. Below, we'll define our application's routes and build the logic for creating and joining teams, as well as creating and solving challenges.
 
 ### Team functionality
 
@@ -438,17 +442,17 @@ def team(team_id):
 
 The `/team-create` and `/team-join` routes will use their respective forms. Admins and users already in teams will not be permitted to create or join teams. The `/team/<team_id>` page will be an informational page, showing the team's name, score and which challenges they've solved. We're using part of the URL as a parameter here, so, for example, `/team/codeslingers` will take us to the team page for that team. We won't require authentication for this page.
 
-Because we'll be dealing with passwords, we're going to store them as [one-way encrypted hashes](https://en.wikipedia.org/wiki/Hash_function). This will prevent anyone with access to our repl's database from easily seeing all team passwords. We'll use Flask's `Bcrypt` extension for this, which you can install by searching for "flask-bcrypt" in the Packages tab on the Replit sidebar.
+Because we'll be dealing with passwords, we're going to store them as [one-way encrypted hashes](https://en.wikipedia.org/wiki/Hash_function). This will prevent anyone with access to our repl's database from easily seeing all team passwords. We'll use Flask's `Bcrypt` extension for this, which you can install by searching for "flask-bcrypt" in the Packages tab on the Replit IDE sidebar.
 
-![](/images/tutorials/28-technical-challenge-site/bcrypt-package.png)
+![Flask bcrypt package](/images/tutorials/28-technical-challenge-site/bcrypt-package.gif)
 
-While Replit usually automatically installs packages based on our import statements, this one must be manually installed as its package name is slightly different on Pypi and on disk. Once it's installed, import it with the following additional line at the top of `main.py`:
+While Replit usually automatically installs packages based on our import statements, this one must be manually installed as its package name is slightly different on Pypi and on disk. Once it's installed, we import it with the following additional line at the top of `main.py`:
 
 ```python
 from flask_bcrypt import Bcrypt
 ```
 
-Then initialize a `Bcrypt` object for our app by adding the following line just below `app = Flask(__name__)`:
+Then we initialize a `Bcrypt` object for our app by adding the following line just below `app = Flask(__name__)`:
 
 ```python
 bcrypt = Bcrypt(app)
@@ -690,7 +694,21 @@ We have a fully functional application back-end, but without some front-end page
 
 First, we'll need the following HTML files in a new directory called `templates`:
 
-![](/images/tutorials/28-technical-challenge-site/templates.png)
+```
+templates/
+    |__ admin/
+    |     |__  challenge-create.html
+    |__  _macros.html
+    |__  challenge.html
+    |__  index.html
+    |__  layout.html
+    |__  leaderboard.html
+    |__  team-create.html
+    |__  team-join.html
+    |__  team.html
+```
+
+![HTML templates](/images/tutorials/28-technical-challenge-site/templates.gif)
 
 Once you've created these files, let's populate them, starting with `templates/layout.html`:
 
@@ -728,7 +746,9 @@ Once you've created these files, let's populate them, starting with `templates/l
 </html>
 ```
 
-We'll use this file as the base of all our pages, so we don't need to repeat the same HTML. It contains features we want on every page, such as flashed messages, an indication of who's currently logged in, and a global navigation menu. All subsequent pages will inject content into the `body` [`block`](https://jinja.palletsprojects.com/en/3.0.x/templates/#child-template)
+We'll use this file as the base of all our pages, so we don't need to repeat the same HTML. It contains features we want on every page, such as flashed messages, an indication of who's currently logged in, and a global navigation menu. All subsequent pages will inject content into the `body` [`block`](https://jinja.palletsprojects.com/en/3.0.x/templates/#child-template) :
+
+```{% block body %}{% endblock %}```
 
 Next, we need to populate another helper file, `templates/_macros.html`:
 
@@ -787,7 +807,7 @@ Let's define our home page now, with a list of challenges. Add the following cod
 
 The following line will sort challenges in ascending order of points:
 
-```
+```html
     {% for id, challenge in challenges.items()|sort(attribute='1.points') %}
 ```
 
@@ -910,7 +930,7 @@ def context():
     }
 ```
 
-This will give every page most of the application's state. If we find we need another piece of state later, we can add it to the `context` helper function, and it will available to all our pages.
+This will give every page most of the application's state. If we find we need another piece of state later, we can add it to the `context` helper function, and it will be available to all our pages.
 
 Importantly, we're using a function rather than a static dictionary so that we can get the most up-to-date application state every time we serve a page.
 
@@ -923,7 +943,7 @@ def index():
         **context())
 ```
 
-You'll notice we've removed the `@web.authenticated` decorator. This will allow unauthenticated users to see something of our site before being asked to log in. `replit.web` will prompt them to log in as soon as they attempt to access an authenticated page.
+You'll notice we've removed the `@web.authenticated` decorator. This will allow unauthenticated users to get a glimpse of our site before being asked to log in. `replit.web` will prompt them to log in as soon as they attempt to access an authenticated page.
 
 ## Building the leaderboard
 
@@ -945,7 +965,7 @@ We've left out a key part of our application: the leaderboard showing which team
 
 Similar to the list of challenges on our home page, we use Jinja's [sort](https://jinja.palletsprojects.com/en/3.0.x/templates/#jinja-filters.sort) filter to order the teams from the one with the highest to the lowest score.
 
-```
+```html
     {% for id, team in teams.items()|sort(attribute='1.score', reverse=True) %}
 ```
 
@@ -968,7 +988,7 @@ We're done! Run your repl now to see your app in action. As your user account wi
 
 For best results, open your repl's web page in a new tab.
 
-![](/images/tutorials/28-technical-challenge-site/replit-browser-open-in-new-tab.png)
+![Open in new tab button](/images/tutorials/28-technical-challenge-site/replit-browser-open-in-new-tab.png)
 
 If you run into unexplained errors, you may need to clear your browser cookies, or flush the database.
 
@@ -985,6 +1005,6 @@ We've built a [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_dele
 
 And of course, you can also use your site to host a competition right now.
 
-You can find our repl here:
+You can find code for this tutorial here:
 
-!!!repl embed
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/challenge-website?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
