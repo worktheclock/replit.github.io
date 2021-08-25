@@ -17,7 +17,7 @@ We'll use the [Flask](https://flask.palletsprojects.com/en/1.1.x/) application a
 
 ![**Image 1:** *Importing a repository from GitHub to Replit.*](/images/tutorials/06-github/06-01-github-import.png)
 
-Press the `Import from GitHub` button, and you'll see Replit clone the repository and turn it into a repl. In all of our previous projects, we used the `main.py` file that Replit automatically creates for all new Python projects, and which it runs automatically when you press the `run` button. Note how in this GitHub project, we have no `main.py` file, and our code is instead in `mydemoapp.py`. Therefore, Replit will need some help from you to define how to run the project. This is configured through another special file named `.replit`. If the configuration panel doesn't pop up automatically, you can manually create a file called `.replit` and add the configuration below:
+Press the `Import from GitHub` button, and you'll see Replit clone the repository and turn it into a repl. In all of our previous projects, we used the `main.py` file that Replit automatically creates for all new Python projects, and which it runs automatically when you press the `run` button. Note how in this GitHub project, we have no `main.py` file, and our code is instead in `mydemoapp.py`. Therefore, Replit will need some help from you to define how to run the project. This is configured through another special file named `.replit`. If the configuration panel doesn't pop up automatically, you can manually create a file called `.replit` and add the configuration given below otherwise select the language (Python) from the first dropdown and type `python mydemoapp.py` in the "configure the run button" input.
  
 
 ```
@@ -27,7 +27,7 @@ run = "python mydemoapp.py"
 
 ![Run button config](/images/tutorials/06-github/run-config.gif)
 
-If you hit the `run` button, you should see the app start. As you can see, the web application is very basic: all it can do is display a welcome message.
+If you hit the `run` button, you should see the app start. Every time you press the `run` button, Replit will execute the command specified in the `.replit` file. This web application is very basic: all it can do is display a welcome message.
 
 ![**Image 3:** *Running the Flask application on Replit.*](/images/tutorials/06-github/06-03-mydemoapp-run.png)
 
