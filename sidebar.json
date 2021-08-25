@@ -58,6 +58,11 @@
         "slug": "running-github-repositories-replit"
       },
       {
+        "name": "Replit Libraries",
+        "slug": "replit-libraries"
+      },
+
+      {
         "name": "Getting started with Nix",
         "slug": "getting-started-nix"
       },
