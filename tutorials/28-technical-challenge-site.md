@@ -793,7 +793,7 @@ Let's define our home page now, with a list of challenges. Add the following cod
         <h1>Admin functions</h1>
         <ul>
             {% if competition_running %}
-                <li><a href="/admin/competition-end">End competition</a></li>
+                <li><a href="/admin/competition-stop">End competition</a></li>
             {% else %}
                 <li><a href="/admin/competition-start">Start competition</a></li>
             {% endif %}
@@ -926,7 +926,8 @@ def context():
         "user_team": in_team(web.auth.name),
         "admin": is_admin(web.auth.name),
         "teams": db["teams"],
-        "challenges": db["challenges"]
+        "challenges": db["challenges"],
+        "competition_running": db["competition_started"]
     }
 ```
 
