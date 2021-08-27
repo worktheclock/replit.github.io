@@ -1,8 +1,8 @@
-# Build a Team technical challenge website with replit.web
+# Build a team technical challenge website with `replit.web`
 
-Code competitions and hackathons are a fun way to expand your programming skills, get exposed to new ideas, and work together to solve difficult challenges. The time-limited, competitive nature of these competitions provides an additional challenge.
+Code competitions and hackathons are a fun way to expand your programming skills, get exposed to new ideas, and work together to solve difficult problems. The time-limited, competitive nature of these competitions provides an additional challenge.
 
-In this tutorial, we'll use the Replit.web framework to build a leaderboard website for an online technical challenge in the vein of [Advent of Code](https://adventofcode.com/) or [Hackasat](https://www.hackasat.com/). We'll focus on the generic aspects of the site, such as teams, challenges and scores, so once we're done, you can use the site for your own competition.
+In this tutorial, we'll use the `replit.web` framework to build a leaderboard website for an online technical challenge in the vein of [Advent of Code](https://adventofcode.com/) or [Hackasat](https://www.hackasat.com/). We'll focus on the generic aspects of the site, such as teams, challenges and scores, so once we're done, you can use the site for your own competition.
 
 ![Challenge site functionality](/images/tutorials/28-technical-challenge-site/site-functionality.gif)
 
@@ -48,7 +48,7 @@ users = web.UserStore()
 ADMINS = ["YOUR-REPLIT-USERNAME-HERE"]
 ```
 
-Here we initialize our application, our general and user databases and our list of admins. Make sure to replace the string in `ADMINS` with your Replit username before proceeding. Also replace the secret key with a long, random string. You can generate one in your repl's Python console with the following two lines of code
+Here we initialize our application, our general and user databases, and our list of admins. Make sure to replace the string in `ADMINS` with your Replit username before proceeding. Also replace the secret key with a long, random string. You can generate one in your repl's Python console with the following two lines of code:
 
 ```python
 import random, string
@@ -115,7 +115,7 @@ For this site, we're concerned about three things:
 * Is the user an admin? Users who are need to be able to create challenges, and perform other administrative tasks. For the sake of fairness, they should not be allowed to join teams themselves.
 * Is the competition running? If not, we don't want non-admin users to be able to view challenge pages or attempt to submit solutions.
 
-First, we'll create two helper functions to answer these questions. Add the following code to `main.py`, just below your ADMINS list.
+First, we'll create two helper functions to answer these questions. Add the following code to `main.py`, just below your ADMINS list:
 
 ```python
 # Helper functions
@@ -127,7 +127,7 @@ def in_team(username):
         return users[username]["team"]
 ```
 
-`is_admin()` will return `True` if the provided user is an admin or `False` otherwise. `in_team()` will return the name of the team the user is in, or `None` if they aren't in a team.
+The `is_admin()` function will return `True` if the provided user is an admin, or `False` otherwise. The function `in_team()` will return the name of the team the user is in, or `None` if they aren't in a team.
 
 Now we can create our authorization function decorators. Add the following import function to the top of `main.py`:
 
@@ -152,7 +152,7 @@ def admin_only(f):
     return decorated_function
 ```
 
-This code may look a bit strange if you haven't written your own decorators before. Here's how it works: `admin_only` is the name of our decorator. You can think of decorators as functions which take other functions as arguments. Therefore, if we write the following
+This code may look a bit strange if you haven't written your own decorators before. Here's how it works: `admin_only` is the name of our decorator. You can think of decorators as functions which take other functions as arguments. (The code coming up is example code for the purpose of illustration, and not part of our program.) Therefore, if we write the following:
 
 ```python
 @admin_only
@@ -173,7 +173,7 @@ admin_only(admin_function)
 
 So whenever `admin_function` gets called, the code we've defined in `decorated_function` will execute before anything we define in `admin_function`. This means we don't have to include an `if not is_admin` check in every piece of admin functionality. As per the code, if a non-admin attempts to access restricted functionality, our app will [flash](https://flask.palletsprojects.com/en/2.0.x/patterns/flashing/) a warning message and redirect them to the home page.
 
-We also need to define a decorator for the opposite case, where we need to ensure that the current user is not an admin. Add the following code just below the code you added above.
+We also need to define a decorator for the opposite case, where we need to ensure that the current user is not an admin. Add the following code just below the `# Authorization decorators` code you added above:
 
 ```python
 def not_admin_only(f):
@@ -217,7 +217,7 @@ def not_team_only(f):
     return decorated_function
 ```
 
-Finally, we need to add a decorator to check whether our competition is running. This is mainly for challenge description pages, so we'll add an exception for non admin users:
+Finally, we need to add a decorator to check whether our competition is running. This is mainly for challenge description pages, so we'll add an exception for non-admin users:
 
 ```python
 def competition_running(f):
@@ -320,7 +320,7 @@ class TeamCreateForm(FlaskForm):
             raise ValidationError("Team name already taken.") 
 ```
 
-When users create teams, they'll specify a team name and team password. In our WTForms field specifications above, we've defined minimum lengths for both of these fields, ensured that the team password is entered in a password field, and written a custom validator to reject new teams with IDs that match existing teams. Because we're validating on ID rather than name, users won't be able to create teams with the same name but different capitalization (.e.g. "Codeslingers" and "codeslingers").
+When users create teams, they'll specify a team name and team password. In our WTForms field specifications above, we've defined minimum lengths for both of these fields, ensured that the team password is entered in a password field, and written a custom validator to reject new teams with IDs that match existing teams. Because we're validating on ID rather than name, users won't be able to create teams with the same name but different capitalization (e.g. "Codeslingers" and "codeslingers").
 
 Every field in all of our forms includes the `InputRequired` validator, which will ensure that users do not submit blank values. This validator can be left out for optional fields.
 
@@ -402,13 +402,13 @@ class ChallengeSolveForm(FlaskForm):
 
 As we'll be including this form on the individual challenge pages, we don't need to ask the user to specify which challenge they're solving.
 
-Finally, we'll need to import our forms and helper function into `main.py` so we can use them in the rest of our app. Add the following line to `main.py`'s import statements:
+Finally, we'll need to import our forms and helper function into `main.py` so we can use them in the rest of our app. Add the following line to the import statements in `main.py`:
 
 ```python
 from forms import TeamCreateForm, TeamJoinForm, ChallengeCreateForm, ChallengeSolveForm, name_to_id 
 ```
 
-Now that we have our form logic, we need to integrate them into both the application front-end and back-end. We'll deal with the back-end first.
+Now that we have our form logic, we need to integrate them into both the front-end and back-end of the application. We'll deal with the back-end first.
 
 ## Building back-end functionality
 
@@ -440,13 +440,13 @@ def team(team_id):
 
 ```
 
-The `/team-create` and `/team-join` routes will use their respective forms. Admins and users already in teams will not be permitted to create or join teams. The `/team/<team_id>` page will be an informational page, showing the team's name, score and which challenges they've solved. We're using part of the URL as a parameter here, so, for example, `/team/codeslingers` will take us to the team page for that team. We won't require authentication for this page.
+The `/team-create` and `/team-join` routes will use their respective forms. Users already in teams and admins will not be permitted to create or join teams. The `/team/<team_id>` page will be an informational page, showing the team's name, score, and which challenges they've solved. We're using part of the URL as a parameter here, so, for example, `/team/codeslingers` will take us to the team page for that team. We won't require authentication for this page.
 
 Because we'll be dealing with passwords, we're going to store them as [one-way encrypted hashes](https://en.wikipedia.org/wiki/Hash_function). This will prevent anyone with access to our repl's database from easily seeing all team passwords. We'll use Flask's `Bcrypt` extension for this, which you can install by searching for "flask-bcrypt" in the Packages tab on the Replit IDE sidebar.
 
 ![Flask bcrypt package](/images/tutorials/28-technical-challenge-site/bcrypt-package.gif)
 
-While Replit usually automatically installs packages based on our import statements, this one must be manually installed as its package name is slightly different on Pypi and on disk. Once it's installed, we import it with the following additional line at the top of `main.py`:
+While Replit usually automatically installs packages based on our import statements, this one must be manually installed, as its package name is slightly different on Pypi and on disk. Once it's installed, we import it with the following additional line at the top of `main.py`:
 
 ```python
 from flask_bcrypt import Bcrypt
@@ -497,13 +497,13 @@ def team_create():
         **context())
 ```
 
-First, we instantiate an instance of `TeamCreateForm` using the values in `request.form`. We then check whether the current request is an HTTP POST, and we call `validate()` on the form. Behind the scenes, this method will run all of our field validators, and return error messages to the user for fields that fail validation. It will only return `True` once all fields validate.
+First, we create an instance of `TeamCreateForm` using the values in `request.form`. We then check whether the current request is an HTTP `POST`, and we call `validate()` on the form. Behind the scenes, this method will run all of our field validators, and return error messages to the user for fields that fail validation. It will only return `True` once all fields validate.
 
 Once we know we've got valid form input, we can save its data to our database. We construct our team's ID using the helper function from `forms.py`, hash our team password, and then define our team's dictionary.
 
-After that, we set the current user's team in our user database and redirect the user to their new team's page. `users.current` is an alias for `users[web.auth.name]`.
+After that, we set the current user's team in our user database and redirect the user to their new team's page. We use `users.current` as an alias for `users[web.auth.name]`.
 
-At the bottom of the function, we render our `team-create` page and tell it which form to use. This will happen regardless of whether the initiating request was a GET or a POST. We'll create the template and define the `context` function when we build the front-end.
+At the bottom of the function, we render our `team-create` page and tell it which form to use. This will happen regardless of whether the initiating request was a `GET` or a `POST`. We'll create the template and define the `context` function when we build the front-end.
 
 Now we can add the code for joining a team, in the `team_join` function:
 
@@ -746,7 +746,7 @@ Once you've created these files, let's populate them, starting with `templates/l
 </html>
 ```
 
-We'll use this file as the base of all our pages, so we don't need to repeat the same HTML. It contains features we want on every page, such as flashed messages, an indication of who's currently logged in, and a global navigation menu. All subsequent pages will inject content into the `body` [`block`](https://jinja.palletsprojects.com/en/3.0.x/templates/#child-template) :
+We'll use this file as the base of all our pages, so we don't need to repeat the same HTML. It contains features we want on every page, such as flashed messages, an indication of who's currently logged in, and a global navigation menu. All subsequent pages will inject content into the `body` [`block`](https://jinja.palletsprojects.com/en/3.0.x/templates/#child-template):
 
 ```{% block body %}{% endblock %}```
 
@@ -803,7 +803,7 @@ Let's define our home page now, with a list of challenges. Add the following cod
 {% endblock %}
 ```
 
-`{% extends "layout.html" %}` tells our templating engine to use `layout.html` as a base template, and `{% block body %} ... {% endblock %}` defines the code to place inside `layout.html`'s body block.
+Here, `{% extends "layout.html" %}` tells our templating engine to use `layout.html` as a base template, and `{% block body %} ... {% endblock %}` defines the code to place inside `layout.html`'s body block.
 
 The following line will sort challenges in ascending order of points:
 
@@ -917,7 +917,7 @@ Then our challenge creation page (inside the `templates/admin` directory):
 {% endblock %}
 ```
 
-We've referred to a lot of different variables in our front-end templates. Flask's Jinja templating framework allows us to pass the variables we need into `render_template()`, as we did when building the application backend. Most pages needed a form, and some pages, such as `challenge` and `team`, needed a challenge or team ID. In addition, we [unpack](https://realpython.com/python-kwargs-and-args/#unpacking-with-the-asterisk-operators) the return value of a function named `context` to into all of our rendered pages. Define this function now with our other helper functions in `main.py`, just below `in_team`:
+We've referred to a lot of different variables in our front-end templates. Flask's Jinja templating framework allows us to pass the variables we need into `render_template()`, as we did when building the application backend. Most pages needed a form, and some pages, such as `challenge` and `team`, needed a challenge or team ID. In addition, we [unpack](https://realpython.com/python-kwargs-and-args/#unpacking-with-the-asterisk-operators) the return value of a function named `context` to all of our rendered pages. Define this function now with our other helper functions in `main.py`, just below `in_team`:
 
 ```python
 def context():
@@ -964,13 +964,13 @@ We've left out a key part of our application: the leaderboard showing which team
 {% endblock %}
 ```
 
-Similar to the list of challenges on our home page, we use Jinja's [sort](https://jinja.palletsprojects.com/en/3.0.x/templates/#jinja-filters.sort) filter to order the teams from the one with the highest to the lowest score.
+Similar to the list of challenges on our home page, we use Jinja's [sort](https://jinja.palletsprojects.com/en/3.0.x/templates/#jinja-filters.sort) filter to order the teams from highest to lowest score.
 
 ```html
     {% for id, team in teams.items()|sort(attribute='1.score', reverse=True) %}
 ```
 
-We also use an if block to show the name of the current user's team in bold.
+We also use an `if` block to show the name of the current user's team in bold.
 
 Finally, we can add one last route to `main.py`, just above the line `web.run(app)`:
 
@@ -997,7 +997,7 @@ If you run into unexplained errors, you may need to clear your browser cookies, 
 
 We've built a [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) application with a fair amount of functionality, but there's still room for improvement. Some things you might want to add include:
 
-* CSS styling
+* CSS styling.
 * More admin functionality, such as adjusting scores, banning users and teams, and setting team size limitations.
 * File upload, for challenge files and/or team avatars.
 * Time-limited competitions, with a countdown.
