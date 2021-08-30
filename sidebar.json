@@ -448,6 +448,20 @@
         "slug": "abstract-data-types"
       }
     ]
+  },
+  {
+    "name": "Replit Books",
+    "slug": "replit-books",
+    "contents": [
+      {
+        "name": "Code with Replit",
+        "slug": "code-with-replit"
+      },
+      {
+        "name": "Learn Python the Right Way",
+        "slug": "learn-python-the-right-way"
+      }
+    ]
   }
 ]
 
