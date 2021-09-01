@@ -31,7 +31,7 @@ Replit Auth lets you easily build a "Sign in with Replit" option to your own app
 
 * *Documentation on readthedocs:* [https://replit-py.readthedocs.io/en/latest/db_tutorial.html](https://replit-py.readthedocs.io/en/latest/db_tutorial.html)
 * *FAQ:* [https://docs.replit.com/hosting/database-faq](/hosting/database-faq)
-* *Tutorial:* [
+* *Tutorial:* [Build a Phonebook with Replit Database](/tutorials/11-using-the-replit-database)
 
 ## Replit Audio
 
