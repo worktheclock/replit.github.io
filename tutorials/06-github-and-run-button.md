@@ -17,18 +17,17 @@ We'll use the [Flask](https://flask.palletsprojects.com/en/1.1.x/) application a
 
 ![**Image 1:** *Importing a repository from GitHub to Replit.*](/images/tutorials/06-github/06-01-github-import.png)
 
-Press the green `Import from GitHub` button and you'll see Replit clone the repository and turn it into a repl. In all of our previous projects, we used the `main.py` file that Replit automatically creates for all new Python projects, and which it runs automatically when you press the `run` button. Note how in this GitHub project, we have no `main.py` file, and our code is instead in `mydemoapp.py`. Therefore, Replit will need some help from you to define how to run the project. This is configured through another special file named `.replit`. Because there was no `main.py` file, Replit automatically created this file and will prompt you to configure it.
-
-![**Image 2:** *Adding a `.replit` file to indicate how the project should be run.*](/images/tutorials/06-github/06-02-configure-run-button.png)
-
-Select the language (Python) from the first dropdown and type `python mydemoapp.py` in the "configure the run button" input. Every time you press the `run` button, Replit will execute the command given here. If you prefer, you can also edit the `.replit` file directly. If you click on it, you'll see it now contains the following configuration, which matches what we provided through the GUI panel. 
+Press the `Import from GitHub` button, and you'll see Replit clone the repository and turn it into a repl. In all of our previous projects, we used the `main.py` file that Replit automatically creates for all new Python projects, and which it runs automatically when you press the `run` button. Note how in this GitHub project, we have no `main.py` file, and our code is instead in `mydemoapp.py`. Therefore, Replit will need some help from you to define how to run the project. This is configured through another special file named `.replit`. If the configuration panel doesn't pop up automatically, you can manually create a file called `.replit` and add the configuration given below otherwise select the language (Python) from the first dropdown and type `python mydemoapp.py` in the "configure the run button" input.
+ 
 
 ```
 language = "python3"
 run = "python mydemoapp.py"
 ```
 
-If you hit the `run` button, you should see the app start. As you can see, the web application is very basic: all it can do is display a welcome message. If the configuration panel doesn't pop up automatically, you can manually create a file called `.replit` and add the configuration above to get the same result.
+![Run button config](/images/tutorials/06-github/run-config.gif)
+
+If you hit the `run` button, you should see the app start. Every time you press the `run` button, Replit will execute the command specified in the `.replit` file. This web application is very basic: all it can do is display a welcome message.
 
 ![**Image 3:** *Running the Flask application on Replit.*](/images/tutorials/06-github/06-03-mydemoapp-run.png)
 
@@ -50,7 +49,7 @@ Note that the owner of the repository is `ritza-co` though, so you won't have wr
 
 Usually when contributing to open-source projects, you'll first create a "fork" of the original project. This means that you make your own version of the project and, as it's yours, you can make any changes to it that you want. If you think these changes would be useful to others too and are an obvious improvement over the original project, you can make a "pull request", which asks the owner of the original project to merge your changes into the main canonical project.
 
-Create an account on [github.com](https://github.com) or log in to your existing one and navigate back to the original project (https://github.com/ritza-co/flask-hello-world). In the top right corner, press the `Fork` button to create a copy of the project in your own GitHub account.
+Create an account on [GitHub](https://github.com) or log in to your existing one and navigate back to the original project (https://github.com/ritza-co/flask-hello-world). In the top right corner, press the `Fork` button to create a copy of the project in your own GitHub account.
 
 ![**Image 6:** *Forking a repository in GitHub.*](/images/tutorials/06-github/06-06-fork-github.png)
 
