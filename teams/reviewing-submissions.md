@@ -25,17 +25,17 @@ To review student work in bulk:
 
 To leave feedback on your students' work, you can use threads. Threads can be added on projects and team repls, and are an easy way to leave comments on a specific word or line of code.
 
-You can add a thread to a repl by left-clicking on the line number where you want to leave the comment. This will highlight the line, and a floating "Annotate" button will appear above the line. Left-click on this button.
+You can add a thread by highlighting the line where you want to leave the comment. A floating "Start thread" button will appear above the line. Left-click on this button.
 
-![](/images/teamsForEducation/annotations-1.png)
+![Start thread pop up](/images/teamsForEducation/annotations-1.png)
 
-Alternatively, highlight anywhere on the line of code, and a floating menu will appear. Select the "Annotate" option.
+Alternatively, right click anywhere on the line of code, and a floating menu will appear. Select the "Start thread" option.
 
-![](/images/teamsForEducation/annotations-2.png)
+![Start thread from menu](/images/teamsForEducation/annotations-2.png)
 
 A comment box will pop up towards the right of the code. Type in a comment and press the arrow on the right to save it.
 
-![](/images/teamsForEducation/annotation-made.png)
+![Comment box](/images/teamsForEducation/annotation-made.png)
 
 The student who created the repl will receive an in-app notification as well as an email with your comment. They'll be able to reply to the comment or modify the code accordingly.
 

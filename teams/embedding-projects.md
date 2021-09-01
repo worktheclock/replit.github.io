@@ -4,13 +4,13 @@ To embed a project, follow the simple steps below or follow along with our [vide
 
 *Please note that to access their project in an iframe, students must be added to the team and logged into their Replit account.*
 
-1. Click on the three dot menu found at the right side of each project.
-2. Copy the embed code. This will provide you with an [iframe](https://docs.replit.com/Teams/EmbedProjects) which you can paste into HTML OR copy the project link.
-3. Paste it wherever you are trying to embed the project and you'll be good to go!
+1. Click on the three dot menu found on the right side of each project.
+2. Copy the embed code. This will provide you with an [iframe](https://docs.replit.com/Teams/EmbedProjects) which you can paste into HTML or copy the project link.
+3. Paste it wherever you are trying to embed the project, and you'll be good to go!
 
 ![Embedding projects](/images/teamsForEducation/embedProjectsImage.png)
 
-The embed code you copy will look like the below example:
+The embed code you copy will look like the example below:
 
 ```
 <iframe width="100%" height="600px" src="https://replit.com/team/{team name}/{project name}"></iframe>

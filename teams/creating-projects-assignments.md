@@ -9,7 +9,7 @@ Teams for Education include both Team Projects and Team Repls.
 ## Creating Team Projects
 From your team dashboard, create a new project.
 
-<img style="max-width: 250px" src="/images/teamsForEducation/project-create-button.png" />
+![Create project button](/images/teamsForEducation/project-create-button.png)
 
 **Select project language, title, description, due date, and whether this will be a group project.** You'll be redirected to the IDE to add any comments, tests, and initial coding blocks you'd like your students to start from. You'll assign groups when you publish the project. 
 
@@ -19,7 +19,7 @@ From your team dashboard, create a new project.
 
 When you are done editing your project and it is ready to be published, click "Publish project" from the IDE.
 
-<img style="max-width: 150px" src="/images/teamsForEducation/project-publish-button.png" />
+![Project publish button](/images/teamsForEducation/project-publish-button.png)
 
 A modal appears, where you can toggle the project between "Published" and "Unpublished".
 
@@ -29,11 +29,11 @@ A modal appears, where you can toggle the project between "Published" and "Unpub
 
 Click "Save" to finalize any changes, or "Cancel" to discard changes.
 
-<img style="max-width: 600px" src="/images/teamsForEducation/project-publish.png" />
+![Project publish](/images/teamsForEducation/project-publish.png)
 
 ## Submitting Student Work 
 
 When students have completed their work on the project, they click "Submit" in the IDE header, which will notify all teachers of their submission. Students may continue working on projects and resubmit them after hitting "Submit." 
 
-<img style="max-width: 100px" src="/images/teamsForEducation/project-submit.png" />
+![Project submit](/images/teamsForEducation/project-submit.png)
 
