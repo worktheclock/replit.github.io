@@ -6,6 +6,8 @@ Teams for Education include both Team Projects and Team Repls.
 
 * **Team Repls** are visible and editable to everyone on the Team. These are great for collaborative coding exercises such as pair programming challenges and code-alongs. 
 
+*We are phasing out Team Repls beginning on September 1, 2021. We are committed to migrating customers to our Teams Pro product free of charge if this decision makes using Replit untenable for you. Please [contact us](https://replit.canny.io/teams-for-education/p/team-repls) if you require support or have any questions.*
+
 ## Creating Team Projects
 From your team dashboard, create a new project.
 

@@ -26,6 +26,7 @@ The `.replit` file can also provide other configuration hints. The full specific
 - `run`: Command that is executed when the run button is clicked
 - `language`: Reserved
 - `onBoot`: Command that is executed once when the repl first starts up
+- `audio`: Whether [system-wide audio](https://docs.replit.com/misc/playing-audio-replit) is enabled for this repl.
 - `packager.afterInstall`: Command that is executed after a new package is installed
 - `packager.ignoredPaths`: List of paths to ignore while attempting to guess packages ([More about installing packages](https://docs.replit.com/repls/packages/#DirectImports))
 - `packager.ignoredPackages`: List of modules to never attempt to guess a package for, when installing packages ([More about installing packages](https://docs.replit.com/repls/packages/#DirectImports))
