@@ -122,6 +122,10 @@
         "name": "Introduction to Teams for Education",
         "slug": "intro-teams-education"
       },
+       {
+        "name": "Getting Started Checklist",
+        "slug": "teams-edu-checklist.md"
+      },
       {
         "name": "Inviting teachers and students",
         "slug": "inviting-teachers-students"
