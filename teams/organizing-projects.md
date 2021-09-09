@@ -6,11 +6,11 @@ Once Team Projects are created, you may organize them into units.
 
 ### Creating Units 
 Begin by clicking on the **+** icon at the top right of your Team to create a unit. 
-![Create a unit](https://media3.giphy.com/media/LHoZWjvsoR9LypAw9v/giphy.gif)
+![Create a unit](/images/teamsForEducation/create_unit.gif)
 
 ### Organizing Projects Into Units
 Next, drag and drop your projects into the correct units in the order you would like them to appear in for your students. 
-![Drag and Drop projects](https://media3.giphy.com/media/gugGoz1tfg6vQkI2ZO/giphy.gif)
+![Drag and Drop projects](/images/teamsForEducation/move_projects.gif)
 
 ### Editing Units 
 To change the name of a unit, click on the three dots to the right of the unit and select "Edit unit". 
