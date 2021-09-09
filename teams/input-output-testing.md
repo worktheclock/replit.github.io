@@ -4,6 +4,24 @@ Repl input/output testing allows a teacher to create simple tests that automatic
 
 There is also a video explanation available [here](https://www.loom.com/share/a8664cccb66342419f7d1b9d8f33c0ed).
 
+> While I/O tests work with most languages on Replit, there are just a few exceptions:
+* APL
+* Basic
+* Bloop
+* BrainF
+* Coffeescript
+* Emoticon
+* Forth
+* HTML, CSS, JS
+* Kaboom
+* Lolcode
+* Python with turtle
+* Qbasic
+* Roy
+* Scheme
+* Unlambda
+
+
 ## Teams for Education
 
 Input/output testing is a feature of [Teams for Education](https://teamsforeducationresources.util.repl.co). If you don't have a team yet you can create one [here](https://replit.com/teams).
