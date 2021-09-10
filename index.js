@@ -267,7 +267,7 @@ app.get('/:category/:slug', async (req, res) => {
 	const { category, slug } = req.params;
 	render(res, category, slug)
 		.catch(err => {
-			res.send(`
+			res.send(404, `
               <h1>Something went wrong!</h1 >
               <p>maybe you can <a href="https://replit.com/@util/replit-docs">help fix it</a></p>
             `);
