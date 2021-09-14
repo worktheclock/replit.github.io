@@ -25,8 +25,6 @@ Due to restrictions in the browser security model, there needs to be an explicit
 
 ## Audio service
 
-###### Note that audio is currently only enabled for explorers. Learn to become an explorer [here](https://replit.com/talk/announcements/Become-an-Explorer/6180)
-
 You can play audio in your repl without creating a website.
 
 To try keep things simple, our audio is based on a request system. This means that you just need to request a file to be played, rather than reading it directly. Although you won't be directly reading the files, you can still control:
