@@ -2,8 +2,6 @@
 
 Once Team Projects are created, you may organize them into units.
 
-*This function is currently only available for a limited number of users.*
-
 ### Creating Units 
 Begin by clicking on the **+** icon at the top right of your Team to create a unit. 
 ![Create a unit](/images/teamsForEducation/create_unit.gif)
