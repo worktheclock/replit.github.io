@@ -41,10 +41,7 @@ If no groups are created, they'll have the option to create their own:
 If groups have already been created, they may either join one or create their own: 
 ![Student View: Join Group](/images/teamsForEducation/groups/student_selectcreate_group.png)
 
-
 Click "Save" to finalize any changes, or "Cancel" to discard changes.
-
-![Project publish](/images/teamsForEducation/project-publish.png)
 
 ## Submitting Student Work 
 
