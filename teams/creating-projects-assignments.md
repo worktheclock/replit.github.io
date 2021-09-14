@@ -25,6 +25,8 @@ When you are done editing your project and it is ready to be published, click "P
 
 A modal appears, where you can toggle the project between "Published" and "Unpublished".
 
+## Individual, Group, and Self-Grouping Projects
+
 **For individual projects**, students are able to fork the project and create their own copy. Their copy will be private so that only the student and team admins can see and edit their work. 
 
 **For group projects**, you can assign students into submission groups to collaborate. Click "Auto Assign" to automatically assign all students into equal groups or assign each group manually. You can add and remove new groups, drag and drop students between groups, and search for students. Groups cannot be removed after saving, but students may be reassigned into different groups later.
