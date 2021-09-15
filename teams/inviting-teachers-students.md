@@ -1,7 +1,7 @@
 # Inviting teachers and students
 
 
-To invite people with their Replit username or email address, follow the steps during [team creation](https://docs.replit.com/Teams/Intro). 
+To invite people with their Replit username or email address, follow the steps outlined in [creating teams](https://docs.replit.com/teams/intro-teams-education). 
 
 
 If you've already created a team, navigate to your [team dashboard](https://replit.com/teams), click on your chosen team username, and then click "Manage team members".
