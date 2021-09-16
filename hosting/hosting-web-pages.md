@@ -44,7 +44,7 @@ Once you have your domain link, we can get to work linking it with your repl:
 4. Go to your domain registrar and find the section that allows you to add DNS records.
 5. Add a new entry with the following information:
 > * The type should be `CNAME`.
->* `name` or `hostname` will be the subdomain you want, or you can enter `@` if you'd like to use the full domain. Some services do not allow `CNAME`s to be at the top level. We recommend instead using _www_ and making sure you enter _www.yourdomain.com_ in your repl.
+>* `name` or `hostname` will be the subdomain you want, or you can enter `@` if you'd like to use the full domain. Some services do not allow `CNAME`s to be at the top level. We recommend instead using _www_ and making sure you enter `www.yourdomain.com` in your repl.
 >* `data` or `target` should be the special repl.co link you got when you started linking your repl. It should contain a long string of random numbers and letters at the beginning.
 
 For example:

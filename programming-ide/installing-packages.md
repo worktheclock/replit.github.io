@@ -64,8 +64,8 @@ This will tell the packager that your project requires at least Python version 3
 
 ### JavaScript
 
-Note that `package.json` files are only for Nodejs/Express repls (they do not work in HTML/CSS/JS repls). A `package.json` file contains more information about the project, but also lists the dependencies. As an example, here is the `package.json` file included in our
-[express template](https://replit.com/languages/express):
+Note that `package.json` files are only for Nodejs/Express repls (they do not work in HTML/CSS/JS repls). A `package.json` file contains more information about the project, but also lists the dependencies. As an example, here is the `package.json` file you can include in a
+[Nodejs/Express template](https://replit.com/languages/nodejs):
 
 ```json
 {

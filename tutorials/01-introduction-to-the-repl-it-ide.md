@@ -134,7 +134,7 @@ What does this mean? Because no one else can edit your repl, you can share it fa
 
 Of course, sometimes you might _want_ others to have write access to your repl so that they can contribute, or help you out with a problem. In these cases, you can use Replit's "multiplayer" functionality.
 
-If you invite someone to your repl, it's different from sharing the URL with them. You can invite someone by clicking `Invite` in the top right and sending them the secret link that starts with "https://replit.com/join". This link will give people _edit_ access to your repl.
+If you invite someone to your repl, it's different from sharing the URL with them. You can invite someone by clicking `Invite` in the top right and sending them the secret link that starts with `https://replit.com/join`. This link will give people _edit_ access to your repl.
 
 ![**Image 11**: *Inviting someone to your repl*](/images/tutorials/01-introduction/01-11-multiplayer-invite.png)
 
