@@ -1,4 +1,4 @@
-# Build a paid content site with replit.web and Stripe
+# Build a paid content site with `replit.web` and Stripe
 
 In this tutorial, we'll combine `replit.web` and Stripe to build a digital content storefront. Anyone with a Replit account will be able to log into our website and purchase premium PDFs. Our site will also keep track of what each user has purchased, so they can build up a library.
 
@@ -11,7 +11,7 @@ By the end of this tutorial, you'll be able to:
 
 To get started, create a Python repl.
 
-![](/images/tutorials/29-paid-content-site/create-python-repl.png)
+![Create python repl](/images/tutorials/29-paid-content-site/create-python-repl.png)
 
 Our application will have the following functionality:
 
@@ -20,7 +20,7 @@ Our application will have the following functionality:
 * Users can view free PDFs and PDFs that they've previously purchased.
 * Administrators can upload new PDFs.
 
-We've covered both `replit.web` and Stripe in previous tutorials, so some aspects of the following may be familiar if you've [built a brick shop](https://docs.replit.com/tutorials/20-online-store-checkout-process) or [a technical challenge website](https://docs.replit.com/tutorials/28-technical-challenge-site).
+We've covered both `replit.web` and Stripe in previous tutorials, so some aspects of the following may be familiar if you've built [a brick shop](https://docs.replit.com/tutorials/20-online-store-checkout-process) or [a technical challenge website](https://docs.replit.com/tutorials/28-technical-challenge-site).
 
 We'll start our app off with the following import statements in `main.py`:
 
@@ -39,8 +39,8 @@ We're importing most of what we'll need for our application here:
 1. Python's `os` and `shutil` packages, which provides useful functions for working with files and directories.
 2. Stripe's Python library.
 3. Flask, our web framework and the heart of the application.
-4. A helper function for Flask, which will allow us to send PDFs to users.
-5. A function from the Werkzeug WSGI (which Flask is built on) that we'll use when admins upload PDFs and other files.
+4. A Flask helper function `send_from_directory`, which will allow us to send PDFs to users.
+5. A function `secure_filename` from the Werkzeug WSGI (which Flask is built on) that we'll use when admins upload PDFs and other files.
 6. Replit's web framework and Replit DB integration, which we'll use for user authentication and persistent data storage
 7. `wraps` from Python's `functools`, which we'll use to make authorization decorators for restricting access to sensitive application functionality.
 
@@ -68,13 +68,13 @@ import random, string
 ''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(20))
 ```
 
-![](/images/tutorials/29-paid-content-site/randomstring.png)
+![Random string](/images/tutorials/29-paid-content-site/randomstring.png)
 
 Rather than putting this value directly into our code, we'll retrieve it from an [environment variable](https://en.wikipedia.org/wiki/Environment_variable). This will keep it out of source control and is good practice for sensitive data.
 
 In your repl's Secrets tab, add a new key named `SECRET_KEY` and enter the random string you just generated as its value.
 
-![](/images/tutorials/29-paid-content-site/repl-secrets.png)
+![Repl secrets](/images/tutorials/29-paid-content-site/repl-secrets.png)
 
 Once that's done, return to `main.py` add the code below to initialize our Replit database. 
 
@@ -125,7 +125,7 @@ web.run(app)
 
 Because we've added the `@web.authenticated` [function decorator](https://realpython.com/primer-on-python-decorators/) to our index page, it will only be available to logged-in users. You should see this now, as your app will show a login button. Click on that button, and authorize your application to use Replit authentication in the window that pops up.
 
-![](/images/tutorials/29-paid-content-site/login-button.png)
+![Login button](/images/tutorials/29-paid-content-site/login-button.png)
 
 Having done that, you should now see the greeting we implemented above. If you send your repl to a friend, they will also be able to log in and see their Replit username on the greeting message.
 
@@ -158,7 +158,7 @@ def admin_only(f):
     return decorated_function
 ```
 
-The code in the second function may look a bit strange if you haven't written your own decorators before. Here's how it works: `admin_only` is the name of our decorator. You can think of decorators as functions that take other functions as arguments. (The code coming up is for illustration and not part of our program.) Therefore, if we write the following:
+The code in the second function may look a bit strange if you haven't written your own decorators before. Here's how it works: `admin_only` is the name of our decorator. You can think of decorators as functions that take other functions as arguments. (The two code snippets below are for illustration and not part of our program.) Therefore, if we write the following:
 
 ```python
 @admin_only
@@ -167,6 +167,8 @@ def admin_function():
 
 admin_function()
 ```
+
+it will be roughly equivalent to:
 
 ```python
 def admin_function():
@@ -199,9 +201,9 @@ The first function will let our admins create content, and the second will allow
 
 ### Content creation form
 
-Before we can fill in the code for content creation, we need to create the web form our admins will use. As the form creation code will include a lot of information and functionality and require several special imports, we're going to put it in its own file so we can keep `main.py` manageable. In your repl's files pane, create `forms.py`.
+Before we can fill in the code for content creation, we need to create the web form our admins will use. As the form creation code will include a lot of information and functionality and require several special imports, we're going to put it in its own file so we can keep navigable codebase. In your repl's files pane, create `forms.py`.
 
-![](/images/tutorials/29-paid-content-site/forms-py-in-file-pane.png)
+![Create forms.py file](/images/tutorials/29-paid-content-site/forms-py-in-file-pane.png)
 
 Enter the following `import` statements at the top of `forms.py`:
 
@@ -215,9 +217,9 @@ from replit import db
 
 Here we're importing from [WTForms](https://wtforms.readthedocs.io/en/2.3.x/), an extensive library for building web forms, and [Flask WTF](https://flask-wtf.readthedocs.io/en/0.15.x/), a library which bridges WTForms and Flask. We're also importing our Replit database, which we'll need for uniqueness validations.
 
-The structure of our forms is dictated by the structure of our database. In our `db_init` function, we defined two dictionaries, "content" and "orders". The first of these will contain entries for each of the PDFs we have for sale. These entries will contain the PDF's filename as well as general metadata. Thus, our "content" data structure will look something like this:
+The structure of our forms is dictated by the structure of our database. In our `db_init` function, we defined two dictionaries, "content" and "orders". The former will contain entries for each of the PDFs we have for sale. These entries will contain the PDF's filename as well as general metadata. Thus, our "content" data structure will look something like this:
 
-```
+```json
 {
     "content": {
         "ID": {
@@ -286,11 +288,11 @@ class ContentCreateForm(FlaskForm):
             raise ValidationError("Content name already taken.")
 ```
 
-When admins create content, they'll specify a name, a description, and a price, as well as uploading both the PDF and a preview image. We've used WTForm's validators to restrict the file types that can be uploaded for each. Should we decide to branch out from selling PDFs in the future, we can add additional file extensions to the `file` field's `FileAllowed` validator. We could also make individual fields optional by removing their `InputRequired()` or `FileRequired()` validators.
+When admins create content, they'll specify a name, a description, and a price, as well as upload both the PDF, and a preview image. We've used WTForm's validators to restrict the file types that can be uploaded for each. Should we decide to branch out from selling PDFs in the future, we can add additional file extensions to the `file` field's `FileAllowed` validator. We could also make individual fields optional by removing their `InputRequired()` or `FileRequired()` validators.
 
 The final part of our form is a custom validator to reject new PDFs with IDs that match existing PDFs. Because we're validating on ID rather than name, admins won't be able to create PDFs with the same name but different capitalization (e.g. "Sherlock Holmes" and "SHERLOCK HOLMES").
 
-We've finished creating our form class. Now we can return to `main.py` and import it with the following `import` statement, which you can add just below the other imports at the top of the file.
+We've finished creating our form class. Now we can return to `main.py` and import the class with the following `import` statement, which you can add just below the other imports at the top of the file.
 
 ```python
 from forms import name_to_id, ContentCreateForm
@@ -339,7 +341,7 @@ def content_create():
         flash("Content created!")
         return redirect(url_for('content', content_id=content_id))
 
-    return render_template("admin/content_create.html",
+    return render_template("admin/content-create.html",
         form = form,
         **context())
 ```
@@ -391,7 +393,7 @@ def owns_content(username, content_id):
         return content_id in users[username]["content_library"]
 ```
 
-We have to do several checks on our user's `content_library`, as it can be in a few different states – the key might not exist, or it might be set to None, or it might be a list. We'll use this function to determine which content has been purchased by a given user and thus avoid writing all these checks out again.
+We have to do several checks on our user's `content_library`, as it can be in a few different states – the key might not exist, or it might be set to None, or it might be a list. We'll use this function to determine which content has been purchased by a given user and thus avoid writing all these checks again.
 
 Now we need to create our application's content-viewing routes. We'll start by rewriting the `/` route so that it renders a template rather than a greeting string. This page will contain a list of PDFs. Change the code in `index` to the following:
 
@@ -415,7 +417,7 @@ def content(content_id):
         **context())
 ```
 
-The `content_id` value will be the same ID that we're using in our database. This page will contain the content's name, preview image and description, and either a download link or a purchase link, depending on whether the PDF is paywalled, and whether the current user has purchased it.
+The `content_id` value will be the same ID that we're using in our database. This page will contain the content's name, preview image, description, and either a download link, or a purchase link, depending on whether the PDF is paywalled, and whether the current user has purchased it.
 
 Lastly, we need a route that handles downloading actual PDFs. Add the following code just below the `content` function definition:
 
@@ -432,7 +434,7 @@ def content_file(content_id):
         return "Access denied."
 ```
 
-If the current user owns this PDF or it's not paywalled, we use Flask's [`send_from_directory`](https://flask.palletsprojects.com/en/2.0.x/api/#flask.send_from_directory) to allow them to download it. Otherwise, we return an error message.
+If the current user owns this PDF, or it's not paywalled, we use Flask's [`send_from_directory`](https://flask.palletsprojects.com/en/2.0.x/api/#flask.send_from_directory) to allow them to download it. Otherwise, we return an error message.
 
 ## Creating the application frontend
 
@@ -449,6 +451,8 @@ templates/
     |__  index.html
     |__  layout.html
 ```
+
+![Folder structure](/images/tutorials/29-paid-content-site/folder-structure.png)
 
 Once you've created these files, let's populate them, starting with `templates/layout.html`:
 
@@ -478,9 +482,9 @@ Once you've created these files, let's populate them, starting with `templates/l
 </html>
 ```
 
-We'll use this file as the base of all our pages, so we don't need to repeat the same HTML. It contains features we want on every page, such as flashed messages and an indication of who's currently logged in. All subsequent pages will inject content into the body block:
+We'll use this file as the base of all our pages, so we don't need to repeat the same HTML. It contains features we want on every page, such as flashed messages, and an indication of who's currently logged in. All subsequent pages will inject content into the body block:
 
-```
+```jinja
 {% block body %}{% endblock %}
 ```
 
@@ -503,7 +507,7 @@ Next, we need to populate another helper file, `templates/_macros.html`:
 
 This file defines the [Jinja macro](https://jinja.palletsprojects.com/en/3.0.x/templates/#macros) `render_field`, which we'll use to provide our form fields with error-handling, provided by WTForms.
 
-We'll use this macro in `templates/admin/content_create.html`, which we'll populate with the following code:
+We'll use this macro in `templates/admin/content-create.html`, which we'll populate with the following code:
 
 ```html
 {% extends "layout.html" %}
@@ -582,7 +586,7 @@ The last page we need to create is `tempates/content.html`, which will display i
 {% endblock %}
 ```
 
-As with the home page, we display different parts of the page depending on whether the content is paywalled and the current user owns it. If the user must purchase the PDF, we include a single-button form that posts to `/checkout/<content_id>`, an application route we'll create in the next section.
+As with the home page, we display different parts of the page depending on whether the content is paywalled, and the current user owns it. If the user must purchase the PDF, we include a single-button form that posts to `/checkout/<content_id>`, an application route we'll create in the next section.
 
 We've referred to a lot of different variables in our front-end templates. Flask's Jinja templating framework allows us to pass the variables we need into `render_template`, as we did when building the application backend. Our content creation page needed a form, and our content viewing pages needed an ID. In addition, we unpack the return value of a function named `context` to all of our rendered pages. Define this function now with our other helper functions in `main.py`, just below `owns_content`:
 
@@ -605,21 +609,22 @@ This will give every page most of the application's state, including the full co
 
 Run your repl now and add some content. For best results, open the site in a new tab, rather than using it in your repl's browser.
 
+![Open in new window](/images/tutorials/29-paid-content-site/open-new-window.png)
+
 If you add free PDFs, you'll be able to download them, but you won't be able to purchase paywalled PDFs yet.
 
-![](/images/tutorials/29-paid-content-site/free-pdf-download.png)
+![Free pdf download](/images/tutorials/29-paid-content-site/free-pdf-download.png)
 
 ## Integrating with Stripe
 
 Our application is fully functional for free PDFs. To have users pay for premium PDFs, we'll integrate [Stripe Checkout](https://stripe.com/en-gb-us/payments/checkout). This will save us the trouble and risk of developing our own payment gateway or storing users' card details.
 
-To use Stripe Checkout, you will need an activated Stripe account. Create one now at [Stripe.com](https://stripe.com/) if you haven't already.
+To use Stripe Checkout, you will need an activated Stripe account. Create one now at [https://stripe.com](https://stripe.com/) if you haven't already.
 
 Once you've created a Stripe account, add the following code near the top of `main.py`, just below the `import` statements.
 
 ```python
 # Stripe setup
-
 stripe.api_key = os.environ["STRIPE_KEY"]
 
 DOMAIN = "YOUR-REPL-URL-HERE"
@@ -627,9 +632,11 @@ DOMAIN = "YOUR-REPL-URL-HERE"
 
 You can find your Stripe API keys on [this page of the developer dashboard](https://dashboard.stripe.com/test/apikeys). Make sure that you're in test mode and copy the secret key to your clipboard. Then return to your repl and create an environment variable called `STRIPE_KEY` with the value you just copied from Stripe.
 
-![](/images/tutorials/29-paid-content-site/stripe-key.png)
+![Stripe Key](/images/tutorials/29-paid-content-site/stripe-key.png)
 
 You will also need to replace the value of `DOMAIN` with your repl's root URL. You can get this URL from the in-repl browser.
+
+![Repl URL](/images/tutorials/29-paid-content-site/repl-url.png)
 
 ### Stripe Checkout
 
@@ -677,7 +684,7 @@ def checkout(content_id):
     return redirect(checkout_session.url, code=303)
 ```
 
-This code is adapted from Stripe's [sample integration Python code](https://stripe.com/docs/checkout/integration-builder?server=python). It initiates a checkout from the pricing and product details we provide and redirects the user to Stripe's Checkout website to pay. If payment is successful, it sends the user to a `success_url` on our site; otherwise, it sends to the user to a `cancel_url`. We'll define both of these shortly.
+This code is adapted from Stripe's [sample integration Python code](https://stripe.com/docs/checkout/integration-builder?server=python). It initiates a checkout from the pricing and product details we provide and redirects the user to Stripe's checkout website to pay. If payment is successful, it sends the user to a `success_url` on our site; otherwise, it sends to the user to a `cancel_url`. We'll define both of these shortly.
 
 We've made two key changes to the sample code. First, we've included the details for our content item in `line_items`:
 
@@ -697,7 +704,7 @@ line_items=[
 ],
 ```
 
-Rather than defining individual products on Stripe's side, we're programmatically constructing our products at checkout time. This saves us from having to add our PDF metadata in two places. We provide our product's name and the full URL of its preview image, so both can be shown on the Stripe Checkout page. As Stripe expects prices in cents, we multiply the price from our database by 100 before converting it to an integer.
+Rather than defining individual products on Stripe's side, we're programmatically constructing our products at checkout time. This saves us from having to add our PDF metadata in two places. We provide our product's name, and the full URL of its preview image, so both can be shown on the Stripe Checkout page. As Stripe expects prices in cents, we multiply the price from our database by 100 before converting it to an integer.
 
 The second change we've made to the sample code is to record the order details in our database. We need to do this so that we can fulfill the order once it's paid for.
 
@@ -714,8 +721,8 @@ We reuse Stripe's [Checkout Session](https://stripe.com/docs/api/checkout/sessio
 
 If you run your repl now, you should be able to reach the Stripe checkout page for any paywalled content you've added. Don't try to pay for anything yet though, as we still need to build order fulfillment.
 
-![](/images/tutorials/29-paid-content-site/alice-paywall.png)
-![](/images/tutorials/29-paid-content-site/checkout-page.png)
+![Paywall](/images/tutorials/29-paid-content-site/alice-paywall.png)
+![Checkout page](/images/tutorials/29-paid-content-site/checkout-page.png)
 
 ### Stripe fulfillment
 
@@ -735,7 +742,7 @@ def fulfill_order(session):
             users[buyer]["content_library"] = [content_id]
 ```
 
-This function takes a Stripe Checkout Session object, retrieves the corresponding order from our database, and then adds the order's content to the buyer's library if a payment has been made and the buyer does not already own the content.
+This function takes a Stripe Checkout Session object, retrieves the corresponding order from our database, and then adds the order's content to the buyer's library if a payment has been made, and the buyer does not already own the content.
 
 We'll invoke this function from our `/success` route, which we'll define just below it.
 
@@ -753,7 +760,7 @@ def success():
 
     fulfill_order(session)
     
-    return render_template_string(f"<html><body><h1>Thanks for your order, {web.auth.name}!</h1><p>Your purchase has been added to your <a href="/">library</a>.</p></body></html>")
+    return render_template_string(f'<html><body><h1>Thanks for your order, {web.auth.name}!</h1><p>Your purchase has been added to your <a href="/">library</a>.</p></body></html>')
 ```
 
 Here we retrieve the session details from the `session_id` GET parameter Stripe passed to our app, ensure that the current user is also the order buyer, and call `fulfill_order`. We then render a simple success page. You can replace this with a full Jinja template if you want to make it a bit fancier.
@@ -767,30 +774,32 @@ def cancel():
     return render_template_string("<html><body><h1>Order canceled.</h1></body></html>")
 ```
 
-If you run your repl now, you should be able to purchase content. You can find test credit card numbers on the [Developers](https://dashboard.stripe.com/test/developers) page of your Stripe Dashboard. You can use any future date as the expiry date and any CVV.
+If you run your repl now, you should be able to purchase content. You can find test credit card numbers on the Stripe integration [testing](https://stripe.com/docs/testing) documentation page. You can use any future date as the expiry date and any CVV.
 
-![](/images/tutorials/29-paid-content-site/alice-purchased.png)
+![PDF purchased](/images/tutorials/29-paid-content-site/alice-purchased.gif)
 
 ### Webhooks
 
 A potential problem with the way we're fulfilling orders is that a user might close the Stripe Checkout tab or lose internet connectivity after their payment has been confirmed, but before they're redirected to our `/success` route. If this happens, we'll have their money, but they won't have their PDF.
 
-For this reason, Stripe provides an additional method for fulfilling orders, based on [webhooks](https://en.wikipedia.org/wiki/Webhook). A webhook is an HTTP route intended to be used by machines rather than people. Much like we've created routes for our admins to upload PDFs and our users to buy PDFs, we'll now create a route for Stripe's bots to notify our application of completed payments.
+For this reason, Stripe provides an additional method for fulfilling orders, based on [webhooks](https://en.wikipedia.org/wiki/Webhook). A webhook is an HTTP route intended to be used by machines rather than people. Much like we've created routes for our admins to upload PDFs, and our users to buy PDFs, we'll now create a route for Stripe's bots to notify our application of completed payments.
 
 First, you'll need to create a webhook on your Stripe Dashboard. Visit the [Webhooks](https://dashboard.stripe.com/test/webhooks) page and click **Add endpoint**. You should then see a page like this:
 
-![](/images/tutorials/29-paid-content-site/add-webhook.png)
+![Add webhook](/images/tutorials/29-paid-content-site/add-webhook.png)
 
 On this page, do the following:
 
 1. For the **Endpoint URL** value, enter your repl's URL, followed by `/fulfill-hook`.
 2. Select the `checkout.session.completed` event from **Select events to listen to**.
 
-    ![](/images/tutorials/29-paid-content-site/webhook-event.png)
+    ![Webhook event](/images/tutorials/29-paid-content-site/webhook-event.png)
 
 3. Click **Add endpoint**.
 
 Stripe should then redirect you to your new webhook's details page. From here you can see webhook details, logs and the signing secret. The signing secret is used to ensure that our webhook only accepts requests from Stripe – otherwise, anyone could call it with spoofed data and complete orders without paying. Reveal your webhook's signing secret and copy it to your clipboard, then return to your repl.
+
+![Signing secret](/images/tutorials/29-paid-content-site/signing-secret.png)
 
 We'll use another environment variable here. Add the following code below your `cancel` function definition:
 
@@ -800,7 +809,7 @@ endpoint_secret = os.environ['ENDPOINT_SECRET']
 
 Then create an environment variable called `ENDPOINT_SECRET` with the value you just copied from Stripe.
 
-For our app's webhook code, we can once again tweak Stripe's sample code. We'll use [this order fulfillment code](https://stripe.com/docs/payments/checkout/fulfill-orders#fulfill) as a base, which is the same code that's displayed on the right-hand side of the page pictured above. Add this code below your `endpoint_secret` assignment:
+For our app's webhook code, we can once again tweak Stripe's sample code. We'll use [this order fulfillment code](https://stripe.com/docs/payments/checkout/fulfill-orders#fulfill) as a base. Add this code below your `endpoint_secret` assignment:
 
 ```python
 @app.route('/fulfill-hook', methods=['POST'])
@@ -836,7 +845,7 @@ After ensuring that the request we've received comes from Stripe, we retrieve th
 
 If you run your repl now, you should be able to purchase a PDF, close the checkout page after your payment is accepted but before being redirected, and still end up with the PDF in your library. You can also view webhook invocation logs on the [Stripe Dashboard](https://dashboard.stripe.com/test/webhooks).
 
-![](/images/tutorials/29-paid-content-site/stripe-webhook-success.png)
+![Stripe webhook success](/images/tutorials/29-paid-content-site/stripe-webhook-success.png)
 
 ## Where next?
 
@@ -849,4 +858,4 @@ We've built a functional if fairly basic storefront for digital goods. If you'd 
 
 You can find the code for this tutorial here:
 
-!!! repl embed
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/pdf-store?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
