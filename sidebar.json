@@ -186,7 +186,6 @@
         "name": "Google Classroom Integration",
         "slug": "google-classroom"
       },
-
       {
         "name": "Exporting Student Submissions",
         "slug": "exporting-student-submissions"
@@ -194,6 +193,10 @@
       {
         "name": "Archiving Teams",
         "slug": "Archiving"
+      },
+       {
+        "name": "Curriculum Hub",
+        "slug": "curriculum-hub"
       },
       {
         "name": "Privacy FAQ",
