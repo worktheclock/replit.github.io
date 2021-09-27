@@ -7,6 +7,8 @@ By the end of this tutorial, you'll be able to:
 * Build a dynamic web application with `replit.web`.
 * Use [Stripe](https://stripe.com/) to sell digital content.
 
+![Paid content site functionality](/images/tutorials/29-paid-content-site/site-functionality.gif)
+
 ## Getting started
 
 To get started, create a Python repl.
