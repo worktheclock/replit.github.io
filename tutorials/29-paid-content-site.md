@@ -34,15 +34,15 @@ from replit import db, web
 from functools import wraps
 ```
 
-We're importing most of what we'll need for our application here:
+Here we're importing most of what we'll need for our application:
 
-1. Python's `os` and `shutil` packages, which provides useful functions for working with files and directories.
+1. Python's `os` and `shutil` packages, which provide useful functions for working with files and directories.
 2. Stripe's Python library.
 3. Flask, our web framework and the heart of the application.
 4. A Flask helper function `send_from_directory`, which will allow us to send PDFs to users.
 5. A function `secure_filename` from the Werkzeug WSGI (which Flask is built on) that we'll use when admins upload PDFs and other files.
-6. Replit's web framework and Replit DB integration, which we'll use for user authentication and persistent data storage
-7. `wraps` from Python's `functools`, which we'll use to make authorization decorators for restricting access to sensitive application functionality.
+6. Replit's web framework and Replit DB integration, which we'll use for user authentication and persistent data storage.
+7. The `wraps` tool from Python's `functools`, which we'll use to make authorization decorators for restricting access to sensitive application functionality.
 
 Now that the imports are out of the way, let's start on our application scaffold. Add the following code to `main.py`:
 
@@ -54,7 +54,7 @@ app = Flask(__name__,
 
 This code initializes our Flask application. We've added a `static_folder` and `static_url_path` so that we can serve static files directly from our repl's file pane without writing routing code for each file. This will be useful for things like images and stylesheets.
 
-Add the following code to initialize your application's secret key.
+Add the following code to initialize your application's secret key:
 
 ```python
 # Secret key
@@ -76,7 +76,7 @@ In your repl's Secrets tab, add a new key named `SECRET_KEY` and enter the rando
 
 ![Repl secrets](/images/tutorials/29-paid-content-site/repl-secrets.png)
 
-Once that's done, return to `main.py` add the code below to initialize our Replit database. 
+Once that's done, return to `main.py` and add the code below to initialize our Replit database:
 
 ```python
 # Database setup
@@ -97,7 +97,7 @@ def db_init():
 db_init()
 ```
 
-[Replit's Database](https://docs.replit.com/hosting/database-faq) can be thought of and used as one big Python dictionary that we can access with db. Any values we store in `db` will persist between repl restarts.
+[Replit's Database](https://docs.replit.com/hosting/database-faq) can be thought of and used as one big Python dictionary that we can access with `db`. Any values we store in `db` will persist between repl restarts.
 
 We've written a function to initialize the database as we may want to do it again if we need to refresh our data during testing. Whenever we initialize our database, we will also create the `content` and `static` directories, which will contain user-uploaded files.
 
@@ -179,7 +179,7 @@ admin_only(admin_function)
 
 So whenever `admin_function` gets called, the code we've defined in `decorated_function` will execute before anything we define in `admin_function`. This means we don't have to include an `if not is_admin` check in every piece of admin functionality. As per the code, if a non-admin attempts to access restricted functionality, our app will [flash](https://flask.palletsprojects.com/en/2.0.x/patterns/flashing/) a warning message and redirect them to the home page.
 
-Now we can create the following admin routes below the definition of the `index` function : 
+Now we can create the following admin routes below the definition of the `index` function: 
 
 ```python
 # Admin functionality
@@ -201,7 +201,7 @@ The first function will let our admins create content, and the second will allow
 
 ### Content creation form
 
-Before we can fill in the code for content creation, we need to create the web form our admins will use. As the form creation code will include a lot of information and functionality and require several special imports, we're going to put it in its own file so we can keep navigable codebase. In your repl's files pane, create `forms.py`.
+Before we can fill in the code for content creation, we need to create the web form our admins will use. As the form creation code will include a lot of information and functionality and require several special imports, we're going to put it in its own file so we can keep a navigable codebase. In your repl's files pane, create `forms.py`.
 
 ![Create forms.py file](/images/tutorials/29-paid-content-site/forms-py-in-file-pane.png)
 
@@ -288,7 +288,7 @@ class ContentCreateForm(FlaskForm):
             raise ValidationError("Content name already taken.")
 ```
 
-When admins create content, they'll specify a name, a description, and a price, as well as upload both the PDF, and a preview image. We've used WTForm's validators to restrict the file types that can be uploaded for each. Should we decide to branch out from selling PDFs in the future, we can add additional file extensions to the `file` field's `FileAllowed` validator. We could also make individual fields optional by removing their `InputRequired()` or `FileRequired()` validators.
+When admins create content, they'll specify a name, a description, and a price, as well as upload both the PDF and a preview image. We've used WTForm's validators to restrict the file types that can be uploaded for each. Should we decide to branch out from selling PDFs in the future, we can add additional file extensions to the `file` field's `FileAllowed` validator. We could also make individual fields optional by removing their `InputRequired()` or `FileRequired()` validators.
 
 The final part of our form is a custom validator to reject new PDFs with IDs that match existing PDFs. Because we're validating on ID rather than name, admins won't be able to create PDFs with the same name but different capitalization (e.g. "Sherlock Holmes" and "SHERLOCK HOLMES").
 
@@ -568,7 +568,7 @@ We display each piece of content in a list. If an item is paywalled, we show its
 
 In addition, we use `{% if admin %}` blocks to include links to admin functionality, such as content creation and database flushing, that will only display when an admin is logged in.
 
-The last page we need to create is `tempates/content.html`, which will display information about individual PDFs:
+The last page we need to create is `templates/content.html`, which will display information about individual PDFs:
 
 ```html
 {% extends "layout.html" %}
@@ -586,7 +586,7 @@ The last page we need to create is `tempates/content.html`, which will display i
 {% endblock %}
 ```
 
-As with the home page, we display different parts of the page depending on whether the content is paywalled, and the current user owns it. If the user must purchase the PDF, we include a single-button form that posts to `/checkout/<content_id>`, an application route we'll create in the next section.
+As with the home page, we display different parts of the page depending on whether the content is paywalled, and whether the current user owns it. If the user must purchase the PDF, we include a single-button form that posts to `/checkout/<content_id>`, an application route we'll create in the next section.
 
 We've referred to a lot of different variables in our front-end templates. Flask's Jinja templating framework allows us to pass the variables we need into `render_template`, as we did when building the application backend. Our content creation page needed a form, and our content viewing pages needed an ID. In addition, we unpack the return value of a function named `context` to all of our rendered pages. Define this function now with our other helper functions in `main.py`, just below `owns_content`:
 
@@ -621,7 +621,7 @@ Our application is fully functional for free PDFs. To have users pay for premium
 
 To use Stripe Checkout, you will need an activated Stripe account. Create one now at [https://stripe.com](https://stripe.com/) if you haven't already.
 
-Once you've created a Stripe account, add the following code near the top of `main.py`, just below the `import` statements.
+Once you've created a Stripe account, add the following code near the top of `main.py`, just below the `import` statements:
 
 ```python
 # Stripe setup
