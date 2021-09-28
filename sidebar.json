@@ -398,6 +398,10 @@
         "slug": "28-technical-challenge-site"
       },
       {
+        "name": "Building with Nix on Replit",
+        "slug": "30-build-with-nix"
+      },
+      {
         "name": "Pinboard project part 1: HTML & CSS",
         "slug": "pinboard-project-part-1"
       },
