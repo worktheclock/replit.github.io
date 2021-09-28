@@ -71,6 +71,8 @@ This list is **not exhaustive** and we will continue to update it over time, how
 - [UK Data Protection Act of 2018](https://www.gov.uk/data-protection)
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
 - [Higher Education Community Vendor Assessment Toolkit (HECVAT) Lite](https://library.educause.edu/resources/2020/4/higher-education-community-vendor-assessment-toolkit)
+- [Connecticut Student Privacy Pledge](https://portal.ct.gov/DAS/CTEdTech/Commission-for-Educational-Technology/Initiatives/Student-Data-Privacy)
+
 
 **Will Replit sign our university's, school's or district's Data Security or Privacy Agreement?**
 
