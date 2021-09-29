@@ -4,13 +4,13 @@ As of May 2021, Replit now [supports all programming languages through the power
 
 * Setting up a production-grade web stack, with a database and support for multiple web servers.
 * Running third-party programs in Replit.
-* Playing DOOM in a repl!
+* Playing DOOM in a repl.
 
 ### What is Nix?
 
-Nix is a tool designed for managing packages and system configuration. It has some similarities to package managers you may have used in the past, such as Homebrew on Apple, APT on Debian-based Linux distributions, Python's PIP, or NodeJS's NPM. If you haven't used a package manager before, it's basically an app store.
+Nix is a tool designed for managing packages and system configurations. It has some similarities to package managers you may have used in the past, such as Homebrew on macOS, APT on Debian-based Linux distributions, Python's PIP, or NodeJS's NPM. If you haven't used a package manager before, it's basically an app store.
 
-When you install a package with a traditional package manager – say a browser like Firefox – it will download some files, unpack them in various places on your system, and run some configuration scripts. It will also install all of the additional programs and libraries Firefox needs to run. Many of these will have dependencies themselves, and so it will install those too. Ultimately, installing a single package can require many more installations and result in widespread changes to your system.
+When you install a package with a traditional package manager – say you want to install a browser like Firefox – it will download some files, unpack them in various places on your system, and run some configuration scripts. It will also install all of the additional programs and libraries Firefox needs to run. Many of these will have dependencies themselves, and so it will install those too. Ultimately, installing a single package can require many more installations and result in widespread changes to your system.
 
 Sometimes, packages will be incompatible with each other, due to relying on different versions of the same dependency. For example, App #1 depends on `libxyz 1.4` and App #2 depends on `libxyz 1.5`. Installing App #2 upgrades `libxyz` and breaks App #1. Downgrading `libxyz` fixes App #1 but breaks App #2.
 
@@ -22,7 +22,7 @@ This is called [dependency hell](https://en.wikipedia.org/wiki/Dependency_hell),
 
 The directory name has three components: the package name, version and a hash of all the package information, such as configuration options. Two packages on two different systems with the same hash will be identical, but two packages with the same name and version but different hashes will have slight differences. Because of this, we can install multiple versions of the same package, neatly solving our App #1 and App #2 dependency hell.
 
-Whereas a package manager like Apt might scatter the contents of an installed program across `/bin`, `/etc`, `/usr` and other directories that require special privileges to write to, Nix keeps everything in `/nix/store`. This lets us securely install packages as a non-privileged user.
+Whereas a package manager like APT might scatter the contents of an installed program across `/bin`, `/etc`, `/usr` and other directories that require special privileges to write to, Nix keeps everything in `/nix/store`. This lets us securely install packages as a non-privileged user.
 
 Packages in Nix are built using *derivations*, which you can think of as build scripts. All derivations are written in the Nix language, a functional programming language, similar to Haskell or F#. If you haven't used a functional language before, the most fundamental thing to understand is that there isn't any persistent state, i.e. you can't define variables outside of functions. Functional languages are composed of functions that take some input and produce some output. Every time a function is executed with a given input, it will return the same output. This requires a different approach and way of thinking to traditional imperative programming languages but enhances predictability and reproducibility of output, two very good qualities for a build system.
 
@@ -35,7 +35,7 @@ To learn more about Nix, check out the following resources:
 
 ### How can we use Nix on Replit?
 
-Every repl you create is backed by a [Docker](https://www.docker.com/) container. Anything you do from your repl, from running code to executing commands in the shell, will happen in the context of the `runner` user in this container. For reasons of security, this user does not have root privileges, and therefore cannot install packages using a traditional package manager like Apt. But the `runner` in a Nix repl can install packages with Nix.
+Every repl you create is backed by a [Docker](https://www.docker.com/) container. Anything you do from your repl, from running code to executing commands in the shell, will happen in the context of the `runner` user in this container. For reasons of security, this user does not have root privileges, and therefore cannot install packages using a traditional package manager like APT. But the `runner` in a Nix repl can install packages with Nix.
 
 This opens up an enormous array of possibilities. In previous tutorials, we've focused on using repls to run custom code in various languages. The Replit DB makes it possible to create applications with persistent storage, but Nix allows us to use a standard DBMS like MySQL or Postgres. We can also install webservers and even graphical programs like Inkscape and LibreOffice.
 
@@ -54,31 +54,33 @@ The first thing we'll build with Nix is a production web stack with the followin
 
 If you've built anything with Python and Flask, such as one of our previous tutorials, you will have used Flask's development server to interact with your application. While this server is great for development and debugging, it's optimised for a single user and gets quite slow if more than one person tries to use it.
 
-![](/images/tutorials/30-build-with-nix/dev-server.png)
+![Flask development server](/images/tutorials/30-build-with-nix/dev-server.png)
 
 We can improve the speed of our Flask apps by using a production-grade [WSGI](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) server in place of Flask's default, such as [Gunicorn](https://gunicorn.org/) or [Waitress](https://pypi.org/project/waitress/).
 
 ### Why NGINX?
 
-What if we want to host more than just a Flask app? Let's consider an e-commerce site at `www.example.com`. The main store application is powered by Flask, but our marketing department would like a to start a blog at `www.example.com/blog`. We could build blogging functionality into our e-commerce site, but it would be much quicker and easier to use a separate application, such as [Wordpress](https://wordpress.org/) or [Ghost](https://ghost.org/).
+What if we want to host more than just a Flask app? Let's consider an e-commerce site at `www.example.com`. The main store application is powered by Flask, but our marketing department would like to start a blog at `www.example.com/blog`. We could build blogging functionality into our e-commerce site, but it would be much quicker and easier to use a separate application, such as [Wordpress](https://wordpress.org/) or [Ghost](https://ghost.org/).
 
 This is where a fully featured web server, such as NGINX or Apache, comes in. These web servers can be configured to serve several different applications and content directories at different locations on one or more domains. They're also much faster at serving static content than even a production-grade WSGI server, so even single-app deployments benefit from using them.
 
 ### Why Postgres?
 
-We've used Replit's DB for persistent storage in several previous tutorials. While it's easy to use in supported languages like Python, it doesn't have the power and flexibility of a mainstream SQL database, and we can't continue using it if we ever move our code out of Replit. Postgres is a popular SQL database used by everyone from small to startups to tech giants like Apple, Reddit and Spotify. We can use it too if we install it on Nix.
+We've used Replit's DB for persistent storage in several previous tutorials. While it's easy to use in supported languages like Python, it doesn't have the power and flexibility of a mainstream SQL database, and we can't continue using it if we ever move our code out of Replit. Postgres is a popular SQL database used by many, from small startups to tech giants like Apple, Reddit and Spotify. We can use it too if we install it on Nix.
 
 ### Repl overview
 
 We've made a Nix repl containing the production web stack above available below:
 
-!!! web stack repl embed – i.e. the contents of the repl containing this tutorial
+[https://replit.com/@ritza/nix-template](https://replit.com/@ritza/nix-template)
 
-Open it now, or clone it to your profile, and we'll go over how it works. Ensure that the repl's config files are showing. 
+Open it now, or fork it to your profile, and we'll go over how it works. Ensure that the repl's config files are showing. 
 
-![](/images/tutorials/30-build-with-nix/show-config.png)
+<img src="/images/tutorials/30-build-with-nix/show-config.png"
+   alt="Show configuration"
+   style="width: 350px !important;"/>
 
-The first file we'll look at is `replit.nix`. This is the base Nix file that tells our repl what packages to install. In the default Nix repl, it looks like this:
+The first file we'll look at is `replit.nix`. This is the base Nix file that tells our repl what packages to install. In the [default Nix repl](https://replit.com/@ritza/nix), it looks like this:
 
 ```nix
 { pkgs }: {
@@ -90,7 +92,7 @@ The first file we'll look at is `replit.nix`. This is the base Nix file that tel
 ```
 The first line, `{ pkgs }:`, defines an anonymous function that takes a single argument, `pkgs`. When we run our repl, this function will be called and its contents executed. In this case, its contents are a list of packages to install, one item long. Therefore, all this function does is install `cowsay`, a program that prints an ASCII cow.
 
-![](/images/tutorials/30-build-with-nix/cowsay.png)
+![Cowsay](/images/tutorials/30-build-with-nix/cowsay.png)
 
 By contrast, the `replit.nix` file in our production web stack repl is more complicated. It looks like this:
 
@@ -123,7 +125,7 @@ in {
 
 You should recognise some similarities between this code and the default `replit.nix`. We're still defining an anonymous function that takes `pkgs`, but now we're installing more than one package.
 
-All of the packages in `deps` are straight from Nix's package repository, except for `nginxModified`. We need to make some modifications to `nginx` to get it to run in our repl. Nix's language and system configuration abilities make this much simpler to do than it would be if we were using a different package manager that didn't support recompiling packages.
+All of the packages in `deps` are straight from Nix's package repository, except for `nginxModified`. We need to make some modifications to `nginx` to get it to run in our repl. Nix's language and system configuration abilities make this much simpler to do than it would, if we were using a different package manager that didn't support recompiling packages.
 
 Nix's `let ... in { ... }` control structure is used when we want to define local variables used in a given function. We define the variables after `let` and then use them after `in`. Let's take a closer look at the definition of `nginxModified`:
 
@@ -139,20 +141,20 @@ Nix's `let ... in { ... }` control structure is used when we want to define loca
     });
 ```
 
-Here we're taking `pkgs.nginx` and calling [`overrideAttrs`](https://nixos.org/manual/nixpkgs/stable/#sec-pkg-overrideAttrs) to change the configuration flags that are set when compiling NGINX. We need to add a few flags to change the paths NGINX uses to paths that are accessible in our repl. Note that we've created all the directories in the expected locations.
+Here we're taking `pkgs.nginx` and calling [`overrideAttrs`](https://nixos.org/manual/nixpkgs/stable/#sec-pkg-overrideAttrs) to change the configuration flags that are set when compiling NGINX. We need to add a few flags that change the paths NGINX uses to paths that are accessible in our repl. Note that we've created all the directories in the expected locations.
 
 [The derivation that runs when we install `pkgs.nginx` can be found here](https://github.com/NixOS/nixpkgs/blob/master/pkgs/servers/http/nginx/generic.nix). Our version will do the same things, but with a few extra items in `configureFlags`.
 
 That's it for `replit.nix`. Now let's take a look at `.replit`. This file defines what command will get executed when we click the Run button, and what custom environment variables will be available to our repl.
 
-```
+```bash
 run = "sh start.sh"
 
 [env]
 PGDATA = "/home/runner/${REPL_SLUG}/data"
 ```
 
-We'll execute the shell script `start.sh` when we press Run, and have defined `PG_DATA`, an environment variable Postgres uses to locate its data directory. Let's look at `start.sh` next:
+We'll execute the shell script `start.sh` when we press Run, and we have defined `PG_DATA`, an environment variable Postgres uses to locate its data directory. Let's look at `start.sh` next:
 
 ```sh
 # start Postgres
@@ -181,9 +183,9 @@ python main.py
 
 In order, we start Postgres, then nginx, and then our Python Flask application.
 
-Our Postgres code first stops any existing instances of Postgres, then calls `initdb`, which will create a new database at the directory in `$PG_DATA` if none exists. We then copy our Postgres configuration file into our data directory and use sed to fill in its `unix_socket_directories` value, another directory we need to change to get things working in a repl.
+Our Postgres code first stops any existing instances of Postgres, then calls `initdb`, which will create a new database at the directory specified in `$PG_DATA` if none exists. We then copy our Postgres configuration file into our data directory and use `sed` to fill in its `unix_socket_directories` value, another directory we need to change to get things working in a repl.
 
-The file `postgressql.conf.tpl` is long and mostly unimportant. The only part of that will be relevant for basic use are the following lines under the heading Connection Settings: 
+The file `postgressql.conf.tpl` is long and mostly unimportant. The only part of that file that will be relevant for basic use are the following lines under the heading Connection Settings: 
 
 ```
 # - Connection Settings -
@@ -204,7 +206,7 @@ createdb -h 127.0.0.1
 psql -h 127.0.0.1 -c "create database appdb;"
 ```
 
-The first line starts our database, and the last two create a Postgres instance usable by `runner` and within that, a database named `appdb`. Both of these lines will fail on subsequent runs of `start.sh`, so we don't need to worry about overwriting our database every time we run our repl.
+The first line starts our database, and the last two create a Postgres instance usable by `runner` and within that, a database named `appdb`. Both of these lines will fail on subsequent runs of `start.sh` ( if the database has already been created ), so we don't need to worry about overwriting our database every time we run our repl.
 
 The code for starting nginx is simpler:
 
@@ -252,7 +254,7 @@ First, we kill any existing `nginx` processes, and then we start NGINX, telling 
         }
     ```
 
-In nginx, `server` blocks are what you use to set up websites on individual domains. Each domain (e.g. example.com) or subdomain (e.g. blog.example.com) will have its own server block. To create a `server` block that will define our what our repl hosts, we use the following nginx directives:
+In NGINX, `server` blocks are what you use to set up websites on individual domains. Each domain (e.g. `example.com`) or subdomain (e.g. `blog.example.com`) will have its own server block. To create a `server` block that will define what our repl hosts, we use the following nginx directives:
 
 ```
     listen  8080;
@@ -301,7 +303,7 @@ If you run the repl now, you'll see a page showing version information about our
 
 From this base, you can build and configure a production-ready web application. Try the following ideas:
 
-* Implement the code from one of our previous Flask-based tutorials, such as [this PDF report generator](https://docs.replit.com/tutorials/26-pdf-report-generator-from-spreadsheet), [this technical competition site](https://docs.replit.com/tutorials/28-technical-challenge-site), or [this PDF store](!!!link). See if you can adapt the content to use Postgres rather than the Replit Database.
+* Implement the code from one of our previous Flask-based tutorials, such as [this PDF report generator](https://docs.replit.com/tutorials/26-pdf-report-generator-from-spreadsheet), [this technical competition site](https://docs.replit.com/tutorials/28-technical-challenge-site), or [this PDF store](https://docs.replit.com/tutorials/29-paid-content-site). See if you can adapt the content to use Postgres rather than the Replit Database.
 * Implement your own Flask web application, using Postgres as a database.
 * Add a second application listening on a different loopback port and available from a different URL. This could be your own Python or NodeJS project, or a deployment of open-source software such as Ghost or Wordpress.
 
@@ -311,7 +313,7 @@ We started with a complex example to give you an idea of the power and potential
 
 ### Jupyter Notebook
 
-You can run a [Jupyter Notebook](https://jupyter.org/) in a Nix repl by installing `pkgs.jupyter`, setting `run` in `.replit` to `sh start.sh` and creating a `start.sh` script with the following contents:
+You can run a [Jupyter Notebook](https://jupyter.org/) in a Nix repl by installing `pkgs.jupyter` by specifying the package in `replit.nix`, setting `run` in `.replit` to `sh start.sh` and creating a `start.sh` script with the following contents:
 
 ```sh
 mkdir data
@@ -320,15 +322,17 @@ jupyter notebook --ip 0.0.0.0 --port 8080 --notebook-dir /home/runner/$REPL_SLUG
 
 Notebooks are web-based interactive development environments that allow you to mix runnable code, text notes, mathematical equations, and charts and graphs. They're often used by data scientists.
 
-![](/images/tutorials/30-build-with-nix/jupyter-notebook.png)
+[https://replit.com/@ritza/nix-jupyter](https://replit.com/@ritza/nix-jupyter)
+
+![Jupyter notebook](/images/tutorials/30-build-with-nix/jupyter-notebook.png)
 
 ### VSCode Server
 
 You can run a Visual Studio Code Server, which will allow you to use a personal, customised version of the popular text editor from anywhere, simply by navigating to your repl's URL.
 
-https://replit.com/@replitguillaume/VSCode-Server#replit.nix
+[https://replit.com/@ritza/nix-vscode-server](https://replit.com/@ritza/nix-vscode-server)
 
-![](/images/tutorials/30-build-with-nix/vscode-server.png)
+![VS Code server](/images/tutorials/30-build-with-nix/vscode-server.png)
 
 ### Alternative web stacks
 
@@ -338,32 +342,18 @@ Instead of NGINX, you could use [Apache](https://httpd.apache.org/), and instead
 
 You can set up and use a programming language that is not officially supported by Replit, such as [Racket](https://racket-lang.org/) (`nixpkgs.racket`), [Prolog](https://www.swi-prolog.org/) (`nixpkgs.swiProlog`), or even [COBOL](https://en.wikipedia.org/wiki/COBOL) (`nixpkgs.gnu-cobol`).
 
-https://replit.com/@ArnavBansal/nixed-cobol
+[https://replit.com/@ritza/nix-cobol](https://replit.com/@ritza/nix-cobol)
 
-!!! NOTE: I found the above repl on Hacker News. Not sure about the etiquette around including it, but it would be nice if we could do so & give credit.
 
 ### DOSBox
 
 We can get the popular MS-DOS emulator [DOSBox](https://www.dosbox.com/) working in a Nix repl by just installing the right package and running it. From there, we can run any DOS program and use it in our repl's VNC window.
 
-https://replit.com/@replitguillaume/Dosbox#replit.nix
+[https://replit.com/@ritza/nix-dosbox](https://replit.com/@ritza/nix-dosbox)
 
 Here's DOOM in a repl:
 
-![](/images/tutorials/30-build-with-nix/doom.png)
-
-!!! NOTE: the instructions in .replit should be:
-
-```
-## To play the shareware doom:
-# mount c ~/Dosbox
-# C:
-# cd DOOMS
-# DOOM
-```
-
-!!! DO NOT INCLUDE THE ABOVE IN THIS ARTICLE
-!!! correct the text in https://replit.com/@replitguillaume/Dosbox#.replit
+![Doom](/images/tutorials/30-build-with-nix/doom.png)
 
 Other DOS programs you can try:
 
@@ -375,7 +365,7 @@ Other DOS programs you can try:
 As we've seen above, Nix allows us to use repls for more than just writing and testing code, but some packages require a fair amount of configuration to get working. Here are a few general tips for getting packages working in Nix repls:
 
 * First, search for the package you want on the [Nix package search website](https://search.nixos.org/packages) and add it to `deps` in `replit.nix`. If you don't see any errors in the console after running your repl, it probably worked. Some packages need to be manually started by specifying a run command in `.replit`, while others will start automatically.
-* Most the installation errors you'll encounter will relate to file paths that don't exist in your repl, or that you don't have permission to access. These can generally be fixed if you can configure your package to look for those files in your repl's file list instead, which is hosted on disk at `/home/runner/REPL-NAME-HERE/`. Depending on the package, you may be able to do this with a custom configuration file, like we did with Postgres, or you may need alter the way Nix installs it, as we did with NGINX.
+* Most of the installation errors you'll encounter will relate to file paths that don't exist in your repl, or that you don't have permission to access. These can generally be fixed if you can configure your package to look for those files in your repl's file list instead, which is hosted on disk at `/home/runner/REPL-NAME-HERE/`. Depending on the package, you may be able to do this with a custom configuration file, like we did with Postgres, or you may need to alter the way Nix installs it, as we did with NGINX.
 * You can view files and directories that aren't visible in your repl's filepane from the shell, using standard Unix commands like `ls`, `cd` and `cat`. This includes files and directories in the Nix store, at `/nix/store`. This will often be useful for debugging.
 * You can view a list of running processes with the shell command `ps aux`, and terminate them with `pkill <process-name>`.
 * Loading the Nix environment will sometimes take a long time, especially if you have custom derivations.
