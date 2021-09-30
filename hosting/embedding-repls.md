@@ -34,12 +34,12 @@ Note: To embed the spotlight view, use `?embed=true` instead of `?lite=true`.
 
 ## Embedding on WordPress
 
-WordPress supports OEmbed but can only embed content from an approved whitelist of websites. Check out the [WordPress documentation](https://wordpress.org/support/article/embeds/#adding-support-for-an-oembed-enabled-site) for instructions to add Replit to the whitelist. Once Replit is added, a repl URL formatted as https://replit.com/@username/repltitle will automatically embed an interactive copy of the repl into your WordPress site.
+WordPress supports OEmbed but can only embed content from an approved whitelist of websites. Check out the [WordPress documentation](https://wordpress.org/support/article/embeds/#adding-support-for-an-oembed-enabled-site) for instructions to add Replit to the whitelist. Once Replit is added, a repl URL formatted as `https://replit.com/@username/repltitle` will automatically embed an interactive copy of the repl into your WordPress site.
 
 ## Embedding on Medium via Embedly
 
 To embed your repl on Medium, simply paste the repl link
-(https://replit.com/@username/repl-name) into your medium post and hit "Enter". The repl should automatically be converted to the interactive IDE, where you can edit and run code. To resize the embedded repl, click on it, then select one of four choices that Medium presents to you.
+`https://replit.com/@username/repl-name` into your medium post and hit "Enter". The repl should automatically be converted to the interactive IDE, where you can edit and run code. To resize the embedded repl, click on it, then select one of four choices that Medium presents to you.
 
 ## Editing an Embedded Repl
 

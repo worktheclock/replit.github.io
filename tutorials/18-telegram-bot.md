@@ -223,9 +223,9 @@ def home(page=None):
 
 This defines a small Flask app. Replit takes care of our Flask import. For this tutorial, we'll only make a single page.
 
-We tell Flask how the page should be reachable with special decorators. `@app.route('/')` says that when the user accesses at https://example.com, it will serve this handler. In this case, the variable "page" will default to None.
+We tell Flask how the page should be reachable with special decorators. `@app.route('/')` says that when the user accesses at `https://example.com`, it will serve this handler. In this case, the variable "page" will default to None.
 
-`@app.route('/<int:page>')` says that when a user accesses something like https://example.com/4 then it will open to page 4 of the logged messages. In this case, the variable "page" will be set to 4.
+`@app.route('/<int:page>')` says that when a user accesses something like `https://example.com/4` then it will open to page 4 of the logged messages. In this case, the variable "page" will be set to 4.
 
 This won't work yet, because our template `home.html` doesn't exist. Let's create that now in a folder called "templates" (i.e. templates/home.html):
 
