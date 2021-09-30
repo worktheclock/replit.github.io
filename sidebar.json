@@ -398,6 +398,10 @@
         "slug": "28-technical-challenge-site"
       },
       {
+          "name": "Paid Content site with Replit.web",
+          "slug": "29-paid-content-site"
+      },
+      {
         "name": "Building with Nix on Replit",
         "slug": "30-build-with-nix"
       },

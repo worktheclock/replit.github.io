@@ -25,9 +25,9 @@ plt.plot([1,2,3,4,5,6], [6,3,6,1,2,3])
 plt.show()
 ```
 
-There are many traditions in the Python data science world about how to import libraries. Many of the libraries have long names and get imported as easier-to-type shortcuts. You'll see that nearly all examples import `pyplot` as the shorter `plt` before using it, as we do above. We can then generate a basic line plot by passing two arrays to `plt.plot()` for X and Y values. In this example, the first point that we plot is `(1,6)` (the first value from each array). We then add all of the plotted points joined into a line graph.
+There are many traditions in the Python data science world about how to import libraries. Many of the libraries have long names and get imported as easier-to-type shortcuts. You'll see that nearly all examples import `pyplot` as the shorter `plt` before using it, as we are doing above. We can then generate a basic line plot by passing two arrays to `plt.plot()` for X and Y values. In this example, the first point that we plot is `(1,6)` (the first value from each array). We then add all of the plotted points joined into a line graph.
 
-Replit knows that it needs an `X` server to display this plot (triggered when you call `plt.show()`), so after running this code you'll see "Starting X" in the main output console and a new graphical window will appear.
+Replit knows that it needs an `X` server to display this plot (triggered when you call `plt.show()`), so after running this code a new graphical window will appear showing the plot.
 
 ![**Image 1:** *We can plot a basic line plot by passing in the X and Y values*](/images/tutorials/04-data-science/04-01-matplotlib.png)
 
@@ -37,7 +37,7 @@ Line plots are cool, but we can do more. Let's plot a real data set.
 
 ## Making a scatter plot of US cities by state
 
-Scatter plots are often used to plot 2D data and look for correlations and other patterns. However, they can also loosely be used to plot geographical X-Y coordinates (in reality, the field of plotting geographical points is [far more complicated](https://www.gislounge.com/what-is-gis/)). We'll use a subset from the [city data from simplemaps](https://simplemaps.com/data/us-cities) to generate our next plot. Each row of the data set represents on city in the USA, and gives us its latitude, longitude, and two-letter state code.
+Scatter plots are often used to plot 2D data, to look for correlations and other patterns. However, they can also loosely be used to plot geographical X-Y coordinates (in reality, the field of plotting geographical points is [far more complicated](https://www.gislounge.com/what-is-gis/)). We'll use a subset from the [city data from simplemaps](https://simplemaps.com/data/us-cities) to generate our next plot. Each row of the data set represents one city in the USA, and gives us its latitude, longitude, and two-letter state code.
 
 To download the data and plot it, replace the code in your `main.py` file with the following.
 
@@ -98,7 +98,7 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import numpy as np
 
-data_url = "https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/4_ThreeNum.csv"
+data_url = "https://raw.githubusercontent.com/ritza-co/datasets/master/gdp_data.csv"
 
 r = requests.get(data_url)
 
@@ -109,14 +109,14 @@ df = pd.read_csv("gdp-life.txt")
 print(df.head())
 
 print("___")
-print("The correlation is: ", np.corrcoef(df["gdpPercap"], df["lifeExp"])[0, 1])
+print("The correlation is: ", np.corrcoef(df['gdpPercap'], df['lifeExp'])[0,1])
 print("___")
 
-sns.lmplot("gdpPercap", "lifeExp", df).set_axis_labels(
-    "Life expectancy", "GDP per capita"
-)
+sns.lmplot(
+    "gdpPercap","lifeExp", df
+).set_axis_labels("GDP per capita", "Life expectancy")
 
-plt.title("People live longer in richer countries")
+plt.title("Countries with a higher GDP have higher life expectancy")
 plt.tight_layout()
 plt.show()
 ```
@@ -145,7 +145,7 @@ Rerun the code. Instead of seeing the plot appear in the right-hand pane, you'll
 
 If you followed along, you'll already have your own version of the repl to extend. If not, start from ours. Fork it from the embed below.
 
-<iframe height="400px" width="100%" src="https://replit.com/@GarethDwyer1/cwr-04-matplotlib-plotting?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/data-visualisation?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Where next?
 
