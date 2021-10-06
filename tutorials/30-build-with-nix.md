@@ -322,7 +322,7 @@ Notebooks are web-based interactive development environments that allow you to m
 
 [https://replit.com/@ritza/nix-jupyter](https://replit.com/@ritza/nix-jupyter)
 
-To preview the Jupyter notebook, first run the repl and then open the repl's website in a new tab:
+To preview the Jupyter notebook, first run the repl and then open the repl's website in a new tab (note that this will not work in your repl's embedded preview window):
 
 ![Open in new tab](/images/tutorials/30-build-with-nix/open-new-tab.png)
 
