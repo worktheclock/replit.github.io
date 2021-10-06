@@ -32,6 +32,7 @@ To learn more about Nix, check out the following resources:
 * [Nixology](https://www.youtube.com/playlist?list=PLRGI9KQ3_HP_OFRG6R-p4iFgMSK1t5BHs): A series of videos introducing Nix.
 * [Nix Package Manager Guide](https://nixos.org/manual/nix/stable/): The official Nix Package Manager manual.
 * [A tour of Nix](https://nixcloud.io/tour): An overview of the Nix language.
+* [nix.dev](https://nix.dev): Getting started tutorials
 
 ### How can we use Nix on Replit?
 
