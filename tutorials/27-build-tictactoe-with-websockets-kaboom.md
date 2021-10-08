@@ -32,7 +32,7 @@ We'll code in the server repl to start, and then switch between repls as we buil
 
 ## Setting up Socket.IO on the server
 
-Add the following code to the file called `index.hs` in the server project to import Socket.IO: 
+Add the following code to the file called `index.js` in the server project to import Socket.IO: 
 
 ```js
 const http = require('http');
