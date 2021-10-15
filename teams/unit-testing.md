@@ -44,7 +44,13 @@ If prompted, select "Unit tests".
 
 Write a function within the main file that's easy to test: something which accepts parameters and returns a single result. Our example includes an `add` function which simply returns the result of adding two numbers.
 
+In a Python repl:
+
 ![unit testing main py](/images/unit-testing/unit-testing-add-py.png)
+
+In a Node.js repl:
+
+![unit testing index js](/images/unit-testing/unit-testing-add-js.png)
 
 Click "+ Add test".
 
@@ -54,7 +60,15 @@ Providing a test will construct a unit test function for you. Only the body of t
 
 Note: Python exposes its assert methods on the `self` object. This behavior will be different depending on the language you use. See the "Assertion documentation" below to read about the invocation patterns for each unit testing framework.
 
+In a Python repl:
+
 ![unit testing add modal](/images/unit-testing/unit-testing-add-modal.png)
+
+In a Node.js repl:
+
+![unit testing add modal js](/images/unit-testing/unit-testing-add-modal-js.png)
+
+Note: by default, in a Node.js repl, the exports are available via an `index` variable, e.g. `index.add` here. You can add your own imports too, see the "Importing Libraries" section.
 
 Click "Run tests" to begin executing your test suite. Open the Console tab to monitor execution progress. 
 
