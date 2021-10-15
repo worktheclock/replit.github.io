@@ -1,6 +1,6 @@
-# Copying projects to other teams
+# Duplicating Projects
 
-Teachers can bulk copy and share projects to any Team. This feature is useful for a single teacher managing multiple classes, sharing curricula with your colleagues, or duplicating projects from one semester to the next. Sharing and bulk copying is managed using a secure private link that is created by the team admin. 
+Teachers can bulk copy and share projects to any Team. This feature is useful for a single teacher managing multiple classes, sharing curricula with your colleagues, or duplicating projects within a team or from one semester to the next. Sharing and bulk copying is managed using a secure private link that is created by the team admin. 
 
 Follow the steps below:
 
@@ -20,6 +20,6 @@ Follow the steps below:
 
 ![Project Copying](/images/teamsForEducation/copyProjectFour.png)
 
-5. To import the projects into a new team, open the link you created, then select the team you'd like to update as well as the projects you want to import into the team. 
+5. To import the projects into a new team, open the link you created, then select the team you'd like to update as well as the projects you want to import into the team. To duplicate projects within the same team, simply select the original team name to import the projects into. 
 
 ![Project Copying](/images/teamsForEducation/copyProjectFive.png)

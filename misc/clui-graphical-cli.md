@@ -24,10 +24,6 @@ Expand the following top-level commands to learn more.
   `account change-username` <br>
   Change your username (this can only be done once).
 
-  `account languages` <br>
-  Manage your language preferences.
-
-
 </details>
 
 <details>
