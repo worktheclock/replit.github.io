@@ -4,7 +4,10 @@ Snake was an incredibly popular game, mostly remembered from 1990s era cell phon
 
 In this tutorial, we'll implement Snake using [Kaboom.js](https://kaboomjs.com) built into [Replit](https://replit.com) 
 
-![game functionality](/images/tutorials/21-snake-kaboom/updated-graphic.gif)
+<img src="/images/tutorials/21-snake-kaboom/updated-graphic.gif"
+     alt="game functionality"
+     style="width: 550px !important;"/>
+
 
 ## Overview and Requirements
 
@@ -45,9 +48,13 @@ To start, we can get our game board, or _map_ drawn on the screen. This will def
 
 Kaboom.js has built-in support for defining game maps, using a text array and the function [`addLevel`](https://kaboomjs.com/doc#addLevel). This takes away a lot of the hassle normally involved in loading and rendering maps. 
 
-Add this code to the `main.js` file to create the game board:
+Replace the example code in `main.js` file with the following to create the game board:
 
 ```javascript
+import kaboom from "kaboom";
+
+kaboom();
+
 const block_size = 20; 
 
 const map = addLevel([
@@ -69,23 +76,26 @@ const map = addLevel([
   width: block_size,
   height: block_size,
   pos: vec2(0, 0),
-  "=": [
-    rect(block_size, block_size), 
+  "=": () => [
+    rect(block_size, block_size),
     color(255,0,0),
+    area(),      
     "wall"
   ]
 });
 ```
 
-The first line here creates a constant for the size of each block on our grid. This is just so we don't need to keep typing in the number, and also helps if we want to experiment later with different block sizes etc.
+On the first line we import the kaboom library, and then initialize the context by calling `kaboom()`. This will give us a blank canvas with a nice checkerboard pattern. We then create a constant for the size of each block on our grid. This is just so we don't need to keep typing in the number, and also helps if we want to experiment later with different block sizes etc.
 
 Then we create the game map. The map, or level design, is expressed in an array of strings. Each row in the array represents one row on the screen. So, we can design visually in text what the map should look like. The `width` and `height` parameters specify the size of each of the elements in the map. The `pos` parameter specifies where on the screen the map should be place – we choose `(0,0)`, which is the top left of the screen, as the starting point for the map. 
 
-Then Kaboom.js allows us to specify what to draw for each symbol in the text map. We're only using one symbol here, `=`, but you can make maps out of many different elements – e.g., a symbol for a wall, a symbol for water, a symbol for a health kit and so on. To tell Kaboom.js what to draw for the symbol, we add the symbol as a key, as in `=`, and then specify parameters for it. In this code, we draw a red rectangle as each piece of the boundary wall. The string `wall` assigns a tag to each of the pieces of wall drawn, which will help us with collision detection later on. 
+Then Kaboom.js allows us to specify what to draw for each symbol in the text map. We're only using one symbol here, `=`, but you can make maps out of many different elements – e.g., a symbol for a wall, a symbol for water, a symbol for a health kit and so on. To tell Kaboom.js what to draw for the symbol, we add the symbol as a key, as in `=`, and then specify parameters for it. In this code, we draw a red rectangle as each piece of the boundary wall. The `area()` component generates the collision area which will be useful when we want to check for collision between the snake and wall later on. The string `wall` assigns a tag to each of the pieces of wall drawn, which will also help us with collision detection later on.
 
 If we run this code, we should see the outline of a red square on the screen, representing the map. 
 
-![Boundary wall from map](/images/tutorials/21-snake-kaboom/boundary-wall.png)
+<img src="/images/tutorials/21-snake-kaboom/boundary-wall.png"
+     alt="Boundary wall from map"
+     style="width: 650px !important;"/>
 
 ## Adding the Snake 
 
@@ -128,6 +138,7 @@ function respawn_snake(){
           rect(block_size ,block_size),
           pos(block_size ,block_size *i),
           color(0,0,255),
+          area(),
           "snake"
       ]);  
       snake_body.push(segment);  
@@ -158,7 +169,9 @@ You'll notice that we also add in a function `respawn_all`, and a call to the fu
 
 Running the code now, you should see a blue line at the top-left side of the map. 
 
-![static snake](/images/tutorials/21-snake-kaboom/static-snake.png)
+<img src="/images/tutorials/21-snake-kaboom/static-snake.png"
+     alt="static snake"
+     style="width: 650px !important;"/>
 
 
 ## Moving the Snake
@@ -232,6 +245,7 @@ loop(0.2, ()=> {
         rect(block_size,block_size), 
         pos(snake_head.pos.x + move_x, snake_head.pos.y + move_y),
         color(0,0,255),
+        area(),
         "snake"
     ]));
 
@@ -277,6 +291,7 @@ function respawn_food(){
                 rect(block_size ,block_size),
                 color(0,255,0),
                 pos(new_pos),
+                area(),
                 "food"
             ]); 
 }
@@ -306,56 +321,59 @@ function respawn_all(){
 
 Running the game now shows a green food block positioned somewhere randomly on the map: 
 
-![food added](/images/tutorials/21-snake-kaboom/food-added.png) 
+<img src="/images/tutorials/21-snake-kaboom/food-added.png"
+     alt="food added"
+     style="width: 650px !important;"/>
 
 ## Detecting Collisions
 
 Now that we have all the objects our game needs – a boundary wall, a snake, and food – we can move on to detecting interactions, or collisions, between these objects. 
 
-Kaboom.js has 2 useful functions for helping with this: [`collides`](https://kaboomjs.com/doc#collides) and [`overlaps`](https://kaboomjs.com/doc#overlaps). They both take in 2 tags for different game object types, and call a provided callback function if there is a collision of the objects. The big difference is that `collides` will call our given function even if just the edges of the game objects touch, whereas `overlaps` means that the game objects must be more than touching, there must be at least 1 pixel overlap, before firing the callback function. 
-
-We'll use `overlaps` here, as we don't want the game to end just by the snake merely brushing against the boundary wall for example.
+Kaboom.js has a useful function for helping with this: [`collides`](https://kaboomjs.com/doc#collides). The function takes in 2 tags for different game object types, and calls a provided callback function if there is a collision of the objects.
 
 Let's start with detecting if the snake moves over a food block. Add the code below: 
 
 ```javascript
-overlaps("snake", "food", (s, f) => {
+collides("snake", "food", (s, f) => {
     snake_length ++; 
     respawn_food();
 });
 ```
 
-We set up the `overlaps` function with tags for the snake, and the food object. Then, in the callback function, `snake_length` is increased by 1, and we call `respawn_food` to replace the eaten food somewhere else on the map. 
+We set up the `collides` function with tags for the snake, and the food object. Then, in the callback function, `snake_length` is increased by 1, and we call `respawn_food` to replace the eaten food somewhere else on the map. 
 
 Running this, and eating the food, you should see the snake grow each time, and the food re-appear on another block:
 
-![eating food](/images/tutorials/21-snake-kaboom/eat-food.gif)
-
+<img src="/images/tutorials/21-snake-kaboom/eat-food.gif"
+     alt="eating food"
+     style="width: 650px !important;"/>
 
 Now, we can add similar code to detect if the snake has hit the wall: 
 
 ```javascript
-overlaps("snake", "wall", (s, w) => {
+collides("snake", "wall", (s, w) => {
     run_loop = false; 
-    camShake(12);
+    shake(12);
     respawn_all(); 
 });
 ```
-In the callback function, we immediately set the `run_loop` flag to false. This is so that the code in the move loop does not run and create the appearance of the snake stuck in the wall. Then the code calls a cool Kaboom.js effect function [`camShake`](https://kaboomjs.com/doc#camShake), which "shakes" the screen in a way that makes it feel like the snake has crashed heavily, and communicates quite effectively that the game is over. Finally, we call `respawn_all` to reset all the game objects. 
+In the callback function, we immediately set the `run_loop` flag to false. This is so that the code in the move loop does not run and create the appearance of the snake stuck in the wall. Then the code calls a cool Kaboom.js effect function [`shake`](https://kaboomjs.com/doc#shake), which "shakes" the screen in a way that makes it feel like the snake has crashed heavily, and communicates quite effectively that the game is over. Finally, we call `respawn_all` to reset all the game objects. 
 
 We can use the same code to detect if the snake has hit itself – we just replace the `wall` tag with another `snake` tag: 
 
 ```javascript
-overlaps("snake", "snake", (s, t) => {
+collides("snake", "snake", (s, t) => {
     run_loop = false; 
-    camShake(12);
+    shake(12);
     respawn_all(); 
 });
 ```
 
 Running the game now, and crashing into the wall should look something like this:
 
-![snake prang](/images/tutorials/21-snake-kaboom/snake-prang.gif)
+<img src="/images/tutorials/21-snake-kaboom/snake-prang.gif"
+     alt="snake prang"
+     style="width: 650px !important;"/>
 
 
 Congratulations! You've finished creating Snake in Kaboom.js! 
@@ -390,6 +408,7 @@ function respawn_food(){
     food = add([
                 sprite('pizza'),
                 pos(new_pos),
+                area(),
                 "food"
             ]); 
 }
@@ -412,7 +431,7 @@ layers([
 add([
     sprite("background"), 
     layer("background")
-]) 
+]); 
 
 ```
 
@@ -456,57 +475,65 @@ Now, we can update the level map to use these. Replace the previous `addLevel` c
 
 ```javascript
 const map = addLevel([
-    "1tttttttttttt2",
-    "l            r ",
-    "l            r ",
-    "l            r ",
-    "l            r ",
-    "l            r ",
-    "l            r ",
-    "l            r ",
-    "l            r ",
-    "l            r ",
-    "l            r ",
-    "l            r ",
-    "l            r ",
-    "3bbbbbbbbbbbb4",
-  ], {
-    width: block_size,
-    height: block_size,
-    pos: vec2(0, 0),
-    "t": [
-      sprite("fence-top"),
-      "wall"
-    ], 
-    "b": [
-      sprite("fence-bottom"),
-      "wall"
-    ],
-    "l": [
-      sprite("fence-left"),
-      "wall"
-    ],
-    "r": [
-      sprite("fence-right"),
-      "wall"
-    ], 
-    "1": [
-      sprite("post-top-left"),
-      "wall"
-    ], 
-    "2": [
-      sprite("post-top-right"),
-      "wall"
-    ],
-    "3": [
-      sprite("post-bottom-left"),
-      "wall"
-    ],
-    "4": [
-      sprite("post-bottom-right"),
-      "wall"
-    ],
-  });
+     "1tttttttttttt2",
+     "l            r ",
+     "l            r ",
+     "l            r ",
+     "l            r ",
+     "l            r ",
+     "l            r ",
+     "l            r ",
+     "l            r ",
+     "l            r ",
+     "l            r ",
+     "l            r ",
+     "l            r ",
+     "3bbbbbbbbbbbb4",
+], {
+     width: block_size,
+     height: block_size,
+     pos: vec2(0, 0),
+     "t": ()=> [
+          sprite("fence-top"),
+          area(),
+          "wall"
+     ],
+     "b": ()=> [
+          sprite("fence-bottom"),
+          area(),
+          "wall"
+     ],
+     "l": ()=> [
+          sprite("fence-left"),
+          area(),
+          "wall"
+     ],
+     "r": ()=> [
+          sprite("fence-right"),
+          area(),
+          "wall"
+     ],
+     "1": ()=> [
+          sprite("post-top-left"),
+          area(),
+          "wall"
+     ],
+     "2": ()=> [
+          sprite("post-top-right"),
+          area(),
+          "wall"
+     ],
+     "3": ()=> [
+          sprite("post-bottom-left"),
+          area(),
+          "wall"
+     ],
+     "4": ()=> [
+          sprite("post-bottom-right"),
+          area(),
+          "wall"
+     ],
+});
 
 ```
 
@@ -532,6 +559,7 @@ function respawn_snake(){
       snake_body.push(add([
           sprite('snake-skin'), 
           pos(block_size  ,block_size * i),
+          area(),
           "snake"
       ]));   
   }
@@ -546,13 +574,32 @@ In the loop callback, the updated code for adding a new snake segment to the bod
     snake_body.push(add([
         sprite('snake-skin'),  
         pos(snake_head.pos.x + move_x, snake_head.pos.y + move_y),
+        area(),
         "snake"
     ]));
 ```
 
+Before we run the game we need to load the sprites that we made reference to in the code snippets above. Add the following code,  below the line `kaboom();` to load the sprites and make them available in the game:
+
+```javascript
+loadSprite("background", "sprites/background.png");
+loadSprite("fence-top", "sprites/fence-top.png");
+loadSprite("fence-bottom", "sprites/fence-bottom.png");
+loadSprite("fence-left", "sprites/fence-left.png");
+loadSprite("fence-right", "sprites/fence-right.png");
+loadSprite("post-top-left", "sprites/post-top-left.png");
+loadSprite("post-top-right", "sprites/post-top-right.png");
+loadSprite("post-bottom-left", "sprites/post-bottom-left.png");
+loadSprite("post-bottom-right", "sprites/post-bottom-right.png");
+loadSprite("snake-skin", "sprites/snake-skin.png");
+loadSprite("pizza", "sprites/pizza.png");
+```
+
 If you run the game now, you should see it looking much better!
 
-![update graphics](/images/tutorials/21-snake-kaboom/updated-graphic.gif)
+<img src="/images/tutorials/21-snake-kaboom/updated-graphic.gif"
+     alt="game functionality"
+     style="width: 550px !important;"/>
 
 
 ## Things to Try
@@ -564,7 +611,7 @@ There is a lot of good functionality in [Kaboom.js](https://kaboomjs.com/) to tr
 - Add [sound effects](https://kaboomjs.com/doc#play) and background music.
 
 
-<iframe height="400px" width="100%" src="https://replit.com/@ritza/Snake?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/snake-kaboom?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 
 
