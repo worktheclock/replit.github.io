@@ -114,13 +114,13 @@ const directions = {
 };
 
 let current_direction = directions.RIGHT; 
-let run_loop = false;
+let run_action = false;
 let snake_length = 3; 
 let snake_body = []; 
 
 ```
 
-First, we define an object with properties for each of the allowable directions the snake can move in. This makes code that checks and changes directions easy to read and change, compared to just using numbers or strings to define the directions. The variable `current_direction` tracks the direction the snake is moving at any given time. We choose a starting direction, `RIGHT`, as its default. `run_loop` is a flag variable that we'll use to flag if we are in the actual game, or setting up, or ending the game. The variable `snake_length` keeps track of how long the snake tail has become – we start it at a chosen value of 3. Finally, `snake_body` holds all the screen objects that make up the snake's body. 
+First, we define an object with properties for each of the allowable directions the snake can move in. This makes code that checks and changes directions easy to read and change, compared to just using numbers or strings to define the directions. The variable `current_direction` tracks the direction the snake is moving at any given time. We choose a starting direction, `RIGHT`, as its default. `run_action` is a flag variable that we'll use to flag if we are in the actual game, or setting up, or ending the game. The variable `snake_length` keeps track of how long the snake tail has become – we start it at a chosen value of 3. Finally, `snake_body` holds all the screen objects that make up the snake's body. 
 
 Now we can add a function to spawn, and respawn, the snake. 
 
@@ -147,10 +147,10 @@ function respawn_snake(){
 }
 
 function respawn_all(){
-  run_loop = false; 
+  run_action = false; 
     wait(0.5, function(){
         respawn_snake(); 
-        run_loop = true; 
+        run_action = true; 
     }); 
  
 }
@@ -165,7 +165,7 @@ Then the function sets up a loop to create new snake segments, up to the length 
 
 Finally, we set a default starting direction for the snake to move in. 
 
-You'll notice that we also add in a function `respawn_all`, and a call to the function `respawn_snake`. We'll use the `respawn_all` function to call all of our other respawn functions. Currently we have one for the snake, but we'll also need one for the food when we add it. In the `respawn_all` function, we also take care to set the `run_loop` flag to false, so that no updates are made while we are setting up or resetting objects. We also wrap the calls in a Kaboom.js [`wait` function](https://kaboomjs.com/doc#wait), with a small delay of 0.5 seconds. This is because when we detect a "game over" condition, we don't immediately want to reset the game, as it could be a bit disorienting to a player. 
+You'll notice that we also add in a function `respawn_all`, and a call to the function `respawn_snake`. We'll use the `respawn_all` function to call all of our other respawn functions. Currently we have one for the snake, but we'll also need one for the food when we add it. In the `respawn_all` function, we also take care to set the `run_action` flag to false, so that no updates are made while we are setting up or resetting objects. We also wrap the calls in a Kaboom.js [`wait` function](https://kaboomjs.com/doc#wait), with a small delay of 0.5 seconds. This is because when we detect a "game over" condition, we don't immediately want to reset the game, as it could be a bit disorienting to a player. 
 
 Running the code now, you should see a blue line at the top-left side of the map. 
 
@@ -209,12 +209,17 @@ keyPress("right", () => {
 
 For each of the named "arrow" keys, we set up a function to call if the key is pressed. In each of these functions, we check to ensure that the new direction input is not the complete opposite direction to which the snake is currently moving. This is because we don't want to allow the snake to reverse. If the input direction is a legal move, we update the `current_direction` property to the new direction. 
 
-Now we need to think about how to make the snake appear to move on the screen. A way to do this is to check which direction the snake is heading, and add a block in front of the snake in that direction. Then we'll need to remove a block at the tail-end of the snake. We'll need to do this a few times in a second so that the snake appears to be moving smoothly. Kaboom.js has a function [`loop`](https://kaboomjs.com/doc#loop) which can call a given function at a regular interval that we specify. Add the following code, which uses the `loop` function, to move the snake: 
+Now we need to think about how to make the snake appear to move on the screen. A way to do this is to check which direction the snake is heading, and add a block in front of the snake in that direction. Then we'll need to remove a block at the tail-end of the snake. We'll need to do this a few times in a second so that the snake appears to be moving smoothly. Kaboom.js has a function [`action`](https://kaboomjs.com/doc#action) which can be used to update game objects on each frame. Add the following code, which uses the `action` function, to move the snake: 
 
 ```javascript
 
-loop(0.2, ()=> {
-    if (!run_loop) return; 
+let move_delay = 0.2;
+let timer = 0;
+action(()=> {
+     if (!run_action) return;
+     timer += dt();
+     if (timer < move_delay) return;
+     timer = 0;
 
     let move_x = 0;
     let move_y = 0; 
@@ -258,7 +263,7 @@ loop(0.2, ()=> {
 
 ```
 
-We set the loop to run every 0.2 seconds, or 5 times a second to get smooth movement. You can try experiment with different times to see the effect on the game. Then we check the flag variable `run_loop` we defined earlier – if it is false, we exit early without updating anything. Then, the function defines 2 local variables, `move_x` and `move_y`, which is used to determine where to place the 'next' block relative to the head of the snake. 
+We set the action to run every 0.2 seconds, or 5 times a second to get smooth movement. Since the `action` function updates game objects on each frame we use the [`dt()` function](https://kaboomjs.com/doc#dt) to get the time that has elapsed between the previous and current frame, so that we can keep track if 0.2 seconds has elapsed for us to move the snake. If the desired delay has not elapsed we exit early without updating anything otherwise we reset the timer and execute the code to move the snake.  You can try experiment with different times to see the effect on the game by adjusting the value of the `move_delay` variable. We also check the flag variable `run_action` we defined earlier – if it is false, we exit early without updating anything. Then, the function defines 2 local variables, `move_x` and `move_y`, which is used to determine where to place the 'next' block relative to the head of the snake. 
 
 Then the function switches on the value of the current direction the snake is heading in. For each direction, the `move_x` and `move_y` are set to either 0, block_size or -1 * block_size. If the snake is moving left or right, we add or subtract a block from the x dimension accordingly. The same occurs if the snake is moving up or down, but in the y dimension. 
 
@@ -310,11 +315,11 @@ To call this new `respawn_food` function, we need to update our `respawn_all` fu
 
 ```javascript
 function respawn_all(){
-  run_loop = false; 
+  run_action = false; 
     wait(0.5, function(){
         respawn_snake(); 
         respawn_food();
-        run_loop = true; 
+        run_action = true; 
     }); 
 }
 ```
@@ -352,18 +357,18 @@ Now, we can add similar code to detect if the snake has hit the wall:
 
 ```javascript
 collides("snake", "wall", (s, w) => {
-    run_loop = false; 
+    run_action = false; 
     shake(12);
     respawn_all(); 
 });
 ```
-In the callback function, we immediately set the `run_loop` flag to false. This is so that the code in the move loop does not run and create the appearance of the snake stuck in the wall. Then the code calls a cool Kaboom.js effect function [`shake`](https://kaboomjs.com/doc#shake), which "shakes" the screen in a way that makes it feel like the snake has crashed heavily, and communicates quite effectively that the game is over. Finally, we call `respawn_all` to reset all the game objects. 
+In the callback function, we immediately set the `run_action` flag to false. This is so that the code in the move loop does not run and create the appearance of the snake stuck in the wall. Then the code calls a cool Kaboom.js effect function [`shake`](https://kaboomjs.com/doc#shake), which "shakes" the screen in a way that makes it feel like the snake has crashed heavily, and communicates quite effectively that the game is over. Finally, we call `respawn_all` to reset all the game objects. 
 
 We can use the same code to detect if the snake has hit itself – we just replace the `wall` tag with another `snake` tag: 
 
 ```javascript
 collides("snake", "snake", (s, t) => {
-    run_loop = false; 
+    run_action = false; 
     shake(12);
     respawn_all(); 
 });
