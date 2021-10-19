@@ -41,7 +41,17 @@ There're two ways to add sprites right now:
 
 ![addsprite](/images/tutorials/kaboom/addsprite.png)
 
-The edited sprites will be saved automatically, and can be directly used from the game.
+The edited sprites will be saved automatically. Once you have created a sprite you can load it into your game by opening your main code file, placing your cursor at the point in your file where you want the sprite to be loaded, and then selecting "Insert load code."
+
+![Insert load code](/images/tutorials/kaboom/insert-load-code.png)
+
+This should insert a line of code that looks like this:
+
+```javascript
+loadPedit("Sample", "sprites/Sample.pedit");
+```
+
+Notice the use of `loadPedit` instead of loadSprite. With this call in place you should be able to use the component `sprite("Sample")` in your game.
 
 ![pedit](/images/tutorials/kaboom/pedit2.png)
 ![workspace](/images/tutorials/kaboom/workspace.png)
