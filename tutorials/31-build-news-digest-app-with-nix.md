@@ -1,4 +1,4 @@
-# Build a email news digest app with Nix, Python and Celery
+# Build an email news digest app with Nix, Python and Celery
 
 In this tutorial, we'll build an application that sends regular emails to its users. Users will be able to subscribe to [RSS](https://en.wikipedia.org/wiki/RSS) and [Atom](https://en.wikipedia.org/wiki/Atom_(Web_standard)) feeds, and will receive a daily email with links to the newest stories in each one, at a specified time.
 
@@ -11,9 +11,9 @@ As this application will require a number of different components, we're going t
 
 ## Getting started
 
-To get started, sign into [Replit](https://replit.com) or [create an account](https://replit.com/signup) if you haven't already. Once logged in, create a Nix repl.
+To get started, sign in to [Replit](https://replit.com) or [create an account](https://replit.com/signup) if you haven't already. Once logged in, create a Nix repl.
 
-![](/images/tutorials/31-news-digest-app/create-nix-repl.png)
+![Create a nix repl](/images/tutorials/31-news-digest-app/create-nix-repl.png)
 
 ## Installing dependencies
 
@@ -26,11 +26,11 @@ We'll start by using Nix to install the packages and libraries we'll use to buil
 5. Celery, a Python task queuing system. We'll use this to send regular emails to users.
 6. Redis, a data store and message broker used by Celery to track tasks.
 7. Python's Redis library.
-8. Python's Requests library, which we'll use to interact with an external API to send email.
+8. Python's Requests library, which we'll use to interact with an external API to send emails.
 9. Python's Feedparser library, which we'll used to parse news feeds.
-10. Pyhton's dateutil library, which we'll use to parse timestamps in news feeds.
+10. Python's dateutil library, which we'll use to parse timestamps in news feeds.
 
-To install these dependencies, we just have to add them to `replit.nix`. Make sure your repl is configured to show configuration files, open `replit.nix`, and edit it to resemble the following:
+To install these dependencies, we just have to add them to `replit.nix`. Open `replit.nix`, and edit it to resemble the following:
 
 ```nix
 { pkgs }: {
@@ -52,13 +52,17 @@ To install these dependencies, we just have to add them to `replit.nix`. Make su
 
 Run your repl now to install all packages. Once the Nix environment is finished loading, you should see a welcome message from `cowsay`.
 
-Now that we've installed everything, we need to get it all running. Edit your repl's `.replit` file to run a script called `start.sh`:
+Now that we've installed everything we need, edit your repl's `.replit` file to run a script called `start.sh`:
 
 ```bash
 run = "sh start.sh"
 ```
 
-Then create `start.sh` in your repl's files tab, and add the following Bash code:
+Then create `start.sh` in your repl's files tab, and add the following bash code:
+
+<img src="/images/tutorials/31-news-digest-app/new-file.png"
+  alt="Start script"
+  style="width: 350px !important;"/>
 
 ```bash
 #!/bin/sh
@@ -68,7 +72,6 @@ pkill mongo
 pkill redis
 pkill python
 pkill start.sh
-
 rm data/mongod.lock
 mongod --dbpath data --repair
 
@@ -79,47 +82,49 @@ mongod --fork --bind_ip="127.0.0.1" --dbpath=./data --logpath=./log/mongod.log
 redis-server --daemonize yes --bind 127.0.0.1
 ```
 
-The first section of this script will kill all the running processes so they can be restarted. While it may not be strictly necessary to stop and restart MongoDB or Redis every time you run your repl, doing so means we can reconfigure them should we need to, and prevents us from having to check whether they're stopped or started independent of our other code.
+The first section of this script will kill all the running processes so they can be restarted. While it may not be strictly necessary to stop and restart MongoDB or Redis every time you run your repl, doing so means we can reconfigure them should we need to, and prevents us from having to check whether they're stopped or started, independent of our other code.
 
-The second section of the the script starts MongoDB with the following configuration options:
+The second section of the script starts MongoDB with the following configuration options:
 
 * `--fork`: This runs MongoDB in a background process, allowing the script to continue executing without shutting it down.
-* `--bind 127.0.0.1`: Listen on the local loopback address only, preventing external access to our database.
+* `--bind_ip="127.0.0.1"`: Listen on the local loopback address only, preventing external access to our database.
 * `--dbpath=./data` and `--logpath=./log/mongod.log`: Use local directories for storage. This is important for getting programs to work in Nix repls, as we discussed in [our previous tutorial on building with Nix](https://docs.replit.com/tutorials/30-build-with-nix).
 
-The third section starts Redis. We use the `--bind` flag with Redis for the same we used it for MongoDB, and `--daemonize yes` runs it as a background process (similar to MongoDB's `--fork`).
+The third section starts Redis. We use the `--bind` flag to listen on the local loopback address only, similar to how we used it for MongoDB, and `--daemonize yes` runs it as a background process (similar to MongoDB's `--fork`).
 
-Before we run our repl, we'll need to create our MongoDB data and logging directories, `data` and `log`. Create those directories now in your repl's filepane.
+Before we run our repl, we'll need to create our MongoDB data and logging directories, `data` and `log`. Create these directories now in your repl's filepane.
 
-![](/images/tutorials/31-news-digest-app/mongodirs.png)
+<img src="/images/tutorials/31-news-digest-app/mongodirs.png"
+  alt="Mongo directories"
+  style="width: 350px !important;"/>
 
 Once that's done, you can run your repl, and it will start MongoDB and Redis. You can interact with MongoDB by running `mongo` in your repl's shell, and with Redis by running `redis-cli`. If you're interested, you can find an introduction to these clients at the links below:
 
 * [Working with the `mongo` Shell](https://docs.mongodb.com/v4.4/mongo/#working-with-the-mongo-shell)
 * [`redis-cli`, the Redis command line interface](https://redis.io/topics/rediscli)
 
-![](/images/tutorials/31-news-digest-app/mongo-and-redis-cli.png)
+![Running mongo and redis cli](/images/tutorials/31-news-digest-app/mongo-and-redis-cli.png)
 
 These datastores will be empty for now.
 
 Important note: Sometimes, when stopping and starting your repl, you may see the following error message:
 
-```
+```bash
 ERROR: child process failed, exited with error number 100
 ```
 
-This means that MongoDB has failed to start. If you see this, stop and start your repl again, and MongoDB should come up successfully.
+This means that MongoDB has failed to start. If you see this, stop and start your repl again, and MongoDB should start up successfully.
 
 ## Scraping RSS and Atom feeds
 
-We're going to build the feed scraper first. If you've completed any of our previous web-scraping tutorials, you might expect that to do this by parsing raw XML with BeautifulSoup. While this would be possible, we would need to account for a large number of differences in feed formats and other gotchas specific to parsing RSS and Atom feeds. Rather than spending time with that, we'll use the [feedparser](https://pypi.org/project/feedparser/) library, which has already solved most of these problems.
+We're going to build the feed scraper first. If you've completed any of our previous web-scraping tutorials, you might expect to do this by parsing raw XML with `BeautifulSoup`. While this would be possible, we would need to account for a large number of differences in feed formats and other gotchas specific to parsing RSS and Atom feeds. Rather than spending time with that, we'll use the [feedparser](https://pypi.org/project/feedparser/) library, which has already solved most of these problems.
 
 Create a directory named `lib`, and inside that directory, a Python file named `scraper.py`. Add the following code to it:
 
 ```python
 import feedparser, pytz, time
 from datetime import datetime, timedelta
-import dateutil
+from dateutil import parser
 
 def get_title(feed_url):
     pass
@@ -130,7 +135,7 @@ def get_items(feed_url, since=timedelta(days=1)):
 
 Here we import the libraries we'll need for web scraping, XML parsing, and time handling. We also define two functions:
 
-* `get_title`: This will return the name of the website a given feed tracks (e.g. "Hacker News" for https://news.ycombinator.com/rss).
+* `get_title`: This will return the name of the website, a given feed tracks (e.g. "Hacker News" for https://news.ycombinator.com/rss).
 * `get_items`: This will return the feed's items – depending on the feed, these can be articles, videos, podcast episodes, or other content. The `since` parameter will allow us to only fetch recent content, and we'll use 1 day as the default cutoff. 
 
 The code for `get_title` is very simple:
@@ -150,6 +155,10 @@ print(get_title("https://news.ycombinator.com/rss"))
 
 Instead of rewriting our `start.sh` script to run this Python file, we can just run `python lib/scraper.py` in our repl's Shell tab, as shown below. If it's working correctly, we should see "Hacker News" as the script's output.
 
+<img src="/images/tutorials/31-news-digest-app/script-test.png"
+  alt="Scrapper cript test"
+  style="width: 400px !important;"/>
+
 Now we need to write the second function. Add the following code to the `get_items` function definition:
 
 ```python
@@ -161,9 +170,9 @@ def get_items(feed_url, since=timedelta(days=1)):
         title = entry.title
         link = entry.link
         if "published" in entry:
-            published = dateutil.parser.parse(entry.published)
+            published = parser.parse(entry.published)
         elif "pubDate" in entry:
-            published = dateutil.parser.parse(entry.pubDate)
+            published = parser.parse(entry.pubDate)
 ```
 
 Here we extract each item's title, link and publishing timestamp. Atom feeds use the `published` element and RSS feeds use the `pubDate` element, so we look for both. We use [`dateutil.parser`](https://dateutil.readthedocs.io/en/stable/parser.html) to convert the timestamp from a string to a `datetime` object. The `parse` function is able to convert a large number of different formats, which saves us from writing a lot of extra code.
@@ -171,6 +180,7 @@ Here we extract each item's title, link and publishing timestamp. Atom feeds use
 Finally, we need to evaluate the age of the content and package it in a dictionary so we can return it from our function. Add the following code to the bottom of the `get_items` function:
 
 ```python
+# evaluating content age
         if (since and published > (pytz.utc.localize(datetime.today()) - since)) or not since:
             item = {
                 "title": title,
@@ -203,18 +213,19 @@ Now that we can retrieve content for our email digests, we need a way of sending
 
 Once your account is created and verified, you'll need an API key and domain from Mailgun.
 
-To find your domain, navigate to **Sending → Domains**. You should see a single domain name, starting with "sandbox". Click on that and copy the full domain name (it looks like: `sandboxlongstringoflettersandnumbers.mailgun.org`) somewhere safe.
+To find your domain, navigate to **Sending → Domains**. You should see a single domain name, starting with "sandbox". Click on that and copy the full domain name (it looks like: `sandboxlongstringoflettersandnumbers.mailgun.org`).
 
-![](/images/tutorials/31-news-digest-app/mailgun-domain1.png)
-![](/images/tutorials/31-news-digest-app/mailgun-domain2.png)
+![Mailgun domain](/images/tutorials/31-news-digest-app/mailgun-domain.gif)
 
 To find your API key, navigate to **Settings → API Keys**. Click on the view icon next to **Private API key** and copy the revealed string somewhere safe.
 
-![](/images/tutorials/31-news-digest-app/mailgun-apikey.png)
+![Mailgun api key](/images/tutorials/31-news-digest-app/mailgun-apikey.png)
 
 Back in your repl, create two environment variables, `MAILGUN_DOMAIN` and `MAILGUN_APIKEY`, and provide the strings you copied from Mailgun as values for each.
 
-![](/images/tutorials/31-news-digest-app/mailgun-env.png)
+<img src="/images/tutorials/31-news-digest-app/add-env-var.png"
+  alt="Add environment variable"
+  style="width: 400px !important;"/>
 
 Run your repl now to set these environment variables. Then create a file named `lib/tasks.py`, and populate it with the code below.
 
@@ -243,7 +254,9 @@ Here we use Python Requests to interact with the [Mailgun Messages API](https://
 
 To test that Mailgun is working, replace `YOUR-EMAIL-ADDRESS-HERE` with your email address, and then run `python lib/tasks.py` in your repl's shell. You should receive a test mail within a few minutes, but as we're using a free sandbox domain, it may end up in your spam inbox.
 
-Without further verification on Mailgun, we can only send up to 100 emails per hour, and a free account limits us to 5,000 emails per month. Keep these limitations in mind as you build and test this application.
+Without further verification on Mailgun, we can only send up to 100 emails per hour, and a free account limits us to 5,000 emails per month. Additionally, Mailgun's sandbox domains can only be used to send emails to specific, whitelisted addresses. The address you created your account with will work, but if you want to send emails to other addresses, you'll have to add them to the domain's authorized recipients, which can be done from the page you got the full domain name from. Keep these limitations in mind as you build and test this application.
+
+![Recipients](/images/tutorials/31-news-digest-app/recipients.png)
 
 After you've received your test email, you can delete or comment out the function call in the final line of `lib/tasks.py`.
 
@@ -296,11 +309,11 @@ import random, string
 ''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(20))
 ```
 
-![](/images/tutorials/31-news-digest-app/randomstring.png)
+![Random string](/images/tutorials/31-news-digest-app/randomstring.png)
 
-In your repl's Secrets tab, add a new key named SECRET_KEY and enter the random string you just generated as its value.
+In your repl's Secrets tab, add a new key named `SECRET_KEY` and enter the random string you just generated as its value.
 
-![](/images/tutorials/31-news-digest-app/repl-secrets.png)
+![Repl secret key](/images/tutorials/31-news-digest-app/repl-secrets.png)
 
 Next, we will create the `context` helper function. This function will provide the current user's data from our database to our application front-end. Add the following code to the bottom of `main.py`:
 
@@ -371,7 +384,7 @@ def index():
 app.run(host='0.0.0.0', port=8080)
 ```
 
-This code will serve a [Jinja](https://jinja.palletsprojects.com/en/3.0.x/templates/) template, which we will create now in a separate file. In your repl's filepane, create a directory named `templates`, and inside that directory, a file named `index.html`. Add the following content to `index.html`:
+This code will serve a [Jinja](https://jinja.palletsprojects.com/en/3.0.x/templates/) template, which we will create now in a separate file. In your repl's filepane, create a directory named `templates`, and inside that directory, a file named `index.html`. Add the following code to `index.html`:
 
 ```html
 <!DOCTYPE html>
@@ -452,7 +465,10 @@ python main.py
 
 Once that's done, run your repl. You should see a login form.
 
-![](/images/tutorials/31-news-digest-app/login-form.png)
+<img src="/images/tutorials/31-news-digest-app/login-form.png"
+alt="Start script"
+style="width: 450px !important;"/>
+
 
 ## User login
 
@@ -602,32 +618,32 @@ def confirm_login(login_id):
     return redirect(url_for("index"))
 ```
 
-When a user clicks the login link in their email, they will be directed to this route. If a matching login ID is found in the database, they will be logged in, and the ID will be deleted so it can't be reused.
+When a user clicks the login link in their email, they will be directed to this route. If a matching login ID is found in the database, they will be logged in, and the login ID will be deleted so it can't be reused.
 
-We've implemented all of the code we need for user login. The last we thing we need to do to get it working is configure our repl to start a [Celery Worker](https://docs.celeryproject.org/en/stable/userguide/workers.html). When we invoke a task with `.delay()`, this worker will execute the task.
+We've implemented all of the code we need for user login. The last thing we need to do to get it working is to configure our repl to start a [Celery Worker](https://docs.celeryproject.org/en/stable/userguide/workers.html). When we invoke a task with `.delay()`, this worker will execute the task.
 
 In `start.sh`, add the following between the line that starts Redis and the line that starts our web application:
 
 ```python
 # Run Celery worker
-celery -A tasks.celery worker -P processes --loglevel=info &
+celery -A lib.tasks.celery worker -P processes --loglevel=info &
 ```
 
 This will start a Celery worker, configured with the following flags:
 
-* `-A main.celery`: This tells Celery to run tasks associated with the `celery` object in `tasks.py`.
+* `-A lib.tasks.celery`: This tells Celery to run tasks associated with the `celery` object in `tasks.py`.
 * `-P processes`: This tells Celery to start new processes for individual tasks.
 * `--loglevel=info`: This ensures we'll have detailed Celery logs to help us debug problems.
 
-We use `&` to run the worker in the background – this is a part of Bash's syntax rather than a program-specific backgrounding flags like we used for MongoDB and Redis.
+We use `&` to run the worker in the background – this is a part of Bash's syntax rather than a program-specific backgrounding flag like we used for MongoDB and Redis.
 
 Run your repl now, and you should see the worker start up with the rest of our application's components. Once your web application is started, open it in a new tab. Then try logging in with your email address – remember to check your spam box for your login email.
 
-![](/images/tutorials/31-news-digest-app/open-new-window.png)
+![Open in new window](/images/tutorials/31-news-digest-app/open-new-window.png)
 
 If everything's working correctly, you should see a page like this after clicking your login link:
 
-![](/images/tutorials/31-news-digest-app/logged-in.png)
+![Logged in view](/images/tutorials/31-news-digest-app/logged-in.png)
 
 ## Adding and removing subscriptions
 
@@ -681,7 +697,7 @@ Now that we've validated the feed and have its title, we can add it to our Mongo
     return redirect(url_for("index"))
 ```
 
-Here, we populate a new document with our subscription details and insert it into our "subscriptions" collection. To prevent duplicate subscriptions, we use [`create_index`](https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.create_index) to create a [unique compound index](https://docs.mongodb.com/manual/core/index-unique/) on the "email" and "url" fields. As `create_index` will only create an index that doesn't already exist, we can safely call it on every invokation of this function.
+Here, we populate a new document with our subscription details and insert it into our "subscriptions" collection. To prevent duplicate subscriptions, we use [`create_index`](https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.create_index) to create a [unique compound index](https://docs.mongodb.com/manual/core/index-unique/) on the "email" and "url" fields. As `create_index` will only create an index that doesn't already exist, we can safely call it on every invocation of this function.
 
 Next, we'll create the code for unsubscribing from feeds. Add the following function definition below the one above:
 
@@ -701,9 +717,8 @@ Run your repl, and try subscribing and unsubscribing from some feeds. You can us
 
 * Hacker News feed: https://news.ycombinator.com/rss
 * /r/replit on Reddit feed: https://www.reddit.com/r/replit.rss
-* CNN Top Stories feed: http://rss.cnn.com/rss/edition.rss
 
-![](/images/tutorials/31-news-digest-app/subscriptions.png)
+![Subscriptions](/images/tutorials/31-news-digest-app/subscriptions.png)
 
 ## Sending digests
 
@@ -740,7 +755,7 @@ def send_digest_email(to_address):
 
 First, we connect to the MongoDB and find all subscriptions created by the user we're sending to. We then construct a dictionary of scraped items for each feed URL.
 
-Once that's done, it's time to create the email content. Add the following code below the code above:
+Once that's done, it's time to create the email content. Add the following code to the bottom of `send_digest_email` function:
 
 ```python
     # Build email digest
@@ -761,7 +776,6 @@ Once that's done, it's time to create the email content. Add the following code 
         section += "</ul>"
         html += section
 
-    print(html)
 ```
 
 In this code, we construct an HTML email with a heading and bullet list of linked items for each feed. If any of our feeds have no items for the last day, we leave them out of the digest. We use [`strftime`](https://www.programiz.com/python-programming/datetime/strftime) to format today's date in a human-readable manner.
@@ -787,7 +801,7 @@ After that, we can send the email. Add the following code to the bottom of the f
 
 Run your repl, and click on the **Send digest** button. You should receive an email digest with today's items from each of your subscriptions within a few minutes. Remember to check your spam!
 
-![](/images/tutorials/31-news-digest-app/digest-email.png)
+![Digest email](/images/tutorials/31-news-digest-app/digest-email.png)
 
 ## Scheduling digests
 
@@ -813,7 +827,7 @@ This function retrieves the requested digest time from the user and calls `tasks
 
 Celery supports scheduling tasks through its [Beat functionality](https://docs.celeryproject.org/en/stable/userguide/periodic-tasks.html#using-custom-scheduler-classes). This will require us to run an additional Celery process, which will be a beat rather than a worker.
 
-By default, Celery does not support dynamic addition and alteration of scheduled tasks, which we need in order to allow users to set and change their digest schedules arbitrarily. Thus, we will need a [custom scheduler](https://docs.celeryproject.org/en/stable/userguide/periodic-tasks.html#using-custom-scheduler-classes) that does support this.
+By default, Celery does not support dynamic addition and alteration of scheduled tasks, which we need in order to allow users to set and change their digest schedules arbitrarily. Thus, we will need a [custom scheduler](https://docs.celeryproject.org/en/stable/userguide/periodic-tasks.html#using-custom-scheduler-classes) that supports this.
 
 Many custom Celery scheduler packages are [available on PyPi](https://pypi.org/search/?q=celery+beat&o=), but as of October 2021, none of these packages have been added to Nixpkgs. Therefore, we'll need to create a custom derivation for the scheduler we choose. Let's do that in `replit.nix` now. Open the file, and add the `let ... in` block below:
 
@@ -868,7 +882,7 @@ You can learn more about using Python with Nixpkgs in [this section of the offic
 
 To actually install `redisbeat`, we must also add it to our `deps` list. Once you've done that, run your repl. Building custom Nix derivations like this one often takes some time, so you may have to wait a while before your repl finishes loading the Nix environment.
 
-While we wait, let's import `redisbeat` in `lib/tasks.py` and create our `schedule_digest` function. Add the following code to the bottom of `libs/task.py`:
+While we wait, let's import `redisbeat` in `lib/tasks.py` and create our `schedule_digest` function. Add the following code to the bottom of `lib/tasks.py`:
 
 ```python
 from redisbeat.scheduler import RedisScheduler
@@ -904,13 +918,14 @@ Now run your repl. You can test this functionality out now by scheduling your di
 We've built a useful multi-component application, but its functionality is fairly rudimentary. If you'd like to keep working on this project, here are some ideas for next steps:
 
 * Set up a custom domain with Mailgun to help keep your digest emails out of spam.
-* Feed scraper optimization. Currently we fetch the whole feed twice when adding a new subscription and have to sleep to avoid rate-limiting. The scraper could be optimized to fetch feed contents only once.
+* Feed scraper optimization. Currently, we fetch the whole feed twice when adding a new subscription and have to sleep to avoid rate-limiting. The scraper could be optimized to fetch feed contents only once.
 * Intelligent digest caching. If multiple users subscribe to the same feed and schedule their digests for the same time, we will unnecessarily fetch the same content for each one.
-* Multiple digests per users. Users could configure different digests with different contents at different times.
-* Allow users to schedule digests in their local own timezones.
+* Multiple digests per user. Users could configure different digests with different contents at different times.
+* Allow users to schedule digests in their local timezones.
 * Styling of both website and email content with CSS.
 * A production WSGI and web server to improve the web application's performance, like we used in our [previous tutorial on building with Nix](https://docs.replit.com/tutorials/30-build-with-nix).
 
 You can find our repl below:
 
-!!! repl embed
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/RSSdigest?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
