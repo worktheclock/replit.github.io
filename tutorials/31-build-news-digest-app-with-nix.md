@@ -19,15 +19,15 @@ To get started, sign in to [Replit](https://replit.com) or [create an account](h
 
 We'll start by using Nix to install the packages and libraries we'll use to build our application. These are:
 
-1. Python 3.9, the programming language we'll write our application in.
-2. Flask, Python's most popular micro web framework, which we'll use to power our web application.
-3. MongoDB, the NoSQL database we'll use to store persistent data for our application.
-4. PyMongo, a library for working with MongoDB in Python.
-5. Celery, a Python task queuing system. We'll use this to send regular emails to users.
-6. Redis, a data store and message broker used by Celery to track tasks.
+1. **Python 3.9**, the programming language we'll write our application in.
+2. **Flask**, Python's most popular micro web framework, which we'll use to power our web application.
+3. **MongoDB**, the NoSQL database we'll use to store persistent data for our application.
+4. **PyMongo**, a library for working with MongoDB in Python.
+5. **Celery**, a Python task queuing system. We'll use this to send regular emails to users.
+6. **Redis**, a data store and message broker used by Celery to track tasks.
 7. Python's Redis library.
 8. Python's Requests library, which we'll use to interact with an external API to send emails.
-9. Python's Feedparser library, which we'll used to parse news feeds.
+9. Python's Feedparser library, which we'll use to parse news feeds.
 10. Python's dateutil library, which we'll use to parse timestamps in news feeds.
 
 To install these dependencies, we just have to add them to `replit.nix`. Open `replit.nix`, and edit it to resemble the following:
@@ -50,7 +50,7 @@ To install these dependencies, we just have to add them to `replit.nix`. Open `r
 }
 ```
 
-Run your repl now to install all packages. Once the Nix environment is finished loading, you should see a welcome message from `cowsay`.
+Run your repl now to install all the above listed packages. Once the Nix environment is finished loading, you should see a welcome message from `cowsay`.
 
 Now that we've installed everything we need, edit your repl's `.replit` file to run a script called `start.sh`:
 
@@ -107,13 +107,13 @@ Once that's done, you can run your repl, and it will start MongoDB and Redis. Yo
 
 These datastores will be empty for now.
 
-Important note: Sometimes, when stopping and starting your repl, you may see the following error message:
+**Important note**: Sometimes, when stopping and starting your repl, you may see the following error message:
 
 ```bash
 ERROR: child process failed, exited with error number 100
 ```
 
-This means that MongoDB has failed to start. If you see this, stop and start your repl again, and MongoDB should start up successfully.
+This means that MongoDB has failed to start. If you see this, restart your repl, and MongoDB should start up successfully.
 
 ## Scraping RSS and Atom feeds
 
@@ -135,7 +135,7 @@ def get_items(feed_url, since=timedelta(days=1)):
 
 Here we import the libraries we'll need for web scraping, XML parsing, and time handling. We also define two functions:
 
-* `get_title`: This will return the name of the website, a given feed tracks (e.g. "Hacker News" for https://news.ycombinator.com/rss).
+* `get_title`: This will return the name of the website, for a given feed track (e.g. "Hacker News" for https://news.ycombinator.com/rss).
 * `get_items`: This will return the feed's items – depending on the feed, these can be articles, videos, podcast episodes, or other content. The `since` parameter will allow us to only fetch recent content, and we'll use 1 day as the default cutoff. 
 
 The code for `get_title` is very simple:
@@ -153,7 +153,7 @@ Add the following line to the bottom of `scraper.py` to test it out:
 print(get_title("https://news.ycombinator.com/rss"))
 ```
 
-Instead of rewriting our `start.sh` script to run this Python file, we can just run `python lib/scraper.py` in our repl's Shell tab, as shown below. If it's working correctly, we should see "Hacker News" as the script's output.
+Instead of rewriting our `start.sh` script to run this Python file, we can just run `python lib/scraper.py` in our repl's shell tab, as shown below. If it's working correctly, we should see "Hacker News" as the script's output.
 
 <img src="/images/tutorials/31-news-digest-app/script-test.png"
   alt="Scrapper cript test"
@@ -175,7 +175,7 @@ def get_items(feed_url, since=timedelta(days=1)):
             published = parser.parse(entry.pubDate)
 ```
 
-Here we extract each item's title, link and publishing timestamp. Atom feeds use the `published` element and RSS feeds use the `pubDate` element, so we look for both. We use [`dateutil.parser`](https://dateutil.readthedocs.io/en/stable/parser.html) to convert the timestamp from a string to a `datetime` object. The `parse` function is able to convert a large number of different formats, which saves us from writing a lot of extra code.
+Here we extract each item's title, link and publishing timestamp. Atom feeds use the `published` element and RSS feeds use the `pubDate` element, so we look for both. We use [`parser`](https://dateutil.readthedocs.io/en/stable/parser.html) to convert the timestamp from a string to a `datetime` object. The `parse` function is able to convert a large number of different formats, which saves us from writing a lot of extra code.
 
 Finally, we need to evaluate the age of the content and package it in a dictionary so we can return it from our function. Add the following code to the bottom of the `get_items` function:
 
@@ -280,7 +280,7 @@ Mongo databases are made up of *collections*, which contain *documents*. You can
 
 Now that we've got a working webscraper, email sender and database interface, it's time to start building our web application.
 
-Create a file named `main.py` in your repl's main filepane and add the following import code to it:
+Create a file named `main.py` in your repl's filepane and add the following import code to it:
 
 ```python
 from flask import Flask, request, render_template, session, flash, redirect, url_for
@@ -637,7 +637,7 @@ This will start a Celery worker, configured with the following flags:
 
 We use `&` to run the worker in the background – this is a part of Bash's syntax rather than a program-specific backgrounding flag like we used for MongoDB and Redis.
 
-Run your repl now, and you should see the worker start up with the rest of our application's components. Once your web application is started, open it in a new tab. Then try logging in with your email address – remember to check your spam box for your login email.
+Run your repl now, and you should see the worker start up with the rest of our application's components. Once the web application is started, open it in a new tab. Then try logging in with your email address – remember to check your spam box for your login email.
 
 ![Open in new window](/images/tutorials/31-news-digest-app/open-new-window.png)
 
