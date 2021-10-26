@@ -17,7 +17,7 @@ To get started, sign in to [Replit](https://replit.com) or [create an account](h
 
 ## Installing dependencies
 
-We'll start by using Nix to install the packages and libraries we'll use to build our application. These are:
+We'll start by using Nix to install the packages and libraries we'll need to build our application. These are:
 
 1. **Python 3.9**, the programming language we'll write our application in.
 2. **Flask**, Python's most popular micro web framework, which we'll use to power our web application.
@@ -27,10 +27,10 @@ We'll start by using Nix to install the packages and libraries we'll use to buil
 6. **Redis**, a data store and message broker used by Celery to track tasks.
 7. Python's Redis library.
 8. Python's Requests library, which we'll use to interact with an external API to send emails.
-9. Python's Feedparser library, which we'll use to parse news feeds.
+9. Python's feedparser library, which we'll use to parse news feeds.
 10. Python's dateutil library, which we'll use to parse timestamps in news feeds.
 
-To install these dependencies, we just have to add them to `replit.nix`. Open `replit.nix`, and edit it to resemble the following:
+To install these dependencies, open `replit.nix` and edit it to include the following:
 
 ```nix
 { pkgs }: {
@@ -50,19 +50,21 @@ To install these dependencies, we just have to add them to `replit.nix`. Open `r
 }
 ```
 
-Run your repl now to install all the above listed packages. Once the Nix environment is finished loading, you should see a welcome message from `cowsay`.
+Run your repl now to install all the packages. Once the Nix environment is finished loading, you should see a welcome message from `cowsay`.
 
-Now that we've installed everything we need, edit your repl's `.replit` file to run a script called `start.sh`:
+Now edit your repl's `.replit` file to run a script called `start.sh`:
 
 ```bash
 run = "sh start.sh"
 ```
 
-Then create `start.sh` in your repl's files tab, and add the following bash code:
+Next we need to create `start.sh` in the repl's files tab:
 
 <img src="/images/tutorials/31-news-digest-app/new-file.png"
   alt="Start script"
   style="width: 350px !important;"/>
+
+And add the following bash code to `start.sh`:
 
 ```bash
 #!/bin/sh
@@ -117,7 +119,7 @@ This means that MongoDB has failed to start. If you see this, restart your repl,
 
 ## Scraping RSS and Atom feeds
 
-We're going to build the feed scraper first. If you've completed any of our previous web-scraping tutorials, you might expect to do this by parsing raw XML with `BeautifulSoup`. While this would be possible, we would need to account for a large number of differences in feed formats and other gotchas specific to parsing RSS and Atom feeds. Rather than spending time with that, we'll use the [feedparser](https://pypi.org/project/feedparser/) library, which has already solved most of these problems.
+We're going to build the feed scraper first. If you've completed any of our previous web-scraping tutorials, you might expect to do this by parsing raw XML with [Beautiful Soup](https://beautiful-soup-4.readthedocs.io/en/latest/). While this would be possible, we would need to account for a large number of differences in feed formats and other gotchas specific to parsing RSS and Atom feeds. Instead, we'll use the [feedparser](https://pypi.org/project/feedparser/) library, which has already solved most of these problems.
 
 Create a directory named `lib`, and inside that directory, a Python file named `scraper.py`. Add the following code to it:
 
@@ -136,9 +138,9 @@ def get_items(feed_url, since=timedelta(days=1)):
 Here we import the libraries we'll need for web scraping, XML parsing, and time handling. We also define two functions:
 
 * `get_title`: This will return the name of the website, for a given feed track (e.g. "Hacker News" for https://news.ycombinator.com/rss).
-* `get_items`: This will return the feed's items – depending on the feed, these can be articles, videos, podcast episodes, or other content. The `since` parameter will allow us to only fetch recent content, and we'll use 1 day as the default cutoff. 
+* `get_items`: This will return the feed's items – depending on the feed, these can be articles, videos, podcast episodes, or other content. The `since` parameter will allow us to only fetch recent content, and we'll use one day as the default cutoff. 
 
-The code for `get_title` is very simple:
+Edit the `get_title` function with the following:
 
 ```python
 def get_title(feed_url):
@@ -175,9 +177,9 @@ def get_items(feed_url, since=timedelta(days=1)):
             published = parser.parse(entry.pubDate)
 ```
 
-Here we extract each item's title, link and publishing timestamp. Atom feeds use the `published` element and RSS feeds use the `pubDate` element, so we look for both. We use [`parser`](https://dateutil.readthedocs.io/en/stable/parser.html) to convert the timestamp from a string to a `datetime` object. The `parse` function is able to convert a large number of different formats, which saves us from writing a lot of extra code.
+Here we extract each item's title, link, and publishing timestamp. Atom feeds use the `published` element and RSS feeds use the `pubDate` element, so we look for both. We use [`parser`](https://dateutil.readthedocs.io/en/stable/parser.html) to convert the timestamp from a string to a `datetime` object. The `parse` function is able to convert a large number of different formats, which saves us from writing a lot of extra code.
 
-Finally, we need to evaluate the age of the content and package it in a dictionary so we can return it from our function. Add the following code to the bottom of the `get_items` function:
+We need to evaluate the age of the content and package it in a dictionary so we can return it from our function. Add the following code to the bottom of the `get_items` function:
 
 ```python
 # evaluating content age
@@ -250,9 +252,9 @@ def send_test_email(to_address):
 send_test_email("YOUR-EMAIL-ADDRESS-HERE")
 ```
 
-Here we use Python Requests to interact with the [Mailgun Messages API](https://documentation.mailgun.com/en/latest/api-sending.html). Note the inclusion of our domain and API key.
+Here we use Python Requests to interact with the [Mailgun API](https://documentation.mailgun.com/en/latest/api-sending.html). Note the inclusion of our domain and API key.
 
-To test that Mailgun is working, replace `YOUR-EMAIL-ADDRESS-HERE` with your email address, and then run `python lib/tasks.py` in your repl's shell. You should receive a test mail within a few minutes, but as we're using a free sandbox domain, it may end up in your spam inbox.
+To test that Mailgun is working, replace `YOUR-EMAIL-ADDRESS-HERE` with your email address, and then run `python lib/tasks.py` in your repl's shell. You should receive a test mail within a few minutes, but as we're using a free sandbox domain, it may end up in your spam folder.
 
 Without further verification on Mailgun, we can only send up to 100 emails per hour, and a free account limits us to 5,000 emails per month. Additionally, Mailgun's sandbox domains can only be used to send emails to specific, whitelisted addresses. The address you created your account with will work, but if you want to send emails to other addresses, you'll have to add them to the domain's authorized recipients, which can be done from the page you got the full domain name from. Keep these limitations in mind as you build and test this application.
 
@@ -311,11 +313,11 @@ import random, string
 
 ![Random string](/images/tutorials/31-news-digest-app/randomstring.png)
 
-In your repl's Secrets tab, add a new key named `SECRET_KEY` and enter the random string you just generated as its value.
+In your repl's "Secrets" tab, add a new key named `SECRET_KEY` and enter the random string you just generated as its value.
 
 ![Repl secret key](/images/tutorials/31-news-digest-app/repl-secrets.png)
 
-Next, we will create the `context` helper function. This function will provide the current user's data from our database to our application front-end. Add the following code to the bottom of `main.py`:
+Next, we will create the `context` helper function. This function will provide the current user's data from our database to our application frontend. Add the following code to the bottom of `main.py`:
 
 ```python
 def context():
@@ -330,11 +332,11 @@ def context():
     }
 ```
 
-When we build user login, we will store the current user's email address in Flask's [`session` object](https://flask.palletsprojects.com/en/2.0.x/quickstart/#sessions), which corresponds to a [cookie](https://en.wikipedia.org/wiki/HTTP_cookie) that will be cryptographically signed with the secret key we defined above. Without this, users would be able to impersonate each other by changing their cookie data.
+When we build our user login, we will store the current user's email address in Flask's [`session` object](https://flask.palletsprojects.com/en/2.0.x/quickstart/#sessions), which corresponds to a [cookie](https://en.wikipedia.org/wiki/HTTP_cookie) that will be cryptographically signed with the secret key we defined above. Without this, users would be able to impersonate each other by changing their cookie data.
 
-We query our MongoDB database by calling [`db.<name of collection>.find()`](https://docs.mongodb.com/manual/reference/method/db.collection.find/). If we call `find()` without any arguments, all items in our collection will be returned. If we call `find()` with an argument, as we've done above, it will return results with keys and values which match our argument. `find()` returns a [`Cursor`](https://pymongo.readthedocs.io/en/stable/api/pymongo/cursor.html) object, which we can extract the results of our query from.
+We query our MongoDB database by calling [`db.<name of collection>.find()`](https://docs.mongodb.com/manual/reference/method/db.collection.find/). If we call `find()` without any arguments, all items in our collection will be returned. If we call `find()` with an argument, as we've done above, it will return results with keys and values that match our argument. The `find()` method returns a [`Cursor`](https://pymongo.readthedocs.io/en/stable/api/pymongo/cursor.html) object, which we can extract the results of our query from.
 
-Next, we need to create an authentication [function decorator](https://realpython.com/primer-on-python-decorators/), which will restrict parts of our application to logged in users. Add the following code below the definition of the `context` function:
+Next, we need to create an authentication [function decorator](https://realpython.com/primer-on-python-decorators/), which will restrict parts of our application to logged-in users. Add the following code below the definition of the `context` function:
 
 ```python
 # Authentication decorator
@@ -362,7 +364,7 @@ def authenticated_function():
 authenticated_function()
 ```
 
-it will be roughly equivalent to:
+It will be roughly equivalent to:
 
 ```python
 def authenticated_function():
@@ -470,7 +472,7 @@ alt="Start script"
 style="width: 450px !important;"/>
 
 
-## User login
+## Adding user login
 
 We will implement user login by sending a single-use login link to the email address provided in the login form. This provides a number of benefits:
 
@@ -493,9 +495,9 @@ def login():
     return redirect(url_for("index"))
 ```
 
-In this function, we get the user's email, and pass it to a function we will define in `lib/tasks.py`. As this function will be a [Celery Task](https://docs.celeryproject.org/en/stable/userguide/tasks.html) rather than a conventional function, we must call it with `.delay()`, a function in [Celery's task-calling API](https://docs.celeryproject.org/en/stable/userguide/calling.html).
+In this function, we get the user's email, and pass it to a function we will define in `lib/tasks.py`. As this function will be a [Celery task](https://docs.celeryproject.org/en/stable/userguide/tasks.html) rather than a conventional function, we must call it with `.delay()`, a function in [Celery's task-calling API](https://docs.celeryproject.org/en/stable/userguide/calling.html).
 
-Let's implement this task now. Open `lib/tasks.py` now, and modify it to resemble the code below:
+Let's implement this task now. Open `lib/tasks.py` and modify it as follows:
 
 ```python
 import requests, os
@@ -543,9 +545,9 @@ def send_test_email(to_address):
 We've added the following: 
 
 * Additional imports for Celery and our other local files.
-* `REPL_URL`, a variable containing our repl's URL, which we construct using environment variables defined in every repl.
-* Instantiation of a Celery object, configured to use Redis as a [message broker and data backend](https://docs.celeryproject.org/en/stable/getting-started/backends-and-brokers/index.html) and the UTC timezone.
-* A function decorator which converts our `send_test_email` function into a Celery Task.
+* A `REPL_URL` variable containing our repl's URL, which we construct using environment variables defined in every repl.
+* Instantiation of a Celery object, configured to use Redis as a [message broker and data backend](https://docs.celeryproject.org/en/stable/getting-started/backends-and-brokers/index.html), and the UTC timezone.
+* A function decorator which converts our `send_test_email` function into a Celery task.
 
 Next, we'll define a function to generate unique IDs for our login links. Add the following code below the `send_test_email` function definition:
 
@@ -620,7 +622,7 @@ def confirm_login(login_id):
 
 When a user clicks the login link in their email, they will be directed to this route. If a matching login ID is found in the database, they will be logged in, and the login ID will be deleted so it can't be reused.
 
-We've implemented all of the code we need for user login. The last thing we need to do to get it working is to configure our repl to start a [Celery Worker](https://docs.celeryproject.org/en/stable/userguide/workers.html). When we invoke a task with `.delay()`, this worker will execute the task.
+We've implemented all of the code we need for user login. The last thing we need to do to get it working is to configure our repl to start a [Celery worker](https://docs.celeryproject.org/en/stable/userguide/workers.html). When we invoke a task with `.delay()`, this worker will execute the task.
 
 In `start.sh`, add the following between the line that starts Redis and the line that starts our web application:
 
@@ -647,7 +649,7 @@ If everything's working correctly, you should see a page like this after clickin
 
 ## Adding and removing subscriptions
 
-Now that we can log in, let's add the routes that handle subscribing to and unsubscribing from news feeds. These routes will only be available to logged in users, so we'll use our `authenticated` decorator on them. Add the following code below the `confirm_login` function definition in `main.py`:
+Now that we can log in, let's add the routes that handle subscribing to and unsubscribing from news feeds. These routes will only be available to logged-in users, so we'll use our `authenticated` decorator on them. Add the following code below the `confirm_login` function definition in `main.py`:
 
 ```python
 # Subscriptions
@@ -736,7 +738,7 @@ def send_digest():
     return redirect(url_for("index"))
 ```
 
-Then, in `tasks.py`, add the following new Celery Task:
+Then, in `tasks.py`, add the following new Celery task:
 
 ```python
 @celery.task
@@ -805,7 +807,7 @@ Run your repl, and click on the **Send digest** button. You should receive an em
 
 ## Scheduling digests
 
-The last thing we need to implement are scheduled digests, to allow our application to send users a digest every day at a specified time.
+The last thing we need to implement is scheduled digests, to allow our application to send users a digest every day at a specified time.
 
 In `main.py`, add the following code below the `send_digest` function definition:
 
@@ -825,11 +827,11 @@ def schedule_digest():
 
 This function retrieves the requested digest time from the user and calls `tasks.schedule_digest`. As `schedule_digest` will be a regular function that schedules a task rather than a task itself, we can call it directly.
 
-Celery supports scheduling tasks through its [Beat functionality](https://docs.celeryproject.org/en/stable/userguide/periodic-tasks.html#using-custom-scheduler-classes). This will require us to run an additional Celery process, which will be a beat rather than a worker.
+Celery supports scheduling tasks through its [beat functionality](https://docs.celeryproject.org/en/stable/userguide/periodic-tasks.html#using-custom-scheduler-classes). This will require us to run an additional Celery process, which will be a beat rather than a worker.
 
-By default, Celery does not support dynamic addition and alteration of scheduled tasks, which we need in order to allow users to set and change their digest schedules arbitrarily. Thus, we will need a [custom scheduler](https://docs.celeryproject.org/en/stable/userguide/periodic-tasks.html#using-custom-scheduler-classes) that supports this.
+By default, Celery does not support dynamic addition and alteration of scheduled tasks, which we need in order to allow users to set and change their digest schedules arbitrarily. So we'll need a [custom scheduler](https://docs.celeryproject.org/en/stable/userguide/periodic-tasks.html#using-custom-scheduler-classes) that supports this.
 
-Many custom Celery scheduler packages are [available on PyPi](https://pypi.org/search/?q=celery+beat&o=), but as of October 2021, none of these packages have been added to Nixpkgs. Therefore, we'll need to create a custom derivation for the scheduler we choose. Let's do that in `replit.nix` now. Open the file, and add the `let ... in` block below:
+Many custom Celery scheduler packages are [available on PyPI](https://pypi.org/search/?q=celery+beat&o=), but as of October 2021, none of these packages have been added to Nixpkgs. Therefore, we'll need to create a custom derivation for the scheduler we choose. Let's do that in `replit.nix` now. Open the file, and add the `let ... in` block below:
 
 ```nix
 { pkgs }:
@@ -874,7 +876,7 @@ in
 We've chosen to use [`redisbeat`](https://github.com/liuliqiang/redisbeat), as it is small, simple and uses Redis as a backend. We construct a custom derivation for it using the `buildPythonPackage` function, to which we pass the following information:
 
 * The package's `name` and `version`.
-* `src`: Where to find the package's source code (in this case, from Pypi, but we could also use GitHub, or a generic URL).
+* `src`: Where to find the package's source code (in this case, from PyPI, but we could also use GitHub, or a generic URL).
 * `propagatedBuildInputs`: The package's dependencies (all of which are available from Nixpkgs).
 * `postPatch`: Actions to take before installing the package. For this package, we remove the version specification for dependency `jsonpickle` in `setup.py`. This will force `redisbeat` to use the latest version of `jsonpickle`, which is available from Nixpkgs and, as a bonus, does not contain [this critical vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2020-22083).
 
@@ -911,7 +913,7 @@ Now that our code is in place, we can add a new Celery beat process to `start.sh
 celery -A lib.tasks.celery beat -S redisbeat.RedisScheduler --loglevel=debug &
 ```
 
-Now run your repl. You can test this functionality out now by scheduling your digest about ten minutes in the future. If you want to receive regular digests, you will need to enable [Always On](https://docs.replit.com/hosting/enabling-always-on) in your repl. Also remember that all times must be specified in the UTC timezone.
+Now run your repl. You can test this functionality out now by scheduling your digest about ten minutes in the future. If you want to receive regular digests, you will need to enable [Always-on](https://docs.replit.com/hosting/enabling-always-on) in your repl. Also, remember that all times must be specified in the UTC timezone.
 
 ## Where next?
 
