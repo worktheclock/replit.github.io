@@ -4,6 +4,8 @@ Mario is one of the most known and loved games of all time. It was first release
 
 Tons of games still use the basic side scroller formula of Mario, so it's a good game to build to learn the basics of game making. We'll build it in the new [Kaboom](https://kaboomjs.com) game engine. Kaboom has so many useful functions to build platform games, and we'll try to go through as many as we can in this tutorial.
 
+![Geame functionality](/images/tutorials/32-mario-kaboom/bigger-kill-scenes.gif)
+
 ## Designing the game
 
 We'd like to make a game that has the Mario essence. This means a few things: 
