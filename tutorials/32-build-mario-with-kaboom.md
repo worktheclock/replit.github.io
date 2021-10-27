@@ -4,7 +4,7 @@ Mario is one of the most known and loved games of all time. It was first release
 
 Tons of games still use the basic side scroller formula of Mario, so it's a good game to build to learn the basics of game making. We'll build it in the new [Kaboom](https://kaboomjs.com) game engine. Kaboom has so many useful functions to build platform games, and we'll try to go through as many as we can in this tutorial.
 
-![Geame functionality](/images/tutorials/32-mario-kaboom/bigger-kill-scenes.gif)
+![Game functionality](/images/tutorials/32-mario-kaboom/bigger-kill-scenes.gif)
 
 ## Designing the game
 
@@ -34,7 +34,7 @@ Download [this archive of sprites and asset files](/tutorial-files/mario-kaboom/
 
 ## Setting up Kaboom
 
-To start, we need to setup Kaboom with the screen size and colors etc. that we want for the game window. Replace the code in `main.js` with the code below:
+To start, we need to set up Kaboom with the screen size and colors etc. that we want for the game window. Replace the code in `main.js` with the code below:
 ```js
   import kaboom from "kaboom";
 
@@ -250,7 +250,7 @@ Kaboom has a concept called a [`scene`](https://kaboomjs.com/#scene), which lets
 
 We can use the [`go`](https://kaboomjs.com/#go) function to switch between scenes when we need. 
 
-Lets add the `start` scene, and make the game go to that scene by default: 
+Let's add the `start` scene, and make the game go to that scene by default: 
 
 ```js
 scene("start", () => {
@@ -508,13 +508,15 @@ We define the custom component as we did before. Because we need to stop the ene
 
 We execute all the above ideas in the `squash` method. We have a flag called `isAlive`, which we'll use to determine if the enemy is able to hurt Mario. This is usually `true`, but set to `false` once the enemy is squashed and harmless. We also `unuse` the patrol component so that the enemy stops walking back and forth. Then we call [`stop`](https://kaboomjs.com/#sprite) which is a method added by the [`sprite`](https://kaboomjs.com/#sprite) component. Calling `stop` stops playing the current animation. Then we set the `frame` of the sprite to use to `2`, which is the squashed enemy frame. Then we update the [`area`](https://kaboomjs.com/#area) width and height to be the same size as the squashed enemy frame. Finally, we call `use` to add the [`lifespan`](https://kaboomjs.com/#lifespan) component so that the character is removed from the scene after `0.5` seconds, and fades out for `0.1` seconds. 
 
-Now let's add this to the enemy. First, uncomment the `//enemy(),` line in the `levelConf` setup we created earlier. Now, let's create a collision handler between Mario and the enemy, so we know when it gets squashed. 
+Now let's add this to the enemy. First, uncomment the `//enemy(),` line in the `levelConf` setup we created earlier. Now, let's create a collision handler in the game scene between Mario and the enemy, so we know when it gets squashed. 
 
 
 ```js
-player.collides("badGuy", (baddy, side) => {
+let canSquash = false;
+
+player.collides("badGuy", (baddy) => {
   if (baddy.isAlive == false) return;
-  if (side === 'bottom') {
+  if (canSquash) {
     // Mario has jumped on the bad guy:
     baddy.squash();
   } else {
@@ -523,7 +525,28 @@ player.collides("badGuy", (baddy, side) => {
 });
 ```
 
-In this `collides` handler, we check if the player, Mario, collides with a `badGuy` - which is the tag we gave to the enemies in the `levelConf` setup above. Then we attach our handler, which takes the `baddy` character, Mario collided with, as well as the side of Mario the `baddy` collided with. We first check if the `baddy` is still alive - if not we leave early, as there is no real interaction between Mario and a dead enemy. Then, we check if the collision side is the  `bottom` of the Mario sprite - if so, that means Mario has jumped on to the enemy. In this case we can then call the `squash` method of the enemy, which we created in the custom component for the enemy. This will execute all the logic we added there, and 'kill' the enemy. We leave a bit of room in the handler to come back and add logic if Mario collides with the enemy without jumping on it - in this case, Mario gets hurt, but we'll add in that logic later. 
+In this `collides` handler, we check if the player, Mario, collides with a `badGuy` - which is the tag we gave to the enemies in the `levelConf` setup above. Then we attach our handler, which takes the `baddy` character, Mario collided with. We first check if the `baddy` is still alive - if not we leave early, as there is no real interaction between Mario and a dead enemy. Then, we check the `canSquash` variable - if it is set to `true`, that means Mario has jumped on to the enemy. In this case we can then call the `squash` method of the enemy, which we created in the custom component for the enemy. This will execute all the logic we added there, and 'kill' the enemy. We leave a bit of room in the handler to come back and add logic if Mario collides with the enemy without jumping on it - in this case, Mario gets hurt, but we'll add in that logic later. 
+Modify the `keyPress` handler for the  `space` key as follows:
+
+```javascript
+  keyPress("space", () => {
+    if (player.grounded()) {
+      player.jump();
+      canSquash = true;
+    }
+  });
+```
+
+Here we set the `canSquash` variable to true to allow the player to squash the enemy if the player has jumped over it upon collision.
+Add the following code to the `player.action` handler:
+
+```javascript
+if (player.grounded()) {
+  canSquash = false;
+}
+```
+
+This code will reset the `canSquash` variable so that the player will not squash the enemy if it hasn't jumped over it in the collision handler we added earlier.
 
 Press `command + s` or `control + s` to update the output and test this out. If you jump on an enemy, it should squash and then disappear after half a second. 
 
@@ -733,10 +756,10 @@ In this handler, we remove the mushroom from the scene, and then make Mario `big
 Then, let's add some more code to the handler we created earlier for Mario colliding with an enemy. There we only handled the case of Mario jumping on the enemy. We still need the case where Mario is injured or killed by the enemy. Update the `badGuy` collision handler like this:
 
 ```js
-player.collides("badGuy", (baddy, side) => {
+player.collides("badGuy", (baddy) => {
   if (baddy.isAlive == false) return;
   if (player.isAlive == false) return;
-  if (side === 'bottom') {
+  if (canSquash) {
     // Mario has jumped on the bad guy:
     baddy.squash();
   } else {
@@ -782,10 +805,16 @@ player.action(() => {
   if (currCam.x < player.pos.x) {
     camPos(player.pos.x, currCam.y);
   }
+
+  if (player.isAlive && player.grounded()) {
+    canSquash = false;
+  }
+
   // Check if Mario has fallen off the screen
   if (player.pos.y > height() - 16){
     killed();
   }
+
 });
 ```
 Here we check if Mario's `y` co-ordinate is greater than the [`height`](https://kaboomjs.com/#height) of the Kaboom window, less the size of one platform block, which is 16 pixels. If this is the case, it means Mario has fallen off the top row of the platform, and therefore has been `killed()`.
@@ -806,6 +835,17 @@ We also need to update our `left` and `right` key handler events to check if Mar
         player.move(-SPEED, 0);
       }
     });
+```
+
+Then we also modify the `space` key handler to only jump if Mario is still alive.
+
+```javascript
+keyPress("space", () => {
+    if (player.isAlive && player.grounded()) {
+      player.jump();
+      canSquash = true;
+    }
+});
 ```
 
 Time to press `command + s` or `control + s` to update the output and test all these changes out! First thing to test is if Mario grows bigger by eating the mushroom. Second thing to check is if Mario then gets smaller again by colliding with an enemy. Third and forth things to check are if Mario is killed when colliding with an enemy when he is small, or when falling off the platform. 
@@ -875,5 +915,5 @@ There are few things left to do to complete the game:
 
 You can find the code for this tutorial here:
 
-<!-- <iframe height="400px" width="100%" src="https://replit.com/@ritza/Mario?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> -->
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/Mario?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
