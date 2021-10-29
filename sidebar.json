@@ -413,6 +413,14 @@
         "slug": "30-build-with-nix"
       },
       {
+        "name": "Email News digest app with Nix",
+        "slug": "31-build-news-digest-app-with-nix"
+      },
+      {
+        "name": "Mario with Kaboom.js",
+        "slug": "32-build-mario-with-kaboom"
+      },
+      {
         "name": "Pinboard project part 1: HTML & CSS",
         "slug": "pinboard-project-part-1"
       },
