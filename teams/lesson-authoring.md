@@ -6,6 +6,8 @@ Instructions and Lesson Plan files are written in markdown. *You can find a hand
 
 To add Lesson Plan and Instructions files to your project, click on the book icon 📖 in the far-left toolbar, and click on "Add Lesson Contents".
 
+![Adding lesson contents](/images/teamsForEducation/curriculum-hub/add-lesson.gif)
+
 ![Curriculum Authoring tools in the file tree](/images/teamsForEducation/curriculum-hub/curriculum_authoring.png)
 
 ### Instructions
