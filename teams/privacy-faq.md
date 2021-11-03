@@ -77,7 +77,7 @@ This list is **not exhaustive** and we will continue to update it over time. How
 - [MA-RI-NH NDPA](https://sdpc.a4l.org/search_company_national.php?company_name=repl.it&state2=)
 
 <img 
-src="/images/teamsForEducation/SPP_Logo_Vertical_.png" style= "float:left; width:16%;"> 
+src="/images/teamsForEducation/SPP_Logo_Vertical_.png" style= "float:left; width:8%;"> 
 <img 
 src="/images/teamsForEducation/dpa logo.png" style= "float:left; width:16%;"> 
 <img 
@@ -87,8 +87,9 @@ src="/images/teamsForEducation/nist-logo.png" style= "float:left; width:16%;">
 <img
 src="/images/teamsForEducation/CCPA logo.jpeg" style= "float:left; width:16%;"> 
 <img
-src="/images/teamsForEducation/Montana logo.png" style= "float:left; width:16%;">
+src="/images/teamsForEducation/Montana logo.png" style= "float:left; width:20%;">
 <div style="clear:both"></div>
+
 
 **Will Replit sign our university's, school's or district's Data Security or Privacy Agreement?**
 

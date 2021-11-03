@@ -2,7 +2,9 @@
 
 Teachers may create read-only instructions for their students to follow as well as admin-only lesson plans to keep as notes and share curriculum with their peers using the Curriculum Authoring tool in their Team Project file tree. 
 
-Instructions and Lesson Plan files are written in markdown. You can find a handy guide to markdown [here](https://www.markdownguide.org/cheat-sheet/)! 
+Instructions and Lesson Plan files are written in markdown. *You can find a handy guide to markdown [here](https://www.markdownguide.org/cheat-sheet/)!*
+
+To add Lesson Plan and Instructions files to your project, click on the book icon 📖 in the far-left toolbar, and click on "Add Lesson Contents".
 
 ![Curriculum Authoring tools in the file tree](/images/teamsForEducation/curriculum-hub/curriculum_authoring.png)
 
