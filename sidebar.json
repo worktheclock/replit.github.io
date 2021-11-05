@@ -163,6 +163,10 @@
         "slug": "copying-projects-other-teams"
       },
       {
+        "name": "Duplicating personal repls into Team Projects",
+        "slug": "repls-to-team-projects"
+      },
+      {
         "name": "Keeping notes in repls",
         "slug": "keeping-notes-repls"
       },
