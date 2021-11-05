@@ -9,19 +9,24 @@ Teams for Education admins may duplicate repls from their personal accounts into
 
 1. Open the CLUI tool from the top left drop down menu or by navigating to [replit.com/~/cli](https://replit.com/~/cli).
 
-![Opening the CLUI tool](/images/teamsForEducation/CLUI.png)
+<img src="/images/teamsForEducation/CLUI.png" alt="Opening the CLUI tool" width="300px">
 
 2. Type or search `Team` > `fork-repl-to-project`
 ![CLUI commands to transfer repls into Teams](/images/teamsForEducation/team-forkrepltoproject.png)
 
-![CLUI view of transfer repls into Team Projects tool](/images/teamsForEducation/fork-repl-to-teamproject.png)
+<img src="/images/teamsForEducation/fork-repl-to-teamproject.png" alt="CLUI view of transfer repls into Team Projects tool" width="300px">
+
+<img src="/images/teamsForEducation/CLUI.png" alt="Opening the CLUI tool" width="300px">
 
 3. Open the repl you'd like to duplicate and copy and paste the repl slug or URL into the first form field. 
-![Where to find a repl URL](/images/teamsForEducation/repl-url.png)
+
+<img src="/images/teamsForEducation/repl-url.png" alt="Where to find a repl URL" width="300px">
 
 4. If you would like this to be a group project, check off the box next to `isGroupProject`. 
 
 5. Copy and paste the *username* of the destination team into the second form field. 
-![Where to find a team username](/images/teamsForEducation/team-username.png)
+
+<img src="/images/teamsForEducation/team-username.png" alt="Where to find a team username" width="300px">
+
 
 6. Click `Submit` and find the new project in your destination Team! 
