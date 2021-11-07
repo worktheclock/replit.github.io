@@ -26,41 +26,92 @@ Let's head over to [Replit](https://replit.com) and create a new repl. Choose **
 
 ![Creating an Repl](/images/tutorials/24-space-shooter-kaboom/create-repl.png)
 
-After the repl has booted up, you should see a `main.js` file under the "Scenes" section. This is where we'll start coding.
+After the repl has booted up, you should see a `main.js` file under the "Code" section. This is where we'll start coding.
 
 ## Getting Started with Kaboom.js
 
 [Kaboom.js](https://kaboomjs.com) is a JavaScript library that contains a lot of useful features for making simple browser games. It has functionality to draw shapes and sprites (the images of characters and game elements) to the screen, get user input, play sounds, and more. We'll use some of these features in our game to explore how Kaboom works. 
 
-The Replit Kaboom interface is specialised for game-making. Besides the Space Invader icon, you'll notice a few special folders in the file tray, like "Scenes", "Sprites", and "Sounds". These special folders take care of loading up assets, and all the necessary code to start scenes and direct the game. You can read up more about this interface [here](https://docs.replit.com/tutorials/kaboom). 
+The Replit Kaboom interface is specialised for game-making. Besides the Space Invader icon, you'll notice a few special folders in the file tray, like "Code", "Sprites", and "Sounds". These special folders take care of loading up assets, and all the necessary code to start scenes and direct the game. You can read up more about this interface [here](https://docs.replit.com/tutorials/kaboom). 
 
 If you haven't already, download this [zip file](/tutorial-files/space-shooter-kaboom/space-shooter-resources.zip) which contains all the sprites and sounds for the game. Extract the file on your computer, then add the sprites to the "Sprites" section in the Replit editor, and the sounds to the "Sounds" section. 
 
+<img src="/images/tutorials/24-space-shooter-kaboom/upload-sprites.gif"
+    alt="Uploading assets"
+    style="width: 500px !important;"/>
+
 Kaboom makes good use of JavaScript's support for [callbacks](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function): instead of writing loops to read keyboard input and check if game objects have collided, Kaboom uses an event model that tells us when these events have happened. We can then write [callback functions](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) to act on these events. 
 
-A Kaboom game is made up of "scenes", which are like levels, or different parts and stages of a game. The IDE initialises a default "main" scene, which we can use for our main game code. Scenes have multiple "layers", allowing us to have game backgrounds, main game objects (like the player, bullets, enemies, etc), and UI elements (like the current score, health, etc). 
+A Kaboom game is made up of "scenes", which are like levels, or different parts and stages of a game. Scenes have multiple "layers", allowing us to have game backgrounds, main game objects (like the player, bullets, enemies, etc), and UI elements (like the current score, health, etc). 
 
-Add the following code to the `main.js` file:
+
+## Setting up Kaboom
+
+To start, we need to set up Kaboom with the screen size and colors we want for the game window. Replace the code in `main.js` with the code below:
 
 ```javascript
-layers([
-    "bg", 
-    "obj", 
-    "ui", 
-], "obj"); 
+import kaboom from "kaboom";
+
+kaboom({
+  background: [0, 0, 0],
+  width: 440,
+  height: 275,
+  scale: 2
+});
+
+```
+Here we import the kaboom library, and then initialize the context by calling `kaboom({ ... })`. We also set the size of the view to 440x275 pixels and `scale` to make the background twice the size on screen.
+Now, let's load up the sprites and sounds we will need in this game. This code loads each of the graphic elements we'll use, and gives them a name so we can refer to them when we build the game characters:
+
+```javascript
+loadRoot("sprites/")
+loadSprite("stars", "stars.png")
+loadSprite("gem", "gem.png")
+loadSprite("spaceship", "spaceship.png")
+loadSprite("alien", "alien.png")
+
+loadRoot("sounds/")
+loadSound("shoot","shoot.wav")
+loadSound("score","score.wav")
+loadSound("music","music.mp3")
+loadSound("explosion","explosion.wav")
+
 ```
 
-This creates 3 layers: "background" (`bg`), "object" (`obj`) and "user interface" (`ui`). The `obj` layer is set as the default layer. Now we can add a static background of stars to our scene. Add the code:
+The first line, [`loadRoot`](https://kaboomjs.com/#loadRoot), specifies which folder to load all the sprites and game elements from, so we don't have to keep typing it in for each sprite. Then each line loads a game sprite and gives it a name so that we can refer to it in code later. We use similar code to load the sounds we will need in this game, but instead of [`loadSprite`](https://kaboomjs.com/#loadSprite) we use [`loadSound`](https://kaboomjs.com/#loadSound) to load sounds.
+
+
+
+## Adding the main game scene
+
+Kaboom ["scenes"](https://kaboomjs.com/#scene) allow us to group logic and levels together. In this game we'll have 2 scenes:
+- A "main" scene, which will contain the game levels and all the logic to move the spaceship.
+- An "endGame" scene which will display when the game is over.
 
 ```javascript
-add([
-    sprite("stars"), 
+scene("main", () => {
+  
+  layers([
+    "bg",
+    "obj",
+    "ui",
+  ], "obj");
+
+
+  add([
+    sprite("stars"),
     layer("bg")
-]);
-```
-The sprite `stars` refers to an image in the Sprites folder. 
+  ]);
+  
+});
 
-![Uploading sprites](/images/tutorials/24-space-shooter-kaboom/upload-sprites.gif)
+go("main");
+```
+
+We define the scene using the [`scene`](https://kaboomjs.com/#scene) function. This function takes a string as the scene name – we're calling the scene "main".
+Then we create 3 layers: "background" (`bg`), "object" (`obj`) and "user interface" (`ui`). The `obj` layer is set as the default layer. We then add the stars sprite to the background layer.
+
+Finally, we use the [`go`](https://kaboomjs.com/#go) function to go to the main scene when the game starts up.
 
 ## Creating the Game Map
 
@@ -69,64 +120,67 @@ Let's get a scene layout, or _map_, drawn on the screen. This will define the gr
 Kaboom has built-in support for defining game maps using text and the function [`addLevel`](https://kaboomjs.com/doc#addLevel). This takes away a lot of the hassle normally involved in loading and rendering maps. 
 
 
-Add the code below to the `main.js` file to create the game map:
+Add the code below to the `main.js` file, within the main scene, to create the game map:
 
 ```javascript
 
 // Game Parameters
-const MAP_WIDTH = 440; 
+const MAP_WIDTH = 440;
 const MAP_HEIGHT = 275;
-const BLOCK_SIZE = 11;  
+const BLOCK_SIZE = 11;
 
 const map = addLevel([
-    "--------------------------------------------",
-	"-                                          -",
-    "-                                          -",
-	"-                                          -",
-	"-                                          -",
-	"-                                          -",
-	"-                                          -",
-	"-                                          -",
-	"-                                          -",
-	"-                                          -",
-	"-                                pppppp    -",
-	"-                                          -",
-	"-                                          -",
-	"-                                          -",
-	"-                                          -",
-	"-                                          -",
-	"-   pppppp                                 -",
-	"-                                          -",
-	"-                                          -",
-	"-                 pppppp                   -",
-	"-                                          -",
-	"-                                          -",
-	"-                                          -",
-	"-                                          -",
-	"============================================",
-    "                                            "
+  "--------------------------------------------",
+  "-                                          -",
+  "-                                          -",
+  "-                                          -",
+  "-                                          -",
+  "-                                          -",
+  "-                                          -",
+  "-                                          -",
+  "-                                          -",
+  "-                                          -",
+  "-                                pppppp    -",
+  "-                                          -",
+  "-                                          -",
+  "-                                          -",
+  "-                                          -",
+  "-                                          -",
+  "-   pppppp                                 -",
+  "-                                          -",
+  "-                                          -",
+  "-                 pppppp                   -",
+  "-                                          -",
+  "-                                          -",
+  "-                                          -",
+  "-                                          -",
+  "============================================",
+  "                                            "
 ], {
-	width: BLOCK_SIZE,
-	height: BLOCK_SIZE,
-	pos: vec2(0, 0),
-	"=": [
-        rect(BLOCK_SIZE, BLOCK_SIZE), 
-		color(1,0,0),
-        "ground", 
-        solid()
-	], 
-	"p": [
-        rect(BLOCK_SIZE, BLOCK_SIZE), 
-		color(0,0,1),
-        "platform", 
-        solid()
-	],
-    "-": [
-        rect(BLOCK_SIZE/10, BLOCK_SIZE), 
-		color(0,0,0),
-        "boundary", 
-        solid()
-    ], 
+  width: BLOCK_SIZE,
+  height: BLOCK_SIZE,
+  pos: vec2(0, 0),
+  "=": ()=> [
+    rect(BLOCK_SIZE, BLOCK_SIZE),
+    color(150,75,0),
+    "ground",
+    area(),
+    solid()
+  ],
+  "p": ()=> [
+    rect(BLOCK_SIZE, BLOCK_SIZE),
+    color(0,0,255),
+    "platform",
+    area(),
+    solid()
+  ],
+  "-": ()=> [
+    rect(BLOCK_SIZE/10, BLOCK_SIZE),
+    color(0,0,0),
+    "boundary",
+    area(),
+    solid()
+  ],
 });
 
 ```
@@ -149,23 +203,19 @@ Let's add the spaceship using the [`add`](https://kaboomjs.com/doc#add) function
 
 ```javascript
 const player = add([
-    sprite("spaceship"), 
-    pos(100, 200), 
-    body(), 
-    scale(1),
-    rotate(0), 
-    origin("center"),
-    "player", 
-    {
-        score : 0, 
-        shield : 100
-    }
-]); 
-
-
-player.action(() => {
-    player.resolve();
-});
+  sprite("spaceship"),
+  pos(100, 200),
+  body(),
+  area(),
+  scale(1),
+  rotate(0),
+  origin("center"),
+  "player",
+  {
+    score : 0,
+    shield : 100
+  }
+]);
 
 ```
 
@@ -175,7 +225,7 @@ Notably, the [`body`](https://kaboomjs.com/doc#body) component makes the object 
 
 Kaboom also allows us to attach custom data to a game object. We've added `score` to hold the player's latest score, and `shield` to hold the percentage of the ship's protection shield still available. We can adjust these as the player picks up items or crashes into aliens. 
 
-When we created the `map` earlier, we added the [`solid`](https://kaboomjs.com/doc#solid) component to map objects. This component marks objects as solid, meaning other objects can't move past them. If we add `solid` to an object, we also need to add code to resolve the position of movable objects that might be obstructed by these solid objects. We did this by adding the `player.resolve()` call in the [`action`](https://kaboomjs.com/doc#action) event of the player, or spaceship. 
+When we created the `map` earlier, we added the [`solid`](https://kaboomjs.com/doc#solid) component to map objects. This component marks objects as solid, meaning other objects can't move past them. 
 
 
 ## Moving the Spaceship
@@ -259,7 +309,8 @@ function spawnBullet(bulletpos) {
 		rect(6, 2),
 		pos(bulletpos),
 		origin("center"),
-		color(1, 1, 1),
+        color(255, 255, 255),
+        area(),
 		"bullet",
         {
             bulletSpeed : current_direction == directions.LEFT?-1*BULLET_SPEED: BULLET_SPEED 
@@ -326,6 +377,7 @@ function spawnAlien() {
 	add([
 		sprite("alien"),
 		pos(xpos, rand(0, MAP_HEIGHT-20)),
+        area(),
 		"alien",
 		 {
 		 	speedX: rand(alien_speed * 0.5, alien_speed * 1.5) * (alienDirection == directions.LEFT ? 1: -1),
@@ -415,7 +467,7 @@ function makeExplosion(p, n, rad, size) {
 					add([
 						pos(p.add(rand(vec2(-rad), vec2(rad)))),
 						rect(1, 1),
-						color(1,1,1),
+						color(255,255,255),
 						origin("center"),
 						scale(1 * size, 1 * size),
 						grow(rand(48, 72) * size),
@@ -504,14 +556,14 @@ First, add text for the player's score:
 
 ```javascript
 add([
-	text("SCORE: ",8),
+	text("SCORE: ", { size: 8, font: "sink"}),
 	pos(100, 10),
 	origin("center"),
 	layer("ui"),
 ]);
 
 const scoreText = add ([
-	text("000000",8),
+	text("000000", { size: 8, font: "sink"}),
 	pos(150, 10),
 	origin("center"),
 	layer("ui"),
@@ -540,7 +592,7 @@ The next UI element to add is the ship's shield health. This would be great as a
 
 ```javascript
 add([
-	text("SHIELD: ",8),
+	text("SHIELD: ", { size: 8, font: "sink"}),
 	pos(300, 10),
 	origin("center"),
 	layer("ui"),
@@ -586,9 +638,9 @@ function updatePlayerShield(shieldPoints){
 
     shieldBar.width = 50 * (player.shield / 100);
 
-    if (player.shield < 20) shieldBar.color = rgb(1,0,0); 
-    else if (player.shield < 50) shieldBar.color = rgb(1,0.5,0); 
-    else shieldBar.color = rgb(0,1,0); 
+    if (player.shield < 20) shieldBar.color = rgb(255,0,0); 
+    else if (player.shield < 50) shieldBar.color = rgb(255,127,0); 
+    else shieldBar.color = rgb(0,255,0); 
 
     if (player.shield <=0){ 
         destroy(player); 
@@ -620,22 +672,24 @@ The final step in the shield health function is to check if the shield health is
 
 When the game ends, we destroy the spaceship to remove it from the scene. Now we have another opportunity to create some more explosions using the `makeExplosion` function we added earlier. This time we can go really big! To make a big impact, we create a `for` loop to set off 500 explosions all over the screen for seriously dramatic effect. We use the Kaboom [`wait`](https://kaboomjs.com/doc#wait) function to have a small delay between each explosion so that they don't all go off at once. Then we make each explosion happen at random positions on the map, passing in other parameters to the `makeExplosion` function to set the blast radius, number of sub-explosions and general size. We also play the `explosion` sound effect using Kaboom's [`play`](https://kaboomjs.com/doc#play) function. This time we don't adjust the volume down, as we want the sound to be as dramatic as possible. We detune it randomly again to create a true cacophony and sense of mayhem. 
 
-After setting off all those sound effects and visual fireworks, we [`wait`](https://kaboomjs.com/doc#wait) for 2 seconds for everything to settle down, and then use the Kaboom function [`go`](https://kaboomjs.com/doc#go) to switch to a new scene, `endGame`, and wait for the player to play again. To add this new scene, click the "+" button next to the "Scenes" collection in the left menu, and type in `endGame`. Then add this code to the new scene: 
+After setting off all those sound effects and visual fireworks, we [`wait`](https://kaboomjs.com/doc#wait) for 2 seconds for everything to settle down, and then use the Kaboom function [`go`](https://kaboomjs.com/doc#go) to switch to a new scene, `endGame`, and wait for the player to play again. Add the code below to create the `endGame` scene: 
 
 ```javascript
-const MAP_WIDTH = 440; 
-const MAP_HEIGHT = 275;
+scene("endGame", ()=> {
+  const MAP_WIDTH = 440;
+  const MAP_HEIGHT = 275;
 
-add([
-	text("GAME OVER ",40),
-	pos(MAP_WIDTH / 2, MAP_HEIGHT / 3),
-	origin("center"),
-	layer("ui"),
-]);
+  add([
+    text("GAME OVER ", {size: 40, font: "sink"}),
+    pos(MAP_WIDTH / 2, MAP_HEIGHT / 3),
+    origin("center"),
+    layer("ui"),
+  ]);
 
 
-keyRelease("enter", ()=>{
+  keyRelease("enter", ()=>{
     go("main");
+  });
 });
 ```
 
@@ -643,14 +697,14 @@ This scene [`adds`](https://kaboomjs.com/doc#add) a large "GAME OVER" text over 
 
 ## Allowing the Alien Bugs to Attack
 
-Now that we have mechanisms for updating points and shield health, we can add the code dealing with alien bugs hitting the spaceship:
+Now that we have mechanisms for updating points and shield health, we can add the code dealing with alien bugs hitting the spaceship to the main scene:
 
 
 ```javascript
-const ALIEN_SHIELD_DAMAGE = -15; 
+const ALIEN_SHIELD_DAMAGE = -15;
 
-overlaps("alien", "player", (alien, player) =>{
-    camShake(20); 
+collides("alien", "player", (alien, player) =>{
+    shake(20); 
     makeExplosion(alien.pos, 8, 8, 8);
     destroy(alien); 
     play("explosion", 
@@ -662,9 +716,7 @@ overlaps("alien", "player", (alien, player) =>{
 }); 
 ```
 
-This time, instead of the [`collides`](https://kaboomjs.com/doc#collides) collision detector, we use [`overlaps`](https://kaboomjs.com/doc#overlaps). This allows for near misses and makes for better visual effects when an alien bug crashes into the space ship. The difference between `collides` and `overlaps` is that the collision detector will call our given function even if just the edges of the game objects touch, whereas `overlaps` requires the game objects to be more than just touching, i.e. there must be at least 1 pixel overlap, before firing the callback function.
-
-This is a big event - it's the way the ship shield gets damaged and it can be fatal - so we want to add a bit more dramatic effect. Kaboom can create a cool screen-shaking effect, as if the player has been hit, which we can invoke by calling [`camShake`](https://kaboomjs.com/doc#camShake) with a number representing how dramatic the shake should be. Then we add some visual effect with the `makeExplosion` function. We also destroy the alien and [`play`](https://kaboomjs.com/doc#play) the `explosion` effect again, this time a bit louder as the alien exploding has directly affected the player. We also detune the effect to the lowest pitch we can, to make it "feel" more direct, particularly if the player has a sub-woofer. 
+This is a big event - it's the way the ship shield gets damaged and it can be fatal - so we want to add a bit more dramatic effect. Kaboom can create a cool screen-shaking effect, as if the player has been hit, which we can invoke by calling [`shake`](https://kaboomjs.com/doc#shake) with a number representing how dramatic the shake should be. Then we add some visual effect with the `makeExplosion` function. We also destroy the alien and [`play`](https://kaboomjs.com/doc#play) the `explosion` effect again, this time a bit louder as the alien exploding has directly affected the player. We also detune the effect to the lowest pitch we can, to make it "feel" more direct, particularly if the player has a sub-woofer. 
 
 Then we call the `updatePlayerShield` function we defined previously, with a constant that defines by how much a shield is damaged per hit. You can move the constant to the top of the main scene file to keep it neat if you want. 
 
@@ -679,14 +731,13 @@ function spawnGem(){
     add([ 
 		sprite("gem"),
 		pos(xpos, BLOCK_SIZE),
+        area(),
         body(), 
 		"gem"
 	]);
 }
 
 action("gem", (gem)=>{
-    gem.resolve();
-
     if (gem.pos.y > MAP_HEIGHT) {
         destroy(gem); 
         spawnGem(); 
@@ -701,18 +752,18 @@ On this weird planet in outer space, the gems rain from the sky, which is the to
 
 Now we [`add`](https://kaboomjs.com/doc#add) the gem sprite to the scene. The `pos` component is set to the `xpos` we calculated, with the `y` component set to one `BLOCK_SIZE` from the top of the screen. This is to avoid the gem getting stuck on our upper `boundary`. We also give the gem the [`body`](https://kaboomjs.com/doc#body) component, which makes it subject to Kaboom gravity so that it falls down towards the ground. We give it the label `gem` so that we can refer to it later. 
 
-Then we add the [`action`](https://kaboomjs.com/doc#action) event handler for the gem - we need to do this for all objects with a `body` component so that interactions with [`solid`](https://kaboomjs.com/doc#solid) objects are taken care of. We do this by calling the `resolve` method on the gem. Sometimes, if the frame rate gets too low (if there's a lot of action, or the computer's slow), the `resolve` function may miss a `body` and `solid` interaction, and the [`object falls through the solid`](https://github.com/replit/kaboom/issues/86). This could cause gems to fall through the ground, out of reach of the player's spaceship. To account for this possibility, we check if the gem's `y` position is beyond the bounds of the map, and destroy it and spawn a new gem if it is. 
+Then we add the [`action`](https://kaboomjs.com/doc#action) event handler for the gem - we need to do this for all objects with a `body` component so that interactions with [`solid`](https://kaboomjs.com/doc#solid) objects are taken care of. Sometimes, if the frame rate gets too low (if there's a lot of action, or the computer's slow),  some `body` and `solid` interaction maybe missed, and the [`object falls through the solid`](https://github.com/replit/kaboom/issues/86). This could cause gems to fall through the ground, out of reach of the player's spaceship. To account for this possibility, we check if the gem's `y` position is beyond the bounds of the map, and destroy it and spawn a new gem if it is. 
 
 Finally, we call `spawnGem()` to start the gem raining process. 
 
 ## Collecting Gems
 
-Now that gems are raining down, we can add a handler to pick up when the player's spaceship moves over a gem. This is how the spaceship "collects" gems, and will earn the player points. Add the following [`overlaps`](https://kaboomjs.com/doc#overlaps) event handler:
+Now that gems are raining down, we can add a handler to pick up when the player's spaceship moves over a gem. This is how the spaceship "collects" gems, and will earn the player points. Add the following [`collides`](https://kaboomjs.com/doc#collides) event handler:
 
 ```javascript
-const POINTS_PER_GEM = 100; 
+const POINTS_PER_GEM = 100;
 
-overlaps("player","gem", (player, gem) =>{
+collides("player","gem", (player, gem) =>{
     destroy(gem);
     updateScore(POINTS_PER_GEM); 
     wait(1, spawnGem); 
@@ -726,7 +777,7 @@ Run the code now and start collecting gems.
 
 ## Adding Background Music
 
-Having sound effects is cool, but games generally need a soundtrack to tie all the sounds together. Kaboom allows us to play a sound file on loop as constant background music. Add this code to play the track: 
+Having sound effects is cool, but games generally need a soundtrack to tie all the sounds together. Kaboom allows us to play a sound file on loop as constant background music. Add this code to the bottom of `main.js` file to play the track: 
 
 
 ```javascript
@@ -766,8 +817,8 @@ Here are a few things you can try to add to the game and polish it up:
 - Different types of alien bugs. Perhaps a large "boss" bug that can also shoot back.
 
 You can find the code for this tutorial in the repl below:
-
-<iframe height="400px" width="100%" src="https://replit.com/@ritza/space-shooter?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
+<!--
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/Space-Shooter-new?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+-->
 
 
