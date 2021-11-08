@@ -763,13 +763,13 @@ Now that gems are raining down, we can add a handler to pick up when the player'
 ```javascript
 const POINTS_PER_GEM = 100;
 
-collides("player","gem", (player, gem) =>{
-    destroy(gem);
-    updateScore(POINTS_PER_GEM); 
-    wait(1, spawnGem); 
+player.collides("gem", (gem) => {
+  destroy(gem);
+  updateScore(POINTS_PER_GEM);
+  wait(1, spawnGem);
 });
 ```
-This fires whenever the spaceship and a gem overlap. We [`destroy`](https://kaboomjs.com/doc#destroy) the gem to remove it from the scene, and call the `updateScore` function we added earlier to update the player's points by the amount declared in the `POINTS_PER_GEM` constant. Then we [`wait`](https://kaboomjs.com/doc#wait) one second before another gem is spawned for the player to collect.
+This fires whenever the spaceship and a gem collides. We [`destroy`](https://kaboomjs.com/doc#destroy) the gem to remove it from the scene, and call the `updateScore` function we added earlier to update the player's points by the amount declared in the `POINTS_PER_GEM` constant. Then we [`wait`](https://kaboomjs.com/doc#wait) one second before another gem is spawned for the player to collect.
 
 Run the code now and start collecting gems.
 
