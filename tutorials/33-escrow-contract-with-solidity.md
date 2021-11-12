@@ -1,10 +1,10 @@
-# Build an Escrow Contract on the Ethereum Blockchain with Solidity and Replit
+# Build an escrow contract on the Ethereum blockchain with Solidity and Replit
 
-Since Satoshi Nakamoto released the first version of Bitcoin in early 2009, digital currencies and blockchain technology have been the site of frenzied innovation, excitement and speculation. In addition to Bitcoin itself, hundreds of competing and complementary blockchains and currencies have come and gone. In this tutorial, we will be looking at Ethereum, the most popular and widely used cryptocurrency, second to Bitcoin.
+Since Satoshi Nakamoto released the first version of Bitcoin in early 2009, digital currencies and blockchain technology have been the site of frenzied innovation, excitement and speculation. In addition to Bitcoin itself, hundreds of competing and complementary blockchains and currencies have come and gone. In this tutorial, we will be looking at Ethereum, the second most popular and widely used cryptocurrency after Bitcoin.
 
 Ethereum's main innovation is to provide a Turing complete environment for on-chain computation, which means we can run code on the blockchain. This opens up an immense field of possibilities for creating decentralized finance (DeFi) platforms, which can act as open alternatives to traditional financial services such as loans, investment, insurance and the sale of artworks.
 
-In this tutorial, we will be building a simple escrow smart contract, which will include deploying our own [NFT](https://en.wikipedia.org/wiki/Non-fungible_token). By the end of this tutorial, you will:
+In this tutorial, we will be building a simple escrow smart contract, which will include deploying our own [non-fungible token](https://en.wikipedia.org/wiki/Non-fungible_token) (NFT). By the end of this tutorial, you will:
 
 * Have experience with developing Ethereum smart contracts using the Solidity programming language.
 * Know the basics of deploying contracts to a blockchain and interacting with them.
@@ -28,7 +28,7 @@ The Solidity starter repl comes with a friendly web interface, built using the [
 
 We will need a browser-based web3 wallet to interact with the Replit testnet and our deployed contracts. MetaMask is a popular and feature-rich wallet implemented as a WebExtension. You can install it from [MetaMask's download page](https://metamask.io/download.html). Make sure you're using a supported browser -- either Chrome, Firefox, Brave or Edge.
 
-Once you've installed MetaMask, follow the prompts to create a wallet and sign in. MetaMask will give you a *secret recovery phrase*, comprised of 12 words -- this is your wallet's private key, and must be kept safe and secret. If you lose this phrase, you will not be able to access your wallet, and if someone else finds it, they will.
+Once you've installed MetaMask, follow the prompts to create a wallet and sign in. MetaMask will give you a 12-word *secret recovery phrase* -- this is your wallet's private key, and must be kept safe and secret. If you lose this phrase, you will not be able to access your wallet, and if someone else finds it, they will.
 
 If you're already using MetaMask, we recommend creating a new account for testing with Replit. You can do this from the account menu, which appears when you click on the account avatar in the top right corner of MetaMask interface.
 
@@ -48,14 +48,14 @@ Solidity, which we will be using below, is the most popular language for develop
 
 Before we jump into the code, let's make sure we have a plan for what we're going to build.
 
-An [Escrow](https://www.investopedia.com/terms/e/escrow.asp) is a contractual agreement in which a third party receives money from one party and pays it to another party after a certain condition has been met. In traditional finance, this third party needs to be a trusted individual or organization, such as a bank, but in decentralized finance, it can be a smart contract.
+An [escrow](https://www.investopedia.com/terms/e/escrow.asp) is a contractual agreement in which a third party receives money from one party and pays it to another party after a certain condition has been met. In traditional finance, this third party needs to be a trusted individual or organization, such as a bank, but in DeFi, it can be a smart contract.
 
 We will build a simple escrow protocol that holds funds until a specified duration has passed. This could be used to give a friend some Ethereum for their birthday, or to save money for a specific occasion.
 
 Our escrow protocol will consist of two contracts:
 
 * `Escrow`, which will provide the end-user interface for escrowing and redeeming funds. This contract will also store all of the escrowed funds.
-* `EscrowNFT`, which will store the details of individual escrows as non-fungible tokens (NFTs). This will allow users to transfer immature escrows between each other.
+* `EscrowNFT`, which will store the details of individual escrows as NFTs. This will allow users to transfer immature escrows between one another.
 
 While the most famous use of NFTs involves buying and selling artworks and other collectibles on marketplaces like [OpenSea](https://opensea.io/), we can use them for all kinds of other purposes, such as to represent escrows.
 
@@ -83,7 +83,7 @@ contract EscrowNFT is ERC721Burnable, ERC721Enumerable, Ownable {
 }
 ```
 
-The first line of our contract is the [license identifier](https://docs.soliditylang.org/en/v0.6.8/layout-of-source-files.html#spdx-license-identifier). Smart contracts are usually open source, and reuse of other projects' code is common in DeFi, so it's a good idea to include a license that indicates how you would like others to use (or not use) your code. [Supported licenses are listed here.](https://spdx.org/licenses/)
+The first line of our contract is the [license identifier](https://docs.soliditylang.org/en/v0.6.8/layout-of-source-files.html#spdx-license-identifier). Smart contracts are usually open source, and reuse of other projects' code is common in DeFi, so it's a good idea to include a license that indicates how you would like others to use (or not use) your code. Supported licenses are listed [here](https://spdx.org/licenses/).
 
 In the next line, we define the version of Solidity we're using (in this case, any version newer than [0.8.2](https://docs.soliditylang.org/en/v0.8.2/) up to 0.9.0). Solidity is an evolving language and often introduces breaking changes, so our code may not compile under older or newer versions of the language.
 
@@ -151,7 +151,7 @@ Now that we've read and understood the function definition, let's add the functi
     }
 ```
 
-Here we use [`ERC721`'s internal `_mint()` function](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol#L280) to mint a new token to the recipient with the current value of `tokenCounter` as its ID. We then set the `amount` and `matureTime` mappings for our new token. Finally, we increment `tokenCounter` and return the ID of our token.
+Here we use [`ERC721`'s internal `mint()` function](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol#L280) to mint a new token to the recipient with the current value of `tokenCounter` as its ID. We then set the `amount` and `matureTime` mappings for our new token. Finally, we increment `tokenCounter` and return the ID of our token.
 
 Next, we need to make a function that will return the details of a given token. Add the following code below the body of the `mint()` function:
 
@@ -267,7 +267,7 @@ Now that we can create escrow NFTs, we need a way for the recipient to redeem th
 
 ```solidity
     function redeemEthFromEscrow(uint256 _tokenId) external isInitialized {
-        require(escrowNFT.ownerOf(_tokenId) == msg.sender, "Must own token to claim underlying Eth");
+        require(escrowNFT.ownerOf(_tokenId) == msg.sender, "Must own token to claim underlying Eth.");
 
         (uint256 amount, uint256 matureTime) = escrowNFT.tokenDetails(_tokenId);
         require(matureTime <= block.timestamp, "Escrow period not expired.");
@@ -284,18 +284,18 @@ Now that we can create escrow NFTs, we need a way for the recipient to redeem th
 
 Our redemption function first checks whether `msg.sender` is the owner of the token, to prevent users from attempting to redeem tokens they don't own. It then retrieves the `amount` and `matureTime` for the specified token ID, and checks whether the `matureTime` has passed.
 
-If the token is owned by `msg.sender` and its `matureTime` has passed, it is burned using [the `burn()` function from ERC721Burnable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/extensions/ERC721Burnable.sol#L21). This destroys the token, ensuring that it cannot be redeemed again.
+If the token is owned by `msg.sender` and its `matureTime` has passed, it is burned using the [`burn()` function from ERC721Burnable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/extensions/ERC721Burnable.sol#L21). This destroys the token, ensuring that it cannot be redeemed again.
 
 Once the token is destroyed, we transfer its underlying Ether to `msg.sender`. As the creator of the escrow NFT originally paid this amount of Ether into the contract, it should still be available. There are a few different ways of sending Ether in Solidity -- [using `call` is the best one](https://solidity-by-example.org/sending-ether/). `call` returns two values, but we only want the first one, so we leave out the second variable declaration in our multiple return syntax.
 
 If the Ether transfer fails, we revert, undoing the destruction of the token. Otherwise we emit an event to record the escrow redemption.
 
-Our contract now does the main things it needs to, but we can make some improvements. For example, rather than requiring users to specify the ID of the token they want to redeem, we can create a function that redeems all matured tokens in their possession. Let's do this now, by adding the below function beneath the definition of `redeemEthFromEscrow`:
+Our contract now does the main things it needs to, but we can make some improvements. For example, rather than requiring users to specify the ID of the token they want to redeem, we can create a function that redeems all matured tokens in their possession. Let's do this now, by adding a new function beneath the definition of `redeemEthFromEscrow`:
 
 ```solidity
     function redeemAllAvailableEth() external isInitialized {
         uint256 nftBalance = escrowNFT.balanceOf(msg.sender);
-        require(nftBalance > 0, "No EscrowNFTs to redeem.");
+        require(nftBalance > 0, "No escrow NFTs to redeem.");
 
         uint256 totalAmount = 0;
 
@@ -319,7 +319,7 @@ Our contract now does the main things it needs to, but we can make some improvem
     }
 ```
 
-We start by querying `escrowNFT.balanceOf()` to find out the number of escrowNFT tokens `msg.sender` owns. If they own none, we revert.
+We start by querying `escrowNFT.balanceOf()` to find out the number of escrow NFT tokens `msg.sender` owns. If they own none, we revert.
 
 We then create a variable named `totalAmount` and loop through the user's NFTs. We can get the ID for each one using [`tokenOfOwnerByIndex`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/extensions/ERC721Enumerable.sol#L37), a function defined in `ERC721Enumerable`. We then retrieve the `amount` and `matureTime` for the token using `escrowNFT.tokenDetails()`. If a given token's `matureTime` has passed, we burn it and add its value to `totalAmount`.
 
@@ -343,7 +343,7 @@ First, run your repl. Once all of the dependencies are installed, you should see
 
 ![Replit Ethereum web interface](/images/tutorials/33-escrow-solidity/replit-eth-web.png)
 
-Connect your MetaMask wallet to the web interface and switch to the Replit testnet. Then click the link to get 1 ETH for testing. Wait until 1 ETH shows up in your wallet balance on the top right-hand of the page.
+Connect your MetaMask wallet to the web interface and switch to the Replit testnet. Then click the link to get 1 ETH for testing. Wait until 1 ETH shows up in your wallet balance on the top right of the page.
 
 ![Switch to test](/images/tutorials/33-escrow-solidity/switch-to-test.png)
 ![Get one Ether](/images/tutorials/33-escrow-solidity/get-one.png)
@@ -371,7 +371,7 @@ Luckily, `Ownable` provides functionality for transferring ownership, so we can 
 Now `Escrow` owns `EscrowNFT` and our system will work. Let's test it out by doing the following:
 
 1. Find the `escrowEth` function in `Escrow`.
-2. Specify your own address, a short duration and small amount of Ether.
+2. Specify your own address, a short duration and a small amount of Ether.
 3. Run the `escrowEth` function and approve the MetaMask pop-up that appears.
 
 If you attempt to claim your escrowed Ether using either of the redemption functions in `Escrow` before the duration has passed, the transaction should fail with the expected error message. However, if you wait for the duration to pass and then call either of the redemption functions, the transaction will fail for a different reason.
