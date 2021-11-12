@@ -1,4 +1,4 @@
-# Build a Escrow Contract on the Ethereum Blockchain with Solidity and Replit
+# Build an Escrow Contract on the Ethereum Blockchain with Solidity and Replit
 
 Since Satoshi Nakamoto released the first version of Bitcoin in early 2009, digital currencies and blockchain technology have been the site of frenzied innovation, excitement and speculation. In addition to Bitcoin itself, hundreds of competing and complementary blockchains and currencies have come and gone. In this tutorial, we will be looking at Ethereum, the most popular and widely used cryptocurrency, second to Bitcoin.
 
@@ -18,7 +18,7 @@ We need two things to get started with this project: a Solidity repl and a brows
 
 Sign in to [Replit](https://replit.com/) or [create an account](https://replit.com/signup) if you haven't already. Once logged in, create a Solidity starter repl.
 
-![](/images/tutorials/33-escrow-solidity/solidity-starter-repl.png)
+![Create a solidity repl](/images/tutorials/33-escrow-solidity/solidity-starter-repl.png)
 
 The Solidity starter repl works a little differently from other repls you may have used in the past. Rather than running our repl every time we want to test out a new piece of code, we can run our repl once, to start it up, and it will automatically reload when changes are made to our Solidity code in `contract.sol`.
 
@@ -26,7 +26,7 @@ The Solidity starter repl comes with a friendly web interface, built using the [
 
 ### Browser wallet
 
-We will need a browser-based web3 wallet to interact with the Replit testnet and our deployed contracts. MetaMask is a popular and feature-rich wallet implemented as a webextension. You can install it from [MetaMask's download page](https://metamask.io/download.html). Make sure you're using a supported browser -- either Chrome, Firefox, Brave or Edge.
+We will need a browser-based web3 wallet to interact with the Replit testnet and our deployed contracts. MetaMask is a popular and feature-rich wallet implemented as a WebExtension. You can install it from [MetaMask's download page](https://metamask.io/download.html). Make sure you're using a supported browser -- either Chrome, Firefox, Brave or Edge.
 
 Once you've installed MetaMask, follow the prompts to create a wallet and sign in. MetaMask will give you a *secret recovery phrase*, comprised of 12 words -- this is your wallet's private key, and must be kept safe and secret. If you lose this phrase, you will not be able to access your wallet, and if someone else finds it, they will.
 
@@ -48,7 +48,7 @@ Solidity, which we will be using below, is the most popular language for develop
 
 Before we jump into the code, let's make sure we have a plan for what we're going to build.
 
-An [escrow](https://www.investopedia.com/terms/e/escrow.asp) is a contractual agreement in which a third party receives money from one party and pays it to another party after a certain condition has been met. In traditional finance, this third party needs to be a trusted individual or organization, such as a bank, but in decentralized finance, it can be a smart contract.
+An [Escrow](https://www.investopedia.com/terms/e/escrow.asp) is a contractual agreement in which a third party receives money from one party and pays it to another party after a certain condition has been met. In traditional finance, this third party needs to be a trusted individual or organization, such as a bank, but in decentralized finance, it can be a smart contract.
 
 We will build a simple escrow protocol that holds funds until a specified duration has passed. This could be used to give a friend some Ethereum for their birthday, or to save money for a specific occasion.
 
@@ -111,7 +111,7 @@ In the contract body, we define a few state variables:
 
 Note the use of [`uint256`](https://docs.soliditylang.org/en/v0.8.2/types.html#integers) as the type for these values: because most of the values we deal with in Solidity programs are monetary, we use unsigned integers to avoid storing negative numbers. In versions of Solidity prior to 0.8.0, this sometimes led to dangerous [overflows](https://dasp.co/#item-3), but [overflow protection is now built into the language](https://docs.soliditylang.org/en/v0.8.0/080-breaking-changes.html).
 
-We do not need to initialize any of these variables, as Solidity will automatically set uninitialized variable to 0.
+We do not need to initialize any of these variables, as Solidity will automatically set uninitialized variables to 0.
 
 The final part of the code we added above is the `constructor()` method, which calls [a parent constructor](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol#L44) to define our NFT's name and symbol/stock ticker.
 
@@ -128,7 +128,7 @@ We're defining a function named `mint` which takes three arguments:
 * `uint256 _amount`: The amount of Ether escrowed by this NFT.
 * `uint256 _matureTime`: The time (represented as a [Unix Timestamp](https://www.unixtimestamp.com/)) at which the NFT's funds will be redeemable.
 
-This function will return a single `uint256` -- the numberic ID of the minted NFT.
+This function will return a single `uint256` -- the numeric ID of the minted NFT.
 
 This is a `public` function, which means it can be called by both external users and by other functions in this contract, or any contracts that inherit from it. Solidity provides granular function and variable visibility options, which are [explained here](https://bitsofco.de/solidity-function-visibility-explained/).
 
@@ -309,7 +309,7 @@ Our contract now does the main things it needs to, but we can make some improvem
             }
         }
 
-        require(totalAmount > 0, "No Ether to redeem.")
+        require(totalAmount > 0, "No Ether to redeem.");
 
         (bool success, ) = msg.sender.call{value: totalAmount}("");
 
@@ -341,13 +341,18 @@ Now that we've written our contracts, it's time to deploy them to the Replit tes
 
 First, run your repl. Once all of the dependencies are installed, you should see the Replit Ethereum web interface in your repl's browser. It looks like this:
 
-![](/images/tutorials/33-escrow-solidity/replit-eth-web.png)
+![Replit Ethereum web interface](/images/tutorials/33-escrow-solidity/replit-eth-web.png)
 
 Connect your MetaMask wallet to the web interface and switch to the Replit testnet. Then click the link to get 1 ETH for testing. Wait until 1 ETH shows up in your wallet balance on the top right-hand of the page.
+
+![Switch to test](/images/tutorials/33-escrow-solidity/switch-to-test.png)
+![Get one Ether](/images/tutorials/33-escrow-solidity/get-one.png)
 
 Now you can deploy your contracts. Select "Escrow" from the drop-down box and click **Deploy**. Approve the MetaMask pop-up that appears. Then do the same with "EscrowNFT".
 
 Once both of these contracts have been deployed, they will show up as expandable boxes below the drop-down box. Expand both and take a look at all the different functions available.
+
+![Deployed contracts](/images/tutorials/33-escrow-solidity/deployed-contracts.png)
 
 Before we can use either of these contracts, we need to do some setup. First, let's initialize `Escrow`.
 
@@ -411,4 +416,4 @@ Now that you've got your feet wet with Solidity development, here are some ideas
 
 You can find our repl here:
 
-!!! repl embed
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/Escrow?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
