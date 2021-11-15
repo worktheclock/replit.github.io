@@ -7,6 +7,10 @@ run = "<run command here>"
 language = "<repl language>" # optional
 ```
 
+Here's a short video on how to use the `.replit` file or read the text explanation below.
+ 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vDlCkQ9-ErU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 In the snippet above, `run` is a string which will be executed in the shell whenever you hit the "Run" button. The `language` helps the IDE understand how to provide features like [packaging](https://blog.replit.com/upm) and [code intelligence](https://blog.replit.com/intel). This is normally configured for you when you clone from a Git repository.
 
 Here is an example of a repl using `.replit` to print "hello world" instead of running the code:
