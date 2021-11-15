@@ -147,12 +147,24 @@
         "slug": "creating-projects-assignments"
       },
       {
+        "name": "Lesson and Instructions Authoring",
+        "slug": "lesson-authoring"
+      },
+      {
+        "name": "Individual and group projects",
+        "slug": "group-projects"
+      },
+      {
         "name": "Organizing Projects",
         "slug": "organizing-projects"
       },
       {
         "name": "Copying projects to other teams",
         "slug": "copying-projects-other-teams"
+      },
+      {
+        "name": "Duplicating personal repls into Team Projects",
+        "slug": "repls-to-team-projects"
       },
       {
         "name": "Keeping notes in repls",

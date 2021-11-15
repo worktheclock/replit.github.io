@@ -65,14 +65,30 @@ As Replit is located in the United States, Replit stores the personal data we re
 
 **What other privacy regulations and security frameworks is Replit compliant with?**
 
-This list is **not exhaustive** and we will continue to update it over time, however, we have reviewed and are compliant with the following privacy regulations:
+This list is **not exhaustive** and we will continue to update it over time. However, we have reviewed and are compliant with the following privacy regulations:
+- [Student Privacy Pledge 2020](https://studentprivacypledge.org/signatories/)
 - [New York Education Law 2-D](https://www.nysenate.gov/legislation/laws/EDN/2-D)
 - [California Consumer Privacy Act (CCPA)](https://www.oag.ca.gov/privacy/ccpa)
 - [UK Data Protection Act of 2018](https://www.gov.uk/data-protection)
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
 - [Higher Education Community Vendor Assessment Toolkit (HECVAT) Lite](https://library.educause.edu/resources/2020/4/higher-education-community-vendor-assessment-toolkit)
 - [Connecticut Student Privacy Pledge](https://portal.ct.gov/DAS/CTEdTech/Commission-for-Educational-Technology/Initiatives/Student-Data-Privacy)
-- [Montana Student Privacy Alliance] (https://sdpc.a4l.org/view_alliance.php?state=MT)
+- [Montana Student Privacy Alliance](https://sdpc.a4l.org/view_alliance.php?state=MT)
+- [MA-RI-NH NDPA](https://sdpc.a4l.org/search_company_national.php?company_name=repl.it&state2=)
+
+<img 
+src="/images/teamsForEducation/SPP_Logo_Vertical_.png" style= "float:left; width:8%;"> 
+<img 
+src="/images/teamsForEducation/dpa logo.png" style= "float:left; width:16%;"> 
+<img 
+src="/images/teamsForEducation/HECVAT logo.png" style= "float:left; width:16%;"> 
+<img
+src="/images/teamsForEducation/nist-logo.png" style= "float:left; width:16%;"> 
+<img
+src="/images/teamsForEducation/CCPA logo.jpeg" style= "float:left; width:16%;"> 
+<img
+src="/images/teamsForEducation/Montana logo.png" style= "float:left; width:20%;">
+<div style="clear:both"></div>
 
 
 **Will Replit sign our university's, school's or district's Data Security or Privacy Agreement?**
