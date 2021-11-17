@@ -151,7 +151,7 @@ Now that we've read and understood the function definition, let's add the functi
     }
 ```
 
-Here we use [`ERC721`'s internal `mint()` function](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol#L280) to mint a new token to the recipient with the current value of `tokenCounter` as its ID. We then set the `amount` and `matureTime` mappings for our new token. Finally, we increment `tokenCounter` and return the ID of our token.
+Here we use [`ERC721`'s internal `_mint()` function](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol#L280) to mint a new token to the recipient with the current value of `tokenCounter` as its ID. We then set the `amount` and `matureTime` mappings for our new token. Finally, we increment `tokenCounter` and return the ID of our token.
 
 Next, we need to make a function that will return the details of a given token. Add the following code below the body of the `mint()` function:
 
@@ -267,7 +267,7 @@ Now that we can create escrow NFTs, we need a way for the recipient to redeem th
 
 ```solidity
     function redeemEthFromEscrow(uint256 _tokenId) external isInitialized {
-        require(escrowNFT.ownerOf(_tokenId) == msg.sender, "Must own token to claim underlying Eth.");
+        require(escrowNFT.ownerOf(_tokenId) == msg.sender, "Must own token to claim underlying Eth");
 
         (uint256 amount, uint256 matureTime) = escrowNFT.tokenDetails(_tokenId);
         require(matureTime <= block.timestamp, "Escrow period not expired.");
