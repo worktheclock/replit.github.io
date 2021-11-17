@@ -1,37 +1,36 @@
-# Creative Coding with Replit
+# Creative coding with Replit
 
-If you're into creating graphics, 3D worlds, games, sounds and other more creative things, Replit has a number of tools and environments to help you. One of the big benefits of Replit is that you can switch and try out different programming paradigms without the hassle and time of setting it all up yourself. 
-
+If you're into creating graphics, 3D worlds, games, sounds, and other more creative things, Replit has a number of tools and environments to help you. One of the benefits of coding with Replit is that you can switch between different programming paradigms and try them out without having to set it all up yourself.
 
 ## What is creative coding?
 
-For this article, we'll consider a tool to be a creative coding one if it's main purpose is to create graphics, visual models, games or sounds. Things like plain HTML or javascript can, and often are, used for this, but we're looking for tools and languages that are a bit more specialised. We won't go into much detail for each - we just want to create a list of possibilities. 
+For this article, we'll consider a tool to be a creative coding one if its main purpose is to create graphics, visual models, games, or sounds. Plain HTML or JavaScript can be used for this type of thing, but we're looking for tools and languages that are a bit more specialised.
 
-Here is a list of the templates for the more creative side of Replit.
-- Python Turtle
+Here's a list of tools we'll be taking a look at for the more creative side of Replit:
+- Python `turtle`
 - p5.js
 - Kaboom
-- PyGame
+- Pygame
 - Pyxel
 - GLSL
 
-### Python Turtle 
+### Python `turtle`
 
-Turtle graphics is a classic of the genre. It was first created way back in the 1960's! The idea is that there is a small turtle robot on the screen, holding some pens. You get to give it commands to move around and tell it when to put the pen down and what color pen to use. This way you can make line, or vector drawings on the screen. The turtle idea comes from a type of actual robot used for education. 
+Turtle graphics is a classic of the genre. First created way back in the 1960s, the idea is that there is a small turtle robot on the screen, holding some pens. You give the turtle commands to move around and tell it when to put the pen down and what color pen to use. This way you can make line or vector drawings on the screen. The turtle idea comes from a type of actual robot used for education. 
 
-Replit has Python Turtle, which is the current day incarnation of the turtle graphics idea. Choose the 'Python (with Turtle)' template when creating a new repl to use it. 
+Replit has support for Python `turtle`, which is the current incarnation of the turtle graphics idea. Choose the "Python (with Turtle)" template when creating a new repl to use it. 
 
 ![turtle-template](/images/tutorials/34-creative-coding/turtle-template.png)
 
-Python turtle uses commands like `forward(10)`, `back(10)`, `left(50)`, `right(30)` `pendown()` and `penup()` to control the turtle. The methods `forward` and `back` take the distance the turtle should move as their arguments, while `left` and `right` take the angle in degrees to turn the turtle on the spot (the turtle is very nimble!). `pendown` and `penup` tells the turtle to draw or not draw while moving.
+Python `turtle` uses commands like `forward(10)`, `back(10)`, `left(50)`, `right(30)` `pendown()` and `penup()` to control the turtle. The methods `forward` and `back` take the distance the turtle should move as their arguments, while `left` and `right` take the angle in degrees to turn the turtle on the spot (the turtle is very nimble!). You can use `pendown` and `penup` to tell the turtle to draw or not draw while moving.
 
-When you create a new Python Turtle template, you'll notice that there is already a small program as an example to show you the basics. If you run it, it should draw a square, with each side a different color. 
+When you create a new Python (with Turtle) template, you'll notice a small program is included as an example to show you the basics. When you run this program, it will draw a square with each side a different color. 
 
 ![turtle square](/images/tutorials/34-creative-coding/turtle-square.gif)
 
-Although Turtle has a small set of simple commands, it can still be used to make some impressive looking graphics. This is because you can use loops and calculations and all the other programming constructs available in Python to control the turtle. 
+Although `turtle` has a small set of simple commands, it can be used to make some impressive-looking graphics. This is because you can use loops and calculations and all the other programming constructs available in Python to control the turtle. 
 
-Try this Turtle program for example: 
+Try this `turtle` program for example: 
 
 [https://replit.com/@ritza/python-turtle](https://replit.com/@ritza/python-turtle)
 
@@ -52,7 +51,7 @@ for x in range(360):
 
 ```
 
-You should see a spiral made from drawing a slightly rotated and increasingly larger triangle for each of the 360 degrees specified in the main loop. This short little script produces a cool looking output:
+This code generates a spiral by drawing a slightly rotated and increasingly larger triangle for each of the 360 degrees specified in the main loop. This short little script produces a cool-looking output:
 
 ![turtle spiral](/images/tutorials/34-creative-coding/turtle-spiral.png)
 
@@ -61,25 +60,22 @@ Try changing up the `sides` parameter to draw different shapes, and play with th
 
 ### p5.js 
 
-[P5.js](https://p5js.org) is a JavaScript graphics and animation library aimed at artists and designers - and generally people who have not been exposed to programming before. P5.js is based on the [Processing](https://processing.org) project. P5.js brings the Processing concept to web browsers, making it easy to share your "sketches", which is P5's name for programs.
+[p5.js](https://p5js.org) is a JavaScript graphics and animation library developed specifically for artists and designers - and generally people who have not been exposed to programming before. It's based on the [Processing](https://processing.org) software project, and brings the Processing concept to web browsers, making it easy to share your "sketches", which is the p5.js name for programs.
 
-Replit has 2 templates for p5 - one for pure JavaScript, and another that interprets Python code, but still uses the underlying p5.js JavaScript library. You can use the Python version if you are more familiar with Python syntax than JavaScript syntax. 
+Replit has two templates for p5.js - one for pure JavaScript, and another that interprets Python code, but still uses the underlying p5.js JavaScript library. You can use the Python version if you are more familiar with Python syntax than JavaScript syntax. 
 
 ![p5 templates](/images/tutorials/34-creative-coding/p5-templates.png)
 
-If you create a repl using one of the templates, you'll see that there is some sample code. Running it will draw random color circles on the screen wherever the mouse pointer is.
+If you create a repl using one of the templates, you'll see it includes some sample code. Running it will draw random color circles on the screen wherever the mouse pointer is.
 
 ![p5 sample sketch output](/images/tutorials/34-creative-coding/p5-circles.gif)
 
 
-P5.js has 2 main functions in every sketch 
-- `setup()`, which is run once when the sketch is executed.
-- `draw()`, which is run every frame.
+p5.js has two main functions in every sketch: `setup()`, which is run once when the sketch is executed, and `draw()`, which is run every frame.
 
+In the `setup` function, you generally set up the window size and other such parameters. In the `draw` function, you can use [p5.js functions](https://p5js.org) to draw your scene. p5.js has functions for everything from drawing a simple line to rendering 3D models. 
 
-In the `setup` function, you generally setup the window size and other such parameters. In the `draw` function, you can use [P5.js's functions](https://p5js.org) to draw your scene. P5.js has functions to draw everything from a simple line to rendering 3D models. 
-
-Here is another sketch you can try (note this is in JavaScript, so it will only work in the P5.js JavaScript template):
+Here is another sketch you can try (note that this is in JavaScript, so it will only work in the p5.js JavaScript template):
 
 [https://replit.com/@ritza/p5-javascript](https://replit.com/@ritza/p5-javascript)
 
@@ -101,27 +97,26 @@ function draw() {
 }
 ```
 
-This draws a few shapes in various colors on the screen, in a kind of 80's geometric art style.
+In this sketch, we draw a few shapes in various colors on the screen, in a kind of 80s geometric art style:
 
 <img src="/images/tutorials/34-creative-coding/p5-shapes.png"
     alt="p5 shapes examples"
     style="width: 500px !important;"/>
 
 
-The [p5.js website](https://p5js.org/get-started/) has a getting started guide, plus a lot of references and examples to experiment with. 
+The [p5.js website](https://p5js.org/get-started/) has a guide to getting started, plus a lot of references and examples to experiment with. 
 
 ### Kaboom
 
-Kaboom.js is Replit's own homegrown JavaScript game framework, launched earlier in 2021. It is geared towards making 2D games, particularly platform games, although it has enough flexibility to create games in other formats too. Because it is a JavaScript library, it can be used to develop web games, making it easy to share and distribute your creations with the world. 
+Kaboom.js is Replit's own homegrown JavaScript game framework, launched in 2021. It's geared towards making 2D games, particularly platform games, although it has enough flexibility to create games in other formats too. Because it is a JavaScript library, it can be used to develop web games, making it easy to share and distribute your creations with the world. 
 
-Replit has 2 official templates for Kaboom: 
-
-- A specialized Kaboom template, with an integrated sprite editor and gallery, as well as pre-defined folders for assets etc. This is perfect for getting started with Kaboom and making games in general, as you don't need to worry about sourcing graphics or folder structures. 
-- A 'light' one, that is a simply a web template with just the Kaboom package referenced. This is more for coders with a little more experience, as the intent is to give you more control and flexibility
+Replit has two official templates for Kaboom: 
+- A specialized Kaboom template, with an integrated sprite editor and gallery, as well as pre-defined folders for assets. This is perfect for getting started with Kaboom and making games in general, as you don't need to worry about folder structures or sourcing graphics. 
+- A 'light' template that is a simple web template with just the Kaboom package referenced. This is for coders with a little more experience, as the intent is to give you more control and flexibility
 
 ![Kaboom templates](/images/tutorials/34-creative-coding/kaboom-templates.png)
 
-One of the great features of Kaboom is the simple way to define level maps, drawing them with text characters, and then mapping the text characters to game elements. 
+One of the great features of Kaboom is the simple way you can define level maps, drawing them with text characters, and then mapping the text characters to game elements:
 
 ```js
 const level = [
@@ -152,19 +147,19 @@ Another interesting aspect of Kaboom is that it makes heavy use of [composition]
     ]
 ```
 
-Kaboom has a fast growing resource and user base. The official [Kaboom site](https://kaboomjs.com) documents each feature, and also has some specific examples. There is also a site with complete tutorials for building different types of games at [MakeJsGames](https://makejsgames.com).
+Kaboom has a fast-growing resource and user base. The official [Kaboom site](https://kaboomjs.com) documents each feature, and also has some specific examples. There is also a site with complete tutorials for building different types of games at [Make JavaScript Games](https://makejsgames.com).
 
-### PyGame
+### Pygame
 
-PyGame is a well established library (from 2000!) for making games. It has functionality to draw shapes and images to the screen, get user input, play sounds and more. Because it has been around for so long, there are plenty of examples and tutorials for it on the web.
+Pygame is a well-established library (from 2000!) for making games. It has functionality to draw shapes and images to the screen, get user input, play sounds, and more. Because it has been around for so long, there are plenty of examples and tutorials for it on the web.
 
-Replit has a specialised Python template for PyGame. Choose this template for creating PyGame games:
+Replit has a specialised Python template for Pygame. Choose this template for creating Pygame games:
 
 
 ![Pygame template](/images/tutorials/34-creative-coding/pygame-template.png)
 
 
-Try out this code in a PyGame repl:
+Try out this code in a Pygame repl:
 
 [https://replit.com/@ritza/pygame-example](https://replit.com/@ritza/pygame-example)
 
@@ -204,20 +199,20 @@ while True:
 
 This code initializes a new `pygame` instance and creates a window to display the output in. Then it has a main game loop, which listens for keyboard arrow key presses, and moves a small block around the screen based on the keys pressed.
 
-Check out some of our tutorials for PyGame :
-- [2D Platform example](https://docs.replit.com/tutorials/14-2d-platform-game)
+Check out some of our tutorials for Pygame :
+- [A 2D platform game](https://docs.replit.com/tutorials/14-2d-platform-game)
 - [A Juggling game](https://docs.replit.com/tutorials/07-building-a-game-with-pygame)
 - [Snake](https://docs.replit.com/tutorials/19-build-snake-with-pygame)
 
 ### Pyxel
 
-[Pyxel](https://github.com/kitao/pyxel) is a specialised for making retro type games, inspired by console games from the 80's and early 90's. You can only display 16 colors, and only 4 sound samples can be played at once, just like on the earlier Nintendo, Sega and other classic systems. If you're into pixel art, this is the game engine for you. 
+[Pyxel](https://github.com/kitao/pyxel) is specialised for making retro-type games, inspired by console games from the 80s and early 90s. You can only display 16 colors, and no more than 4 sound samples can be played at once, just like on the earlier Nintendo, Sega, and other classic games systems. If you're into pixel art, this is the game engine for you. 
 
 Choose the 'Pyxel' template on Replit to create a new Pyxel environment. 
 
 ![pyxel template](/images/tutorials/34-creative-coding/pyxel-template.png)
 
-Try this code in a Pyxel repl to draw random size and color rectangles, changing every 2 frames: 
+Try this code in a Pyxel repl to draw rectangles of random size and color, changing every two frames: 
 
 [https://replit.com/@ritza/pyxel-example](https://replit.com/@ritza/pyxel-example)
 
@@ -248,12 +243,12 @@ App()
     style="width: 500px !important;"/>
 
 
-Take a look in the [examples](https://github.com/kitao/pyxel/tree/main/pyxel/examples) folder on the Pyxel github project to see more ways to use Pyxel. 
+Take a look in the [examples folder](https://github.com/kitao/pyxel/tree/main/pyxel/examples) on the Pyxel GitHub project to see more ways to use Pyxel. 
 
 
 ### GLSL
 
-On the more advanced end of the spectrum, Replit supports GLSL projects. GLSL (OpenGL Shading Language) is a C-style language for creating graphics shaders. Shaders are programs that (usually) run on graphics cards as part of a graphics rendering pipeline. There are many types of shaders - the two most common are Vertex Shaders, and Fragment or Pixel Shaders. Vertex shaders compute the position of objects in the graphics world, and Pixel Shaders compute the color that each pixel should be. This used to require writing code for specific graphics hardware, but GLSL is a high level language that can run on many different graphics hardware makes.
+On the more advanced end of the spectrum, Replit supports GLSL projects. GLSL (OpenGL Shading Language) is a C-style language for creating graphics shaders. Shaders are programs that (usually) run on graphics cards as part of a graphics rendering pipeline. There are many types of shaders - the two most common are vertex shaders and fragment (or pixel) shaders. Vertex shaders compute the position of objects in the graphics world, and pixel shaders compute the color that each pixel should be. This previously required writing code for specific graphics hardware, but GLSL is a high-level language that can run on many different graphics hardware makes.
 
 GLSL gives you  control over the graphics rendering pipeline, enabling you to create very advanced graphics. GLSL has many features to handle vector and matrix manipulations, as these are core to graphics processing.
 
@@ -265,7 +260,7 @@ The template has a sample fragment shader in the file `shader.glsl` as well as s
 
 ![GLSL sample code](/images/tutorials/34-creative-coding/glsl-effect.gif)
 
-Try this code out in the shader file. It will make a kind of moving "plaid" effect. 
+Try this code out in the shader file to make a kind of moving "plaid" effect: 
 
 [https://replit.com/@ritza/glsl-example](https://replit.com/@ritza/glsl-example)
 
@@ -284,14 +279,14 @@ void main(void) {
 }
 ```
 
-In the code, we are setting `gl_FragColor`, which is the color for a specific pixel on the screen. A pixel color in GLSL is represented using a vec4 data type, which is a vector of 4 values, representing Red, Green, Blue, Alpha. In this shader, we vary the pixel color depending on it's co-ordinate `a_pos`, and the current frame time `u_time`. 
+Here we set `gl_FragColor`, which is the color for a specific pixel on the screen. A pixel color in GLSL is represented using a `vec4` data type, which is a vector of four values, representing red, green, blue, and alpha. In this shader, we vary the pixel color depending on it's co-ordinate `a_pos`, and the current frame time `u_time`. 
 
-If you'd like to dive deeper into the world of advanced graphics and shaders, you can visit [https://learnopengl.com/Getting-started/Shaders](https://learnopengl.com/Getting-started/Shaders).
+If you'd like to dive deeper into the world of advanced graphics and shaders, you can visit Learn OpenGL's [Getting Started: Shaders](https://learnopengl.com/Getting-started/Shaders) resource.
 
 
 ## Wrap up
 
-That wraps up this list of the official creative coding language templates on Replit. Of course, Replit is flexible enough that you can import and use whatever framework or library you want in your projects, so you are not limited to the tools in this list. Replit is also adding more languages and templates everyday, so be sure to watch out for new additions!
+That wraps up this list of the official creative coding language templates on Replit. Of course, Replit is flexible enough that you can import and use whatever framework or library you want in your projects, so you are not limited to the tools we've looked at here. Replit is also adding more languages and templates everyday, so be sure to watch out for new additions!
 
 
 
