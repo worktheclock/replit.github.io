@@ -124,11 +124,36 @@ Continue to learn about Kaboom.js by building a Space Shooter game with a platfo
 
 #### [Lesson 25: Building a pseudo-3D game with Kaboom.js](./25-build-3d-game-with-kaboom)
 
-Learn how to leverage early game design techniques to build a pseudo-3D game in a 2D game engine like Kaboom.js
+Learn how to leverage early game design techniques to build a pseudo-3D game in a 2D game engine like Kaboom.js.
 
 #### [Lesson 26: Generate PDF reports from spreadsheet data](./26-pdf-report-generator-from-spreadsheet)
 
-Build a web application that takes in data from spreadsheets and use it to create slick PDF reports
+Build a web application that takes in data from spreadsheets and use it to create slick PDF reports.
+
+#### [Lesson 27: Building tic-tac-toe with WebSocket and Kaboom.js](./27-build-tictactoe-with-websockets-kaboom)
+
+Build a 2-player online tic-tac-toe game using a [Node.js](https://nodejs.org/en/) server, [Socket.IO](https://socket.io) for realtime gameplay across the internet and Kaboom.js as the game engine.
+
+#### [Lesson 28: Build a team technical challenge website with `replit.web`](./28-technical-challenge-site)
+
+Learn how to use the `replit.web` framework to build a leaderboard website for an online technical challenge in the vein of [Advent of Code](https://adventofcode.com/) or [Hackasat](https://www.hackasat.com/).
+
+#### [Lesson 29: Build a paid content site with `replit.web` and Stripe](./29-paid-content-site)
+
+Revisit the `replit.web` framework and combine it with Stripe to build a digital content storefront.
+
+#### [Lesson 30: Building with Nix on Replit](./30-build-with-nix)
+
+Learn how to leverage the power of Nix on Replit, to run third-party programs, build a production-grade web stack, with a database and support for multiple web servers or to write programs in a language not officially supported on Replit.
+
+#### [Lesson 31: Build an email news digest app with Nix, Python and Celery](./31-build-news-digest-app-with-nix)
+
+Revisit Nix on Replit to build a multi component app that allows users to subscribe to [RSS](https://en.wikipedia.org/wiki/RSS) and [Atom](https://en.wikipedia.org/wiki/Atom_(Web_standard)) feeds and receive scheduled emails with news updates.
+
+#### [Lesson 32: Building a *Mario*-like side-scroller with Kaboom.js](./32-build-mario-with-kaboom)
+
+Learn more on the capabilities of the Kaboom game engine by building a *Mario*-like side-scroller game.
+
 
 ## Other tutorials
 
