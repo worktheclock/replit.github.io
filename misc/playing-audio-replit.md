@@ -1,5 +1,9 @@
 # Playing audio on Replit
 
+See how to use audio on Replit in this video, or read on below.
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=CuIV2-ivg0U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 There are two ways to enable audio:
 
 ## System-wide audio
