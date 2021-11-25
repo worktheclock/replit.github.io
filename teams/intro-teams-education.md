@@ -35,4 +35,4 @@ If you'd like to create a new team in your organization, simply go to your [Team
 ![Adding a team to an organization](/images/teamsForEducation/add_team.gif)
 
 
-**Need more help getting set up? Use our [Checklist](https://docs.replit.com/teams/intro-teams-education)!**
+**Need more help getting set up? Use our [Checklist](https://docs.replit.com/teams/teams-edu-checklist)!**
