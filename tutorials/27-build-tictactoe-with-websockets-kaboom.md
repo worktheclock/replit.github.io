@@ -375,13 +375,25 @@ We also check for a draw in this function. A draw is defined as when all the blo
 
 Now we have all the functionality we need on the server, let's move on to building the Kaboom website the players will use to play the game. 
 
+## Setting up Kaboom
+
+To start, we need to set up Kaboom with the screen size and colors we want for the game window. Replace the code in `main.js` with the code below:
+
+```js
+  import kaboom from "kaboom";
+
+  kaboom({
+    background: [0, 0, 0],
+    width: 1000,
+    height: 600
+  });
+```
+
+This creates a new Kaboom canvas with a black background.
+
 ## Setting up Kaboom with Socket.IO
 
-The first thing we need to do is create an opening scene in Kaboom that will prompt for the player's name, and setup Socket.IO so we can connect to the server. Head over to the Kaboom repl we created earlier, and add a new scene called `startGame`: 
-
-![add new scene](/images/tutorials/27-tictactoe-kaboom/startGameScene.gif)
-
-Now we can add a reference to Socket.IO. Normally, in a plain HTML project, we could add a [`<script>`](https://www.w3schools.com/tags/tag_script.asp) tag and reference the Socket.IO [client script](https://socket.io/docs/v4/client-installation/#Installation), hosted automatically on our game server. However, in the Kaboom project type on Replit, we don't have direct access to change the underlying HTML files. Therefore, we need to add the script programmatically. We can do it by accessing the [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document) object available in every browser, and insert a new element with our script.
+Now we can add a reference to Socket.IO. Normally, in a plain HTML project, we could add a [`<script>`](https://www.w3schools.com/tags/tag_script.asp) tag and reference the Socket.IO [client script](https://socket.io/docs/v4/client-installation/#Installation), hosted automatically on our game server. However, here we will add the script programmatically. We can do this by accessing the [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document) object available in every browser, and insert a new element with our script. Add the following code to the `main.js` file below the code to initialise Kaboom.
 
 ```js 
 let script = document.createElement("script");  
@@ -390,31 +402,40 @@ document.head.appendChild(script);
 ```
 Replace the `<YOUR_USER_NAME>` part of the URL with your Replit username. This code inserts the new `<script>` tag into the [`<head>`](https://www.w3schools.com/tags/tag_head.asp) section of the underlying HTML page that Kaboom runs in. 
 
+Let's move on to creating the relevant scenes for our game. Kaboom ["scenes"](https://kaboomjs.com/#scene) allow us to group logic and levels together. In this game we'll have 2 scenes:
+- A "startGame" scene that will prompt for the player's name.
+- A "main" scene, which will contain all the logic to play the tic-tac-toe game.
+
 Let's move on to the code to prompt the player to enter their name. 
 
 ```js
-const SCREEN_WIDTH = 1000; 
-const SCREEN_HEIGHT = 600;
+scene("startGame", () => {
+  const SCREEN_WIDTH = 1000;
+  const SCREEN_HEIGHT = 600;
 
-add([
-  text("What's your name? ",20),
-  pos(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3),
-  origin("center")
-]);
+  add([
+    text("What's your name? ", { size: 32, font: "sinko" }),
+    pos(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3),
+    origin("center")
+  ]);
 
-const nameField = add([
-  text("",20),
-  pos(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2),
-  origin("center")
-]);
+  const nameField = add([
+    text("", { size: 32, font: "sinko" }),
+    pos(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2),
+    origin("center")
+  ]);
 
-charInput((ch) => {
+  charInput((ch) => {
     nameField.text += ch;
+  });
+
+  keyRelease("enter", () => {
+    go("main", { playerName: nameField.text });
+  })
+
 });
 
-keyRelease("enter", ()=>{
-    go("main", {playerName: nameField.text} );
-})
+go("startGame");
 ```
 
 To keep the calculations for the UI layout simpler, we'll use a fixed size for the screen. That's where the 2 constants for the screen width and height come in. 
@@ -425,41 +446,37 @@ Then we add another object with an empty `""` text component. This will display 
 
 To get the user's keyboard input, we use the Kaboom function [`charInput`](https://kaboomjs.com/doc#charInput). This function calls an event handler each time a key on the keyboard is pressed. We take that character and append it to the text in the `nameField` object. Now, when a player presses a key to enter their name, it will show up on the screen. 
 
-Finally, we use the Kaboom function [`keyRelease`](https://kaboomjs.com/doc#keyRelease) to listen for when the player pushes the `enter` key. We'll take that as meaning they have finished entering their name and want to start the game. In the handler, we use the Kaboom [`go`](https://kaboomjs.com/doc#go) function to redirect to the main scene of the game. 
-
-## Setting Kaboom parameters
-
-We've created a new starting scene, and we have a fixed size for the game window. Now we need to update the Kaboom settings so that the game play environment reflects those choices. 
-
-Click the dropdown next to the Kaboom menu. Set the "Start Scene" to "StartGame". Uncheck "Full Screen", and set the Width to 1000 and Height to 600. Set the scale to "1". Then choose dark blue or black as the "Clear Color". 
-
-![Kaboom setup](/images/tutorials/27-tictactoe-kaboom/kaboomSettings.gif)
+Finally, we use the Kaboom function [`keyRelease`](https://kaboomjs.com/doc#keyRelease) to listen for when the player pushes the `enter` key. We'll take that as meaning they have finished entering their name and want to start the game. In the handler, we use the Kaboom [`go`](https://kaboomjs.com/doc#go) function to redirect to the main scene of the game.
 
 ## Adding the game board 
 
-Now we can add the UI elements for the game itself. Open the "main" scene in your Kaboom repl, and add the following code to draw the tic-tac-toe board: 
+Now we can add the UI elements for the game itself. Create the "main" scene in your Kaboom repl by adding the following code to draw the tic-tac-toe board: 
 
 ```js
-        // Board
-        add([
-          rect(1,400),
-          pos(233,100),
-        ]);  
+ scene("main", ({ playerName }) => {
 
-        add([
-          rect(1,400),
-          pos(366,100),
-        ]); 
- 
-        add([
-          rect(400,1),
-          pos(100, 233),
-        ]); 
+  // Board
+  add([
+    rect(1, 400),
+    pos(233, 100),
+  ]);
 
-        add([
-          rect(400,1),
-          pos(100, 366),
-        ]); 
+  add([
+    rect(1, 400),
+    pos(366, 100),
+  ]);
+
+  add([
+    rect(400, 1),
+    pos(100, 233),
+  ]);
+
+  add([
+    rect(400, 1),
+    pos(100, 366),
+  ]);
+  
+});
 ```
 
 This adds 4 rectangles with a width of 1 pixel and length of 400 pixels to the screen - each rectangle is more like a line. This is how we draw the lines that create the classic tic-tac-toe board shape. The first 2 rectangles are the vertical lines, and the second 2 are the horizontal lines. We place the board closer to the left side of the screen, instead of the center, to save space for game information to be displayed on the right hand side of the screen. 
@@ -468,7 +485,7 @@ If you run the game, and enter your name, you should see the board layout like t
 
 ![board layout](/images/tutorials/27-tictactoe-kaboom/boardLayout.png)
 
-Now we need to add a way to draw the _X_ and _O_ symbols in each block. To do this, we'll add objects with text components in each block of the board. First, we'll make an array containing the location and size of each block: 
+Now we need to add a way to draw the _X_ and _O_ symbols in each block. To do this, we'll add objects with text components in each block of the board. First, we'll make an array containing the location and size of each block. Add the following code snippets within the "main" scene we created above: 
 
 ```js
 const boardSquares = [
@@ -512,44 +529,44 @@ Now let's add some areas for the player's names and for the current status of th
 ```js
 // Players and game status elements
 const playerOneLabel = add([
-  text('', 16),
+  text('', { size: 20, font: "sinko" }),
   pos(600, 100),
 ]);
 
 const playerTwoLabel = add([
-  text('', 16),
+  text('', { size: 20, font: "sinko" }),
   pos(600, 150),
 ]);
 
 const statusLabel = add([
-  text('', 16),
+  text('', { size: 20, font: "sinko" }),
   pos(600, 200),
-  color(0,1,0)
-]); 
+  color(0, 255, 0)
+])
 ```
 Here we add 3 objects with [`text`](https://kaboomjs.com/doc#text) components. The first 2 are placeholders for the player names and symbols. The third one is for the game status. They are positioned to the right of the screen, and contain empty text to start. We'll change the contents as we receive new game states from the server. The last object has a `color` component to set the color of the text to green. This is to make the status message stand out from the rest of the text.  
 
 
 ## Connecting to the server
 
-To connect to the game server, we need to initialize the Socket.IO library we dynamically added earlier. We need to provide the URL to the server repl, so copy that from the output window:
+To connect to the game server, we need to initialize the Socket.IO library we dynamically added earlier. We need to provide the URL to the server repl, so copy that from the output window of the server repl:
 
 ![Copying server url](/images/tutorials/27-tictactoe-kaboom/server-url.png)
 
-Now add this code along with the server URL: 
+Now add this code along with the server URL to the "main" scene in the player repl: 
 
 ```js
 var socket = io('https://tic-tac-toe-server.<YOUR_USER_NAME>.repl.co'); 
 
 socket.on('connect', function(){
   socket.emit("addPlayer", {
-    playerName: args.playerName
+    playerName: playerName
   });
 }); 
 ```
 In the first line, we initialize the [Socket.IO client library](https://socket.io/docs/v4/client-initialization/) to connect to the server. Then we add a listener to the [`connect`](https://socket.io/docs/v4/client-socket-instance/#Socket-connected) event. This lets us know when we have established a connection to the server. 
 
-If we have a connection, we then [`emit`](https://socket.io/docs/v4/emitting-events/) an event to the server, with our custom event type `addPlayer`. We also add in the player name, which we passed to this scene from the `startGame` scene. Any arguments passed between scenes are accessible through the `args` parameter within the scene. Emitting the `addPlayer` event to the server will cause the `addPlayer` event handler to fire on the server side, adding the player to the game, and emitting back the game state. 
+If we have a connection, we then [`emit`](https://socket.io/docs/v4/emitting-events/) an event to the server, with our custom event type `addPlayer`. We also add in the player name, which we passed to this scene from the `startGame` scene. Emitting the `addPlayer` event to the server will cause the `addPlayer` event handler to fire on the server side, adding the player to the game, and emitting back the game state. 
 
 ## Handling updated game state
 
@@ -589,7 +606,7 @@ socket.on('gameState', function(state){
       statusLabel.text = state.currentPlayer.playerName + ' to play'; 
     break;
     case Statuses.DRAW:
-      statusLabel.text = 'Draw!'; 
+      statusLabel.text = 'Draw! \nPress R for rematch'; 
     break;
     case Statuses.WIN:
       statusLabel.text = state.result.winner.playerName + ' Wins! \nPress R for rematch'; 
@@ -619,9 +636,11 @@ Then we update the `statusLabel` to show what is currently happening in the game
 
 Next we update the player name text boxes. First we reset them, in case one of the players has dropped out. Then we update the text boxes with the players' symbols and names. Note that we first check if there are the corresponding players in the array. 
 
-Now that we're done with updating from the game state, let's try running the game again. Open the game window in a new tab so that requests to the repl server don't get blocked by the browser due to the CORS header 'Access-Control-Allow-Origin' not matching in the embedded window. Make sure the server is also running, and enter your name. You should see something like this:
+Now that we're done with updating from the game state, let's try running the game again. Open the game window in a new tab so that requests to the repl server don't get blocked by the browser due to the CORS header 'Access-Control-Allow-Origin' not matching in the embedded window.
 
 ![Open in new tab](/images/tutorials/27-tictactoe-kaboom/open-in-new-tab.png)
+
+Make sure the server is also running, and enter your name. You should see something like this:
 
 ![Waiting for another player](/images/tutorials/27-tictactoe-kaboom/waiting.png)
 
@@ -671,13 +690,12 @@ Now that you know the basics of creating a multiplayer online game, try your han
 
 Happy coding!
 
+
 ## Tic-tac-toe repl
-<iframe height="400px" width="100%" src="https://replit.com/@ritza/tic-tac-toe?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/tic-tac-toe-new?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Tic-tac-toe server repl
-<iframe height="400px" width="100%" src="https://replit.com/@ritza/tic-tac-toe-server?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
-
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/tic-tac-toe-server-new?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 
 
