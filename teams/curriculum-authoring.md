@@ -4,11 +4,11 @@ Teachers may create read-only instructions for their students to follow as well 
 
 To add Lesson Plan and Instructions files to your project, click on "Add Lesson Contents" as shown below:
 
-![Add Lesson Contents](https://raw.githubusercontent.com/ritza-co/handbook/main/site/assets/images/Add%20_lesson_contents.png)
+![Add Lesson Contents](https://raw.githubusercontent.com/ritza-co/replit.github.io/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Add%20_lesson_contents.png)
 
 The lesson contents are automatically created as shown below. Instructions and Lesson Plan files are written in markdown. You can find a handy guide to markdown [here](https://www.markdownguide.org/cheat-sheet/)!
 
-![Lesson Contents](https://raw.githubusercontent.com/ritza-co/handbook/main/site/assets/images/Lesson%20contents.png)
+![Lesson Contents](https://raw.githubusercontent.com/ritza-co/replit.github.io/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Lesson%20contents.png)
 
 ## Instructions
 
@@ -16,11 +16,11 @@ Instructions are view-only documents meant to provide guidance for students as t
 
 Students will see the instructions in the pane next to their text editor.
 
-![Student View](https://raw.githubusercontent.com/ritza-co/handbook/main/site/assets/images/Student%20view.png)
+![Student View](https://raw.githubusercontent.com/ritza-co/replit.github.io/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Student_view.png)
 
 To preview the lesson from a student's point of view, as an admin you can add a new non-admin member to your team for testing purposes. You can log in as the member in a different browser to keep the ‘teacher’ (admin) and ‘student’ (non-admin) separate and logged in at the same time. 
 
-![Manage team members](https://raw.githubusercontent.com/ritza-co/handbook/main/site/assets/images/Manage%20team%20members.png)
+![Manage team members](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Manage%20team%20members.png?raw=true)
 
 ## Lesson Plans
 
@@ -28,7 +28,7 @@ Lesson Plans are accessible only to admins in the `lessonplan.md` file. They are
 
 _Do not place project solutions in the Lesson Plan._
 
-![Teacher View](https://raw.githubusercontent.com/ritza-co/handbook/main/site/assets/images/Teacher%20view.png)
+![Teacher View](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Teacher_view.png?raw=true)
 
 ## Assets
 
