@@ -2,7 +2,7 @@
 
 Teams for Education is a collaborative platform where teachers can create assignments for their students. 
 
-Teams for Education uses terms such as "assignment", "lesson", "project" and "curriculum". A "project" is the work that students need to complete and submit for review. This project work can also be defined as an "assignment". A "lesson" describes what students need to learn for a particular assignment. The term "curriculum" is used to describe the overall content and can consist of lessons on different units or different assignments that students can complete. 
+Teams for Education uses terms such as "assignment", "lesson", "project" and "curriculum". A "project" is the work that students need to complete and submit for review. This project work can also be defined as an "assignment". A "lesson" describes what students need to learn for a particular assignment. The term "curriculum" is used to describe the overall content and can consist of lessons on different units or different assignments that students can complete or both. 
 
 In this tutorial, we're going to cover how to create a curriculum.
 
@@ -21,7 +21,7 @@ To create a new curriculum with Replit, you need to make sure that you're the ad
 
 If you navigate to your Teams page, you should see the following below the team's name:
 
-![create project](Create_project_button.png)
+![create project](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Create_project_button.png?raw=true)
 
 Go ahead and click on the 'Create Project' button.
 
@@ -29,13 +29,13 @@ You'll be prompted to select the template language you'll be working with and th
 
 Click the 'Create' button at the bottom.
 
-![name project](Create-project.png)
+![name project](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Create_project.png?raw=true)
 
 ### Step 2 - Add lesson contents
 
 Once you've created your project you'll be taken to a new window where you can add content for your lesson. 
 
-![add contents](add-contents.png)
+![add contents](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Add%20_lesson_contents.png?raw=true)
 
 In the Files tab, the `main.py` file is where students can write submissions or complete different tasks. Any other files added in this section will be visible to the students so you can also place additional notes in this section.
 
@@ -43,7 +43,7 @@ The section labelled 'Lesson' will consist of all files accesible by the teacher
 
 Replit will also generate an `assets` folder where you can put resources such as images to use in markdown files.
 
-![Teacher view](teacher_view.png)
+![Teacher view](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Teacher_view.png?raw=true)
 
 ### Step 3 - Input Output Testing
 
@@ -51,28 +51,34 @@ Once you've created your project, you can also add Input/Output testing to allow
 
 You'll find the "Input/Output Tests" window by clicking the tick in the left side bar as shown below:
 
-![Create tests](tests.png)
+![Create tests](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Create_tests_tick.png?raw=true)
 
-Next, you can create a test by clicking on 'Create test' and adding the test name and expected input and output. You can define the expected output by indicating whether it should be a "match", "exact", "regex" or "compatibility" test. You can find out more [here](https://docs.replit.com/teams/input-output-testing).
+Next, you can create a test by clicking on 'Create test' and adding the test name and expected input and output. 
+
+![Create test]9https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Create_test_button.png?raw=true)
+
+You can define the expected output by indicating whether it should be a "match", "exact", "regex" or "compatibility" test. You can find out more [here](https://docs.replit.com/teams/input-output-testing).
 
 In most cases, a match test is sufficient. A match test is passed if the expected output is in (or equal to) the actual output. In other words, the actual output does not have to be identical to the expected output, it must just include it. 
 
-![Create test](create_test.png)
+![Create test](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Create_test.png?raw=true)
 
 ### Step 4 - Publish project
 
 You can publish the project to make it available to students by clicking on the 'Publish' button on the top right section of the window. On the next popup, make sure the slider is moved to the right and turned blue to ensure it's visibility to the students and then click save. 
 
+![Publish_project](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Publish_project.png?raw=true)
+
 To preview the lesson from a student's point of view, as an admin you can add a new non-admin member to your team for testing purposes. 
 
-![add_member](add_member.png)
+![add_member](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Manage%20team%20members.png?raw=true)
 
 You can log in as the member in a different browser to keep the ‘teacher’ (admin) and ‘student’ (non-admin) separate and logged in at the same time.
 
-![Student view](student_view.png)
+![Student view](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Student_view.png?raw=true)
 
 The student can run tests to check their work before submitting. They can do this by clicking on 'Run tests'.
 
-![Running tests](run_test.png)
+![Running tests](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsForEducation/curriculum-authoring/Run_tests.png?raw=true)
 
 The student can then submit their work for review by clicking on the 'Submit' in the top right corner of the window. 
