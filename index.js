@@ -262,6 +262,9 @@ app.get('/repls/quick-start', async (req, res) => {
 app.get('/misc/quick-start', async (req, res) => {
     res.redirect(301, '/archive/quick-start');
 });
+app.get('/programming-ide/configuring-run-button', async (req, res) => {
+    res.redirect(301, '/programming-ide/configuring-repl');
+});
 
 app.get('/:category/:slug', async (req, res) => {
 	const { category, slug } = req.params;

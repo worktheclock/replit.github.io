@@ -50,8 +50,8 @@
         "slug": "storing-sensitive-information-environment-variables"
       },
       {
-        "name": "Configuring the Run button",
-        "slug": "configuring-run-button"
+        "name": "Configuring a Repl",
+        "slug": "configuring-repl"
       },
       {
         "name": "Running GitHub repositories on Replit",
