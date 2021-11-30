@@ -14,7 +14,7 @@ We'll cover how to:
 
 # Step 1 - Create a repl
 
-To create an interview, you need to be in a team as an admin. You can check out the documentation at [Introduction to teams pro](https://docs.replit.com/teams-pro/managing-teams) on how to create a team with replit.
+To create an interview, you need to be in a team as an admin. You can check out the documentation [here](https://docs.replit.com/teams-pro/managing-teams) to find out how to create a team with replit.
 
 Navigate to the 'Teams' page. Under the 'Team Repls' section click on the 'Create team repl' button and the following popup window will appear:
 
