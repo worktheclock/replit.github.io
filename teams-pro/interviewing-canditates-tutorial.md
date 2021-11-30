@@ -1,64 +1,56 @@
-# Interviewing candidates
+# Interviewing Candidates with Guest Mode
 
-Replit offers a great platform for conducting technical interviews. With access to the teams feature, Interviewees can create repls with instructions for candidates to complete challenges whilst monitoring them as they work.
+Replit offers a great platform for conducting technical interviews. The Teams Pro guest feature enables candidates to complete challenges under observation.
 
-This tutorial will provide a step-by-step guide on how to conduct a technical interview using replit.
+This tutorial will provide a step-by-step guide on how to conduct a technical interview using Teams Pro.
 
 # Steps to follow:
+
 We'll cover how to:
-1. Creat a Repl
-1. Create a challenge
-1. Invite candidates
-1. Observe candidates
+
+- Creat a repl
+- Invite candidates
+- Observe candidates
 
 # Step 1 - Create a repl
 
-In order to create an interview, you need to be in a team as an admin.
-You can check out the documentation at [Introduction to teams for education](https://docs.replit.com/teams/intro-teams-education) on how to create a team with replit.
+To create an interview, you need to be in a team as an admin. You can check out the documentation at [Introduction to teams pro](https://docs.replit.com/teams-pro/managing-teams) on how to create a team with replit.
 
-If you are already part of a team, You can navigate to the team's page. 
-Under the 'Team Repls' section click on the create repl button and this pop window will appear
+Navigate to the 'Teams' page. Under the 'Team Repls' section click on the 'Create team repl' button and the following popup window will appear:
 
-![create repl](/images/teamsPro/interviewing-candidates-turtorial-images/create.png)
+![create repl](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsPro/interviewing-candidates-tutorial-images/create_interview_repl.png?raw=true)
 
-You can choose the template language you will be using for the interview and choose a suitable name, then click the create repl button at the bottom. 
+You can choose the template language you will be using for the interview and choose a suitable name, then click the 'Create Repl' button at the bottom. 
 
+Once the repl has been created, you will be able to add the relevant files required for the interview. In this example, `main.py` has the instructions for the candidate to follow during the interview.
 
-# Step 2 - Create a challenge
+![interview challenge](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsPro/interviewing-candidates-tutorial-images/instructions.png?raw=true)
 
-After creating a repl you will land on  a new window, where you are able to write the challenges you want candidates to complete for the interview in the `main.py` file.
-
-![interview challenge](/images/teamsPro/interviewing-candidates-turtorial-images/instructions.png)
+# Step 2 - Invite candidates
 
 Once you have written your challenges, you can invite candidates by clicking on the invite button on the top-right corner on the window.
 
+![repl invitation](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsPro/interviewing-candidates-tutorial-images/invite_members.png?raw=true)
 
-# Step 3 - Invite candidates
+You can invite members who are already part of the team or external members by filling out their email address. You can also generate a join link for guests and then clicking the 'Invite' button.
 
-If you have clicked on invite button mention in the previous section,
-the following pop window will appear
+Candidates will get a notification of the invite.
 
-![repl invitation](/images/teamsPro/interviewing-candidates-turtorial-images/invitation.png)
+![invite notification](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsPro/interviewing-candidates-tutorial-images/notification.png?raw=true)
 
-You can invite members who are already part of the team or external members by filling out the email address and then clicking the invite button.
+The candidate can join the repl by clicking on the notification of their invite; the invite email or via the join link. 
 
-Candidates will recieve a notification for their invite on the repl account.
+# Step 3 - Observe candidates
 
-![invite notification](/images/teamsPro/interviewing-candidates-turtorial-images/notification.png)
+Once candidates join the interview, they will be able to access the challenges in the `main.py` file in read and write mode.
 
-Candidates can right clicking on the notification, to join or get access the interview window.
-
-
-# Step 4 - Observing candidates.
-
-Once candidates the join the interview, they will be able to access the challenges in the `main.py` file in read and write mode, allowing them to complete the challenges.
-
-
-Interviewees are also able to observe the candidates as they complete the challenges.
+Interviewers are also able to observe the candidates as they complete the challenges.
 
 By clicking on the round icon next to the invite button on the top-right corner, you will be able to observe the candidates screen and see as they work on their `main.py` file. The round icon, represents the candidate in the interview.
 
-![interview window](/images/teamsPro/interviewing-candidates-turtorial-images/interview-window.png)
+![interview window](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsPro/interviewing-candidates-tutorial-images/interview_screen.png?raw=true)
 
-Candidates, will also have the ability to observe your screen with the same steps mentioned above. This can allow the to see changes you want to make or new intructions you want to add.
+Candidates will also have the ability to observe your screen with the same steps mentioned above. This can allow them to see the changes you want to make or new intructions you want to add.
+
+![candidate_screen](https://github.com/ritza-co/replit.github.io/blob/curriculum-authoring-content/static/images/teamsPro/interviewing-candidates-tutorial-images/candidate_screen.png?raw=true)
 
