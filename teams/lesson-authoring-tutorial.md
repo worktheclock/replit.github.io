@@ -1,5 +1,7 @@
 # How to Create a Lesson with Replit
 
+_You can find some more information about lesson authoring [here](/teams/lesson-authoring)._
+
 Teams for Education is a collaborative platform where teachers can create assignments for their students. 
 
 In this tutorial, we're going to cover how to create a lesson.
