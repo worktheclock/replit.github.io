@@ -2,7 +2,10 @@
 
 You can use Replit to conduct technical interviews. The Teams Pro guest feature lets you pair prorgram with candidates so you can work with them or observe them in real time.
 
-This tutorial will provide a step-by-step guide on how to conduct a technical interview using Teams Pro.
+This tutorial will provide a step-by-step guide on how to conduct a technical interview using Teams Pro. Watch the video or read the text below.
+
+<div class="video-container" style="text-align: center;margin: 30px 0;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pOOdoXUu5SI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 # Steps to follow:
 
