@@ -1,36 +1,31 @@
-# Lesson and Instructions Authoring
+# Lesson Authoring
 
-Teachers may create read-only instructions for their students to follow as well as admin-only lesson plans to keep as notes and share curriculum with their peers using the Curriculum Authoring tool in their Team Project file tree. 
+_You can find a step-by-step guide to creating a new lesson [here](/teams/lesson-authoring-tutorial)._
 
-Instructions and Lesson Plan files are written in markdown. *You can find a handy guide to markdown [here](https://www.markdownguide.org/cheat-sheet/)!*
+Teachers may create read-only instructions for their students to follow as well as admin-only lesson plans to keep as notes and share curriculum with their peers using the Curriculum Authoring tool in their Team Project file tree.
 
-To add Lesson Plan and Instructions files to your project, click on the book icon 📖 in the far-left toolbar, and click on "Add Lesson Contents".
+To add Lesson Plan and Instructions files to your project, click on "Add Lesson Contents" as shown below:
 
-![Adding lesson contents](/images/teamsForEducation/curriculum-hub/add-lesson.gif)
+<img src="/images/teamsForEducation/curriculum-authoring/Add%20_lesson_contents.png" style="width:60%; height:60%"></img>
 
-![Curriculum Authoring tools in the file tree](/images/teamsForEducation/curriculum-hub/curriculum_authoring.png)
+The lesson contents are automatically created as shown below. Instructions and Lesson Plan files are written in markdown. You can find a handy guide to markdown [here](https://www.markdownguide.org/cheat-sheet/)!
 
-### Instructions
-Instructions are view-only documents meant to provide guidance for students as they work on their projects. They are editable by Team admins in the `instructions.md` file. 
+![Lesson Contents](/images/teamsForEducation/curriculum-authoring/Student_view.png)
 
-Students will see the instructions in the pane next to their text editor. 
+To preview the lesson from a student's point of view, as an admin you can add a new non-admin member to your team for testing purposes. You can log in as the member in a different browser to keep the ‘teacher’ (admin) and ‘student’ (non-admin) separate and logged in at the same time. 
 
-![Student view of the Instructions tab](/images/teamsForEducation/curriculum-hub/instructions_studentview.png)
+<img src="/images/teamsForEducation/curriculum-authoring/Manage%20team%20members.png" style="width:60%; height:60%">
 
-### Lesson Plans
+## Lesson Plans
+
 Lesson Plans are accessible only to admins in the `lessonplan.md` file. They are meant to provide speaker notes for individual teachers or guidance for teachers who may share curriculum with their peers or in the Curriculum Hub.
 
-*Do not place project solutions in the Lesson Plan.*
+_Do not place project solutions in the Lesson Plan._
 
-### Assets
-The Assets folder contains images and other files to be used in the Instructions and Lesson Plans. 
+![Teacher View](/images/teamsForEducation/curriculum-authoring/Teacher_view.png)
 
-You can embed images from your Assets folder into your curriculum files like so: 
-```![Image alt text](assets/imagename.png)``` 
+## Assets
 
+The Assets folder contains images and other files to be used in the Instructions and Lesson Plans.
 
-
-
-
-
-
+You can embed images from your Assets folder into your curriculum files like so: `![Image alt text](assets/imagename.png)`

@@ -232,8 +232,11 @@ app.get('/pro/teamManagement', async (req, res) => {
 app.get('/pro/replManagement', async (req, res) => {
     res.redirect(301, '/teams-pro/managing-public-private-repls');
 });
+app.get('/teams-pro/interviewing-candidates-guest-mode', async (req, res) => {
+    res.redirect(301, '/teams-pro/interviewing-candidates');
+});
 app.get('/pro/guests', async (req, res) => {
-    res.redirect(301, '/teams-pro/interviewing-candidates-guest-mode');
+    res.redirect(301, '/teams-pro/interviewing-candidates');
 });
 app.get('/repls/python-plots', async (req, res) => {
     res.redirect(301, '/tutorials/creating-interactive-python-plots-matplotlib');
