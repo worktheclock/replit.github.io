@@ -7,7 +7,7 @@ This tutorial will provide a step-by-step guide on how to conduct a technical in
 <div class="video-container" style="text-align: center;margin: 30px 0;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pOOdoXUu5SI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-# Steps to follow:
+## Steps to follow:
 
 We'll cover how to:
 
@@ -15,7 +15,7 @@ We'll cover how to:
 - Invite candidates
 - Observe candidates
 
-# Step 1 - Create a repl
+## Step 1 - Create a repl
 
 To create an interview, you need to be in a team as an admin. See the documentation [here](/teams-pro/managing-teams) to find out how to create a team with Replit.
 
@@ -29,7 +29,7 @@ Once the repl has been created, you will be able to add the relevant files requi
 
 ![interview challenge](/images/teamsPro/interviewing-candidates-tutorial-images/instructions.png)
 
-# Step 2 - Invite candidates
+## Step 2 - Invite candidates
 
 Once you have written your challenges, you can invite candidates by clicking on the invite button on the top-right corner on the window.
 
@@ -39,7 +39,7 @@ You can invite candidates by email directly or by you can generate a join link t
 
 ![invite notification](/images/teamsPro/interviewing-candidates-tutorial-images/notification.png)
 
-# Step 3 - Observe candidates
+## Step 3 - Observe candidates
 
 Once candidates join the interview, they will be able to access the challenges in the provided files (e.g. `main.py`) in read and write mode.
 
