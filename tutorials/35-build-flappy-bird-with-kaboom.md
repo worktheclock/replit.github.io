@@ -1,19 +1,27 @@
-# Flappy Bird
+# Building Flappy Bird in Kaboom.js
 
 Flappy Bird was a smash hit game for mobile phones back in 2013 - 2014. The inspiration behind the app was the challenge of bouncing a ping pong ball on a paddle for as long as possible without letting it drop to the ground or shoot off into the air.   At the peak of its success, the game creator suddenly removed it from all app stores, saying that he felt guilty that the game had become addictive for many people. In the wake of the removal, many clones were made to fill the gap left by the original Flappy Bird. After a few months, the original author released some new versions of the game again. 
 
 Let's take a trip back to 2014, and create our own clone of Flappy Bird using Kaboom! By remaking a game, not only can you learn how to make games, but you can also extend and change the game as you like. 
 
-This article is based on a [video tutorial](https://www.youtube.com/watch?v=hgReGsh5xVU). There are a few small differences - mainly the Flappy assets (graphics and sound) are no longer available by default in the Replit Kaboom asset library. That's OK, because we've included them in a download [here](flappy-assets.zip), so you can still use them.
+![Flappy game](/images/tutorials/35-flappy-bird/game-play.gif)
+
+This article is based on this [video tutorial](https://www.youtube.com/watch?v=hgReGsh5xVU). There are a few small differences - mainly the Flappy assets (graphics and sound) are no longer available by default in the Replit Kaboom asset library. That's OK, because we've included them as a download [here](/tutorial-files/flappy-bird-kaboom/flappy-assets.zip), so you can still use them.
 
 
 ## Creating a new project in Replit
 
 Head over to [Replit](https://replit.com) and create a new repl. Choose **Kaboom** as your project type. Now, give this repl a name, like "Flappy!".
 
-After the repl has booted up, you should see a `main.js` file under the "Scenes" section. This is where we'll start coding. It already has some code in, but we'll replace that. 
+![Creating a new repl](/images/tutorials/35-flappy-bird/new-repl.png)
 
-Download [all these sprites and asset files](/tutorial-files/flappy-bird-kaboom/flappy-assets.zip) needed for the game, and unzip them on your computer. In the Kaboom editor, click the "Files" icon in the side bar. Now drag and drop all the sprite files (image files) into the "sprites" folder, and all the sounds (mp3 files) in to the "sounds" folder. Once they have uploaded, you can click on the "Kaboom" icon in the side bar, and return to the "main" code file.
+After the repl has booted up, you should see a `main.js` file under the "Code" section. This is where we'll start coding. It already has some code in, but we'll replace that. 
+
+Download the [sprites and asset files](/tutorial-files/flappy-bird-kaboom/flappy-assets.zip) needed for the game, and unzip them on your computer. In the Kaboom editor, click the "Files" icon in the sidebar. Now drag and drop all the sprite files (image files) into the "sprites" folder, and all the sounds (mp3 files) in to the "sounds" folder. Once they have uploaded, you can click on the "Kaboom" icon in the sidebar, and return to the "main" code file.
+
+<img src="/images/tutorials/35-flappy-bird/upload-sprites.gif"
+    alt="Uploading sprites"
+    style="width: 600px !important;"/>
 
 ## Initializing Kaboom
 
@@ -35,7 +43,7 @@ loadSprite("pipe", "sprites/pipe.png");
 loadSound("wooosh", "sounds/wooosh.mp3");
 ```
 
-The first argument in the `load..` function is the name we want to refer to the asset later on in code. The second parameter is the location of the asset to load. 
+The first argument in each `load..` function is the name we want to refer to the asset later on in code. The second parameter is the location of the asset to load. 
 
 ## Adding scenes
 
@@ -45,9 +53,11 @@ The first argument in the `load..` function is the name we want to refer to the 
 - The main game, where we play.
 - An endgame, or game over scene, which gives the player their score or overall result, and allows them to start again. 
 
-For this tutorial, we'll omit the intro scene, since we already know what Flappy bird is and how to play it. Feel free to add your own intro scene in later though!
+<img src="/images/tutorials/35-flappy-bird/game-scenes.png"
+    alt="game scenes"
+    style="width: 350px !important;"/>
 
-![game scenes](/images/tutorials/35-flappy-bird/game-scenes.png)
+For this tutorial, we'll omit the intro scene, since we already know what Flappy bird is and how to play it. Feel free to add your own intro scene in later though!
 
 Let's add the code for defining each scene: 
 
@@ -73,7 +83,7 @@ To start the whole game off, we use the [`go`](https://kaboomjs.com/#go) functio
 
 ## Building the game world
 
-Now that we have all the main structure and overhead functions out of the way, let's start adding in the characters that make up the Flappy world. In Kaboom, characters are anything that makes up the game world, including floor, platforms etc, and not only the players and bots. They are also known as "game objects". 
+Now that we have the main structure and overhead functions out of the way, let's start adding in the characters that make up the Flappy world. In Kaboom, characters are anything that makes up the game world, including floor, platforms etc., and not only the players and bots. They are also known as "game objects". 
 
 We'll start with the background, using the `bg.png` image we added. Add this code to the `game` scene section: 
 
@@ -85,9 +95,9 @@ add([
 
 This uses the the [`add`](https://kaboomjs.com/#add) function to add a new character to the scene. The `add` function takes an array of components that make up the look and behavior of a game character.  In Kaboom, every character is made up of 1 or more components. Components give special properties to each character. There are built-in components for many properties, like [`sprite`](https://kaboomjs.com/#sprite) to give the character an avatar, [`body`](https://kaboomjs.com/#body), which makes the character respond to gravity, [`solid`](https://kaboomjs.com/#solid) which makes the character solid, so other characters can't move through it, and many others.
 
-Since the background doesn't need to do much, just stay in the back and look pretty, we only use the [`sprite`](https://kaboomjs.com/#sprite) component, which displays an image. The `sprite` component takes the name of the sprite, which we set when we loaded the sprite earlier, and optionally the width and height that it should be displayed on the screen. Since we want the background to cover the whole screen, we need to set the `width` and `height` of the sprite to the width and height of the window that our game is running in. Kaboom provides the [`width()`](https://kaboomjs.com/#width) and ['height()'](https://kaboomjs.com/#height) functions to get the window dimensions. 
+Since the background doesn't need to do much, just stay in the back and look pretty, we only use the [`sprite`](https://kaboomjs.com/#sprite) component, which displays an image. The `sprite` component takes the name of the sprite, which we set when we loaded the sprite earlier, and optionally the width and height that it should be displayed on the screen. Since we want the background to cover the whole screen, we need to set the `width` and `height` of the sprite to the width and height of the window that our game is running in. Kaboom provides the [`width()`](https://kaboomjs.com/#width) and [`height()`](https://kaboomjs.com/#height) functions to get the window dimensions. 
 
-If you press the "Play" button at the top of your repl, you should see the background of the Flappy world come up in the output section of the repl: 
+If you press the "Run" button at the top of your repl, you should see the background of the Flappy world come up in the output section of the repl: 
 
 ![Flappy background with buildings, trees and building sky line](/images/tutorials/35-flappy-bird/flappy-background.png)
 
@@ -105,12 +115,12 @@ const player = add([
 ]);
 ```
 
-This is using the same [`add`](https://kaboomjs.com/#add) function we used for adding in the background. This time, we grab a reference, `const player` to the returned game object. This is so we use this reference later when checking for collisions, or flapping up when the player taps the space bar. 
+This is using the same [`add`](https://kaboomjs.com/#add) function we used for adding in the background. This time, we grab a reference, `const player` to the returned game object. This is so we can use this reference later when checking for collisions, or flapping up when the player taps the space bar. 
 
 You'll also notice that the character we are adding here has many more components than just the [`sprite`](https://kaboomjs.com/#sprite) component we used for the background. We already know what the `sprite` component does - here is what the rest are for:
 
 - [`scale`](https://kaboomjs.com/#scale) makes the sprite larger on screen by drawing at `2` times the sprite's image normal size. This gives a nice pixelated look, while also making it easier to spot the bird. 
-- [`pos`](https://kaboomjs.com/#pos) sets the position on the screen that the character should initially be at. This takes the x and y coordinate to specify the position. 
+- [`pos`](https://kaboomjs.com/#pos) sets the position on the screen that the character should initially be at. This takes the x and y coordinates to specify the position. 
 - [`area`](https://kaboomjs.com/#area) gives the sprite an invisible bounding box around it, which is used when calculating and detecting collisions between characters. We'll need this so that we can detect if Flappy flies into the pipes. 
 - [`body`](https://kaboomjs.com/#body) makes the character subject to gravity. This means Flappy will fall out of the sky if the player doesn't do anything. We'll make Flappy be able to fly next. 
 
@@ -121,7 +131,7 @@ You can press `command + s` (mac) or `control + s` (Windows/Linux) to update the
 
 ## Making Flappy fly
 
-Our next task is save Flappy from plummeting to their death by giving a control to the player to flap Flappy's wings. We'll use the spacebar for this. Kaboom has an [`onKeyPress`](https://kaboomjs.com/#onKeyPress) function, which fires a callback with custom code when the specified key is pressed. Add this code to the `game` scene make Flappy fly when the `space` key is pressed. 
+Our next task is to save Flappy from plummeting to their death by giving control to the player to flap Flappy's wings. We'll use the spacebar for this. Kaboom has an [`onKeyPress`](https://kaboomjs.com/#onKeyPress) function, which fires a callback with custom code when the specified key is pressed. Add this code to the `game` scene to make Flappy fly when the `space` key is pressed. 
 
 
 ```js
@@ -130,9 +140,9 @@ onKeyPress("space", () => {
 	player.jump(400);
 });
 ```
-In the callback handler, we first [`play`](https://kaboomjs.com/#play) a sound of flapping wings to give the player feedback and add some interest to the game. Then we use the [`jump`](https://kaboomjs.com/#body) method, which is added to our player character through the [`body`](https://kaboomjs.com/#body) component we added earlier. The `jump` function makes a a character accelerate up sharply. We can adjust just how sharp and high the jump should be through the number we pass as an argument to the jump method - the larger the number, the higher the jump. Although Flappy is technically not jumping (you normally need to be on a solid surface to jump), it still has the effect we need. 
+In the callback handler, we first [`play`](https://kaboomjs.com/#play) a sound of flapping wings to give the player feedback and add some interest to the game. Then we use the [`jump`](https://kaboomjs.com/#body) method, which is added to our player character through the [`body`](https://kaboomjs.com/#body) component we added earlier. The `jump` function makes a character accelerate up sharply. We can adjust just how sharp and high the jump should be through the number we pass as an argument to the jump method - the larger the number, the higher the jump. Although Flappy is technically not jumping (you normally need to be on a solid surface to jump), it still has the effect we need. 
 
-You can press `command + s` (mac) or `control + s` (Windows/Linux) to update the game output window. Now if you press "space", you'll be able to keep Flappy in the air!
+You can press `command + s` (mac) or `control + s` (Windows/Linux) to update the game output window. Now if you press "space", you'll be able to keep Flappy in the air! Remember to quickly click in the output window as the game starts, for the output window to gain focus and be able to detect player input such as pressing the `space` key.
 
 ![flying-flappy](/images/tutorials/35-flappy-bird/flappy-fly.gif)
 
@@ -169,7 +179,7 @@ To identify and be able to query the pipes later, we can also add a text tag `"p
 
 Finally, since we will need to create many pipes during the game, let's wrap all the pipe code in a function that we will be able to call at regular intervals to make the pipes. 
 
-Here is the code from all those considerations and calculation. Insert this code to the `game` scene:
+Here is the code from all those considerations and calculations. Insert this code to the `game` scene:
 
 ```js
 
@@ -205,24 +215,24 @@ onUpdate("pipe", (pipe) => {
 });
 ```
 
-Now lets generate pipes at a steady rate. We can use the [`loop`](https://kaboomjs.com/#loop) function for this. Add the following to the `game` scene part of the code. 
+Now let's generate pipes at a steady rate. We can use the [`loop`](https://kaboomjs.com/#loop) function for this. Add the following to the `game` scene part of the code. 
 
 ```js
 loop(1.5, () => {
 	producePipes();
 });
 ```
-This calls our `producePipes()` function every `1.5` seconds. You can adjust this rate, or make it variable to increase it as the game progresses if you like. 
+This calls our `producePipes()` function every `1.5` seconds. You can adjust this rate, or make it variable to increase it as the game progresses. 
 
 Press `command + s` (mac) or `control + s` (Windows/Linux) to update the game output window. You should see the pipes generated and moving across the screen. You can also fly Flappy, although crashing into the pipes does nothing for now.
 
 ![moving pipes](/images/tutorials/35-flappy-bird/moving-pipes.gif)
 
-Flappy is flapping and the pipes are piling on. Next tasks are to detect when Flappy flies past a pipe, increasing the player's score, and when Flappy flies into a pipe, unfortunately getting knocked out and ending the game. We'll do the good case first. 
+Flappy is flapping and the pipes are piling on. The next tasks are to detect when Flappy flies past a pipe, increasing the player's score, and when Flappy flies into a pipe, unfortunately getting knocked out and ending the game. 
 
 ## Adding in scoring 
 
- Now let's detect when Flappy flies past a pipe, and increment the player's score. To do this, we'll need to keep track of which pipes have gone passed Flappy. Kaboom allows us to add custom properties to a character. Modify the pipe generating function `producePipes` to add a custom property called `passed` to the pipes. It should look like this now:
+ Now let's detect when Flappy flies past a pipe, and increment the player's score. To do this, we'll need to keep track of which pipes have gone past Flappy. Kaboom allows us to add custom properties to a character. Modify the pipe generating function `producePipes` to add a custom property called `passed` to the pipes. It should look like this now:
 
 ```js
 function producePipes() {
@@ -256,7 +266,7 @@ const scoreText = add([
 ]);
 ```
 
-Now we can modify the `onUpdate()` event handler we created earlier for moving the pipes. We'll check if any pipes have moved past Flappy, and update their `passed` flag so we don't count them more than once. We'll only add the `passed` flag to one of the pipes, and detect it, so as not to add a point for both the upper and lower pipe. Update the `onUpdate` handler as below:  
+Now we can modify the `onUpdate()` event handler we created earlier for moving the pipes. We'll check if any pipes have moved past Flappy, and update their `passed` flag, so we don't count them more than once. We'll only add the `passed` flag to one of the pipes, and detect it, so as not to add a point for both the upper and lower pipe. Update the `onUpdate` handler as below:  
 
 
 ```js
@@ -271,10 +281,11 @@ onUpdate("pipe", (pipe) => {
 });
 ```
 
-This checks any pipe that we haven't marked as `passed` (`passed === false`) to see if it has passed Flappy (`pipe.pos.x < player.pos.x`). If the pipe has gone passed, we add `1` to the score, and also update the score text on screen. 
+This checks any pipe that we haven't marked as `passed` (`passed === false`) to see if it has passed Flappy (`pipe.pos.x < player.pos.x`). If the pipe has gone past, we add `1` to the score, and also update the score text on screen. 
 
 Press `command + s` (mac) or `control + s` (Windows/Linux) to update the game output window. You should see the score increase as you fly past each pipe
 
+![Score increasing](/images/tutorials/35-flappy-bird/score-increase.gif)
 
 ## Collision detection
 
@@ -312,7 +323,7 @@ scene("gameover", (score) => {
 
 ```
 
-First, we create a `highScore` variable where we can track the top score across multiple games. Then, in our `gameover` scene, we check if the latest score passed in is bigger than the `highScore` we have recorded. If it is, the `highScore` is update to the latest score. 
+First, we create a `highScore` variable where we can track the top score across multiple game plays. Then, in our `gameover` scene, we check if the latest score passed in is bigger than the `highScore` we have recorded. If it is, the `highScore` is updated to the latest score. 
 
 To show a "game over" message, and the player's score along with the high score, we use the [`add`](https://kaboomjs.com/#add) function to add a [`text`](https://kaboomjs.com/#text) component to a new game object / character. We also make the font `size` large-ish for this message. 
 
@@ -337,14 +348,17 @@ Press `command + s` (mac) or `control + s` (Windows/Linux) to update the game ou
 
 ## Next steps
 
-Congratulations! You've just made your own clone of Flappy Bird. What things can you do to add to the game? Here are some ideas:
+Congratulations! You've just made your own clone of Flappy Bird. Here are some ideas to improve the game:
 
 - Make the game play faster as the player gets a higher score.  You can do this by updating the speed that the pipes move by making the speed parameter passed to the `pipe.move` method a variable, which increases as the player score increases.
-- Add some different types of obstacles, other than the pipes, for Flappy to try avoid. 
+- Add some different types of obstacles, other than the pipes, for Flappy to try to avoid. 
 - Use the [Kaboom sprite editor](https://docs.replit.com/tutorials/kaboom-editor) to create your own graphics for your Flappy world!
 - Add in some more sound effects and play some game music using the [`play`](https://kaboomjs.com/#play) function.
 
-Happy Coding!
+You can find the code for this tutorial here:
+
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/Flappy-Bird?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 
 
 
