@@ -13,7 +13,9 @@ This article is based on this [video tutorial](https://www.youtube.com/watch?v=h
 
 Head over to [Replit](https://replit.com) and create a new repl. Choose **Kaboom** as your project type. Now, give this repl a name, like "Flappy!".
 
-![Creating a new repl](/images/tutorials/35-flappy-bird/new-repl.png)
+<img src="/images/tutorials/35-flappy-bird/new-repl.png"
+    alt="Creating a new repl"
+    style="width: 90% !important;"/>
 
 After the repl has booted up, you should see a `main.js` file under the "Code" section. This is where we'll start coding. It already has some code in, but we'll replace that. 
 
@@ -21,7 +23,7 @@ Download the [sprites and asset files](/tutorial-files/flappy-bird-kaboom/flappy
 
 <img src="/images/tutorials/35-flappy-bird/upload-sprites.gif"
     alt="Uploading sprites"
-    style="width: 600px !important;"/>
+    style="width: 80% !important;"/>
 
 ## Initializing Kaboom
 
@@ -55,7 +57,7 @@ The first argument in each `load..` function is the name we want to refer to the
 
 <img src="/images/tutorials/35-flappy-bird/game-scenes.png"
     alt="game scenes"
-    style="width: 350px !important;"/>
+    style="width: 350px !important; height: 40% !important;"/>
 
 For this tutorial, we'll omit the intro scene, since we already know what Flappy bird is and how to play it. Feel free to add your own intro scene in later though!
 
@@ -153,7 +155,10 @@ Now we can get to the main part of the game - adding in the moving pipes that Fl
 
 Here is a diagram of the layout of the pipes in the game. We want to move the pipe gap, and therefore the pipes, up and down for each new pipe pair that gets created. This is so we don't just have the gap at the center point of the screen constantly - we want it to be slightly different for each pipe pair that comes along. We do want to keep the gap consistent though. 
 
-![pipe layout and gap](/images/tutorials/35-flappy-bird/pipe-gap.png)
+
+<img src="/images/tutorials/35-flappy-bird/pipe-gap.png"
+    alt="pipe layout and gap"
+    style="width: 75% !important;"/>
 
 
 Let's start with the case of having the pipe gap in the center of the screen. We'll give the pipe gap a size `PIPE_GAP`. Then to place the pipes, the bottom of the upper pipe should be `PIPE_GAP/2` pixels above the center point of the window, which is `height()/2`. Likewise, the top of the lower pipe should be `PIPE_GAP/2` pixels below the center point of the window, again which is `height()/2`. 
