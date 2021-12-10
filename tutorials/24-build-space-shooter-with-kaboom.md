@@ -56,25 +56,25 @@ kaboom({
   background: [0, 0, 0],
   width: 440,
   height: 275,
-  scale: 2
+  scale: 1.5
 });
 
 ```
-Here we import the kaboom library, and then initialize the context by calling `kaboom({ ... })`. We also set the size of the view to 440x275 pixels and `scale` to make the background twice the size on screen.
-Now, let's load up the sprites and sounds we will need in this game. This code loads each of the graphic elements we'll use, and gives them a name so we can refer to them when we build the game characters:
+Here we import the kaboom library, and then initialize the context by calling `kaboom({ ... })`. We also set the size of the view to 440x275 pixels and `scale` the background by a factor of `1.5` on screen.
+Now, let's load up the sprites and sounds we will need in this game. This code loads each of the graphic elements we'll use, and gives them a name, so we can refer to them when we build the game characters:
 
 ```javascript
-loadRoot("sprites/")
-loadSprite("stars", "stars.png")
-loadSprite("gem", "gem.png")
-loadSprite("spaceship", "spaceship.png")
-loadSprite("alien", "alien.png")
+loadRoot("sprites/");
+loadSprite("stars", "stars.png");
+loadSprite("gem", "gem.png");
+loadSprite("spaceship", "spaceship.png");
+loadSprite("alien", "alien.png");
 
-loadRoot("sounds/")
-loadSound("shoot","shoot.wav")
-loadSound("score","score.wav")
-loadSound("music","music.mp3")
-loadSound("explosion","explosion.wav")
+loadRoot("sounds/");
+loadSound("shoot","shoot.wav");
+loadSound("score","score.wav");
+loadSound("music","music.mp3");
+loadSound("explosion","explosion.wav");
 
 ```
 
@@ -103,6 +103,8 @@ scene("main", () => {
     layer("bg")
   ]);
 
+  // todo.. add main scene code here
+
 });
 
 go("main");
@@ -111,7 +113,9 @@ go("main");
 We define the scene using the [`scene`](https://kaboomjs.com/#scene) function. This function takes a string as the scene name – we're calling the scene "main".
 Then we create 3 layers: "background" (`bg`), "object" (`obj`) and "user interface" (`ui`). The `obj` layer is set as the default layer. We then add the stars sprite to the background layer.
 
-Finally, we use the [`go`](https://kaboomjs.com/#go) function to go to the main scene when the game starts up.
+Finally, we use the [`go`](https://kaboomjs.com/#go) function to go to the main scene when the game starts up. 
+
+**Note** The code snippets in the sections that follow have to be added within the body of the main scene unless specified otherwise.
 
 ## Creating the Game Map
 
@@ -120,7 +124,7 @@ Let's get a scene layout, or _map_, drawn on the screen. This will define the gr
 Kaboom has built-in support for defining game maps using text and the function [`addLevel`](https://kaboomjs.com/doc#addLevel). This takes away a lot of the hassle normally involved in loading and rendering maps.
 
 
-Add the code below to the `main.js` file, within the main scene, to create the game map:
+The code below creates the game map. Add it to the `main.js` file, within the main scene (below the code to add the stars sprite to the background layer). 
 
 ```javascript
 
@@ -242,26 +246,26 @@ const directions = {
 
 let current_direction = directions.RIGHT;
 
-keyDown("left", () => {
+onKeyDown("left", () => {
     player.flipX(-1);
-    player.angle = -0.2;
+    player.angle = -11;
     current_direction = directions.LEFT;
     player.move(-100,0);
 });
 
-keyDown("right", () => {
+onKeyDown("right", () => {
     player.flipX(1);
-    player.angle = -0.2;
+    player.angle = 11;
     current_direction = directions.RIGHT;
     player.move(100,0);
 });
 
 
-keyRelease("left", ()=>{
+onKeyRelease("left", ()=>{
     player.angle = 0;
 });
 
-keyRelease("right", ()=>{
+onKeyRelease("right", ()=>{
     player.angle = 0;
 });
 
@@ -269,20 +273,20 @@ keyRelease("right", ()=>{
 
 First, we create a constant object defining the directions our game allows. Then we create a variable to track the `current_direction` the spaceship is facing.
 
-Then we add the key-handling code. The key names `left` and `right` refer to the left and right arrow keys on the keyboard. Kaboom provides the [`keyDown`](https://kaboomjs.com/doc#keyDown) event, which lets us know if a certain key is being pressed. We create `keyDown` event handlers for each of the arrow keys. As long as the given key is held down, `keyDown` calls the event handler repeatedly.
+Then we add the key-handling code. The key names `left` and `right` refer to the left and right arrow keys on the keyboard. Kaboom provides the [`onKeyDown`](https://kaboomjs.com#onKeyDown) event, which lets us know if a certain key is being pressed. We create `onKeyDown` event handlers for each of the arrow keys. As long as the given key is held down, `onKeyDown` calls the event handler repeatedly.
 
-The code inside each `keyDown` event does the following:
+The code inside each `onKeyDown` event does the following:
 - The `flipX` function mirrors the player's spaceship image so that it looks different depending on the direction it is facing. We use `-1` to flip it to appear facing the left, `1` the right.
 - The function `player.angle` slightly tilts the spaceship while the key is being held down. This is so the spaceship looks like it is about to move in the given direction.
 - The `current_direction` tracking variable is updated. We'll use this variable when we add shooting.
 - The `move` function moves the spaceship in the given direction.
 
-We also have `keyRelease` event handlers for the left and right keys. These reset the spaceship's tilt angle to 0 (i.e. straight up) when the ship is no longer moving in that direction.
+We also have `onKeyRelease` event handlers for the left and right keys. These reset the spaceship's tilt angle to 0 (i.e. straight up) when the ship is no longer moving in that direction.
 
 Now we want to have the spaceship fly up when we press the `up arrow` key. To do this, we'll take advantage of Kaboom's [`jump`](https://kaboomjs.com/doc#body) attribute (which is part of the [`body`](https://kaboomjs.com/doc#body) component) and repurpose it for flying up. Add the following code to the main scene:
 
 ```javascript
-keyDown("up", () => {
+onKeyDown("up", () => {
       player.jump(100);
 });
 ```
@@ -295,7 +299,7 @@ Because the game takes place in outer space, the weapon of choice is a laser gun
 
 const BULLET_SPEED = 400;
 
-keyPress("space", () => {
+onKeyPress("space", () => {
 	spawnBullet(player.pos);
 });
 
@@ -324,9 +328,9 @@ function spawnBullet(bulletpos) {
 };
 ```
 
-First, we add a constant `BULLET_SPEED` to define the speed at which the laser "bullets" fly across the screen. Then we use the [`keyPress`](https://kaboomjs.com/doc#keyPress) event to trigger the shooting. Notice `keyPress` only calls the event handler once as the key is pressed, unlike the `keyDown` event we used for moving. This is because it's more fun if the player needs to bash the "fire" button as fast as possible to take down an enemy, rather than just having automatic weapons.
+First, we add a constant `BULLET_SPEED` to define the speed at which the laser "bullets" fly across the screen. Then we use the [`onKeyPress`](https://kaboomjs.com#onKeyPress) event to trigger the shooting. Notice `onKeyPress` only calls the event handler once as the key is pressed, unlike the `onKeyDown` event we used for moving. This is because it's more fun if the player needs to bash the "fire" button as fast as possible to take down an enemy, rather than just having automatic weapons.
 
-The `keyPress` handler calls the `spawnBullet` function with the player's current position. This function handles creating a new laser shot in the correct direction. The first few lines of the method adjust the bullet's starting position a little to the left or right of the spaceship's position. This is because the position of the spaceship that gets passed to the function is the center of the spaceship (remember the `origin` component we added to it earlier). We adjust it a little so that the bullet looks like it is coming from the edge of the spaceship.
+The `onKeyPress` handler calls the `spawnBullet` function with the player's current position. This function handles creating a new laser shot in the correct direction. The first few lines of the method adjust the bullet's starting position a little to the left or right of the spaceship's position. This is because the position of the spaceship that gets passed to the function is the center of the spaceship (remember the `origin` component we added to it earlier). We adjust it a little so that the bullet looks like it is coming from the edge of the spaceship.
 
 Then we add a new bullet object to the game using the [`add`](https://kaboomjs.com/doc#add) function. We don't use a sprite for the bullet, but draw a [`rect`](https://kaboomjs.com/doc#rect), or rectangle, with our given color. We tag it `bullet` so we can refer to it later when detecting if it hit something. We also give it a custom property, `bulletSpeed`, which is the distance and direction we want the bullet to move on each frame.
 
@@ -588,6 +592,21 @@ This `updateScore` function takes as its argument the number of points to add to
 
 Next we update the `scoreText` UI element we created previously. The player's score is converted to a string using JavaScript's [`toString`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) method, which is part of every object in JavaScript. It is also modified with [`padStart`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart), which makes sure the resulting score string is exactly `6` digits long, using 0s to put in front of the string (`start`) if the number is smaller than 6 digits long. This makes nice placeholders for the score, and gives a cue to the users as to the maximum score they could reach. Finally, we play a little sound to indicate that points have been earned. As before, we vary the pitch each time using [`detune`](https://kaboomjs.com/doc#play) to keep the sound fresh.
 
+To increment the score when the alien bugs get hit by a bullet, update the `onCollide` event we added earlier for a bullet and alien bug as follows:
+
+```javascript
+onCollide("alien","bullet", (alien, bullet) =>{
+    makeExplosion(alien.pos, 5, 5, 5);
+    destroy(alien);
+    destroy(bullet);
+    play("explosion", {
+		volume: 0.2,
+		detune: rand(0, 1200),
+	});
+    updateScore(10);  // new line
+});
+```
+
 The next UI element to add is the ship's shield health. This would be great as a kind of health-bar-style display, that starts out green and turns red when the shield is low. The game should end when the shield is fully depleted, as the spaceship is then totally destroyed.
 
 ```javascript
@@ -672,7 +691,7 @@ The final step in the shield health function is to check if the shield health is
 
 When the game ends, we destroy the spaceship to remove it from the scene. Now we have another opportunity to create some more explosions using the `makeExplosion` function we added earlier. This time we can go really big! To make a big impact, we create a `for` loop to set off 500 explosions all over the screen for seriously dramatic effect. We use the Kaboom [`wait`](https://kaboomjs.com/doc#wait) function to have a small delay between each explosion so that they don't all go off at once. Then we make each explosion happen at random positions on the map, passing in other parameters to the `makeExplosion` function to set the blast radius, number of sub-explosions and general size. We also play the `explosion` sound effect using Kaboom's [`play`](https://kaboomjs.com/doc#play) function. This time we don't adjust the volume down, as we want the sound to be as dramatic as possible. We detune it randomly again to create a true cacophony and sense of mayhem.
 
-After setting off all those sound effects and visual fireworks, we [`wait`](https://kaboomjs.com/doc#wait) for 2 seconds for everything to settle down, and then use the Kaboom function [`go`](https://kaboomjs.com/doc#go) to switch to a new scene, `endGame`, and wait for the player to play again. Add the code below to create the `endGame` scene:
+After setting off all those sound effects and visual fireworks, we [`wait`](https://kaboomjs.com/doc#wait) for 2 seconds for everything to settle down, and then use the Kaboom function [`go`](https://kaboomjs.com/doc#go) to switch to a new scene, `endGame`, and wait for the player to play again. Add the code below to create the `endGame` scene, at the bottom of `main.js` below the line `go("main")`:
 
 ```javascript
 scene("endGame", ()=> {
@@ -687,13 +706,13 @@ scene("endGame", ()=> {
   ]);
 
 
-  keyRelease("enter", ()=>{
+  onKeyRelease("enter", ()=>{
     go("main");
   });
 });
 ```
 
-This scene [`adds`](https://kaboomjs.com/doc#add) a large "GAME OVER" text over the screen until the player presses and releases the `enter` key.  Then the [`keyRelease`](https://kaboomjs.com/doc#keyRelease) event returns the player to the main scene, and uses [`go`](https://kaboomjs.com/doc#go) to switch scenes and restart the game. Because this is a new scene, in a new scope, we need to add the `MAP_WIDTH` and `MAP_HEIGHT` constants again.
+This scene [`adds`](https://kaboomjs.com/doc#add) a large "GAME OVER" text over the screen until the player presses and releases the `enter` key.  Then the [`onKeyRelease`](https://kaboomjs.com#onKeyRelease) event returns the player to the main scene, and uses [`go`](https://kaboomjs.com/doc#go) to switch scenes and restart the game. Because this is a new scene, in a new scope, we need to add the `MAP_WIDTH` and `MAP_HEIGHT` constants again.
 
 ## Allowing the Alien Bugs to Attack
 
@@ -722,7 +741,7 @@ Then we call the `updatePlayerShield` function we defined previously, with a con
 
 ## Raining Gems
 
-It's time to add the element that gives the game its purpose: gems the player can collect to earn points. Add this function to create a gem:
+It's time to add the element that gives the game its purpose: gems the player can collect to earn points. Add this function to the main scene to create a gem:
 
 
 ```javascript
