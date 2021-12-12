@@ -85,7 +85,6 @@ The first line, [`loadRoot`](https://kaboomjs.com/#loadRoot), specifies which fo
 The `bg` layer will be drawn first, beneath everything else, and we'll use that to specify a background image for our game. Do that now by adding the following code to your scene:
 
 ```javascript
-
 // Background
 add([
     sprite("space"),
@@ -181,20 +180,20 @@ In this game, our player will turn the nose of the spaceship with the left and r
 
 ```javascript
 // Movement keys
-keyDown("left", () => {
+onKeyDown("left", () => {
     player.angle += player.turn_speed;
 });
-keyDown("right", () => {
+onKeyDown("right", () => {
     player.angle -= player.turn_speed;
 });
 ```
 
-Run your repl now, and you should be able to turn the ship to the left and right by pressing the respective arrow keys. If you think it turns too fast or too slow, change the value of `turn_speed` in the player creation code. 
+Run your repl now, and you should be able to turn the ship to the left and right by pressing the respective arrow keys. If you think it turns too fast or too slow, change the value of `turn_speed` in the player creation code.
 
 Now let's implement the up and down keys, so the player can move around the scene. Enter the following code beneath the player turning code:
 
 ```javascript
-keyDown("up", () => {
+onKeyDown("up", () => {
     player.speed = Math.min(player.speed+player.acceleration, player.max_thrust);
     play("rocket_thrust", {
         volume: 0.1,
@@ -210,7 +209,7 @@ Additionally, we set our rocket thrust sound to [play](https://kaboomjs.com/doc#
 We'll handle deceleration by doing the opposite to acceleration, using [Math.max()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max) to choose the maximum between the player's speed minus their deceleration, and their maximum speed in reverse (i.e. negative). Add the following code below the acceleration controls:
 
 ```javascript
-keyDown("down", () => {
+onKeyDown("down", () => {
     player.speed = Math.max(player.speed-player.deceleration, -player.max_thrust);
     play("rocket_thrust", {
         volume: 0.2,
@@ -225,11 +224,11 @@ If you run your repl now and try to accelerate or decelerate, the sound will pla
 
 Movement in Kaboom and most other 2D game development systems is handled using X and Y coordinates on a plane. To move an object left, you subtract from its X coordinate, and to move it right, you add to its X coordinate. To move an object up, you subtract from its Y coordinate, and to move it down, you add to its Y coordinate. Therefore, basic four-directional movement in games like Snake or Pacman is quite straightforward. The directional movement we need for Asteroids (commonly called [tank controls](https://en.wikipedia.org/wiki/Tank_controls)) is more complex, requiring some calculations.
 
-At a high level, we want to move a given distance (`player.speed`) in a given direction (`player.angle`). As a first step, let's create an `action` callback for our `mobile` tag. This code, like our UI drawing code above, will be run by every object with the "mobile" tag on every frame of the game, so we can use it for more than just the player object. Add the following code at the bottom of your main scene:
+At a high level, we want to move a given distance (`player.speed`) in a given direction (`player.angle`). As a first step, let's create an `onUpdate` callback for our `mobile` tag. This code, like our UI drawing code above, will be run by every object with the "mobile" tag on every frame of the game, so we can use it for more than just the player object. Add the following code at the bottom of your main scene:
 
 ```javascript
 // Movement
-action("mobile", (e) => {
+onUpdate("mobile", (e) => {
   e.move(pointAt(e.speed, e.angle));
 });   
 ```
@@ -269,7 +268,7 @@ There's one little problem though: thrust too long, and you'll fly off the scree
 
 ```javascript
 // Wrap around the screen
-action("wraps", (e) => {
+onUpdate("wraps", (e) => {
     if (e.pos.x > width()) {
         e.pos.x = 0;
     }
@@ -300,15 +299,15 @@ First, let's create an array with our four rocket sprites. Add the following cod
 const thrust_animation = ["rocket1", "rocket2", "rocket3", "rocket4"];
 ```
 
-Then we need some way to indicate when to start and stop the animation. We can use Kaboom's [`keyPress`](https://kaboomjs.com/doc#keyPress) and [`keyRelease`](https://kaboomjs.com/doc#keyRelease) events for this, as well as two of the properties we defined for our player (`thrusting` and `animation_frame`). Add the following code:
+Then we need some way to indicate when to start and stop the animation. We can use Kaboom's [`onKeyPress`](https://kaboomjs.com/doc#onKeyPress) and [`onKeyRelease`](https://kaboomjs.com/doc#onKeyRelease) events for this, as well as two of the properties we defined for our player (`thrusting` and `animation_frame`). Add the following code:
 
 ```javascript
 // rocket animation helpers
-keyPress("up", () => {
+onKeyPress("up", () => {
     player.thrusting = true;
     player.animation_frame = 0;
 });
-keyRelease("up", () => {
+onKeyRelease("up", () => {
     player.thrusting = false;
 });
 ```
@@ -317,7 +316,7 @@ Now let's draw the animation. We'll use a draw event callback, which lets us mak
 
 ```javascript
 // draw current rocket animation frame
-on("draw", "player", (p) => {
+onDraw("player", (p) => {
   if (player.thrusting) {
     // draw current frame
     drawSprite( {
@@ -332,13 +331,13 @@ on("draw", "player", (p) => {
 
 Here we're using our `pointAt` function again, but this time we're looking for the rocket end of the ship, rather than its nose. We use our `thrust_animation` array in conjunction with the player's `animation_frame` value to figure out which rocket image to draw.
 
-To actually make the rocket animate (i.e. cycle through animation frames), we'll use Kaboom's [`action`](https://kaboomjs.com#action) function, and create a callback that changes the animation frame every 0.1 seconds. Add the following code:
+To actually make the rocket animate (i.e. cycle through animation frames), we'll use Kaboom's [`onUpdate`](https://kaboomjs.com#onUpdate) function, and create a callback that changes the animation frame every 0.1 seconds. Add the following code:
 
 ```javascript
 let move_delay = 0.1;
 let timer = 0;
 // loop rocket animation
-action(() => {
+onUpdate(() => {
   timer += dt();
   if (timer < move_delay) return;
   timer = 0;
@@ -362,7 +361,7 @@ To make our ship fire laser bullets, we need to create bullet objects just in fr
 
 ```javascript
 // Shooting
-keyDown("space", () => {
+onKeyDown("space", () => {
     add([
         sprite("bullet"),
         pos(player.pos.add(pointAt(player.width/2, player.angle))),
@@ -390,7 +389,7 @@ At the moment, a bullet object will be created in every frame while space is dow
 
 ```javascript
 // Shooting
-keyDown("space", () => {
+onKeyDown("space", () => {
     if (player.can_shoot) { // new if statement
         add([
             sprite("bullet"),
@@ -499,7 +498,7 @@ Let's go through the code for each of these, adding it to our main scene just be
 
 ```javascript
 // Collisions
-collides("player", "asteroid", (p, a) => {
+onCollide("player", "asteroid", (p, a) => {
     if (!a.initializing) {
         p.lives--;
     }
@@ -511,7 +510,7 @@ This code reduces the player's lives by one as long as the asteroid is not initi
 Next, add the code for collisions between a bullet and an asteroid:
 
 ```javascript
-collides("bullet", "asteroid", (b, a) => {
+onCollide("bullet", "asteroid", (b, a) => {
     if (!a.initializing) {
         destroy(b);
         destroy(a);
@@ -521,12 +520,12 @@ collides("bullet", "asteroid", (b, a) => {
 });
 ```
 
-This very simple code destroys both the bullet and the asteroid, plays an explosion sound, and increments the game score. 
+This very simple code destroys both the bullet and the asteroid, plays an explosion sound, and increments the game score.
 
-Finally, add the following to handle asteroid collisions. 
+Finally, add the following to handle asteroid collisions.
 
 ```javascript
-collides("asteroid", "asteroid", (a1, a2) => {
+onCollide("asteroid", "asteroid", (a1, a2) => {
     if (!(a1.initializing || a2.initializing)) {
         a1.speed = -a1.speed;
         a2.speed = -a2.speed;
@@ -546,7 +545,7 @@ The player's ship can now lose lives by crashing into asteroids, but this doesn'
 
 ```javascript
 // Collisions
-collides("player", "asteroid", (p, a) => {
+onCollide("player", "asteroid", (p, a) => {
     if (!a.initializing) {
         p.trigger("damage"); // previously lives--
     }
@@ -584,7 +583,7 @@ We need to give the player a way to restart the game and try again. Add the foll
 
 ```javascript
 // Restart game
-keyPress("r", () => {
+onKeyPress("r", () => {
     go("main");
 });
 ```
@@ -630,7 +629,7 @@ This code draws a number of scaled down player spaceships equal to the number of
 Our game is fully playable now, but it's still missing some niceties, and one core gameplay feature that you should be able to identify if you've played *Asteroids* before. In this final section, we'll add the following:
 
 * Some background music.
-* Smaller, faster asteroids that our large asteroids break into when destroyed. 
+* Smaller, faster asteroids that our large asteroids break into when destroyed.
 * Temporary invulnerability for the player for a few seconds after they take damage.
 
 ### Background music
@@ -688,7 +687,7 @@ Our small asteroids are mostly similar to our large ones. Differences include th
 To make our game true to the original *Asteroids*, we should give the player more points for destroying these fast, small asteroids. Find and modify the bullet–asteroid collision code as below:
 
 ```javascript
-collides("bullet", "asteroid", (b, a) => {
+onCollide("bullet", "asteroid", (b, a) => {
     if (!a.initializing) {
         destroy(b);
         destroy(a);
@@ -709,7 +708,7 @@ A nice touch to make our game a little more forgiving is temporary invulnerabili
 player.on("damage", () => {
     if (!player.invulnerable) { // new if statement
         player.lives--;
-    }    
+    }
 
     // destroy ship if lives finished
     if (player.lives <= 0) {
