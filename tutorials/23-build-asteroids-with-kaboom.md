@@ -38,27 +38,19 @@ Before we start coding, we need to upload our sprites and sounds. Download [this
 
 Once you've uploaded the files, you can click on the "Kaboom" icon in the sidebar, and return to the "main" code file.
 
-## Setting the scene
+## Setting up Kaboom
 
-A Kaboom.js game is made up of scenes, which you can think of as different screens, levels or stages. You can use scenes for game levels, menus, cut-scenes and any other screens your game might contain. In this tutorial, we'll just use one scene, which will contain the entire game.
-
-Scenes are further divided into layers, which are populated by game objects (also called sprites). The layer an object is on will determine when it gets drawn and which other objects it can collide with. In this game, we'll use three layers: the background layer (`bg`), the object layer (`obj`), and UI layer (`ui`). To initialize these layers, replace the example code in `main.js` with the following:
+To start, we need to initialise and set up Kaboom with the scale we want for the game window. Replace the code in `main.js` with the code below:
 
 ```javascript
 import kaboom from "kaboom";
 
-// initialize context
-kaboom();
-
-layers([
-  "bg",
-  "obj",
-  "ui",
-], "obj");
+kaboom({
+  scale: 1.5
+});
 ```
 
-On the first line we import the kaboom library, and then initialize the context by calling `kaboom()`. This will give us a blank canvas with a nice checkerboard pattern. Then we declare the game layers.
-These layers will be drawn in the order declared. The majority of gameplay will happen in the `obj` layer, so we've set that as the default layer. Any objects we create will be placed in this layer, unless we specify a different layer when we create the object.
+This will give us a blank canvas with a nice checkerboard pattern.
 
 Now, let's load up the sprites and sound files to make them available in the game. This code loads each of the graphic elements we'll use, and gives them a name so we can refer to them when we build the game objects:
 
@@ -72,6 +64,10 @@ loadSprite("rocket4", "rocket4.png");
 loadSprite("ship", "ship.png");
 loadSprite("bullet", "bullet.png");
 loadSprite("asteroid", "asteroid.png");
+loadSprite("asteroid_small1", "asteroid_small1.png");
+loadSprite("asteroid_small2", "asteroid_small2.png");
+loadSprite("asteroid_small3", "asteroid_small3.png");
+loadSprite("asteroid_small4", "asteroid_small4.png");
 
 loadRoot("sounds/");
 loadSound("rocket_thrust", "rocket_thrust.wav");
@@ -82,7 +78,32 @@ loadSound("Steamtech-Mayhem_Looping","Steamtech-Mayhem_Looping.mp3");
 
 The first line, [`loadRoot`](https://kaboomjs.com/#loadRoot), specifies which folder to load all the sprites and game elements from, so we don't have to keep typing it in for each sprite. Then each line loads a game sprite and gives it a name so that we can refer to it in code later. We also use similar code to load sound elements for our game using the [`loadSound`](https://kaboomjs.com/#loadSound) function.
 
-The `bg` layer will be drawn first, beneath everything else, and we'll use that to specify a background image for our game. Do that now by adding the following code to your scene:
+## Setting the scene
+
+A Kaboom.js game is made up of scenes, which you can think of as different screens, levels or stages. You can use scenes for game levels, menus, cut-scenes and any other screens your game might contain. In this tutorial, we'll just use one scene, which will contain the entire game logic.
+
+Scenes are further divided into layers, which are populated by game objects (also called sprites). The layer an object is on will determine when it gets drawn and which other objects it can collide with. In this game, we'll use three layers: the background layer (`bg`), the object layer (`obj`), and UI layer (`ui`). To initialize these layers, add the code below to the bottom of the `main.js` file:
+
+```javascript
+scene("main", ()=> {
+  layers([
+    "bg",
+    "obj",
+    "ui",
+  ], "obj");
+  
+  // add more scene code here 
+});
+
+go("main");
+```
+
+On the first line we define the `main` scene, and then we declare the game layers.
+These layers will be drawn in the order declared. The majority of gameplay will happen in the `obj` layer, so we've set that as the default layer. Any objects we create will be placed in this layer, unless we specify a different layer when we create the object.
+
+**Note:** The code snippets in the sections that follow should be added within the body of the main scene unless specified otherwise.
+
+The `bg` layer will be drawn first, beneath everything else, and we'll use that to specify a background image for our game. Do that now by adding the following code to within the body of the main scene.
 
 ```javascript
 // Background
@@ -115,7 +136,7 @@ Although Kaboom allows us to [create objects that display text](https://kaboomjs
 ui.on("draw", () => {
   drawText({
     text: "Score: " + score,
-    size: 16,
+    size: 14,
     font: "sink",
     pos: vec2(8, 24)
   })
@@ -139,6 +160,8 @@ const player = add([
     pos(160, 120),
     rotate(0),
     origin("center"),
+    solid(),
+    area(),
     "player",
     "mobile",
     "wraps",
@@ -161,10 +184,11 @@ const player = add([
 
 Here we're creating a game object with a number of [components](https://kaboomjs.com/doc#add), each of which give our object some data or behavior. These are:
 
-* The [`sprite`](https://kaboomjs.com/doc#sprite) component, which draws the `ship` sprite.
-* The [`pos`](https://kaboomjs.com/doc#pos) (position) component, which places the player near the center of the screen in the Replit browser.
-* The [`rotate`](https://kaboomjs.com/doc#rotate) component, which will allow the player to turn the ship with the left and right arrow keys.
-* The [`origin`](https://kaboomjs.com/doc#origin) component, which sets the sprite's *origin* to "center", so that when we rotate the ship, it will rotate around the middle of its sprite rather than the default top-left corner.
+* The [`sprite`](https://kaboomjs.com/#sprite) component, which draws the `ship` sprite.
+* The [`pos`](https://kaboomjs.com/#pos) (position) component, which places the player near the center of the screen in the Replit browser.
+* The [`rotate`](https://kaboomjs.com/#rotate) component, which will allow the player to turn the ship with the left and right arrow keys.
+* The [`origin`](https://kaboomjs.com/#origin) component, which sets the sprite's *origin* to "center", so that when we rotate the ship, it will rotate around the middle of its sprite rather than the default top-left corner.
+* The [`area`](https://kaboomjs.com/#area) component, which generates the collision area for the ship to detect collisions.
 
 Following that initial configuration, we're giving the player object three tags: `player`, `mobile` and `wraps`. Kaboom uses a tagging system to apply behavior to objects -- you can think of this as similar to [multiple inheritance](https://en.wikipedia.org/wiki/Multiple_inheritance). By tagging objects with shared behavior, we can save ourselves from duplicating code.
 
@@ -181,10 +205,10 @@ In this game, our player will turn the nose of the spaceship with the left and r
 ```javascript
 // Movement keys
 onKeyDown("left", () => {
-    player.angle += player.turn_speed;
+    player.angle -= player.turn_speed;
 });
 onKeyDown("right", () => {
-    player.angle -= player.turn_speed;
+    player.angle += player.turn_speed;
 });
 ```
 
@@ -234,8 +258,6 @@ onUpdate("mobile", (e) => {
 ```
 
 First, we move our object, using the function `pointAt()`, which takes a speed and an angle and returns the corresponding X and Y co-ordinates as a [`vec2`](https://kaboomjs.com/doc#vec2) object, Kaboom's 2D vector type. This data type is provided by Kaboom specifically for working with X and Y coordinates, and comes with a number of useful functions, such as addition and subtraction.
-
-After moving, we invoke Kaboom's [`resolve()`](https://kaboomjs.com/doc#solid) method, which is necessary to determine collisions with solid objects. This will become relevant later on, when we create our asteroids.
 
 Now we need to create the `pointAt()` function. Before we jump into the code, let's think about the problem. Our movement can be drawn as an angled line on a plane, and its X and Y coordinates as horizontal and vertical lines connected to it, giving us a right-angled triangle.
 
@@ -396,6 +418,7 @@ onKeyDown("space", () => {
             pos(player.pos.add(pointAt(player.width/2, player.angle))),
             rotate(player.angle),
             origin("center"),
+            area(),
             "bullet",
             "mobile",
             "destructs",
@@ -435,7 +458,7 @@ for (let i = 0; i < NUM_ASTERIODS; i++) {
     var a = add([
         sprite("asteroid"),
         pos(spawnPoint),
-        rotate(rand(1,7)),
+        rotate(rand(1,90)),
         origin("center"),
         area(),
         solid(),
@@ -447,6 +470,8 @@ for (let i = 0; i < NUM_ASTERIODS; i++) {
             initializing: true
         }
     ]);
+
+    a.pushOutAll();
     
 }
 ```
@@ -463,6 +488,7 @@ Instead of doing that, we can leverage Kaboom's collision detection to achieve t
     while (a.isColliding("mobile")) {
         spawnPoint = asteroidSpawnPoint();
         a.pos = spawnPoint;
+        a.pushOutAll();
     }
 
     a.initializing = false;
@@ -596,7 +622,7 @@ Lastly, we need to add the player's lives to the game UI, so they know how much 
 ui.on("draw", () => {
   drawText({
     text: "Score: " + score,
-    size: 16,
+    size: 14,
     font: "sink",
     pos: vec2(8, 24)
   })
@@ -659,14 +685,15 @@ on("destroy", "asteroid", (a) => {
                     a.pos.add(vec2(a.width/4, a.height/4))];
 
         // small asteroids move out from the center of the explosion
-        rotations = [0.6,2.4,4,5.4];
+        rotations = [16,34,65,87];
     
         for (let i = 0; i < positions.length; i++) {
-            add([
+            var s = add([
                 sprite(`asteroid_small${i+1}`),
                 pos(positions[i]),
                 rotate(rotations[i]),
                 origin("center"),
+                area(),
                 solid(),
                 "asteroid",
                 "small",
@@ -677,6 +704,8 @@ on("destroy", "asteroid", (a) => {
                     initializing: false
                 }
             ]);
+
+            s.pushOutAll();
         }
     }
 });
@@ -727,13 +756,25 @@ player.on("damage", () => {
 });
 ```
 
-Here we're making the player invulnerable and then using a `wait` callback to make them vulnerable again after a given number of seconds, similar to what we did for the laser timeout. We're also making sure the player is visible by setting [`player.hidden`](https://kaboomjs.com/doc#add) to false, because the way we're going to indicate the player's invulnerability is by having their ship flash rapidly. Add the following `loop` timer just below the above code:
+Here we're making the player invulnerable and then using a `wait` callback to make them vulnerable again after a given number of seconds, similar to what we did for the laser timeout. We're also making sure the player is visible by setting [`player.hidden`](https://kaboomjs.com/doc#add) to false, because the way we're going to indicate the player's invulnerability is by having their ship flash rapidly. Find and update the `onUpdate` event callback we added earlier for rocket thrust animation :
 
 ```javascript
-loop(0.1, () => {
-    if (player.invulnerable) {
-        player.hidden = !player.hidden;
+onUpdate(() => {
+  timer += dt();
+  if (timer < move_delay) return;
+  timer = 0;
+
+  if (player.thrusting) {
+    player.animation_frame++;
+    if (player.animation_frame >= thrust_animation.length) { // wrap to start
+      player.animation_frame = 0;
     }
+  }
+
+  // new if statement
+  if (player.invulnerable) {  
+    player.hidden = !player.hidden;
+  }
 });
 ```
 
@@ -748,7 +789,6 @@ We've covered a lot of ground in this tutorial and touched on a lot of Kaboom's 
 
 You can find the game repl below:
 
-<!--
-<iframe height="400px" width="100%" src="https://replit.com/@ritza/asteroids?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
--->
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/Asteroids-new?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 
