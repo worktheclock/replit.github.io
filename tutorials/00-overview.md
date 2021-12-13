@@ -12,9 +12,9 @@ In the second part of the series, you'll work through a set of projects, includi
 
 ### Video introduction
 
-You can also see the very first tutorial - an introduction to Replit - in video-form below.
+If you prefer video, here's a quick start walkthrough, or read the text tutorials below.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SDlrhS8O3kI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZAC0TQEU5gI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <a name="part1"></a>
 ## Part 1: beginner tutorials - Replit features

@@ -15,6 +15,12 @@ Every repl you create is a fully functional development and production environme
 
 We know that's a lot to take in, so we've broken down some of the key features below for [developers](#developers), [startups](#hosting), [teachers](#teachers) and [learners](#learners). Choose your own path, or go through all of them to become an expert in all things Replit.
 
+Watch these two videos for a general introduction and some tips and tricks, or read on below.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZAC0TQEU5gI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VGiCFnyTRRk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <a name="developers"></a>
 ## Writing Code: Replit for Software Developers
 
