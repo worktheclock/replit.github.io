@@ -598,7 +598,7 @@ When objects are destroyed in Kaboom, the "destroy" event is triggered. We'll us
 // End game on player destruction
 player.on("destroy", () => {
     add([
-        text(`GAME OVER\n\nScore: ${score}\n\n[R]estart?`, { size: 24 }),
+        text(`GAME OVER\n\nScore: ${score}\n\n[R]estart?`, { size: 20 }),
         pos(width()/2, height()/2),
         layer("ui")
     ]);
