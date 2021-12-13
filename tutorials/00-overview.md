@@ -14,7 +14,7 @@ In the second part of the series, you'll work through a set of projects, includi
 
 If you prefer video, here's a quick start walkthrough, or read the text tutorials below.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ZAC0TQEU5gI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZAC0TQEU5gI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <a name="part1"></a>
 ## Part 1: beginner tutorials - Replit features
