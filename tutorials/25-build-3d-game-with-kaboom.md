@@ -23,19 +23,46 @@ Head over to [Replit](https://replit.com) and create a new repl. Choose **Kaboom
 
 ![New repl](/images/tutorials/25-3d-game-kaboom/new-repl.png)
 
-After the repl has booted up, you should see a `main.js` file under the "Scenes" section. This is where we'll start coding.
+After the repl has booted up, you should see a `main.js` file under the "Code" section. This is where we'll start coding.
 
 ## Setting up the Kaboom environment
 
-The Kaboom interface on Replit is specialised for game-making. Besides the Space Invader icon, you'll notice a few special folders in the file try, like "Scenes", '"Sprites", and "Sounds". These special folders take care of loading up assets, and all the necessary code to start scenes and direct the game. You can read up more about the Kaboom interface [here](https://docs.replit.com/tutorials/kaboom).
+The Kaboom interface on Replit is specialised for game-making. Besides the Space Invader icon, you'll notice a few special folders in the file try, like "Code", '"Sprites", and "Sounds". These special folders take care of loading up assets, and all the necessary code to start scenes and direct the game. You can read up more about the Kaboom interface [here](https://docs.replit.com/tutorials/kaboom).
 
 If you haven't already, download this [zip file](/tutorial-files/3d-game-kaboom/3d-game-resources.zip) containing all the sprites and sounds for the game. Extract the file on your computer, then add the sprites to the "Sprites" folder, and the sounds to the "Sounds" folder.
 
-![Uploading sprites](/images/tutorials/25-3d-game-kaboom/upload-sprites.gif)
+<img src="/images/tutorials/25-3d-game-kaboom/upload-sprites.gif"
+    alt="Uploading sprites"
+    style="width: 50% !important;"/>
 
-To set up the game play environment, click the dropdown next to the Kaboom menu. Uncheck "Full Screen", and set the Width to 320 and Height to 200. Then choose dark blue or black as the "Clear Color".
 
-![Set up Kaboom environment](/images/tutorials/25-3d-game-kaboom/setup.gif)
+To set up the game play environment, we need to set up Kaboom with the screen size and colors we want for the game window. Replace the code in `main.js` with the code below:
+
+```javascript
+import kaboom from "kaboom";
+
+kaboom({
+  background: [0, 0, 0],
+  width: 320,
+  height: 200,
+  scale: 2
+});
+```
+
+Here we import the kaboom library, and then initialize the context by calling `kaboom({ ... })`. We set the size of the view to 320x200 pixels and `scale` to make the background twice the size on screen.
+Now, let's load up the sprites and sounds we will need in this game. The code below loads each of the graphic elements we'll use, and gives them a name, so we can refer to them when we build the game characters:
+
+```javascript
+loadRoot("sprites/")
+loadSprite("cockpit", "cockpit.png")
+loadSprite("alien", "alien.png")
+
+loadRoot("sounds/")
+loadSound("shoot","shoot.wav")
+loadSound("explosion","explosion.wav")
+```
+
+The first line, [`loadRoot`](https://kaboomjs.com/#loadRoot), specifies which folder to load all the sprites and game elements from, so we don't have to keep typing it in for each sprite. Then each line loads a game sprite and gives it a name so that we can refer to it in code later. We use similar code to load the sounds we will need in this game, but instead of [`loadSprite`](https://kaboomjs.com/#loadSprite) we use [`loadSound`](https://kaboomjs.com/#loadSound) to load sounds.
 
 ## Creating the interface layers
 
@@ -81,6 +108,7 @@ function spawnAlien(){
         sprite("alien"),
         pos(x,y),
         scale(0.2),
+        area(),
         rotate(0),
         {
             xpos: rand(-1*SCREEN_WIDTH/2, SCREEN_WIDTH/2),
@@ -194,9 +222,12 @@ onUpdate(()=>{
 
     if (x>= 0 && x<= SCREEN_WIDTH && y>=0 && y<= SCREEN_HEIGHT) {
       const scaled_z = star.zpos * 0.0005;
-      const intensity = 1 - scaled_z;
+      const intensity = (1 - scaled_z) * 255;
 
-      drawRect(vec2(x,y), 1, 1, {
+      drawRect({
+        width: 1,
+        height: 1,
+        pos: vec2(x,y),
         color: rgb(intensity, intensity, intensity)
       });
     }
@@ -215,7 +246,7 @@ Now take a look at the [`onUpdate`](https://kaboomjs.com/doc#onUpdate) event han
 - We don't use an object filter to look for the stars, as we didn't create them as Kaboom objects. Instead, we just cycle through each star in the `stars` array.
 - Instead of destroying the star and removing it from the array when it reaches the 'front' of the screen, we recycle it by resetting its `z-pos` back to 1000.
 - We also check if the star is out of the screen view. If it is, we don't draw it, to save a bit of overhead.
-- Instead of using the `z-pos` to calculate a value by which to scale the star, we use it to calculate the star's intensity, or brightness. Kaboom uses color values in the range 0-1. So we first scale the `z-pos` down to below 1. Then we subtract it from 1 (the maximum color value, i.e. brightest value) to create an inverse relationship between `z-pos` and intensity. In other words, stars further away from us have higher `zpos` values, giving us lower color intensity. This makes stars far away glow dimly, while those closer to our view look brighter.
+- Instead of using the `z-pos` to calculate a value by which to scale the star, we use it to calculate the star's intensity, or brightness. Kaboom uses color values in the range 0-255. So we first scale the `z-pos` down to below 1. Then we subtract it from 1 to create an inverse relationship between `z-pos` and intensity. We then multiply the intensity value by 255 to scale it to a value that is within the range 0-255. In other words, stars further away from us have higher `zpos` values, giving us lower color intensity. This makes stars far away glow dimly, while those closer to our view look brighter.
 - Finally, we use the Kaboom's [drawRect](https://kaboomjs.com/doc#drawRect) method to directly draw the star to the screen. As there is no pixel level drawing function in Kaboom, we create a rectangle of size 1 to draw just one pixel.
 
 ## Adding the spaceship cockpit
@@ -274,25 +305,25 @@ Now we can add some event handlers for keyboard input:
         const delta =  MOVE_DELTA * dt();
         shiftAliens(delta, 0);
         shiftStars(delta*0.01, 0);
-        camRot(0.1);
+        camRot(5.7);
     });
 
     onKeyDown("right", () => {
         const delta =  -1 * MOVE_DELTA * dt();
         shiftAliens(delta, 0);
         shiftStars(delta*0.01, 0);
-        camRot(-0.1);
+        camRot(-5.7);
     });
 
 
     onKeyDown("up", () => {
-        const delta =  -1 * MOVE_DELTA * dt();
+        const delta = MOVE_DELTA * dt();
         shiftAliens(0, delta);
         shiftStars(0,delta*0.01);
     });
 
     onKeyDown("down", () => {
-        const delta = MOVE_DELTA * dt();
+        const delta = -1 * MOVE_DELTA * dt();
         shiftAliens(0, delta);
         shiftStars(0, delta*0.01);
     });
@@ -324,7 +355,7 @@ const vertical_crosshair = add([
     rect(1, 10),
     origin('center'),
     pos(SCREEN_WIDTH*0.5, SCREEN_HEIGHT*0.33),
-    color(0, 1, 1),
+    color(0, 255, 255),
     layer("ui")
 ]);
 
@@ -332,7 +363,7 @@ const horizontal_crosshair = add([
     rect(10, 1),
     origin('center'),
     pos(SCREEN_WIDTH*0.5, SCREEN_HEIGHT*0.33),
-    color(0, 1, 1),
+    color(0, 255, 255),
     layer("ui")
 ]);
 
@@ -355,7 +386,8 @@ function spawnBullet() {
     add([
         rect(1, 1),
         pos(BULLET_ORIGIN_LEFT),
-        color(1, 0, 0),
+        area(),
+        color(255, 0, 0),
         "bullet",
         {
             bulletSpeed:  BULLET_SPEED ,
@@ -366,7 +398,7 @@ function spawnBullet() {
     add([
         rect(1, 1),
         pos(BULLET_ORIGIN_RIGHT),
-        color(1, 0, 0),
+        color(255, 0, 0),
         "bullet",
         {
             bulletSpeed:  -1*BULLET_SPEED,
@@ -385,7 +417,7 @@ When the player fires, we call the `spawnBullet` function to create a new set of
 
 Then we calculate where we want the bullets to end up. This is the same position as the cross hairs.
 
-Using these values, we create 2 bullet objects - simple 1 pixel objects with the tag `bullet` and color set to red `(1,0,0)` so they look menacing. We also add custom properties to the object: A speed for the bullet to move at, and the vanishing point where its course ends.
+Using these values, we create 2 bullet objects - simple 1 pixel objects with the tag `bullet` and color set to red `(255,0,0)` so they look menacing. We also add custom properties to the object: A speed for the bullet to move at, and the vanishing point where its course ends.
 
 As a final detail, we set our "shoot" sound to play as each bullet is created, adjusting the volume and applying a randomly generated detune value so that the pitch of the sound is slightly different each time it's played.
 
@@ -541,7 +573,7 @@ Then we can modify the `onUpdate("alien",....)` event handler that we added earl
             alien.pos.x <= STRIKE_ZONE.x2 &&
             alien.pos.y >= STRIKE_ZONE.y1 &&
             alien.pos.y <= STRIKE_ZONE.y2){
-                camShake(20);
+                shake(20);
                 makeExplosion(alien.pos, 10, 10, 10);
         }
         destroyAlien(alien);
@@ -550,7 +582,7 @@ Then we can modify the `onUpdate("alien",....)` event handler that we added earl
 
 We've modified the code to check if the alien is really close to us (`alien.zpos < 1 `), and if it is, we check if it is within the bounds of the `STRIKE_ZONE` area. The strike zone is a rectangle - you could implement more complex shapes if you wanted to be more accurate about where the alien can hit. However, a rectangle approximation is OK for this game.
 
-If the alien is close enough, and within our strike zone, we use the [`camShake`](https://kaboomjs.com/doc#camShake) effect to make it "feel" like we've been hit. Then we create an explosion at the point of impact for some visual effects.
+If the alien is close enough, and within our strike zone, we use the [`shake`](https://kaboomjs.com#shake) effect to make it "feel" like we've been hit. Then we create an explosion at the point of impact for some visual effects.
 
 ![Colliding](/images/tutorials/25-3d-game-kaboom/colliding.gif)
 
@@ -575,4 +607,5 @@ The spaceship cockpit was made by Ritza.
 
 Thank you to all the creators for putting their assets up with a Creative Commons license and allowing us to use them.
 
-<iframe height="400px" width="100%" src="https://replit.com/@ritza/3d-space-shooter?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@ritza/3d-space-shooter-new?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
