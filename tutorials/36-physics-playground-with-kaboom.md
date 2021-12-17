@@ -40,7 +40,7 @@ add([
 ]);
 ```
 
-This code loads a sprite for Kaboom's mascot Bean and places it near the top of the screen. Before we start coding, we'll remove the code for adding Bean, leaving the following lines:
+This code loads a sprite for Kaboom's mascot Bean, and places Bean near the top of the screen. Before we start coding, we'll remove the code for adding Bean, leaving the following lines:
 
 ```javascript
 import kaboom from "kaboom";
@@ -49,7 +49,7 @@ import kaboom from "kaboom";
 kaboom();
 ```
 
-This code initialises Kaboom and gives us a blank canvas to work with. We'll start by defining a level containing walls, movable crates and the player object. Add the following code beneath `kaboom();`: 
+Our edited code initialises Kaboom and gives us a blank canvas to work with. We'll start by defining a level containing walls, movable crates, and the player object. Add the following code beneath `kaboom();`: 
 
 ```javascript
 // level
@@ -108,7 +108,7 @@ addLevel([
 });
 ```
 
-This code uses Kaboom's [`addLevel()`](https://kaboomjs.com/#addLevel) function to visually construct a level. This function takes two arguments: an ASCII art representation of the level, and a JSON object defining the width and height of individual blocks, as well as definitions for each of the objects used. Let's take a closer look at each of these definitions, starting with the wall object.
+This code uses Kaboom's [`addLevel()`](https://kaboomjs.com/#addLevel) function to visually construct a level. This function takes two arguments: an ASCII art representation of the level, and a JSON object defining the width and height of individual blocks and providing definitions for each of the objects used. Let's take a closer look at each of these definitions, starting with the wall object.
 
 ```javascript
     "=": () => [ // wall
@@ -120,7 +120,7 @@ This code uses Kaboom's [`addLevel()`](https://kaboomjs.com/#addLevel) function 
     ],
 ```
 
-A [game object definition](https://kaboomjs.com/#add) in Kaboom is a list of components, tags, and optionally custom attributes and functions. Components are a core part of Kaboom – they provide different functionality to game objects, from an object's appearance to functionality such as collision detection.
+A [game object definition](https://kaboomjs.com/#add) in Kaboom is a list of components and tags, and optionally custom attributes and functions. Components are a core part of Kaboom – they provide different functionality to game objects, from an object's appearance to functionality such as collision detection.
 
 This wall object has four components:
 
@@ -176,7 +176,7 @@ Finally, let's look at the player object:
 
 Note the following:
 
-* As we're using the [`circle`](https://kaboomjs.com/#circle) component to draw the player, we must specify an explicit width and height for the `area()` component. All collision areas in Kaboom.js are rectangular (as of v2000.1.6).
+* As we're using the [`circle`](https://kaboomjs.com/#circle) component to draw the player, we must specify a width and height for the `area()` component. All collision areas in Kaboom.js are rectangular (as of v2000.1.6).
 * We've added `speed` and `jumpspeed` custom variables to the player object, which we'll use to control its movement speed and jump height.
 
 Run your repl now, and you'll see your level, with player, crates and walls. As we've placed the player in mid-air, you should see them fall to the platform below, confirming the presence of gravity.
@@ -193,7 +193,7 @@ Let's write some code to control the player. First, we need to retrieve a refere
 player = get("player")[0]; 
 ```
 
-Now we'll add code to move the player left and right. As we'll use the mouse to control the player's gravity gun, it makes ergonomic sense to control the player with WASD rather than the arrow keys. Add the following code:
+Now we'll add code to move the player left and right. As we'll use the mouse to control the player's gravity gun, it makes ergonomic sense to control the player with the WASD keys rather than the arrow keys. Add the following code:
 
 ```javascript
 onKeyDown("a", () => {
@@ -245,7 +245,7 @@ function pointAt(distance, angle) {
 }
 ```
 
-The first function, `angleBetween()`, uses JavaScript's [`Math.atan2()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2) to determine the angle between two points. The second function, `pointAt()`, uses sines and cosines to determine the point at a certain distance and angle.
+The first function, `angleBetween()`, uses JavaScript's [`Math.atan2()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2) to determine the angle two points make with the horizontal. The second function, `pointAt()`, uses sines and cosines to determine the point at a certain distance and angle.
 
 Next, we'll add two custom components:
 
@@ -264,9 +264,9 @@ function gravitygun(range, hold, firepower) {
 }
 ```
 
-Components are written as functions that return objects of a specific format. Each component should have an `id`, and a list of components it depends on attached to the `require` attribute. Beyond that, components can have arbitrary attributes, which will be assigned to their parent object, and special functions which will be integrated into the game's [event loop](https://kaboomjs.com/#on).
+Components are written as functions that return objects of a specific format. Each component should have an `id`, and a list of components it depends on attached to the `require` attribute. Beyond that, components can have arbitrary attributes, which will be assigned to their parent object, and special functions, which will be integrated into the game's [event loop](https://kaboomjs.com/#on).
 
-The only dependency for our component is `pos()`, as it will not work on an object without a position in the world. Through function arguments, we will allow customization of this component, in the form of specifying the gravity gun's range, hold distance and firepower.
+The only dependency for our component is `pos()`, as it will not work on an object that doesn't have a position in the world. Function arguments will allow us to customize this component, in the form of specifying the gravity gun's range, hold distance, and firepower.
 
 Let's add some custom attributes to our component, to help us aim and fire the gravity gun. Expand your component code to match the following:
 
@@ -298,10 +298,10 @@ In the above code:
 * `firepower` is the amount of force to launch objects with.
 * `range` is the length of our gravity gun's pulling range.
 * `hold` is the distance from the player's center at which objects will be held once pulled in.
-* `aimAngle` is the angle of our gravity gun's aim, which will be the angle between the player and the mouse cursor.
+* `aimAngle` is the angle of our gravity gun's aim, which will be the angle created with the horizontal.
 * `rangeLine` and `holdLine` are lines we will use to represent the gravity gun's range and hold.
 
-Now we need to add a `draw()` function, to draw both lines, and an `update()` function, to recalculate the gravity gun's aim angle and the position of both lines as the mouse cursor moves around. Alter your component code to include these functions at the bottom:
+Now we need to add a `draw()` function to draw both lines, and an `update()` function to recalculate the gravity gun's aim angle and the position of both lines as the mouse cursor moves around. Alter your component code to include these functions at the bottom:
 
 ```javascript
 function gravitygun(range, hold, firepower) {
@@ -366,7 +366,7 @@ function physics(mass) {
 }
 ```
 
-This component requires both `area` and `body` – to be affected by the gravity gun, objects must both have a collision area and be subject to regular gravity. We also give our physics objects a mass, direction and speed, and several variables to aid the gravity gun. Finally, we define a `draw()` function, which will draw a thick rectangle around the object when it is in gravity gun range.
+This component requires both `area` and `body` – to be affected by the gravity gun, objects must have a collision area and be subject to regular gravity. We also give our physics objects a mass, direction and speed, and several variables to aid the gravity gun. Finally, we define a `draw()` function, which will draw a thick rectangle around the object when it is in gravity gun range.
 
 Now we need to add the `gravitygun()` component to the player object and the `physics()` component to the crate object. Find your level creation code and add the new component lines to the objects as below:
 
@@ -400,7 +400,7 @@ Now we need to add the `gravitygun()` component to the player object and the `ph
     
 ```
 
-We now have everything in place to write the code that will allow us to pull objects with the gravity gun. We'll do this in an `onUpdate()` event callback for objects with the "movable" tag. Add the following code to the bottom of the `main.js` file :
+We now have everything in place to write the code that will allow us to pull objects with the gravity gun. We'll do this in an `onUpdate()` event callback for objects with the "movable" tag. Add the following code to the bottom of the `main.js` file:
 
 ```javascript
 // gravity gun pull and hold
@@ -412,7 +412,7 @@ onUpdate("movable", (movable) => {
 });
 ```
 
-First, we get the coordinates for the movable object's collision rectangle, using `worldArea()`, a function provided by the `area()` component. We then use the [`testRectLine()`](https://kaboomjs.com/#testRectLine) function to determine whether our player's range line and/or hold line intersects with this collision rectangle.
+First, we get the coordinates for the movable object's collision rectangle, using `worldArea()`, a function provided by the `area()` component. We then use the [`testRectLine()`](https://kaboomjs.com/#testRectLine) function to determine whether our player's range line or hold line intersects with this collision rectangle.
 
 Now let's have the gravity gun pull objects in range when the player holds down the right mouse button. Add the following code below the line where you assigned `movable.inHold` in the body of the `onUpdate` event callback: 
 
@@ -449,7 +449,7 @@ Finally, we'll need to move our object after it's been launched. Add the followi
     movable.speed = Math.max(0, movable.speed-1); //friction
 ```
 
-When we launch an object, we'll give it a direction and a non-zero speed. `moveBy()`, provided by the `pos()` component, will move the object unless there are other solid objects in the way. To give the object a more natural movement arc, we will simulate friction by decreasing its speed every frame until it reaches zero.
+When we launch an object, we'll give it a direction and a non-zero speed. We use `moveBy()`, provided by the `pos()` component, to move the object unless there are other solid objects in the way. To give the object a more natural movement arc, we will simulate friction by decreasing its speed every frame until it reaches zero.
 
 Run your repl now and try out the gravity gun. You should be able to pull crates into the holding position, and then move them around your head.
 
@@ -472,7 +472,7 @@ We'll fix the first bug by adding a new, collision-aware movement function to ou
         }
 ```
 
-This function calculates the movement vector needed to move from the current position to the destination, and then passes this vector to the collision-aware function `moveBy()`. `moveBy()` will return a `Collision` object if it detects a collision while moving. We'll return this and use it to cancel the hold if certain conditions are met.
+This function calculates the movement vector needed to move from the current position to the destination, and then passes this vector to the collision-aware function `moveBy()`. Our `moveBy()` function will return a `Collision` object if it detects a collision while moving. We'll return this and use it to cancel the hold if certain conditions are met.
 
 Find the `if (movable.held)` block in your `onUpdate("movable")` event callback and alter it to match the code below: 
 
@@ -505,7 +505,7 @@ function checkCollisionLine(line, tag) {
 }
 ```
 
-`checkCollisionLine()` tests whether an object with a given tag intersects with a line. We do this by [getting all objects with the tag](https://kaboomjs.com/#get) and testing each one until we find a collision. The [`some()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some) method will stop executing after a single `true` is returned, so this isn't quite as inefficient as it could be, but it's still probably not the optimal way to do this. Nonetheless, it should work fine while our game is relatively small.
+The `checkCollisionLine()` function tests whether an object with a given tag intersects with a line. We do this by [getting all objects with the tag](https://kaboomjs.com/#get) and testing each one until we find a collision. The [`some()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some) method will stop executing after a single `true` is returned, so this isn't quite as inefficient as it could be, but it's still probably not the optimal way to do this. Nonetheless, it should work fine while our game is relatively small.
 
 To use this function, find the `if (isMouseDown("right"))` in your `onUpdate("movable")` event callback and make the modifications shown:
 
@@ -549,7 +549,7 @@ When the right mouse button is clicked, we retrieve all the "movable"-tagged obj
 
 If you restart your repl now, you may have trouble getting dropping to work. Because we use the right mouse button both for pulling and dropping, you need to be quite precise to avoid immediately grabbing objects after dropping them.
 
-Let's implement a dropping timeout to give dropped objects to make this more user-friendly. Add the following lines below `selected.held = false`:
+Let's implement a dropping timeout for dropped objects to make this more user-friendly. Add the following lines below `selected.held = false`:
 
 ```javascript
         selected.dropping = true;
