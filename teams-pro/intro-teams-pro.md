@@ -28,7 +28,7 @@ The platform it is built around four cornerstones which we used to inform its fe
 ## 3. Host
   - You can create internal tools such as Slack bots, web services, lunch roulette, data processing, scrapers, etc.
 
-  <img src="https://pbs.twimg.com/media/EuCd-dvVkAwNO8K?format=jpg&name=large" alt="Our internal tool"/>
+  <img src="https://pbs.twimg.com/media/EuCd-dvVkAwNO8K?format=jpg&name=large" alt="Our internal tool" style="width: 60% !important;"/>
 
   - If you use always-on with hosting, you can spin up your blogs, docs, scripting tools, etc., at unprecedented speeds.
 
