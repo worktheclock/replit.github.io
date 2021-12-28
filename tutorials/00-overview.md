@@ -154,6 +154,13 @@ Revisit Nix on Replit to build a multi component app that allows users to subscr
 
 Learn more on the capabilities of the Kaboom game engine by building a *Mario*-like side-scroller game.
 
+#### [Lesson 33: Build an escrow contract on the Ethereum blockchain with Solidity and Replit](./33-escrow-contract-with-solidity)
+
+Learn more on developing Ethereum smart contracts using the Solidity programming language on Replit and deploying the contracts to a blockchain.
+
+#### [Lesson 34: Creative coding with Replit](./34-creative-coding)
+
+Explore the tools provided by Replit for creating graphics, 3D worlds, games, sounds, and other more creative things.
 
 ## Other tutorials
 

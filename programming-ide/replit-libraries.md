@@ -9,16 +9,20 @@ Replit web is a Python web framework that is integrated with Replit DB and Repli
 * **Documentation:** [https://replit-py.readthedocs.io/en/latest/web_tutorial.html](https://replit-py.readthedocs.io/en/latest/web_tutorial.html)
 * **Announcement:** [A Python Framework With Built-in Database and Auth Support](https://blog.replit.com/replit-web)
 * [Build a technical challenge website with Replit.web](/tutorials/28-technical-challenge-site)
+* [Build a paid content site with Replit.web and Stripe](/tutorials/29-paid-content-site)
 
 ## Kaboom
 
 Kaboom is a JavaScript library for GUI development, focused on making games. You can find some example games with walkthrough guides below.
 
-* **Homepage:** [https://kaboomjs.com/](https://kaboomjs.com/)
+* **Homepage:** [https://kaboomjs.com](https://kaboomjs.com)
+* **Book:** [https://makejsgames.com](https://makejsgames.com)
+* [Build Snake with Kaboom](/tutorials/21-build-snake-with-kaboom)
 * [Build Asteroids with Kaboom](/tutorials/23-build-asteroids-with-kaboom)
 * [Build a space shooter with Kaboom](/tutorials/24-build-space-shooter-with-kaboom)
 * [Build a 3d game with Kaboom](/tutorials/25-build-3d-game-with-kaboom)
 * [Build Tic-Tac-Toe with Kaboom and Websockets](/tutorials/27-build-tictactoe-with-websockets-kaboom)
+* [Build Mario with Kaboom](/tutorials/32-build-mario-with-kaboom)
 
 
 ## Replit Auth

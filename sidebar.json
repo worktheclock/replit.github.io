@@ -437,6 +437,10 @@
         "slug": "34-creative-coding"
       },
       {
+        "name": "Flappy Bird with Kaboom.js",
+        "slug": "35-build-flappy-bird-with-kaboom"
+      },
+      {
         "name": "Physics playground with Kaboom.js",
         "slug": "36-physics-playground-with-kaboom"
       },
