@@ -26,10 +26,10 @@ A: Yes, we encourage you to revise your repl so that it abides by the [Apps and 
 
 ### **Q: I think there's been a mistake. Can I talk to someone about this decision?**
 
-A: The mods are people and sometimes we make mistakes too. 🙋🏽‍♀️‍️ If you feel that this warning is unreasonable, contact us [here](https://contact.moderation.repl.co/).
+A: The mods are people and sometimes we make mistakes too. 🙋🏽‍♀️‍️ If you feel that this warning is unreasonable, contact us contact@replit.com
 
 ### **Q: I just got banned. What now?**
 
 A: You can still use Replit for personal use, but you won't be able to participate in the social features of Replit (Apps, comments on Spotlight pages, and ReplTalk). 😔
 
-On a case-by-case basis, the mods team may consider unbanning certain users. If you feel that you are ready to rejoin the community and uphold the guidelines, we are open to discussing. Contact us [here](https://contact.moderation.repl.co/). 
+On a case-by-case basis, the mods team may consider unbanning certain users. If you feel that you are ready to rejoin the community and uphold the guidelines, we are open to discussing. Contact us at contact@replit.com

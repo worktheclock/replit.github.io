@@ -1,12 +1,14 @@
 # FAQ
 
-This page should answer some general queries you may have, but if you need more information or are still confused, please [reach out](mailto:contact@replit.com). 
+This page should answer some general queries you may have, but if you need more information or are still confused, please email contact@replit.com. 
 
 ## Teachers
 
 ##### What is Teams for Education?
 
 It is the new product we have built out for teachers. We are transitioning from _Classrooms_ to _Teams for Education_ as it has a lot more features. Please check out our blog post [here](https://blog.replit.com/teams-for-education) to learn more.
+
+Read [Teams for Education FAQs](https://docs.replit.com/teams/FAQs) to learn more.
 
 ## Repls
 
@@ -18,6 +20,19 @@ It could be due to a few issues:
 2. Make sure to disable any ad-block software.
 
 If neither of these apply, you can report a bug by clicking "Get help" in your account sidebar (when you are logged in) and then click the red "Report a bug" button. Please provide information on the repl/s in question, browser information, and operating system.
+
+##### Why is my 'always on' repl not working?
+
+Have you tried:
+
+1. Proofing your code for any errors.
+2. Turning 'always on' off and then back on.
+3. Forking the repl.
+4. Running 'kill 1' in the shell.
+5. Checking for any memory leaks within your code.
+6. Installing all the necessary package managers via the [packager tab.](https://docs.replit.com/programming-ide/installing-packages)
+
+
 
 ##### Why is my repl having display issues?
 
@@ -53,6 +68,19 @@ Always-on is controlled by a toggle inside your repl. To enable it:
 
 Note that this function is currently only available on our [Hacker plan](https://replit.com/site/pricing).
 
+##### How do I use the Replit Database?
+
+You can learn more about the Replit Database [here.](https://docs.replit.com/hosting/database-faq)
+
+
+## Custom Domains
+
+##### How do I create a custom domain?
+
+You can link any repl you create to a domain that you own. (This includes [HTTP Servers](https://docs.replit.com/hosting/deploying-http-servers)).
+
+You can learn more about custom domains [here.](https://docs.replit.com/hosting/hosting-web-pages#custom-domains)
+
 ## Account
 
 ##### I logged in with Gmail/Github etc., but want to change my email.
@@ -70,3 +98,8 @@ Not specifically, but there are two ways to work around this:
 1. Share every repl from your old account to your new one. Once you share all the repls, you would then fork each one on your new account. 
 
 2. Change the email address on the existing account, which means you would not need to create another account. This method will not be useful if you have already created another account with the new email.
+
+
+##### I received a notification from one of the mods. What does this mean?
+
+Learn more about our strike system [here.](https://docs.replit.com/hosting/strike-system-faq)

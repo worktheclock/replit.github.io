@@ -14,7 +14,8 @@ You may add team members by:
 2. Inviting via link (link does not expire).
 3. Uploading a CSV of emails or usernames.
 
-## Invite Anonymous Members to Maintain Privacy
+## Invite Anonymous Members in Privacy Mode
+>Please note that your students must be added in Privacy Mode in order for your team to remain FERPA/COPPA compliant.
 
 To protect the privacy of students and remain compliant with privacy regulations, you can anonymously invite your students to Replit and to your education team. This privacy invite method only works when signing up via a team invite link.
 

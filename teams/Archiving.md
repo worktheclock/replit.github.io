@@ -8,6 +8,5 @@ You can unarchive your team at any time.
 
 ![Mouse cursor hovering over the dropdown menu next to a team, revealing the options to Archive or Delete the team](/images/teamsForEducation/teamarchive.png)
 
-- If students would like to retain editing privileges for their Team Projects, they may [export them to their personal account](https://docs.replit.com/Teams/exportSubmissions).
 - Instructors can [copy Team Projects from an archived team to a new team](https://docs.replit.com/Teams/projectCopying).
 

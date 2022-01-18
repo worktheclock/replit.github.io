@@ -1,12 +1,15 @@
 # Creating projects and assignments
 
-Teams for Education include both Team Projects and Team Repls. 
+**Team Projects** are projects and assignments that teachers can set up with starter code, instructions, and materials for their students. When starting a Team Project, students duplicate their own, private versions of the Team Projects to edit and customize freely.
 
-* **Team Projects** are visible and editable only by the teacher and each individual student or student group. These are great for assignments and group projects in which each student/group needs to work independently. 
+*Team Projects are private by default and are visible and editable only by the teacher and each individual student or student group.* 
 
-* **Team Repls** are visible and editable to everyone on the Team. These are great for collaborative coding exercises such as pair programming challenges and code-alongs. 
-
-*We are phasing out Team Repls beginning on September 1, 2021 and will completely remove them on November 1, 2021. We are committed to migrating customers to our Teams Pro product free of charge if this decision makes using Replit untenable for you. Please [contact us](https://replit.canny.io/teams-for-education/p/team-repls) if you require support or have any questions.*
+>**Please note that Team Repls were deprecated in October 2021.**
+* If you'd like to create private repls to store solutions, we recommend using the [Project Solutions tool](https://docs.replit.com/teams/project-solutions).
+* You can also store notes and demos as unpublished Team Projects. Unpublished projects are not visible to your students at all.
+* Use the [Curriculum Authoring tool](https://docs.replit.com/teams/lesson-authoring) to write read-only instructions for your students to follow as well as admin-only lesson plans where you can stash your class notes.
+* You can also convert repls from your personal account into Team Projects using [this workflow](https://docs.replit.com/teams/repls-to-team-projects).
+* If you still have questions or need support, please contact us at [education@replit.com](mailto:education@replit.com).
 
 ## Creating Team Projects
 From your team dashboard, create a new project.
@@ -19,7 +22,7 @@ From your team dashboard, create a new project.
 
 ### Publishing
 
-When you are done editing your project and it is ready to be published, click "Publish project" from the IDE.
+When you are done editing your project and it is ready to be published, click "Publish project" from the IDE. Once published, your project will be viewable and editable by all members assigned to that project. 
 
 ![Project publish button](/images/teamsForEducation/project-publish-button.png)
 

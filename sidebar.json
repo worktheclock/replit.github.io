@@ -122,10 +122,9 @@
         "name": "Introduction to Teams for Education",
         "slug": "intro-teams-education"
       },
-       {
-        "name": "Getting Started Checklist",
-        "slug": "teams-edu-checklist"
-      },
+
+      { "name": "FAQ",
+        "slug": "FAQ"},
       {
         "name": "Inviting teachers and students",
         "slug": "inviting-teachers-students"
@@ -147,6 +146,10 @@
         "slug": "creating-projects-assignments"
       },
       {
+        "name": "Project Solutions",
+        "slug": "project-solutions"
+      },
+      {
         "name": "Lesson and Instructions Authoring",
         "slug": "lesson-authoring"
       },
@@ -165,10 +168,6 @@
       {
         "name": "Duplicating personal repls into Team Projects",
         "slug": "repls-to-team-projects"
-      },
-      {
-        "name": "Keeping notes in repls",
-        "slug": "keeping-notes-repls"
       },
       {
         "name": "Example homework assignments",
@@ -199,13 +198,14 @@
         "slug": "google-classroom"
       },
       {
-        "name": "Exporting Student Submissions",
-        "slug": "exporting-student-submissions"
-      },
-      {
         "name": "Archiving Teams",
         "slug": "Archiving"
       },
+       {
+        "name": "Exporting Student Projects",
+        "slug": "exporting-student-submissions"
+      },
+      
        {
         "name": "Curriculum Hub",
         "slug": "curriculum-hub"

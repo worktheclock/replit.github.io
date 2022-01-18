@@ -24,7 +24,7 @@ Watch these two videos for a general introduction and some tips and tricks, or r
 <a name="developers"></a>
 ## Writing Code: Replit for Software Developers
 
-For software developers, Replit can be your cloud-based IDE. Having a cloud IDE offers several advantages. There's no setup – you can access your environment from any device, including your phone or tablet, and everything will _just work_. You can manage things like dependencies, build scripts, and environment variables in a single place and always be in sync. It's also easy to get help from others – every repl is multiplayer by default, so you can work with other developers in a Google Docs-like environment in real-time from anywhere on the globe.
+For software developers, Replit can be your cloud-based IDE (Integrated Development Environment.) Having a cloud IDE offers several advantages. There's no setup – you can access your environment from any device, including your phone or tablet, and everything will _just work_. You can manage things like dependencies, build scripts, and environment variables in a single place and always be in sync. It's also easy to get help from others – every repl is multiplayer by default, so you can work with other developers in a Google Docs-like environment in real-time from anywhere on the globe.
 
 Each repl is its own Docker container running in a VM, so you can run shell commands and do nearly anything else that is possible from a standard Linux box.
 

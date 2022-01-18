@@ -2,15 +2,12 @@
 
 Students may export their project submissions into their personal Replit accounts to maintain access when they are removed from a Team or a Team is archived.
 
-[Watch a walkthrough here.](https://www.loom.com/share/a963de348890418699d9a3c6ca18367b)
+To export their projects from a team, students can go to `https://replit.com/teams/TEAM-USERNAME/export`. 
 
-1. Log into student account
-2. Click on "Export submissions" button OR go to *replit.com/teams/<team_username>/export*
-3. Click "Export"
-4. All submitted projects will be saved to a folder in the student's personal Replit account called "<Team Name> student work"
+For example, if the team username is @teamsEduDemo, then the link would direct students to log into their accounts, then go to: `https://replit.com/teams/teamsEduDemo/export`
 
- ![Export submissions button at the top of a Team member's dashboard](/images/teamsForEducation/exportsubmissions.png)
+![Where to find your team username](/images/teamsForEducation/team-username.png)
 
- ![Export button followed by the name of the folder where student submissions will export to](/images/teamsForEducation/exportsubmissions2.png)
+
 
 

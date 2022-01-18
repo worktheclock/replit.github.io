@@ -28,38 +28,69 @@ Note that a repl's public link will persist, even after the repl has been delete
 
 ## Custom Domains
 
-Any hosted repl can be linked to a domain that you own. This includes both [static sites](#hosting-a-web-site) and [HTTP servers](/repls/http-servers). To get started, you'll need a domain to link with your repl. If you don't already have a domain, [Dotcomboom](https://replit.com/@dotcomboom) has created a [great tutorial on getting a free domain from Freenom](https://replit.com/talk/learn/How-to-use-a-custom-domain/8834).
+Part 1: Find your domain
 
-Once you have your domain link, we can get to work linking it with your repl: 
+Any hosted repl can be linked to a domain that you own. This includes both [static sites](#hosting-a-web-site) and [HTTP servers](/repls/http-servers). To get started, you'll need a domain to link with your repl. If you don't already have a domain, [Dotcomboom](https://replit.com/@dotcomboom) has created a [great tutorial on getting a free domain from Freenom](https://replit.com/talk/learn/How-to-use-a-custom-domain/8834). [CoolcoderSJ](https://replit.com/@CoolCoderSJ) also has a helpful [step-by-step tutuorial.](https://replit.com/talk/learn/Link-Domains-with-Replit/124838) on acuqiring your domain for free.
 
-1. Click on the pencil icon next to the URL for your repl:
+Part 2: Setting it up with Cloudflare
+
+1. Next to your domain, click `Manage Domain`.
+
+2. On the menu bar, click Management tools > Nameservers and select `Use default Nameservers.` Click `use custom nameservers` and pause.
+
+3. In another tab, open Cloudflare. Either login or signup from the navigation bar. Once you're logged in, check the navbar top right for a link to add a domain. Click that link.
+
+4. Enter your domain and click `Add site.` NOTE: It may take multiple tries and a lot of time before it works.
+
+5. Once it actually loads, scroll down and select the free plan, unless you want to pay for cloudflare Pro.
+
+6. Click `continue.` Wait for it to scan existing DNS records, it should find none.
+
+
+Part 3: 
+Option 1: Root and WWW
+
+1. Click `Add record` (We will be doing these steps twice). From the dropdown, select `CNAME.`
+
+2. Set the name of the record as `@.` This is the root domain, so for example, Google has these two CNAME records:`google.com`, and `www.google.com.` If you do not add a root record, you would have to add `www` in front of it every time. NOW PAUSE.
+
+Go to the repl you are linking:
+
+3. Click on the pencil icon next to the URL for your repl:
 
 ![screenshot of edit button](/images/repls/edit-custom-domain-icon.png)
 
-2. Enter the full domain where you'd like the repl to be accessible from. This includes subdomains.
+4. Enter the full domain where you'd like the repl to be accessible from without the `www.` (Example - `replitiscool.tk`)
 
-![screenshot of cname instructions](/images/repls/custom-domain-cname.png)
 
-3. You will be prompted to add a `CNAME` record to your domain, pointing at your repl's special `repl.co` domain. 
-4. Go to your domain registrar and find the section that allows you to add DNS records.
-5. Add a new entry with the following information:
-> * The type should be `CNAME`.
->* `name` or `hostname` will be the subdomain you want, or you can enter `@` if you'd like to use the full domain. Some services do not allow `CNAME`s to be at the top level. We recommend instead using _www_ and making sure you enter `www.yourdomain.com` in your repl.
->* `data` or `target` should be the special repl.co link you got when you started linking your repl. It should contain a long string of random numbers and letters at the beginning.
+5. Click the `COPY` button. Now head back to cloudflare and enter the copied url into the target box. Click `Save,` then add another record. Select `CNAME` from the dropwdown, name the record as `www,` and paste the text into the target.
 
-For example:
-- If I want to serve a repl from `example.com`, I'd enter `example.com` in the repl linking box. Then, in my registrar the target should be `@`.
-- If I want to serve a repl from `coolproject.example.com`, I'd enter `coolproject.example.com` in the repl linking box, and `coolproject` in the target field on my registrar.
+Part 3
+Option 2: Subdomains
 
-The exact steps will vary between services. Here's an example of how it might look using Google Domains:
+1. Go to the repl you are linking. Click the pencil icon next to the domain.
 
-![screenshot of cname instructions](/images/repls/google-setup-custom-domain.png)
+2. Enter the domain you are linking, including subdomain. (Example - `project.replitiscool.tk`). Click the `COPY` button.
 
-![screenshot of Cloudflare cname instructions](/images/repls/cloudflare-setup-custom-domain.png)
+3. Now head back to cloudflare and enter the copied url into the target box.
+Click `Save.`
+
+4. Click continue. It might give you some NAMESERVERS and tell you to update nameservers. IF that is the case, go back to [freenom,](https://my.freenom.com/clientarea.php?action=domains): manage domain > Management tools > nameservers.
+
+5. Click `use custom nameservers,` then enter the nameservers cloudflare gave you. Click `save,` and click `continue` on cloudflare.
+
+6.  On the top bar, click `SSL/TLS'. Choose `full.` It should be the second to last option.
+
+7. Go back to Replit and click `next.` After some time, a LINK DOMAIN button should appear. Click it and you have successfully linked your domain.
+
+
+*Edit: On your first try, you may get a `525 SSL Handshake` error. If you do, be patient, wait a bit, and reload. It takes a bit to update.*
+
+
+*Note: Make sure the CNAME record is not proxied and is set to "DNS only" (the cloud icon should **not** be orange)*
 
 It may take some time for the DNS record to be updated. Once connected, click the big green button to finish and your domain should be linked!
 
-You can unlink your domain at any time by clicking on the pencil icon and clicking "Unlink".
 
 ## Example
 
@@ -69,5 +100,4 @@ Here's an example of a hosted webpage using p5.js. The live, full-screen version
 
 ## Takedown Requests
 
-If you require your hosted web page to be taken down, please contact
-us at [contact@replit.com](mailto:contact@replit.com).
+You can unlink your domain at any time by clicking on the pencil icon and clicking `unlink.`

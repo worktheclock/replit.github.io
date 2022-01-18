@@ -7,7 +7,9 @@ To deploy an HTTP server on Replit:
 2. Begin listening on a port, and your server will start up.
 3. A new pane should appear in your editor with the URL to your web app, along with a preview of the app.
 
-Note that in some cases you need to explicitly set the `host` to `0.0.0.0`. For example, when running a Flask web application, you should use `app.run(host="0.0.0.0")` instead of simply `app.run()`. This is so that we can detect that you are running a web server and automatically pop up the extra pane to display your app.
+Note that in some cases you need to explicitly set the `host` to `0.0.0.0`. For example, when running a Flask web application, you should use `app.run(host="0.0.0.0")` instead of simply `app.run()`. If your app is also running a dev server, you may also need to set the host for that server to `127.0.0.1`. This is so that we can detect that you are running a web server and automatically pop up the extra pane to display your app.
+
+
 
 Once deployed, the server will continue to run in the background, even after you close the browser tab. The server will stay awake and active until an hour after its last request, after which it will enter a sleeping stage. A sleeping repl will be woken up as soon as it receives another request; there is no need to re-run the repl. However, if you make changes to your server, you will need to restart the repl in order to see those changes reflected in the live version.
 
