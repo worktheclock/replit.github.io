@@ -260,6 +260,12 @@
   {
     "category": "Getting started",
     "name": "FAQ",
+    "heading": "Why is my 'always on' repl not working?",
+    "slug": "/getting-started/faq#why-is-my-always-on-repl-not-working"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
     "heading": "Why is my repl having display issues?",
     "slug": "/getting-started/faq#why-is-my-repl-having-display-issues"
   },
@@ -290,6 +296,24 @@
   {
     "category": "Getting started",
     "name": "FAQ",
+    "heading": "How do I use the Replit Database?",
+    "slug": "/getting-started/faq#how-do-i-use-the-replit-database"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "Custom Domains",
+    "slug": "/getting-started/faq#custom-domains"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "How do I create a custom domain?",
+    "slug": "/getting-started/faq#how-do-i-create-a-custom-domain"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
     "heading": "Account",
     "slug": "/getting-started/faq#account"
   },
@@ -304,6 +328,12 @@
     "name": "FAQ",
     "heading": "Can accounts be merged?",
     "slug": "/getting-started/faq#can-accounts-be-merged"
+  },
+  {
+    "category": "Getting started",
+    "name": "FAQ",
+    "heading": "I received a notification from one of the mods. What does this mean?",
+    "slug": "/getting-started/faq#i-received-a-notification-from-one-of-the-mods-what-does-this-mean"
   },
   {
     "category": "Programming & IDE",
@@ -500,6 +530,12 @@
   {
     "category": "Programming & IDE",
     "name": "Getting repl metadata",
+    "heading": "Using Python:",
+    "slug": "/programming-ide/getting-repl-metadata#using-python"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Getting repl metadata",
     "heading": "Output",
     "slug": "/programming-ide/getting-repl-metadata#output"
   },
@@ -517,81 +553,129 @@
   },
   {
     "category": "Programming & IDE",
-    "name": "Storing sensitive information in environment variables",
+    "name": "Getting repl metadata",
+    "heading": "Using Node.js:",
+    "slug": "/programming-ide/getting-repl-metadata#using-node-js"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Secrets and environment variables",
     "heading": null,
     "slug": "programming-ide/storing-sensitive-information-environment-variables"
   },
   {
     "category": "Programming & IDE",
-    "name": "Storing sensitive information in environment variables",
-    "heading": "Secrets & Environment Variables",
-    "slug": "/programming-ide/storing-sensitive-information-environment-variables#secrets-environment-variables"
+    "name": "Secrets and environment variables",
+    "heading": "Secrets and environment variables",
+    "slug": "/programming-ide/storing-sensitive-information-environment-variables#secrets-and-environment-variables"
   },
   {
     "category": "Programming & IDE",
-    "name": "Storing sensitive information in environment variables",
+    "name": "Secrets and environment variables",
     "heading": "Adding, Viewing and Editing Environment Variables",
     "slug": "/programming-ide/storing-sensitive-information-environment-variables#adding-viewing-and-editing-environment-variables"
   },
   {
     "category": "Programming & IDE",
-    "name": "Storing sensitive information in environment variables",
+    "name": "Secrets and environment variables",
     "heading": "Using Environment Variables in Your Code",
     "slug": "/programming-ide/storing-sensitive-information-environment-variables#using-environment-variables-in-your-code"
   },
   {
     "category": "Programming & IDE",
-    "name": "Storing sensitive information in environment variables",
+    "name": "Secrets and environment variables",
     "heading": "Python",
     "slug": "/programming-ide/storing-sensitive-information-environment-variables#python"
   },
   {
     "category": "Programming & IDE",
-    "name": "Storing sensitive information in environment variables",
+    "name": "Secrets and environment variables",
     "heading": "prints 'admin'",
     "slug": "/programming-ide/storing-sensitive-information-environment-variables#prints-admin"
   },
   {
     "category": "Programming & IDE",
-    "name": "Storing sensitive information in environment variables",
+    "name": "Secrets and environment variables",
     "heading": "JavaScript",
     "slug": "/programming-ide/storing-sensitive-information-environment-variables#java-script"
   },
   {
     "category": "Programming & IDE",
-    "name": "Configuring the Run button",
+    "name": "Configuring a Repl",
     "heading": null,
-    "slug": "programming-ide/configuring-run-button"
+    "slug": "programming-ide/configuring-repl"
   },
   {
     "category": "Programming & IDE",
-    "name": "Configuring the Run button",
-    "heading": "Configuring the \"Run\" button",
-    "slug": "/programming-ide/configuring-run-button#configuring-the-run-button"
+    "name": "Configuring a Repl",
+    "heading": "Configuring a Repl",
+    "slug": "/programming-ide/configuring-repl#configuring-a-repl"
   },
   {
     "category": "Programming & IDE",
-    "name": "Configuring the Run button",
+    "name": "Configuring a Repl",
+    "heading": "The command that is executed when the run button is clicked.",
+    "slug": "/programming-ide/configuring-repl#the-command-that-is-executed-when-the-run-button-is-clicked"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Configuring a Repl",
+    "heading": "The default file opened in the editor.",
+    "slug": "/programming-ide/configuring-repl#the-default-file-opened-in-the-editor"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Configuring a Repl",
+    "heading": "Packager configuration for the Universal Package Manager",
+    "slug": "/programming-ide/configuring-repl#packager-configuration-for-the-universal-package-manager"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Configuring a Repl",
+    "heading": "See https://github.com/replit/upm for supported languages.",
+    "slug": "/programming-ide/configuring-repl#see-https-github-com-replit-upm-for-supported-languages"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Configuring a Repl",
+    "heading": "Per language configuration: language.<lang name> ",
+    "slug": "/programming-ide/configuring-repl#per-language-configuration-language-lang-name"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Configuring a Repl",
+    "heading": "The glob pattern to match files for this programming language",
+    "slug": "/programming-ide/configuring-repl#the-glob-pattern-to-match-files-for-this-programming-language"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Configuring a Repl",
     "heading": "Configuring a Cloned Repl",
-    "slug": "/programming-ide/configuring-run-button#configuring-a-cloned-repl"
+    "slug": "/programming-ide/configuring-repl#configuring-a-cloned-repl"
   },
   {
     "category": "Programming & IDE",
-    "name": "Configuring the Run button",
+    "name": "Configuring a Repl",
     "heading": "Other Configuration",
-    "slug": "/programming-ide/configuring-run-button#other-configuration"
+    "slug": "/programming-ide/configuring-repl#other-configuration"
   },
   {
     "category": "Programming & IDE",
-    "name": "Configuring the Run button",
+    "name": "Configuring a Repl",
+    "heading": "Command",
+    "slug": "/programming-ide/configuring-repl#command"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Configuring a Repl",
     "heading": "Example .replit File",
-    "slug": "/programming-ide/configuring-run-button#example-replit-file"
+    "slug": "/programming-ide/configuring-repl#example-replit-file"
   },
   {
     "category": "Programming & IDE",
-    "name": "Configuring the Run button",
+    "name": "Configuring a Repl",
     "heading": "HTML",
-    "slug": "/programming-ide/configuring-run-button#html"
+    "slug": "/programming-ide/configuring-repl#html"
   },
   {
     "category": "Programming & IDE",
@@ -625,6 +709,48 @@
   },
   {
     "category": "Programming & IDE",
+    "name": "Replit Libraries",
+    "heading": null,
+    "slug": "programming-ide/replit-libraries"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Replit Libraries",
+    "heading": "Replit libraries",
+    "slug": "/programming-ide/replit-libraries#replit-libraries"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Replit Libraries",
+    "heading": "Replit.web",
+    "slug": "/programming-ide/replit-libraries#replit-web"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Replit Libraries",
+    "heading": "Kaboom",
+    "slug": "/programming-ide/replit-libraries#kaboom"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Replit Libraries",
+    "heading": "Replit Auth",
+    "slug": "/programming-ide/replit-libraries#replit-auth"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Replit Libraries",
+    "heading": "Replit DB (Replit Database)",
+    "slug": "/programming-ide/replit-libraries#replit-db-replit-database"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Replit Libraries",
+    "heading": "Replit Audio",
+    "slug": "/programming-ide/replit-libraries#replit-audio"
+  },
+  {
+    "category": "Programming & IDE",
     "name": "Getting started with Nix",
     "heading": null,
     "slug": "programming-ide/getting-started-nix"
@@ -638,8 +764,32 @@
   {
     "category": "Programming & IDE",
     "name": "Getting started with Nix",
-    "heading": "Learn More About Nix",
+    "heading": "Learn more about Nix",
     "slug": "/programming-ide/getting-started-nix#learn-more-about-nix"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Debugging",
+    "heading": null,
+    "slug": "programming-ide/debugging"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Debugging",
+    "heading": "Debugging",
+    "slug": "/programming-ide/debugging#debugging"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Debugging",
+    "heading": "Multiplayer features",
+    "slug": "/programming-ide/debugging#multiplayer-features"
+  },
+  {
+    "category": "Programming & IDE",
+    "name": "Debugging",
+    "heading": "Adding support for other languages through Nix",
+    "slug": "/programming-ide/debugging#adding-support-for-other-languages-through-nix"
   },
   {
     "category": "Hosting",
@@ -692,7 +842,7 @@
   {
     "category": "Hosting",
     "name": "Deploying HTTP servers",
-    "heading": "Deploying HTTP Servers",
+    "heading": "Deploying HTTP servers",
     "slug": "/hosting/deploying-http-servers#deploying-http-servers"
   },
   {
@@ -758,8 +908,26 @@
   {
     "category": "Hosting",
     "name": "Embedding repls",
-    "heading": "Embedding a Repl via `iframe`",
-    "slug": "/hosting/embedding-repls#embedding-a-repl-via-iframe"
+    "heading": "Embedding repls",
+    "slug": "/hosting/embedding-repls#embedding-repls"
+  },
+  {
+    "category": "Hosting",
+    "name": "Embedding repls",
+    "heading": "Embedding a repl using `<iframe>`",
+    "slug": "/hosting/embedding-repls#embedding-a-repl-using-iframe"
+  },
+  {
+    "category": "Hosting",
+    "name": "Embedding repls",
+    "heading": "Query parameter `?embed=true`",
+    "slug": "/hosting/embedding-repls#query-parameter-embed-true"
+  },
+  {
+    "category": "Hosting",
+    "name": "Embedding repls",
+    "heading": "Query parameter `?lite=true`",
+    "slug": "/hosting/embedding-repls#query-parameter-lite-true"
   },
   {
     "category": "Hosting",
@@ -770,13 +938,19 @@
   {
     "category": "Hosting",
     "name": "Embedding repls",
-    "heading": "Embedding on Medium via Embedly",
-    "slug": "/hosting/embedding-repls#embedding-on-medium-via-embedly"
+    "heading": "Embedding on Medium",
+    "slug": "/hosting/embedding-repls#embedding-on-medium"
   },
   {
     "category": "Hosting",
     "name": "Embedding repls",
-    "heading": "Editing an Embedded Repl",
+    "heading": "Embedding on Ghost",
+    "slug": "/hosting/embedding-repls#embedding-on-ghost"
+  },
+  {
+    "category": "Hosting",
+    "name": "Embedding repls",
+    "heading": "Editing an embedded repl",
     "slug": "/hosting/embedding-repls#editing-an-embedded-repl"
   },
   {
@@ -1093,6 +1267,60 @@
   },
   {
     "category": "Teams for Education",
+    "name": "Introduction to Teams for Education",
+    "heading": "Creating Teams ",
+    "slug": "/teams/intro-teams-education#creating-teams"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "FAQ",
+    "heading": null,
+    "slug": "teams/FAQ"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "FAQ",
+    "heading": "FAQs",
+    "slug": "/teams/FAQ#fa-qs"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "FAQ",
+    "heading": "How do I get started with Teams for Education?",
+    "slug": "/teams/FAQ#how-do-i-get-started-with-teams-for-education"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "FAQ",
+    "heading": "How do I manage team members in a team?",
+    "slug": "/teams/FAQ#how-do-i-manage-team-members-in-a-team"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "FAQ",
+    "heading": "How do I create a team project?",
+    "slug": "/teams/FAQ#how-do-i-create-a-team-project"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "FAQ",
+    "heading": "How do I auto-grade projects?",
+    "slug": "/teams/FAQ#how-do-i-auto-grade-projects"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "FAQ",
+    "heading": "How do I know if Replit is compliant with my school's compliancy standards?",
+    "slug": "/teams/FAQ#how-do-i-know-if-replit-is-compliant-with-my-schools-compliancy-standards"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "FAQ",
+    "heading": "I am having trouble with portions of Replit being blocked by my school's servers. What do I do?",
+    "slug": "/teams/FAQ#i-am-having-trouble-with-portions-of-replit-being-blocked-by-my-schools-servers-what-do-i-do"
+  },
+  {
+    "category": "Teams for Education",
     "name": "Inviting teachers and students",
     "heading": null,
     "slug": "teams/inviting-teachers-students"
@@ -1106,8 +1334,8 @@
   {
     "category": "Teams for Education",
     "name": "Inviting teachers and students",
-    "heading": "Invite Anonymous Members to Maintain Privacy",
-    "slug": "/teams/inviting-teachers-students#invite-anonymous-members-to-maintain-privacy"
+    "heading": "Invite Anonymous Members in Privacy Mode",
+    "slug": "/teams/inviting-teachers-students#invite-anonymous-members-in-privacy-mode"
   },
   {
     "category": "Teams for Education",
@@ -1195,6 +1423,120 @@
   },
   {
     "category": "Teams for Education",
+    "name": "Project Solutions",
+    "heading": null,
+    "slug": "teams/project-solutions"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Project Solutions",
+    "heading": "Project Solutions",
+    "slug": "/teams/project-solutions#project-solutions"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Project Solutions",
+    "heading": "Creating project solutions ",
+    "slug": "/teams/project-solutions#creating-project-solutions"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Project Solutions",
+    "heading": "Publishing project solutions",
+    "slug": "/teams/project-solutions#publishing-project-solutions"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Project Solutions",
+    "heading": "Updating and Referencing project solutions",
+    "slug": "/teams/project-solutions#updating-and-referencing-project-solutions"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Project Solutions",
+    "heading": "Student View",
+    "slug": "/teams/project-solutions#student-view"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Lesson and Instructions Authoring",
+    "heading": null,
+    "slug": "teams/lesson-authoring"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Lesson and Instructions Authoring",
+    "heading": "Lesson Authoring",
+    "slug": "/teams/lesson-authoring#lesson-authoring"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Lesson and Instructions Authoring",
+    "heading": "Lesson Plans",
+    "slug": "/teams/lesson-authoring#lesson-plans"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Lesson and Instructions Authoring",
+    "heading": "Assets",
+    "slug": "/teams/lesson-authoring#assets"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Individual and group projects",
+    "heading": null,
+    "slug": "teams/group-projects"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Individual and group projects",
+    "heading": "Individual, Group, and Self-Grouping Projects",
+    "slug": "/teams/group-projects#individual-group-and-self-grouping-projects"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Organizing Projects",
+    "heading": null,
+    "slug": "teams/organizing-projects"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Organizing Projects",
+    "heading": "Organizing Projects ",
+    "slug": "/teams/organizing-projects#organizing-projects"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Organizing Projects",
+    "heading": "Creating Units ",
+    "slug": "/teams/organizing-projects#creating-units"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Organizing Projects",
+    "heading": "Organizing Projects Into Units",
+    "slug": "/teams/organizing-projects#organizing-projects-into-units"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Organizing Projects",
+    "heading": "Editing Units ",
+    "slug": "/teams/organizing-projects#editing-units"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Organizing Projects",
+    "heading": "Reordering Units ",
+    "slug": "/teams/organizing-projects#reordering-units"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Organizing Projects",
+    "heading": "Deleting Units ",
+    "slug": "/teams/organizing-projects#deleting-units"
+  },
+  {
+    "category": "Teams for Education",
     "name": "Copying projects to other teams",
     "heading": null,
     "slug": "teams/copying-projects-other-teams"
@@ -1202,32 +1544,20 @@
   {
     "category": "Teams for Education",
     "name": "Copying projects to other teams",
-    "heading": "Copying projects to other teams",
-    "slug": "/teams/copying-projects-other-teams#copying-projects-to-other-teams"
+    "heading": "Duplicating Projects",
+    "slug": "/teams/copying-projects-other-teams#duplicating-projects"
   },
   {
     "category": "Teams for Education",
-    "name": "Keeping notes in repls",
+    "name": "Duplicating personal repls into Team Projects",
     "heading": null,
-    "slug": "teams/keeping-notes-repls"
+    "slug": "teams/repls-to-team-projects"
   },
   {
     "category": "Teams for Education",
-    "name": "Keeping notes in repls",
-    "heading": "Keeping notes in repls",
-    "slug": "/teams/keeping-notes-repls#keeping-notes-in-repls"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Keeping notes in repls",
-    "heading": "Leaving Instructions",
-    "slug": "/teams/keeping-notes-repls#leaving-instructions"
-  },
-  {
-    "category": "Teams for Education",
-    "name": "Keeping notes in repls",
-    "heading": "Classroom Lessons",
-    "slug": "/teams/keeping-notes-repls#classroom-lessons"
+    "name": "Duplicating personal repls into Team Projects",
+    "heading": "Duplicating personal repls into Team Projects ",
+    "slug": "/teams/repls-to-team-projects#duplicating-personal-repls-into-team-projects"
   },
   {
     "category": "Teams for Education",
@@ -1304,7 +1634,7 @@
   {
     "category": "Teams for Education",
     "name": "Reviewing submissions",
-    "heading": "Leaving Feedback on Projects Using Annotations",
+    "heading": "Leaving feedback on projects using annotations",
     "slug": "/teams/reviewing-submissions#leaving-feedback-on-projects-using-annotations"
   },
   {
@@ -1372,6 +1702,12 @@
     "name": "Input/output testing",
     "heading": "Regex Tests",
     "slug": "/teams/input-output-testing#regex-tests"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Input/output testing",
+    "heading": "While I/O tests work with most languages on Replit, there are just a few exceptions:",
+    "slug": "/teams/input-output-testing#while-i-o-tests-work-with-most-languages-on-replit-there-are-just-a-few-exceptions"
   },
   {
     "category": "Teams for Education",
@@ -1495,15 +1831,27 @@
   },
   {
     "category": "Teams for Education",
-    "name": "Exporting Student Submissions",
+    "name": "Google Classroom Integration",
     "heading": null,
-    "slug": "teams/exportSubmissions"
+    "slug": "teams/google-classroom"
   },
   {
     "category": "Teams for Education",
-    "name": "Exporting Student Submissions",
-    "heading": "Export Student Submissions",
-    "slug": "/teams/exportSubmissions#export-student-submissions"
+    "name": "Google Classroom Integration",
+    "heading": "Google Classrooms Integration ",
+    "slug": "/teams/google-classroom#google-classrooms-integration"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Google Classroom Integration",
+    "heading": "Adding Students to a Team from Google Classrooms",
+    "slug": "/teams/google-classroom#adding-students-to-a-team-from-google-classrooms"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Google Classroom Integration",
+    "heading": "Creating Assignments in Google Classrooms from Replit ",
+    "slug": "/teams/google-classroom#creating-assignments-in-google-classrooms-from-replit"
   },
   {
     "category": "Teams for Education",
@@ -1516,6 +1864,30 @@
     "name": "Archiving Teams",
     "heading": "Archiving Teams",
     "slug": "/teams/Archiving#archiving-teams"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Exporting Student Projects",
+    "heading": null,
+    "slug": "teams/exporting-student-submissions"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Exporting Student Projects",
+    "heading": "Exporting student submissions",
+    "slug": "/teams/exporting-student-submissions#exporting-student-submissions"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Curriculum Hub",
+    "heading": null,
+    "slug": "teams/curriculum-hub"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Curriculum Hub",
+    "heading": "Curriculum Hub",
+    "slug": "/teams/curriculum-hub#curriculum-hub"
   },
   {
     "category": "Teams for Education",
@@ -1652,8 +2024,8 @@
   {
     "category": "Settings",
     "name": "Changing your username",
-    "heading": "Changing your username (once!)",
-    "slug": "/settings/changing-username#changing-your-username-once"
+    "heading": "Changing your username (1 time only!)",
+    "slug": "/settings/changing-username#changing-your-username-1-time-only"
   },
   {
     "category": "Settings",
@@ -1778,6 +2150,12 @@
   {
     "category": "Miscellaneous",
     "name": "Playing audio on Replit",
+    "heading": ".replit",
+    "slug": "/misc/playing-audio-replit#replit"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Playing audio on Replit",
     "heading": "Known limitations",
     "slug": "/misc/playing-audio-replit#known-limitations"
   },
@@ -1786,12 +2164,6 @@
     "name": "Playing audio on Replit",
     "heading": "Audio service",
     "slug": "/misc/playing-audio-replit#audio-service"
-  },
-  {
-    "category": "Miscellaneous",
-    "name": "Playing audio on Replit",
-    "heading": "Note that audio is currently only enabled for explorers. Learn to become an explorer here",
-    "slug": "/misc/playing-audio-replit#note-that-audio-is-currently-only-enabled-for-explorers-learn-to-become-an-explorer-here"
   },
   {
     "category": "Miscellaneous",
@@ -2294,6 +2666,96 @@
   {
     "category": "Tutorials",
     "name": "Overview",
+    "heading": "Lesson 20: Build Your Online Store's Checkout Process with Stripe",
+    "slug": "/tutorials/00-overview#lesson-20-build-your-online-stores-checkout-process-with-stripe"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 21: Build a Snake Game with Kaboom.js",
+    "slug": "/tutorials/00-overview#lesson-21-build-a-snake-game-with-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 22: Build a Personal Stock Market dashboard",
+    "slug": "/tutorials/00-overview#lesson-22-build-a-personal-stock-market-dashboard"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 23: Building Asteroids Game with Kaboom.js",
+    "slug": "/tutorials/00-overview#lesson-23-building-asteroids-game-with-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 24: Build a Space Shooter Game with Kaboom.js",
+    "slug": "/tutorials/00-overview#lesson-24-build-a-space-shooter-game-with-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 25: Building a pseudo-3D game with Kaboom.js",
+    "slug": "/tutorials/00-overview#lesson-25-building-a-pseudo-3-d-game-with-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 26: Generate PDF reports from spreadsheet data",
+    "slug": "/tutorials/00-overview#lesson-26-generate-pdf-reports-from-spreadsheet-data"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 27: Building tic-tac-toe with WebSocket and Kaboom.js",
+    "slug": "/tutorials/00-overview#lesson-27-building-tic-tac-toe-with-web-socket-and-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 28: Build a team technical challenge website with `replit.web`",
+    "slug": "/tutorials/00-overview#lesson-28-build-a-team-technical-challenge-website-with-replit-web"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 29: Build a paid content site with `replit.web` and Stripe",
+    "slug": "/tutorials/00-overview#lesson-29-build-a-paid-content-site-with-replit-web-and-stripe"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 30: Building with Nix on Replit",
+    "slug": "/tutorials/00-overview#lesson-30-building-with-nix-on-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 31: Build an email news digest app with Nix, Python and Celery",
+    "slug": "/tutorials/00-overview#lesson-31-build-an-email-news-digest-app-with-nix-python-and-celery"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 32: Building a Mario-like side-scroller with Kaboom.js",
+    "slug": "/tutorials/00-overview#lesson-32-building-a-mario-like-side-scroller-with-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 33: Build an escrow contract on the Ethereum blockchain with Solidity and Replit",
+    "slug": "/tutorials/00-overview#lesson-33-build-an-escrow-contract-on-the-ethereum-blockchain-with-solidity-and-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 34: Creative coding with Replit",
+    "slug": "/tutorials/00-overview#lesson-34-creative-coding-with-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
     "heading": "Other tutorials",
     "slug": "/tutorials/00-overview#other-tutorials"
   },
@@ -2336,8 +2798,8 @@
   {
     "category": "Tutorials",
     "name": "Overview",
-    "heading": "Introduction to Machine Learning with Python and repl.it",
-    "slug": "/tutorials/00-overview#introduction-to-machine-learning-with-python-and-repl-it"
+    "heading": "Introduction to Machine Learning with Python and Replit",
+    "slug": "/tutorials/00-overview#introduction-to-machine-learning-with-python-and-replit"
   },
   {
     "category": "Tutorials",
@@ -2366,8 +2828,8 @@
   {
     "category": "Tutorials",
     "name": "Introduction to the IDE",
-    "heading": "Understanding the Repl.it IDE: a practical guide to building your first project with Repl.it",
-    "slug": "/tutorials/01-introduction-to-the-repl-it-ide#understanding-the-repl-it-ide-a-practical-guide-to-building-your-first-project-with-repl-it"
+    "heading": "Understanding the Replit IDE: a practical guide to building your first project with Replit",
+    "slug": "/tutorials/01-introduction-to-the-repl-it-ide#understanding-the-replit-ide-a-practical-guide-to-building-your-first-project-with-replit"
   },
   {
     "category": "Tutorials",
@@ -2378,8 +2840,8 @@
   {
     "category": "Tutorials",
     "name": "Introduction to the IDE",
-    "heading": "Understanding the Repl.it panes",
-    "slug": "/tutorials/01-introduction-to-the-repl-it-ide#understanding-the-repl-it-panes"
+    "heading": "Understanding the Replit panes",
+    "slug": "/tutorials/01-introduction-to-the-repl-it-ide#understanding-the-replit-panes"
   },
   {
     "category": "Tutorials",
@@ -2390,8 +2852,8 @@
   {
     "category": "Tutorials",
     "name": "Introduction to the IDE",
-    "heading": "Running code from Repl.it's REPL",
-    "slug": "/tutorials/01-introduction-to-the-repl-it-ide#running-code-from-repl-its-repl"
+    "heading": "Running code from Replit's REPL",
+    "slug": "/tutorials/01-introduction-to-the-repl-it-ide#running-code-from-replits-repl"
   },
   {
     "category": "Tutorials",
@@ -2432,8 +2894,8 @@
   {
     "category": "Tutorials",
     "name": "Working with files",
-    "heading": "Working with Files using Repl.it",
-    "slug": "/tutorials/02-managing-files-using-repl-it#working-with-files-using-repl-it"
+    "heading": "Working with Files using Replit",
+    "slug": "/tutorials/02-managing-files-using-repl-it#working-with-files-using-replit"
   },
   {
     "category": "Tutorials",
@@ -2450,8 +2912,8 @@
   {
     "category": "Tutorials",
     "name": "Working with files",
-    "heading": "Building a weather logging system using Python and Repl.it",
-    "slug": "/tutorials/02-managing-files-using-repl-it#building-a-weather-logging-system-using-python-and-repl-it"
+    "heading": "Building a weather logging system using Python and Replit",
+    "slug": "/tutorials/02-managing-files-using-repl-it#building-a-weather-logging-system-using-python-and-replit"
   },
   {
     "category": "Tutorials",
@@ -2498,14 +2960,14 @@
   {
     "category": "Tutorials",
     "name": "Managing dependencies and using NLP",
-    "heading": "Managing dependencies using Repl.it",
-    "slug": "/tutorials/03-handling-dependencies-with-repl-it#managing-dependencies-using-repl-it"
+    "heading": "Managing dependencies using Replit",
+    "slug": "/tutorials/03-handling-dependencies-with-repl-it#managing-dependencies-using-replit"
   },
   {
     "category": "Tutorials",
     "name": "Managing dependencies and using NLP",
-    "heading": "Understanding Repl.it's magic import tool and the universal package manager",
-    "slug": "/tutorials/03-handling-dependencies-with-repl-it#understanding-repl-its-magic-import-tool-and-the-universal-package-manager"
+    "heading": "Understanding Replit's magic import tool and the universal package manager",
+    "slug": "/tutorials/03-handling-dependencies-with-repl-it#understanding-replits-magic-import-tool-and-the-universal-package-manager"
   },
   {
     "category": "Tutorials",
@@ -2558,8 +3020,8 @@
   {
     "category": "Tutorials",
     "name": "Data science",
-    "heading": "Data science with Repl.it: Plots and graphs",
-    "slug": "/tutorials/04-data-science-and-visualisation-with-repl-it#data-science-with-repl-it-plots-and-graphs"
+    "heading": "Data science with Replit: Plots and graphs",
+    "slug": "/tutorials/04-data-science-and-visualisation-with-repl-it#data-science-with-replit-plots-and-graphs"
   },
   {
     "category": "Tutorials",
@@ -2618,8 +3080,8 @@
   {
     "category": "Tutorials",
     "name": "Multiplayer",
-    "heading": "Multiplayer: Pair programming with Repl.it",
-    "slug": "/tutorials/05-pair-programming-using-multiplayer-with-repl-it#multiplayer-pair-programming-with-repl-it"
+    "heading": "Multiplayer: Pair programming with Replit",
+    "slug": "/tutorials/05-pair-programming-using-multiplayer-with-repl-it#multiplayer-pair-programming-with-replit"
   },
   {
     "category": "Tutorials",
@@ -2648,14 +3110,14 @@
   {
     "category": "Tutorials",
     "name": "GitHub and the Run button",
-    "heading": "Repl.it and GitHub: Using and contributing to open-source projects",
-    "slug": "/tutorials/06-github-and-run-button#repl-it-and-git-hub-using-and-contributing-to-open-source-projects"
+    "heading": "Replit and GitHub: Using and contributing to open-source projects",
+    "slug": "/tutorials/06-github-and-run-button#replit-and-git-hub-using-and-contributing-to-open-source-projects"
   },
   {
     "category": "Tutorials",
     "name": "GitHub and the Run button",
-    "heading": "Importing a project from GitHub and running it on Repl.it",
-    "slug": "/tutorials/06-github-and-run-button#importing-a-project-from-git-hub-and-running-it-on-repl-it"
+    "heading": "Importing a project from GitHub and running it on Replit",
+    "slug": "/tutorials/06-github-and-run-button#importing-a-project-from-git-hub-and-running-it-on-replit"
   },
   {
     "category": "Tutorials",
@@ -2690,8 +3152,8 @@
   {
     "category": "Tutorials",
     "name": "Juggling with PyGame",
-    "heading": "Building a game with PyGame and Repl.it",
-    "slug": "/tutorials/07-building-a-game-with-pygame#building-a-game-with-py-game-and-repl-it"
+    "heading": "Building a game with PyGame and Replit",
+    "slug": "/tutorials/07-building-a-game-with-pygame#building-a-game-with-py-game-and-replit"
   },
   {
     "category": "Tutorials",
@@ -2810,8 +3272,8 @@
   {
     "category": "Tutorials",
     "name": "Test driven development",
-    "heading": "An introduction to `pytest` and doing test-driven development with Repl.it",
-    "slug": "/tutorials/09-test-driven-development#an-introduction-to-pytest-and-doing-test-driven-development-with-repl-it"
+    "heading": "An introduction to `pytest` and doing test-driven development with Replit",
+    "slug": "/tutorials/09-test-driven-development#an-introduction-to-pytest-and-doing-test-driven-development-with-replit"
   },
   {
     "category": "Tutorials",
@@ -2954,14 +3416,14 @@
   {
     "category": "Tutorials",
     "name": "Databases: build a phonebook",
-    "heading": "Using the Repl.it database",
-    "slug": "/tutorials/11-using-the-replit-database#using-the-repl-it-database"
+    "heading": "Using the Replit database",
+    "slug": "/tutorials/11-using-the-replit-database#using-the-replit-database"
   },
   {
     "category": "Tutorials",
     "name": "Databases: build a phonebook",
-    "heading": "Adding and reading data using the Repl.it database",
-    "slug": "/tutorials/11-using-the-replit-database#adding-and-reading-data-using-the-repl-it-database"
+    "heading": "Adding and reading data using the Replit database",
+    "slug": "/tutorials/11-using-the-replit-database#adding-and-reading-data-using-the-replit-database"
   },
   {
     "category": "Tutorials",
@@ -3080,14 +3542,14 @@
   {
     "category": "Tutorials",
     "name": "Audio: create a media player",
-    "heading": "Repl.it Audio",
-    "slug": "/tutorials/12-audio#repl-it-audio"
+    "heading": "Replit Audio",
+    "slug": "/tutorials/12-audio#replit-audio"
   },
   {
     "category": "Tutorials",
     "name": "Audio: create a media player",
-    "heading": "Understanding how audio works on Repl.it",
-    "slug": "/tutorials/12-audio#understanding-how-audio-works-on-repl-it"
+    "heading": "Understanding how audio works on Replit",
+    "slug": "/tutorials/12-audio#understanding-how-audio-works-on-replit"
   },
   {
     "category": "Tutorials",
@@ -3152,8 +3614,8 @@
   {
     "category": "Tutorials",
     "name": "Steganography: hiding messages in images",
-    "heading": "Hiding messages in images: steganography with Python and Repl.it",
-    "slug": "/tutorials/13-steganography#hiding-messages-in-images-steganography-with-python-and-repl-it"
+    "heading": "Hiding messages in images: steganography with Python and Replit",
+    "slug": "/tutorials/13-steganography#hiding-messages-in-images-steganography-with-python-and-replit"
   },
   {
     "category": "Tutorials",
@@ -3164,8 +3626,8 @@
   {
     "category": "Tutorials",
     "name": "Steganography: hiding messages in images",
-    "heading": "Creating the project on Repl.it",
-    "slug": "/tutorials/13-steganography#creating-the-project-on-repl-it"
+    "heading": "Creating the project on Replit",
+    "slug": "/tutorials/13-steganography#creating-the-project-on-replit"
   },
   {
     "category": "Tutorials",
@@ -3224,8 +3686,8 @@
   {
     "category": "Tutorials",
     "name": "2D platform game with PyGame",
-    "heading": "Build a 2D Platform Game with PyGame and Repl.it",
-    "slug": "/tutorials/14-2d-platform-game#build-a-2-d-platform-game-with-py-game-and-repl-it"
+    "heading": "Build a 2D Platform Game with PyGame and Replit",
+    "slug": "/tutorials/14-2d-platform-game#build-a-2-d-platform-game-with-py-game-and-replit"
   },
   {
     "category": "Tutorials",
@@ -3848,7 +4310,7 @@
   {
     "category": "Tutorials",
     "name": "Snake game with Kaboom.js",
-    "heading": "Adding the Snake ",
+    "heading": "Adding the Snake",
     "slug": "/tutorials/21-build-snake-with-kaboom#adding-the-snake"
   },
   {
@@ -4027,6 +4489,1566 @@
   },
   {
     "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": null,
+    "slug": "tutorials/23-build-asteroids-with-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Building Asteroids in Kaboom.js",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#building-asteroids-in-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Creating a new project and loading assets",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#creating-a-new-project-and-loading-assets"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Setting up Kaboom",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#setting-up-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Setting the scene",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#setting-the-scene"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "The player's ship",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#the-players-ship"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Movement controls",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#movement-controls"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Movement",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#movement"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Rocket animation",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#rocket-animation"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Shooting",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#shooting"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "The asteroids",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#the-asteroids"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Creation",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#creation"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Collisions",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#collisions"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Ending the game",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#ending-the-game"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Final touches",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#final-touches"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Background music",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#background-music"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Smaller asteroids",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#smaller-asteroids"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Temporary invulnerability",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#temporary-invulnerability"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Asteroids game with Kaboom.js",
+    "heading": "Where to next?",
+    "slug": "/tutorials/23-build-asteroids-with-kaboom#where-to-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": null,
+    "slug": "tutorials/24-build-space-shooter-with-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Build a Space Shooter with Kaboom.js",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#build-a-space-shooter-with-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Game Design",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#game-design"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Creating a New Project on Replit",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#creating-a-new-project-on-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Getting Started with Kaboom.js",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#getting-started-with-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Setting up Kaboom",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#setting-up-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Adding the main game scene",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#adding-the-main-game-scene"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Creating the Game Map",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#creating-the-game-map"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Adding the Spaceship",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#adding-the-spaceship"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Moving the Spaceship",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#moving-the-spaceship"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Adding Laser Guns",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#adding-laser-guns"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Adding Alien Space Bugs",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#adding-alien-space-bugs"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Moving the Aliens",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#moving-the-aliens"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Shooting the Aliens",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#shooting-the-aliens"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Exploding the Alien Bugs on Contact",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#exploding-the-alien-bugs-on-contact"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Adding Score and Shield UI",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#adding-score-and-shield-ui"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Allowing the Alien Bugs to Attack",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#allowing-the-alien-bugs-to-attack"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Raining Gems",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#raining-gems"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Collecting Gems",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#collecting-gems"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Adding Background Music",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#adding-background-music"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Playing the Game",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#playing-the-game"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Credits",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#credits"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Space Shooter with Kaboom.js",
+    "heading": "Things to Try Next",
+    "slug": "/tutorials/24-build-space-shooter-with-kaboom#things-to-try-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": null,
+    "slug": "tutorials/25-build-3d-game-with-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Building a pseudo-3D game in Kaboom",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#building-a-pseudo-3-d-game-in-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Game design",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#game-design"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Creating a new project",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#creating-a-new-project"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Setting up the Kaboom environment",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#setting-up-the-kaboom-environment"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Creating the interface layers",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#creating-the-interface-layers"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Creating alien bugs",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#creating-alien-bugs"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Moving the alien bugs",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#moving-the-alien-bugs"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Adding a star field",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#adding-a-star-field"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Adding the spaceship cockpit",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#adding-the-spaceship-cockpit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Creating the spaceship's movement controls",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#creating-the-spaceships-movement-controls"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Adding weapons",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#adding-weapons"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Checking for collisions with bullets",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#checking-for-collisions-with-bullets"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Checking if alien bugs hit the spaceship",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#checking-if-alien-bugs-hit-the-spaceship"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Finishing up the game",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#finishing-up-the-game"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Game with Kaboom.js",
+    "heading": "Credits",
+    "slug": "/tutorials/25-build-3d-game-with-kaboom#credits"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": null,
+    "slug": "tutorials/26-pdf-report-generator-from-spreadsheet"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Generate PDF reports from spreadsheet data",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#generate-pdf-reports-from-spreadsheet-data"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Set up",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#set-up"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Creating the web application",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#creating-the-web-application"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Processing spreadsheets with pandas",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#processing-spreadsheets-with-pandas"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Calculating insights from data",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#calculating-insights-from-data"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Revenue by salesperson",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#revenue-by-salesperson"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Profit by salesperson",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#profit-by-salesperson"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Average discount by item",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#average-discount-by-item"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Remaining stock by item",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#remaining-stock-by-item"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Seeing results",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#seeing-results"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Plotting graphs",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#plotting-graphs"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Sales pie charts",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#sales-pie-charts"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Create sales pie charts",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#create-sales-pie-charts"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Discount bar chart",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#discount-bar-chart"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Creating a PDF",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#creating-a-pdf"
+  },
+  {
+    "category": "Tutorials",
+    "name": "PDF report generator from spreadsheet",
+    "heading": "Where next?",
+    "slug": "/tutorials/26-pdf-report-generator-from-spreadsheet#where-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": null,
+    "slug": "tutorials/27-build-tictactoe-with-websockets-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Building tic-tac-toe with WebSocket and Kaboom.js",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#building-tic-tac-toe-with-web-socket-and-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "How do multiplayer games work?",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#how-do-multiplayer-games-work"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Creating a new project",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#creating-a-new-project"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Setting up Socket.IO on the server",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#setting-up-socket-io-on-the-server"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Tracking the game state",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#tracking-the-game-state"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Accepting connections",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#accepting-connections"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Handling new players",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#handling-new-players"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Handling player actions",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#handling-player-actions"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Handling a rematch request",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#handling-a-rematch-request"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Handling disconnects",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#handling-disconnects"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Checking for the end of the game",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#checking-for-the-end-of-the-game"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Setting up Kaboom",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#setting-up-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Setting up Kaboom with Socket.IO",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#setting-up-kaboom-with-socket-io"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Adding the game board",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#adding-the-game-board"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Adding player names and game status",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#adding-player-names-and-game-status"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Connecting to the server",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#connecting-to-the-server"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Handling updated game state",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#handling-updated-game-state"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Handling player moves",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#handling-player-moves"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Next Steps",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#next-steps"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Tic-tac-toe repl",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#tic-tac-toe-repl"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Tic-tac-toe with Kaboom.js & WebSockets",
+    "heading": "Tic-tac-toe server repl",
+    "slug": "/tutorials/27-build-tictactoe-with-websockets-kaboom#tic-tac-toe-server-repl"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": null,
+    "slug": "tutorials/28-technical-challenge-site"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Build a team technical challenge website with `replit.web`",
+    "slug": "/tutorials/28-technical-challenge-site#build-a-team-technical-challenge-website-with-replit-web"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Getting started",
+    "slug": "/tutorials/28-technical-challenge-site#getting-started"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Secret key",
+    "slug": "/tutorials/28-technical-challenge-site#secret-key"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Database setup",
+    "slug": "/tutorials/28-technical-challenge-site#database-setup"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Routes",
+    "slug": "/tutorials/28-technical-challenge-site#routes"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Creating user roles",
+    "slug": "/tutorials/28-technical-challenge-site#creating-user-roles"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Helper functions",
+    "slug": "/tutorials/28-technical-challenge-site#helper-functions"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Authorization decorators",
+    "slug": "/tutorials/28-technical-challenge-site#authorization-decorators"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Building forms",
+    "slug": "/tutorials/28-technical-challenge-site#building-forms"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Building back-end functionality",
+    "slug": "/tutorials/28-technical-challenge-site#building-back-end-functionality"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Team functionality",
+    "slug": "/tutorials/28-technical-challenge-site#team-functionality"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Teams",
+    "slug": "/tutorials/28-technical-challenge-site#teams"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Admin functionality",
+    "slug": "/tutorials/28-technical-challenge-site#admin-functionality"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Admin functions",
+    "slug": "/tutorials/28-technical-challenge-site#admin-functions"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Challenge functionality",
+    "slug": "/tutorials/28-technical-challenge-site#challenge-functionality"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Challenge functionality",
+    "slug": "/tutorials/28-technical-challenge-site#challenge-functionality"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Building the web application front-end",
+    "slug": "/tutorials/28-technical-challenge-site#building-the-web-application-front-end"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Creating the HTML templates",
+    "slug": "/tutorials/28-technical-challenge-site#creating-the-html-templates"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Building the leaderboard",
+    "slug": "/tutorials/28-technical-challenge-site#building-the-leaderboard"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Using the app",
+    "slug": "/tutorials/28-technical-challenge-site#using-the-app"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Technical challenge site with Replit.web",
+    "heading": "Where next?",
+    "slug": "/tutorials/28-technical-challenge-site#where-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": null,
+    "slug": "tutorials/29-paid-content-site"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Build a paid content site with `replit.web` and Stripe",
+    "slug": "/tutorials/29-paid-content-site#build-a-paid-content-site-with-replit-web-and-stripe"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Getting started",
+    "slug": "/tutorials/29-paid-content-site#getting-started"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Secret key",
+    "slug": "/tutorials/29-paid-content-site#secret-key"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Database setup",
+    "slug": "/tutorials/29-paid-content-site#database-setup"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Main app",
+    "slug": "/tutorials/29-paid-content-site#main-app"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Content upload and other admin functionality",
+    "slug": "/tutorials/29-paid-content-site#content-upload-and-other-admin-functionality"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Access control",
+    "slug": "/tutorials/29-paid-content-site#access-control"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Helper functions",
+    "slug": "/tutorials/29-paid-content-site#helper-functions"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Auth decorators",
+    "slug": "/tutorials/29-paid-content-site#auth-decorators"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Admin functionality",
+    "slug": "/tutorials/29-paid-content-site#admin-functionality"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Content creation form",
+    "slug": "/tutorials/29-paid-content-site#content-creation-form"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Admin routes",
+    "slug": "/tutorials/29-paid-content-site#admin-routes"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Admin functionality",
+    "slug": "/tutorials/29-paid-content-site#admin-functionality"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Content viewing and paywalls",
+    "slug": "/tutorials/29-paid-content-site#content-viewing-and-paywalls"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Main app",
+    "slug": "/tutorials/29-paid-content-site#main-app"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Creating the application frontend",
+    "slug": "/tutorials/29-paid-content-site#creating-the-application-frontend"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Integrating with Stripe",
+    "slug": "/tutorials/29-paid-content-site#integrating-with-stripe"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Stripe setup",
+    "slug": "/tutorials/29-paid-content-site#stripe-setup"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Stripe Checkout",
+    "slug": "/tutorials/29-paid-content-site#stripe-checkout"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Stripe integration",
+    "slug": "/tutorials/29-paid-content-site#stripe-integration"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Stripe fulfillment",
+    "slug": "/tutorials/29-paid-content-site#stripe-fulfillment"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Webhooks",
+    "slug": "/tutorials/29-paid-content-site#webhooks"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Paid Content site with Replit.web",
+    "heading": "Where next?",
+    "slug": "/tutorials/29-paid-content-site#where-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": null,
+    "slug": "tutorials/30-build-with-nix"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "Building with Nix on Replit",
+    "slug": "/tutorials/30-build-with-nix#building-with-nix-on-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "What is Nix?",
+    "slug": "/tutorials/30-build-with-nix#what-is-nix"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "How can we use Nix on Replit?",
+    "slug": "/tutorials/30-build-with-nix#how-can-we-use-nix-on-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "Deploying a production web stack on Replit with Nix",
+    "slug": "/tutorials/30-build-with-nix#deploying-a-production-web-stack-on-replit-with-nix"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "Why Waitress?",
+    "slug": "/tutorials/30-build-with-nix#why-waitress"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "Why NGINX?",
+    "slug": "/tutorials/30-build-with-nix#why-nginx"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "Why Postgres?",
+    "slug": "/tutorials/30-build-with-nix#why-postgres"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "Repl overview",
+    "slug": "/tutorials/30-build-with-nix#repl-overview"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "start Postgres",
+    "slug": "/tutorials/30-build-with-nix#start-postgres"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "start nginx",
+    "slug": "/tutorials/30-build-with-nix#start-nginx"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "start Flask app",
+    "slug": "/tutorials/30-build-with-nix#start-flask-app"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "- Connection Settings -",
+    "slug": "/tutorials/30-build-with-nix#connection-settings"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "start nginx",
+    "slug": "/tutorials/30-build-with-nix#start-nginx"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "start Flask app",
+    "slug": "/tutorials/30-build-with-nix#start-flask-app"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "app.run(host='127.0.0.1', port=8181) dev server",
+    "slug": "/tutorials/30-build-with-nix#app-run-host-127-0-0-1-port-8181-dev-server"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "A few other things you can do with Nix and Replit",
+    "slug": "/tutorials/30-build-with-nix#a-few-other-things-you-can-do-with-nix-and-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "Jupyter Notebook",
+    "slug": "/tutorials/30-build-with-nix#jupyter-notebook"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "VSCode Server",
+    "slug": "/tutorials/30-build-with-nix#vs-code-server"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "Alternative web stacks",
+    "slug": "/tutorials/30-build-with-nix#alternative-web-stacks"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "Other programming languages",
+    "slug": "/tutorials/30-build-with-nix#other-programming-languages"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "DOSBox",
+    "slug": "/tutorials/30-build-with-nix#dos-box"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Building with Nix on Replit",
+    "heading": "General tips for building with Nix repls",
+    "slug": "/tutorials/30-build-with-nix#general-tips-for-building-with-nix-repls"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": null,
+    "slug": "tutorials/31-build-news-digest-app-with-nix"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Build an email news digest app with Nix, Python and Celery",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#build-an-email-news-digest-app-with-nix-python-and-celery"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Getting started",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#getting-started"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Installing dependencies",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#installing-dependencies"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "!/bin/sh",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#bin-sh"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Clean up",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#clean-up"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Run Mongo with local paths",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#run-mongo-with-local-paths"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Run redis",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#run-redis"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Scraping RSS and Atom feeds",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#scraping-rss-and-atom-feeds"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "evaluating content age",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#evaluating-content-age"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Setting up Mailgun",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#setting-up-mailgun"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Mailgun config",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#mailgun-config"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Interacting with MongoDB",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#interacting-with-mongo-db"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Creating the web application",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#creating-the-web-application"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Authentication decorator",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#authentication-decorator"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Routes",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#routes"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Run Flask app",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#run-flask-app"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Adding user login",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#adding-user-login"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Login",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#login"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "NEW LINE BELOW",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#new-line-below"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "NEW LINES BELOW",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#new-lines-below"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Celery configuration",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#celery-configuration"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Mailgun config",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#mailgun-config"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "NEW FUNCTION DECORATOR",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#new-function-decorator"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "COMMENT OUT THE TESTING LINE",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#comment-out-the-testing-line"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "sendtestemail(\"YOUR-EMAIL-ADDRESS-HERE\")",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#sendtestemail-your-email-address-here"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Run Celery worker",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#run-celery-worker"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Adding and removing subscriptions",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#adding-and-removing-subscriptions"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Subscriptions",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#subscriptions"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Sending digests",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#sending-digests"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Digest",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#digest"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Scheduling digests",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#scheduling-digests"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Email News digest app with Nix",
+    "heading": "Where next?",
+    "slug": "/tutorials/31-build-news-digest-app-with-nix#where-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": null,
+    "slug": "tutorials/32-build-mario-with-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Building a Mario-like side-scroller with Kaboom.js",
+    "slug": "/tutorials/32-build-mario-with-kaboom#building-a-mario-like-side-scroller-with-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Designing the game",
+    "slug": "/tutorials/32-build-mario-with-kaboom#designing-the-game"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Creating a new project in Replit",
+    "slug": "/tutorials/32-build-mario-with-kaboom#creating-a-new-project-in-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Setting up Kaboom",
+    "slug": "/tutorials/32-build-mario-with-kaboom#setting-up-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Creating the level maps",
+    "slug": "/tutorials/32-build-mario-with-kaboom#creating-the-level-maps"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Adding a scene",
+    "slug": "/tutorials/32-build-mario-with-kaboom#adding-a-scene"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Adding the main game scene",
+    "slug": "/tutorials/32-build-mario-with-kaboom#adding-the-main-game-scene"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Making Mario move",
+    "slug": "/tutorials/32-build-mario-with-kaboom#making-mario-move"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Adding scrolling",
+    "slug": "/tutorials/32-build-mario-with-kaboom#adding-scrolling"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Creating a custom component",
+    "slug": "/tutorials/32-build-mario-with-kaboom#creating-a-custom-component"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Creating a custom component for the enemies",
+    "slug": "/tutorials/32-build-mario-with-kaboom#creating-a-custom-component-for-the-enemies"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Headbutting surprise boxes",
+    "slug": "/tutorials/32-build-mario-with-kaboom#headbutting-surprise-boxes"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Adding special behaviors to Mario",
+    "slug": "/tutorials/32-build-mario-with-kaboom#adding-special-behaviors-to-mario"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Adding more Mario collisions and events",
+    "slug": "/tutorials/32-build-mario-with-kaboom#adding-more-mario-collisions-and-events"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Ending when we get to the castle",
+    "slug": "/tutorials/32-build-mario-with-kaboom#ending-when-we-get-to-the-castle"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Next steps",
+    "slug": "/tutorials/32-build-mario-with-kaboom#next-steps"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Mario with Kaboom.js",
+    "heading": "Credits",
+    "slug": "/tutorials/32-build-mario-with-kaboom#credits"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Escrow Contract with Solidity",
+    "heading": null,
+    "slug": "tutorials/33-escrow-contract-with-solidity"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Escrow Contract with Solidity",
+    "heading": "Build an escrow contract on the Ethereum blockchain with Solidity and Replit",
+    "slug": "/tutorials/33-escrow-contract-with-solidity#build-an-escrow-contract-on-the-ethereum-blockchain-with-solidity-and-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Escrow Contract with Solidity",
+    "heading": "Getting started",
+    "slug": "/tutorials/33-escrow-contract-with-solidity#getting-started"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Escrow Contract with Solidity",
+    "heading": "Solidity repl",
+    "slug": "/tutorials/33-escrow-contract-with-solidity#solidity-repl"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Escrow Contract with Solidity",
+    "heading": "Browser wallet",
+    "slug": "/tutorials/33-escrow-contract-with-solidity#browser-wallet"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Escrow Contract with Solidity",
+    "heading": "Introduction to smart contract development",
+    "slug": "/tutorials/33-escrow-contract-with-solidity#introduction-to-smart-contract-development"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Escrow Contract with Solidity",
+    "heading": "Escrow protocol design",
+    "slug": "/tutorials/33-escrow-contract-with-solidity#escrow-protocol-design"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Escrow Contract with Solidity",
+    "heading": "Escrow NFT",
+    "slug": "/tutorials/33-escrow-contract-with-solidity#escrow-nft"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Escrow Contract with Solidity",
+    "heading": "Escrow contract",
+    "slug": "/tutorials/33-escrow-contract-with-solidity#escrow-contract"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Escrow Contract with Solidity",
+    "heading": "Testing our protocol",
+    "slug": "/tutorials/33-escrow-contract-with-solidity#testing-our-protocol"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Escrow Contract with Solidity",
+    "heading": "Security and trust considerations for smart contract development",
+    "slug": "/tutorials/33-escrow-contract-with-solidity#security-and-trust-considerations-for-smart-contract-development"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Escrow Contract with Solidity",
+    "heading": "What next?",
+    "slug": "/tutorials/33-escrow-contract-with-solidity#what-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Creative Coding",
+    "heading": null,
+    "slug": "tutorials/34-creative-coding"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Creative Coding",
+    "heading": "Creative coding with Replit",
+    "slug": "/tutorials/34-creative-coding#creative-coding-with-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Creative Coding",
+    "heading": "What is creative coding?",
+    "slug": "/tutorials/34-creative-coding#what-is-creative-coding"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Creative Coding",
+    "heading": "Python `turtle`",
+    "slug": "/tutorials/34-creative-coding#python-turtle"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Creative Coding",
+    "heading": "p5.js ",
+    "slug": "/tutorials/34-creative-coding#p-5-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Creative Coding",
+    "heading": "Kaboom",
+    "slug": "/tutorials/34-creative-coding#kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Creative Coding",
+    "heading": "Pygame",
+    "slug": "/tutorials/34-creative-coding#pygame"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Creative Coding",
+    "heading": "Pyxel",
+    "slug": "/tutorials/34-creative-coding#pyxel"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Creative Coding",
+    "heading": "GLSL",
+    "slug": "/tutorials/34-creative-coding#glsl"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Creative Coding",
+    "heading": "Wrap up",
+    "slug": "/tutorials/34-creative-coding#wrap-up"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Flappy Bird with Kaboom.js",
+    "heading": null,
+    "slug": "tutorials/35-build-flappy-bird-with-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Flappy Bird with Kaboom.js",
+    "heading": "Building Flappy Bird in Kaboom.js",
+    "slug": "/tutorials/35-build-flappy-bird-with-kaboom#building-flappy-bird-in-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Flappy Bird with Kaboom.js",
+    "heading": "Creating a new project in Replit",
+    "slug": "/tutorials/35-build-flappy-bird-with-kaboom#creating-a-new-project-in-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Flappy Bird with Kaboom.js",
+    "heading": "Initializing Kaboom",
+    "slug": "/tutorials/35-build-flappy-bird-with-kaboom#initializing-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Flappy Bird with Kaboom.js",
+    "heading": "Adding scenes",
+    "slug": "/tutorials/35-build-flappy-bird-with-kaboom#adding-scenes"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Flappy Bird with Kaboom.js",
+    "heading": "Building the game world",
+    "slug": "/tutorials/35-build-flappy-bird-with-kaboom#building-the-game-world"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Flappy Bird with Kaboom.js",
+    "heading": "Making Flappy fly",
+    "slug": "/tutorials/35-build-flappy-bird-with-kaboom#making-flappy-fly"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Flappy Bird with Kaboom.js",
+    "heading": "Adding in the pipes",
+    "slug": "/tutorials/35-build-flappy-bird-with-kaboom#adding-in-the-pipes"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Flappy Bird with Kaboom.js",
+    "heading": "Adding in scoring ",
+    "slug": "/tutorials/35-build-flappy-bird-with-kaboom#adding-in-scoring"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Flappy Bird with Kaboom.js",
+    "heading": "Collision detection",
+    "slug": "/tutorials/35-build-flappy-bird-with-kaboom#collision-detection"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Flappy Bird with Kaboom.js",
+    "heading": "Next steps",
+    "slug": "/tutorials/35-build-flappy-bird-with-kaboom#next-steps"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Physics playground with Kaboom.js",
+    "heading": null,
+    "slug": "tutorials/36-physics-playground-with-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Physics playground with Kaboom.js",
+    "heading": "Build a physics playground with Kaboom.js",
+    "slug": "/tutorials/36-physics-playground-with-kaboom#build-a-physics-playground-with-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Physics playground with Kaboom.js",
+    "heading": "Getting started",
+    "slug": "/tutorials/36-physics-playground-with-kaboom#getting-started"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Physics playground with Kaboom.js",
+    "heading": "Setting the scene",
+    "slug": "/tutorials/36-physics-playground-with-kaboom#setting-the-scene"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Physics playground with Kaboom.js",
+    "heading": "Moving the player",
+    "slug": "/tutorials/36-physics-playground-with-kaboom#moving-the-player"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Physics playground with Kaboom.js",
+    "heading": "Pulling objects with the gravity gun",
+    "slug": "/tutorials/36-physics-playground-with-kaboom#pulling-objects-with-the-gravity-gun"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Physics playground with Kaboom.js",
+    "heading": "Fixing the wall-clipping bugs",
+    "slug": "/tutorials/36-physics-playground-with-kaboom#fixing-the-wall-clipping-bugs"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Physics playground with Kaboom.js",
+    "heading": "Dropping and launching objects with the gravity gun",
+    "slug": "/tutorials/36-physics-playground-with-kaboom#dropping-and-launching-objects-with-the-gravity-gun"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Physics playground with Kaboom.js",
+    "heading": "Object collisions",
+    "slug": "/tutorials/36-physics-playground-with-kaboom#object-collisions"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Physics playground with Kaboom.js",
+    "heading": "Next steps",
+    "slug": "/tutorials/36-physics-playground-with-kaboom#next-steps"
+  },
+  {
+    "category": "Tutorials",
     "name": "Pinboard project part 1: HTML & CSS",
     "heading": null,
     "slug": "tutorials/pinboard-project-part-1"
@@ -4034,14 +6056,14 @@
   {
     "category": "Tutorials",
     "name": "Pinboard project part 1: HTML & CSS",
-    "heading": "Pinboard Project: Part 1",
+    "heading": "Pinboard project: part 1",
     "slug": "/tutorials/pinboard-project-part-1#pinboard-project-part-1"
   },
   {
     "category": "Tutorials",
     "name": "Pinboard project part 1: HTML & CSS",
-    "heading": "Creating Your Own Project on Repl.it",
-    "slug": "/tutorials/pinboard-project-part-1#creating-your-own-project-on-repl-it"
+    "heading": "Creating Your Own Project on Replit",
+    "slug": "/tutorials/pinboard-project-part-1#creating-your-own-project-on-replit"
   },
   {
     "category": "Tutorials",
@@ -4154,7 +6176,7 @@
   {
     "category": "Tutorials",
     "name": "Pinboard project part 2: JavaScript",
-    "heading": "Pinboard Project: Part 2",
+    "heading": "Pinboard project: part 2",
     "slug": "/tutorials/pinboard-project-part-2#pinboard-project-part-2"
   },
   {
@@ -4256,7 +6278,7 @@
   {
     "category": "Tutorials",
     "name": "GraphQL part 1: setting up endpoints",
-    "heading": "An Introduction to GraphQL (part 1)",
+    "heading": "An introduction to GraphQL (part 1)",
     "slug": "/tutorials/graphql-project-part-1#an-introduction-to-graph-ql-part-1"
   },
   {
@@ -4840,5 +6862,29 @@
     "name": "Abstract data types",
     "heading": "Our Awesome Creator",
     "slug": "/teaching-curriculum/abstract-data-types#our-awesome-creator"
+  },
+  {
+    "category": "Replit Books",
+    "name": "Code with Replit",
+    "heading": null,
+    "slug": "replit-books/code-with-replit"
+  },
+  {
+    "category": "Replit Books",
+    "name": "Code with Replit",
+    "heading": "Code With Replit",
+    "slug": "/replit-books/code-with-replit#code-with-replit"
+  },
+  {
+    "category": "Replit Books",
+    "name": "Learn Python the Right Way",
+    "heading": null,
+    "slug": "replit-books/learn-python-the-right-way"
+  },
+  {
+    "category": "Replit Books",
+    "name": "Learn Python the Right Way",
+    "heading": "Learn Python the Right Way",
+    "slug": "/replit-books/learn-python-the-right-way#learn-python-the-right-way"
   }
 ]
