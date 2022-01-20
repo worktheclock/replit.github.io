@@ -28,7 +28,10 @@ Our dashboard will need to have three functions:
 
 Let's start by creating an HTML frontend with the basic data and form elements necessary to enable this functionality. In your repl's file pane, create a directory named `templates`, and in that folder, create a file called `index.html` (this file structure is necessary for building Flask applications).
 
-![Creating the file structure](/images/tutorials/22-stock-market/create-files.png)
+<img src="/images/tutorials/22-stock-market/create-files.png"
+    alt="Creating the file structure"
+    style="Width: 75% !important;"/>
+
 
 Then enter the following HTML into the `index.html` file:
 
@@ -105,7 +108,9 @@ from replit import db
 
 Now we can use the globally scoped variable `db` like a Python dictionary, keeping in mind that whatever we store in it will persist between executions of our application. A cheat sheet for using the database is available from your repl's database tab on the sidebar.
 
-![Database sidebar](/images/tutorials/22-stock-market/database-sidebar.png)
+<img src="/images/tutorials/22-stock-market/database-sidebar.png"
+    alt="Database sidebar"
+    style="Width: 55% !important;"/>
 
 Let's give it a spin and write the function for buying shares. Add the following code just above the line beginning with `site.run`:
 
@@ -255,7 +260,7 @@ def get_price(ticker):
     page = requests.get("https://finance.yahoo.com/quote/" + ticker)
     soup = BeautifulSoup(page.text, "html5lib")
 
-    price = soup.find('span', {'class':'Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)'}).text
+    price = soup.find('fin-streamer', {'class':'Fw(b) Fz(36px) Mb(-4px) D(ib)'}).text
 
     # remove thousands separator
     price = price.replace(",", "")
@@ -267,9 +272,9 @@ The first line fetches the page on Yahoo Finance that shows information about ou
 
 [https://finance.yahoo.com/quote/AAPL](https://finance.yahoo.com/quote/AAPL)
 
-We then load the page into a Beautiful Soup object, parsing it as HTML5 content. Finally, we need to find the price. If you visit the above page in your browser, right-click on the price near the top of the page and select "Inspect". You'll notice that it's inside a `span` element with a class value containing `Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)`. If the market is open, and the price is changing, additional classes may be added and removed as you watch, but the previously mentioned value should still be sufficient. 
+We then load the page into a Beautiful Soup object, parsing it as HTML5 content. Finally, we need to find the price. If you visit the above page in your browser, right-click on the price near the top of the page and select "Inspect". You'll notice that it's inside a `fin-streamer` element with a class value containing `Fw(b) Fz(36px) Mb(-4px) D(ib)`. If the market is open, and the price is changing, additional classes may be added and removed as you watch, but the previously mentioned value should still be sufficient. 
 
-We use Beautiful Soup's [`find`](https://www.crummy.com/software/BeautifulSoup/bs3/documentation.html#find(name,%20attrs,%20recursive,%20text,%20**kwargs)) method to locate this `span`. The `text` attribute of the object returned is the price we want. Before returning it, we remove any comma thousands separators to avoid float conversion errors later on.
+We use Beautiful Soup's [`find`](https://www.crummy.com/software/BeautifulSoup/bs3/documentation.html#find(name,%20attrs,%20recursive,%20text,%20**kwargs)) method to locate this `fin-streamer`. The `text` attribute of the object returned is the price we want. Before returning it, we remove any comma thousands separators to avoid float conversion errors later on.
 
 Although we've implemented this functionality for the sake of portfolio viewing, we can also use it to improve our share buying process. We'll make a few additional quality-of-life changes at the same time. Find your `buy` function code and modify it to look like this:
 
@@ -480,7 +485,7 @@ def get_price(ticker):
     page = requests.get("https://finance.yahoo.com/quote/" + ticker)
     soup = BeautifulSoup(page.text, "html5lib")
 
-    price = soup.find('span', {'class':'Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)'}).text
+    price = soup.find('fin-streamer', {'class':'Fw(b) Fz(36px) Mb(-4px) D(ib)'}).text
 
     # remove thousands separator
     price = price.replace(",", "")
