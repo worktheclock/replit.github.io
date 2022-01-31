@@ -4,7 +4,7 @@ With Replit's Google Classroom integration, teachers can quickly add every stude
 
 Students and teachers can easily build and collaborate on [Replit](https://replit.com/) from a Chromebook, [download it from the Google Play Store](https://play.google.com/store/apps/details?id=com.replit.twa) to their device, or find it on the [Chromebook App Hub](https://chromebookapphub.withgoogle.com/apps/replit-teams-for-education). 
 
-*Soon, teachers who have added their students to Replit through Google Classroom will also be able to integrate their Google Classrooms gradebooks with Replit's [Projects Overview](https://docs.replit.com/teams/reviewing-submissions)!* 
+*Soon, teachers who have added their students to Replit through Google Classroom will also be able to integrate their Google Classrooms gradebooks with Replit's [Projects Overview](/teams-edu/reviewing-submissions)!* 
 
 View a demo of these functionalities [here](https://www.loom.com/share/e2bb4abf6ad84fa28e19859d1089354f). 
 

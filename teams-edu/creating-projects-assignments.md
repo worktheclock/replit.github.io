@@ -5,10 +5,10 @@
 *Team Projects are private by default and are visible and editable only by the teacher and each individual student or student group.* 
 
 >**Please note that Team Repls were deprecated in October 2021.**
-* If you'd like to create private repls to store solutions, we recommend using the [Project Solutions tool](https://docs.replit.com/teams/project-solutions).
+* If you'd like to create private repls to store solutions, we recommend using the [Project Solutions tool](/teams-edu/project-solutions).
 * You can also store notes and demos as unpublished Team Projects. Unpublished projects are not visible to your students at all.
-* Use the [Curriculum Authoring tool](https://docs.replit.com/teams/lesson-authoring) to write read-only instructions for your students to follow as well as admin-only lesson plans where you can stash your class notes.
-* You can also convert repls from your personal account into Team Projects using [this workflow](https://docs.replit.com/teams/repls-to-team-projects).
+* Use the [Curriculum Authoring tool](/teams-edu/lesson-authoring) to write read-only instructions for your students to follow as well as admin-only lesson plans where you can stash your class notes.
+* You can also convert repls from your personal account into Team Projects using [this workflow](/teams-edu/repls-to-team-projects).
 * If you still have questions or need support, please contact us at [education@replit.com](mailto:education@replit.com).
 
 ## Creating Team Projects
@@ -16,7 +16,7 @@ From your team dashboard, create a new project.
 
 ![Create project button](/images/teamsForEducation/project-create-button.png)
 
-**Select project language, title, description, due date, and whether this will be a [group project](https://docs.replit.com/teams/group-projects).** You'll be redirected to the IDE to add any comments, tests, and initial coding blocks you'd like your students to start from. You'll assign groups when you publish the project. 
+**Select project language, title, description, due date, and whether this will be a [group project](/teams-edu/group-projects).** You'll be redirected to the IDE to add any comments, tests, and initial coding blocks you'd like your students to start from. You'll assign groups when you publish the project. 
 
 <img style="max-width: 600px" src="/images/teamsForEducation/project-create.png" />
 

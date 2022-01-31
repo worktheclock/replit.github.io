@@ -350,7 +350,7 @@ In each of these folders, you can see the code that was submitted.
 
 You can also see `report.md` has been generated, with details of the two submissions (who submitted them and when) and their calculated grades.
 
-If you want to discuss the submitted code with the student, you can navigate to the grading-project submissions page and view the submission in question. From there you can select a piece of code from your student's submission and click on the annotate button to leave a message. This makes it easy to ask for clarification or give advice. You can read more on the annotation feature [here](https://docs.replit.com/Teams/Annotations)
+If you want to discuss the submitted code with the student, you can navigate to the grading-project submissions page and view the submission in question. From there you can select a piece of code from your student's submission and click on the annotate button to leave a message. This makes it easy to ask for clarification or give advice. You can read more on the annotation feature [here](/teams-edu/reviewing-submissions)
 
 ![](/images/teamsForEducation/centralized-autograder-python/08-report-serverside.png)
 

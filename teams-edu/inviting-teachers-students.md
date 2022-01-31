@@ -1,7 +1,7 @@
 # Inviting teachers and students
 
 
-To invite people with their Replit username or email address, follow the steps during [team creation](https://docs.replit.com/teams/intro-teams-education). 
+To invite people with their Replit username or email address, follow the steps during [team creation](/teams-edu/intro-teams-education). 
 
 ## Invite Org Owners and Admins (Teachers)
 **Org Owners** can add and remove Org Admins, delete and rename an org, and create and access all teams as an admin. 

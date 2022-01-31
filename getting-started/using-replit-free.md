@@ -33,11 +33,11 @@ For a practical intro to using the multiplayer feature, follow [this tutorial](h
 
 The Teams feature allows you to share all your repls and folders by default. It isn't necessary for teaching, learning, or collaboration on Replit, but it can make it much easier to work with others. 
 
-Teams has a free version that allows for up to ten collaborators. If you need more than this, check out [Teams for Education](https://docs.replit.com/teams/intro-teams-education).
+Teams has a free version that allows for up to ten collaborators. If you need more than this, check out [Teams for Education](/teams-edu/intro-teams-education).
 
 ## Compliance
 
-We take user privacy very seriously and only collect data insofar as it's important to provide our service. You can read more about our privacy policy [here](https://replit.com/site/privacy),) and go through our privacy FAQs [here](https://docs.replit.com/Teams/privacyFAQs).
+We take user privacy very seriously and only collect data insofar as it's important to provide our service. You can read more about our privacy policy [here](https://replit.com/site/privacy),) and go through our privacy FAQs [here](/teams-edu/privacy-faq).
 
 As a small, team we're unable to comply with the various ed-tech regulations around the world. However, you can use Replit completely anonymously without providing any identifiable information; just choose a language from our [languages page](https://replit.com/languages) and start coding.
 

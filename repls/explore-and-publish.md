@@ -31,14 +31,14 @@ You can publish either directly from the workspace or from your repl's spotlight
 *Disclaimer: currently, you can't publish repls to Apps if you're a student or trying to publish a team repl.*
 
 ### Publish from Workspace
-![Clicking publish from Workspace](https://docs.replit.com/images/apps/workspace-publish.png)
+![Clicking publish from Workspace](/images/apps/workspace-publish.png)
 
 ### Publish from Spotlight
-![Clicking publish from Spotlight](https://docs.replit.com/images/apps/spotlight-publish.png)
+![Clicking publish from Spotlight](/images/apps/spotlight-publish.png)
 
 ### When you click on either, you'll be able to add a description, cover image, and tags to your repl.
 
-![Filling out publish details](https://docs.replit.com/images/apps/workspace-publish.gif)
+![Filling out publish details](/images/apps/workspace-publish.gif)
 
 
 ## Requirements for publishing
@@ -51,19 +51,19 @@ You can publish either directly from the workspace or from your repl's spotlight
 Once your repl is published, if you want to edit the description, tags, or cover image, press `Publish update` in either the Workspace or on your Spotlight page.
 
 ### Publish update from Workspace
-![Clicking publish from Workspace](https://docs.replit.com/images/apps/workspace-publish-update.png)
+![Clicking publish from Workspace](/images/apps/workspace-publish-update.png)
 
 ### Publish update from Spotlight
-![Clicking publish from Spotlight](https://docs.replit.com/images/apps/spotlight-publish-update.png)
+![Clicking publish from Spotlight](/images/apps/spotlight-publish-update.png)
 
 
 ## Unpublishing
 If you want to unpublish your repl, go to the `...` menu in the top right corner of your Spotlight page or in the Workspace, and click `Unpublish`
 
 ### Unpublishing from Workspace
-![Clicking publish from Workspace](https://docs.replit.com/images/apps/workspace-unpublish.png)
+![Clicking publish from Workspace](/images/apps/workspace-unpublish.png)
 
 ### Unpublishing from Spotlight
-![Clicking publish from Unpublish](https://docs.replit.com/images/apps/spotlight-unpublish.png)
+![Clicking publish from Unpublish](/images/apps/spotlight-unpublish.png)
 
 

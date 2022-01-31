@@ -522,8 +522,8 @@ Then upload `sales-july-2021.xlsx` again, and wait for your report to generate. 
 
 We've covered a number of methods for working and displaying tabular data in this tutorial. From here, you can apply this to your own data munging and visualization needs. Additionally, there's much more to learn about all of these topics.
 
-* Some of our other tutorials delve into other aspects of Flask, such as this [stock market dashboard tutorial](https://docs.replit.com/tutorials/22-personal-stock-market-dashboard). The web application interface we've built above is minimal and may benefit from additional functionality.
-* We also have [another tutorial on Matplotlib](https://docs.replit.com/tutorials/04-data-science-and-visualisation-with-repl-it). Additionally, Matplotlib provides [a number of tutorials on their website](https://matplotlib.org/stable/tutorials/index.html).
+* Some of our other tutorials delve into other aspects of Flask, such as this [stock market dashboard tutorial](/tutorials/22-personal-stock-market-dashboard). The web application interface we've built above is minimal and may benefit from additional functionality.
+* We also have [another tutorial on Matplotlib](/tutorials/04-data-science-and-visualisation-with-repl-it). Additionally, Matplotlib provides [a number of tutorials on their website](https://matplotlib.org/stable/tutorials/index.html).
 * The pandas community has written a number of tutorials, [linked here](https://pandas.pydata.org/pandas-docs/stable/getting_started/tutorials.html).
 * Finally, [the FPDF documentation is available here](https://pyfpdf.readthedocs.io/en/latest/index.html).
 

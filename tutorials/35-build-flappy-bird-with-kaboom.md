@@ -359,7 +359,7 @@ Here are some ideas you can try to improve your clone of the Flappy Bird game:
 
 - Make the game play faster as the player gets a higher score. You can do this by updating the speed that the pipes move by making the speed parameter passed to the `pipe.move` method a variable, which increases as the player score increases.
 - Add some different types of obstacles, other than the pipes, for Flappy to try to avoid. 
-- Use the [Kaboom sprite editor](https://docs.replit.com/tutorials/kaboom-editor) to create your own graphics for your Flappy world!
+- Use the [Kaboom sprite editor](/tutorials/kaboom-editor) to create your own graphics for your Flappy world!
 - Add in some more sound effects and play some game music using the [`play`](https://kaboomjs.com/#play) function.
 
 You can find the code for this tutorial here:

@@ -60,7 +60,7 @@ There's no need to keep the grading project running, as grades will be submitted
 
 ![](/images/teamsForEducation/replgrader-com-grades.png)
 
-In the example above, one student submitted twice. If the students joined your team using an [anonymous invitation](https://docs.replit.com/Teams/Invitations) you will not see their personal information - only their randomly generated username. If they signed up for a normal repl account, you will see their repl username. If a student submitted more than once, you can see the most recent submission by inspecting the timestamps.
+In the example above, one student submitted twice. If the students joined your team using an [anonymous invitation](/teams-edu/inviting-teachers-students) you will not see their personal information - only their randomly generated username. If they signed up for a normal repl account, you will see their repl username. If a student submitted more than once, you can see the most recent submission by inspecting the timestamps.
 
 ## Example assignments
 

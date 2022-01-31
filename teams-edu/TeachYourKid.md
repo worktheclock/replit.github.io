@@ -4,7 +4,7 @@ If you're a parent who wants to teach your child how to code from scratch, this 
 
 <hr>
 
-**A note on privacy:** Especially if your child is young, you're probably worried about privacy and data protection. In many countries, storing and processing personal data of minors is treated differently. In the USA, there are regulations concerning anyone under the age of 13. You can use our Teams for Education package from [Replit teams](https://replit.com/teams) which includes an anonymous invite feature. This allows you to invite your child to create a fully anonymous account. You can find more information on invitations and the privacy invite links [here](https://docs.replit.com/Teams/Invitations).
+**A note on privacy:** Especially if your child is young, you're probably worried about privacy and data protection. In many countries, storing and processing personal data of minors is treated differently. In the USA, there are regulations concerning anyone under the age of 13. You can use our Teams for Education package from [Replit teams](https://replit.com/teams) which includes an anonymous invite feature. This allows you to invite your child to create a fully anonymous account. You can find more information on invitations and the privacy invite links [here](/teams-edu/inviting-teachers-students).
 <hr>
 
 ## The benefits of teaching children to code
@@ -30,7 +30,7 @@ We built Python Play on top of PyGame as a compromise in the simplicity/power tr
 
 Each of the examples is a starting point for you and your child to play with and develop your own unique extensions.
 
-If you do not have a Replit Teams account yet, read this [introduction to Teams](https://docs.replit.com/Teams/Intro) and sign up. The free account will be sufficient to follow along, but you may choose a premium option for more powerful repls and heightened privacy.
+If you do not have a Replit Teams account yet, read this [introduction to Teams](/teams-edu/intro-teams-education) and sign up. The free account will be sufficient to follow along, but you may choose a premium option for more powerful repls and heightened privacy.
 
 ## Drawing with Python Turtle
 
@@ -148,7 +148,7 @@ Once you're both comfortable with the Python Play syntax that makes up this game
 
 PyGame is more complicated than Python Play, but it also has a larger community and many [pre-built examples](https://www.pygame.org/docs/ref/examples.html) that you can use as a starting point.
 
-It's likely that your child will benefit from starting out with some easier libraries and moving up to Python Play over time. But if you want to jump in the deep end, we also have a [detailed tutorial](https://docs.replit.com/tutorials/07-building-a-game-with-pygame) on how to build a juggling game in PyGame.
+It's likely that your child will benefit from starting out with some easier libraries and moving up to Python Play over time. But if you want to jump in the deep end, we also have a [detailed tutorial](/tutorials/07-building-a-game-with-pygame) on how to build a juggling game in PyGame.
 
 ## Drawing on a blank canvas with Basic
 
@@ -156,7 +156,7 @@ Programming used to look pretty different. Older languages like BASIC relied hea
 
 However, these constructs are also "closer to the metal" and they can help beginners understand how things like program flow actually work under the hood.
 
-[Classic Basic on Replit](https://docs.replit.com/misc/basic) combines the syntax of BASIC with some more modern features for the best of both worlds.
+[Classic Basic on Replit](/misc/classic-basic-replit) combines the syntax of BASIC with some more modern features for the best of both worlds.
 
 At its simplest, it can be used like Microsoft Paint: to draw pixel by pixel on a canvas, but using code instead of your mouse.
 
@@ -170,7 +170,7 @@ Basic is definitely not limited to only drawing static pictures. For more inspir
 
 ## Where next?
 
-Once your child understands the basics of programming they can move on to work through [our tutorials](https://docs.replit.com/tutorials/00-overview). 
+Once your child understands the basics of programming they can move on to work through [our tutorials](/tutorials/00-overview). 
 
 While games are often a good way to get children hooked on programming, many children also prefer building non-game programs. See whether they are most interested in games, web application development or even something like data visualisation and then double down on finding more examples that match their interests.
 

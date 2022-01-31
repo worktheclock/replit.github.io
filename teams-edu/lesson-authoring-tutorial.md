@@ -1,6 +1,6 @@
 # How to Create a Lesson with Replit
 
-_You can find some more information about lesson authoring [here](/teams/lesson-authoring)._
+_You can find some more information about lesson authoring [here](/teams-edu/lesson-authoring)._
 
 Teams for Education is a collaborative platform where teachers can create assignments for their students. 
 
@@ -57,7 +57,7 @@ Next, you can create a test by clicking on 'Create test' and adding the test nam
 
 <img src="/images/teamsForEducation/curriculum-authoring/Create_test_button.png" style="width:40%; height:40%">
 
-You can define the expected output by indicating whether it should be a "match", "exact", "regex" or "compatibility" test. You can find out more [here](/teams/input-output-testing).
+You can define the expected output by indicating whether it should be a "match", "exact", "regex" or "compatibility" test. You can find out more [here](/teams-edu/input-output-testing).
 
 In most cases, a match test is sufficient. A match test is passed if the expected output is in (or equal to) the actual output. In other words, the actual output does not have to be identical to the expected output, it must just include it. 
 
