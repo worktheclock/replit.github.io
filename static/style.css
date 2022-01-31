@@ -209,6 +209,24 @@ code {
   font-weight: 400;
 }
 
+.markdown table {
+  border-collapse: collapse;
+  border: none;
+  margin: 0;
+}
+
+.markdown tr {
+  border: none;
+  margin: 0;
+}
+
+.markdown td {
+  border: 1px solid #888888;
+  font-size: 14px;
+  padding: 4px;
+  margin: 0;
+}
+
 /* iFrame */
 
 iframe {

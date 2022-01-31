@@ -269,6 +269,10 @@ app.get('/programming-ide/configuring-run-button', async (req, res) => {
     res.redirect(301, '/programming-ide/configuring-repl');
 });
 
+app.get('/teams/it-administrators-toolkit', async (req, res) => {
+	res.redirect(301, '/teams-edu/it-administrators-toolkit');
+});
+
 app.get('/:category/:slug', async (req, res) => {
 	const { category, slug } = req.params;
 	render(res, category, slug)
