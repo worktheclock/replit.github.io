@@ -2100,6 +2100,120 @@
     "slug": "/teams-pro/interviewing-candidates-guest-mode#interviewing-candidates-with-guest-mode"
   },
   {
+    "category": "Teams Pro (beta)",
+    "name": "Manage and copy repls for interviewing",
+    "heading": null,
+    "slug": "teams-pro/copying-repls-for-interviewing"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Manage and copy repls for interviewing",
+    "heading": "How to manage and copy repls for interviewing",
+    "slug": "/teams-pro/copying-repls-for-interviewing#how-to-manage-and-copy-repls-for-interviewing"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Manage and copy repls for interviewing",
+    "heading": "Forking template repls",
+    "slug": "/teams-pro/copying-repls-for-interviewing#forking-template-repls"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Manage and copy repls for interviewing",
+    "heading": "Adding a naming convention",
+    "slug": "/teams-pro/copying-repls-for-interviewing#adding-a-naming-convention"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Manage and copy repls for interviewing",
+    "heading": "Organizing interview templates ",
+    "slug": "/teams-pro/copying-repls-for-interviewing#organizing-interview-templates"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Manage and copy repls for interviewing",
+    "heading": "Removing candidates from completed interview repls",
+    "slug": "/teams-pro/copying-repls-for-interviewing#removing-candidates-from-completed-interview-repls"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Manage and copy repls for interviewing",
+    "heading": "Performing code review",
+    "slug": "/teams-pro/copying-repls-for-interviewing#performing-code-review"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Hosting your documentation on Replit",
+    "heading": null,
+    "slug": "teams-pro/hosting-your-documentation-on-replit"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Hosting your documentation on Replit",
+    "heading": "How to write and host your technical documentation using Replit",
+    "slug": "/teams-pro/hosting-your-documentation-on-replit#how-to-write-and-host-your-technical-documentation-using-replit"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Hosting your documentation on Replit",
+    "heading": "Steps to follow",
+    "slug": "/teams-pro/hosting-your-documentation-on-replit#steps-to-follow"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Hosting your documentation on Replit",
+    "heading": "Creating a repl",
+    "slug": "/teams-pro/hosting-your-documentation-on-replit#creating-a-repl"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Hosting your documentation on Replit",
+    "heading": "Installing MkDocs ",
+    "slug": "/teams-pro/hosting-your-documentation-on-replit#installing-mk-docs"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Hosting your documentation on Replit",
+    "heading": "Adding pages",
+    "slug": "/teams-pro/hosting-your-documentation-on-replit#adding-pages"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Hosting your documentation on Replit",
+    "heading": "Keeping your repl alive and adding a boost",
+    "slug": "/teams-pro/hosting-your-documentation-on-replit#keeping-your-repl-alive-and-adding-a-boost"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Hosting your documentation on Replit",
+    "heading": "Adding version control",
+    "slug": "/teams-pro/hosting-your-documentation-on-replit#adding-version-control"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Hosting your documentation on Replit",
+    "heading": "Pull changes from GitHub",
+    "slug": "/teams-pro/hosting-your-documentation-on-replit#pull-changes-from-git-hub"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Hosting your documentation on Replit",
+    "heading": "Set up a custom domain",
+    "slug": "/teams-pro/hosting-your-documentation-on-replit#set-up-a-custom-domain"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Hosting your documentation on Replit",
+    "heading": "Scaling your docs platform",
+    "slug": "/teams-pro/hosting-your-documentation-on-replit#scaling-your-docs-platform"
+  },
+  {
+    "category": "Teams Pro (beta)",
+    "name": "Hosting your documentation on Replit",
+    "heading": "Where next?",
+    "slug": "/teams-pro/hosting-your-documentation-on-replit#where-next"
+  },
+  {
     "category": "Settings",
     "name": "Changing your username",
     "heading": null,
@@ -6142,6 +6256,132 @@
     "name": "Physics playground with Kaboom.js",
     "heading": "Next steps",
     "slug": "/tutorials/36-physics-playground-with-kaboom#next-steps"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Breakout with Kaboom.js",
+    "heading": null,
+    "slug": "tutorials/37-build-breakout-with-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Breakout with Kaboom.js",
+    "heading": "Building a block-breaking game with Kaboom.js",
+    "slug": "/tutorials/37-build-breakout-with-kaboom#building-a-block-breaking-game-with-kaboom-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Breakout with Kaboom.js",
+    "heading": "Getting started",
+    "slug": "/tutorials/37-build-breakout-with-kaboom#getting-started"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Breakout with Kaboom.js",
+    "heading": "Loading assets",
+    "slug": "/tutorials/37-build-breakout-with-kaboom#loading-assets"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Breakout with Kaboom.js",
+    "heading": "Creating levels",
+    "slug": "/tutorials/37-build-breakout-with-kaboom#creating-levels"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Breakout with Kaboom.js",
+    "heading": "Moving the paddle",
+    "slug": "/tutorials/37-build-breakout-with-kaboom#moving-the-paddle"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Breakout with Kaboom.js",
+    "heading": "Moving the ball",
+    "slug": "/tutorials/37-build-breakout-with-kaboom#moving-the-ball"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Breakout with Kaboom.js",
+    "heading": "Collisions",
+    "slug": "/tutorials/37-build-breakout-with-kaboom#collisions"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Breakout with Kaboom.js",
+    "heading": "Winning and losing",
+    "slug": "/tutorials/37-build-breakout-with-kaboom#winning-and-losing"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Breakout with Kaboom.js",
+    "heading": "Powerups",
+    "slug": "/tutorials/37-build-breakout-with-kaboom#powerups"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Breakout with Kaboom.js",
+    "heading": "Music",
+    "slug": "/tutorials/37-build-breakout-with-kaboom#music"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Breakout with Kaboom.js",
+    "heading": "Where next?",
+    "slug": "/tutorials/37-build-breakout-with-kaboom#where-next"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Rendering with Three.js",
+    "heading": null,
+    "slug": "tutorials/38-3D-rendering-with-threejs"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Rendering with Three.js",
+    "heading": "Rendering 3D scenes with three.js",
+    "slug": "/tutorials/38-3D-rendering-with-threejs#rendering-3-d-scenes-with-three-js"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Rendering with Three.js",
+    "heading": "Creating a new project in Replit",
+    "slug": "/tutorials/38-3D-rendering-with-threejs#creating-a-new-project-in-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Rendering with Three.js",
+    "heading": "Importing three.js to the project",
+    "slug": "/tutorials/38-3D-rendering-with-threejs#importing-three-js-to-the-project"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Rendering with Three.js",
+    "heading": "Creating a basic scene",
+    "slug": "/tutorials/38-3D-rendering-with-threejs#creating-a-basic-scene"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Rendering with Three.js",
+    "heading": "Animating a scene",
+    "slug": "/tutorials/38-3D-rendering-with-threejs#animating-a-scene"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Rendering with Three.js",
+    "heading": "Adding a model to the scene",
+    "slug": "/tutorials/38-3D-rendering-with-threejs#adding-a-model-to-the-scene"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Rendering with Three.js",
+    "heading": "Adding controls to the scene",
+    "slug": "/tutorials/38-3D-rendering-with-threejs#adding-controls-to-the-scene"
+  },
+  {
+    "category": "Tutorials",
+    "name": "3D Rendering with Three.js",
+    "heading": "Next Steps",
+    "slug": "/tutorials/38-3D-rendering-with-threejs#next-steps"
   },
   {
     "category": "Tutorials",

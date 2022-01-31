@@ -258,6 +258,10 @@
         "slug": "interviewing-candidates-guest-mode"
       },
       {
+        "name": "Manage and copy repls for interviewing",
+        "slug": "copying-repls-for-interviewing"
+      },
+      {
         "name": "Hosting your documentation on Replit",
         "slug": "hosting-your-documentation-on-replit"
       }
