@@ -1236,706 +1236,790 @@
     "slug": "/hosting/database-faq#how-do-i-share-a-database-across-repls"
   },
   {
+    "category": "Teams",
+    "name": "Team roles and permissions",
+    "heading": null,
+    "slug": "teams/roles-and-permissions"
+  },
+  {
+    "category": "Teams",
+    "name": "Team roles and permissions",
+    "heading": "Roles & permissions",
+    "slug": "/teams/roles-and-permissions#roles-permissions"
+  },
+  {
     "category": "Teams for Education",
     "name": "Introduction to Teams for Education",
     "heading": null,
-    "slug": "teams/intro-teams-education"
+    "slug": "teams-edu/intro-teams-education"
   },
   {
     "category": "Teams for Education",
     "name": "Introduction to Teams for Education",
     "heading": "Introduction to Teams for Education",
-    "slug": "/teams/intro-teams-education#introduction-to-teams-for-education"
+    "slug": "/teams-edu/intro-teams-education#introduction-to-teams-for-education"
   },
   {
     "category": "Teams for Education",
     "name": "Introduction to Teams for Education",
     "heading": "More About Teams",
-    "slug": "/teams/intro-teams-education#more-about-teams"
+    "slug": "/teams-edu/intro-teams-education#more-about-teams"
   },
   {
     "category": "Teams for Education",
     "name": "Introduction to Teams for Education",
     "heading": "How to Sign Up",
-    "slug": "/teams/intro-teams-education#how-to-sign-up"
+    "slug": "/teams-edu/intro-teams-education#how-to-sign-up"
   },
   {
     "category": "Teams for Education",
     "name": "Introduction to Teams for Education",
     "heading": "Inviting Teammates",
-    "slug": "/teams/intro-teams-education#inviting-teammates"
+    "slug": "/teams-edu/intro-teams-education#inviting-teammates"
   },
   {
     "category": "Teams for Education",
     "name": "Introduction to Teams for Education",
     "heading": "Creating Teams ",
-    "slug": "/teams/intro-teams-education#creating-teams"
+    "slug": "/teams-edu/intro-teams-education#creating-teams"
   },
   {
     "category": "Teams for Education",
     "name": "FAQ",
     "heading": null,
-    "slug": "teams/FAQ"
+    "slug": "teams-edu/FAQ"
   },
   {
     "category": "Teams for Education",
     "name": "FAQ",
     "heading": "FAQs",
-    "slug": "/teams/FAQ#fa-qs"
+    "slug": "/teams-edu/FAQ#fa-qs"
   },
   {
     "category": "Teams for Education",
     "name": "FAQ",
     "heading": "How do I get started with Teams for Education?",
-    "slug": "/teams/FAQ#how-do-i-get-started-with-teams-for-education"
+    "slug": "/teams-edu/FAQ#how-do-i-get-started-with-teams-for-education"
   },
   {
     "category": "Teams for Education",
     "name": "FAQ",
     "heading": "How do I manage team members in a team?",
-    "slug": "/teams/FAQ#how-do-i-manage-team-members-in-a-team"
+    "slug": "/teams-edu/FAQ#how-do-i-manage-team-members-in-a-team"
   },
   {
     "category": "Teams for Education",
     "name": "FAQ",
     "heading": "How do I create a team project?",
-    "slug": "/teams/FAQ#how-do-i-create-a-team-project"
+    "slug": "/teams-edu/FAQ#how-do-i-create-a-team-project"
   },
   {
     "category": "Teams for Education",
     "name": "FAQ",
     "heading": "How do I auto-grade projects?",
-    "slug": "/teams/FAQ#how-do-i-auto-grade-projects"
+    "slug": "/teams-edu/FAQ#how-do-i-auto-grade-projects"
   },
   {
     "category": "Teams for Education",
     "name": "FAQ",
     "heading": "How do I know if Replit is compliant with my school's compliancy standards?",
-    "slug": "/teams/FAQ#how-do-i-know-if-replit-is-compliant-with-my-schools-compliancy-standards"
+    "slug": "/teams-edu/FAQ#how-do-i-know-if-replit-is-compliant-with-my-schools-compliancy-standards"
   },
   {
     "category": "Teams for Education",
     "name": "FAQ",
     "heading": "I am having trouble with portions of Replit being blocked by my school's servers. What do I do?",
-    "slug": "/teams/FAQ#i-am-having-trouble-with-portions-of-replit-being-blocked-by-my-schools-servers-what-do-i-do"
+    "slug": "/teams-edu/FAQ#i-am-having-trouble-with-portions-of-replit-being-blocked-by-my-schools-servers-what-do-i-do"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Getting Started Checklist",
+    "heading": null,
+    "slug": "teams-edu/teams-edu-checklist"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Getting Started Checklist",
+    "heading": "Checklist: Getting Started with Teams for Education",
+    "slug": "/teams-edu/teams-edu-checklist#checklist-getting-started-with-teams-for-education"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Getting Started Checklist",
+    "heading": "For Organization Admins:",
+    "slug": "/teams-edu/teams-edu-checklist#for-organization-admins"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Getting Started Checklist",
+    "heading": "For Teachers: ",
+    "slug": "/teams-edu/teams-edu-checklist#for-teachers"
   },
   {
     "category": "Teams for Education",
     "name": "Inviting teachers and students",
     "heading": null,
-    "slug": "teams/inviting-teachers-students"
+    "slug": "teams-edu/inviting-teachers-students"
   },
   {
     "category": "Teams for Education",
     "name": "Inviting teachers and students",
     "heading": "Inviting teachers and students",
-    "slug": "/teams/inviting-teachers-students#inviting-teachers-and-students"
+    "slug": "/teams-edu/inviting-teachers-students#inviting-teachers-and-students"
   },
   {
     "category": "Teams for Education",
     "name": "Inviting teachers and students",
-    "heading": "Invite Anonymous Members in Privacy Mode",
-    "slug": "/teams/inviting-teachers-students#invite-anonymous-members-in-privacy-mode"
+    "heading": "Invite Org Owners and Admins (Teachers)",
+    "slug": "/teams-edu/inviting-teachers-students#invite-org-owners-and-admins-teachers"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Inviting teachers and students",
+    "heading": "Invite Team Admins",
+    "slug": "/teams-edu/inviting-teachers-students#invite-team-admins"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Inviting teachers and students",
+    "heading": "Invite Team Members (Students)",
+    "slug": "/teams-edu/inviting-teachers-students#invite-team-members-students"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Inviting teachers and students",
+    "heading": "You may add team members by:",
+    "slug": "/teams-edu/inviting-teachers-students#you-may-add-team-members-by"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Inviting teachers and students",
+    "heading": "Invite Students in Privacy Mode",
+    "slug": "/teams-edu/inviting-teachers-students#invite-students-in-privacy-mode"
   },
   {
     "category": "Teams for Education",
     "name": "Using multiplayer with anonymous users",
     "heading": null,
-    "slug": "teams/using-multiplayer-anonymous-users"
+    "slug": "teams-edu/using-multiplayer-anonymous-users"
   },
   {
     "category": "Teams for Education",
     "name": "Using multiplayer with anonymous users",
     "heading": "Using multiplayer with anonymous users",
-    "slug": "/teams/using-multiplayer-anonymous-users#using-multiplayer-with-anonymous-users"
+    "slug": "/teams-edu/using-multiplayer-anonymous-users#using-multiplayer-with-anonymous-users"
   },
   {
     "category": "Teams for Education",
     "name": "Assigning nicknames",
     "heading": null,
-    "slug": "teams/assigning-nicknames"
+    "slug": "teams-edu/assigning-nicknames"
   },
   {
     "category": "Teams for Education",
     "name": "Assigning nicknames",
     "heading": "Assigning nicknames",
-    "slug": "/teams/assigning-nicknames#assigning-nicknames"
+    "slug": "/teams-edu/assigning-nicknames#assigning-nicknames"
   },
   {
     "category": "Teams for Education",
     "name": "Assigning nicknames",
     "heading": "Common Uses",
-    "slug": "/teams/assigning-nicknames#common-uses"
+    "slug": "/teams-edu/assigning-nicknames#common-uses"
   },
   {
     "category": "Teams for Education",
     "name": "Assigning nicknames",
     "heading": "How to use",
-    "slug": "/teams/assigning-nicknames#how-to-use"
+    "slug": "/teams-edu/assigning-nicknames#how-to-use"
   },
   {
     "category": "Teams for Education",
     "name": "Assigning nicknames",
     "heading": "Where nicknames will appear",
-    "slug": "/teams/assigning-nicknames#where-nicknames-will-appear"
+    "slug": "/teams-edu/assigning-nicknames#where-nicknames-will-appear"
   },
   {
     "category": "Teams for Education",
     "name": "Assigning user roles",
     "heading": null,
-    "slug": "teams/assigning-user-roles"
+    "slug": "teams-edu/assigning-user-roles"
   },
   {
     "category": "Teams for Education",
     "name": "Assigning user roles",
     "heading": "Assigning user roles",
-    "slug": "/teams/assigning-user-roles#assigning-user-roles"
+    "slug": "/teams-edu/assigning-user-roles#assigning-user-roles"
   },
   {
     "category": "Teams for Education",
     "name": "Creating projects and assignments",
     "heading": null,
-    "slug": "teams/creating-projects-assignments"
+    "slug": "teams-edu/creating-projects-assignments"
   },
   {
     "category": "Teams for Education",
     "name": "Creating projects and assignments",
     "heading": "Creating projects and assignments",
-    "slug": "/teams/creating-projects-assignments#creating-projects-and-assignments"
+    "slug": "/teams-edu/creating-projects-assignments#creating-projects-and-assignments"
   },
   {
     "category": "Teams for Education",
     "name": "Creating projects and assignments",
     "heading": "Creating Team Projects",
-    "slug": "/teams/creating-projects-assignments#creating-team-projects"
+    "slug": "/teams-edu/creating-projects-assignments#creating-team-projects"
   },
   {
     "category": "Teams for Education",
     "name": "Creating projects and assignments",
     "heading": "Publishing",
-    "slug": "/teams/creating-projects-assignments#publishing"
+    "slug": "/teams-edu/creating-projects-assignments#publishing"
   },
   {
     "category": "Teams for Education",
     "name": "Creating projects and assignments",
     "heading": "Submitting Student Work ",
-    "slug": "/teams/creating-projects-assignments#submitting-student-work"
+    "slug": "/teams-edu/creating-projects-assignments#submitting-student-work"
   },
   {
     "category": "Teams for Education",
     "name": "Project Solutions",
     "heading": null,
-    "slug": "teams/project-solutions"
+    "slug": "teams-edu/project-solutions"
   },
   {
     "category": "Teams for Education",
     "name": "Project Solutions",
     "heading": "Project Solutions",
-    "slug": "/teams/project-solutions#project-solutions"
+    "slug": "/teams-edu/project-solutions#project-solutions"
   },
   {
     "category": "Teams for Education",
     "name": "Project Solutions",
     "heading": "Creating project solutions ",
-    "slug": "/teams/project-solutions#creating-project-solutions"
+    "slug": "/teams-edu/project-solutions#creating-project-solutions"
   },
   {
     "category": "Teams for Education",
     "name": "Project Solutions",
     "heading": "Publishing project solutions",
-    "slug": "/teams/project-solutions#publishing-project-solutions"
+    "slug": "/teams-edu/project-solutions#publishing-project-solutions"
   },
   {
     "category": "Teams for Education",
     "name": "Project Solutions",
     "heading": "Updating and Referencing project solutions",
-    "slug": "/teams/project-solutions#updating-and-referencing-project-solutions"
+    "slug": "/teams-edu/project-solutions#updating-and-referencing-project-solutions"
   },
   {
     "category": "Teams for Education",
     "name": "Project Solutions",
     "heading": "Student View",
-    "slug": "/teams/project-solutions#student-view"
+    "slug": "/teams-edu/project-solutions#student-view"
   },
   {
     "category": "Teams for Education",
     "name": "Lesson and Instructions Authoring",
     "heading": null,
-    "slug": "teams/lesson-authoring"
+    "slug": "teams-edu/lesson-authoring"
   },
   {
     "category": "Teams for Education",
     "name": "Lesson and Instructions Authoring",
     "heading": "Lesson Authoring",
-    "slug": "/teams/lesson-authoring#lesson-authoring"
+    "slug": "/teams-edu/lesson-authoring#lesson-authoring"
   },
   {
     "category": "Teams for Education",
     "name": "Lesson and Instructions Authoring",
     "heading": "Lesson Plans",
-    "slug": "/teams/lesson-authoring#lesson-plans"
+    "slug": "/teams-edu/lesson-authoring#lesson-plans"
   },
   {
     "category": "Teams for Education",
     "name": "Lesson and Instructions Authoring",
     "heading": "Assets",
-    "slug": "/teams/lesson-authoring#assets"
+    "slug": "/teams-edu/lesson-authoring#assets"
   },
   {
     "category": "Teams for Education",
     "name": "Individual and group projects",
     "heading": null,
-    "slug": "teams/group-projects"
+    "slug": "teams-edu/group-projects"
   },
   {
     "category": "Teams for Education",
     "name": "Individual and group projects",
     "heading": "Individual, Group, and Self-Grouping Projects",
-    "slug": "/teams/group-projects#individual-group-and-self-grouping-projects"
+    "slug": "/teams-edu/group-projects#individual-group-and-self-grouping-projects"
   },
   {
     "category": "Teams for Education",
     "name": "Organizing Projects",
     "heading": null,
-    "slug": "teams/organizing-projects"
+    "slug": "teams-edu/organizing-projects"
   },
   {
     "category": "Teams for Education",
     "name": "Organizing Projects",
     "heading": "Organizing Projects ",
-    "slug": "/teams/organizing-projects#organizing-projects"
+    "slug": "/teams-edu/organizing-projects#organizing-projects"
   },
   {
     "category": "Teams for Education",
     "name": "Organizing Projects",
     "heading": "Creating Units ",
-    "slug": "/teams/organizing-projects#creating-units"
+    "slug": "/teams-edu/organizing-projects#creating-units"
   },
   {
     "category": "Teams for Education",
     "name": "Organizing Projects",
     "heading": "Organizing Projects Into Units",
-    "slug": "/teams/organizing-projects#organizing-projects-into-units"
+    "slug": "/teams-edu/organizing-projects#organizing-projects-into-units"
   },
   {
     "category": "Teams for Education",
     "name": "Organizing Projects",
     "heading": "Editing Units ",
-    "slug": "/teams/organizing-projects#editing-units"
+    "slug": "/teams-edu/organizing-projects#editing-units"
   },
   {
     "category": "Teams for Education",
     "name": "Organizing Projects",
     "heading": "Reordering Units ",
-    "slug": "/teams/organizing-projects#reordering-units"
+    "slug": "/teams-edu/organizing-projects#reordering-units"
   },
   {
     "category": "Teams for Education",
     "name": "Organizing Projects",
     "heading": "Deleting Units ",
-    "slug": "/teams/organizing-projects#deleting-units"
+    "slug": "/teams-edu/organizing-projects#deleting-units"
   },
   {
     "category": "Teams for Education",
     "name": "Copying projects to other teams",
     "heading": null,
-    "slug": "teams/copying-projects-other-teams"
+    "slug": "teams-edu/copying-projects-other-teams"
   },
   {
     "category": "Teams for Education",
     "name": "Copying projects to other teams",
     "heading": "Duplicating Projects",
-    "slug": "/teams/copying-projects-other-teams#duplicating-projects"
+    "slug": "/teams-edu/copying-projects-other-teams#duplicating-projects"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Copying projects to other teams",
+    "heading": "To duplicate projects individually:",
+    "slug": "/teams-edu/copying-projects-other-teams#to-duplicate-projects-individually"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Copying projects to other teams",
+    "heading": "To duplicate projects in bulk:",
+    "slug": "/teams-edu/copying-projects-other-teams#to-duplicate-projects-in-bulk"
   },
   {
     "category": "Teams for Education",
     "name": "Duplicating personal repls into Team Projects",
     "heading": null,
-    "slug": "teams/repls-to-team-projects"
+    "slug": "teams-edu/repls-to-team-projects"
   },
   {
     "category": "Teams for Education",
     "name": "Duplicating personal repls into Team Projects",
     "heading": "Duplicating personal repls into Team Projects ",
-    "slug": "/teams/repls-to-team-projects#duplicating-personal-repls-into-team-projects"
+    "slug": "/teams-edu/repls-to-team-projects#duplicating-personal-repls-into-team-projects"
   },
   {
     "category": "Teams for Education",
     "name": "Example homework assignments",
     "heading": null,
-    "slug": "teams/example-homework-assignments"
+    "slug": "teams-edu/example-homework-assignments"
   },
   {
     "category": "Teams for Education",
     "name": "Example homework assignments",
     "heading": "Example homework assignments",
-    "slug": "/teams/example-homework-assignments#example-homework-assignments"
+    "slug": "/teams-edu/example-homework-assignments#example-homework-assignments"
   },
   {
     "category": "Teams for Education",
     "name": "Example homework assignments",
     "heading": "Guides and Tutorials",
-    "slug": "/teams/example-homework-assignments#guides-and-tutorials"
+    "slug": "/teams-edu/example-homework-assignments#guides-and-tutorials"
   },
   {
     "category": "Teams for Education",
     "name": "Example homework assignments",
     "heading": "Create a Pinboard Project",
-    "slug": "/teams/example-homework-assignments#create-a-pinboard-project"
+    "slug": "/teams-edu/example-homework-assignments#create-a-pinboard-project"
   },
   {
     "category": "Teams for Education",
     "name": "Example homework assignments",
     "heading": "How to create a good enrichment coding assignment using Replit",
-    "slug": "/teams/example-homework-assignments#how-to-create-a-good-enrichment-coding-assignment-using-replit"
+    "slug": "/teams-edu/example-homework-assignments#how-to-create-a-good-enrichment-coding-assignment-using-replit"
   },
   {
     "category": "Teams for Education",
     "name": "Example homework assignments",
     "heading": "Teach your kid to code",
-    "slug": "/teams/example-homework-assignments#teach-your-kid-to-code"
+    "slug": "/teams-edu/example-homework-assignments#teach-your-kid-to-code"
   },
   {
     "category": "Teams for Education",
     "name": "Example homework assignments",
     "heading": "Example Repls",
-    "slug": "/teams/example-homework-assignments#example-repls"
+    "slug": "/teams-edu/example-homework-assignments#example-repls"
   },
   {
     "category": "Teams for Education",
     "name": "Example homework assignments",
     "heading": "Harry Potter game with PyGame",
-    "slug": "/teams/example-homework-assignments#harry-potter-game-with-py-game"
+    "slug": "/teams-edu/example-homework-assignments#harry-potter-game-with-py-game"
   },
   {
     "category": "Teams for Education",
     "name": "Example homework assignments",
     "heading": "Harry Potter game with Python Play",
-    "slug": "/teams/example-homework-assignments#harry-potter-game-with-python-play"
+    "slug": "/teams-edu/example-homework-assignments#harry-potter-game-with-python-play"
   },
   {
     "category": "Teams for Education",
     "name": "Example homework assignments",
     "heading": "Python Shopping List",
-    "slug": "/teams/example-homework-assignments#python-shopping-list"
+    "slug": "/teams-edu/example-homework-assignments#python-shopping-list"
   },
   {
     "category": "Teams for Education",
     "name": "Reviewing submissions",
     "heading": null,
-    "slug": "teams/reviewing-submissions"
+    "slug": "teams-edu/reviewing-submissions"
   },
   {
     "category": "Teams for Education",
     "name": "Reviewing submissions",
     "heading": "Reviewing submissions",
-    "slug": "/teams/reviewing-submissions#reviewing-submissions"
+    "slug": "/teams-edu/reviewing-submissions#reviewing-submissions"
   },
   {
     "category": "Teams for Education",
     "name": "Reviewing submissions",
     "heading": "Leaving feedback on projects using annotations",
-    "slug": "/teams/reviewing-submissions#leaving-feedback-on-projects-using-annotations"
+    "slug": "/teams-edu/reviewing-submissions#leaving-feedback-on-projects-using-annotations"
   },
   {
     "category": "Teams for Education",
     "name": "Testing, assessments, and autograding",
     "heading": null,
-    "slug": "teams/testing-assessments-autograding"
+    "slug": "teams-edu/testing-assessments-autograding"
   },
   {
     "category": "Teams for Education",
     "name": "Testing, assessments, and autograding",
     "heading": "Testing, assessments, and autograding",
-    "slug": "/teams/testing-assessments-autograding#testing-assessments-and-autograding"
+    "slug": "/teams-edu/testing-assessments-autograding#testing-assessments-and-autograding"
   },
   {
     "category": "Teams for Education",
     "name": "Input/output testing",
     "heading": null,
-    "slug": "teams/input-output-testing"
+    "slug": "teams-edu/input-output-testing"
   },
   {
     "category": "Teams for Education",
     "name": "Input/output testing",
     "heading": "Input/output testing",
-    "slug": "/teams/input-output-testing#input-output-testing"
+    "slug": "/teams-edu/input-output-testing#input-output-testing"
   },
   {
     "category": "Teams for Education",
     "name": "Input/output testing",
     "heading": "Teams for Education",
-    "slug": "/teams/input-output-testing#teams-for-education"
+    "slug": "/teams-edu/input-output-testing#teams-for-education"
   },
   {
     "category": "Teams for Education",
     "name": "Input/output testing",
     "heading": "Creating a Project",
-    "slug": "/teams/input-output-testing#creating-a-project"
+    "slug": "/teams-edu/input-output-testing#creating-a-project"
   },
   {
     "category": "Teams for Education",
     "name": "Input/output testing",
     "heading": "Input/Output Tests",
-    "slug": "/teams/input-output-testing#input-output-tests"
+    "slug": "/teams-edu/input-output-testing#input-output-tests"
   },
   {
     "category": "Teams for Education",
     "name": "Input/output testing",
     "heading": "Creating a Project with Input/Output Tests",
-    "slug": "/teams/input-output-testing#creating-a-project-with-input-output-tests"
+    "slug": "/teams-edu/input-output-testing#creating-a-project-with-input-output-tests"
   },
   {
     "category": "Teams for Education",
     "name": "Input/output testing",
     "heading": "Match Tests",
-    "slug": "/teams/input-output-testing#match-tests"
+    "slug": "/teams-edu/input-output-testing#match-tests"
   },
   {
     "category": "Teams for Education",
     "name": "Input/output testing",
     "heading": "Exact Tests ",
-    "slug": "/teams/input-output-testing#exact-tests"
+    "slug": "/teams-edu/input-output-testing#exact-tests"
   },
   {
     "category": "Teams for Education",
     "name": "Input/output testing",
     "heading": "Regex Tests",
-    "slug": "/teams/input-output-testing#regex-tests"
+    "slug": "/teams-edu/input-output-testing#regex-tests"
   },
   {
     "category": "Teams for Education",
     "name": "Input/output testing",
     "heading": "While I/O tests work with most languages on Replit, there are just a few exceptions:",
-    "slug": "/teams/input-output-testing#while-i-o-tests-work-with-most-languages-on-replit-there-are-just-a-few-exceptions"
+    "slug": "/teams-edu/input-output-testing#while-i-o-tests-work-with-most-languages-on-replit-there-are-just-a-few-exceptions"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": null,
-    "slug": "teams/unit-testing"
+    "slug": "teams-edu/unit-testing"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Unit testing",
-    "slug": "/teams/unit-testing#unit-testing"
+    "slug": "/teams-edu/unit-testing#unit-testing"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Supported Languages and Testing Frameworks",
-    "slug": "/teams/unit-testing#supported-languages-and-testing-frameworks"
+    "slug": "/teams-edu/unit-testing#supported-languages-and-testing-frameworks"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Why Use Unit Testing?",
-    "slug": "/teams/unit-testing#why-use-unit-testing"
+    "slug": "/teams-edu/unit-testing#why-use-unit-testing"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Using the Testing Pane",
-    "slug": "/teams/unit-testing#using-the-testing-pane"
+    "slug": "/teams-edu/unit-testing#using-the-testing-pane"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Defining a test function",
-    "slug": "/teams/unit-testing#defining-a-test-function"
+    "slug": "/teams-edu/unit-testing#defining-a-test-function"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Importing libraries",
-    "slug": "/teams/unit-testing#importing-libraries"
+    "slug": "/teams-edu/unit-testing#importing-libraries"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Importing modules",
-    "slug": "/teams/unit-testing#importing-modules"
+    "slug": "/teams-edu/unit-testing#importing-modules"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Advanced Setup and Teardown",
-    "slug": "/teams/unit-testing#advanced-setup-and-teardown"
+    "slug": "/teams-edu/unit-testing#advanced-setup-and-teardown"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Import",
-    "slug": "/teams/unit-testing#import"
+    "slug": "/teams-edu/unit-testing#import"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Setup",
-    "slug": "/teams/unit-testing#setup"
+    "slug": "/teams-edu/unit-testing#setup"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Teardown",
-    "slug": "/teams/unit-testing#teardown"
+    "slug": "/teams-edu/unit-testing#teardown"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Assertion Documentation",
-    "slug": "/teams/unit-testing#assertion-documentation"
+    "slug": "/teams-edu/unit-testing#assertion-documentation"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Tips for Writing Good Tests",
-    "slug": "/teams/unit-testing#tips-for-writing-good-tests"
+    "slug": "/teams-edu/unit-testing#tips-for-writing-good-tests"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Tips for Writing \"Testable\" Functions",
-    "slug": "/teams/unit-testing#tips-for-writing-testable-functions"
+    "slug": "/teams-edu/unit-testing#tips-for-writing-testable-functions"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Teams for Education",
-    "slug": "/teams/unit-testing#teams-for-education"
+    "slug": "/teams-edu/unit-testing#teams-for-education"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Creating a project",
-    "slug": "/teams/unit-testing#creating-a-project"
+    "slug": "/teams-edu/unit-testing#creating-a-project"
   },
   {
     "category": "Teams for Education",
     "name": "Unit testing",
     "heading": "Example Team projects",
-    "slug": "/teams/unit-testing#example-team-projects"
+    "slug": "/teams-edu/unit-testing#example-team-projects"
   },
   {
     "category": "Teams for Education",
     "name": "Embedding projects",
     "heading": null,
-    "slug": "teams/embedding-projects"
+    "slug": "teams-edu/embedding-projects"
   },
   {
     "category": "Teams for Education",
     "name": "Embedding projects",
     "heading": "Embedding projects",
-    "slug": "/teams/embedding-projects#embedding-projects"
+    "slug": "/teams-edu/embedding-projects#embedding-projects"
   },
   {
     "category": "Teams for Education",
     "name": "Google Classroom Integration",
     "heading": null,
-    "slug": "teams/google-classroom"
+    "slug": "teams-edu/google-classroom"
   },
   {
     "category": "Teams for Education",
     "name": "Google Classroom Integration",
     "heading": "Google Classrooms Integration ",
-    "slug": "/teams/google-classroom#google-classrooms-integration"
+    "slug": "/teams-edu/google-classroom#google-classrooms-integration"
   },
   {
     "category": "Teams for Education",
     "name": "Google Classroom Integration",
     "heading": "Adding Students to a Team from Google Classrooms",
-    "slug": "/teams/google-classroom#adding-students-to-a-team-from-google-classrooms"
+    "slug": "/teams-edu/google-classroom#adding-students-to-a-team-from-google-classrooms"
   },
   {
     "category": "Teams for Education",
     "name": "Google Classroom Integration",
     "heading": "Creating Assignments in Google Classrooms from Replit ",
-    "slug": "/teams/google-classroom#creating-assignments-in-google-classrooms-from-replit"
+    "slug": "/teams-edu/google-classroom#creating-assignments-in-google-classrooms-from-replit"
   },
   {
     "category": "Teams for Education",
     "name": "Archiving Teams",
     "heading": null,
-    "slug": "teams/Archiving"
+    "slug": "teams-edu/Archiving"
   },
   {
     "category": "Teams for Education",
     "name": "Archiving Teams",
     "heading": "Archiving Teams",
-    "slug": "/teams/Archiving#archiving-teams"
+    "slug": "/teams-edu/Archiving#archiving-teams"
   },
   {
     "category": "Teams for Education",
     "name": "Exporting Student Projects",
     "heading": null,
-    "slug": "teams/exporting-student-submissions"
+    "slug": "teams-edu/exporting-student-submissions"
   },
   {
     "category": "Teams for Education",
     "name": "Exporting Student Projects",
     "heading": "Exporting student submissions",
-    "slug": "/teams/exporting-student-submissions#exporting-student-submissions"
+    "slug": "/teams-edu/exporting-student-submissions#exporting-student-submissions"
   },
   {
     "category": "Teams for Education",
     "name": "Curriculum Hub",
     "heading": null,
-    "slug": "teams/curriculum-hub"
+    "slug": "teams-edu/curriculum-hub"
   },
   {
     "category": "Teams for Education",
     "name": "Curriculum Hub",
     "heading": "Curriculum Hub",
-    "slug": "/teams/curriculum-hub#curriculum-hub"
+    "slug": "/teams-edu/curriculum-hub#curriculum-hub"
   },
   {
     "category": "Teams for Education",
     "name": "Privacy FAQ",
     "heading": null,
-    "slug": "teams/privacy-faq"
+    "slug": "teams-edu/privacy-faq"
   },
   {
     "category": "Teams for Education",
     "name": "Privacy FAQ",
     "heading": "Privacy FAQ",
-    "slug": "/teams/privacy-faq#privacy-faq"
+    "slug": "/teams-edu/privacy-faq#privacy-faq"
   },
   {
     "category": "Teams for Education",
     "name": "IT administrators toolkit",
     "heading": null,
-    "slug": "teams/it-administrators-toolkit"
+    "slug": "teams-edu/it-administrators-toolkit"
   },
   {
     "category": "Teams for Education",
     "name": "IT administrators toolkit",
     "heading": "IT administrators toolkit",
-    "slug": "/teams/it-administrators-toolkit#it-administrators-toolkit"
+    "slug": "/teams-edu/it-administrators-toolkit#it-administrators-toolkit"
   },
   {
     "category": "Teams for Education",
     "name": "IT administrators toolkit",
     "heading": "URLs",
-    "slug": "/teams/it-administrators-toolkit#ur-ls"
+    "slug": "/teams-edu/it-administrators-toolkit#ur-ls"
   },
   {
     "category": "Teams for Education",
     "name": "IT administrators toolkit",
     "heading": "Protocols",
-    "slug": "/teams/it-administrators-toolkit#protocols"
+    "slug": "/teams-edu/it-administrators-toolkit#protocols"
   },
   {
     "category": "Teams for Education",
     "name": "IT administrators toolkit",
     "heading": "Whitelist/Network Security Vendor Guides",
-    "slug": "/teams/it-administrators-toolkit#whitelist-network-security-vendor-guides"
+    "slug": "/teams-edu/it-administrators-toolkit#whitelist-network-security-vendor-guides"
   },
   {
     "category": "Teams for Education",
     "name": "IT administrators toolkit",
     "heading": "Data Retention and Usage",
-    "slug": "/teams/it-administrators-toolkit#data-retention-and-usage"
+    "slug": "/teams-edu/it-administrators-toolkit#data-retention-and-usage"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Teams for Education Support",
+    "heading": null,
+    "slug": "teams-edu/teams-edu-support"
+  },
+  {
+    "category": "Teams for Education",
+    "name": "Teams for Education Support",
+    "heading": "Teams for Edu Support",
+    "slug": "/teams-edu/teams-edu-support#teams-for-edu-support"
   },
   {
     "category": "Teams Pro (beta)",
@@ -2752,6 +2836,18 @@
     "name": "Overview",
     "heading": "Lesson 34: Creative coding with Replit",
     "slug": "/tutorials/00-overview#lesson-34-creative-coding-with-replit"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 35: Build Flappy Bird with Kaboom",
+    "slug": "/tutorials/00-overview#lesson-35-build-flappy-bird-with-kaboom"
+  },
+  {
+    "category": "Tutorials",
+    "name": "Overview",
+    "heading": "Lesson 36: Build a physics playground with Kaboom",
+    "slug": "/tutorials/00-overview#lesson-36-build-a-physics-playground-with-kaboom"
   },
   {
     "category": "Tutorials",
@@ -6886,5 +6982,17 @@
     "name": "Learn Python the Right Way",
     "heading": "Learn Python the Right Way",
     "slug": "/replit-books/learn-python-the-right-way#learn-python-the-right-way"
+  },
+  {
+    "category": "Replit Books",
+    "name": "Make Javascript Games",
+    "heading": null,
+    "slug": "replit-books/makes-js-games"
+  },
+  {
+    "category": "Replit Books",
+    "name": "Make Javascript Games",
+    "heading": "Make Javascript Games",
+    "slug": "/replit-books/makes-js-games#make-javascript-games"
   }
 ]
