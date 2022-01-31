@@ -162,6 +162,14 @@ Learn more on developing Ethereum smart contracts using the Solidity programming
 
 Explore the tools provided by Replit for creating graphics, 3D worlds, games, sounds, and other more creative things.
 
+#### [Lesson 35: Build Flappy Bird with Kaboom](./35-build-flappy-bird-with-kaboom)
+
+Revisit the Kaboom game engine on Replit by building a Flappy Bird game.
+
+#### [Lesson 36: Build a physics playground with Kaboom](./35-build-flappy-bird-with-kaboom)
+
+Explore the advanced usage of the Kaboom game development framework by building a 2D physics engine.
+
 ## Other tutorials
 
 Here are some other tutorials hosted on third-party sites.

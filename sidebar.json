@@ -540,6 +540,10 @@
       {
         "name": "Learn Python the Right Way",
         "slug": "learn-python-the-right-way"
+      },
+      {
+        "name": "Make Javascript Games",
+        "slug": "makes-js-games"
       }
     ]
   }

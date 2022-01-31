@@ -21,7 +21,9 @@ To create an interview, you need to be in a team as an admin. See the documentat
 
 Navigate to the 'Teams' page. Under the 'Team Repls' section click on the 'Create team repl' button and the following popup window will appear:
 
-![create repl](/images/teamsPro/interviewing-candidates-tutorial-images/create_interview_repl.png)
+<img src="/images/teamsPro/interviewing-candidates-tutorial-images/create_interview_repl.png"
+    alt="Creating a repl"
+    style="width: 80% !important;"/>
 
 You can choose the template language you will be using for the interview and choose a suitable name, then click the 'Create repl' button at the bottom. 
 
@@ -33,11 +35,16 @@ Once the repl has been created, you will be able to add the relevant files requi
 
 Once you have written your challenges, you can invite candidates by clicking on the invite button on the top-right corner on the window.
 
-![repl invitation](/images/teamsPro/interviewing-candidates-tutorial-images/invite_members.png)
+<img src="/images/teamsPro/interviewing-candidates-tutorial-images/invite_members.png"
+    alt="repl invitation"
+    style="width: 90% !important;"/>
 
 You can invite candidates by email directly or by you can generate a join link to share with candidates. Candidates will get a notification of the invite. They will need to sign up for a Replit account before they can accept the invite to the team repl.
 
-![invite notification](/images/teamsPro/interviewing-candidates-tutorial-images/notification.png)
+
+<img src="/images/teamsPro/interviewing-candidates-tutorial-images/notification.png"
+    alt="invite notification"
+    style="width: 60% !important;"/>
 
 ## Step 3 - Observe candidates
 
@@ -47,7 +54,7 @@ You as the interviewer can observe the candidates as they complete the challenge
 
 By clicking on the round icon next to the invite button on the top-right corner, you will be able to observe the candidate's repl and see as they work on their `main.py` file. The round icon, represents the candidate in the interview.
 
-![interview window](/images/teamsPro/interviewing-candidates-tutorial-images/interview_screen.png)
+![interview window](/images/teamsPro/interviewing-candidates-tutorial-images/interview_screen.gif)
 
 Candidates can also view your IDE in the same way. This lets them see the changes you want them to make or new intructions you want to add.
 
