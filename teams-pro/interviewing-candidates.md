@@ -14,6 +14,7 @@ We'll cover how to:
 - Create a repl
 - Invite candidates
 - Observe candidates
+- Remove candidate access
 
 ## Step 1 - Create a repl
 
@@ -60,3 +61,12 @@ Candidates can also view your IDE in the same way. This lets them see the change
 
 ![candidate_screen](/images/teamsPro/interviewing-candidates-tutorial-images/candidate_screen.png)
 
+## Remove candidate access
+
+To remove candidates from interview repls so they cannot access the interview once it is complete, click on the `invite` button and on the pop-up window, find the candidates name or email.
+
+<img src="static/images/teamsPro/interviewing-candidates-tutorial-images/remove-candidates.png"
+    alt="remove candidate access"
+    style="width: 90% !important;"/>
+
+Once you find the candidate, click on the `x` next to their name and they will be removed from the interview and they will no longer be able to access invite link.
