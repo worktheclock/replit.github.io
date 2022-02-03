@@ -14,7 +14,7 @@ To follow along in this tutorial:
 - You will need to have [Telegram downloaded](https://telegram.org/), and an account. 
 - You will also need a Replit account, so [create one now](https://replit.com/signup) if you haven't already. 
 
-It would be helpful if you are familiar with the [Replit database](https://docs.replit.com/tutorials/11-using-the-replit-database), but it's not a necessity.
+It would be helpful if you are familiar with the [Replit database](/tutorials/11-using-the-replit-database), but it's not a necessity.
 
 ## Registering a Bot
 We need to register our bot on Telegram to generate the credentials we'll use to connect to the Telegram API. Each bot requires a user account to be responsible for it. This can be done using Telegram's official management bot called the "BotFather".

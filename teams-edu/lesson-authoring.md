@@ -1,6 +1,6 @@
 # Lesson Authoring
 
-_You can find a step-by-step guide to creating a new lesson [here](/teams/lesson-authoring-tutorial)._
+_You can find a step-by-step guide to creating a new lesson [here](/teams-edu/lesson-authoring-tutorial)._
 
 Teachers may create read-only instructions for their students to follow as well as admin-only lesson plans to keep as notes and share curriculum with their peers using the Curriculum Authoring tool in their Team Project file tree.
 

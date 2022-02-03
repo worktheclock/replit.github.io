@@ -335,7 +335,7 @@ If you followed along, you'll already have your own version of the chat server a
 
 You can try some interesting things to spice up your chat app. 
 * Try using different colors on the message outputs – one for the user, and another for their chat friends. There are many modules available for this, one of them being [colors](https://www.npmjs.com/package/colors).
-* Try logging the server messages to the [Replit database](https://docs.replit.com/misc/database), so that you can restore previous chats. 
+* Try logging the server messages to the [Replit database](/hosting/database-faq), so that you can restore previous chats. 
 
 
 

@@ -25,16 +25,16 @@ Now click on "Create team" and choose a username for your team.
 ![](/images/teamsForEducation/intro/choose-username.png)
 
 ### Inviting Teammates
-Add a team profile picture and [invite some users](https://docs.replit.com/Teams/Invitations). 
+Add a team profile picture and [invite some users](/teams-edu/inviting-teachers-students). 
 *Users who are added to a team and assigned the `Admin` role will be able to create their own teams within an organization.*
 
 ![](/images/teamsForEducation/intro/upload-pic.png)
 
-Now you can start [building out your classroom materials](./Projects)! 
+Now you can start [building out your classroom materials](creating-projects-assignments)! 
 
 ### Creating Teams 
 If you'd like to create a new team in your organization, simply go to your [Teams Dashboard](https://replit.com/teams) and click "Add Team". 
 ![Adding a team to an organization](/images/teamsForEducation/add_team.gif)
 
 
-**Need more help getting set up? Use our [Checklist](https://docs.replit.com/teams/teams-edu-checklist)!**
+**Need more help getting set up? Use our [Checklist](teams-edu-checklist)!**

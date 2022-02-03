@@ -23,7 +23,7 @@ Yes. Using [Teams for Education](https://replit.com/teams-for-education), teache
 
 **How can I invite students and protect their privacy?**
 
-With [Teams for Education](https://replit.com/teams-for-education) and [Private Invites](https://docs.replit.com/Teams/Invitations), you can choose to generate a private invite link, which will protect the privacy of your students (including under 13-year olds). *Please note that students **must** be added using private invites for your team to be FERPA/COPPA compliant.*
+With [Teams for Education](https://replit.com/teams-for-education) and [Private Invites](/teams-edu/inviting-teachers-students), you can choose to generate a private invite link, which will protect the privacy of your students (including under 13-year olds). *Please note that students **must** be added using private invites for your team to be FERPA/COPPA compliant.*
 
 When you share that link (for example by emailing it to your students outside of Replit, or by pasting the link into your LMS or curriculum), we will not ask students to provide names, emails, or other personal information when they sign up. Neither you nor the students will need to provide us with that information. Students will have view-only access to the [Repl Talk forum](https://replit.com/talk/all), so they can still see all the great content, guides, and tutorials from the community, but they post or can't be contacted, which protects their privacy.
 
@@ -95,7 +95,7 @@ src="/images/teamsForEducation/Montana logo.png" style= "float:left; width:20%;"
 
 Yes. If you would like us to review your local privacy regulation or sign your organization's specific privacy policy, please email [sales@replit.com](mailto:sales@replit.com). 
 
-If you are a Local Educational Agency in the United States, our [U.S. Student Data Protection Addendum](https://docs.replit.com/Teams/US_Student_DPA) also applies. We are happy to send you a copy for comments/edits if you'd like.
+If you are a Local Educational Agency in the United States, our [U.S. Student Data Protection Addendum](/teams-edu/us-student-dpa) also applies. We are happy to send you a copy for comments/edits if you'd like.
 
 **Is all of the above information reflected in the Replit Privacy Policy?**
 

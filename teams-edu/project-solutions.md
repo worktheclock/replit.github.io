@@ -11,7 +11,7 @@ Teachers may create project solutions to reference and provide students with sol
 To create a project solution, click on the three dots to the right of a Team Project and select "Create Solution".
 ![Create solution](/images/teamsForEducation/model-solutions/create_solution.gif)
 
-This will create a duplicate of the Team Project that is hidden from students. Teachers may add solution code to this repl and run it against their [unit and I/O tests](https://docs.replit.com/teams/testing-assessments-autograding). 
+This will create a duplicate of the Team Project that is hidden from students. Teachers may add solution code to this repl and run it against their [unit and I/O tests](/teams-edu/testing-assessments-autograding). 
 
 ### Publishing project solutions
 

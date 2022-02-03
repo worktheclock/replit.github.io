@@ -218,7 +218,7 @@
         "name": "Exporting Student Projects",
         "slug": "exporting-student-submissions"
       },
-      
+
        {
         "name": "Curriculum Hub",
         "slug": "curriculum-hub"
@@ -256,6 +256,14 @@
       {
         "name": "Interviewing candidates with guest mode",
         "slug": "interviewing-candidates-guest-mode"
+      },
+      {
+        "name": "Manage and copy repls for interviewing",
+        "slug": "copying-repls-for-interviewing"
+      },
+      {
+        "name": "Hosting your documentation on Replit",
+        "slug": "hosting-your-documentation-on-replit"
       }
     ]
   },
@@ -460,6 +468,14 @@
       {
         "name": "Physics playground with Kaboom.js",
         "slug": "36-physics-playground-with-kaboom"
+      },
+      {
+        "name": "Breakout with Kaboom.js",
+        "slug": "37-build-breakout-with-kaboom"
+      },
+      {
+        "name": "3D Rendering with Three.js",
+        "slug": "38-3D-rendering-with-threejs"
       },
       {
         "name": "Pinboard project part 1: HTML & CSS",

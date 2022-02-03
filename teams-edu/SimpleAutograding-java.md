@@ -172,7 +172,7 @@ Once your students have each created and submitted the project, you can open eac
 
 If you want, you can simply use the percentage of the tests passed as a grade (for example, our imaginary student would be awarded 50% for passing 1/2 tests), but because you can see exactly what went wrong you can also decide if some tests are more important than others.
 
-You can also select a piece of code from your student's submission and click on the annotate button to leave a message. This makes it easy to ask for clarification or give advice. You can read more on the annotation feature [here](https://docs.replit.com/Teams/Annotations)
+You can also select a piece of code from your student's submission and click on the annotate button to leave a message. This makes it easy to ask for clarification or give advice. You can read more on the annotation feature [here](/teams-edu/reviewing-submissions)
 
 While this is a semi-automated solution, you are still required to open each solution manually in order to kick off the tests. In [Creating a centralised grading application with Replit](./CentralizedAutograder-java), we show you how to take autograding a step further to avoid this.
 

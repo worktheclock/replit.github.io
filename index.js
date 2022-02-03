@@ -173,55 +173,52 @@ app.get('/curriculum/introCpp', async (req, res) => {
     res.redirect(301, '/teaching-curriculum/intro-cpp');
 });
 app.get('/repls/UnitTesting', async (req, res) => {
-    res.redirect(301, '/teams/unit-testing');
+    res.redirect(301, '/teams-edu/unit-testing');
 });
 app.get('/repls/multiplayer-anon', async (req, res) => {
-    res.redirect(301, '/teams/using-multiplayer-anonymous-users');
-});
-app.get('/pro/intro', async (req, res) => {
-    res.redirect(301, '/teams/intro-teams-education');
+    res.redirect(301, '/teams-edu/using-multiplayer-anonymous-users');
 });
 app.get('/Teams/Invitations', async (req, res) => {
-    res.redirect(301, '/teams/inviting-teachers-students');
+    res.redirect(301, '/teams-edu/inviting-teachers-students');
 });
 app.get('/Teams/Nicknames', async (req, res) => {
-    res.redirect(301, '/teams/assigning-nicknames');
+    res.redirect(301, '/teams-edu/assigning-nicknames');
 });
 app.get('/Teams/Roles', async (req, res) => {
-    res.redirect(301, '/teams/assigning-user-roles');
+    res.redirect(301, '/teams-edu/assigning-user-roles');
 });
 app.get('/Teams/Projects', async (req, res) => {
-    res.redirect(301, '/teams/creating-projects-assignments');
+    res.redirect(301, '/teams-edu/creating-projects-assignments');
 });
 app.get('/Teams/projectCopying', async (req, res) => {
-    res.redirect(301, '/teams/copying-projects-other-teams');
+    res.redirect(301, '/teams-edu/copying-projects-other-teams');
 });
 app.get('/Teams/Notes', async (req, res) => {
-    res.redirect(301, '/teams/keeping-notes-repls');
+    res.redirect(301, '/teams-edu/keeping-notes-repls');
 });
 app.get('/Teams/HomeworkAssignments', async (req, res) => {
-    res.redirect(301, '/teams/example-homework-assignments');
+    res.redirect(301, '/teams-edu/example-homework-assignments');
 });
 app.get('/Teams/Annotations', async (req, res) => {
-    res.redirect(301, '/teams/reviewing-submissions');
+    res.redirect(301, '/teams-edu/reviewing-submissions');
 });
 app.get('/Teams/Testing', async (req, res) => {
-    res.redirect(301, '/teams/testing-assessments-autograding');
+    res.redirect(301, '/teams-edu/testing-assessments-autograding');
 });
 app.get('/Teams/InputOutput', async (req, res) => {
-    res.redirect(301, '/teams/input-output-testing');
+    res.redirect(301, '/teams-edu/input-output-testing');
 });
 app.get('/Teams/EmbedProjects', async (req, res) => {
-    res.redirect(301, '/teams/embedding-projects');
+    res.redirect(301, '/teams-edu/embedding-projects');
 });
 app.get('/Teams/privacyFAQs', async (req, res) => {
-    res.redirect(301, '/teams/privacy-faq');
+    res.redirect(301, '/teams-edu/privacy-faq');
 });
 app.get('/Teams/IT_Toolkit', async (req, res) => {
-    res.redirect(301, '/teams/it-administrators-toolkit');
+    res.redirect(301, '/teams-edu/it-administrators-toolkit');
 });
 app.get('/Teams/US_Student_DPA', async (req, res) => {
-    res.redirect(301, '/teams/us-student-dpa');
+    res.redirect(301, '/teams-edu/us-student-dpa');
 });
 app.get('/pro/intro', async (req, res) => {
     res.redirect(301, '/teams-pro/intro-teams-pro');

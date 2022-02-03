@@ -12,7 +12,7 @@ We'll also outline how this could be integrated into other applications, such as
 
 In Unix systems, including the ones that Replit is built on, [everything is a file](https://en.wikipedia.org/wiki/Everything_is_a_file). You might think of file types like PDFs, text files, image files or audio files, but in fact even things like printers are often "seen" as files by the underlying operating system.
 
-Replit uses a special file at `/tmp/audio` to control media output. There are more details on how to manipulate this file directly in the [audio docs](https://docs.replit.com/repls/audio), but Replit also provides a higher level Python library that gives us some higher level functions like "play_audio". We'll be using the library in this tutorial.
+Replit uses a special file at `/tmp/audio` to control media output. There are more details on how to manipulate this file directly in the [audio docs](/misc/playing-audio-replit), but Replit also provides a higher level Python library that gives us some higher level functions like "play_audio". We'll be using the library in this tutorial.
 
 ## Getting a free audio file from the Free Music Archive
 

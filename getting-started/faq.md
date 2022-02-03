@@ -8,7 +8,7 @@ This page should answer some general queries you may have, but if you need more 
 
 It is the new product we have built out for teachers. We are transitioning from _Classrooms_ to _Teams for Education_ as it has a lot more features. Please check out our blog post [here](https://blog.replit.com/teams-for-education) to learn more.
 
-Read [Teams for Education FAQs](https://docs.replit.com/teams/FAQs) to learn more.
+Read [Teams for Education FAQs](/teams-edu/FAQ) to learn more.
 
 ## Repls
 
