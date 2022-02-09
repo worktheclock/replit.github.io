@@ -166,13 +166,36 @@ Explore the tools provided by Replit for creating graphics, 3D worlds, games, so
 
 Revisit the Kaboom game engine on Replit by building a Flappy Bird game.
 
-#### [Lesson 36: Build a physics playground with Kaboom](./35-build-flappy-bird-with-kaboom)
+#### [Lesson 36: Build a physics playground with Kaboom](./36-physics-playground-with-kaboom)
 
-Explore the advanced usage of the Kaboom game development framework by building a 2D physics engine.
+Explore the advanced usage of the Kaboom game development framework by building a 2D Physics engine.
+
+#### [Lesson 37: Build a block-breaking game with Kaboom](./37-build-breakout-with-kaboom)
+
+Revisit the Kaboom game engine on Replit by building a block breaking game similar to classics like Atari's *Breakout* and Taito's *Arkanoid*.
+
+#### [Lesson 38: Rendering 3D scenes with three.js](./38-3D-rendering-with-threejs)
+
+Learn how to render 3D scenes with three.js to make websites using 3D elements and advanced animations, or even complex 3D games.
 
 ## Other tutorials
 
-Here are some other tutorials hosted on third-party sites.
+Here are some other tutorials hosted on the [blog](https://blog.replit.com) and third-party sites.
+
+#### [Setting Up Your Own Mastodon Instance with Replit](https://blog.replit.com/setting%20up%20a%20mastodon)
+Learn how to install and host a fullstack application on Replit as you follow along this tutorial to host Mastodon an open-source social networking software on Replit.
+
+#### [Deploying a Django application on replit](https://blog.replit.com/deploying-django)
+Learn how to deploy a Django application on Replit. 
+
+#### [Using Replit and Google Sheets to Make a Simple Google Forms Alternative](https://blog.replit.com/Using%20Replit%20and%20Google%20Sheets%20to%20Make%20a%20Simple%20Google%20Forms%20Alternative)
+Learn how to create a Python web application that lets you build dynamic forms to display different sections given specific conditions.
+
+#### [Getting Started with Rust on Replit](https://blog.replit.com/getting-started-with-rust-on-replit)
+Build a guessing game whilst learning how to use Rust on Replit.
+
+#### [Getting Started with the SpaceTraders API on Replit](https://blog.replit.com/getting-started-with-the-spacetraders-API-on-replit)
+Learn how to use Replit to play SpaceTraders an online multiplayer game where you buy a spaceship, explore space, and set up trades.
 
 #### [Beginner web scraping with Python and Replit](https://ritza.co/showcase/repl.it/beginner-web-scraping-with-python-and-repl-it)
 Learn more about what web scraping is, how websites are built, and how to automatically scrape data from websites.
