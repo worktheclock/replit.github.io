@@ -482,6 +482,10 @@
         "slug": "39-two-player-wordle-clone-python-rich"
       },
       {
+        "name": "Multi-user static blog with Nix",
+        "slug": "40-build-host-company-blog-on-replit-with-hugo-nix"
+      },
+      {
         "name": "Pinboard project part 1: HTML & CSS",
         "slug": "pinboard-project-part-1"
       },
