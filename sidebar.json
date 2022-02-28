@@ -264,6 +264,10 @@
       {
         "name": "Hosting your documentation on Replit",
         "slug": "hosting-your-documentation-on-replit"
+      },
+      {
+        "name": "Using Excalidraw on Replit",
+        "slug": "excalidraw-with-replit"
       }
     ]
   },
